@@ -2,6 +2,7 @@
 
 from agents.planner import Planner
 from agents.researcher import Researcher
+from agents.executor import Executor
 
 def start_simulation():
     print("🧠 Consensus Project: Agent simulation starting...")
@@ -9,6 +10,7 @@ def start_simulation():
     # Initialize agents
     planner = Planner()
     researcher = Researcher()
+    executor = Executor()
 
     # Step 1: Planner creates a task plan
     goal = "organize team meeting"
@@ -17,8 +19,8 @@ def start_simulation():
     # Step 2: Researcher enriches the task plan
     enriched_plan = researcher.enrich_plan(task_plan)
 
-    # Placeholder: Passing to next agent
-    print(f"\nPassing enriched plan to Executor: {enriched_plan}")
+    # Step 3: Executor runs the enriched tasks
+    execution_log = executor.execute(enriched_plan)
 
     print("\n✅ Simulation complete.")
 
