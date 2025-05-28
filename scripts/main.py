@@ -3,6 +3,7 @@
 from agents.planner import Planner
 from agents.researcher import Researcher
 from agents.executor import Executor
+from agents.memory_manager import MemoryManager
 
 def start_simulation():
     print("🧠 Consensus Project: Agent simulation starting...")
@@ -11,6 +12,7 @@ def start_simulation():
     planner = Planner()
     researcher = Researcher()
     executor = Executor()
+    memory_manager = MemoryManager()
 
     # Step 1: Planner creates a task plan
     goal = "organize team meeting"
@@ -22,7 +24,10 @@ def start_simulation():
     # Step 3: Executor runs the enriched tasks
     execution_log = executor.execute(enriched_plan)
 
-    print("\n✅ Simulation complete.")
+    # Step 4: MemoryManager stores the results
+    memory_manager.store(execution_log)
+
+    print("\n✅ Full agent simulation complete.")
 
 if __name__ == "__main__":
     start_simulation()
