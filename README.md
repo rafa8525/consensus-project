@@ -26,6 +26,14 @@ An AI-powered framework for autonomous decision-making and workflow execution us
 ## 🛠 Quickstart
 To run a basic simulation (coming soon):
 
+## 🗺 Architecture
+
+![Consensus Architecture](docs/architecture.png)
+
+> Planner → Researcher → Executor → MemoryManager  
+> All agents communicate via orchestrated task logic inside `/core/`
+
+
 ```bash
 python scripts/main.py
 
