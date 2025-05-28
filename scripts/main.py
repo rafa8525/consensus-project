@@ -1,19 +1,17 @@
 # scripts/main.py
 
+from agents.planner import Planner
+
 def start_simulation():
     print("🧠 Consensus Project: Agent simulation starting...")
 
-    # Placeholder for agent initialization
-    print("Initializing Planner agent...")
-    print("Initializing Researcher agent...")
-    print("Initializing Executor agent...")
-    print("Initializing MemoryManager agent...")
+    # Initialize Planner agent
+    planner = Planner()
+    goal = "organize team meeting"
+    task_plan = planner.create_plan(goal)
 
-    # Simulate one decision cycle
-    print("\nPlanner → creates task plan")
-    print("Researcher → gathers context or fills gaps")
-    print("Executor → runs task or delegates")
-    print("MemoryManager → logs the decision")
+    # Simulate passing to next agent (placeholder)
+    print(f"\nPassing plan to next agent: {task_plan}")
 
     print("\n✅ Simulation complete.")
 
