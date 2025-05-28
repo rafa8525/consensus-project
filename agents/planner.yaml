@@ -1,0 +1,12 @@
+# agents/planner.yaml
+
+name: Planner
+role: Breaks down high-level goals into structured tasks
+type: agent
+language: natural
+input_format: goal_prompt
+output_format: task_list
+status: prototype
+dependencies:
+  - MemoryManager
+  - Researcher
