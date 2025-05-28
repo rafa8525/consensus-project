@@ -21,5 +21,13 @@ An AI-powered framework for autonomous decision-making and workflow execution us
 /scripts/ - Helper tools
 /docs/ - System design and decisions
 
+---
+
+## 🛠 Quickstart
+To run a basic simulation (coming soon):
+
+```bash
+python scripts/main.py
+
 ## 🔄 Status
 Currently in initialization stage — folder structure and base agent design coming next.
