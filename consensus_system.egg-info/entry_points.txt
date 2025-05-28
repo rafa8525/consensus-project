@@ -1,0 +1,2 @@
+[console_scripts]
+consensus = scripts.main:run_cli
