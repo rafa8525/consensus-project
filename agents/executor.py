@@ -1,13 +1,21 @@
-# agents/executor.py
+import logging
+import time
+import random
 
 class Executor:
     def __init__(self):
-        self.execution_log = []
+        logging.info("[Executor] Initialized with enhanced logic")
 
-    def execute(self, enriched_tasks):
-        print(f"[Executor] Executing tasks...")
-        for task in enriched_tasks:
-            result = f"✅ {task} → done"
-            self.execution_log.append(result)
-            print(result)
-        return self.execution_log
+    def execute(self, tasks):
+        logging.info("[Executor] Executing enriched tasks with realism...")
+        results = []
+        for task in tasks:
+            logging.info(f"[Executor] Running: {task}")
+            # Simulated success or delay for realism
+            time.sleep(random.uniform(0.1, 0.3))
+            if "error" in task.lower():
+                results.append(f"❌ {task} → failed")
+                logging.warning(f"[Executor]⚠️ Task failed: {task}")
+            else:
+                results.append(f"✅ {task} → done")
+        return results

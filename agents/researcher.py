@@ -1,11 +1,17 @@
-# agents/researcher.py
+import logging
 
 class Researcher:
     def __init__(self):
-        self.enriched_tasks = []
+        logging.info("[Researcher] Initialized with deep role")
 
-    def enrich_plan(self, task_list):
-        print(f"[Researcher] Analyzing tasks: {task_list}")
-        self.enriched_tasks = [task + " [context added]" for task in task_list]
-        print(f"[Researcher] Enriched tasks: {self.enriched_tasks}")
-        return self.enriched_tasks
+    def enrich_tasks(self, tasks):
+        logging.info(f"[Researcher] Adding contextual intelligence to tasks: {tasks}")
+        enriched = []
+        for task in tasks:
+            if "framework" in task.lower():
+                enriched.append(f"{task} [add industry best practices]")
+            elif "summary" in task.lower():
+                enriched.append(f"{task} [attach highlights and key wins]")
+            else:
+                enriched.append(f"{task} [context added]")
+        return enriched

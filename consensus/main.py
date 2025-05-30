@@ -1,25 +1,23 @@
 import argparse
 import logging
-import os
-import sys
-
 from agents.planner import Planner
 from agents.researcher import Researcher
 from agents.executor import Executor
 from agents.memory_manager import MemoryManager
 
-def run_cli():
-    # Fix logging UnicodeEncodeError by ignoring problematic characters
-    handler = logging.StreamHandler(stream=sys.stdout)
-    handler.setLevel(logging.INFO)
-    handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-    logging.basicConfig(level=logging.INFO, handlers=[handler], force=True)
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("consensus_log.txt", encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
 
-    parser = argparse.ArgumentParser(description="Run the Consensus agent simulation.")
-    parser.add_argument("--goal", required=True, help="The goal for the agents to achieve")
-    args = parser.parse_args()
-
-    logging.info("Consensus CLI Agent simulation starting...\n")
+def run_cli(goal):
+    logging.info("Consensus CLI Agent simulation starting...")
+    print("\n🧠 Consensus CLI Agent simulation starting...\n")
 
     # Initialize agents
     planner = Planner()
@@ -27,25 +25,36 @@ def run_cli():
     executor = Executor()
     memory_manager = MemoryManager()
 
-    # Step 1: Planner creates a task plan
-    logging.info(f"[Planner] Received goal: {args.goal}")
-    task_plan = planner.create_plan(args.goal)
+    # Planning
+    logging.info(f"[Planner] Received goal: {goal}")
+    print(f"[Planner] Received goal: {goal}")
+    task_plan = planner.generate_plan(goal)
     logging.info(f"[Planner] Generated task plan: {task_plan}")
+    print(f"[Planner] Generated task plan: {task_plan}")
 
-    # Step 2: Researcher enriches the task plan
-    enriched_plan = researcher.enrich_plan(task_plan)
-    logging.info(f"[Researcher] Enriched tasks: {enriched_plan}")
+    # Researching
+    enriched_tasks = researcher.enrich(task_plan)
+    logging.info(f"[Researcher] Enriched tasks: {enriched_tasks}")
+    print(f"[Researcher] Enriched tasks: {enriched_tasks}")
 
-    # Step 3: Executor runs the enriched tasks
-    execution_log = executor.execute(enriched_plan)
-    for line in execution_log:
-        logging.info(line)
+    # Executing
+    print("[Executor] Executing tasks...")
+    execution_log = []
+    for task in enriched_tasks:
+        result = executor.execute(task)
+        print(result)
+        logging.info(result)
+        execution_log.append(result)
 
-    # Step 4: MemoryManager stores the results
+    # Memory management
+    print("[MemoryManager] Archiving results...")
     memory_manager.store(execution_log)
-    logging.info(f"[MemoryManager] Memory log updated: {execution_log}")
 
+    print("\n✅ Full agent simulation complete.\n")
     logging.info("Full agent simulation complete.")
 
 if __name__ == "__main__":
-    run_cli()
+    parser = argparse.ArgumentParser(description="Run the Consensus CLI Agent.")
+    parser.add_argument("--goal", type=str, required=True, help="The goal to simulate")
+    args = parser.parse_args()
+    run_cli(args.goal)
