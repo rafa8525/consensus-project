@@ -1,11 +1,18 @@
-# agents/planner.py
+import logging
 
 class Planner:
     def __init__(self):
-        self.tasks = []
+        logging.info("[Planner] Initialized with deeper task modeling")
 
-    def create_plan(self, goal):
-        print(f"[Planner] Received goal: {goal}")
-        self.tasks = [f"Step 1 for {goal}", f"Step 2 for {goal}"]
-        print(f"[Planner] Generated task plan: {self.tasks}")
-        return self.tasks
+    def plan(self, goal):
+        logging.info(f"[Planner] Breaking down goal: {goal}")
+        base_tasks = [
+            f"Clarify objective of '{goal}'",
+            f"Gather resources for '{goal}'",
+            f"Define milestones for '{goal}'",
+            f"Assign responsibilities for '{goal}'",
+            f"Set timelines for '{goal}'",
+            f"Execute initial steps of '{goal}'",
+        ]
+        logging.info(f"[Planner] Generated detailed plan: {base_tasks}")
+        return base_tasks
