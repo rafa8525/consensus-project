@@ -14,5 +14,8 @@ dependencies = [
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages = ["agents", "core", "memory", "prompts", "consensus"]
+
 [project.scripts]
-consensus = "scripts.main:run_cli"
+consensus = "consensus.main:run_cli"
