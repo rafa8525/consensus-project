@@ -1,43 +1,86 @@
 import os
-import datetime
+import http.server
+import socketserver
+import json
+from urllib.parse import unquote
 
-LOGS_FOLDER = "logs"
+PORT = 8000
+BASE_DIR = os.path.dirname(__file__)
+MEMORY_DIR = os.path.join(BASE_DIR, "memory")
+LOGS_DIR = os.path.join(BASE_DIR, "logs")
 
-def list_logs():
-    print("\n📂 Available Log Files:")
-    files = sorted(
-        [f for f in os.listdir(LOGS_FOLDER) if f.endswith(".txt")],
-        reverse=True
-    )
-    for idx, fname in enumerate(files):
-        print(f"{idx+1}. {fname}")
-    return files
+class CustomHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/' or self.path == '/index.html':
+            self.path = '/web/index.html'
 
-def view_log(filepath):
-    print(f"\n📄 Contents of {filepath}:\n{'-'*50}")
-    with open(filepath, "r", encoding="utf-8") as f:
-        print(f.read())
+        elif self.path == '/memory':
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            files = sorted(f for f in os.listdir(MEMORY_DIR) if f.endswith(".txt"))
+            self.wfile.write(json.dumps(files).encode())
 
-def main():
-    print("🧠 Consensus Agent Run Dashboard\n")
-    if not os.path.exists(LOGS_FOLDER):
-        print(f"❌ Log folder '{LOGS_FOLDER}' not found.")
-        return
+        elif self.path.startswith('/memory/'):
+            filename = self.path.replace('/memory/', '')
+            filepath = os.path.join(MEMORY_DIR, filename)
+            if os.path.exists(filepath):
+                with open(filepath, "rb") as f:
+                    self.send_response(200)
+                    self.send_header('Content-Type', 'text/plain')
+                    self.end_headers()
+                    self.wfile.write(f.read())
+            else:
+                self.send_error(404, "File not found")
 
-    files = list_logs()
-    if not files:
-        print("No logs found.")
-        return
+        elif self.path == '/goal':
+            goal_path = os.path.join(BASE_DIR, "scheduled_goal.txt")
+            if os.path.exists(goal_path):
+                with open(goal_path, "r", encoding="utf-8") as f:
+                    goal_text = f.read()
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/plain')
+                self.end_headers()
+                self.wfile.write(goal_text.encode())
+            else:
+                self.send_error(404, "Scheduled goal not found")
 
-    while True:
-        choice = input("\nEnter the number of the log to view (or Q to quit): ").strip()
-        if choice.lower() == 'q':
-            break
-        if not choice.isdigit() or not (1 <= int(choice) <= len(files)):
-            print("Invalid selection.")
-            continue
-        selected = files[int(choice)-1]
-        view_log(os.path.join(LOGS_FOLDER, selected))
+        elif self.path.startswith('/search?keyword='):
+            keyword = unquote(self.path.split('=')[1]).lower()
+            matches = []
 
-if __name__ == "__main__":
-    main()
+            for fname in os.listdir(MEMORY_DIR):
+                if fname.endswith(".txt"):
+                    fpath = os.path.join(MEMORY_DIR, fname)
+                    with open(fpath, "r", encoding="utf-8") as f:
+                        content = f.read()
+                        if keyword in content.lower():
+                            matches.append(f"\n--- {fname} ---\n{content.strip()}\n")
+
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()
+            self.wfile.write("\n".join(matches).encode())
+
+        elif self.path == '/agent-counts':
+            counts = {}
+            for fname in os.listdir(LOGS_DIR):
+                if fname.endswith(".txt"):
+                    with open(os.path.join(LOGS_DIR, fname), "r", encoding="utf-8") as f:
+                        content = f.read().lower()
+                        for agent in ["planner", "executor", "researcher", "memory_manager", "scheduler"]:
+                            if agent in content:
+                                counts[agent] = counts.get(agent, 0) + content.count(agent)
+
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(counts).encode())
+
+        else:
+            super().do_GET()
+
+os.chdir(BASE_DIR)
+with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
+    print(f"✅ Serving dashboard at http://localhost:{PORT}")
+    httpd.serve_forever()
