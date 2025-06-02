@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Consensus Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
   <div class="max-w-2xl mx-auto p-6">
-    <h1 class="text-2xl font-bold mb-4">📊 AI Consensus Dashboard</h1>
-    <p class="mb-4">System is online. Log viewer, goal tracker, agent tools, and digest below.</p>
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">📊 AI Consensus Dashboard</h1>
+      <button onclick="toggleTheme()" class="bg-gray-300 dark:bg-gray-800 text-black dark:text-white px-4 py-1 rounded">
+        🌓 Toggle Theme
+      </button>
+    </div>
 
     <!-- 🔍 Keyword Search -->
-    <div class="mt-8">
+    <div class="mt-6">
       <label class="block font-semibold mb-1">🔍 Search Memory Logs</label>
-      <input type="text" id="searchBox" placeholder="Type a keyword..." class="w-full px-3 py-2 border rounded" />
-      <pre id="searchResults" class="bg-white p-4 mt-2 rounded shadow text-gray-800 whitespace-pre-wrap hidden"></pre>
+      <input type="text" id="searchBox" placeholder="Type a keyword..." class="w-full px-3 py-2 border rounded dark:bg-gray-700 dark:text-white" />
+      <pre id="searchResults" class="bg-white dark:bg-gray-800 p-4 mt-2 rounded shadow whitespace-pre-wrap hidden"></pre>
     </div>
 
     <!-- 🗂 Filter Logs -->
-    <div class="mt-10">
+    <div class="mt-8">
       <label class="block font-semibold mb-1">🗂 Filter by Agent</label>
-      <select id="agentFilter" class="px-3 py-2 border rounded">
+      <select id="agentFilter" class="px-3 py-2 border rounded dark:bg-gray-700 dark:text-white">
         <option value="">All</option>
         <option value="planner">Planner</option>
         <option value="executor">Executor</option>
@@ -37,15 +49,15 @@
 
     <!-- 📆 Scheduled Goal -->
     <h2 class="text-xl font-semibold mt-10 mb-2">📆 Scheduled Goal</h2>
-    <pre id="goal-preview" class="bg-white p-4 rounded shadow text-gray-800 whitespace-pre-wrap">Loading...</pre>
-    <textarea id="goalInput" class="w-full mt-2 px-3 py-2 border rounded" rows="3" placeholder="Edit and press Save to update goal"></textarea>
+    <pre id="goal-preview" class="bg-white dark:bg-gray-800 p-4 rounded shadow whitespace-pre-wrap">Loading...</pre>
+    <textarea id="goalInput" class="w-full mt-2 px-3 py-2 border rounded dark:bg-gray-700 dark:text-white" rows="3" placeholder="Edit and press Save to update goal"></textarea>
     <button onclick="saveGoal()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">💾 Save Goal</button>
     <div id="saveStatus" class="text-sm mt-2 text-green-600 hidden">✅ Goal saved.</div>
 
     <!-- 📋 Daily Digest -->
     <h2 class="text-xl font-semibold mt-10 mb-2">📋 Daily Digest</h2>
     <a href="/logs/daily_digest.txt" target="_blank" class="text-blue-700 underline">🔗 View or download full digest</a>
-    <pre id="digest-preview" class="bg-white p-4 mt-2 rounded shadow text-gray-800 whitespace-pre-wrap">Loading...</pre>
+    <pre id="digest-preview" class="bg-white dark:bg-gray-800 p-4 mt-2 rounded shadow whitespace-pre-wrap">Loading...</pre>
 
     <!-- ▶️ Run Agent Now -->
     <h2 class="text-xl font-semibold mt-10 mb-2">▶️ Run Agent Now</h2>
@@ -54,7 +66,18 @@
 
     <!-- 📈 Agent Activity Chart -->
     <h2 class="text-xl font-semibold mt-10 mb-2">📈 Agent Activity Chart</h2>
-    <canvas id="agentChart" class="bg-white p-4 rounded shadow w-full max-w-xl"></canvas>
+    <canvas id="agentChart" class="bg-white dark:bg-gray-800 p-4 rounded shadow w-full max-w-xl"></canvas>
+
+    <!-- 📊 Log Insights Summary -->
+    <h2 class="text-xl font-semibold mt-10 mb-2">📊 Log Insights</h2>
+    <pre id="insights" class="bg-white dark:bg-gray-800 p-4 rounded shadow whitespace-pre-wrap">Loading...</pre>
+
+    <!-- 📁 Export Logs and Memory -->
+    <h2 class="text-xl font-semibold mt-10 mb-2">📁 Export Logs & Memory</h2>
+    <div class="flex gap-4 flex-wrap">
+      <a href="/download/logs.zip" class="bg-blue-700 text-white px-4 py-2 rounded">⬇ Download Logs</a>
+      <a href="/download/memory.zip" class="bg-gray-700 text-white px-4 py-2 rounded">⬇ Download Memory</a>
+    </div>
   </div>
 
   <script>
@@ -126,9 +149,6 @@
       .then(res => res.text())
       .then(text => {
         document.getElementById('digest-preview').textContent = text || 'No digest available.';
-      })
-      .catch(() => {
-        document.getElementById('digest-preview').textContent = 'Could not load digest.';
       });
 
     // Agent chart
@@ -159,6 +179,13 @@
         });
       });
 
+    // Log insights
+    fetch('/insights')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('insights').textContent = text || 'No insights available.';
+      });
+
     // Manual agent runner
     function runAgent() {
       fetch('/run-now', { method: 'POST' })
@@ -172,6 +199,18 @@
         .catch(() => {
           alert('❌ Agent run failed.');
         });
+    }
+
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
     }
   </script>
 </body>
