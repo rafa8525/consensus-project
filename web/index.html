@@ -9,53 +9,78 @@
 <body class="bg-gray-100 text-gray-900">
   <div class="max-w-2xl mx-auto p-6">
     <h1 class="text-2xl font-bold mb-4">📊 AI Consensus Dashboard</h1>
-    <p class="mb-4">System is online. Log viewer, goal tracker, and agent insights below.</p>
+    <p class="mb-4">System is online. Log viewer, goal tracker, agent tools, and digest below.</p>
 
-    <!-- 🔍 Memory Keyword Search -->
+    <!-- 🔍 Keyword Search -->
     <div class="mt-8">
       <label class="block font-semibold mb-1">🔍 Search Memory Logs</label>
       <input type="text" id="searchBox" placeholder="Type a keyword..." class="w-full px-3 py-2 border rounded" />
       <pre id="searchResults" class="bg-white p-4 mt-2 rounded shadow text-gray-800 whitespace-pre-wrap hidden"></pre>
     </div>
 
-    <!-- 🧠 Memory Log Viewer -->
+    <!-- 🗂 Filter Logs -->
+    <div class="mt-10">
+      <label class="block font-semibold mb-1">🗂 Filter by Agent</label>
+      <select id="agentFilter" class="px-3 py-2 border rounded">
+        <option value="">All</option>
+        <option value="planner">Planner</option>
+        <option value="executor">Executor</option>
+        <option value="researcher">Researcher</option>
+        <option value="scheduler">Scheduler</option>
+        <option value="memory_manager">Memory Manager</option>
+      </select>
+    </div>
+
+    <!-- 🧠 Memory Log Files -->
     <h2 class="text-xl font-semibold mt-10 mb-2">🧠 Memory Log Files</h2>
     <ul id="log-list" class="space-y-1 text-blue-700 underline cursor-pointer"></ul>
 
     <!-- 📆 Scheduled Goal -->
     <h2 class="text-xl font-semibold mt-10 mb-2">📆 Scheduled Goal</h2>
     <pre id="goal-preview" class="bg-white p-4 rounded shadow text-gray-800 whitespace-pre-wrap">Loading...</pre>
+    <textarea id="goalInput" class="w-full mt-2 px-3 py-2 border rounded" rows="3" placeholder="Edit and press Save to update goal"></textarea>
+    <button onclick="saveGoal()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">💾 Save Goal</button>
+    <div id="saveStatus" class="text-sm mt-2 text-green-600 hidden">✅ Goal saved.</div>
 
-    <!-- 📈 Agent Chart -->
+    <!-- 📋 Daily Digest -->
+    <h2 class="text-xl font-semibold mt-10 mb-2">📋 Daily Digest</h2>
+    <a href="/logs/daily_digest.txt" target="_blank" class="text-blue-700 underline">🔗 View or download full digest</a>
+    <pre id="digest-preview" class="bg-white p-4 mt-2 rounded shadow text-gray-800 whitespace-pre-wrap">Loading...</pre>
+
+    <!-- ▶️ Run Agent Now -->
+    <h2 class="text-xl font-semibold mt-10 mb-2">▶️ Run Agent Now</h2>
+    <button onclick="runAgent()" class="bg-green-600 text-white px-4 py-2 rounded">▶️ Execute Main Agent</button>
+    <div id="runStatus" class="text-sm mt-2 text-blue-600 hidden">✅ Agent is running...</div>
+
+    <!-- 📈 Agent Activity Chart -->
     <h2 class="text-xl font-semibold mt-10 mb-2">📈 Agent Activity Chart</h2>
     <canvas id="agentChart" class="bg-white p-4 rounded shadow w-full max-w-xl"></canvas>
   </div>
 
   <script>
-    // Memory file list
-    fetch('/memory')
-      .then(res => res.json())
-      .then(files => {
-        const list = document.getElementById('log-list');
-        files.forEach(file => {
-          const li = document.createElement('li');
-          li.innerHTML = `<a href="/memory/${file}" target="_blank">${file}</a>`;
-          list.appendChild(li);
-        });
-      })
-      .catch(() => {
-        document.getElementById('log-list').innerHTML = "<li class='text-red-600'>Could not load memory logs.</li>";
-      });
+    // Auto-refresh every 60s
+    setTimeout(() => window.location.reload(), 60000);
 
-    // Scheduled goal
-    fetch('/goal')
-      .then(res => res.text())
-      .then(text => {
-        document.getElementById('goal-preview').textContent = text || 'No scheduled goal set.';
-      })
-      .catch(() => {
-        document.getElementById('goal-preview').textContent = 'Could not load scheduled goal.';
-      });
+    // Load memory logs
+    function loadLogs(agent = '') {
+      fetch('/memory?agent=' + agent)
+        .then(res => res.json())
+        .then(files => {
+          const list = document.getElementById('log-list');
+          list.innerHTML = '';
+          files.forEach(file => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="/memory/${file}" target="_blank">${file}</a>`;
+            list.appendChild(li);
+          });
+        });
+    }
+
+    document.getElementById('agentFilter').addEventListener('change', e => {
+      loadLogs(e.target.value);
+    });
+
+    loadLogs();
 
     // Keyword search
     document.getElementById('searchBox').addEventListener('keydown', function (e) {
@@ -75,6 +100,36 @@
           });
       }
     });
+
+    // Scheduled goal
+    fetch('/goal')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('goal-preview').textContent = text || 'No scheduled goal set.';
+        document.getElementById('goalInput').value = text || '';
+      });
+
+    function saveGoal() {
+      const text = document.getElementById('goalInput').value;
+      fetch('/save-goal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
+        body: text
+      }).then(() => {
+        document.getElementById('saveStatus').classList.remove('hidden');
+        setTimeout(() => document.getElementById('saveStatus').classList.add('hidden'), 2000);
+      });
+    }
+
+    // Daily digest
+    fetch('/digest')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('digest-preview').textContent = text || 'No digest available.';
+      })
+      .catch(() => {
+        document.getElementById('digest-preview').textContent = 'Could not load digest.';
+      });
 
     // Agent chart
     fetch('/agent-counts')
@@ -103,6 +158,21 @@
           }
         });
       });
+
+    // Manual agent runner
+    function runAgent() {
+      fetch('/run-now', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => {
+          const status = document.getElementById('runStatus');
+          status.textContent = msg || '✅ Agent executed.';
+          status.classList.remove('hidden');
+          setTimeout(() => status.classList.add('hidden'), 3000);
+        })
+        .catch(() => {
+          alert('❌ Agent run failed.');
+        });
+    }
   </script>
 </body>
 </html>
