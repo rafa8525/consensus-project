@@ -1,53 +1,35 @@
-import argparse
+# consensus/memory_viewer.py
+
 import os
 
-MEMORY_DIR = os.path.join(os.path.dirname(__file__), '..', 'memory')
-
-def list_memory_files():
-    files = os.listdir(MEMORY_DIR)
-    print("📂 Memory Files:")
-    for f in files:
-        print("•", f)
-
-def view_memory_file(filename):
-    path = os.path.join(MEMORY_DIR, filename)
-    if not os.path.exists(path):
-        print(f"🚫 File '{filename}' not found.")
+def view_logs():
+    memory_dir = "memory"
+    logs = sorted([f for f in os.listdir(memory_dir) if f.endswith(".txt")])
+    
+    if not logs:
+        print("No memory logs found.")
         return
-    with open(path, 'r', encoding='utf-8') as file:
-        print(f"📄 Contents of '{filename}':")
-        print(file.read())
 
-def search_memory(keyword):
-    print(f"🔍 Searching for keyword: '{keyword}'\n")
-    found = False
-    for file in os.listdir(MEMORY_DIR):
-        path = os.path.join(MEMORY_DIR, file)
-        if not os.path.isfile(path):
-            continue
-        with open(path, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-            matches = [line.strip() for line in lines if keyword.lower() in line.lower()]
-            if matches:
-                found = True
-                print(f"\n📁 {file}:")
-                for match in matches:
-                    print("•", match)
-    if not found:
-        print("🚫 No matches found.")
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--list', action='store_true', help='List all memory logs')
-    parser.add_argument('--view', type=str, help='View a specific memory log')
-    parser.add_argument('--search', type=str, help='Search all logs for a keyword')
-    args = parser.parse_args()
-
-    if args.list:
-        list_memory_files()
-    elif args.view:
-        view_memory_file(args.view)
-    elif args.search:
-        search_memory(args.search)
+    for i, file in enumerate(logs):
+        print(f"{i+1}. {file}")
+    
+    choice = input("Select a file number to view or type a keyword to search: ").strip()
+    
+    if choice.isdigit():
+        index = int(choice) - 1
+        if 0 <= index < len(logs):
+            path = os.path.join(memory_dir, logs[index])
+            with open(path, "r") as f:
+                print(f.read())
+        else:
+            print("Invalid file number.")
     else:
-        parser.print_help()
+        keyword = choice.lower()
+        print(f"\nSearching memory logs for: '{keyword}'\n")
+        for log_file in logs:
+            path = os.path.join(memory_dir, log_file)
+            with open(path, "r") as f:
+                content = f.read()
+                if keyword in content.lower():
+                    print(f"\n--- {log_file} ---\n")
+                    print(content)
