@@ -1,66 +1,69 @@
-from http.server import SimpleHTTPRequestHandler
-from socketserver import TCPServer
-from urllib.parse import parse_qs
-from pathlib import Path
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import os
-import json
+import datetime
 
-PORT = 8000
+app = Flask(__name__, static_url_path='', static_folder='web')
 
-class CustomHandler(SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == "/goal":
-            goal_path = Path("scheduled_goal.txt")
-            if goal_path.exists():
-                goal = goal_path.read_text(encoding="utf-8")
-                self.send_response(200)
-                self.send_header("Content-type", "text/plain")
-                self.end_headers()
-                self.wfile.write(goal.encode("utf-8"))
-                print("📤 Serving goal:", goal.strip())
-            else:
-                self.send_error(404, "Goal not found.")
+@app.route('/')
+def home():
+    return app.send_static_file('index.html')
 
-        elif self.path == "/memory-list":
-            try:
-                files = os.listdir("memory")
-                memory_logs = [f for f in files if f.startswith("memory_log_")]
-                self.send_response(200)
-                self.send_header("Content-type", "application/json")
-                self.end_headers()
-                self.wfile.write(json.dumps(memory_logs).encode("utf-8"))
-                print("📤 Sent memory log list")
-            except Exception as e:
-                self.send_error(500, "Error reading memory folder.")
+@app.route('/save-goal', methods=['POST'])
+def save_goal():
+    goal = request.form.get('goal')
+    with open("scheduled_goal.txt", "w") as f:
+        f.write(goal)
+    return "Goal saved"
 
-        elif self.path == "/logs/daily_digest.txt":
-            digest_path = Path("logs/daily_digest.txt")
-            if digest_path.exists():
-                self.send_response(200)
-                self.send_header("Content-type", "text/plain")
-                self.end_headers()
-                self.wfile.write(digest_path.read_text(encoding="utf-8").encode("utf-8"))
-            else:
-                self.send_error(404, "Digest not found.")
-        else:
-            if self.path == "/":
-                self.path = "/web/index.html"
-            return super().do_GET()
+@app.route('/goal')
+def get_goal():
+    try:
+        with open("scheduled_goal.txt", "r") as f:
+            return f.read()
+    except FileNotFoundError:
+        return ""
 
-    def do_POST(self):
-        if self.path == "/save-goal":
-            content_length = int(self.headers['Content-Length'])
-            post_data = self.rfile.read(content_length).decode("utf-8")
-            data = parse_qs(post_data)
-            goal = data.get("goal", [""])[0]
-            Path("scheduled_goal.txt").write_text(goal, encoding="utf-8")
-            print("📝 Received /save-goal with:", goal)
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(b"Goal saved successfully.")
-        else:
-            self.send_error(404, "Unknown POST route")
+@app.route('/digest')
+def get_digest():
+    try:
+        with open("logs/daily_digest.txt", "r") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "No digest available."
 
-with TCPServer(("", PORT), CustomHandler) as httpd:
-    print(f"✅ Serving dashboard at http://localhost:{PORT}")
-    httpd.serve_forever()
+@app.route('/download-digest')
+def download_digest():
+    return send_from_directory('logs', 'daily_digest.txt', as_attachment=True)
+
+@app.route('/chart-data')
+def chart_data():
+    try:
+        with open("web/chart_data.json", "r") as f:
+            return f.read(), 200, {"Content-Type": "application/json"}
+    except FileNotFoundError:
+        return "{}", 200, {"Content-Type": "application/json"}
+
+@app.route('/memory-logs')
+def memory_logs():
+    memory_dir = 'memory'
+    logs = [f for f in os.listdir(memory_dir) if f.startswith("memory_log_") and f.endswith(".txt")]
+    return jsonify(logs)
+
+@app.route('/memory/<filename>')
+def load_memory_log(filename):
+    try:
+        with open(f"memory/{filename}", "r") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "File not found.", 404
+
+@app.route('/logs/current')
+def live_log():
+    try:
+        with open("logs/current_log.txt", "r") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "No logs available."
+
+if __name__ == '__main__':
+    app.run(port=8000, debug=True)

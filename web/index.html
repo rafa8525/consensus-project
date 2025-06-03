@@ -1,146 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Consensus Agent Run Dashboard</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f5f7;
-      margin: 0;
-      padding: 0 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 0.5rem;
-      padding: 1rem;
-      margin: 1rem 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h2 {
-      margin-top: 0;
-    }
-    pre {
-      background: #f2f2f2;
-      padding: 1rem;
-      overflow-x: auto;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #4F46E5;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #4338ca;
-    }
-    .toggle {
-      float: right;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Consensus Agent Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        textarea { width: 100%; height: 50px; }
+        select, button { margin-top: 10px; }
+        .log-box { background: black; color: lime; padding: 10px; font-family: monospace; height: 200px; overflow-y: scroll; white-space: pre-wrap; }
+    </style>
 </head>
 <body>
+    <h2>🧠 Consensus Agent Dashboard</h2>
 
-  <h1>🧠 Consensus Agent Run Dashboard</h1>
+    <div class="card">
+        <h3>🎁 Scheduled Goal</h3>
+        <textarea id="goalBox" placeholder="Enter daily goal..."></textarea>
+        <br>
+        <button onclick="saveGoal()">📄 Save</button>
+    </div>
 
-  <div class="card">
-    <h2>🎗️ Scheduled Goal</h2>
-    <textarea id="goal" rows="3" style="width:100%" placeholder="Enter daily goal..."></textarea>
-    <br><br>
-    <button onclick="saveGoal()">📄 Save</button>
-  </div>
+    <div class="card">
+        <h3>📄 Daily Digest</h3>
+        <a href="/download-digest">View or download full digest</a>
+        <pre id="digestBox">Loading...</pre>
+    </div>
 
-  <div class="card">
-    <h2>📄 Daily Digest</h2>
-    <a href="/logs/daily_digest.txt" target="_blank">🖊️ View or download full digest</a>
-    <pre id="digest">Loading...</pre>
-  </div>
+    <div class="card">
+        <h3>🌃 Agent Activity Chart</h3>
+        <canvas id="activityChart" height="150"></canvas>
+    </div>
 
-  <div class="card">
-    <h2>🏋️ Agent Activity Chart</h2>
-    <canvas id="chart" height="200"></canvas>
-  </div>
+    <div class="card">
+        <h3>🔍 Memory Replay</h3>
+        <select id="memoryList" onchange="loadMemory()"></select>
+        <pre id="memoryContent">Select a memory file to view its content.</pre>
+    </div>
 
-  <div class="card">
-    <h2>🔍 Memory Replay</h2>
-    <select id="memory-select"></select>
-    <pre id="memory-output">Select a memory file to view its content.</pre>
-  </div>
+    <div class="card">
+        <h3>📁 Live Log Stream</h3>
+        <button onclick="toggleScrollLock()">😐 Toggle Scroll Lock</button>
+        <span id="scrollStatus">Autoscroll enabled</span>
+        <pre class="log-box" id="logBox">Loading logs...</pre>
+    </div>
 
-  <div class="card">
-    <h2>📃 Live Log Stream</h2>
-    <pre id="log-output">Loading logs...</pre>
-  </div>
+    <script>
+        let scrollLock = false;
 
-<script>
-// Goal load/save
-function saveGoal() {
-  const goal = document.getElementById('goal').value;
-  fetch('/save-goal', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({goal})
-  });
-}
-fetch('/goal')
-  .then(res => res.text())
-  .then(text => document.getElementById('goal').value = text)
-  .catch(() => console.warn("Goal fetch failed"));
+        async function saveGoal() {
+            const goal = document.getElementById('goalBox').value;
+            const form = new FormData();
+            form.append('goal', goal);
+            await fetch('/save-goal', { method: 'POST', body: form });
+        }
 
-// Digest
-fetch('/digest')
-  .then(res => res.ok ? res.text() : Promise.reject())
-  .then(text => document.getElementById('digest').textContent = text)
-  .catch(() => document.getElementById('digest').textContent = 'No digest available.');
+        async function loadGoal() {
+            const response = await fetch('/goal');
+            const text = await response.text();
+            document.getElementById('goalBox').value = text;
+        }
 
-// Chart
-fetch('/web/chart_data.json')
-  .then(res => res.ok ? res.json() : Promise.reject())
-  .then(data => {
-    const ctx = document.getElementById('chart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: Object.keys(data),
-        datasets: [{
-          label: 'Agent Task Count',
-          data: Object.values(data),
-          backgroundColor: 'rgba(59, 130, 246, 0.5)'
-        }]
-      },
-      options: {
-        scales: {y: {beginAtZero: true}}
-      }
-    });
-  });
+        async function loadDigest() {
+            const res = await fetch('/digest');
+            const txt = await res.text();
+            document.getElementById('digestBox').textContent = txt;
+        }
 
-// Memory Replay
-fetch('/memory/list')
-  .then(res => res.json())
-  .then(files => {
-    const select = document.getElementById('memory-select');
-    files.forEach(f => {
-      const opt = document.createElement('option');
-      opt.value = f; opt.textContent = f;
-      select.appendChild(opt);
-    });
-    select.addEventListener('change', () => {
-      fetch(`/memory/view?file=${select.value}`)
-        .then(r => r.text())
-        .then(text => document.getElementById('memory-output').textContent = text);
-    });
-  });
+        async function loadChartData() {
+            const res = await fetch('/chart-data');
+            const json = await res.json();
+            const ctx = document.getElementById('activityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(json),
+                    datasets: [{
+                        label: 'Agent Task Count',
+                        data: Object.values(json),
+                        backgroundColor: 'skyblue'
+                    }]
+                }
+            });
+        }
 
-// Log Stream (static fallback)
-fetch('/logs/latest')
-  .then(res => res.ok ? res.text() : Promise.reject())
-  .then(text => document.getElementById('log-output').textContent = text)
-  .catch(() => document.getElementById('log-output').textContent = 'No logs available.');
-</script>
+        async function loadMemoryList() {
+            const res = await fetch('/memory-logs');
+            const files = await res.json();
+            const sel = document.getElementById('memoryList');
+            sel.innerHTML = '';
+            if (files.length === 0) {
+                sel.innerHTML = '<option disabled>No logs found</option>';
+                return;
+            }
+            files.forEach(f => {
+                const o = document.createElement('option');
+                o.value = f;
+                o.textContent = f;
+                sel.appendChild(o);
+            });
+            loadMemory();
+        }
 
+        async function loadMemory() {
+            const file = document.getElementById('memoryList').value;
+            const res = await fetch(`/memory/${file}`);
+            const txt = await res.text();
+            document.getElementById('memoryContent').textContent = txt;
+        }
+
+        async function loadLogs() {
+            const res = await fetch('/logs/current');
+            const txt = await res.text();
+            const box = document.getElementById('logBox');
+            box.textContent = txt;
+            if (!scrollLock) box.scrollTop = box.scrollHeight;
+        }
+
+        function toggleScrollLock() {
+            scrollLock = !scrollLock;
+            document.getElementById('scrollStatus').textContent = scrollLock ? "Autoscroll disabled" : "Autoscroll enabled";
+        }
+
+        loadGoal();
+        loadDigest();
+        loadChartData();
+        loadMemoryList();
+        loadLogs();
+        setInterval(loadLogs, 5000);
+    </script>
 </body>
 </html>
