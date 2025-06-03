@@ -1,76 +1,146 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consensus Dashboard</title>
-  <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
+  <meta charset="UTF-8">
+  <title>Consensus Agent Run Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f5f7;
+      margin: 0;
+      padding: 0 1rem;
     }
-  </script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    .card {
+      background: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    pre {
+      background: #f2f2f2;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4F46E5;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4338ca;
+    }
+    .toggle {
+      float: right;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white p-6">
-  <div class="max-w-5xl mx-auto space-y-6">
-    <h1 class="text-3xl font-bold">🧠 Consensus Agent Run Dashboard</h1>
+<body>
 
-    <!-- 🎯 Goal input -->
-    <div>
-      <h2 class="text-xl font-semibold mb-1">🎯 Scheduled Goal</h2>
-      <textarea id="goal" class="w-full p-3 rounded dark:bg-gray-800 dark:text-white" rows="4" placeholder="Enter daily goal..."></textarea>
-      <button onclick="saveGoal()" class="mt-2 bg-blue-600 text-white px-4 py-1 rounded">💾 Save</button>
-    </div>
+  <h1>🧠 Consensus Agent Run Dashboard</h1>
 
-    <!-- 📋 Daily Digest -->
-    <div>
-      <h2 class="text-xl font-semibold mb-1">📋 Daily Digest</h2>
-      <a href="/logs/daily_digest.txt" target="_blank" class="text-blue-500 underline">🔗 View or download full digest</a>
-      <pre id="digest-preview" class="bg-white dark:bg-gray-800 p-4 mt-2 rounded shadow whitespace-pre-wrap text-sm">Loading...</pre>
-    </div>
-
-    <!-- 📊 Agent Activity chart -->
-    <div>
-      <h2 class="text-xl font-semibold mb-1">📊 Agent Activity Chart</h2>
-      <canvas id="agentChart" height="100"></canvas>
-    </div>
-
-    <!-- 🔁 Real-time Log Viewer -->
-    <div>
-      <h2 class="text-xl font-semibold mb-1">🔁 Live Log Stream</h2>
-      <button onclick="toggleScroll()" class="bg-gray-700 text-white px-3 py-1 mb-2 rounded">⏸ Toggle Scroll Lock</button>
-      <pre id="liveLog" class="bg-black text-green-400 p-4 rounded shadow h-64 overflow-y-scroll text-xs whitespace-pre-wrap font-mono"></pre>
-    </div>
-
-    <!-- 📦 Download logs and memory -->
-    <div>
-      <h2 class="text-xl font-semibold mb-1">📦 Log & Memory Exports</h2>
-      <a href="/download/logs.zip" class="text-blue-500 underline mr-4">⬇ Download Logs ZIP</a>
-      <a href="/download/memory.zip" class="text-blue-500 underline">⬇ Download Memory ZIP</a>
-    </div>
-
-    <!-- 🧠 Replay with Timeline, Delay, Jumps -->
-    <div>
-      <h2 class="text-xl font-semibold mt-10 mb-2">🧠 Agent Memory Replay</h2>
-      <select id="replayFile" class="w-full mb-2 px-3 py-2 rounded dark:bg-gray-700 dark:text-white"></select>
-      <div class="flex justify-between items-center mb-2">
-        <div class="flex space-x-2">
-          <button onclick="prevReplay()" class="bg-gray-700 text-white px-3 py-1 rounded">⬅ Prev</button>
-          <button onclick="nextReplay()" class="bg-gray-700 text-white px-3 py-1 rounded">Next ➡</button>
-        </div>
-        <div class="flex space-x-2">
-          <button onclick="startDelayPlayback()" class="bg-green-600 text-white px-3 py-1 rounded">▶ Auto</button>
-          <button onclick="stopDelayPlayback()" class="bg-red-600 text-white px-3 py-1 rounded">⏹ Stop</button>
-        </div>
-      </div>
-      <select id="jumpMenu" class="w-full mb-2 px-3 py-2 rounded dark:bg-gray-700 dark:text-white">
-        <option disabled selected>📌 Jump to event...</option>
-      </select>
-      <pre id="replayDisplay" class="bg-white dark:bg-gray-800 p-4 rounded shadow h-48 overflow-y-auto whitespace-pre-wrap text-sm">Select a memory log to begin replay.</pre>
-    </div>
+  <div class="card">
+    <h2>🎗️ Scheduled Goal</h2>
+    <textarea id="goal" rows="3" style="width:100%" placeholder="Enter daily goal..."></textarea>
+    <br><br>
+    <button onclick="saveGoal()">📄 Save</button>
   </div>
+
+  <div class="card">
+    <h2>📄 Daily Digest</h2>
+    <a href="/logs/daily_digest.txt" target="_blank">🖊️ View or download full digest</a>
+    <pre id="digest">Loading...</pre>
+  </div>
+
+  <div class="card">
+    <h2>🏋️ Agent Activity Chart</h2>
+    <canvas id="chart" height="200"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>🔍 Memory Replay</h2>
+    <select id="memory-select"></select>
+    <pre id="memory-output">Select a memory file to view its content.</pre>
+  </div>
+
+  <div class="card">
+    <h2>📃 Live Log Stream</h2>
+    <pre id="log-output">Loading logs...</pre>
+  </div>
+
+<script>
+// Goal load/save
+function saveGoal() {
+  const goal = document.getElementById('goal').value;
+  fetch('/save-goal', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({goal})
+  });
+}
+fetch('/goal')
+  .then(res => res.text())
+  .then(text => document.getElementById('goal').value = text)
+  .catch(() => console.warn("Goal fetch failed"));
+
+// Digest
+fetch('/digest')
+  .then(res => res.ok ? res.text() : Promise.reject())
+  .then(text => document.getElementById('digest').textContent = text)
+  .catch(() => document.getElementById('digest').textContent = 'No digest available.');
+
+// Chart
+fetch('/web/chart_data.json')
+  .then(res => res.ok ? res.json() : Promise.reject())
+  .then(data => {
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: Object.keys(data),
+        datasets: [{
+          label: 'Agent Task Count',
+          data: Object.values(data),
+          backgroundColor: 'rgba(59, 130, 246, 0.5)'
+        }]
+      },
+      options: {
+        scales: {y: {beginAtZero: true}}
+      }
+    });
+  });
+
+// Memory Replay
+fetch('/memory/list')
+  .then(res => res.json())
+  .then(files => {
+    const select = document.getElementById('memory-select');
+    files.forEach(f => {
+      const opt = document.createElement('option');
+      opt.value = f; opt.textContent = f;
+      select.appendChild(opt);
+    });
+    select.addEventListener('change', () => {
+      fetch(`/memory/view?file=${select.value}`)
+        .then(r => r.text())
+        .then(text => document.getElementById('memory-output').textContent = text);
+    });
+  });
+
+// Log Stream (static fallback)
+fetch('/logs/latest')
+  .then(res => res.ok ? res.text() : Promise.reject())
+  .then(text => document.getElementById('log-output').textContent = text)
+  .catch(() => document.getElementById('log-output').textContent = 'No logs available.');
+</script>
+
 </body>
 </html>
