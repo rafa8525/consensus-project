@@ -1,0 +1,25 @@
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in chatgpt memories.txt: rafael has resumed using the treadmill with new settings: 10 minutes at speed 3, 10 minutes at speed
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in Chatgpt memory backup from 52425.txt: ﻿chatgpt memory backup from 52425   rafael wants the ai to detect when he’s stacking similar tasks w
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in compact_chatgpt_memory.txt: rafael wants the ai to detect when he's relying on vague intentions (like 'i'll get to it later') an
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in fitness_tracking_system_plan.txt: fitness tracking system integration plan  1. personalized experience 2. registration and sign-up/log
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in Gemini revised memory 051325.txt: personal profile:  name: rafael (birthday: december 15, 1968) ethnicity: mexican american eyes: blue
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in latest_timeline.json: [{"file": "parallel_agent_optimized_memory.txt", "preview": "[task patterns] \u2022 rafael wants the
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in memory.txt: chat history    chatgpt chatgpt sora icon sora gpt icon sam, the prompt creator playground ai agents
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in Optimized_Memory_Entries_Formatted_For_ChatGPT.txt: ai consensus system: rafael is building an ai consensus system with multi-agent architecture, dynami
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in parallel_agent_optimized_memory.txt: [task patterns]  • rafael wants the ai to detect when he's relying on vague intentions (like 'i'll g
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in project_log_with_timestamps (1).txt: project log - ai consensus system implementation  2025-03-11 08:00:00 - centralized knowledge base: 
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in VPNActivationTestingPlan.txt: testing plan: vpn activation  purpose: ensure the vpn system reliably triggers under the expected ai
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in vpn_activation.txt: vpn activation protocols require initiating the client, verifying the endpoint, and enabling secure 
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in vpn_activation_feature.txt: keywords: vpn, activation, protocols, auto-enable, vpn system, secure connection  reminders: - to ac
+2025-06-12 14:57:28 - [2025-06-12 14:57:28] MemoryAgent match in vpn_activation_testing.txt: keywords: vpn, activation, testing, protocol, reminder, secure  reminder: - use this file to review 
+[2025-06-12 15:27:49] MemoryAgent match in 061025 chatgpt project.txt: 🔧 ai consensus system - unified blueprint (v2025.06.10) 1. overview i am building a personal ai cons
+[2025-06-12 15:27:49] MemoryAgent match in consensus_log.txt: 2025-05-30 11:10:57,980 - info - goal received: plan company retreat 2025-05-30 11:10:57,980 - info 
+[2025-06-12 15:27:49] MemoryAgent match in memory_log.txt: [2025-06-12 10:05:33] memory search: ['remind', 'about', 'activation', 'protocols.'] 2025-06-12 10:2
+[2025-06-12 15:27:49] MemoryAgent match in README.txt: ===================== telegram alert system =====================  1. open config.txt    - replace y
+[2025-06-12 15:27:49] MemoryAgent match in scheduled_goal.txt: build persistent memory support into the ai consensus system. add: memory viewer, cli filtering, and
+[2025-06-12 16:07:42] MemoryAgent match in 061025 chatgpt project.txt: 🔧 ai consensus system - unified blueprint (v2025.06.10) 1. overview i am building a personal ai cons
+[2025-06-12 16:07:59] MemoryAgent match in 061025 chatgpt project.txt: 🔧 ai consensus system - unified blueprint (v2025.06.10) 1. overview i am building a personal ai cons
+[2025-06-12 16:07:59] MemoryAgent match in consensus_log.txt: 2025-05-30 11:10:57,980 - info - goal received: plan company retreat 2025-05-30 11:10:57,980 - info 
+[2025-06-12 16:07:59] MemoryAgent match in memory_log.txt: [2025-06-12 10:05:33] memory search: ['remind', 'about', 'activation', 'protocols.'] 2025-06-12 10:2
+[2025-06-12 16:07:59] MemoryAgent match in README.txt: ===================== telegram alert system =====================  1. open config.txt    - replace y
+[2025-06-12 16:07:59] MemoryAgent match in scheduled_goal.txt: build persistent memory support into the ai consensus system. add: memory viewer, cli filtering, and

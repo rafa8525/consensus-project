@@ -1,0 +1,6 @@
+[2025-05-29 14:38:44] [System] Agents initialized
+[2025-05-29 14:38:44] [Planner] Generated 1 tasks
+[2025-05-29 14:38:44] [Planner] Planned task: Create a 3-day itinerary for a family visiting San Francisco with kids.
+[2025-05-29 14:38:44] [Researcher] Enriched task: Create a 3-day itinerary for a family visiting San Francisco with kids. [context added]
+[2025-05-29 14:38:44] [Executor] ✅ Create a 3-day itinerary for a family visiting San Francisco with kids. [context added] → done
+[2025-05-29 14:38:44] [MemoryManager] Stored 1 execution results
