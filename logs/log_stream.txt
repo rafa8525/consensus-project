@@ -1,0 +1,61 @@
+[2025-06-10 09:15:00] GOAL: Activate dashboard view mode
+[2025-06-10 09:15:02] AGENT: LoggerAgent started real-time stream
+[2025-06-10 09:15:03] ERROR: Missing heartbeat from MemoryAgent
+[2025-06-10 09:11:05] GOAL: Simulated agent task started
+[2025-06-10 09:11:05] AGENT: LoggerAgent generated fake result
+[2025-06-10 09:11:05] ERROR: No follow-up action detected
+[2025-06-10 09:13:39] GOAL: Simulated agent run request
+[2025-06-10 09:13:39] AGENT: LoggerAgent responded
+[2025-06-10 09:13:39] ERROR: No data received from MemoryAgent
+[2025-06-10 09:13:57] GOAL: Simulated agent run request
+[2025-06-10 09:13:57] AGENT: LoggerAgent responded
+[2025-06-10 09:13:57] ERROR: No data received from MemoryAgent
+[2025-06-10 10:24:16] GOAL: Activating real agent from memory
+[2025-06-10 11:19:46] GOAL: Activating real agent from memory
+[2025-06-10 11:45:44] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 11:45:45] ❌ ERROR: Agent crash — No module named 'utils'
+[2025-06-10 11:57:21] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 11:57:22] ❌ ERROR: Agent crash — No module named 'utils'
+[2025-06-10 12:03:54] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 12:03:55] ❌ ERROR: Agent crash — LoggerAgent.run() got an unexpected keyword argument 'goal'
+[2025-06-10 12:23:24] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 12:23:25] GOAL: Activate dashboard view mode
+[2025-06-10 13:27:48] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 13:27:49] GOAL: Activate dashboard view mode
+[2025-06-10 13:37:42] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 13:37:43] GOAL: Activate dashboard view mode
+[2025-06-10 13:41:39] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 13:41:40] GOAL: Activate dashboard view mode
+[2025-06-10 13:46:07] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 13:46:08] GOAL: Activate dashboard view mode
+[2025-06-10 13:52:13] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 13:52:14] GOAL: Activate dashboard view mode
+[2025-06-10 14:00:19] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 14:00:20] GOAL: Activate dashboard view mode
+[2025-06-10 14:07:02] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 14:07:03] GOAL: Activate dashboard view mode
+[2025-06-10 14:07:18] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 14:07:19] GOAL: Activate dashboard view mode
+[2025-06-10 14:10:18] 🧠 GOAL: Activating real agent from memory
+[2025-06-10 14:10:19] GOAL: Activate dashboard view mode
+[2025-06-10 14:48:20] main: [20250610_144820] GOAL: Remind me about VPN activation protocols.
+[2025-06-10 15:00:33] Remind me about VPN activation protocols.: [20250610_150033] GOAL: Remind me about VPN activation protocols.
+[2025-06-10 15:15:12] Remind me about VPN activation protocols.: [20250610_151512] GOAL: Remind me about VPN activation protocols.
+[2025-06-10 15:19:10] Remind me about VPN activation protocols.: [20250610_151910] GOAL: Remind me about VPN activation protocols.
+[2025-06-10 15:23:38] Remind me about VPN activation protocols.: [20250610_152338] GOAL: Remind me about VPN activation protocols.
+[2025-06-11 10:58:55] Remind me about VPN activation protocols.: [20250611_105855] GOAL: Remind me about VPN activation protocols.
+[2025-06-11 11:00:20] Remind me about VPN activation protocols.: [20250611_110020] GOAL: Remind me about VPN activation protocols.
+[2025-06-11 15:17:22] Remind me about VPN activation protocols.: 20250611_151722
+[2025-06-11 15:27:45] Remind me about VPN activation protocols.: 20250611_152745
+[2025-06-12 09:49:31] main: [20250612_094931] GOAL: Remind me about VPN activation protocols.
+[2025-06-12 09:58:02] main: [20250612_095802] GOAL: Remind me about VPN activation protocols.
+[2025-06-12 10:05:33] main: [2025-06-12 10:05:33] GOAL: Remind me about VPN activation protocols.
+[2025-06-12 10:15:37] main: [2025-06-12 10:15:37] GOAL: Remind me about VPN activation protocols.
+[2025-06-12 10:21:52] main: [2025-06-12 10:21:52] GOAL: Remind me about VPN activation protocols.
+[2025-06-12 16:07:42] main: [2025-06-12 16:07:42] GOAL: Unrecognized voice input
+[2025-06-12 16:07:59] main: [2025-06-12 16:07:59] GOAL: tell me about my swimming
+[2025-06-12 16:11:49] main: [2025-06-12 16:11:49] GOAL: tell me about my VP
+[2025-06-12 16:35:28] main: [2025-06-12 16:35:28] GOAL: remind me about VPN activation and explain the logging steps used during testing
+[2025-06-13 09:58:51] main: [2025-06-13 09:58:51] GOAL: remind me about VPN
+[2025-06-13 10:22:58] main: [2025-06-13 10:22:58] GOAL: remind me about VPN activation and explain the logging steps used during testing
+[2025-06-13 11:03:56] main: [2025-06-13 11:03:56] GOAL: remind me about VPN activation and explain the logging steps used during testing

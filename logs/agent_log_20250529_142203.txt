@@ -1,0 +1,3 @@
+[2025-05-29 14:22:03] [System] Agents initialized
+[2025-05-29 14:22:03] [Planner] Generated 1 tasks
+[2025-05-29 14:22:03] [Planner] Planned task: Create a 3-day itinerary for a family visiting San Francisco with kids.

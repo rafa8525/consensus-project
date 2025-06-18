@@ -1,0 +1,6 @@
+2025-05-30 14:22:13,504 - INFO - Consensus CLI Agent simulation starting...
+
+2025-05-30 14:22:13,504 - INFO - [Planner] Initialized with deeper task modeling
+2025-05-30 14:22:13,504 - INFO - [Researcher] Initialized with deep role
+2025-05-30 14:22:13,504 - INFO - [Executor] Initialized with enhanced logic
+2025-05-30 14:22:13,504 - INFO - [Planner] Received goal: test minimal memory output

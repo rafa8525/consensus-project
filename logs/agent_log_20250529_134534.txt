@@ -1,0 +1,1 @@
+[2025-05-29 13:45:34] [TestAgent] This is a direct logging test
