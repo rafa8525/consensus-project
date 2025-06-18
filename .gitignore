@@ -137,3 +137,11 @@ dist
 
 # Hide memory folder from public view 
 /memory/ 
+
+# Block problematic or large files
+*.zip
+*.pyd
+.venv/
+node_modules/
+.cache/
+
