@@ -1,0 +1,3 @@
+2025-05-30 11:21:33,345 - INFO - [Planner] Received goal: your goal here
+2025-05-30 11:21:33,345 - INFO - [Planner] Generated task plan: ['Step 1 for your goal here', 'Step 2 for your goal here']
+2025-05-30 11:21:33,345 - INFO - [Researcher] Enriched tasks: ['Step 1 for your goal here [context added]', 'Step 2 for your goal here [context added]']

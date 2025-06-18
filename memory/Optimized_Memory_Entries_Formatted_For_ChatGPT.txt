@@ -1,0 +1,21 @@
+AI Consensus System:
+Rafael is building an AI Consensus System with multi-agent architecture, dynamic upgrades (Swarm, Reinforcement Learning, A2A, MCP), changelog tracking, and full voice/text integration. Parallel processing and automation are core to all functions. Logs, diagnostic checks, and system improvements run daily.
+
+Health & Smartwatch Data:
+Rafael tracks health using Pixel 2 smartwatch and Samsung Watch (for BMI). AI monitors BMI, steps, sleep, active minutes, and calorie burn weekly. Suggestions for energy recovery and Daily Health Watch alerts are prioritized.
+
+Productivity & Workflow Optimization:
+Rafael’s AI monitors task load, motivation, interruptions, decision fatigue, and daily focus patterns. It suggests simplified tasks, quick wins, energy resets, location-based triggers, and dynamic notification modes. Workflow prep, transitions, and catch-up plans are auto-managed.
+
+Reminders & Scheduling:
+Rafael uses AI to manage recurring reminders (e.g., BMI check, showering, cleaning thermos, lawn watering, weighing in). Notifications are delivered via Telegram, calendar links, or push alerts.
+
+Shopping, Devices & Lifestyle Tracking:
+Rafael’s AI tracks personal shopping (Levi’s 505 jeans, smart glasses, EV deals), health (keto diet, keto bars), subscription renewals, and Mazda CX-5 maintenance. AI suggests replacements, finds sales, and logs device preferences.
+
+Content Sync & Self-Diagnostics:
+Rafael’s AI syncs voice and text interactions several times daily using parallel processing, maintains complete logs, and runs weekly self-diagnostics to detect performance issues or upgrade opportunities. All improvements are automatically logged and timestamped.
+
+Entertainment, Preferences, and Style:
+Rafael’s AI monitors movie and series availability across streaming platforms, tracks favorite genres like violent Westerns and dark fantasy, and adapts communication tone based on audience. It also remembers his creative projects, favorite foods, and preferred media styles.
+

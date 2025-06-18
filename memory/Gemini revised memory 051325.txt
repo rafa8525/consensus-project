@@ -1,0 +1,85 @@
+Personal Profile:
+
+Name: Rafael (Birthday: December 15, 1968)
+Ethnicity: Mexican American
+Eyes: Blue
+Height: 5'7"
+Weight Tracking: 221 lbs (03/09/2025), BMI Trend: 35.8 (03/09/2025) -> 35.5 (04/21/2025), Weekly weigh-in reminder (Sunday)
+Location: East Bay, Northern California (PST Time Zone) - Frequent locations: Pleasant Hill, Pittsburg
+Occupation: Computer IT (Works 8:30 AM - 5:00 PM, M-F)
+Vision: Wears glasses for driving and movies, not for reading.
+
+Family & Relationships:
+
+Fiancée: Maribel (Birthday: July 7, 1967) - Described as smart, kind, sweet, loving, selfless, nurturing, a wonderful mother/stepmother. Likes Salvadoran food.
+Daughter: Asia (Graduated college May 2024)
+Brothers: Ricardo, Rudy, Rogelio (Roberto deceased)
+Cousins: Ray, Genaro
+Anniversary with Maribel: 11 years
+
+Health & Fitness:
+
+Type 2 Diabetic
+Fitness Tracking: Uses Pixel 2 and Samsung Watch for BMI, steps (target 10,000/day), sleep, active minutes, calorie burn (weekly monitoring).
+Treadmill Routine: 5 min @ speed 3, 5 min @ speed 5, 5 min @ speed 7.
+Recurring Health Reminders: BMI check.
+Dietary Preferences: Loves Mexican, Italian, Chinese, Japanese, Vietnamese, Salvadoran food. Likes Popeyes chicken and in-season strawberries. Dislikes Dunkin Donuts apple fritters (too small). Follows a keto diet ("Keto Diet for Beginners" book).
+
+Media Interests:
+
+Movie/Series Tracking: Monitors availability on Netflix, HBO, Disney+, Hulu, Paramount+, Apple TV.
+Favorite Genres: Violent Westerns, dark fantasy, supernatural, action-adventure. Enjoys Godzilla, Gamera, Kaiju, Marvel, and DC cartoons. Likes 3D movies.
+Other Media: Enjoys YouTube videos, excited about AI.
+Specific Media Requests/Notes: Combine 'A Quiet Place' I & II, 'A Quiet Place' prequel origin, Gamera: Guardian of the Universe Part 2, weekly #1 movie.
+
+Shopping & Preferences:
+
+Apparel: Prefers blue jeans over black, loves wearing t-shirts, wears size 10 shoes.
+Technology: Interested in Meta Quest 3 (owns one), considering smartwatches with dual cameras.
+Vehicles: Owns 2016 Mazda CX-5 (88,000 miles). Uses Meguiar's Two-Step Headlight Restoration Kit.
+Personal Shopping Interests: Levi’s 505 jeans, smart glasses, EV deals.
+Considering: Manual kick scooter (Xooter MG or Goped Know Ped, >= 220 lbs capacity, portable, durable, good ride, easy maintenance, < $300).
+Home: Owns a home with Maribel, king size Sealy Posturepedic mattress (SMB High Point (HYB) (F) PLH5, firmness 6). Above-ground pool (vinyl liner needs replacement).
+
+Reminders & Automation:
+
+Recurring Reminders: Showering, cleaning thermos, lawn watering (evenings). Notifications via Telegram, calendar links, or push alerts.
+AI Task Management: Calendar and email management.
+AI Monitoring: Task load, motivation, interruptions, decision fatigue, daily focus patterns (suggestions for simplification, quick wins, energy resets, location triggers, dynamic notifications). Workflow prep, transitions, catch-up auto-managed.
+
+Local Information:
+
+Favorite Restaurant (Pleasant Hill/near work): Taqueria Pleasant Hill (https://www.taqueriapleasanthill.com/). Accepts Uber Eats, DoorDash, Grubhub.
+Local News Sources (for daily news): Contra Costa News, KTVU, ABC7 News, CBS News San Francisco, East Bay Times, Ground News (Pittsburg focus). Averages weather from these sources.
+Costco (Antioch Optical Dept.): M-F 9 AM-7 PM, Sat 9:30 AM-6 PM, Closed Sun. Walk-ins welcome (availability dependent).
+Post Office: Occasionally walks to the one on Atlantic Avenue in Pittsburg.
+
+AI Consensus System Project:
+
+Goal: Personal, private AI system with autonomous multi-agent collaboration for task, health, finances, media, and security optimization. Fully autonomous, self-healing, adapts via internal feedback and AI learning loops. Runs on free/open tools.
+Architecture: Multi-agent (Analyzer, Fact-Checker, Coordinator, Synthesizer, Consensus Builder). Dynamic upgrades (Swarm, Reinforcement Learning, A2A, MCP).
+Functionality: Automation (email, scheduling, backups, shopping alerts), Learning (reinforcement, cross-agent knowledge sharing), Health (fitness, BMI, diet, workouts, hydration), Security (VPN auto-activation, monthly audits, risk alerts, encrypted memory), Financials (subscription alerts, ride-share deals, Xfinity tracking, retirement prep), Entertainment (movie/series matching), Shopping (price comparison, store-triggered lists), Logging (real-time project logs, weekly reports).
+Key Principles: Autonomy (approval for critical actions), Accuracy (fact-based, no hallucinations), Optimization (auto-adjusts workflows), Backup & Redundancy (daily midnight backups).
+Voice/Text Integration: Full across devices (including Pixel Buds), real-time command processing.
+Development Platform: Considering Meta-AI support.
+
+Other:
+
+Prefers blue jeans over black jeans.
+Loves wearing t-shirts.
+Takes a lot of pictures.
+Enjoys hot weather, swimming, and barbecuing.
+Favorite place to visit is Maui.
+Interested in the future of AI.
+Favorite color is blue.
+Owns a Pixel 2 smartwatch and loves it.
+Tried starburst layered beer and strawberry citrus beer in Sacramento (liked them).
+Prefers Meguiar's Two-Step Headlight Restoration Kit.
+Remembers past conversations.
+Flu and COVID shot on October 21, 2024.
+Mostly drives for errands, sometimes walks.
+Likes movies in 3D.
+Does not like Dunkin Donuts apple fritters (too small).
+Waters lawn in the evenings.
+Wants an agent named LocalNews Agent (expert in Contra Costa County news).
+King size Sealy Posturepedic mattress model SMB High Point (HYB) (F) PLH5, firmness level 6.
