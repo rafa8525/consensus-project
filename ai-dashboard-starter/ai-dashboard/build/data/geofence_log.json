@@ -1,0 +1,4 @@
+[
+  { "location": "Walmart", "event": "Entered", "time": "12:03 PM" },
+  { "location": "Kitchen", "event": "Exited", "time": "07:45 AM", "tags": ["coffee prep", "lunch bag"] }
+]
