@@ -1,0 +1,5 @@
+# Treat these as binary / large files to mark for LFS (if used)
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.pyd filter=lfs diff=lfs merge=lfs -text
+*.pack filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
