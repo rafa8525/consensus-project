@@ -1,0 +1,49 @@
+
+=== Memory Auto Commit at 2025-06-26 18:24:08.288844 ===
+✅ Daily digest generated: logs/daily_digest_2025-06-26.txt
+📅 Downloading calendar from Google...
+⚠️ Failed to download calendar: 404 Client Error: Not Found for url: https://calendar.google.com/calendar/ical/rafa8525%40gmail.com/private-xxxx/basic.ics
+🔍 Scanning memory for changes before commit...
+⚠️ No new changes or push skipped.
+Command '['git', 'pull']' returned non-zero exit status 128.
+📝 Generating daily digest...
+✅ Daily digest auto-generated at 2025-06-26T18:24:18.540998
+
+[stderr]
+From github.com:rafa8525/consensus-project
+ + 80767418...9450da39 v1.1-dev    -> origin/v1.1-dev  (forced update)
+ * [new branch]        filter-test -> origin/filter-test
+   67a2c912..5fe87cdd  main        -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+
+=== Build Daily Digest at 2025-06-26 18:24:18.570843 ===
+✅ Daily digest generated: logs/daily_digest_2025-06-26.txt
+
+=== Google Drive Backup at 2025-06-26 18:24:18.620703 ===
+
+[stderr]
+python3: can't open file '/home/rafa1215/consensus-project/backup_to_gdrive.py': [Errno 2] No such file or directory
+
+[Error] Google Drive Backup failed with code 2
+
+=== Barcode Sheet Auto-Update at 2025-06-26 18:24:18.661232 ===
+⚠️ ALERT: Failed to update row with UPC 75500000010.
+Tagged keto status for 36000214000: ✅ Keto
+Tagged keto status for 73852514599: ✅ Keto
+Tagged keto status for 708747151930: ✅ Keto
+Tagged keto status for 47495112900: ⚠️ Slightly Keto
+✅ Barcode Sheet Updated Successfully
+
+=== All tasks completed at 2025-06-26 18:24:22.124559 ===
