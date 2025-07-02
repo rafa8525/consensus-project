@@ -1,31 +1,37 @@
-# Ignore virtual environments, builds, OS files, etc.
-.venv/
-*.egg-info/
-__pycache__/
-*.pyc
-*.pyd
-*.log
-
-# Node.js
+# Ignore huge folders and build artifacts
 node_modules/
+build/
+.cache/
+dist/
 
-# ZIPs, backups, and temp
+# Ignore all zip and archive/binary files
 *.zip
-*.bak
-temp-ui-backup/
 *.tar.gz
+*.bak
+*.tar
+*.7z
+*.rar
+*.gz
+*.exe
 
-# ENV and private config
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore local/virtual environment files
+__pycache__/
+.venv/
+env/
+
+# Keep your log .md files tracked
+memory/logs/
+!memory/logs/*.md
+
+# PythonAnywhere/project defaults
 .env
-*.secret
-*token*.txt
-
-# Allow memory folder but exclude sensitive files inside it
-# (previously was blocking the entire folder)
-!/memory/
-memory/*.secret
-memory/private_*.txt
-
-# Ignore IDE/system files
 .DS_Store
-Thumbs.db
+*.pyc
+
+# VSCode and JetBrains (optional)
+.vscode/
+.idea/
