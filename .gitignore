@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignore huge folders and build artifacts
 node_modules/
 build/
@@ -35,3 +36,36 @@ memory/logs/
 # VSCode and JetBrains (optional)
 .vscode/
 .idea/
+=======
+# Ignore virtual environments, builds, OS files, etc.
+.venv/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyd
+*.log
+
+# Node.js
+node_modules/
+
+# ZIPs, backups, and temp
+*.zip
+*.bak
+temp-ui-backup/
+*.tar.gz
+
+# ENV and private config
+.env
+*.secret
+*token*.txt
+
+# Allow memory folder but exclude sensitive files inside it
+# (previously was blocking the entire folder)
+!/memory/
+memory/*.secret
+memory/private_*.txt
+
+# Ignore IDE/system files
+.DS_Store
+Thumbs.db
+>>>>>>> c48816c8 (Stage changes before pull --rebase after freeing disk space)
