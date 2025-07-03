@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-# Ignore huge folders and build artifacts
-node_modules/
-build/
-.cache/
-dist/
-
-# Ignore all zip and archive/binary files
-*.zip
-*.tar.gz
-*.bak
-*.tar
-*.7z
-*.rar
-*.gz
-*.exe
-
-# Ignore logs and temp files
-*.log
-*.tmp
-
-# Ignore local/virtual environment files
-__pycache__/
-.venv/
-env/
-
-# Keep your log .md files tracked
-memory/logs/
-!memory/logs/*.md
-
-# PythonAnywhere/project defaults
-.env
-.DS_Store
-*.pyc
-
-# VSCode and JetBrains (optional)
-.vscode/
-.idea/
-=======
 # Ignore virtual environments, builds, OS files, etc.
 .venv/
 *.egg-info/
@@ -44,28 +5,44 @@ __pycache__/
 *.pyc
 *.pyd
 *.log
+*.tmp
 
 # Node.js
 node_modules/
+.cache/
+build/
+dist/
 
 # ZIPs, backups, and temp
 *.zip
 *.bak
-temp-ui-backup/
 *.tar.gz
+*.tar
+*.rar
+*.gz
+*.7z
+*.exe
+temp-ui-backup/
 
 # ENV and private config
 .env
 *.secret
 *token*.txt
+token.pickle
+reminder agent/token.pickle
 
-# Allow memory folder but exclude sensitive files inside it
-# (previously was blocking the entire folder)
+# Keep memory folder structure but ignore secret contents
 !/memory/
 memory/*.secret
 memory/private_*.txt
 
+# Logs
+*.log
+
 # Ignore IDE/system files
 .DS_Store
 Thumbs.db
->>>>>>> c48816c8 (Stage changes before pull --rebase after freeing disk space)
+
+# VSCode and JetBrains
+.vscode/
+.idea/
