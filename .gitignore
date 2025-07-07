@@ -86,3 +86,5 @@ Thumbs.db
 .vscode/
 .idea/
 >>>>>>> db12dd6a
+node_modules/ 
+.venv/ 
