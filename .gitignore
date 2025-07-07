@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignore huge folders and build artifacts
 node_modules/
 build/
@@ -35,3 +36,53 @@ memory/logs/
 # VSCode and JetBrains (optional)
 .vscode/
 .idea/
+=======
+# Ignore virtual environments, builds, OS files, etc.
+.venv/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyd
+*.log
+*.tmp
+
+# Node.js
+node_modules/
+.cache/
+build/
+dist/
+
+# ZIPs, backups, and temp
+*.zip
+*.bak
+*.tar.gz
+*.tar
+*.rar
+*.gz
+*.7z
+*.exe
+temp-ui-backup/
+
+# ENV and private config
+.env
+*.secret
+*token*.txt
+token.pickle
+reminder agent/token.pickle
+
+# Keep memory folder structure but ignore secret contents
+!/memory/
+memory/*.secret
+memory/private_*.txt
+
+# Logs
+*.log
+
+# Ignore IDE/system files
+.DS_Store
+Thumbs.db
+
+# VSCode and JetBrains
+.vscode/
+.idea/
+>>>>>>> db12dd6a

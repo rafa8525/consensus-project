@@ -1,2 +1,1 @@
-[2025-07-02 10:00] Scanned: Texas Pete Original Hot Sauce | UPC: 755000000010 | Keto: Yes | Confirmed by Rafael.
-[2025-07-02 10:05] Scanned: Gourmet Nut Power Up Trail Mix | UPC: 708747151930 | Keto: No | Confirmed by Rafael.
+[2025-07-03 20:53] Scanned UPC: 73852145599 | Product: Purell Hand Sanitizer | Category: Non-Food | Keto: N/A
