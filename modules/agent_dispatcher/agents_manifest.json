@@ -1,0 +1,6 @@
+[
+  {"name": "Legal Advisor", "skills": ["contracts", "privacy", "regulations", "licensing"]},
+  {"name": "Fitness Coach", "skills": ["workouts", "bmi", "nutrition", "hydration", "exercise"]},
+  {"name": "Data Analyst", "skills": ["charts", "data", "forecasting", "trends", "visualization"]},
+  {"name": "Project Manager", "skills": ["schedule", "task", "deadline", "status", "workflow"]}
+]
