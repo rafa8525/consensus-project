@@ -88,3 +88,5 @@ Thumbs.db
 >>>>>>> db12dd6a
 node_modules/ 
 .venv/ 
+!memory/logs/
+!memory/logs/**
