@@ -1,12 +1,17 @@
 # agent_dispatcher.py
 import json
 import re
+import os
 from fitness_coach_agent import respond as fitness_response
 from project_manager_agent import respond as pm_response
 from legal_advisor_agent import respond as legal_response
 from data_analyst_agent import respond as analyst_response
 
-def load_manifest(path='agents_manifest.json'):
+def load_manifest(path=None):
+    if not path:
+        # Dynamically resolve path relative to this script
+        base_dir = os.path.dirname(__file__)
+        path = os.path.join(base_dir, 'agents_manifest.json')
     with open(path, 'r') as f:
         return json.load(f)
 
