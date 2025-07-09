@@ -1,25 +1,28 @@
-
 from twilio.rest import Client
 import os
+from dotenv import load_dotenv
 
-# Load environment variables (update these if hardcoding)
-ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "AC4b4d18bdc5bc1b13f7bf2220a9d02287")
-AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "3cd125fe97e04a2203ea7e24c6e9f4d8")
-MESSAGING_SERVICE_SID = os.getenv("TWILIO_MSG_SERVICE_SID", "MG6f8cbdafe7ab9d0de20050d8c0a69055")
-TARGET_PHONE = os.getenv("TARGET_PHONE_NUMBER", "+16502283267")  # Replace with Rafael's number
+# ✅ Load environment variables from .env
+load_dotenv(dotenv_path=".env")
+
+# ✅ Read Twilio credentials and phone numbers
+ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+FROM_PHONE = os.getenv("TWILIO_FROM_NUMBER")   # Your Twilio number (e.g., +18886607830)
+TO_PHONE = os.getenv("TWILIO_TO_NUMBER")       # Your target number (e.g., +16502283267)
 
 def send_sms(message: str):
     try:
         client = Client(ACCOUNT_SID, AUTH_TOKEN)
         message = client.messages.create(
             body=message,
-            messaging_service_sid=MESSAGING_SERVICE_SID,
-            to=TARGET_PHONE
+            from_=FROM_PHONE,  # ✅ Correct Twilio number usage
+            to=TO_PHONE
         )
         print(f"✅ SMS sent. SID: {message.sid}")
     except Exception as e:
         print(f"❌ SMS failed: {str(e)}")
 
-# Example usage:
+# ✅ Test run (manual or --test trigger)
 if __name__ == "__main__":
-    send_sms("Test message from AI Consensus System.")
+    send_sms("✅ Twilio Test Successful. Rafael, this is confirmation your SMS system is now live.")
