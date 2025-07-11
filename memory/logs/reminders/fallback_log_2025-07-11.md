@@ -73,3 +73,5 @@ TypeError: send_reminder() takes 0 positional arguments but 1 was given
 2025-07-10 23:58:11 - ALERT: No fitness data logged today.
 2025-07-10 23:58:11 - Reminder sent: (fallback only, no Twilio)
 
+2025-07-11 15:56:22 - Reminder sent: (fallback only, no Twilio)
+2025-07-11 15:56:22 - 🗓️ Scheduled: Grocery run at 6pm
