@@ -1,94 +1,14 @@
-<<<<<<< HEAD
-# Ignore huge folders and build artifacts
-node_modules/
-build/
-.cache/
-dist/
 
-# Ignore all zip and archive/binary files
-*.zip
-*.tar.gz
-*.bak
-*.tar
-*.7z
-*.rar
-*.gz
-*.exe
+# Ignore everything in logs by default
+logs/**
 
-# Ignore logs and temp files
-*.log
-*.tmp
+# Allow log files we need
+!logs/**/*.md
+!logs/**/*.txt
 
-# Ignore local/virtual environment files
-__pycache__/
-.venv/
-env/
-
-# Keep your log .md files tracked
-memory/logs/
-!memory/logs/*.md
-
-# PythonAnywhere/project defaults
-.env
-.DS_Store
-*.pyc
-
-# VSCode and JetBrains (optional)
-.vscode/
-.idea/
-=======
-# Ignore virtual environments, builds, OS files, etc.
-.venv/
-*.egg-info/
-__pycache__/
-*.pyc
-*.pyd
-*.log
-*.tmp
-
-# Node.js
-node_modules/
-.cache/
-build/
-dist/
-
-# ZIPs, backups, and temp
-*.zip
-*.bak
-*.tar.gz
-*.tar
-*.rar
-*.gz
-*.7z
-*.exe
-temp-ui-backup/
-
-# ENV and private config
-.env
-*.secret
-*token*.txt
-token.pickle
-reminder agent/token.pickle
-
-# Keep memory folder structure but ignore secret contents
-!/memory/
-memory/*.secret
-memory/private_*.txt
-
-# Logs
-*.log
-
-# Ignore IDE/system files
-.DS_Store
-Thumbs.db
-
-# VSCode and JetBrains
-.vscode/
-.idea/
->>>>>>> db12dd6a
-node_modules/ 
-.venv/ 
-!memory/logs/
-!memory/logs/**
-
-!logs/system/github_sync_log.md
+# Block secrets
+memory/private/
+memory/secrets/
+memory/keys/
+*.key
+*.pem
