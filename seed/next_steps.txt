@@ -1,0 +1,1 @@
+Implement the auto-connect feature for the VPN based on Wi-Fi network detection. Explore specific methods mentioned in the search results for guidance. Ensure the chosen method aligns with the system's privacy and security requirements.
