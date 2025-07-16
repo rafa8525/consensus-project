@@ -1,0 +1,8 @@
+Weekly Update Reminder
+
+Project: AutoConnectVPN Implementation
+
+Day: [Specify Day]
+Time: [Specify Time]
+
+Please update the project status report template with the latest progress and information related to the AutoConnectVPN implementation.
