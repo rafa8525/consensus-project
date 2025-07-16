@@ -1,0 +1,8 @@
+Automatic VPN Activation Testing Plan
+
+Purpose: Test and validate the functionality of the VPN activation feature
+
+Steps:
+- Conduct thorough testing scenarios
+- Validate feature's reliability in detecting public Wi-Fi networks
+- Identify and resolve any issues or errors
