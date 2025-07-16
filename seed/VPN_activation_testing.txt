@@ -1,0 +1,5 @@
+Testing Plan:
+1. Test the automatic VPN activation feature based on Wi-Fi detection
+2. Verify if the VPN connects automatically when on public Wi-Fi
+3. Ensure the VPN disconnects when not on public Wi-Fi
+4. Document the test results for analysis
