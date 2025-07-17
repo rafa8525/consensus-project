@@ -1,2 +1,3 @@
 Perplexity task created on 2025-07-16 to monitor /seed/perplexity_sync_policy.md daily at 10:00 PM. 
 Created task on 2025-07-17 to summarize daily sync/reminder/fallback logs at 11PM. 
+Created task on 2025-07-17 to forecast failures using drill logs + failover table at 11:30PM. 
