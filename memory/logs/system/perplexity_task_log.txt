@@ -3,3 +3,4 @@ Created task on 2025-07-17 to summarize daily sync/reminder/fallback logs at 11P
 Created task on 2025-07-17 to forecast failures using drill logs + failover table at 11:30PM. 
 Created task on 2025-07-17 to audit memory sync and agent completion status at 11:45PM. 
 Created task on 2025-07-17 for daily agent health audit and response quality score at 11:59PM. 
+Created task on 2025-07-18 to detect instruction drift and GPT loop errors at 12:10AM. 
