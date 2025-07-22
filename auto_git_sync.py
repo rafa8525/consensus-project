@@ -9,11 +9,11 @@ def run_git_sync():
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     try:
-        # Stage updated .py files and memory logs
+        # Stage all Python files and all memory log files recursively
         subprocess.run(["git", "add", "*.py"], check=True)
-        subprocess.run(["git", "add", "memory/logs/*"], check=True)
+        subprocess.run(["git", "add", "--all", "memory/logs/"], check=True)
 
-        # Skip if nothing changed
+        # Skip commit if nothing changed
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
         if not status.stdout.strip():
             with open(LOG_FILE, "a") as f:
