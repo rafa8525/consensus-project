@@ -4,11 +4,11 @@ from datetime import datetime
 from twilio.rest import Client
 from dotenv import load_dotenv
 
-# Load .env manually if needed
+# Load environment variables
 env_path = "/home/rafa1215/consensus-project/memory/.env"
 load_dotenv(dotenv_path=env_path)
 
-# Fallback: manually inject if env is missing
+# Fallback: inject variables manually if missing
 if not all([os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN"),
             os.getenv("TWILIO_FROM_NUMBER"), os.getenv("TWILIO_TO_NUMBER")]):
     if os.path.exists(env_path):
@@ -18,7 +18,7 @@ if not all([os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN"),
                     key, value = line.strip().split("=", 1)
                     os.environ.setdefault(key, value)
 
-# Load Twilio variables
+# Load Twilio credentials
 account_sid = os.getenv("TWILIO_ACCOUNT_SID")
 auth_token = os.getenv("TWILIO_AUTH_TOKEN")
 from_number = os.getenv("TWILIO_FROM_NUMBER")
@@ -40,11 +40,14 @@ with open(reminder_path, "r") as file:
 # Initialize Twilio client
 client = Client(account_sid, auth_token)
 
-# Set up log file path with daily rotation
+# Setup daily SMS log path
 log_dir = "/home/rafa1215/consensus-project/memory/logs/sms"
 os.makedirs(log_dir, exist_ok=True)
 log_date = datetime.now().strftime("%Y-%m-%d")
 log_file_path = os.path.join(log_dir, f"{log_date}_sms_log.md")
+
+# Setup fallback error log
+error_log_path = os.path.join(log_dir, "sms_errors.md")
 
 # Send SMS and log
 for reminder in reminders.get("reminders", []):
@@ -60,3 +63,6 @@ for reminder in reminders.get("reminders", []):
             log_file.write(log_entry)
     except Exception as e:
         print(f"[ERROR] Failed to send SMS: {e}")
+        failure_log = f"{datetime.now()} | SMS FAILED: {reminder['message'][:50]}...\n"
+        with open(error_log_path, "a") as err_log:
+            err_log.write(failure_log)
