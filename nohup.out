@@ -46,3 +46,166 @@ python3: can't open file '/home/rafa1215/consensus-project/memory/tools/send_rem
 [perplexity_heartbeat.log] ERROR — HTTP 403
 === Heartbeat Scripts Finished ===
 Everything up-to-date
+=== Running Heartbeat Scripts ===
+[github_heartbeat.log] OK — GitHub accessible
+[vpn_heartbeat.log] ERROR — VPN not running
+[sms_heartbeat.log] OK — SMS logs found for today
+[perplexity_heartbeat.log] ERROR — HTTP 403
+=== Heartbeat Scripts Finished ===
+[2025-07-31 22:04:48] Fitness heartbeat logged successfully
+Everything up-to-date
+[v1.1-dev e23964cf] Update master control log
+ 141 files changed, 60999 insertions(+), 1081 deletions(-)
+ create mode 100644 memory/logs/agents/github_heartbeat.log
+ create mode 100644 memory/logs/agents/heartbeat_2025-07-31.md
+ create mode 100644 memory/logs/agents/master_control.log
+ create mode 100644 memory/logs/agents/perplexity_heartbeat.log
+ create mode 100644 memory/logs/agents/sms_heartbeat.log
+ create mode 100644 memory/logs/agents/vpn_heartbeat.log
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2137.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2145.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2147.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2157.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2207.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2217.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2228.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2238.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2248.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2258.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2308.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2318.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2328.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2338.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2349.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-30_2359.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0009.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0019.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0029.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0040.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0050.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0100.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0110.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0120.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0130.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0141.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0151.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0201.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0211.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0222.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0232.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0242.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0252.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0302.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0313.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0323.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0333.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0344.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0354.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0404.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0411.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0414.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0424.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0435.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0445.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0455.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0506.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0516.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0526.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0537.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0547.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0557.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0608.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0618.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0629.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0639.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0650.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0700.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0710.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0720.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0731.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0741.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0751.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0801.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0812.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0822.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0832.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0843.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0853.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0903.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0913.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0924.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0934.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0945.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_0955.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1005.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1016.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1026.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1036.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1047.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1057.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1108.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1118.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1128.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1138.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1139.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1149.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1159.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1210.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1221.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1231.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1241.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1252.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1302.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1312.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1323.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1333.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1344.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1355.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1405.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1415.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1426.txt
+ create mode 100644 memory/logs/calendar/calendar_2025-07-31_1437.txt
+ create mode 100644 memory/logs/fitness/2025-07-31.md
+ create mode 100644 memory/logs/nutrition/2025-07-31_nutrition_log.md
+ create mode 100644 memory/logs/project-updates/geofencing_status_2025-07-31.md
+ create mode 100644 memory/logs/sms/2025-07-31_sms_log.md
+ create mode 100644 memory/logs/system/daily_heartbeat_master.log
+ create mode 100644 memory/logs/system/fitness_heartbeat.log
+ create mode 100644 memory/logs/system/geofence_heartbeat.log
+ create mode 100644 memory/logs/system/heartbeat_schedule_status_2025-07-31.md
+ create mode 100644 memory/logs/system/heartbeat_scheduler.log
+ create mode 100644 memory/logs/system/memory_folder_heartbeat.log
+ create mode 100644 memory/logs/system/skipped_task_recovery.log
+ create mode 100644 memory/logs/system/voice_mode_bootstrap.log
+ create mode 100644 memory/logs/system/voice_reminder_heartbeat.log
+ create mode 100644 memory/logs/system/voice_reminder_watcher.log
+ create mode 100644 memory/tools/deploy_missing_heartbeats_and_recovery.py
+ create mode 100644 memory/tools/heartbeat_bundle.py
+ create mode 100755 memory/tools/log_fitness_heartbeat.py
+ create mode 100755 memory/tools/log_geofence_heartbeat.py
+ create mode 100755 memory/tools/log_github_heartbeat.py
+ create mode 100755 memory/tools/log_perplexity_heartbeat.py
+ create mode 100755 memory/tools/log_sms_heartbeat.py
+ create mode 100755 memory/tools/log_voice_reminder_heartbeat.py
+ create mode 100755 memory/tools/log_vpn_heartbeat.py
+ create mode 100644 memory/tools/master_control_loop.py
+ create mode 100755 memory/tools/memory_folder_heartbeat.py
+ create mode 100644 memory/tools/nohup.out
+ create mode 100755 memory/tools/reminder_scheduler_fixed.py
+ create mode 100755 memory/tools/skipped_task_recovery.py
+ create mode 100755 memory/tools/voice_mode_bootstrap.py
+ create mode 100644 nohup.out
+warning: current Git remote contains credentials
+To https://github.com/rafa8525/consensus-project.git
+   62abe0f9..e23964cf  v1.1-dev -> v1.1-dev
+python3: can't open file '/home/rafa1215/consensus-project/memory/tools/send_reminder.py': [Errno 2] No such file or directory
+python3: can't open file '/home/rafa1215/consensus-project/memory/tools/auto_memory_sync.py': [Errno 2] No such file or directory
+[2025-07-31 22:16:02] Voice reminder heartbeat logged successfully
+[2025-07-31 22:16:02] Fitness heartbeat logged successfully
+[2025-07-31 22:16:09] Geofence heartbeat logged successfully
+=== Running Heartbeat Scripts ===
+[github_heartbeat.log] OK — GitHub accessible
+[vpn_heartbeat.log] ERROR — VPN not running
+[sms_heartbeat.log] OK — SMS logs found for today
+[perplexity_heartbeat.log] ERROR — HTTP 403
+=== Heartbeat Scripts Finished ===
