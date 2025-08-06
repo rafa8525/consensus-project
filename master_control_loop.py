@@ -1,85 +1,59 @@
 #!/usr/bin/env python3
-import os
-import time
-import datetime
 import subprocess
-from pathlib import Path
-from dotenv import load_dotenv
+import time
 import logging
+from datetime import datetime
 
-LOG_FILE = '/home/rafa1215/consensus-project/memory/logs/agents/master_control.log'
-os.makedirs(Path(LOG_FILE).parent, exist_ok=True)
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
-                    format='[%(asctime)s] %(levelname)s: %(message)s')
+LOG_FILE = "/home/rafa1215/consensus-project/memory/logs/agents/master_control.log"
 
-ENV_PATH = Path("/home/rafa1215/consensus-project/.env")
-MAX_RESTART_ATTEMPTS = 2
-restart_attempts = {}
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format='[%(asctime)s] %(levelname)s: %(message)s',
+    filemode='a'
+)
 
-TASKS = [
-    ("Daily SMS & Push", "/home/rafa1215/consensus-project/daily_sms_and_push.py", 86400),
-    ("Auto Git Sync", "/home/rafa1215/consensus-project/auto_git_sync.py", 43200),
-    # other tasks unchanged ...
-]
-
-last_run = {task[0]: 0 for task in TASKS}
-
-def log(msg):
-    ts = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
-    entry = f"{ts} {msg}"
-    print(entry)
-    logging.info(entry)
-
-def load_env():
-    if ENV_PATH.exists():
-        load_dotenv(ENV_PATH)
-        log(".env loaded successfully.")
-    else:
-        log(f".env file not found at {ENV_PATH}")
-        raise FileNotFoundError(f".env file not found at {ENV_PATH}")
-
-def run_script(path):
-    load_env()
+def run_task(command, task_name, cwd=None):
     try:
-        result = subprocess.run(
-            ["python3", path],
-            capture_output=True,
-            text=True,
-            env=os.environ
-        )
-        log(f"[TASK] {os.path.basename(path)} stdout:\n{result.stdout.strip()}")
-        if result.stderr.strip():
-            log(f"[TASK] {os.path.basename(path)} stderr:\n{result.stderr.strip()}")
-        if result.returncode != 0:
-            raise Exception(f"Exit code {result.returncode}")
-    except Exception as e:
-        raise e
-
-def run_with_recovery(name, path):
-    try:
-        run_script(path)
-        restart_attempts[name] = 0
-    except Exception as e:
-        log(f"[ERROR] {name} failed: {e}")
-        restart_attempts[name] = restart_attempts.get(name, 0) + 1
-        if restart_attempts[name] <= MAX_RESTART_ATTEMPTS:
-            log(f"[RECOVERY] Restarting {name} (Attempt {restart_attempts[name]})")
-            try:
-                run_script(path)
-            except Exception as e2:
-                log(f"[RECOVERY ERROR] {name} failed again: {e2}")
-        else:
-            log(f"[ALERT] {name} failed {restart_attempts[name]} times. Manual intervention needed.")
+        logging.info(f"Starting task: {task_name}")
+        subprocess.run(command, check=True, cwd=cwd)
+        logging.info(f"Task succeeded: {task_name}")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Task failed ({task_name}): {e}")
 
 def main():
-    log("=== Master Control Loop Started (10 min interval) ===")
+    last_heartbeat = None
+    heartbeat_interval = 600  # 10 minutes in seconds
+
     while True:
-        now = time.time()
-        for name, path, interval in TASKS:
-            if now - last_run[name] >= interval:
-                run_with_recovery(name, path)
-                last_run[name] = now
-        time.sleep(600)
+        now = datetime.now()
+
+        # Task 1: daily_sms_and_push.py (run once daily at 9:00 AM)
+        if now.hour == 9 and now.minute == 0:
+            run_task(
+                ["python3", "/home/rafa1215/consensus-project/daily_sms_and_push.py"],
+                "Daily SMS and Push"
+            )
+
+        # Task 2: auto_git_sync.py (run every hour at minute 0, with correct working directory)
+        if now.minute == 0:
+            run_task(
+                ["python3", "/home/rafa1215/consensus-project/auto_git_sync.py"],
+                "Auto Git Sync",
+                cwd="/home/rafa1215/consensus-project"
+            )
+
+        # Task 3: heartbeat_logger.py (run every 10 minutes)
+        if last_heartbeat is None or (time.time() - last_heartbeat) >= heartbeat_interval:
+            run_task(
+                ["python3", "/home/rafa1215/heartbeat_logger.py"],
+                "Heartbeat Logger"
+            )
+            last_heartbeat = time.time()
+
+        # Sleep 30 seconds before next check
+        time.sleep(30)
 
 if __name__ == "__main__":
+    logging.info("=== Master Control Loop Started (30 sec interval) ===")
     main()
