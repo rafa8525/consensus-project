@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 import time
 import logging
 from pathlib import Path
@@ -9,8 +10,17 @@ from twilio.base.exceptions import TwilioRestException
 
 LOG_FILE = '/home/rafa1215/consensus-project/memory/logs/agents/daily_sms_and_push.log'
 os.makedirs(Path(LOG_FILE).parent, exist_ok=True)
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
-                    format='[%(asctime)s] %(levelname)s: %(message)s')
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format='[%(asctime)s] %(levelname)s: %(message)s',
+    filemode='a'
+)
+
+def redirect_stdout_stderr():
+    sys.stdout = open(LOG_FILE, 'a')
+    sys.stderr = open(LOG_FILE, 'a')
 
 def load_env():
     env_path = Path("/home/rafa1215/consensus-project/.env")
@@ -52,6 +62,7 @@ def send_sms(client, from_number, to_number, body):
 
 def main():
     try:
+        redirect_stdout_stderr()
         load_env()
         validate_env_vars()
         client = Client(os.getenv('TWILIO_ACCOUNT_SID'), os.getenv('TWILIO_AUTH_TOKEN'))
