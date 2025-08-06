@@ -35,7 +35,7 @@ def main():
                 "Daily SMS and Push"
             )
 
-        # Task 2: auto_git_sync.py (run every hour at minute 0, with correct working directory)
+        # Task 2: auto_git_sync.py (run every hour at minute 0)
         if now.minute == 0:
             run_task(
                 ["python3", "/home/rafa1215/consensus-project/auto_git_sync.py"],
@@ -51,9 +51,8 @@ def main():
             )
             last_heartbeat = time.time()
 
-        # Sleep 30 seconds before next check
         time.sleep(30)
 
 if __name__ == "__main__":
-    logging.info("=== Master Control Loop Started (30 sec interval) ===")
+    logging.info("=== Master Control Loop Started ===")
     main()
