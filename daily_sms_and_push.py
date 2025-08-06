@@ -1,49 +1,68 @@
+#!/usr/bin/env python3
 import os
-import datetime
-import subprocess
-from twilio.rest import Client
-
-# Load environment variables
+import time
+import logging
+from pathlib import Path
 from dotenv import load_dotenv
-load_dotenv()
+from twilio.rest import Client
+from twilio.base.exceptions import TwilioRestException
 
-# --- 1. Send SMS ---
-account_sid = os.getenv("TWILIO_ACCOUNT_SID")
-auth_token = os.getenv("TWILIO_AUTH_TOKEN")
-twilio_number = os.getenv("TWILIO_PHONE_NUMBER")
-target_number = os.getenv("TARGET_PHONE_NUMBER")
+LOG_FILE = '/home/rafa1215/consensus-project/memory/logs/agents/daily_sms_and_push.log'
+os.makedirs(Path(LOG_FILE).parent, exist_ok=True)
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
+                    format='[%(asctime)s] %(levelname)s: %(message)s')
 
-client = Client(account_sid, auth_token)
+def load_env():
+    env_path = Path("/home/rafa1215/consensus-project/.env")
+    if env_path.exists():
+        load_dotenv(env_path)
+        logging.info("Loaded .env file.")
+    else:
+        logging.error(".env file not found.")
+        raise FileNotFoundError(".env file not found.")
 
-today = datetime.datetime.now().strftime("%Y-%m-%d")
-message_body = f"📡 Morning status: All systems operational for {today}."
+def validate_env_vars():
+    required_vars = ['TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN', 'TWILIO_FROM_NUMBER', 'TWILIO_TO_NUMBER']
+    missing = [v for v in required_vars if not os.getenv(v)]
+    if missing:
+        logging.error(f"Missing environment variables: {missing}")
+        raise EnvironmentError(f"Missing environment variables: {missing}")
+    logging.info("All required environment variables present.")
 
-try:
-    message = client.messages.create(
-        body=message_body,
-        from_=twilio_number,
-        to=target_number
-    )
+def send_sms(client, from_number, to_number, body):
+    max_attempts = 3
+    delay = 2
+    for attempt in range(1, max_attempts + 1):
+        try:
+            logging.info(f"Attempt {attempt}: Sending SMS...")
+            message = client.messages.create(
+                body=body,
+                from_=from_number,
+                to=to_number
+            )
+            logging.info(f"SMS sent successfully, SID: {message.sid}")
+            return True
+        except TwilioRestException as e:
+            logging.error(f"Twilio error on attempt {attempt}: {e}")
+            if attempt < max_attempts:
+                time.sleep(delay)
+                delay *= 2
+            else:
+                raise
 
-    # --- 2. Log Message Locally ---
-    log_dir = "memory/logs/twilio/"
-    os.makedirs(log_dir, exist_ok=True)
-    log_path = os.path.join(log_dir, f"sms_log_{today}.md")
+def main():
+    try:
+        load_env()
+        validate_env_vars()
+        client = Client(os.getenv('TWILIO_ACCOUNT_SID'), os.getenv('TWILIO_AUTH_TOKEN'))
+        from_number = os.getenv('TWILIO_FROM_NUMBER')
+        to_number = os.getenv('TWILIO_TO_NUMBER')
+        body = "✅ Your daily SMS & push notifications are active."
+        send_sms(client, from_number, to_number, body)
+        logging.info("Daily SMS task completed successfully.")
+    except Exception as e:
+        logging.exception(f"Failed to send daily SMS: {e}")
+        raise
 
-    with open(log_path, "w") as f:
-        f.write(f"# SMS Log - {today}\n")
-        f.write(f"- ✅ Message sent at {datetime.datetime.now().strftime('%H:%M:%S')}\n")
-        f.write(f"- 📤 Content: {message_body}\n")
-        f.write(f"- 🔁 SID: {message.sid}\n")
-
-    print(f"✅ SMS sent and logged to {log_path}")
-
-    # --- 3. GitHub Commit + Push ---
-    subprocess.run(["git", "add", log_path], check=True)
-    subprocess.run(["git", "commit", "-m", f"📨 Auto-log: SMS log for {today}"], check=True)
-    subprocess.run(["git", "push", "origin", "v1.1-dev"], check=True)
-
-    print("✅ Log committed and pushed to GitHub.")
-
-except Exception as e:
-    print(f"❌ Error: {e}")
+if __name__ == "__main__":
+    main()
