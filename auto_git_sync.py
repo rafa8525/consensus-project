@@ -1,34 +1,46 @@
+#!/usr/bin/env python3
 import os
 import subprocess
 from datetime import datetime
+from dotenv import load_dotenv
 
-LOG_FILE = "memory/logs/reminders/github_memory_check_log.txt"
-os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+# Load .env values
+load_dotenv("/home/rafa1215/consensus-project/.env")
+
+# Constants
+REPO_DIR = "/home/rafa1215/consensus-project"
+LOG_DIR = os.path.join(REPO_DIR, "memory/logs/git")
+LOG_FILE = os.path.join(LOG_DIR, "git_sync_log.txt")
+
+def write_log(message):
+    os.makedirs(LOG_DIR, exist_ok=True)
+    timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
+    with open(LOG_FILE, "a") as f:
+        f.write(f"{timestamp} {message}\n")
 
 def run_git_sync():
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
     try:
-        # Stage all Python files and all memory log files recursively
-        subprocess.run(["git", "add", "*.py"], check=True)
-        subprocess.run(["git", "add", "--all", "memory/logs/"], check=True)
+        write_log("=== Git sync started ===")
+        os.chdir(REPO_DIR)
 
-        # Skip commit if nothing changed
-        status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
-        if not status.stdout.strip():
-            with open(LOG_FILE, "a") as f:
-                f.write(f"{timestamp} — No changes to sync\n")
-            return
+        subprocess.run(["git", "pull"], check=True)
+        write_log("Git pull completed.")
 
-        # Commit and push
-        subprocess.run(["git", "commit", "-m", f"Auto-log sync for {timestamp}"], check=True)
-        subprocess.run(["git", "push", "origin", "v1.1-dev"], check=True)
+        subprocess.run(["git", "add", "."], check=True)
+        write_log("Git add completed.")
 
-        with open(LOG_FILE, "a") as f:
-            f.write(f"{timestamp} — Git sync successful\n")
+        commit_msg = f"Auto-log sync for {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        subprocess.run(["git", "commit", "-m", commit_msg], check=True)
+        write_log(f"Git commit done: {commit_msg}")
+
+        subprocess.run(["git", "push"], check=True)
+        write_log("Git push completed.")
+        write_log("=== Git sync successful ===")
 
     except subprocess.CalledProcessError as e:
-        with open(LOG_FILE, "a") as f:
-            f.write(f"{timestamp} — Git sync failed: {e}\n")
+        write_log(f"ERROR: Git command failed: {e}")
+    except Exception as e:
+        write_log(f"ERROR: {str(e)}")
 
-run_git_sync()
+if __name__ == "__main__":
+    run_git_sync()
