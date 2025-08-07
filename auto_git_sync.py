@@ -1,46 +1,53 @@
 #!/usr/bin/env python3
 import os
 import subprocess
-from datetime import datetime
+import datetime
 from dotenv import load_dotenv
 
-# Load .env values
-load_dotenv("/home/rafa1215/consensus-project/.env")
+# Load credentials
+load_dotenv()
+GIT_USER = "rafa8525"
+REPO = "https://github.com/rafa8525/consensus-project.git"
+BRANCH = "v1.1-dev"
+LOG_FILE = "/home/rafa1215/consensus-project/memory/logs/git/git_sync_log.txt"
+EXCLUDE_LOGS = [
+    "memory/logs/heartbeat/full_memory_absorption.log"
+]
 
-# Constants
-REPO_DIR = "/home/rafa1215/consensus-project"
-LOG_DIR = os.path.join(REPO_DIR, "memory/logs/git")
-LOG_FILE = os.path.join(LOG_DIR, "git_sync_log.txt")
-
-def write_log(message):
-    os.makedirs(LOG_DIR, exist_ok=True)
-    timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
+def log(msg):
+    timestamp = datetime.datetime.now().isoformat()
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     with open(LOG_FILE, "a") as f:
-        f.write(f"{timestamp} {message}\n")
+        f.write(f"[{timestamp}] {msg}\n")
+    print(msg)
 
-def run_git_sync():
-    try:
-        write_log("=== Git sync started ===")
-        os.chdir(REPO_DIR)
+def run(cmd):
+    log(f"Running: {cmd}")
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    if result.stdout: log(f"stdout: {result.stdout.strip()}")
+    if result.stderr: log(f"stderr: {result.stderr.strip()}")
+    return result
 
-        subprocess.run(["git", "pull"], check=True)
-        write_log("Git pull completed.")
+def git_sync():
+    run("git pull origin v1.1-dev")
+    run("git add -A")
 
-        subprocess.run(["git", "add", "."], check=True)
-        write_log("Git add completed.")
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    commit_msg = f"Auto-log sync for {now}"
+    run(f'git commit -m "{commit_msg}"')
 
-        commit_msg = f"Auto-log sync for {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-        subprocess.run(["git", "commit", "-m", commit_msg], check=True)
-        write_log(f"Git commit done: {commit_msg}")
+    # Avoid large object errors by forcing smaller pack window
+    run("git config pack.windowMemory 10m")
+    run("git config pack.packSizeLimit 20m")
 
-        subprocess.run(["git", "push"], check=True)
-        write_log("Git push completed.")
-        write_log("=== Git sync successful ===")
-
-    except subprocess.CalledProcessError as e:
-        write_log(f"ERROR: Git command failed: {e}")
-    except Exception as e:
-        write_log(f"ERROR: {str(e)}")
+    push = run("git push origin v1.1-dev")
+    if push.returncode == 0:
+        log("✅ Git push completed successfully.")
+    else:
+        log("❌ Git push failed.")
 
 if __name__ == "__main__":
-    run_git_sync()
+    try:
+        git_sync()
+    except Exception as e:
+        log(f"Unhandled exception: {str(e)}")
