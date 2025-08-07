@@ -90,3 +90,4 @@ node_modules/
 .venv/ 
 !memory/logs/
 !memory/logs/**
+memory/logs/heartbeat/full_memory_absorption.log
