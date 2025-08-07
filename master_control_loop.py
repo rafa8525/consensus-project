@@ -23,7 +23,7 @@ def run_task(command, task_name, cwd=None):
 
 def main():
     last_heartbeat = None
-    heartbeat_interval = 600  # 10 minutes in seconds
+    heartbeat_interval = 30  # 30 seconds
 
     while True:
         now = datetime.now()
@@ -36,14 +36,14 @@ def main():
             )
 
         # Task 2: auto_git_sync.py (run every hour at minute 0)
-        if now.minute == 0:
+        if now.minute == 0 and now.second < 10:
             run_task(
                 ["python3", "/home/rafa1215/consensus-project/auto_git_sync.py"],
                 "Auto Git Sync",
                 cwd="/home/rafa1215/consensus-project"
             )
 
-        # Task 3: heartbeat_logger.py (run every 10 minutes)
+        # Heartbeat logger task (run every 30 seconds)
         if last_heartbeat is None or (time.time() - last_heartbeat) >= heartbeat_interval:
             run_task(
                 ["python3", "/home/rafa1215/heartbeat_logger.py"],
@@ -51,8 +51,8 @@ def main():
             )
             last_heartbeat = time.time()
 
-        time.sleep(30)
+        time.sleep(5)  # Sleep 5 seconds to allow quick heartbeat checks
 
 if __name__ == "__main__":
-    logging.info("=== Master Control Loop Started ===")
+    logging.info("=== Master Control Loop Started (5 sec interval) ===")
     main()
