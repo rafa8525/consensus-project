@@ -1,58 +1,68 @@
 #!/usr/bin/env python3
+import os
 import subprocess
 import time
-import logging
 from datetime import datetime
 
-LOG_FILE = "/home/rafa1215/consensus-project/memory/logs/agents/master_control.log"
+# Define all tasks
+TASKS = [
+    {
+        "name": "Daily SMS and Push",
+        "script": "/home/rafa1215/consensus-project/daily_sms_and_push.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/agents/daily_sms_and_push.log"
+    },
+    {
+        "name": "Auto Git Sync",
+        "script": "/home/rafa1215/consensus-project/auto_git_sync.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/git/git_sync_log.txt"
+    },
+    {
+        "name": "Heartbeat Logger",
+        "script": "/home/rafa1215/consensus-project/heartbeat_logger.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/heartbeat/heartbeat_log.txt"
+    },
+    {
+        "name": "Watchdog Log Checker",
+        "script": "/home/rafa1215/consensus-project/watchdog_log_checker.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/watchdog/failure_log.txt"
+    },
+    {
+        "name": "Security Audit",
+        "script": "/home/rafa1215/consensus-project/memory/tools/security_audit_runner.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/security/security_audit_log.txt"
+    },
+    {
+        "name": "Weekly Watchdog Alert",
+        "script": "/home/rafa1215/consensus-project/memory/tools/watchdog_weekly_alert.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/watchdog/weekly_alert_log.txt"
+    }
+]
 
-logging.basicConfig(
-    filename=LOG_FILE,
-    level=logging.INFO,
-    format='[%(asctime)s] %(levelname)s: %(message)s',
-    filemode='a'
-)
+# Ensure log directories exist
+def ensure_log_dirs():
+    for task in TASKS:
+        log_dir = os.path.dirname(task["log"])
+        os.makedirs(log_dir, exist_ok=True)
 
-def run_task(command, task_name, cwd=None):
+# Execute a single task and log result
+def run_task(task):
     try:
-        logging.info(f"Starting task: {task_name}")
-        subprocess.run(command, check=True, cwd=cwd)
-        logging.info(f"Task succeeded: {task_name}")
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Task failed ({task_name}): {e}")
-
-def main():
-    last_heartbeat = None
-    heartbeat_interval = 30  # 30 seconds
-
-    while True:
-        now = datetime.now()
-
-        # Task 1: daily_sms_and_push.py (run once daily at 9:00 AM)
-        if now.hour == 9 and now.minute == 0:
-            run_task(
-                ["python3", "/home/rafa1215/consensus-project/daily_sms_and_push.py"],
-                "Daily SMS and Push"
-            )
-
-        # Task 2: auto_git_sync.py (run every hour at minute 0)
-        if now.minute == 0 and now.second < 10:
-            run_task(
-                ["python3", "/home/rafa1215/consensus-project/auto_git_sync.py"],
-                "Auto Git Sync",
-                cwd="/home/rafa1215/consensus-project"
-            )
-
-        # Heartbeat logger task (run every 30 seconds)
-        if last_heartbeat is None or (time.time() - last_heartbeat) >= heartbeat_interval:
-            run_task(
-                ["python3", "/home/rafa1215/heartbeat_logger.py"],
-                "Heartbeat Logger"
-            )
-            last_heartbeat = time.time()
-
-        time.sleep(5)  # Sleep 5 seconds to allow quick heartbeat checks
+        result = subprocess.run(["python3", task["script"]], capture_output=True, text=True, timeout=120)
+        status = "succeeded" if result.returncode == 0 else f"failed (code {result.returncode})"
+        log_entry = f"[{datetime.now()}] Task {status}: {task['name']}\n"
+        with open(task["log"], "a") as f:
+            f.write(log_entry)
+        print(f"[INFO] {log_entry.strip()}")
+    except Exception as e:
+        error_entry = f"[{datetime.now()}] Task exception: {task['name']} - {e}\n"
+        with open(task["log"], "a") as f:
+            f.write(error_entry)
+        print(f"[ERROR] {error_entry.strip()}")
 
 if __name__ == "__main__":
-    logging.info("=== Master Control Loop Started (5 sec interval) ===")
-    main()
+    print(f"[{datetime.now()}] INFO: === Master Control Loop Started ===")
+    ensure_log_dirs()
+    for task in TASKS:
+        print(f"[{datetime.now()}] INFO: Starting task: {task['name']}")
+        run_task(task)
+    print(f"[{datetime.now()}] INFO: === Master Control Loop Finished ===")
