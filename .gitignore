@@ -97,3 +97,5 @@ logs/**
 node_modules/.cache/
 ai-dashboard-starter/*.zip
 **/node_modules/
+**/.env
+**/.env.*
