@@ -91,3 +91,5 @@ node_modules/
 !memory/logs/
 !memory/logs/**
 memory/logs/heartbeat/full_memory_absorption.log
+memory/logs/**
+*.bak_twilio_refactor*
