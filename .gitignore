@@ -93,3 +93,7 @@ node_modules/
 memory/logs/heartbeat/full_memory_absorption.log
 memory/logs/**
 *.bak_twilio_refactor*
+logs/**
+node_modules/.cache/
+ai-dashboard-starter/*.zip
+**/node_modules/
