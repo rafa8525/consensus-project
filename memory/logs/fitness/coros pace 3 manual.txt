@@ -1,0 +1,815 @@
+﻿Getting Started
+* 1 month ago
+*  Updated
+In The Box
+* COROS PACE 3 GPS Watch
+* Charging cable 
+* Quick Start Guide/Manual and a Safety/Warranty Booklet 
+ pasted image 0.png 
+
+Set-Up
+Setting up your new COROS watch should take only a few quick steps for you to be ready to begin recording activities. 
+* Download the COROS app from the iOS or Google Play store 
+* If your watch is not already turned on, hold the Backlight Button (see photo in "Button Layout) for 2-3 seconds or until the watch turns on 
+* Choose what language you prefer to have on the watch 
+* Open the COROS app and choose the Profile Page (4th tab on the bottom), then select “Add New Device”
+* Scan the QR code on your watch to connect, or you can manually pair via Bluetooth if you prefer 
+* Choose the Wearing Hand → Choose the Button Layout → Notifications → User Settings  
+ mceclip0.png 
+
+Auto-Lock
+When you first receive your COROS watch, it will be set as default to “Scroll to Unlock” to prevent any accidental starts/cancellations of activities, etc. To unlock your watch, scroll the dial consistently in one direction until the display unlocks 
+* To change the Auto-Lock setting hold the BACK/LAP button to access the Toolbox → Settings → More Settings → Auto-Lock 
+ Hnet-image__1_.gif 
+
+Button Layout
+1 (Digital Dial/CONFIRM): 
+* Scroll/rotate the dial to move your selection up and down 
+* Press to confirm a selection 
+* Hold to finish a workout 
+2 (BACK/LAP): 
+* Power on the watch
+* Press to return to the previous screen (BACK/LAP button)
+* Press to record a lap or rest during workouts 
+* Hold to open Toolbox/shortcut menu  
+ 20231024-063324.jpeg 
+
+Firmware Updates
+To check for firmware updates, open the COROS app and navigate to the Profile Page. To view available firmware updates, tap on the watch icon and select Firmware Version.
+How to Charge Your COROS Watch
+* Locate the charging cable for your COROS watch. 
+* Plug the charging cable into a USB power adapter or a computer. 
+* Connect the charging cable with your COROS watch. 
+* Make sure the cable is fully inserted into the back of your COROS watch. 
+* The cable is not magnetic and will not snap in automatically. 
+* When charging begins, the watch will power on automatically. Watch face will display the current battery percentage. 
+* When the charge is full, your COROS watch will display a green circle and a 100% battery status. 
+ mceclip0.png 
+
+* COROS watches support charging during workouts. Feel free to charge your COROS watch in the middle of the workout recording. Charging will not interfere, stop, or restart your ongoing workouts. 
+Recording Your First Workout
+* To start an activity, from the main watch face, press the digital dial once to open the library of activities to choose from. 
+* Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting your activity. 
+* To pause an activity, with the watch unlocked, press the digital dial button once to pause the current workout. During the pause, a paused timer and current heart rate will display on the page.  
+* To finish a workout, from the paused workout page, scroll to “Finish” and hold the digital dial for three seconds to end the workout.  
+* After finishing a workout, the workout details page will display. If there are multiple laps or sessions recorded, you can select to view the lap details on the bottom of this page. 
+* To access the previously saved workouts on your COROS watch, press the digital dial to open your activity library, scroll to History on the main menu and select a workout to view details.
+ activity_selection_-_training.png 
+
+Settings/Preferences
+* Toolbox/Menu: From the main watch face, press and hold the BACK/LAP button to open the Toolbox/Quick menu
+* Do Not Disturb: Select to switch ON/OFF Do Not Disturb mode
+* Alarm: Select to set up a new alarm or manage existing alarms
+   * Available alarm modes: Only Once | Every Day | Custom 
+* Compass: Select to open the 3D compass 
+   * Press the CONFIRM button to toggle between the following info: 
+      * Compass and current time
+      * Compass, GPS coordinates, elevation and barometer
+* Broadcast HR: Select to take a heart rate measurement and broadcast HR to Bluetooth-supported devices and apps
+* Altitude Performance: Select to take a blood oxygen SpO2 measurement
+   * Press the CONFIRM button to start a new SpO2 measurement
+   * Data available on this page: 
+      * Top section: Altitude performance index (available if elevation is over 2500m or 8250ft) 
+      * Middle section: SpO2 and time since last reading 
+      * Lower section: Elevation 
+   * Scroll down to view the SpO2 (in red, yellow and green) and elevation (in blue) graph in the last 24 hours and 3 days.
+ navigation__1_.png 
+
+* Navigation Settings: Select to choose the following settings:
+   * Select Courses 
+   * Course Selection 
+   * Start Course 
+   * Elevation Details 
+   * Start Point Direction
+      * Positive | Reverse
+   * Start Point Direction
+      * Positive | Reverse
+   * Map Direction
+      * Heading Up | North Up
+   * Deviate Course Alert
+      * ON | OFF
+   * NOTE: This is not a workout mode and no workout data will be saved.
+* Map: Select to view and follow a saved route that is closest to your current location  
+* Stopwatch: Select to use the stopwatch function
+   * Press the CONFIRM button to start and pause the stopwatch
+   * Press the BACK/LAP button to start a new lap and reset the stopwatch 
+   * Hold the BACK/LAP button to exit the page without interrupting the stopwatch 
+   * Available in daily and workout modes
+* Timer: Select to set up to 3 timers with the repeat feature 
+   * Setup new times will overwrite previous ones
+   * Press the CONFIRM button to start and pause the timer
+   * Press the BACK/LAP button to restart the timer or return to the timer setup page
+   * In order to repeat a timer, select Repeat → ON
+   * Hold the BACK/LAP button to exit the page without interrupting the timer
+   * Available in daily and workout modes
+ Simple__1_.png 
+
+* Watch Faces: Select to choose among 5 watch faces stored on the watch and theme color options
+   * Download new watch faces from the COROS app
+* Workout Settings (accessible during workouts): Select to access the workout settings for the current workout
+* System: Select to open System menu
+* Manage backlight and visibility 
+   * To change backlight settings: System → More Settings → Backlight 
+   * With “Gesture Backlight” turned OFF, pressing any button on the watch will still activate the backlight for 10 seconds.
+   * With "Gesture Backlight" set to AUTO or ALL DAY, raising your wrist or pressing any button will activate the backlight.
+   * Due to the nature of the Memory in Pixel (MiP) screen used on COROS watches, visibility is the best when used in outdoor environments under direct sunlight. The stronger the sunlight is, the better the screen visibility is. To improve visibility: 
+      * Activate “Night Mode”: Hold the BACK/LAP button to open the Toolbox, scroll to find Night Mode 
+      * Select for low brightness level always-on backlight
+   * Once switched on, the mode will be deactivated automatically after the next sunrise. 
+   * Use White Background: Main watch face → System → Workout Interface → Background Color → White
+* Change Language 
+   * When you turn on the COROS watch for the first time or reset the watch, you can choose the system language. 
+   * From the main watch face → System → More Settings → Language 
+* Change Orientation 
+   * Main watch face → System → More Settings → Wrist Hand → Left | Right
+   * Main watch face → System → More Settings → Digital Dial → Dial Location → Right | Left Side
+   * Main watch face → System → More Settings → Digital Dial → Dial Orientation → Clockwise Down | Up
+* Remove, change, and fasten COROS watch bands 
+   * COROS PACE 3 watch bands are 22mm wide and compatible with select 3rd party quick-release bands.
+      * Locate the metal pin on the band.
+      * Slide the pin on the spring bar to release the old band.
+      * Slide the pin on the spring bar and Insert the new band to the watch.
+ mceclip0.png 
+
+* Change Unit Settings 
+   * On COROS watches: System → More Settings → Unit → Imperial (feet) | Metric (meters) 
+   * On the COROS app: Profile page → Settings → Units → ft/lbs | cm/kg 
+* Bluetooth Connectivity 
+   * To pair Bluetooth accessories with your COROS watch, hold the BACK/LAP button to access the Toolbox → System → Accessories → Add Bluetooth 
+   * Please ensure that the device which you are attempting to pair is in pairing mode and discoverable.  
+   * You can add multiple accessories from the same type to the Added List on your COROS watch. Only one accessory per type can be paired with your COROS watch during workouts. 
+   * Accessories from different types can work together in one workout. For instance, a paired chest strap and cycling power meter can both work in Indoor Bike mode at the same time. 
+* Heart Rate Broadcast 
+   * Main watch face → press and hold the BACK/LAP button to open Toolbox menu → Broadcast HR
+   * Open the pairing page on supported devices/apps and wait to connect. 
+* Notifications 
+   * To edit notification settings, open the COROS app and navigate to the Device page, select “Notifications” 
+   * On this screen you have the option to enable/disable notifications from any apps which you choose. 
+ 03__1_.png 
+
+* GPS Modes 
+   * To edit which GPS mode you are using, hold the BACK/LAP button to open the Toolbox → System → More Settings → GPS → Mode 
+      * Standard GPS: Standard GPS only takes one GPS reading per second and typically works well for normal use when under standard conditions. 
+      * All Systems On Mode: All Systems On mode turns on all satellite systems simultaneously, including GPS, GLONASS, Galileo, Beidou, and QZSS. Previous generations of GPS watches only allowed for 2-3 systems to be turned on at once, we highly recommend that All Systems on is the GPS mode used for everyday workouts. 
+      * Dual Frequency Mode: is the most powerful and accurate satellite mode available. This powerful mode enables the Pace 3 to communicate with satellite systems in two simultaneous frequencies, bringing next-level accuracy even when you are in challenging conditions or environments.
+      * Ultra-Max GPS Mode: UltraMax GPS mode utilizes GPS, motion sensors and proprietary algorithms to extend the battery life without sacrificing too much of the tracking accuracy. For every 120 seconds, the GPS is switched on for 30 seconds. Ultra-Max mode will be the least accurate GPS tracking of all our GPS modes and is not recommended to be used unless necessary. 
+* Battery Usage Report & Prediction
+   * Built into every COROS watch is a "Battery Usage" tool that allows you to view on-demand usage reports on the consumption of your watch battery during the current charging cycle. 
+   * To access the Battery Usage tool, hold the BACK/LAP button to access the Toolbox, then scroll until you find "Battery Usage"
+   * The Battery Usage tool will then display a graph that shows you the current battery percentage of your watch, a graph showing your historical battery drain, when your last charge was, and the estimation of how long your battery will last based on "standard use". 
+   * To view a more in-depth breakdown of the battery usage statistics, press the digital dial.
+   * From this screen you can see the following metrics: Remaining Power, Estimated Daily Use Left, Estimated Max Daily Use Left, Estimated GPS Use Left, Last Charge, Since Last Charge. You will also find the most common features which cause battery drain here, and what percent of your recent battery drain can be attributed to these common features. Below is an explanation of each of the common features which consume battery:
+      * System: Normal operating activities. Any type of regular maintenance on the watch or features that are vital to maintaining a functional watch (i.e. keeping the clock up-to-date) will fall within the "System" category
+      * Notifications: Any notifications which are pushed to your watch, both for workout alerts (lap alerts, etc.) and daily notifications (calls, text messages, etc). This is displayed as a number rather than being included in the overall percentage estimate.
+      * GPS Workouts: Any activity recorded which uses GPS signals to measure and record distance, etc.
+      * Backlight: Any power used to illuminate your watch screen. The more you use your backlight (Night Mode, Backlight Gesture, etc.), the higher this percentage is likely to be.
+      * Daily Heart Rate: Measurements taken that consume battery to provide daily heart rate data. You have the ability to specify this to "Real-Time" or "Every 10 Min"
+* What sensors are in the watch? 
+   * 3D Compass, Accelerometer, All-Satellite Dual-Frequency GNSS, Barometric Altimeter, Electrocardiogram Sensor, Gyroscope, Thermometer, Wrist-based Heart Rate Sensor, Wrist-based Pulse Oximeter
+Wearing Your Watch
+To ensure that your watch can gather the most accurate data possible, here are a few best practice tips to follow. 
+* Wear the watch tightly, but not so tight as to cut off circulation. It should fit snug and not slide around with movement. 
+* Leave a 1cm gap between your wrist bone and the watch. The higher the watch is above the wrist bone, the more flush the surface of your skin, and the less likely the sensor is to be impacted by flexion in the wrist. 
+* Keep your hands warm. The OHR signal comes from your blood reflection. So, the more blood flow you have, the better signal your watch will receive. The weather doesn’t need to be freezing to impact your OHR accuracy. As long as your hands feel cold, your blood flow is reduced significantly. The best way to solve this is to try and keep the area where your watch is located on your wrist warm.. Another suggestion is always warm up your body (and your hands) before starting your workout in the winter. 
+* Wait for your watch to display a stable HR reading. Just like your body, your OHR sensor requires some warm-up too. It’s recommended to stay on the “Start” page and wait a little longer so the watch can filter some noise by itself. Our watches also provide an alert beep to let you know when it’s ready to go ( if sounds are turned off, you will see a heart symbol that will be solid and steady when ready) 
+* Select the proper training mode. The regular running, cycling, and swimming algorithms are not specifically built for tracking rapid changes in heart rate. When you train with intervals, please select the Interval Training mode under Run mode for enhanced heart rate tracking sensitivity. 
+ mceclip0.png 
+
+3rd Party Integrations/Data Syncing
+Link your COROS account with 3rd party apps to enjoy a fast and seamless data syncing experience.
+* On the COROS app → Profile page → 3rd Party Apps → Log in via the pop-up browser and follow instructions to complete the integration. Here are a few popular apps, to view the full list see the appendix.
+   * Final Surge 
+   * PWR Lab 
+   * Relive
+   * Runalyze 
+   * Strava 
+   * Stryd 
+   * TrainingPeaks 
+ mceclip1.png 
+
+Daily Features
+* 1 year ago
+*  Updated
+Alarm, Stopwatch, Timer
+Access timer, stopwatch and alarm features from the toolbox/shortcut menu. 
+* Main watch face or during workouts → press and hold the BACK/LAP button → toolbox/shortcut menu. 
+Change vibration or tone settings on your watch. 
+* Watch → System → More Settings → Vibrations → Key Vibrations | Alert Vibrations 
+   * Alert Vibrations apply to Timer/Stopwatch/Alarm. 
+* Watch → System → More Settings → Tones → Key Tones | Message & Call Tones | Alarm Tones | Activity Alert Tones 
+   * Alarm Tones apply to Alarm. 
+   * Activity Alert Tones apply to Stopwatch. 
+   * Tones for Timer cannot be disabled. 
+Timer 
+* Select to set up to 3 timers with the repeat feature available. 
+   * Setup new times will overwrite previous ones. 
+   * Press the CONFIRM button to start and pause the timer. 
+   * Press the BACK/LAP button to restart the timer or return to the timer setup page. 
+   * In order to repeat a timer, select Repeat → ON. 
+   * Hold the BACK/LAP button to exit the page without interrupting the timer. 
+   * Available in daily and workout modes. 
+Stopwatch 
+* Select to use the stopwatch function. 
+   * Press the CONFIRM button to start and pause the stopwatch. 
+   * Press the BACK/LAP button to start a new lap and reset the stopwatch. 
+   * Hold the BACK/LAP button to exit the page without interrupting the stopwatch. 
+   * Available in daily and workout modes. 
+Alarm 
+* Select to set up to 10 new alarms or manage existing alarms. 
+   * Available alarm mode in Only Once | Every Day | Custom by day of week. 
+   * Snooze time is not customizable. 
+ Stopwatch.png 
+
+Altitude Alert
+* Hold the BACK/LAP button → System → Sensors → Barometer → Storm Alert → OFF | ON 
+* Select to switch ON/OFF Altitude Alert mode. When elevation is above 2500 meters or 8250 ft and heart rate is higher than normal, your watch will alert you.
+ SpO2_-_Elevation.png 
+
+Battery Usage Tool
+Built into every COROS watch is a "Battery Usage" tool that allows you to view on-demand usage reports on the consumption of your watch battery during the current charging cycle.  
+To access the Battery Usage tool, hold the back button to access the Toolbox, then scroll until you find "Battery Usage". The Battery Usage tool will then display a graph that shows you the current battery percentage of your watch, a graph showing your historical battery drain, when your last charge was, and the estimation of how long your battery will last based on "standard use". 
+* System: Normal operating activities. Any type of regular maintenance on the watch or features that are vital to maintaining a functional watch (i.e. keeping the clock up-to-date) will fall within the "System" category 
+* Notifications: Any notifications which are pushed to your watch, both for workout alerts (lap alerts, etc.) and daily notifications (calls, text messages, etc). This is displayed as a number rather than being included in the overall percentage estimate. 
+* GPS Workouts: Any activity recorded which uses GPS signals to measure and record distance, etc. 
+* Backlight: Any power used to illuminate your watch screen. The more you use your backlight (Night Mode, Backlight Gesture, etc.), the higher this percentage is likely to be. 
+* Daily Heart Rate: Measurements taken that consume battery to provide daily heart rate data. You have the ability to specify this to "Real-Time" or "Every 10min".
+ Battery_Usage.png 
+
+Control Insta360
+To control your Insta360 from your COROS PACE 3, the first thing that you will need to do is connect the two devices via Bluetooth. In order to do so, power on your Insta360 and then hold the back button on your COROS PACE 3 to open up the Toolbox. From the Toolbox, select Insta360 → "Confirm” to add camera. 
+Once you have paired the two devices, you will control your Insta360 camera through the Insta360 widget in your Toolbox. To locate this widget, hold the back button on your watch, scroll until you find "Insta360 Control" indicated with a camera icon and select this.  
+After your COROS PACE 3 connects to the Insta360 device, you then can scroll between using photo and video mode on the watch, using the press function on the digital dial to take photos or start/stop videos directly from your watch.
+ Webp.net-resizeimage.jpg 
+
+Control Insta360 GO 2
+To pair your COROS watch with an Insta360 GO 2 camera, follow the instructions below:
+1. Power up Insta GO 2
+2. Enter Remote Pairing mode on Insta GO 2
+3. Long press the Back button on COROS PACE 3, choose Camera Control
+4. Confirm on the watch and search for the camera
+5. Add the camera
+6. Scroll between Photo and Video mode
+7. Press the digital dial to take photos or start/stop videos directly from the watch
+Once connected, you will be able to control your Insta360 GO 2 using the digital dial. This includes starting/stopping photos and videos directly from the watch
+For information on how to pair with other Insta 360 cameras, please view this article.
+When pairing with the Insta GO 2, COROS watches will support 3 modes: Photo, Video, and Video Pro. You are able to switch modes using the digital dial.
+ InstaGo2.png 
+
+Find My Phone & Find My Watch
+Users that have their COROS watch and phone connected via Bluetooth can find their watch via the COROS app and vice versa.
+On the app
+* Go to the Profile page from the bottom bar and tap on the watch icon.
+* Select Find Device to trigger the alert on the watch if it is close by.
+   * NOTE: In order for "Find My Phone" to work, it is required that the COROS app is running in the background. Do not force close the COROS app if you wish to use this feature. Force closing apps halts all Bluetooth connectivity that is required. 
+* Stop the alarm once you find the watch by pressing any button.
+On the watch
+* Go to the Toolbox Menu.
+   * From the main watch face, press and hold the BACK/LAP button.
+* Select Find My Phone. Once COROS app receives the request, an alarm will be triggered.
+ 104a83fa-5082-4ef7-a25a-b7c749a1b1e2.png 
+
+Music
+Using your COROS charging cable, you will first want to connect your COROS PACE 3 to a Mac or PC. Once you have done so, wait for the COROS PACE 3 to appear as an external hard drive on your computer. You will likely see this either on your desktop or in the "External Hard Drive" section of the disk management section of your computer. 
+Next, after selecting the COROS PACE 3 hard drive on your computer you will see two folders, "Maps" and "Music". Open the "Music" folder on your hard drive. Using MP3 files stored locally on your computer (the COROS PACE 3 only supports MP3 at this time), simply select the music you wish to download to your watch, then "drag and drop" the files from your computer into the "Music" folder on your COROS PACE 3. 
+With the music now stored on your COROS PACE 3, you will want to ensure that you have either a speaker or Bluetooth headphones connected to your watch in order to play music, as the watch itself does not have speakers. To do so, hold the back button and navigate to Settings → Accessories → Add Bluetooth, and ensure your desired Bluetooth device is in Pairing Mode to make a connection.
+Once you have headphones connected and music stored on the watch, all you will need to do is hold the BACK/LAP button, navigate to the "Music" icon and use either the touch screen or digital dial to begin playing music.
+ Toolbox_-_Music.png 
+
+Night Mode
+Night Mode provides low brightness level always-on backlight for training at night or darker conditions. Frequently activating the standard backlight will drain the battery life on your COROS watch. 
+To access Night Mode, hold the BACK/LAP button to open the Toolbox → Night Mode
+ 02__1_.png 
+
+Storm Alert
+All COROS watches are equipped with barometers to detect air pressure changes, which can be used to predict and detect weather changes. In the event of an incoming storm, the Storm Alert feature on your COROS watch can notify you in time should immediate actions be needed to keep you safe during training and daily use. 
+* Hold the BACK/LAP button → System → Sensors → Barometer → Storm Alert → OFF | ON 
+   * Once enabled, your COROS watch will receive a Storm Alert even if you are tracking an outdoor workout or in Do Not Disturb mode.  
+   * A drop of 4 hPa or more in 3 hours will trigger the storm alert. 
+ storm_alert.png 
+
+Watch Faces
+From the COROS app: To change the watch faces available on your COROS watch, open the COROS app and choose the Watch Icon/Device Page (4th tab on the bottom), then select “Watch Faces”.  
+* Once in the Watch Face Library, you can select any face of your choice to save to your watch, up to five faces can be stored on the watch 
+From the watch: Hold the BACK/LAP button to open the Toolbox → Watch Face 
+ Simple__1_.png 
+
+Widgets
+Widgets can easily be accessed from the main watch face by scrolling up and down. Press the CONFIRM button on certain widget pages for additional information. Use either the dial or touch screen to view the recent history of the selected widget data page.
+ Widget2.png 
+
+To customize these widgets first open the COROS app. Next, select the "watch" icon in the bottom right-hand corner of the screen, then "Customization" within the COROS PACE 3 Device section. Now choose "Daily Data" which will display the full list of widgets that can be displayed. 
+Using the three white horizontal lines on the right-hand side of the screen, you can drag and drop the different fields into any order that you would like. The widget which is shown at the top of the screen on the COROS app will appear as the first data available when scrolling down on your COROS PACE 3 watch. 
+To remove or add widgets, you can use the +/- buttons on the left-hand side of the COROS app. All of the widgets that are currently appearing on your watch will appear under the "Manage Daily Data display order" heading. Widgets that are not displayed on your watch will appear under the "Hidden Daily Data" field. 
+After customizing your widgets to your preference, make sure to choose the "Save" button in the upper right-hand corner of the app to populate these changes to your watch. If you want to reset the widgets to factory settings, choose "Restore Defaults" at the bottom of the COROS app. 
+* Active Calories 
+   * Active Calories measurement displayed on COROS watches and within the COROS app is an estimation of the calories burned during recorded workouts and times where your watch records a cadence over 130 steps/minute, most common when walking quickly.  
+   * In order to change or set your daily goals (both Calories and Exercise time), open the COROS app and navigate to your profile page. Next, scroll to the very bottom of the page to find where you can change your goals. 
+* Exercise Time 
+   * Exercise Time is a measurement showing the amount of time in which you have recorded exercises during the day 
+* Sunrise/Sunset 
+* Solar Noon 
+* Sunrise 
+* Sunset 
+* Dawn 
+* Dusk 
+* Date 
+* Heart Rate 
+   * Real-time heart rate in 1-second rate. 
+      * The HR graph on the watch and the COROS app is not affected by this setting but the accuracy will increase. 
+   * Maximum, minimum and average heart rate in the last 6 hours. 
+   * Heart rate graph in the last 6 hours. 
+   * Press the digital dial and scroll to view the heart rate data in the last 24 hours. 
+   * Heart rate is recorded every 10 minutes in daily use and every second in workouts. 
+* Elevation 
+   * Last updated elevation in meter (metric) or foot (imperial). 
+      * Change the unit on your COROS watch – main watch face → System → More Settings → Units → Imperial | Metric. 
+   * Maximum, minimum and average elevation in the last 6 hours. 
+   * Elevation graph in the last 6 hours. 
+      * Press the CONFIRM button and scroll to view the elevation data in the last 24 hours. Swipe left and right to view.
+   * Elevation is recorded every 10 minutes in daily use and every 5 seconds in workouts. 
+   * Press and hold Digital Dial to calibrate the elevation. 
+      * Use GPS 
+      * Enter Elevation 
+* Barometer 
+   * Last updated barometric/atmospheric reading in hPa (Hectopascal Pressure) or mmHg. 
+   * Maximum, minimum, and average barometric/atmospheric reading in the last 6 hours. 
+   * Barometric/atmospheric graph in the last 6/12/18 hours. 
+      * Press the CONFIRM button and scroll to view the barometric/atmospheric data in the last 24/48/72 hours. Swipe left and right to view.
+         * Change the history data display range – main watch face → System → Sensors → Barometer → Schedule → Last 6 | 12 | 18 Hours. 
+      * Switch between Sea-level Pressure/Station Pressure. 
+         * Main watch face → System → Sensors → Barometer → Data Source → Station Pressure | Sea-level Pressure. 
+         * Station pressure is measured at a station without any altitude adjustment like from a house or the top of a mountain. It will change at various altitudes. 
+         * Sea-level pressure is the station pressure adjusted to the sea level. It is often used for predicting weather changes at the current altitudes. 
+      * Provides weather forecast using the arrow displayed on the top of the page. 
+         * Arrow pointing downwards indicates potential stormy weather. 
+         * Arrow pointing upwards indicates potential clear weather. 
+         * The arrow consists of 2 parts. The left part shows the info 3-6 hours ago and the right part shows the last 3 hours. 
+   * Barometric/atmospheric data is recorded every 10 minutes. Air conditioners and heaters can impact the accuracy of barometric readings.   
+   * Press and hold the Digital Dial to access quick settings. 
+      * Data Source 
+      * Display Range 
+      * Pressure Units 
+      * Storm Alert 
+      * (i) Baro. Direction 
+* Sleep 
+   * Set up the Sleep Start Time on the COROS app as close to when you typically fall asleep as possible. 
+   * COROS app → Profile page → Profile Setting → Sleep Tracking → Start Time.  
+   * The watch will start checking if you are asleep two hours before the sleep start time. If you fall asleep 30 minutes prior to the sleep start time, the sleep tracking will start 30 minutes before. 
+   * If you wake up in the middle of the night, as long as you fall back asleep within 5 hours of waking up, the watch will continue to record sleep data.
+* Steps
+   * The steps widget on your COROS watch/app uses the hardware and proprietary algorithms to count the number of steps you have taken in a day 
+* Floors Climbed 
+   * The floors widget on your COROS watch/app uses the hardware and proprietary algorithms to count the number of floors you have climbed in a day
+ Widget_-_Sunset_Sunrise.png 
+
+Activities
+* 6 days ago
+*  Updated
+Activity Alerts
+To set an activity alert, prior to pressing “Start Activity”, navigate to Settings → Activity Alerts. Activity Alerts are custom to individual activity modes and not all options may be available for select workouts. 
+* Cadence 
+* Distance 
+* Elevation Gain/Loss 
+* Heart Rate 
+* Nutrition 
+* Pace 
+* Power 
+* Speed 
+ Cadence_Alert__1_.png 
+
+Activity Modes
+ activity selection - training.png 
+
+* Bike - Bike activity mode on COROS watches is designed to record, track, and analyze data for your outdoor rides. When using Bike mode you will have the ability to use navigation (on watches equipped with navigation features), follow interval workouts, and set activity alerts. 
+   * To use Bike mode, press the digital dial and select “Bike”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types during workouts and further information, please visit: Bike
+* Badminton (Indoor) Badminton activity mode on COROS watches is designed to record, track, and analyze data for indoor badminton sessions. This mode supports heart rate tracking, calorie burn, and workout duration metrics to help you monitor performance and recovery. 
+      * To use Badminton mode, press the digital dial and select “Badminton”. Ensure the heart rate sensor is active (indicated by a heart icon at the bottom of the screen) before starting your session. 
+      * To view supported data types during workouts and further information, please visit: Badminton
+* Basketball (Outdoor) Basketball activity mode on COROS watches helps you track metrics during outdoor basketball games and drills. Capture performance data like heart rate, duration, and calories burned to support fitness tracking and recovery. 
+      * To use Basketball mode, press the digital dial and select “Basketball”. Wait for GPS signal acquisition and ensure the heart rate sensor is active before starting your session.
+      * To view supported data types during workouts and further information, please visit: Basketball
+* Boxing (Indoor) Boxing activity mode on COROS watches is designed to track your indoor boxing workouts. This mode monitors heart rate, duration, and calories burned to support your training. 
+      * To use Boxing mode, press the digital dial and select “Boxing”. Ensure the heart rate sensor is active before starting your workout. 
+      * To view supported data types during workouts and further information, please visit: Boxing
+* Elliptical (Indoor) Elliptical activity mode on COROS watches is designed to monitor your indoor elliptical workouts. Track key performance data such as heart rate, calorie burn, and duration to support your training goals. 
+      * To use Elliptical mode, press the digital dial and select “Elliptical”. Wait until the heart rate sensor is active before starting your workout. 
+      * To view supported data types during workouts and further information, please visit: Elliptical
+* Flatwater - Flatwater activity mode on COROS watches is designed to record, track, and analyze data for activities such as paddle boarding, kayaking, canoeing, and more. Flatwater mode allows you to use navigation (on watches equipped with navigation features), set activity alerts, and view real-time data such as speed, distance, stroke rate, and more. 
+   * To use Flatwater mode, press the digital dial and select “Flatwater”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity.  
+   * To view supported data types during workouts and further information, please visit: Flatwater
+* Floor Climb - Climb activity mode is designed to record, track, and analyze data for your outdoor rides. When using Bike mode you will have the ability to use navigation (on watches equipped with navigation features), follow interval workouts, and set activity alerts. 
+
+   * To view supported data types during workouts and further information, please visit: Floor Climb
+   * Football / Soccer (Outdoor) Football / Soccer activity mode on COROS watches is built to track and analyze data during practice and gametime. Monitor real-time metrics including heart rate, calories burned, and session time to better understand workout intensity. 
+   * To use Football / Soccer mode, press the digital dial and select “Soccer”. Ensure a strong GPS signal and active heart rate tracking before starting. 
+   * To view supported data types during workouts and further information, please visit: Football / Soccer
+   * Frisbee (Outdoor) Frisbee activity mode on COROS watches is intended to track and analyze data from outdoor frisbee games and activities. Monitor metrics like GPS-tracked movement, heart rate, and calories burned to evaluate workout intensity. 
+   * To use Frisbee mode, press the digital dial and select “Frisbee”. Wait for GPS signal acquisition and verify the heart rate sensor is active before beginning. 
+   * To view supported data types during workouts and further information, please visit: Frisbee
+   * GPS Cardio - GPS Cardio activity mode on COROS watches is designed to record any activity outdoors where viewing GPS data (distance, GPS track, etc.) is necessary, but the activity does not fit into any other available modes.
+   * To use GPS Cardio mode, press the digital dial and select “GPS Cardio”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity.  
+   * To view supported data types and further information, please visit: GPS Cardio
+   * Gravel - Gravel activity mode on COROS watches is designed to record, track, and analyze data for your outdoor gravel or cyclocross rides. When using Gravel mode you will have the ability to use navigation, follow interval workouts, and set activity alerts.
+   * To use Gravel mode, press the digital dial and select “Gravel”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types during workouts and further information, please visit: Gravel
+   * Gym Cardio - Gym Cardio activity mode on COROS watches is designed to record and analyze data for indoor workouts such as weight training, indoor sports, etc. 
+   * To use Gym Cardio mode, press the digital dial and select “Gym Cardio”. Please wait until the watch indicates that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types during workouts and further information, please visit: Gym Cardio 
+   * Hike – Hike activity mode on COROS watches is designed to track, record, and analyze data for moderate or slow outdoor hiking on trails. Hike mode allows you to use navigation features in addition to activity alerts during an activity. 
+   * To use Hike mode, press the digital dial and select “Hike”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Hike 
+   * Indoor Bike – Indoor Bike activity mode is designed to record any indoor bike workout. We recommend pairing your COROS watch with external bike accessories/sensors for the best experience using Indoor Bike mode. Connecting to an external sensor will allow you to track additional data other than your heart rate and workout time. (How to get the correct speed and distance readings from a bike trainer) You will also have the option to set activity alerts in this activity mode. 
+   * To use Indoor Bike mode, press the digital dial and select “Indoor Bike”. Please wait until the watch indicates that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Indoor Bike
+   * Indoor Rower – Indoor Rower activity mode is designed to record activities completed on an indoor rowing machine. We recommend pairing your COROS watch to the rowing machine to view data such as wattage, pace, etc. (Pair with Bluetooth Accessories) In this activity mode you will also be able to set activity alerts. 
+   * To use Indoor Rower mode, press the digital dial and select “Indoor Rower”. Please wait until the watch indicates that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types during workouts and further information, please visit: Indoor Rower
+   * Indoor Run – Indoor Run activity mode is designed to use the sensors in your COROS watch to track treadmill runs. This activity mode automatically turns off GPS signal and relies on the internal sensors along with proper calibration and user input to measure your treadmill runs accurately. (How to ensure proper distance tracking for indoor runs) In this activity mode you will also have the option to set activity alerts. 
+   * To use Indoor Run mode, press the digital dial and select “Indoor Run”. Please wait until the watch indicates that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Indoor Run/Treadmill
+   * Jump Rope - Jump Rope activity mode is designed to help you measure data fields that are unique and vital to track when completing a jump rope activity. These data fields include but are not limited to: Speed, Max Speed, Continuous Jumps, Set Stops, and more. 
+   * To use Jump Rope mode, press the digital dial and select "Jump Rope". Please wait until the watch indicates that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Jump Rope
+   * MTB - MTB activity mode on COROS watches is designed to record, track, and analyze data for your outdoor mountain bike rides. When using MTB mode you will have the ability to use navigation, follow interval workouts, and set activity alerts.
+   * To use MTB mode, press the digital dial and select “MTB”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity.
+   * To view supported data types during workouts and further information, please visit: MTB
+   * Multisport – Multisport activity mode is designed to be used when completing multiple different activities/exercises/workouts all in one session. Multisport mode allows you to specify up to five different workout types within the one activity mode (select “Settings → Workout” prior to starting). You will also be able to access activity alerts and navigation when using this mode. 
+   * To use Multisport mode, press the digital dial and select “Multisport”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity.  
+   * To view further information, please visit: Multisport
+   * Open Water – Open Water activity mode is designed to be used for any outdoor/open water swims. This activity mode uses both GPS and the hardware in your watch to track distances, stroke rates, and more. Open Water activities will allow you to access activity alerts during your workout.
+   * COROS watches support freestyle stroke types in Open Water mode for accurate GPS tracking. Breaststroke, Backstroke, and Butterfly styles do not have guaranteed GPS tracking.  
+   * To use Open Water mode, press the digital dial and select “Open Water”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. To ensure the GPS tracking accuracy, please wait until you receive a confirmation from the watch about GPS acquisition before jumping into the water. Make sure to provide a substantial amount of time for the watch to stay out of water during your strokes as GPS signals cannot travel underwater. 
+   * To view supported data types and further information, please visit: Open Water
+   * Pilates (Indoor) Pilates activity mode on COROS watches is tailored to track your indoor Pilates workouts. Monitor your session duration, heart rate, and calories burned as you focus on strength, flexibility, and controlled movement. 
+   * To use Pilates mode, press the digital dial and select “Pilates”. Confirm that the heart rate sensor is active before beginning your session. 
+   * To view supported data types during workouts and further information, please visit: Pilates
+   * Pool Swim – Pool Swim activity mode is designed to be used for swims where the pool is a set distance and you will be completing multiple laps across the pool. Pool Swim supports and automatically detects 4 major stroke types in Pool Swim mode including Freestyle, Breaststroke, Backstroke and Butterfly. You can easily change the pool length setting on the watch to meet your need. Distance is measured and detected when you make a turn. If you don’t use a flip turn, please make sure to include arm movements that are substantially different than stroke movements during the turn. You will also be able to access activity alerts in this mode. 
+   * To use Pool Swim mode, press the digital dial and select “Pool Swim”. Next, select the length of the pool (25m, 50m, 25yd, 33.3m, 33.3yd, Custom). Please wait until the watch indicates that heart rate is being measured (indicated by a heart icon at the bottom of the screen). 
+   * To view supported data types and further information, please visit: Pool Swim
+   * Rowing – Rowing activity mode is designed to be used for outdoor/open-water rowing where GPS signals are available. Rowing mode will allow you to track your stroke rate, heart rate, distance, and more. You can also access activity alerts in this mode.
+   * To use Rowing mode, press the digital dial and select “Rowing”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Rowing
+   * Run - The standard "Run" activity was designed to be used when running on paved or hard-packed roads with minimal elevation gain/loss. The "Run" activity mode is designed to work seamlessly with any downloaded workouts, training plans, or basic interval runs. "Run" mode also allows for you to access "Navi Settings" to help you navigate routes, add checkpoints, navigate "Back to Start" and more. In "Run" mode, you can access activity alerts. "Run" mode does impact your EvoLab metrics such as Threshold Pace, VO2 Max, etc. "Run" will give you an analysis of your run with a "Running Performance" metric. To view more information about EvoLab please see "EvoLab Metrics".
+   * To use Run mode, press the digital dial and select “Run”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Run
+   * Skateboard (Outdoor) Skateboard activity mode on COROS watches helps you track your outdoor skateboarding sessions. This mode uses GPS and motion sensors to record distance, speed, heart rate, and duration—helping you monitor progress and performance. 
+   * To use Skateboard mode, press the digital dial and select “Skateboard”. Wait until GPS signal is acquired and the heart rate sensor is active before beginning. 
+   * To view supported data types during workouts and further information, please visit: Skateboard
+   * Ski – Ski activity mode is designed to track your downhill skiing activities and will display data such as: downhill laps, lift laps, and more. Ski mode will allow you to set activity alerts and enable Auto Ascent/Descent for the most accurate tracking. Ski mode automatically uses 3D distance which considers altitude changes to measure your activities most accurately.
+   * To use Ski mode, press the digital dial and select “Ski”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Ski
+   * Snowboard - Snowboard activity mode is designed to track your downhill snowboarding activities and will display data such as: downhill laps, lift laps, and more. Snowboard mode will allow you to set activity alerts and enable Auto Ascent/Descent for the most accurate tracking. Snowboard mode automatically uses 3D distance which considers altitude changes to measure your activities most accurately.
+   * To use Snowboard mode, press the digital dial and select “Snowboard”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Snowboard
+   *  
+   * Strength - Strength mode is designed to help athletes program and track their strength training workouts. These workouts can consist of body weight, dumbbells, barbells, circuits, and many more. Athletes can design strength workouts in the app by classifying what exercise, how many sets, how many reps, and what weight they are lifting. If a workout is designed beforehand, athletes will also see a heatmap of muscles they targeted in the app. Your watch will track reps based on the movements of your arm/wrist. Select strength workout for all of your strength training needs. Using strength mode will allow you to set rest alerts during your activity.
+   * To use Strength mode, press the digital dial and select “Strength”. Next choose what area(s) you will be training for the workout (Whole Body, Shoulders, Chest, Back, Core, Legs/Hips, Arms). To change what body part you are training during your workout, press the digital dial to pause the activity, then navigate to “Next Parts”. 
+   * To view supported data types and further information, please visit: Strength
+   * Table Tennis (Indoor) Table Tennis activity mode on COROS watches is designed to capture performance data during your indoor table tennis matches. Monitor metrics like heart rate, calorie burn, and session duration to help you track fitness gains. 
+   * To use Table Tennis mode, press the digital dial and select “Table Tennis”. Ensure the heart rate sensor is active (indicated by a heart icon at the bottom of the screen) before starting your session. 
+   * To view supported data types during workouts and further information, please visit: Table Tennis
+   * Tennis (Outdoor) Tennis activity mode on COROS watches is designed to track and analyze data for your outdoor tennis matches. This mode monitors key performance indicators such as heart rate, calories burned, and workout time, giving you insights into your match intensity. 
+   * To use Tennis mode, press the digital dial and select “Tennis”. Wait for GPS signal acquisition (indicated by an “Acquired” message) and ensure the heart rate sensor is active before beginning your activity. 
+   * To view supported data types during workouts and further information, please visit: Tennis
+   * Track Run - Track Run activity mode is designed to accurately measure your laps and distance on tracks to give you the most accurate distance data and path. In this mode, you can specify which lane you are running in and your watch will automatically track your distance and laps on the track. This mode will use the first lap to identify that you are running on a track, and from the second lap on will use the track running algorithm to measure your activity. You can change the lane which you are running in during the workout and also will have the option to access interval mode, activity alerts, and this mode can be used in training plans. 
+   * To use Track Run mode, press the digital dial and select “Track Run”. Next, specify which lane you will be running in on the track. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Track Run
+   * Trail Run - Trail Run activity mode is designed to be used on technical trails, trails with significant elevation gain/loss, or any extended/multi-day runs. Trail Run will default to using 3D Distance instead of standard Distance (to change go to Trail Run → Settings → 3D Distance). 3D distance utilizes elevation gain to calibrate the distance compared to 2D distance. Trail Run mode features a Resume Later option in case you take long breaks between runs but want to capture it all as one activity (stage races for instance). To use this feature, pause your run, select "Resume Later" in the options. Trail Run mode also allows for you to access "Navi Settings" to help you navigate routes, add checkpoints, navigate "Back to Start" and more. At this time, training plans and interval training are not included in "Trail Run". "Trail Run" activities do not impact EvoLab data at this time. In "Trail Run" mode, you can also access activity alerts.
+   * To use Trail Run mode, press the digital dial and select “Trail Run”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity. 
+   * To view supported data types and further information, please visit: Trail Run
+   * Training (Structured Programs) - Training mode is an easy shortcut to access your pre-designed training for the day. If an athlete has created a training plan or workout for a specific day, this task can be accessed through the training shortcut. When selecting "training" be sure to select the pre-designed workout and then hit start. Your training plan will automatically begin and lead you through your predesigned workout.
+   * To view more information about training, please visit: Training 
+   * Training Plans - In Training Plan mode, athletes can access their future workouts through the watch. By selecting this mode, athletes will pull up a calendar that highlights future workouts. Scrolling through these days, athletes can see what workouts are on what day.  This helps athletes plan their workouts to fit into their normal day-to-day lives. If you are unsure of your upcoming schedule, select training plan to get a birds eye view.
+   * To view more information about training plans, please visit: How to create and follow a training plan 
+   * Triathlon - Triathlon mode is designed to be used for any workout or race that consists of 3 activities with 2 transitions.  Simply press your watch's CONFIRM button to progress from one part of the triathlon to the next.  By default, Triathlon mode is set to Open Water, Bike, and Run, but you can customize these three activity types and their order by choosing from Run, Bike, Open Water, or Pool Swim.  To choose from other activity types, please use Multisport mode.
+   * Activity alerts in Triathlon mode can only be customized by modifying the activity alerts on the individual activity modes themselves.  For example, to change the alert for the Bike portion of the triathlon, please go to Bike mode on your watch and set the activity alert there.
+   * Triathlon mode includes a transition between the first and second activities, and another transition between the second and third activities.  If at any time you accidentally progress past the current activity and start the next transition prematurely, you can use your watch's BACK button to return to the activity.
+   * To view supported data types and further information, please visit: Triathlon
+   * Walk - Walk mode contains a new and unique data field: Steps.   As the nature of GPS technology does not work well with walking activities, especially in the urban environment (due to speed, frequent stops, arm movements, etc.), steps will be a valuable tool to gain insight into your walking activities and provide the highest degree of accuracy available.  Walk mode can be used in both indoor and outdoor environments.  In indoor conditions, the watch can estimate distance based on cadence and stride data.  This mode defaults to 1,000 steps per "lap," but this number can be adjusted within the activity settings.
+   * To view supported data types and further information, please visit: Walk
+   * XC Ski – XC or “Cross Country” Ski mode is designed to track any skiing (mostly on flat terrain) where you are completely self-propelled. XC Ski mode will allow you to access both navigation and activity alerts during your activities. 
+   * To use XC Ski mode, press the digital dial and select “XC Ski”. Please wait until the watch indicates that you have a strong GPS signal (indicated by an “Acquired” message at the top of the screen) and that heart rate is being measured (indicated by a heart icon at the bottom of the screen) before starting an activity.
+   * To view supported data types and further information, please visit: XC Ski
+   * Yoga (Indoor) Yoga activity mode on COROS watches is ideal for tracking your indoor yoga sessions. This mode captures heart rate trends, duration, and calorie burn to help you monitor performance during both restorative and power-based flows. 
+   * To use Yoga mode, press the digital dial and select “Yoga”. Make sure the heart rate sensor is active before beginning your session. 
+   * To view supported data types during workouts and further information, please visit: Yoga
+Advanced Running Metrics
+ power.jpg 
+
+Running Power (provided directly from all COROS watches)
+   * Power is the rate of effort used in running. Running uses more power than walking if the distance remains the same because the duration is shorter and speed increased. The power calculation is related to weight, speed, and other metrics. Running uphill with the same pace requires more power than running flat. Power data can help evaluate real-time workout intensity. Running power is a great tool to measure your training in addition to heart rate and other metrics.
+Form Power
+   * The amount of power wasted due to inefficiencies in your running form. The lower this number, the better and more efficient the runner. This is similar to the previous Running Efficiency metrics (now removed) in terms of running form insights.
+   * Available only in the post-workout analysis when paired with COROS POD.
+ groundtime-LRbalance.jpg 
+
+Ground Time
+   * Excellent: <210ms
+   * Better: 210-240ms
+   * Good: 240-270ms
+   * Average: 270-300ms
+   * Poor: >300ms
+   * Ground time measures the amount of time each of your feet are in contact with the ground. Advanced runners tend to have shorter ground time. Elite runners’ ground time can be as low as 180ms.
+Left/Right Balance
+   * Orange: >L 51.5 Far more time on left foot
+   * Yellow: L 50.6-L 51.5 Slightly longer time on left foot
+   * Green: L 50.5—R 50.5 Good left/right foot balance
+   * Yellow: R 50.6-R 51.5 Slightly longer time on right foot
+   * Orange: >R 51.5 Far more time on right foot
+   * L/R balance measures the percentage of ground time spent on each foot. Track running and trail running may cause the reading to drift away from the desired green zone. If the reading exceeds 55, your risk of injury may increase. 
+ strideratio-height.jpg 
+
+Stride Ratio
+   * Excellent: <6%
+   * Better: 6-8%
+   * Good: 8-10%
+   * Average: 10-12%
+   * Poor: >12%
+   * Stride ratio can help measure running efficiency. It is the ratio of stride height to stride length. When stride length is longer and stride height is lower, the amount of energy wasted going up and down is reduced and the running is considered more efficient. The stride ratio for advanced running form can be lower than 6%.
+Stride Height
+   * Excellent: <5cm or <2in
+   * Better: 5-8cm or 2-3.2in
+   * Good: 8-12cm or 3.2-4.7in
+   * Average: 12-15cm or 4.7-5.9in
+   * Poor: >15cm or > 6in
+   * Stride height is the amount your body bounces vertically with each step. Lower stride height indicates that less energy is wasted bouncing up and down. Fatigue and incorrect running form may cause higher stride height.
+ 1.jpg 
+
+Stride Length
+   * Stride length measures the distance from heel to heel when you take two steps. It is an important factor to evaluate running form and techniques. On average, an adult’s stride length is 65 cm / 2.13 ft during walking and between 90-150 cm / 2.95-4.92 ft when running. Many runners overstride believing this will increase the speed. However, this will increase the risk of injury on muscles and knees. It is critical to find the stride length that suits you the best for training and races with the help of advanced running metrics from the COROS POD.
+Background Color
+To change the background color on your COROS watch (during workouts), hold the BACK/LAP button to open the Toolbox → System → Workout Interface → Background Color
+ Elevation_Details_-_Workout.png 
+
+Customize Activity Data Pages
+To customize data pages on your COROS watch, please follow the steps below:
+   * Open the COROS app and navigate to the Profile page (4th tab on the bottom) and tap on the watch icon.
+   * Select “Activity Data Screens” under the device which you wish to customize.
+   * Next, choose the workout mode that you wish to customize from the library of activities. You can customize the data fields which are displayed during your workouts to be specific to each workout. For example, if running around your neighborhood or on a track, you may not care about elevation or vertical gain/loss, but you may want to see this data while doing a "Trail Run". 
+   * You can customize up to six different pages with multiple data fields to curate the specific data that you need during a workout. Dependent upon your watch model and activity mode, there are different data fields for you to choose from. Open the Customize Workout Data option in the COROS app to view these fields.
+ Screenshot 2025-01-27 at 3.14.28 PM.png 
+
+ 06__3_.png 
+
+Manually Sending Data to 3rd Party Sites
+   * Open the selected file on the COROS app
+   * Choose the arrow in the upper right-hand corner, then select "Export Data"
+   * Choose ".FIT" file, then use email, AirDrop, etc. to send the file from your phone to a computer
+   * Log in to the 3rd party application (using Strava as an example) on desktop, select "Upload Activity"
+   * Choose "File" do upload the ".FIT" file from the COROS app to upload
+ Manually_send.png 
+
+Navigation and Routes
+   * Back-to-start, Checkpoints, Elevation Details, Hybrid Map Layer, Landscape Map Layer, Topo Map Layer, Deviate Course Alert, Touchscreen-enabled Breadcrumb Navigation  
+   * Basic Navigation Features 
+   * Advanced Navigation Features 
+   * Strava Route Sync 
+ navigation__2_.png 
+
+Notifications During Activities
+To enable notifications during activities, please follow the steps below:
+   * Main watch face → System → Workout Interface → Msg. & Call Alerts → ON
+   * You can’t expand or manage the notifications during activities.
+NOTE: Receiving notifications increases the battery consumption on your COROS watch.
+ 03__1_.png 
+
+Resume Later
+During select activity modes (Bike, Trail Run, Mtn Climb and Hike) on COROS watches you have the option to use the "Resume Later" feature to help support Multi-Day activities and extend battery life on your watch.
+To use this feature, start any of the mentioned activities as normal. Once you want to use the Resume Later option, with the watch unlocked, press the digital dial to pause the activity. Next, scroll to the "Resume Later" option. Press the digital dial once to confirm that you want to exit the activity using the resume later option.
+To restart your activity, from the main watch face, press the digital dial. You will be prompted with the message "Resuming unfinished activity mode", press the digital dial to reopen the activity and resume.
+ 04__1_.png 
+
+Route Syncing to Watch During an Activity
+During the activity on your phone: COROS app → Profile → tap on watch icon → My Routes → Select Route → Sync with your watch
+During the activity on your watch: Press and hold the BACK/LAP button → Navigation → Select Courses → Choose the route → Start Course
+ Stock_Navigation_Watch_Image.png 
+
+Scrolling Options
+Auto-Scroll  
+   * Select to automatically scroll the data pages at a certain interval (not available when displaying the navigation pages). 
+   * 2 | 4 | 6 | 8 | 10s | OFF 
+Touch Scroll 
+   * Select to swipe up and down to change data pages without unlocking the screen. 
+   * ON | OFF 
+ Hnet-image__1_.gif 
+
+Syncing Data with the COROS App
+After a workout is finished, the watch will sync data automatically to your COROS account on your phone if Bluetooth connection is established. If you don’t see the updated data on the COROS app, please tap on the Today page, pull down, and release the page until the top section shows syncing progress.
+ mceclip0.png 
+
+Using Different GPS Modes
+The PACE 3 has three different Satellite Settings to fit different scenarios.
+   * Standard GPS Only (41h battery life)
+   * Recommended for multi-day activities or when charging between 41 hours of GPS use is not possible
+   * All Systems On (25h battery life)
+   * Recommended daily use setting 
+   * All Systems+Dual FREQ On (15h battery life)
+   * Recommended for technical climbing or environments that pose the highest degree of difficulty for GPS signals (near cliffs, in canyons, heavily forested areas, or dense urban environments)
+   * For further details regarding when to use different GPS modes, please visit: When To Use Different GPS Modes
+ 05__1_.png 
+
+Related to
+EvoLab
+   * 1 year ago
+   *  Updated
+Base Fitness
+Base Fitness measures the ability to take on exertion from long-term training. It is calculated based on your training load in the past 6 weeks which is essentially your fitness level with an exponentially weighted model. A higher value means your body is capable of training longer and more frequently at higher intensity. Base Fitness will gradually decline if you decrease volume and intensity of training compared to 6 weeks ago.
+ Fatigue__Base_Fitness__Load_Impact.png 
+
+General Training Status
+4-week Intensity Distribution 
+   * Each training phase may focus on a different intensity. It is usually recommended to start off with low intensity early in the season and gradually increase the portion of medium to hard training. 4-Week Intensity Distribution breaks down your past 4 weeks’ training based on threshold zones to help you understand if it aligns with your plan. If your goal is to train hard but the 4-week intensity distribution shows that most of the training is easy, it is time to adjust your training focus and increase the intensity to spend more time in higher threshold pace zones.
+   * There are 3 different intensity levels to categorize your road running. Threshold heart rate zones are used for all other workout types.
+   * Easy: Threshold pace zone 1 or below
+   * Medium: Threshold pace zone 2 and 3
+   * Hard: Threshold pace zone 4 or above
+ 1.png 
+
+7-Day Total Load & Recommendation 
+   * 7-Day Total Load measures the total training load in the last 7 days. COROS evaluates if your recent training load is reasonable and recommends a zone that is least likely to get you injured while maximizing the training outcome based on your training history. If your 7-Day Total Load is higher than the recommended zone, you may consider reducing your training intensity to allow your body to recover more.
+ 2.jpeg 
+
+Intensity Trend
+Load Impact divided by Base Fitness yields your Intensity Trend. This metric reflects the amount of fatigue your body is suffering from the recent training while considering your ability to sustain the impact. A low value means that your body is ready to take on more intensity while a high value indicates overtraining.
+Many people may think load impact is your fatigue. Here's an example to explain the difference. While the load impact of a 100k training week may be similar for you and Eliud Kipchoge, the amount of fatigue left in your body can be entirely different because Eliud’s base fitness may be way above yours. To achieve the best race result or your best day in the mountains, you want the base fitness to be as high as possible, and fatigue to be low but not too low as this can lead to a decline in base fitness.
+Intensity Trend is a powerful and objective tool to help provide accurate feedback to avoid injuries and adjust your training plan to reach the expected training outcome. To give the best recommendation, COROS has set 5 different fatigue zones for you. You will want to be in the Optimized zone (100-149%) for maximized training efficiency, and in the Performance zone (50-79%) for race days. The concept of tapering is to take your body from the optimized zone to the performance zone.
+   * Excessive (≥150%): Recent training may be overreaching or excessive.
+   * Optimized (100-149%): Productive training is increasing Base Fitness.
+   * Maintaining (80-99%): Moderate recent Training Load; maintaining Base Fitness.
+   * Resuming/Performance (50-79%): Resuming represents Increased Training Load is improving your fitness.  Performance represents you are ready to take on significant physical effort.
+   * Decreasing (0-49%): Low recent Training Load; Base Fitness is declining.
+Load Impact
+Load Impact measures the amount of impact brought to your body from short-term training. It is calculated based on the training load in the last 7 days with an exponentially weighted model. A higher value means a higher impact is introduced to your body and will limit your performance from tiredness. Load Impact goes down if you take more rests and up if you train more.
+ 3.png 
+
+Race Predictor
+EvoLab provides race time and race pace estimates for 5k, 10k, half marathon, and full marathon based on your past 6 weeks’ training via your COROS watch and the COROS app. With this race predictor, you can plan your race strategy accordingly.
+It is rare for someone to train for a 5k and a marathon at the same time, so different types of workouts will impact different race distance predictions. Long runs over 30k have a major impact on your marathon prediction while a 60-minute threshold pace run will mainly affect your 10k or half marathon estimates. 
+ Race_Predictor2.png 
+
+Recovery Timer & Suggestion
+To get the best improvement to your fitness, you will have to train with fatigue, but training when you are too tired can easily lead to injury. After each training, the recovery timer provides feedback on the time needed to receive full recovery. The more you train with your COROS watch, the more accurate feedback it will give you as EvoLab keeps learning your fitness data.
+Currently, the countdown is designed to be used during a training block with a maximum recovery time set to 96 hours or 4 days. Don’t be surprised if it tells you that you are ready to train hard again in a few days after a 100-mile race as most people will take an extended recovery following a goal race or completed training block. Please listen to your body, take enough rest, and start using the recovery timer again when you are ready to kick off a new training session.
+   * 0% - 29%: Please rest
+   * 30% - 89%: Ready for easy training
+   * 90% - 100%: Ready for hard training
+ 6.png 
+
+Road Running Metrics: Race Predictor
+EvoLab provides race time and race pace estimates for 5k, 10k, half marathon, and full marathon based on your past 6 weeks’ training via your COROS watch and the COROS app. With this race predictor, you can plan your race strategy accordingly.
+It is rare for someone to train for a 5k and a marathon at the same time, so different types of workouts will impact different race distance predictions. Long runs over 30k have a major impact on your marathon prediction while a 60-minute threshold pace run will mainly affect your 10k or half marathon estimates. 
+ 10.png 
+
+Road Running Metrics: Running Performance 
+Running Performance is created to provide feedback on how good your last run is compared to your overall running fitness. The range goes from 80% to 120% and has five different levels from poor to excellent. Over 105% means you are outperforming yourself and likely to peak in races. Lower than 95% indicates that you may need more rest to bounce back
+Running performance may not be available for the last road run if the workout is not over 10 minutes or if the intensity is too low.
+The range is from 80% to 120% and has 5 different levels.
+   * Poor: (80% – 95%)
+   * Fair: (96% – 98%)
+   * Good: (99% – 101%)
+   * Great: (102% – 104%)
+   * Excellent: (105% – 120%)
+Road Running Metrics: VO2 Max
+VO2 Max is the maximum amount of oxygen your body can consume during training. It is a very popular metric in a variety of training systems. A higher VO2 Max usually means better fitness. COROS estimates running VO2 Max based on workout data including heart rate and pace from your recent outdoor runs, which is tested to be very close to the lab test results. Also, VO2 Max is not a metric that should change drastically in a short term. The VO2 Max estimates from EvoLab are much more stable than those offered by other brands.
+ 12.jpeg 
+
+Running Fitness Score
+Running Fitness represents your marathon performance. Your individual Running Fitness Breakdown scores indicate your relative strengths and weaknesses at different efforts.
+ 1280X1280.JPEG 
+
+Threshold Heart Rate Zones
+Lactate Threshold is the breaking point when aerobic training starts to transform to anaerobic training. It can also be defined as the intensity of training at which lactate acid begins to accumulate in the blood faster than it can be removed. It is a popular indicator used in competitive sports. In addition to the traditional heart rate zones, we’ve now introduced 6 threshold pace zones representing different focuses in training. Threshold pace zones are a great tool to measure your effort and it eliminates any issues that could develop with your heart rate readings.
+EvoLab recommends personalized threshold heart rate and pace zones as the default setting based on your general fitness level. To better suit your training, you can edit the default zones or choose other heart rate zones such as max heart rate zones or heart rate reserve zones. Training at each zone has a unique effect on your body and fitness. You can improve base endurance, lactate threshold, anaerobic endurance by training at associated zones.
+Below are the details of the default threshold heart rate and pace zones and they may not match the zones that are edited manually.
+   * Zone 1 (Recovery)
+   * This range corresponds to low exercise intensity. It is suitable for active recovery.
+   * Zone 2 (Aerobic Endurance)
+   * This zone is comfortable enough to maintain conversations. It is suitable for basic cardiopulmonary function training, which mainly exercises basic aerobic capacity. It is an effort that can be sustained for multiple hours, and easy or long runs usually fall into this category.
+   * Zone 3 (Aerobic Power)
+   * This range leads to a sudden increase in breathing rate and it becomes harder to maintain conversations. It is suitable for improving running form and techniques such as breathing or cadence. 
+   * Zone 4 (Threshold)
+   * This effort is barely sustainable and rather uncomfortable. Training in this zone improves your ability to sustain harder efforts for longer. It is an effort that can typically be sustained for 45-60 minutes, and 10-15 minute intervals usually fall into this category.
+   * Zone 5 (Anaerobic Endurance)
+   * This range has now exceeded your threshold ability and therefore becomes quite uncomfortable and unsustainable, making you uncomfortable and causing shortness of breath. It applies to high-intensity interval training, which mainly improves VO2 Max ability.  5 minute interval runs usually fall into this category.
+   * Zone 6 (Anaerobic Power)
+   * This zone's intensity makes you struggle to breathe. It is suitable for anaerobic training which improves anaerobic capacity and muscular endurance.  1-min interval runs usually fall into this category.
+ 13.jpeg 
+
+Training
+How to download training programs by COROS athletes and coaches
+Use the default browser to visit the verified programs page. Tap on "Get It Now" to view the workout details. Scroll down and tap on "Get It Now" and select "Open in COROS". You can then save the workout to your COROS account and it will be accessible from the Profile page > Training Plan Library.  When prompted to add the training plan to your calendar, you can select "Continue" and choose a date to start the new plan.
+ Howtodownloadverified.jpg 
+  Howtodownloadverified3.png 
+ Howtodownloadverified4.jpg 
+   Howtodownloadverified2.jpg 
+How to design a workout/training plan on the COROS app
+   * Open COROS APP
+   * Select EvoLab tab in your COROS APP
+   * Scroll down and select “Workouts” or “Training Plan”
+   * Click “Create Workout” or “Create Training Plan”
+   * Select Activity and then follow cues on screen
+   * How to Create and Follow a Training Plan 
+   * Open the COROS APP
+   * Select EvoLab tab in your COROS APP
+   * Scroll down and select “Training Plans”
+   * Select your training plan
+   * Click “Start Training Plan”
+   * Sync with your device
+   * When performing your next workout, your watch will ask you to start that days training
+   * Follow cues on your watch screen
+   * How To Use Pre-Designed Workouts
+   * Select EvoLab tab in your COROS APP
+   * Scroll down and select “Workouts”
+   * Select your desired workout
+   * Select “Sync With Your Watch”
+   * On your watch, scroll to “Training”and locate your workout
+   * Select workout and follow cues
+ 15.png 
+
+How to download workouts and training plans from TrainingPeaks to your COROS watch 
+   * Update your COROS app to the latest version.
+   * Disconnect and reconnect the TrainingPeaks account on your COROS app > Profile page > 3rd Party Apps > TrainingPeaks after the app update. 
+   * TrainingPeaks Training Plan will show up on the COROS app > Profile page > Training Plan section within a few minutes if you have a valid plan/workouts in the TrainingPeaks calendar. 
+   * If you have made changes to your TrainingPeaks calendar,  manually sync the changes to your COROS app via the top right icon with the TrainingPeaks plan section. 
+   * Tap Start Training Plan to send the plan to your COROS watch. 
+   * Every time the watch syncs with the COROS app, it will receive the updated training plan from your TrainingPeaks calendar.
+   * TrainingPeaks plan can be exited by swiping left. However, this plan will remain in the plan library due to the current integration setup and cannot be removed. 
+   * Currently, COROS only supports the following workouts from TrainingPeaks. All other workout types will not be synced to the training plan section on your COROS app/watch. We may add more categories in the future. 
+   * Run
+   * Bike
+   * Swim
+   * Strength
+ 16.png 
+
+Training Effect
+Training Effect is determined by training load per minute and evaluates how your training impacts both your aerobic system (from cardio building activities) and anaerobic system (from high-intensity interval training). What divides these two groupings is your Lactate Threshold. Generally, a lower load per minute below the lactate threshold intensity will help your aerobic fitness and a higher load above lactate threshold intensity will improve your anaerobic fitness. Both the aerobic and anaerobic training effects have the same scale from 0-5+ or inefficient to overreaching.
+There are 6 different types of aerobic and anaerobic training effects:
+   * Inefficient (0-0.9): Minimal effect on fitness
+   * Recovering (1.0-1.9): Good for recovery but low on fitness improvement
+   * Maintaining (2.0-2.9): Maintaining fitness
+   * Improving (3.0-3.9): Improving fitness if repeated 2-4 times per week
+   * Optimized (4.0-4.9): Improving fitness efficiently if repeated 1-2 times per week
+   * Overreaching (5.0-5.9): Improving fitness significantly with sufficient recovery or may lead to overtraining
+ 7.jpeg 
+
+Training Focus
+Training Focus measures the primary improvement based on the training load and intensity at the end of your run. The workout will be labeled with one of six different Training Focuses including Easy, Base, Tempo, Threshold, VO2 Max, and Anaerobic. While threshold zones are great for effort measurement, you typically won’t stay in one zone during your training session and this is why training focus is added to EvoLab. In a nutshell, Training Focus is determined by the differences in training load for each threshold pace zone.
+   * Easy: This training helps with recovery.
+   * Base: This training improves basic aerobic endurance.
+   * Tempo: This training improves the ability to control rhythm in races.
+   * Threshold: This training improves pacing at lactate threshold pace.
+   * VO2 Max: This training improves VO2 Max.
+   * Anaerobic: This training improves anaerobic endurance.
+ 14.jpeg 
+
+Training Load
+Training Load measures the impact brought to your body from the training. Each workout tracked using a COROS device receives a training load score based on training impulse (TRIMP), a well-established method of quantifying training load using heart rate and workout time. 
+Training Load can be added to data pages on your COROS watch to be viewed in real-time to gauge the intensity and duration of your training. Longer and more intense training yields a higher training load score. Compare your training load in your COROS watch or via the COROS app to see how today’s training compares to similar activities in the past.
+ 8.png 
+
+Training Status
+Training Status is calculated based on a rolling average of 7 and 42 days of training data, and tells you how effective your most recent training was. It consists of your Base Fitness, Load Impact, and Intensity Trend.
+Support/Maintenance
+   * 6 months ago
+   *  Updated
+COROS Watches Maintenance and Cleaning Tips 
+How to Clean
+   * Rinse under warm running water for 1 minute or longer 
+   * Press the buttons of the watch and spin the dial while rinsing the watch to remove any debris or build-up
+   * Dry thoroughly with paper towels, cloths, etc.
+When to Clean
+   * On a weekly or preferably daily basis, as general maintenance to ensure proper functionality
+   * After every workout
+   * If the watch was in or near saltwater
+   * Any time the watch was exposed to sand, dirt, or other debris
+Tips and Recommendations
+   * Try to clean the watch body as often as possible
+   * Use a soft-bristled toothbrush to clean those hard to reach places on the watch
+   * Please avoid using any direct chemicals (bleach, non-diluted cleaning agents, etc) to clean the watch
+   * Do not use any photo or light-emitting disinfectant/cleaning products as this may damage the watch screen or sensors
+   * If using cloths for drying, please use lint-free cloths to avoid fabric "sticking" in or to the watch
+   * Do not dry the watch with high heat to avoid hardware damage
+ Webp.net-resizeimage (12).jpg 
+
+Can't Connect to COROS App 
+   * On the Profile page from the COROS app, tap on the watch image and locate the “Remove” option down below. Tap on it to remove the device from the COROS app.
+   * On your smartphone’s Bluetooth connection page, forget/delete the watch.
+   * Restart both the phone and the watch.
+   * Pair the watch to your phone via the COROS app.
+   * Alternatively, you can try performing a hard restart on your watch. Press and hold the CONFIRM button for at least 15 seconds, or until you see the COROS logo. This will not reset your watch or delete any data. 
+Start, Turn Off and Restart 
+Start  
+   * Press and hold the bottom button (BACK/LAP) for 2 seconds or until the COROS logo shows up. 
+Turn Off  
+   * Main watch face > System > More Settings > Turn Off 
+Restart  
+   * Turn off the watch via main watch face > System > More Settings > Turn Off. Then turn it back on.
+   * Alternatively, press and hold the bottom button (BACK/LAP) for 15 seconds or until the COROS logo shows up. 
+Reset
+   * Main watch face > System > More Settings > Reset All
+   * Reset does not affect the data stored on your COROS app. However, all data on your watch will be removed and customized settings will be cleared.
+COROS Warranty Policy
+Click Here to View Full Document
+Didn't find an answer? 
+How to Receive Help from COROS Support

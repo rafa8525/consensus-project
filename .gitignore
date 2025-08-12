@@ -25,8 +25,7 @@ __pycache__/
 env/
 
 # Keep your log .md files tracked
-memory/logs/
-!memory/logs/*.md
+# memory/logs/ (tracking enabled)
 
 # PythonAnywhere/project defaults
 .env
@@ -88,10 +87,7 @@ Thumbs.db
 >>>>>>> db12dd6a
 node_modules/ 
 .venv/ 
-!memory/logs/
-!memory/logs/**
-memory/logs/heartbeat/full_memory_absorption.log
-memory/logs/**
+# memory/logs/** (tracking enabled)
 *.bak_twilio_refactor*
 logs/**
 node_modules/.cache/
@@ -99,3 +95,17 @@ ai-dashboard-starter/*.zip
 **/node_modules/
 **/.env
 **/.env.*
+**/node_modules/.cache/
+
+# --- memory rules (restored cleanly) ---
+# Track everything under memory/
+!/memory/
+!memory/**
+# Keep sensitive & large volatile files out
+memory/*.secret
+memory/private_*.txt
+memory/logs/heartbeat/full_memory_absorption.log
+# Preserve empty dirs
+!memory/**/.gitkeep
+# --- end memory rules ---
+memory/.env
