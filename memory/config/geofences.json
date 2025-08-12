@@ -1,0 +1,15 @@
+{
+  "geofences": [
+    {
+      "id": "home",
+      "label": "Home",
+      "lat": 0.0,
+      "lon": 0.0,
+      "radius_m": 150,
+      "enter_action": "note",
+      "exit_action": "vpn_on",
+      "min_retrigger_sec": 900,
+      "dwell_sec": 120
+    }
+  ]
+}
