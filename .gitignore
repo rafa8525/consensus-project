@@ -109,3 +109,4 @@ memory/logs/heartbeat/full_memory_absorption.log
 !memory/**/.gitkeep
 # --- end memory rules ---
 memory/.env
+memory/logs/heartbeat/archive/**
