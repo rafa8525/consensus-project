@@ -1,0 +1,26 @@
+2025-07-11 21:09:36 - stdout: 
+2025-07-11 21:09:36 - stderr: 
+2025-07-11 21:09:36 - ❌ Voice-triggered SMS failed.
+2025-07-11 22:03:14 - VOICE -> Test from curl
+2025-07-11 22:03:14 - RESPONSE -> Status 404, Body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-07-11 22:05:27 - VOICE → Test from curl
+2025-07-11 22:05:27 - RESPONSE → 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-07-11 22:05:27 - EXCEPTION → JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+2025-07-11 22:15:50 - VOICE → SMS test triggered by voice
+2025-07-11 22:15:50 - SMS triggered locally
+2025-07-11 22:54:27 - VOICE → VOICE → Final test after restoring voice_trigger_utils
+2025-07-11 22:54:27 - VOICE → SMS triggered locally
+2025-07-11 22:58:03 - VOICE → VOICE → 🔁 Retest with hardened send_reminder.py
+2025-07-11 22:58:04 - VOICE → SMS triggered locally
+2025-07-14 03:39:12 - VOICE → Voice test via manual curl
+2025-07-14 03:39:13 - SMS triggered locally
