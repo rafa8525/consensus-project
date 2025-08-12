@@ -27,4 +27,5 @@ python3 tools/absorb_memory.py || true
 python3 tools/reminder_runner.py || true
 
 # Git sync + verify (pushes to v1.1-dev)
+python3 tools/geofence_heartbeat.py || true
 ./tools/absorb_and_sync.sh
