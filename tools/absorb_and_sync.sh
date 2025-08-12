@@ -2,25 +2,22 @@
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 
-# Safety + freshness
 git config --global --add safe.directory "$(pwd)"
-git fetch origin
+git fetch origin >/dev/null
 
-# Rebase our current HEAD onto remote v1.1-dev so push fast-forwards
-git rebase origin/v1.1-dev || true
-
-# Rotate the giant volatile log if it exists (still ignored by git)
+# Rotate + compress giant volatile log (archive is gitignored)
 if [ -f memory/logs/heartbeat/full_memory_absorption.log ]; then
   mkdir -p memory/logs/heartbeat/archive
   ts=$(date -u +%Y%m%d_%H%M%S)
   mv memory/logs/heartbeat/full_memory_absorption.log "memory/logs/heartbeat/archive/full_memory_absorption_${ts}.log" || true
+  gzip -9 "memory/logs/heartbeat/archive/full_memory_absorption_${ts}.log" 2>/dev/null || true
   : > memory/logs/heartbeat/full_memory_absorption.log || true
 fi
 
 # Stage memory only
 git add -A memory
 
-# Commit only if there are staged changes
+# Commit only if needed, then push directly to v1.1-dev
 if git diff --cached --quiet; then
   echo "No memory/ changes to sync."
 else
