@@ -1,0 +1,50 @@
+{
+  "reminders": [
+    {
+      "time": "07:00",
+      "message": "Check for a response to GitHub support ticket #3570324"
+    },
+    {
+      "time": "19:00",
+      "message": "Send the Excel spreadsheet for the high school reunion"
+    },
+    {
+      "time": "19:00",
+      "message": "Check for a response to GitHub support ticket #3570324"
+    },
+    {
+      "time": "22:00",
+      "message": "Did you run laps in the pool today? Send Fitbit screenshot."
+    },
+    {
+      "time": "10:00",
+      "day": "Friday",
+      "message": "Try the animation and audio project again"
+    },
+    {
+      "time": "13:00",
+      "day": "Friday",
+      "message": "Look into purchasing swim-proof smartwatch from Amazon"
+    },
+    {
+      "time": "10:00",
+      "day": "Friday",
+      "message": "Work on the high school reunion Excel spreadsheet"
+    },
+    {
+      "time": "19:00",
+      "day": "Friday",
+      "message": "Create the Facebook page for the high school reunion"
+    },
+    {
+      "interval_days": 14,
+      "time": "08:00",
+      "message": "Clean up Lola’s poop in the backyard"
+    },
+    {
+      "interval_days": 30,
+      "time": "09:00",
+      "message": "Review garage organization project after Grandma moves"
+    }
+  ]
+}
