@@ -3,15 +3,15 @@
     {
       "id": "home",
       "label": "Home",
-      "lat": 0.0,
-      "lon": 0.0,
+      "lat": 38.011847501632616,
+      "lon": -121.90208407683106,
       "radius_m": 150,
       "min_accuracy_m": 60,
       "require_source": [
         "gps",
         "network"
       ],
-      "require_wifi_ssid": [],
+      "require_wifi_ssid": [Google Wifi],
       "dwell_sec": 180,
       "presence_min_sec": 1800,
       "min_retrigger_sec": 1800,
@@ -29,8 +29,8 @@
     {
       "id": "gym",
       "label": "Gym",
-      "lat": 0.0,
-      "lon": 0.0,
+      "lat": 38.011847501632616,
+      "lon": -121.90208407683106,
       "radius_m": 120,
       "min_accuracy_m": 60,
       "require_source": [
@@ -47,8 +47,8 @@
     {
       "id": "work",
       "label": "Work",
-      "lat": 0.0,
-      "lon": 0.0,
+      "lat": 37.95919974609614,
+      "lon": -122.0541249646159,
       "radius_m": 150,
       "min_accuracy_m": 75,
       "require_source": [
