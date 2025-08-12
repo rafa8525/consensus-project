@@ -11,7 +11,9 @@
         "gps",
         "network"
       ],
-      "require_wifi_ssid": ["Google Wifi"],
+      "require_wifi_ssid": [
+        "Google Wifi"
+      ],
       "dwell_sec": 180,
       "presence_min_sec": 1800,
       "min_retrigger_sec": 1800,
