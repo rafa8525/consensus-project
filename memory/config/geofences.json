@@ -9,7 +9,8 @@
       "enter_action": "note",
       "exit_action": "vpn_on",
       "min_retrigger_sec": 900,
-      "dwell_sec": 120
+      "dwell_sec": 5,
+      "presence_min_sec": 10
     }
   ]
 }
