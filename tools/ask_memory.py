@@ -1,84 +1,35 @@
 #!/usr/bin/env python3
-import json, re, argparse, time
+import json, re, argparse
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parent.parent
-MEM  = ROOT / "memory"
-IDX  = MEM / "index" / "search_index.json"
-LOG  = MEM / "logs" / "voice"
-LOG.mkdir(parents=True, exist_ok=True)
-
-ALLOW_EXT = re.compile(r"\.(txt|md|json|py|log)$", re.I)
-MAX_BYTES = 500_000
-
-def load_index():
-    if not IDX.exists():
-        print("Index missing; run tools/absorb_memory.py first.")
-        return None
-    return json.loads(IDX.read_text(encoding="utf-8"))
-
-def score_entry(qtoks, e):
-    s = 0
-    p = e["path"].lower()
-    title = (e.get("title") or "").lower()
-    kw = [k.lower() for k in e.get("keywords", [])]
-    for t in qtoks:
-        if t in p: s += 5
-        if t in title: s += 4
-        if t in kw: s += 3
-    return s
-
-def snippets(qtoks, path):
-    p = MEM / path
-    if not p.exists() or not ALLOW_EXT.search(path): return []
-    try:
-        b = p.read_bytes()[:MAX_BYTES]
-        text = b.decode("utf-8", errors="ignore")
-    except Exception:
-        return []
-    lines = text.splitlines()
-    hits=[]
-    rx = re.compile("|".join(re.escape(t) for t in qtoks), re.I) if qtoks else None
-    for i, line in enumerate(lines):
-        if rx and rx.search(line):
-            ctx = " ".join(l.strip() for l in lines[max(0,i-1): i+2])
-            hits.append(f"…{ctx[:240]}…")
-        if len(hits)>=3: break
-    return hits
-
+ROOT=Path(__file__).resolve().parent.parent
+MEM=ROOT/"memory"; IDX=MEM/"index"/"search_index.json"
+ALLOW=re.compile(r"\.(txt|md|json|py|log)$", re.I); MAX=500_000
+def kw(q): return [t for t in re.findall(r"[A-Za-z0-9_]{3,}", q.lower()) if t not in {"the","and","for","with","you","your","are"}]
+def load(): return json.loads(IDX.read_text(encoding="utf-8"))
+def score(toks,e):
+  s=0; p=e["path"].lower(); title=(e.get("title") or "").lower(); kws=[k.lower() for k in e.get("keywords",[])]
+  for t in toks: s+=5*(t in p)+4*(t in title)+3*(t in kws)
+  return s
+def snips(toks,path):
+  p=MEM/path
+  if not p.exists() or not ALLOW.search(path): return []
+  try: txt=p.read_bytes()[:MAX].decode("utf-8","ignore")
+  except: return []
+  L=txt.splitlines(); rx=re.compile("|".join(map(re.escape,toks)),re.I) if toks else None; out=[]
+  for i,l in enumerate(L):
+    if rx and rx.search(l):
+      ctx=" ".join(x.strip() for x in L[max(0,i-1):i+2]); out.append(f"…{ctx[:240]}…")
+      if len(out)>=3: break
+  return out
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--q", required=True, help="query")
-    ap.add_argument("--k", type=int, default=5, help="results")
-    ap.add_argument("--snippets", type=int, default=3, help="snippets per top file")
-    args = ap.parse_args()
-
-    idx = load_index()
-    if not idx:
-        return
-    qtoks = [t for t in re.findall(r"[A-Za-z0-9_]{2,}", args.q.lower()) if t not in {"the","and","for","with","you","your","are"}]
-    scored = []
-    for e in idx.get("manifest", []):
-        sc = score_entry(qtoks, e)
-        if sc>0: scored.append((sc, e))
-    scored.sort(key=lambda x: (-x[0], x[1]["path"]))
-
-    out_lines=[]
-    out_lines.append(f"# Q: {args.q}")
-    if not scored:
-        out_lines.append("No matches found.")
-    else:
-        for rank,(sc,e) in enumerate(scored[:args.k], start=1):
-            path=e["path"]; sz=e["size"]; mtime=e["mtime"]
-            out_lines.append(f"{rank}. {path}  [score={sc} size={sz} mtime={mtime}]")
-            for snip in snippets(qtoks, path)[:args.snippets]:
-                out_lines.append(f"   - {snip}")
-
-    # write voice log and print
-    LOG.joinpath("ask_log.txt").parent.mkdir(parents=True, exist_ok=True)
-    with open(LOG/"ask_log.txt","a",encoding="utf-8") as f:
-        f.write(f"[{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}] Q={args.q}\n")
-    print("\n".join(out_lines))
-
-if __name__ == "__main__":
-    main()
+  ap=argparse.ArgumentParser(); ap.add_argument("--q",required=True); ap.add_argument("--k",type=int,default=5)
+  a=ap.parse_args(); toks=kw(a.q); idx=load(); cand=[]
+  for e in idx.get("manifest",[]): 
+    sc=score(toks,e)
+    if sc>0: cand.append((sc,e))
+  cand.sort(key=lambda x:(-x[0],x[1]["path"]))
+  if not cand: print("No matches."); return
+  for r,(sc,e) in enumerate(cand[:a.k],1):
+    print(f"{r}. {e['path']}  [score={sc}]")
+    for s in snips(toks,e["path"]): print(f"   - {s}")
+if __name__=="__main__": main()
