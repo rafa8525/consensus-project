@@ -11,7 +11,7 @@
         "gps",
         "network"
       ],
-      "require_wifi_ssid": [Google Wifi],
+      "require_wifi_ssid": ["Google Wifi"],
       "dwell_sec": 180,
       "presence_min_sec": 1800,
       "min_retrigger_sec": 1800,
@@ -29,8 +29,8 @@
     {
       "id": "gym",
       "label": "Gym",
-      "lat": 38.011847501632616,
-      "lon": -121.90208407683106,
+      "lat": 38.01149528497834,
+      "lon": -121.90196520065146,
       "radius_m": 120,
       "min_accuracy_m": 60,
       "require_source": [
