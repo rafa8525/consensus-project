@@ -107,4 +107,10 @@ def main():
     j = {"generated_at": ts, "hits": hits, "top_failure_patterns": top_fail}
     (OUTD/"geofencing_audit.json").write_text(json.dumps(j, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(str(outpath))
+    # also write/update a stable 'latest' pointer
+latest = OUTD/'geofencing_audit_latest.md'
+try:
+    latest.write_text(report, encoding='utf-8')
+except Exception:
+    pass
+print(str(outpath))
