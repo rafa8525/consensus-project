@@ -24,6 +24,7 @@ date -u +"%Y-%m-%dT%H:%M:%SZ" > "$LOCK"
 
 # Absorb + index
 python3 tools/absorb_memory.py || true
+python3 tools/reminder_runner.py || true
 
 # Git sync + verify (pushes to v1.1-dev)
 ./tools/absorb_and_sync.sh
