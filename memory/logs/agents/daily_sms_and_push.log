@@ -59340,3 +59340,1379 @@ Traceback (most recent call last):
     raise self.exception(method, uri, response, "Unable to create record")
 twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
 [2025-08-13 20:35:29.853428] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:40:11,901] INFO: Loaded .env file.
+[2025-08-13 20:40:11,901] INFO: All required environment variables present.
+[2025-08-13 20:40:11,901] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:40:12,268] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:12,268] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:12,268] INFO: Headers:
+[2025-08-13 20:40:12,268] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:12,268] INFO: Accept : application/json
+[2025-08-13 20:40:12,268] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:12,268] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:12,268] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:12,268] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:12,776] INFO: Response Status Code: 401
+[2025-08-13 20:40:12,776] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:12 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQee186e2ef3e6166d12ea5a3adf94c004', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 b61a4be0aa9880eabf6cbea18ec105b2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'j3wO45jl1kZplVJcMoEJiYHcm7_l-XP2b1eGZUNTFQNtLXCSnkWVow==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:12,777] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:14,777] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:40:14,777] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:14,777] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:14,777] INFO: Headers:
+[2025-08-13 20:40:14,777] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:14,777] INFO: Accept : application/json
+[2025-08-13 20:40:14,777] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:14,777] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:14,777] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:14,777] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:14,790] INFO: Response Status Code: 401
+[2025-08-13 20:40:14,790] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:14 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQee4be6795c38e498f4dc1977b9177e88', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 b61a4be0aa9880eabf6cbea18ec105b2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'LPgCQ1MU59KVF_2OPmBARWfQM_1r23j8kRO5aW3-q2FYxN_YTj5dBg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:14,790] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:18,791] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:40:18,791] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:18,791] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:18,791] INFO: Headers:
+[2025-08-13 20:40:18,791] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:18,791] INFO: Accept : application/json
+[2025-08-13 20:40:18,791] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:18,791] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:18,791] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:18,791] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:18,805] INFO: Response Status Code: 401
+[2025-08-13 20:40:18,806] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:18 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ3743a33b03a5dff55f18e4772ad207cc', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 b61a4be0aa9880eabf6cbea18ec105b2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': '4pqR8t9C1_QkIkRsVc0em9P5FsoecMvDc82UMEcuPAqjZT-YlQaciA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:18,806] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:18,806] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:19.019191] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:40:23,574] INFO: Loaded .env file.
+[2025-08-13 20:40:23,574] INFO: All required environment variables present.
+[2025-08-13 20:40:23,574] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:40:23,688] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:23,688] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:23,688] INFO: Headers:
+[2025-08-13 20:40:23,688] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:23,688] INFO: Accept : application/json
+[2025-08-13 20:40:23,688] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:23,688] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:23,688] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:23,688] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:23,720] INFO: Response Status Code: 401
+[2025-08-13 20:40:23,720] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:23 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQd5512232096be294c6e6657920f769ec', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 71b24e89f6f9e648d6cc206b3f6cc3da.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'Bb37UXOtbhXxWRpUNktGLzJT4i25zDszq1q8HP6LYQ6AwxqiWSoJ6A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:23,720] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:25,720] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:40:25,720] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:25,720] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:25,720] INFO: Headers:
+[2025-08-13 20:40:25,720] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:25,720] INFO: Accept : application/json
+[2025-08-13 20:40:25,720] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:25,720] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:25,720] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:25,720] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:25,737] INFO: Response Status Code: 401
+[2025-08-13 20:40:25,737] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:25 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ026ad443932dc6eac369b8825efa6fcd', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 71b24e89f6f9e648d6cc206b3f6cc3da.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'X50_lAyQSJS7zy4gI8JgY4m6g6iArrcbuZVsQ1hRYXYok1Fv_I4XlQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:25,737] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:29,737] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:40:29,737] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:29,737] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:29,737] INFO: Headers:
+[2025-08-13 20:40:29,737] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:29,737] INFO: Accept : application/json
+[2025-08-13 20:40:29,737] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:29,737] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:29,737] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:29,737] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:29,750] INFO: Response Status Code: 401
+[2025-08-13 20:40:29,750] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:29 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQed7416f744eb3826aa947751b05370db', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 71b24e89f6f9e648d6cc206b3f6cc3da.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'KvJaeZHiIxuIo6-i5V1mUOkmLamIxvjZCqnR57a0jTgijWKbWV1TqA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:29,750] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:29,750] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:29.837926] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:40:46,280] INFO: Loaded .env file.
+[2025-08-13 20:40:46,281] INFO: All required environment variables present.
+[2025-08-13 20:40:46,281] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:40:46,416] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:46,416] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:46,416] INFO: Headers:
+[2025-08-13 20:40:46,416] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:46,416] INFO: Accept : application/json
+[2025-08-13 20:40:46,416] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:46,416] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:46,416] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:46,416] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:46,442] INFO: Response Status Code: 401
+[2025-08-13 20:40:46,442] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:46 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQf8cfc6117e01bff7bcfdb15d7bfc396e', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1ffcb4016d0c1224c9505d74a866e6a8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': 'er0Mnk7kOdEiQS7_7yl2QltvrkJYAj8_bInADMvfuaGA01Fg_VHnCg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:46,442] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:48,443] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:40:48,443] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:48,443] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:48,443] INFO: Headers:
+[2025-08-13 20:40:48,443] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:48,443] INFO: Accept : application/json
+[2025-08-13 20:40:48,443] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:48,443] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:48,443] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:48,443] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:48,456] INFO: Response Status Code: 401
+[2025-08-13 20:40:48,457] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:48 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQb97284b6dad66f5b31690746b07c3c66', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1ffcb4016d0c1224c9505d74a866e6a8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': 'n3qwtDPk7PtkfqF1A_hUkyyWBEYxV2V1W1EJ5U58Vc-ja-l5SFhCSg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:48,457] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:52,457] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:40:52,457] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:40:52,457] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:40:52,457] INFO: Headers:
+[2025-08-13 20:40:52,457] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:40:52,457] INFO: Accept : application/json
+[2025-08-13 20:40:52,457] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:40:52,457] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:40:52,457] INFO: Accept-Charset : utf-8
+[2025-08-13 20:40:52,458] INFO: -- END Twilio API Request --
+[2025-08-13 20:40:52,471] INFO: Response Status Code: 401
+[2025-08-13 20:40:52,471] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:40:52 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ8633cf005e271aa829fcae94986d2e38', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1ffcb4016d0c1224c9505d74a866e6a8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': 'UXyJIdVa9vtTnIaqOwPFqnI_GiGpJkx-ICiajNmVMD0vykelljBrzA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:40:52,471] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:52,471] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:40:52.546012] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:41:26,368] INFO: Loaded .env file.
+[2025-08-13 20:41:26,369] INFO: All required environment variables present.
+[2025-08-13 20:41:26,382] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:41:26,515] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:41:26,515] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:41:26,515] INFO: Headers:
+[2025-08-13 20:41:26,515] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:41:26,515] INFO: Accept : application/json
+[2025-08-13 20:41:26,515] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:41:26,515] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:41:26,515] INFO: Accept-Charset : utf-8
+[2025-08-13 20:41:26,515] INFO: -- END Twilio API Request --
+[2025-08-13 20:41:26,536] INFO: Response Status Code: 401
+[2025-08-13 20:41:26,536] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:41:26 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQf3259b034844a869062f7fa820c85bea', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a19665f18a5aa6d5d880b02630196f3e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'mxd1K3i57qjdZqfOcDazA0MQTOvbjjjpI0EYgrO2MSvpNFeURSjczQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:41:26,536] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:41:28,536] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:41:28,536] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:41:28,536] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:41:28,536] INFO: Headers:
+[2025-08-13 20:41:28,537] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:41:28,537] INFO: Accept : application/json
+[2025-08-13 20:41:28,537] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:41:28,537] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:41:28,537] INFO: Accept-Charset : utf-8
+[2025-08-13 20:41:28,537] INFO: -- END Twilio API Request --
+[2025-08-13 20:41:28,553] INFO: Response Status Code: 401
+[2025-08-13 20:41:28,553] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:41:28 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQf1eded3dd366ba65a242aa7960fd8bcc', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a19665f18a5aa6d5d880b02630196f3e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': '0HfX9HUAA4RgQgaieSVEsY_CvGsLH6R9Yu8qTP2G4i7_n9tSNGpGsQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:41:28,553] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:41:32,553] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:41:32,553] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:41:32,553] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:41:32,553] INFO: Headers:
+[2025-08-13 20:41:32,553] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:41:32,553] INFO: Accept : application/json
+[2025-08-13 20:41:32,553] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:41:32,553] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:41:32,553] INFO: Accept-Charset : utf-8
+[2025-08-13 20:41:32,554] INFO: -- END Twilio API Request --
+[2025-08-13 20:41:32,566] INFO: Response Status Code: 401
+[2025-08-13 20:41:32,567] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:41:32 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQcea1d80d6628d2e83c0099fe815d7395', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a19665f18a5aa6d5d880b02630196f3e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'ckCJDEZOUQu7CFGDvVza6ezdNgKLpmYlFz5x8EuYl2Oa8rxO8qocFQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:41:32,567] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:41:32,567] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:41:32.654041] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:42:20,375] INFO: Loaded .env file.
+[2025-08-13 20:42:20,375] INFO: All required environment variables present.
+[2025-08-13 20:42:20,376] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:42:20,550] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:42:20,550] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:42:20,550] INFO: Headers:
+[2025-08-13 20:42:20,550] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:42:20,550] INFO: Accept : application/json
+[2025-08-13 20:42:20,550] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:42:20,550] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:42:20,550] INFO: Accept-Charset : utf-8
+[2025-08-13 20:42:20,550] INFO: -- END Twilio API Request --
+[2025-08-13 20:42:20,577] INFO: Response Status Code: 401
+[2025-08-13 20:42:20,577] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:42:20 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ98c70aa69b5e7fdc73579bb0ed29f6c8', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 91e0db6ff3a77218c7993c4fa2b04cf6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': '8tK1aUvKSqGHJsjZB-cQcToyC39scuR764krNnz8XVi9dXHHiB5Dmg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:42:20,577] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:42:22,577] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:42:22,578] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:42:22,578] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:42:22,578] INFO: Headers:
+[2025-08-13 20:42:22,578] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:42:22,578] INFO: Accept : application/json
+[2025-08-13 20:42:22,578] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:42:22,578] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:42:22,578] INFO: Accept-Charset : utf-8
+[2025-08-13 20:42:22,578] INFO: -- END Twilio API Request --
+[2025-08-13 20:42:22,593] INFO: Response Status Code: 401
+[2025-08-13 20:42:22,593] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:42:22 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ0ba764699e4d9b3a9e86cba8814d37bb', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 91e0db6ff3a77218c7993c4fa2b04cf6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'FtxgOGHutpfcjvt5DCZVRLBWGuAtiM0rYj6yETHiGkSGK1v0sLuCBQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:42:22,593] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:42:26,593] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:42:26,593] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:42:26,593] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:42:26,594] INFO: Headers:
+[2025-08-13 20:42:26,594] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:42:26,594] INFO: Accept : application/json
+[2025-08-13 20:42:26,594] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:42:26,594] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:42:26,594] INFO: Accept-Charset : utf-8
+[2025-08-13 20:42:26,594] INFO: -- END Twilio API Request --
+[2025-08-13 20:42:26,606] INFO: Response Status Code: 401
+[2025-08-13 20:42:26,606] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:42:26 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ3dfab586d06d9dd3b0cd5f0c82088782', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 91e0db6ff3a77218c7993c4fa2b04cf6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'mJuHceukfB4gAPvRkcMsxpbRoDifhvo-5fAe2a5gYKE7u3BHdtNRiQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:42:26,606] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:42:26,607] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:42:26.687235] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:44:00,483] INFO: Loaded .env file.
+[2025-08-13 20:44:00,483] INFO: All required environment variables present.
+[2025-08-13 20:44:00,483] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:44:00,614] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:44:00,614] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:44:00,614] INFO: Headers:
+[2025-08-13 20:44:00,614] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:44:00,614] INFO: Accept : application/json
+[2025-08-13 20:44:00,614] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:44:00,614] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:44:00,614] INFO: Accept-Charset : utf-8
+[2025-08-13 20:44:00,614] INFO: -- END Twilio API Request --
+[2025-08-13 20:44:00,642] INFO: Response Status Code: 401
+[2025-08-13 20:44:00,642] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:44:00 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQa891463595c005c39a043e8f85e37cc7', 'Twilio-Request-Duration': '0.007', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1c6074d72abc2b2cd13356e16b77c834.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'RhoFC2bd68YdHGfy0OHrdMmF0BOKR3Sp7X_Mjs96eJjcu2f0oWMwng==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:44:00,642] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:44:02,642] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:44:02,643] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:44:02,643] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:44:02,643] INFO: Headers:
+[2025-08-13 20:44:02,643] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:44:02,643] INFO: Accept : application/json
+[2025-08-13 20:44:02,643] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:44:02,643] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:44:02,643] INFO: Accept-Charset : utf-8
+[2025-08-13 20:44:02,643] INFO: -- END Twilio API Request --
+[2025-08-13 20:44:02,668] INFO: Response Status Code: 401
+[2025-08-13 20:44:02,668] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:44:02 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ771f463967accb935b85530f72d0c9a6', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1c6074d72abc2b2cd13356e16b77c834.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'aeJI0Hp1OIvHBXtoZdntyfRUwOa5jtEwQSJhnJbbNXLfSqNBBi7WYg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:44:02,668] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:44:06,669] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:44:06,669] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:44:06,669] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:44:06,669] INFO: Headers:
+[2025-08-13 20:44:06,669] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:44:06,669] INFO: Accept : application/json
+[2025-08-13 20:44:06,669] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:44:06,669] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:44:06,669] INFO: Accept-Charset : utf-8
+[2025-08-13 20:44:06,669] INFO: -- END Twilio API Request --
+[2025-08-13 20:44:06,684] INFO: Response Status Code: 401
+[2025-08-13 20:44:06,684] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:44:06 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ6a0219bcba689bba9917d9031635769e', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1c6074d72abc2b2cd13356e16b77c834.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'hxgJqoN1ihVHN2QSj-ghEVKTfjwXkbZYPMZzDyInYr1GjEltypT-fA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:44:06,684] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:44:06,684] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:44:06.823345] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:47:07,671] INFO: Loaded .env file.
+[2025-08-13 20:47:07,671] INFO: All required environment variables present.
+[2025-08-13 20:47:07,671] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:47:07,839] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:47:07,839] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:47:07,839] INFO: Headers:
+[2025-08-13 20:47:07,839] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:47:07,839] INFO: Accept : application/json
+[2025-08-13 20:47:07,839] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:47:07,839] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:47:07,839] INFO: Accept-Charset : utf-8
+[2025-08-13 20:47:07,839] INFO: -- END Twilio API Request --
+[2025-08-13 20:47:07,866] INFO: Response Status Code: 401
+[2025-08-13 20:47:07,866] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:47:07 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQe188f2981fb9eea014376cab0c814bd1', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 91e0db6ff3a77218c7993c4fa2b04cf6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'uBF1bv_dI25_W5aeFIuZqBCgyPT-2Jx7ScS3SeUz29UKbat0lfIT0A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:47:07,866] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:47:09,867] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:47:09,867] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:47:09,867] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:47:09,867] INFO: Headers:
+[2025-08-13 20:47:09,867] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:47:09,867] INFO: Accept : application/json
+[2025-08-13 20:47:09,867] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:47:09,867] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:47:09,867] INFO: Accept-Charset : utf-8
+[2025-08-13 20:47:09,867] INFO: -- END Twilio API Request --
+[2025-08-13 20:47:09,882] INFO: Response Status Code: 401
+[2025-08-13 20:47:09,883] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:47:09 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ79a9a31bc9a1a6775b0ffe35f267d11c', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 91e0db6ff3a77218c7993c4fa2b04cf6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': '7r9TuIhgidR6i_U_p0dShRPqMGr5B90DBskn7vfk6G8ljxBgwTU9Kw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:47:09,883] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:47:13,883] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:47:13,883] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:47:13,883] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:47:13,883] INFO: Headers:
+[2025-08-13 20:47:13,883] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:47:13,883] INFO: Accept : application/json
+[2025-08-13 20:47:13,883] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:47:13,883] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:47:13,883] INFO: Accept-Charset : utf-8
+[2025-08-13 20:47:13,883] INFO: -- END Twilio API Request --
+[2025-08-13 20:47:13,900] INFO: Response Status Code: 401
+[2025-08-13 20:47:13,900] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:47:13 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQbbb391004bbd68a835fc8c888aaf5163', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 91e0db6ff3a77218c7993c4fa2b04cf6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'LVVmWs7vG5ep-ceQxiffrXVN8NqXcuZOhkdKvi6w6XmLNFZeS9ge6Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:47:13,901] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:47:13,901] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:47:14.058952] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:52:23,121] INFO: Loaded .env file.
+[2025-08-13 20:52:23,121] INFO: All required environment variables present.
+[2025-08-13 20:52:23,121] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:52:23,236] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:52:23,236] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:52:23,236] INFO: Headers:
+[2025-08-13 20:52:23,236] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:52:23,236] INFO: Accept : application/json
+[2025-08-13 20:52:23,236] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:52:23,236] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:52:23,236] INFO: Accept-Charset : utf-8
+[2025-08-13 20:52:23,236] INFO: -- END Twilio API Request --
+[2025-08-13 20:52:23,270] INFO: Response Status Code: 401
+[2025-08-13 20:52:23,270] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:52:23 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ4343ca3fac377fa3796c1a4048f576cf', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d0e0fdfe87d75193de6278b5eca393f8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': '5iEMAV_Qv8D9hFEaDYmS_IyEJeTm0m-UG48nHyvEjGUBvS1OVpttLw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:52:23,270] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:52:25,270] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:52:25,271] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:52:25,271] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:52:25,271] INFO: Headers:
+[2025-08-13 20:52:25,271] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:52:25,271] INFO: Accept : application/json
+[2025-08-13 20:52:25,271] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:52:25,271] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:52:25,271] INFO: Accept-Charset : utf-8
+[2025-08-13 20:52:25,271] INFO: -- END Twilio API Request --
+[2025-08-13 20:52:25,284] INFO: Response Status Code: 401
+[2025-08-13 20:52:25,284] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:52:25 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQd8ea2e572322900df4c6cbb2ab1300c8', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d0e0fdfe87d75193de6278b5eca393f8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'AnOmbHQcjUCMqF42pkJnccJ6pyO3dkqkPnuSL0ZlpD_ioYYMQYCKQA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:52:25,284] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:52:29,284] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:52:29,284] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:52:29,284] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:52:29,284] INFO: Headers:
+[2025-08-13 20:52:29,284] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:52:29,284] INFO: Accept : application/json
+[2025-08-13 20:52:29,284] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:52:29,284] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:52:29,284] INFO: Accept-Charset : utf-8
+[2025-08-13 20:52:29,284] INFO: -- END Twilio API Request --
+[2025-08-13 20:52:29,300] INFO: Response Status Code: 401
+[2025-08-13 20:52:29,300] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:52:29 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ3c9da81feab7dcc0f93fa9ae47e18e6a', 'Twilio-Request-Duration': '0.007', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d0e0fdfe87d75193de6278b5eca393f8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'oQjOjlGCYCYFWmyX4jw5Up7KQHT7mM4dr9m2FN68Bg-Bntv7i7Ub4w==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:52:29,300] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:52:29,300] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:52:29.377836] Task failed (code 1): Daily SMS and Push
+[2025-08-13 20:57:35,390] INFO: Loaded .env file.
+[2025-08-13 20:57:35,390] INFO: All required environment variables present.
+[2025-08-13 20:57:35,391] INFO: Attempt 1: Sending SMS...
+[2025-08-13 20:57:35,637] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:57:35,637] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:57:35,637] INFO: Headers:
+[2025-08-13 20:57:35,637] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:57:35,637] INFO: Accept : application/json
+[2025-08-13 20:57:35,637] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:57:35,637] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:57:35,637] INFO: Accept-Charset : utf-8
+[2025-08-13 20:57:35,637] INFO: -- END Twilio API Request --
+[2025-08-13 20:57:35,665] INFO: Response Status Code: 401
+[2025-08-13 20:57:35,665] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:57:35 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ191e7052138d06c31a115dc739fe3bc4', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a19665f18a5aa6d5d880b02630196f3e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'CajH06kdK4EfJ6Y0xcdnwMj2fIpAwYk2HKR1mSsKipHFV8yD1I0Crg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:57:35,666] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:57:37,666] INFO: Attempt 2: Sending SMS...
+[2025-08-13 20:57:37,666] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:57:37,666] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:57:37,666] INFO: Headers:
+[2025-08-13 20:57:37,666] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:57:37,666] INFO: Accept : application/json
+[2025-08-13 20:57:37,666] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:57:37,666] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:57:37,666] INFO: Accept-Charset : utf-8
+[2025-08-13 20:57:37,666] INFO: -- END Twilio API Request --
+[2025-08-13 20:57:37,680] INFO: Response Status Code: 401
+[2025-08-13 20:57:37,681] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:57:37 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQc2c406a8457c859cc1440c844accef0b', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a19665f18a5aa6d5d880b02630196f3e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'SW-DK340GQjW4ptErZUAHkIfEP4TJneGs6xyk2tfQ2Let-6CE6wWjA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:57:37,681] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:57:41,681] INFO: Attempt 3: Sending SMS...
+[2025-08-13 20:57:41,681] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 20:57:41,681] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 20:57:41,681] INFO: Headers:
+[2025-08-13 20:57:41,681] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 20:57:41,681] INFO: Accept : application/json
+[2025-08-13 20:57:41,681] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 20:57:41,681] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 20:57:41,681] INFO: Accept-Charset : utf-8
+[2025-08-13 20:57:41,681] INFO: -- END Twilio API Request --
+[2025-08-13 20:57:41,698] INFO: Response Status Code: 401
+[2025-08-13 20:57:41,698] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 20:57:41 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ5fd245e82026fa2333e9138cd81fd26b', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a19665f18a5aa6d5d880b02630196f3e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'fPXnySM8xRb5j_qxQ1MIe5ZhL2jH3JCMZeXTR6WwyzFKyytVDU6CvQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 20:57:41,698] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:57:41,698] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 20:57:41.850461] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:02:46,121] INFO: Loaded .env file.
+[2025-08-13 21:02:46,122] INFO: All required environment variables present.
+[2025-08-13 21:02:46,122] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:02:46,234] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:02:46,234] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:02:46,234] INFO: Headers:
+[2025-08-13 21:02:46,234] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:02:46,234] INFO: Accept : application/json
+[2025-08-13 21:02:46,234] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:02:46,234] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:02:46,234] INFO: Accept-Charset : utf-8
+[2025-08-13 21:02:46,234] INFO: -- END Twilio API Request --
+[2025-08-13 21:02:46,258] INFO: Response Status Code: 401
+[2025-08-13 21:02:46,259] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:02:46 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ3b59178a68107fe0cd806e9c9fe0534d', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e2cb9339c523d170f53dc64537b22e10.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'ptgKHW1SgFS7mnsYrW1jhAk2fp5icwclSOyrNUCfEkFb2jCRXGtH5g==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:02:46,259] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:02:48,259] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:02:48,259] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:02:48,259] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:02:48,259] INFO: Headers:
+[2025-08-13 21:02:48,259] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:02:48,259] INFO: Accept : application/json
+[2025-08-13 21:02:48,259] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:02:48,259] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:02:48,259] INFO: Accept-Charset : utf-8
+[2025-08-13 21:02:48,259] INFO: -- END Twilio API Request --
+[2025-08-13 21:02:48,271] INFO: Response Status Code: 401
+[2025-08-13 21:02:48,271] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:02:48 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ057b7a586543f0f4c400a614e1db3b60', 'Twilio-Request-Duration': '0.003', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e2cb9339c523d170f53dc64537b22e10.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'RGtQpBbsPwnlgt9g-_BeM9uOUdepBJOtkDv7i3viF7aox-7Fj_LgRw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:02:48,271] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:02:52,274] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:02:52,274] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:02:52,274] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:02:52,274] INFO: Headers:
+[2025-08-13 21:02:52,274] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:02:52,275] INFO: Accept : application/json
+[2025-08-13 21:02:52,275] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:02:52,275] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:02:52,275] INFO: Accept-Charset : utf-8
+[2025-08-13 21:02:52,275] INFO: -- END Twilio API Request --
+[2025-08-13 21:02:52,291] INFO: Response Status Code: 401
+[2025-08-13 21:02:52,291] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:02:52 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQe5d5fa59a7b90f3a99eb2b3119c89091', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e2cb9339c523d170f53dc64537b22e10.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'FGwlgAUzhWaRqEvPDvNrlBjseLLiqMsecpaXeND8yOg0S0rsY_eJLg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:02:52,291] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:02:52,291] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:02:52.557973] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:08:10,035] INFO: Loaded .env file.
+[2025-08-13 21:08:10,035] INFO: All required environment variables present.
+[2025-08-13 21:08:10,036] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:08:10,240] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:08:10,240] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:08:10,240] INFO: Headers:
+[2025-08-13 21:08:10,240] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:08:10,241] INFO: Accept : application/json
+[2025-08-13 21:08:10,241] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:08:10,241] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:08:10,241] INFO: Accept-Charset : utf-8
+[2025-08-13 21:08:10,241] INFO: -- END Twilio API Request --
+[2025-08-13 21:08:10,271] INFO: Response Status Code: 401
+[2025-08-13 21:08:10,271] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:08:10 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ642e3e47f48839394aafd6ca0fd81194', 'Twilio-Request-Duration': '0.003', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 be1c65ef44cd2c4cae9eeabb07ce35a4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': '_JACy2BE_B8uPYRsM2B3WBZndsq_UhLhSK-6pgOl0xCKjmFxoL9N_w==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:08:10,272] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:08:12,272] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:08:12,272] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:08:12,272] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:08:12,272] INFO: Headers:
+[2025-08-13 21:08:12,272] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:08:12,272] INFO: Accept : application/json
+[2025-08-13 21:08:12,272] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:08:12,272] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:08:12,272] INFO: Accept-Charset : utf-8
+[2025-08-13 21:08:12,272] INFO: -- END Twilio API Request --
+[2025-08-13 21:08:12,286] INFO: Response Status Code: 401
+[2025-08-13 21:08:12,287] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:08:12 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQb6f609c0c22e4a1aa9522908d887a57b', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 be1c65ef44cd2c4cae9eeabb07ce35a4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'dyL-7kwhIbjSCYBNnxe40m-ooalj27lDKYERNMwgZWoDu5pUoAQ4wg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:08:12,287] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:08:16,287] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:08:16,287] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:08:16,287] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:08:16,287] INFO: Headers:
+[2025-08-13 21:08:16,287] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:08:16,287] INFO: Accept : application/json
+[2025-08-13 21:08:16,287] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:08:16,287] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:08:16,287] INFO: Accept-Charset : utf-8
+[2025-08-13 21:08:16,287] INFO: -- END Twilio API Request --
+[2025-08-13 21:08:16,300] INFO: Response Status Code: 401
+[2025-08-13 21:08:16,301] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:08:16 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ62eb3831b791d7a53e33aad8fd557507', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 be1c65ef44cd2c4cae9eeabb07ce35a4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'py8Agqa2xK5c8zEBg4SFXqxA80h1XwZlDN2UZKz5-ZHxtACn7VKJOg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:08:16,301] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:08:16,301] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:08:16.393428] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:13:34,173] INFO: Loaded .env file.
+[2025-08-13 21:13:34,173] INFO: All required environment variables present.
+[2025-08-13 21:13:34,173] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:13:34,292] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:13:34,292] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:13:34,292] INFO: Headers:
+[2025-08-13 21:13:34,292] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:13:34,292] INFO: Accept : application/json
+[2025-08-13 21:13:34,292] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:13:34,292] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:13:34,292] INFO: Accept-Charset : utf-8
+[2025-08-13 21:13:34,292] INFO: -- END Twilio API Request --
+[2025-08-13 21:13:34,322] INFO: Response Status Code: 401
+[2025-08-13 21:13:34,322] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:13:34 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQeffa25991857771598be1e1d7fc51a5b', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 916950d5ca3c4f0047ce0658c8053b38.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'EiAv3feQZQUDkj-ZnnQMOQK_5AJ5JWVvRG_G6ysETUF8lr2wTYiIYA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:13:34,322] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:13:36,322] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:13:36,322] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:13:36,322] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:13:36,322] INFO: Headers:
+[2025-08-13 21:13:36,322] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:13:36,322] INFO: Accept : application/json
+[2025-08-13 21:13:36,323] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:13:36,323] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:13:36,323] INFO: Accept-Charset : utf-8
+[2025-08-13 21:13:36,323] INFO: -- END Twilio API Request --
+[2025-08-13 21:13:36,339] INFO: Response Status Code: 401
+[2025-08-13 21:13:36,339] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:13:36 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ42a209fed58ab9beef46af435b135ecc', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 916950d5ca3c4f0047ce0658c8053b38.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'V1Cw-5Oj7giYMdSEh_nhsdainvlDObTpNs6hkehCoQn_sOORfNX5Xg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:13:36,339] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:13:40,340] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:13:40,340] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:13:40,340] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:13:40,340] INFO: Headers:
+[2025-08-13 21:13:40,340] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:13:40,340] INFO: Accept : application/json
+[2025-08-13 21:13:40,340] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:13:40,340] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:13:40,340] INFO: Accept-Charset : utf-8
+[2025-08-13 21:13:40,340] INFO: -- END Twilio API Request --
+[2025-08-13 21:13:40,356] INFO: Response Status Code: 401
+[2025-08-13 21:13:40,356] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:13:40 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ1a403fd90cd9d141ae250b4b1214a9ff', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 916950d5ca3c4f0047ce0658c8053b38.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'MMw0UcTTWG_tTU60h1I3nsnvA97wXeizHpoDv89ycgsy_JSNSM6Oww==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:13:40,356] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:13:40,356] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:13:40.420557] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:18:57,187] INFO: Loaded .env file.
+[2025-08-13 21:18:57,187] INFO: All required environment variables present.
+[2025-08-13 21:18:57,187] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:18:57,289] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:18:57,289] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:18:57,289] INFO: Headers:
+[2025-08-13 21:18:57,290] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:18:57,290] INFO: Accept : application/json
+[2025-08-13 21:18:57,290] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:18:57,290] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:18:57,290] INFO: Accept-Charset : utf-8
+[2025-08-13 21:18:57,290] INFO: -- END Twilio API Request --
+[2025-08-13 21:18:57,311] INFO: Response Status Code: 401
+[2025-08-13 21:18:57,311] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:18:57 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ941d6cf908f181b2bdf0868048e03254', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 cfbbd45bc29ebb0e8475ffa26dff7618.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'qJPsP5EJAavgE-d6BwzOLzXN3Um_moMTsIJNdBPNS4WYv-g-5nXNZg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:18:57,311] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:18:59,311] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:18:59,312] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:18:59,312] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:18:59,312] INFO: Headers:
+[2025-08-13 21:18:59,312] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:18:59,312] INFO: Accept : application/json
+[2025-08-13 21:18:59,312] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:18:59,312] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:18:59,312] INFO: Accept-Charset : utf-8
+[2025-08-13 21:18:59,312] INFO: -- END Twilio API Request --
+[2025-08-13 21:18:59,326] INFO: Response Status Code: 401
+[2025-08-13 21:18:59,327] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:18:59 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQc4ce67c86515565fe0dd75df3c4bbf2a', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 cfbbd45bc29ebb0e8475ffa26dff7618.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'oZcwx18eiAzFWcDZr8rurGTITRwbYBDcxv--DLKnyxofPaItuxFNkg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:18:59,327] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:19:03,327] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:19:03,327] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:19:03,327] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:19:03,327] INFO: Headers:
+[2025-08-13 21:19:03,327] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:19:03,327] INFO: Accept : application/json
+[2025-08-13 21:19:03,327] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:19:03,327] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:19:03,327] INFO: Accept-Charset : utf-8
+[2025-08-13 21:19:03,327] INFO: -- END Twilio API Request --
+[2025-08-13 21:19:03,340] INFO: Response Status Code: 401
+[2025-08-13 21:19:03,340] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:19:03 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ6c3a690d8dec7791e0dfcde363a6f3c4', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 cfbbd45bc29ebb0e8475ffa26dff7618.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': '4BrlS-XBU5Iy3CAzYa0VEy1Lc9L4MD9A90J5fNi8C3gFPQB5GZjcGg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:19:03,340] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:19:03,340] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:19:03.478399] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:24:13,276] INFO: Loaded .env file.
+[2025-08-13 21:24:13,276] INFO: All required environment variables present.
+[2025-08-13 21:24:13,277] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:24:13,411] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:24:13,411] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:24:13,411] INFO: Headers:
+[2025-08-13 21:24:13,411] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:24:13,412] INFO: Accept : application/json
+[2025-08-13 21:24:13,412] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:24:13,412] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:24:13,412] INFO: Accept-Charset : utf-8
+[2025-08-13 21:24:13,412] INFO: -- END Twilio API Request --
+[2025-08-13 21:24:13,438] INFO: Response Status Code: 401
+[2025-08-13 21:24:13,438] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:24:13 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ6504081f0ad73adba859034320d2ecd3', 'Twilio-Request-Duration': '0.005', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 359b6b96f5bc39c3c18c245a5430d31c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': 'vErk92rVVBjEivyKuR1hyBkSz7wwQSVhikkv3xrzb_eR2DWKLBh3ZA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:24:13,438] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:24:15,438] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:24:15,438] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:24:15,439] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:24:15,439] INFO: Headers:
+[2025-08-13 21:24:15,439] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:24:15,439] INFO: Accept : application/json
+[2025-08-13 21:24:15,439] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:24:15,439] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:24:15,439] INFO: Accept-Charset : utf-8
+[2025-08-13 21:24:15,439] INFO: -- END Twilio API Request --
+[2025-08-13 21:24:15,451] INFO: Response Status Code: 401
+[2025-08-13 21:24:15,451] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:24:15 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ694ad2a2d7a18bee51e6cf64b40f8321', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 359b6b96f5bc39c3c18c245a5430d31c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': '3lo0m7VP9Fvsgda-ZSIqYEVEc8gHBcG9FrqCZEXuSvC2523Kf1bF7A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:24:15,451] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:24:19,451] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:24:19,452] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:24:19,452] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:24:19,452] INFO: Headers:
+[2025-08-13 21:24:19,452] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:24:19,452] INFO: Accept : application/json
+[2025-08-13 21:24:19,452] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:24:19,452] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:24:19,452] INFO: Accept-Charset : utf-8
+[2025-08-13 21:24:19,452] INFO: -- END Twilio API Request --
+[2025-08-13 21:24:19,486] INFO: Response Status Code: 401
+[2025-08-13 21:24:19,486] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:24:19 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQeef938500a29f8a99edb86483e0b03a9', 'Twilio-Request-Duration': '0.008', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 359b6b96f5bc39c3c18c245a5430d31c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': '-xPsnWNe-nQyLjFwAhl56sxLlHhLzT4GXClaeO_IBzl-JwVuNV8reg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:24:19,486] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:24:19,486] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:24:19.560308] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:29:32,010] INFO: Loaded .env file.
+[2025-08-13 21:29:32,010] INFO: All required environment variables present.
+[2025-08-13 21:29:32,010] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:29:32,185] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:29:32,185] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:29:32,185] INFO: Headers:
+[2025-08-13 21:29:32,185] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:29:32,185] INFO: Accept : application/json
+[2025-08-13 21:29:32,185] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:29:32,185] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:29:32,185] INFO: Accept-Charset : utf-8
+[2025-08-13 21:29:32,185] INFO: -- END Twilio API Request --
+[2025-08-13 21:29:32,211] INFO: Response Status Code: 401
+[2025-08-13 21:29:32,211] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:29:32 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ6d454440b4247ec4d101cb060c4f5c91', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e2cb9339c523d170f53dc64537b22e10.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'rmX3CTkGdr-o9_tMT6jCw4pmI1HYJnSLprFiQnGMp_1yuKiHzfUzIw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:29:32,211] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:29:34,211] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:29:34,212] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:29:34,212] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:29:34,212] INFO: Headers:
+[2025-08-13 21:29:34,212] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:29:34,212] INFO: Accept : application/json
+[2025-08-13 21:29:34,212] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:29:34,212] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:29:34,212] INFO: Accept-Charset : utf-8
+[2025-08-13 21:29:34,212] INFO: -- END Twilio API Request --
+[2025-08-13 21:29:34,231] INFO: Response Status Code: 401
+[2025-08-13 21:29:34,231] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:29:34 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ6535a5ba7367f2f52933c04711844ced', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e2cb9339c523d170f53dc64537b22e10.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'EJ5GVRSku-pg2slmKy1oWQ8GJ-ZH8whUVT63nP2EzNk8ltq1s7UFrg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:29:34,231] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:29:38,231] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:29:38,231] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:29:38,231] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:29:38,231] INFO: Headers:
+[2025-08-13 21:29:38,231] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:29:38,231] INFO: Accept : application/json
+[2025-08-13 21:29:38,231] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:29:38,231] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:29:38,231] INFO: Accept-Charset : utf-8
+[2025-08-13 21:29:38,231] INFO: -- END Twilio API Request --
+[2025-08-13 21:29:38,249] INFO: Response Status Code: 401
+[2025-08-13 21:29:38,249] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:29:38 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQa606792c914a335e2dd10a6ee6f24ad0', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e2cb9339c523d170f53dc64537b22e10.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'uZ5_UQaAet9iLqMTSJpC5U1_V6pP-SIYEhEKH4Jm7fu_KXDylAPfSg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:29:38,249] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:29:38,249] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:29:38.330653] Task failed (code 1): Daily SMS and Push
+[2025-08-13 21:34:55,067] INFO: Loaded .env file.
+[2025-08-13 21:34:55,067] INFO: All required environment variables present.
+[2025-08-13 21:34:55,067] INFO: Attempt 1: Sending SMS...
+[2025-08-13 21:34:55,256] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:34:55,256] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:34:55,256] INFO: Headers:
+[2025-08-13 21:34:55,256] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:34:55,256] INFO: Accept : application/json
+[2025-08-13 21:34:55,256] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:34:55,256] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:34:55,257] INFO: Accept-Charset : utf-8
+[2025-08-13 21:34:55,257] INFO: -- END Twilio API Request --
+[2025-08-13 21:34:55,294] INFO: Response Status Code: 401
+[2025-08-13 21:34:55,294] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:34:55 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ1b77405e208312d65fe26d9e646e02c9', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 0d9fa547d973207140747f5567b6a0fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 's-tWHCzeO3aI4NosgSdaA7kKbgfpw6O8kKH5qZCKwXtiuwyzu43-8A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:34:55,294] ERROR: Twilio error on attempt 1: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:34:57,294] INFO: Attempt 2: Sending SMS...
+[2025-08-13 21:34:57,294] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:34:57,294] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:34:57,295] INFO: Headers:
+[2025-08-13 21:34:57,295] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:34:57,295] INFO: Accept : application/json
+[2025-08-13 21:34:57,295] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:34:57,295] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:34:57,295] INFO: Accept-Charset : utf-8
+[2025-08-13 21:34:57,295] INFO: -- END Twilio API Request --
+[2025-08-13 21:34:57,307] INFO: Response Status Code: 401
+[2025-08-13 21:34:57,307] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:34:57 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQe3b3c5e94031ca39051eef362479fc47', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 0d9fa547d973207140747f5567b6a0fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'DsJXfABnpNT8WPqG6n95Le7Vt5EdbaFAyPVO04qIHJa8NlqNU59QPA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:34:57,307] ERROR: Twilio error on attempt 2: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:35:01,307] INFO: Attempt 3: Sending SMS...
+[2025-08-13 21:35:01,307] INFO: -- BEGIN Twilio API Request --
+[2025-08-13 21:35:01,307] INFO: POST Request: https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages.json
+[2025-08-13 21:35:01,307] INFO: Headers:
+[2025-08-13 21:35:01,307] INFO: Content-Type : application/x-www-form-urlencoded
+[2025-08-13 21:35:01,307] INFO: Accept : application/json
+[2025-08-13 21:35:01,307] INFO: User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+[2025-08-13 21:35:01,307] INFO: X-Twilio-Client : python-9.6.3
+[2025-08-13 21:35:01,307] INFO: Accept-Charset : utf-8
+[2025-08-13 21:35:01,307] INFO: -- END Twilio API Request --
+[2025-08-13 21:35:01,323] INFO: Response Status Code: 401
+[2025-08-13 21:35:01,323] INFO: Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 21:35:01 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQa35349d3a7074c441f16e64f67014bbc', 'Twilio-Request-Duration': '0.006', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 0d9fa547d973207140747f5567b6a0fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P3', 'X-Amz-Cf-Id': 'QckvzOAxgoofvg5SACMtt2gcYDh8BtWOSxvQwNiTiTbPqzhq6KVYQw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+[2025-08-13 21:35:01,323] ERROR: Twilio error on attempt 3: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:35:01,323] ERROR: Failed to send daily SMS: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+Traceback (most recent call last):
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 72, in main
+    send_sms(client, from_number, to_number, body)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/consensus-project/daily_sms_and_push.py", line 48, in send_sms
+    message = client.messages.create(
+        body=body,
+        from_=from_number,
+        to=to_number
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+        method="POST", uri=self._uri, data=data, headers=headers
+    )
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authentication Error - invalid username
+[2025-08-13 21:35:01.409834] Task failed (code 1): Daily SMS and Push
