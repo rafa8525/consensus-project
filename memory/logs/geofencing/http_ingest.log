@@ -1,0 +1,9 @@
+[2025-08-12T22:16:36.947930Z] lat=38.01185 lon=-121.90208 acc=25.0 src=curl rc=0 out=OK err=
+[2025-08-12T22:16:37.215899Z] lat=38.01185 lon=-121.90208 acc=25.0 src=curl rc=0 out=OK err=
+[2025-08-12T23:27:22Z] lat=38.01185 lon=-121.90208 acc=25.0 src=curl rc=2 out= err=usage: geofence_engine.py [-h] --lat LAT --lon LON [--acc ACC]
+                          [--source SOURCE]
+geofence_engine.py: error: argument --acc: invalid int value: '25.0'
+[2025-08-13T15:17:15Z] lat=38.01185 lon=-121.90208 acc=25.0(25) src=curl rc=0 out=OK err=
+[2025-08-13T15:17:49Z] lat=38.01185 lon=-121.90208 acc=25.0(25) src=curl rc=0 out=OK err=
+[2025-08-13T15:24:19Z] lat=38.01185 lon=-121.90208 acc=25.0(25) src=curl rc=0 out=OK err=
+[2025-08-13T16:15:59Z] lat=38.01185 lon=-121.90208 acc=25.0(25) src=phone rc=0 out=OK err=
