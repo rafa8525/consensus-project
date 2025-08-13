@@ -110,3 +110,4 @@ memory/logs/heartbeat/full_memory_absorption.log
 # --- end memory rules ---
 memory/.env
 memory/logs/heartbeat/archive/**
+memory/logs/heartbeat/archive/**
