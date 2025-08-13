@@ -18488,3 +18488,325 @@ Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 [2025-08-13T20:35:30.120238] ❌ Git push failed.
 [2025-08-13 20:35:30.135632] Task succeeded: Auto Git Sync
+[2025-08-13T20:40:19.157327] Running: git pull origin v1.1-dev
+[2025-08-13T20:40:19.171233] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:19.175411] Running: git add -A
+[2025-08-13T20:40:19.183071] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:19.186613] Running: git commit -m "Auto-log sync for 2025-08-13 20:40:19"
+[2025-08-13T20:40:19.194454] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:19.198374] Running: git config pack.windowMemory 10m
+[2025-08-13T20:40:19.207526] stderr: fatal: not in a git directory
+[2025-08-13T20:40:19.211142] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:40:19.218810] stderr: fatal: not in a git directory
+[2025-08-13T20:40:19.222274] Running: git push origin v1.1-dev
+[2025-08-13T20:40:19.229465] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:19.232842] ❌ Git push failed.
+[2025-08-13 20:40:19.261221] Task succeeded: Auto Git Sync
+[2025-08-13T20:40:29.937414] Running: git pull origin v1.1-dev
+[2025-08-13T20:40:29.945400] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:29.949508] Running: git add -A
+[2025-08-13T20:40:29.955967] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:29.959518] Running: git commit -m "Auto-log sync for 2025-08-13 20:40:29"
+[2025-08-13T20:40:29.965949] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:29.969408] Running: git config pack.windowMemory 10m
+[2025-08-13T20:40:29.975666] stderr: fatal: not in a git directory
+[2025-08-13T20:40:29.979204] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:40:29.986464] stderr: fatal: not in a git directory
+[2025-08-13T20:40:29.990077] Running: git push origin v1.1-dev
+[2025-08-13T20:40:29.996617] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:29.999929] ❌ Git push failed.
+[2025-08-13 20:40:30.016055] Task succeeded: Auto Git Sync
+[2025-08-13T20:40:52.642143] Running: git pull origin v1.1-dev
+[2025-08-13T20:40:52.648864] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:52.652175] Running: git add -A
+[2025-08-13T20:40:52.658563] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:52.662034] Running: git commit -m "Auto-log sync for 2025-08-13 20:40:52"
+[2025-08-13T20:40:52.669812] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:52.673220] Running: git config pack.windowMemory 10m
+[2025-08-13T20:40:52.679211] stderr: fatal: not in a git directory
+[2025-08-13T20:40:52.682594] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:40:52.688651] stderr: fatal: not in a git directory
+[2025-08-13T20:40:52.691351] Running: git push origin v1.1-dev
+[2025-08-13T20:40:52.697518] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:40:52.700738] ❌ Git push failed.
+[2025-08-13 20:40:52.715493] Task succeeded: Auto Git Sync
+[2025-08-13T20:41:32.745096] Running: git pull origin v1.1-dev
+[2025-08-13T20:41:32.752596] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:41:32.756729] Running: git add -A
+[2025-08-13T20:41:32.763626] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:41:32.767057] Running: git commit -m "Auto-log sync for 2025-08-13 20:41:32"
+[2025-08-13T20:41:32.776684] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:41:32.780837] Running: git config pack.windowMemory 10m
+[2025-08-13T20:41:32.787097] stderr: fatal: not in a git directory
+[2025-08-13T20:41:32.790629] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:41:32.797712] stderr: fatal: not in a git directory
+[2025-08-13T20:41:32.801080] Running: git push origin v1.1-dev
+[2025-08-13T20:41:32.807073] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:41:32.810402] ❌ Git push failed.
+[2025-08-13 20:41:32.825453] Task succeeded: Auto Git Sync
+[2025-08-13T20:42:26.795990] Running: git pull origin v1.1-dev
+[2025-08-13T20:42:26.803811] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:42:26.807103] Running: git add -A
+[2025-08-13T20:42:26.813159] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:42:26.816805] Running: git commit -m "Auto-log sync for 2025-08-13 20:42:26"
+[2025-08-13T20:42:26.823122] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:42:26.826426] Running: git config pack.windowMemory 10m
+[2025-08-13T20:42:26.832728] stderr: fatal: not in a git directory
+[2025-08-13T20:42:26.835995] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:42:26.842423] stderr: fatal: not in a git directory
+[2025-08-13T20:42:26.845993] Running: git push origin v1.1-dev
+[2025-08-13T20:42:26.852075] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:42:26.855381] ❌ Git push failed.
+[2025-08-13 20:42:26.873926] Task succeeded: Auto Git Sync
+[2025-08-13T20:44:07.059598] Running: git pull origin v1.1-dev
+[2025-08-13T20:44:07.071680] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:44:07.075286] Running: git add -A
+[2025-08-13T20:44:07.090760] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:44:07.094468] Running: git commit -m "Auto-log sync for 2025-08-13 20:44:07"
+[2025-08-13T20:44:07.107988] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:44:07.111558] Running: git config pack.windowMemory 10m
+[2025-08-13T20:44:07.122654] stderr: fatal: not in a git directory
+[2025-08-13T20:44:07.126227] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:44:07.133760] stderr: fatal: not in a git directory
+[2025-08-13T20:44:07.144006] Running: git push origin v1.1-dev
+[2025-08-13T20:44:07.154684] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:44:07.166656] ❌ Git push failed.
+[2025-08-13 20:44:07.207022] Task succeeded: Auto Git Sync
+[2025-08-13T20:47:14.287476] Running: git pull origin v1.1-dev
+[2025-08-13T20:47:14.317745] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:47:14.322561] Running: git add -A
+[2025-08-13T20:47:14.331326] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:47:14.350120] Running: git commit -m "Auto-log sync for 2025-08-13 20:47:14"
+[2025-08-13T20:47:14.407301] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:47:14.430732] Running: git config pack.windowMemory 10m
+[2025-08-13T20:47:14.459371] stderr: fatal: not in a git directory
+[2025-08-13T20:47:14.472432] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:47:14.483346] stderr: fatal: not in a git directory
+[2025-08-13T20:47:14.486854] Running: git push origin v1.1-dev
+[2025-08-13T20:47:14.497813] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:47:14.501487] ❌ Git push failed.
+[2025-08-13 20:47:14.535892] Task succeeded: Auto Git Sync
+[2025-08-13T20:52:29.474841] Running: git pull origin v1.1-dev
+[2025-08-13T20:52:29.490782] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:52:29.494155] Running: git add -A
+[2025-08-13T20:52:29.500182] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:52:29.503516] Running: git commit -m "Auto-log sync for 2025-08-13 20:52:29"
+[2025-08-13T20:52:29.512732] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:52:29.516702] Running: git config pack.windowMemory 10m
+[2025-08-13T20:52:29.523554] stderr: fatal: not in a git directory
+[2025-08-13T20:52:29.526810] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:52:29.532966] stderr: fatal: not in a git directory
+[2025-08-13T20:52:29.536270] Running: git push origin v1.1-dev
+[2025-08-13T20:52:29.543082] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:52:29.546301] ❌ Git push failed.
+[2025-08-13 20:52:29.561506] Task succeeded: Auto Git Sync
+[2025-08-13T20:57:41.989812] Running: git pull origin v1.1-dev
+[2025-08-13T20:57:41.997179] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:57:42.000518] Running: git add -A
+[2025-08-13T20:57:42.006833] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:57:42.010081] Running: git commit -m "Auto-log sync for 2025-08-13 20:57:42"
+[2025-08-13T20:57:42.016219] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:57:42.023076] Running: git config pack.windowMemory 10m
+[2025-08-13T20:57:42.029538] stderr: fatal: not in a git directory
+[2025-08-13T20:57:42.032871] Running: git config pack.packSizeLimit 20m
+[2025-08-13T20:57:42.039020] stderr: fatal: not in a git directory
+[2025-08-13T20:57:42.042315] Running: git push origin v1.1-dev
+[2025-08-13T20:57:42.048940] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T20:57:42.052384] ❌ Git push failed.
+[2025-08-13 20:57:42.072394] Task succeeded: Auto Git Sync
+[2025-08-13T21:02:23.751751] Running: git pull origin v1.1-dev
+[2025-08-13T21:02:23.772764] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:23.776397] Running: git add -A
+[2025-08-13T21:02:23.796530] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:23.800970] Running: git commit -m "Auto-log sync for 2025-08-13 21:02:23"
+[2025-08-13T21:02:23.814600] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:23.822656] Running: git config pack.windowMemory 10m
+[2025-08-13T21:02:23.851919] stderr: fatal: not in a git directory
+[2025-08-13T21:02:23.862915] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:02:23.884783] stderr: fatal: not in a git directory
+[2025-08-13T21:02:23.892259] Running: git push origin v1.1-dev
+[2025-08-13T21:02:23.913504] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:23.927665] ❌ Git push failed.
+[2025-08-13T21:02:52.703439] Running: git pull origin v1.1-dev
+[2025-08-13T21:02:52.713828] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:52.717272] Running: git add -A
+[2025-08-13T21:02:52.724391] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:52.727840] Running: git commit -m "Auto-log sync for 2025-08-13 21:02:52"
+[2025-08-13T21:02:52.733794] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:52.736973] Running: git config pack.windowMemory 10m
+[2025-08-13T21:02:52.742850] stderr: fatal: not in a git directory
+[2025-08-13T21:02:52.746246] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:02:52.752256] stderr: fatal: not in a git directory
+[2025-08-13T21:02:52.755576] Running: git push origin v1.1-dev
+[2025-08-13T21:02:52.761502] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:02:52.764791] ❌ Git push failed.
+[2025-08-13 21:02:52.783855] Task succeeded: Auto Git Sync
+[2025-08-13T21:08:16.534766] Running: git pull origin v1.1-dev
+[2025-08-13T21:08:16.548309] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:08:16.551945] Running: git add -A
+[2025-08-13T21:08:16.560977] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:08:16.564628] Running: git commit -m "Auto-log sync for 2025-08-13 21:08:16"
+[2025-08-13T21:08:16.572100] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:08:16.575761] Running: git config pack.windowMemory 10m
+[2025-08-13T21:08:16.582052] stderr: fatal: not in a git directory
+[2025-08-13T21:08:16.585544] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:08:16.591629] stderr: fatal: not in a git directory
+[2025-08-13T21:08:16.594938] Running: git push origin v1.1-dev
+[2025-08-13T21:08:16.601764] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:08:16.605149] ❌ Git push failed.
+[2025-08-13 21:08:16.619573] Task succeeded: Auto Git Sync
+[2025-08-13T21:13:40.518345] Running: git pull origin v1.1-dev
+[2025-08-13T21:13:40.526058] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:13:40.529385] Running: git add -A
+[2025-08-13T21:13:40.535535] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:13:40.538824] Running: git commit -m "Auto-log sync for 2025-08-13 21:13:40"
+[2025-08-13T21:13:40.545416] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:13:40.550774] Running: git config pack.windowMemory 10m
+[2025-08-13T21:13:40.557724] stderr: fatal: not in a git directory
+[2025-08-13T21:13:40.561087] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:13:40.567596] stderr: fatal: not in a git directory
+[2025-08-13T21:13:40.570932] Running: git push origin v1.1-dev
+[2025-08-13T21:13:40.577260] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:13:40.580702] ❌ Git push failed.
+[2025-08-13 21:13:40.595172] Task succeeded: Auto Git Sync
+[2025-08-13T21:19:03.701113] Running: git pull origin v1.1-dev
+[2025-08-13T21:19:03.727705] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:19:03.738633] Running: git add -A
+[2025-08-13T21:19:03.759464] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:19:03.763713] Running: git commit -m "Auto-log sync for 2025-08-13 21:19:03"
+[2025-08-13T21:19:03.774952] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:19:03.778654] Running: git config pack.windowMemory 10m
+[2025-08-13T21:19:03.791538] stderr: fatal: not in a git directory
+[2025-08-13T21:19:03.795320] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:19:03.805095] stderr: fatal: not in a git directory
+[2025-08-13T21:19:03.808584] Running: git push origin v1.1-dev
+[2025-08-13T21:19:03.820977] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:19:03.824635] ❌ Git push failed.
+[2025-08-13 21:19:03.878294] Task succeeded: Auto Git Sync
+[2025-08-13T21:24:19.682776] Running: git pull origin v1.1-dev
+[2025-08-13T21:24:19.690293] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:24:19.693445] Running: git add -A
+[2025-08-13T21:24:19.700454] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:24:19.704100] Running: git commit -m "Auto-log sync for 2025-08-13 21:24:19"
+[2025-08-13T21:24:19.711820] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:24:19.716197] Running: git config pack.windowMemory 10m
+[2025-08-13T21:24:19.723169] stderr: fatal: not in a git directory
+[2025-08-13T21:24:19.726787] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:24:19.733498] stderr: fatal: not in a git directory
+[2025-08-13T21:24:19.737663] Running: git push origin v1.1-dev
+[2025-08-13T21:24:19.744641] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:24:19.748157] ❌ Git push failed.
+[2025-08-13 21:24:19.763564] Task succeeded: Auto Git Sync
+[2025-08-13T21:29:16.374010] Running: git pull origin v1.1-dev
+[2025-08-13T21:29:16.385517] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:16.389274] Running: git add -A
+[2025-08-13T21:29:16.403315] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:16.407172] Running: git commit -m "Auto-log sync for 2025-08-13 21:29:16"
+[2025-08-13T21:29:16.417934] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:16.421878] Running: git config pack.windowMemory 10m
+[2025-08-13T21:29:16.433979] stderr: fatal: not in a git directory
+[2025-08-13T21:29:16.443191] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:29:16.467920] stderr: fatal: not in a git directory
+[2025-08-13T21:29:16.474981] Running: git push origin v1.1-dev
+[2025-08-13T21:29:16.490430] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:16.497957] ❌ Git push failed.
+[2025-08-13T21:29:38.521058] Running: git pull origin v1.1-dev
+[2025-08-13T21:29:38.545304] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:38.548732] Running: git add -A
+[2025-08-13T21:29:38.558970] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:38.562603] Running: git commit -m "Auto-log sync for 2025-08-13 21:29:38"
+[2025-08-13T21:29:38.575358] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:38.581647] Running: git config pack.windowMemory 10m
+[2025-08-13T21:29:38.591461] stderr: fatal: not in a git directory
+[2025-08-13T21:29:38.595102] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:29:38.604872] stderr: fatal: not in a git directory
+[2025-08-13T21:29:38.608354] Running: git push origin v1.1-dev
+[2025-08-13T21:29:38.616616] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:29:38.619878] ❌ Git push failed.
+[2025-08-13 21:29:38.647871] Task succeeded: Auto Git Sync
+[2025-08-13T21:35:01.675449] Running: git pull origin v1.1-dev
+[2025-08-13T21:35:01.710016] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:35:01.713755] Running: git add -A
+[2025-08-13T21:35:01.739857] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:35:01.743969] Running: git commit -m "Auto-log sync for 2025-08-13 21:35:01"
+[2025-08-13T21:35:01.755377] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:35:01.759293] Running: git config pack.windowMemory 10m
+[2025-08-13T21:35:01.773196] stderr: fatal: not in a git directory
+[2025-08-13T21:35:01.776756] Running: git config pack.packSizeLimit 20m
+[2025-08-13T21:35:01.794746] stderr: fatal: not in a git directory
+[2025-08-13T21:35:01.798679] Running: git push origin v1.1-dev
+[2025-08-13T21:35:01.807984] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-13T21:35:01.811576] ❌ Git push failed.
+[2025-08-13 21:35:01.867894] Task succeeded: Auto Git Sync
