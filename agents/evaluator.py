@@ -1,8 +1,7 @@
 from __future__ import annotations
 from pathlib import Path
 from typing import Dict, Any
-import time, glob
-
+import time
 from agents.core.agent_base import Agent
 
 class Evaluator(Agent):
@@ -10,10 +9,8 @@ class Evaluator(Agent):
 
     def run(self) -> Dict[str, Any]:
         root = Path("memory/logs/agents")
-        # Very simple quality record (can be expanded with metrics)
         latest_reports = sorted(root.glob("knowledge_shared_*.md"))[-3:]
-        latest_improve  = sorted(root.glob("self_improvement_*.md"))[-3:]
-
+        latest_improve = sorted(root.glob("self_improvement_*.md"))[-3:]
         summary = ["# Evaluation summary",
                    f"- reports: {len(latest_reports)}",
                    f"- improvements: {len(latest_improve)}"]

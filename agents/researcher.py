@@ -1,19 +1,16 @@
 from __future__ import annotations
 from pathlib import Path
 from typing import Dict, Any
-import os, time, json, glob, statistics
-
+import time
 from agents.core.agent_base import Agent
 
 class Researcher(Agent):
     name = "researcher"
 
     def run(self) -> Dict[str, Any]:
-        # Scan memory/logs for recent activity & staleness
         base = Path("memory/logs")
         findings = []
 
-        # heartbeat staleness (absorption)
         hb = base / "heartbeat" / "memory_absorption_heartbeat.log"
         if hb.exists():
             last = hb.read_text(encoding="utf-8").strip().splitlines()[-1]
@@ -21,7 +18,6 @@ class Researcher(Agent):
         else:
             findings.append("WARN: memory_absorption_heartbeat.log missing")
 
-        # geofence heartbeat today
         gf_hb = base / "geofencing" / f"heartbeat_{time.strftime('%Y-%m-%d', time.gmtime())}.md"
         if gf_hb.exists():
             last_g = gf_hb.read_text(encoding="utf-8").strip().splitlines()[-1]
@@ -29,7 +25,6 @@ class Researcher(Agent):
         else:
             findings.append("WARN: geofencing heartbeat for today missing")
 
-        # git sync summary
         sync = base / "github_sync" / "sync.log"
         if sync.exists():
             tail = "\n".join(sync.read_text(encoding="utf-8").strip().splitlines()[-3:])
