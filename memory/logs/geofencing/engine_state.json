@@ -1,0 +1,14 @@
+{
+  "last_seen": {
+    "home": 1755098235,
+    "gym": 1755098235
+  },
+  "inside": {
+    "enter_probe_home": 0,
+    "home": true,
+    "enter_probe_gym": 0,
+    "enter_probe_work": 1755029733,
+    "gym": true,
+    "work": false
+  }
+}
