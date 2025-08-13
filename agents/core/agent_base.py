@@ -1,8 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Any, Optional
-import time, json, uuid, traceback, os
+from typing import Dict, Any
+import time, json, uuid, traceback
 
 LOG_DIR = Path("memory/logs/agents")
 LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -47,7 +47,6 @@ class Agent:
         self.log_event("artifact", path=str(p))
         return p
 
-    # override in subclasses
     def run(self) -> Dict[str, Any]:
         raise NotImplementedError
 
@@ -55,9 +54,8 @@ class Agent:
         try:
             self.log_event("start")
             out = self.run()
-            self.log_event("done", **{"result": "ok"})
+            self.log_event("done", result="ok")
             return out
         except Exception as e:
-            tb = traceback.format_exc()
-            self.log_event("error", error=str(e), traceback=tb)
+            self.log_event("error", error=str(e), traceback=traceback.format_exc())
             raise
