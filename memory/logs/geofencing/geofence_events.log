@@ -20,3 +20,7 @@
 [2025-08-13T15:17:15Z] ACTION note 'Home' event={'type': 'enter', 'lat': 38.01185, 'lon': -121.90208}
 [2025-08-13T15:17:15Z] ENTER confirmed fence=gym dist_m=40 acc_m=25 src=curl
 [2025-08-13T15:17:15Z] ACTION note 'Gym' event={'type': 'enter', 'lat': 38.01185, 'lon': -121.90208}
+[2025-08-14T18:54:14Z] EXIT confirmed fence=home dist_m=49831 acc_m=26 src=test
+[2025-08-14T18:54:14Z] ACTION vpn_on fence=home via event={'type': 'exit', 'lat': 37.792, 'lon': -122.397}
+[2025-08-14T18:54:14Z] EXIT confirmed fence=gym dist_m=49821 acc_m=26 src=test
+[2025-08-14T18:54:14Z] ACTION note 'Gym' event={'type': 'exit', 'lat': 37.792, 'lon': -122.397}
