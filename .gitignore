@@ -111,3 +111,13 @@ memory/logs/heartbeat/full_memory_absorption.log
 memory/.env
 memory/logs/heartbeat/archive/**
 memory/logs/heartbeat/archive/**
+# ---- rolling logs to keep untracked (use date-stamped files instead) ----
+memory/logs/agents/*.log
+memory/logs/git/git_sync_log.txt
+memory/logs/github_sync/sync.log
+memory/logs/heartbeat/heartbeat.log
+memory/logs/heartbeat/heartbeat_error.log
+memory/logs/heartbeat/heartbeat_log.txt
+memory/logs/heartbeat/last_heartbeat.txt
+memory/logs/watchdog/failure_log.txt
+memory/logs/watchdog/weekly_alert_log.txt
