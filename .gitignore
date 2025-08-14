@@ -123,3 +123,4 @@ memory/logs/watchdog/failure_log.txt
 memory/logs/watchdog/weekly_alert_log.txt
 memory/logs/security/security_audit_log.txt
 .gitignore.bak*
+memory/logs/agents/metrics.jsonl
