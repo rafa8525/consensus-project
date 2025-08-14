@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 import time
 from datetime import datetime, timedelta
@@ -39,7 +40,7 @@ logging.basicConfig(filename=LOG_FILE,
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 def send_sms_alert(message):
-    client.messages.create(
+    send_sms(
         body=message,
         from_=TWILIO_FROM_NUMBER,
         to=TWILIO_TO_NUMBER

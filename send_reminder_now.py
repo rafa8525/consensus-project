@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 from twilio.rest import Client
 from dotenv import load_dotenv
@@ -18,7 +19,7 @@ message_body = "🔔 Reminder: You scheduled this alert earlier — please check
 def send_sms():
     try:
         client = Client(account_sid, auth_token)
-        message = client.messages.create(
+        message = send_sms(
             to=user_to_number,
             from_=twilio_from_number,
             body=message_body

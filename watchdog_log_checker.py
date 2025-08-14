@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 
 import os
 import json
@@ -41,7 +42,7 @@ def mark_alert_sent_today():
 def send_sms_alert(message):
     try:
         client = Client(TWILIO_SID, TWILIO_AUTH)
-        client.messages.create(
+        send_sms(
             body=message,
             from_=TWILIO_FROM,
             to=TWILIO_TO
