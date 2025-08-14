@@ -3,6 +3,7 @@
 #   GET  /                     -> ping/version summary
 #   GET  /health, /healthz     -> quick system sanity
 #   GET  /version              -> git head
+#   GET  /metrics              -> daily counters + last-hit timestamps + allow_send flag
 #   POST /voice_trigger        -> baseline 200; optional SMS via twilio_guard; token-protected
 #   GET  /geo                  -> ingest a location ping (uses GEO_TOKEN; int accuracy to engine)
 #   GET  /voice/status         -> last absorption + last GitHub memory update
@@ -102,6 +103,57 @@ def healthz():
 @app.get("/version")
 def version():
     return jsonify(ok=True, version=git_head(), ts=now_iso())
+
+# -----------------------------
+# /metrics  (simple counters for today)
+# -----------------------------
+@app.get("/metrics")
+def metrics():
+    from datetime import date
+    today = date.today().isoformat()
+
+    vt_path  = REMD / f"voice_trigger_{today}.log"
+    geo_path = GEOD / f"http_ingest_{today}.log"
+
+    def count_lines(p: Path) -> int:
+        try:
+            with p.open("r", encoding="utf-8") as f:
+                return sum(1 for _ in f)
+        except Exception:
+            return 0
+
+    def last_voice_ts() -> str | None:
+        try:
+            with vt_path.open("r", encoding="utf-8") as f:
+                last = None
+                for last in f:  # iterate to last line
+                    pass
+                if last:
+                    return json.loads(last).get("ts")
+        except Exception:
+            return None
+
+    def last_geo_ts() -> str | None:
+        try:
+            with geo_path.open("r", encoding="utf-8") as f:
+                last = None
+                for last in f:
+                    pass
+                if last and last.startswith("[") and "]" in last:
+                    return last.split("]")[0][1:]
+        except Exception:
+            return None
+
+    out = {
+        "ts": now_iso(),
+        "version": git_head(),
+        "twilio_allow_send": ALLOW_SEND,
+        "voice_trigger_hits_today": count_lines(vt_path),
+        "last_voice_trigger_iso": last_voice_ts(),
+        "geo_ingests_today": count_lines(geo_path),
+        "last_geo_ingest_iso": last_geo_ts(),
+    }
+    return jsonify(ok=True, **out), 200
 
 # -----------------------------
 # /voice_trigger (POST, token-protected if VOICE_TOKEN set)
