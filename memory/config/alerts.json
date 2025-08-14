@@ -1,0 +1,7 @@
+{
+  "quiet_hours_local": ["22:00", "07:00"],
+  "dedupe_min_sec": 1800,
+  "escalate_window_sec": 3600,
+  "escalate_after": 3,
+  "timezone": "America/Los_Angeles"
+}
