@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 from twilio.rest import Client
 import os
 from dotenv import load_dotenv
@@ -14,7 +15,7 @@ TO_PHONE = os.getenv("TWILIO_TO_NUMBER")       # Your target number (e.g., +1650
 def send_sms(message: str):
     try:
         client = Client(ACCOUNT_SID, AUTH_TOKEN)
-        message = client.messages.create(
+        message = send_sms(
             body=message,
             from_=FROM_PHONE,  # ✅ Correct Twilio number usage
             to=TO_PHONE

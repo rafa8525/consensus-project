@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 #!/usr/bin/env python3
 import os
 import sys
@@ -45,7 +46,7 @@ def send_sms(client, from_number, to_number, body):
     for attempt in range(1, max_attempts + 1):
         try:
             logging.info(f"Attempt {attempt}: Sending SMS...")
-            message = client.messages.create(
+            message = send_sms(
                 body=body,
                 from_=from_number,
                 to=to_number

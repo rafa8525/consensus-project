@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 #!/usr/bin/env python3
 import json
 import time
@@ -43,7 +44,7 @@ def log_sent(message):
 def send_sms(message):
     print(f"[SEND] {message}")
     try:
-        client.messages.create(
+        send_sms(
             body=message,
             from_=TWILIO_FROM,
             to=TWILIO_TO

@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -25,7 +26,7 @@ target_number = "+16502283267"
 # Initialize client and send message
 client = Client(account_sid, auth_token)
 
-message = client.messages.create(
+message = send_sms(
     body="Hi Rafael, are you going on your 10:30 AM walk today?",
     from_=twilio_number,
     to=target_number
