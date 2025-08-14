@@ -9,4 +9,4 @@
 - Add exponential backoff + jitter to heartbeat tasks; track consecutive failures.
 - Refine Twilio guard: classify blocked texts; add tag-based allowlist.
 - Expose blocked/sent counters in /metrics to spot spikes.
-- Keep rolling logs untracked; rotate per-day everywhere (done—verify weekly).
+- Keep rolling logs untracked; rotate per-day everywhere (verify weekly).
