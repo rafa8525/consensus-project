@@ -1,80 +1,101 @@
 #!/usr/bin/env python3
-import argparse, json, re
-from datetime import date, datetime, timedelta, timezone
+import argparse, json, re, subprocess, sys
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 BASE = Path.home() / "consensus-project"
-AGENTS = BASE / "memory" / "logs" / "agents"
-HB     = BASE / "memory" / "logs" / "heartbeat"
-ALERTS = BASE / "memory" / "logs" / "alerts"
-REM    = BASE / "memory" / "logs" / "reminders"
-GEOF   = BASE / "memory" / "logs" / "geofencing"
+LOGS = BASE / "memory" / "logs"
+AG    = LOGS / "agents"
+HB    = LOGS / "heartbeat"
+ALERT = LOGS / "alerts"
+REM   = LOGS / "reminders"
+GEOF  = LOGS / "geofencing"
 
-def iso_now() -> str:
+def iso_now():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-def ensure_metrics_snapshot():
-    """Create metrics.json from last line of metrics.jsonl if snapshot missing."""
-    j  = AGENTS / "metrics.json"
-    jl = AGENTS / "metrics.jsonl"
-    if j.exists() or not jl.exists():
-        return
-    last = None
-    with jl.open("r", encoding="utf-8") as f:
-        for last in f:
-            pass
-    if last:
-        j.write_text(last.strip() + "\n", encoding="utf-8")
 
 def read_lines(p: Path):
     if not p.exists(): return []
     return [ln.rstrip("\n") for ln in p.read_text(encoding="utf-8").splitlines()]
 
 def bullets_from_md(p: Path):
-    out = []
+    out=[]
     for ln in read_lines(p):
         if ln.lstrip().startswith(("-", "*")):
-            out.append(re.sub(r"^[\s*-]+", "", ln).strip())
+            out.append(re.sub(r"^[\s*-]+","",ln).strip())
     return out
 
-def count_today(p: Path, day: str) -> int:
+def count_lines(p: Path):  # fast line count
+    try:
+        with p.open("r", encoding="utf-8") as f:
+            return sum(1 for _ in f)
+    except Exception:
+        return 0
+
+def count_day_occurrences(p: Path, day: str):
     return sum(1 for ln in read_lines(p) if day in ln)
 
+def build_metrics(day: str):
+    vt   = REM  / f"voice_trigger_{day}.log"
+    geo  = GEOF / f"http_ingest_{day}.log"
+    hb_e = HB   / "heartbeat_error.log"
+    tw_b = ALERT/ "twilio_blocked.log"
+
+    m = {
+        "ts": iso_now(),
+        "day": day,
+        "voice_trigger_hits": count_lines(vt),
+        "geo_ingests": count_lines(geo),
+        "heartbeat_errors_today": count_day_occurrences(hb_e, day),
+        "twilio_blocked_today": count_day_occurrences(tw_b, day),
+    }
+    # include current git head for traceability
+    try:
+        r = subprocess.run(["git","log","-1","--format=%H %cI %s"], cwd=str(BASE), text=True, capture_output=True)
+        if r.returncode==0: m["git_head"]=r.stdout.strip()
+    except Exception:
+        pass
+    return m
+
+def write_metrics(day: str, metrics: dict):
+    AG.mkdir(parents=True, exist_ok=True)
+    # per-day snapshot
+    daily = AG / f"metrics_{day}.json"
+    daily.write_text(json.dumps(metrics, ensure_ascii=False) + "\n", encoding="utf-8")
+    # latest pointer
+    (AG / "metrics.json").write_text(json.dumps(metrics, ensure_ascii=False) + "\n", encoding="utf-8")
+    # append jsonl stream
+    jl = AG / "metrics.jsonl"
+    with jl.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(metrics, ensure_ascii=False) + "\n")
+
 def synthesize(day: str):
-    """Produce >=5 actionable items using available signals; never empty."""
-    items = []
+    items=[]
+    items += [f"Systematize: {b}" for b in bullets_from_md(AG / f"lessons_learned_{day}.md")]
+    items += [f"Codify docs: {b}" for b in bullets_from_md(AG / f"knowledge_shared_{day}.md")]
 
-    # 1) Learnings → actions
-    items += [f"Systematize: {b}" for b in bullets_from_md(AGENTS / f"lessons_learned_{day}.md")]
-    items += [f"Codify docs: {b}" for b in bullets_from_md(AGENTS / f"knowledge_shared_{day}.md")]
-
-    # 2) Heartbeat errors → reliability actions
-    hb_err = HB / "heartbeat_error.log"
-    if hb_err.exists() and count_today(hb_err, day):
+    # operational signals -> actions
+    if count_day_occurrences(HB / "heartbeat_error.log", day):
         items.append("Add alert: if heartbeat_error.log has entries today, page with guard.")
         items.append("Add exponential backoff + jitter to heartbeat tasks; track consecutive failures.")
 
-    # 3) Twilio guard → comms hygiene
-    blocked = ALERTS / "twilio_blocked.log"
-    if blocked.exists() and count_today(blocked, day):
+    vt = REM / f"voice_trigger_{day}.log"
+    if vt.exists():
+        items.append(f"Instrument /voice_trigger latency + status; today={count_lines(vt)} hits.")
+
+    geo = GEOF / f"http_ingest_{day}.log"
+    if geo.exists():
+        items.append(f"Add geofence rule tests; today={count_lines(geo)} ingests.")
+
+    if count_day_occurrences(ALERT / "twilio_blocked.log", day):
         items.append("Refine Twilio guard: classify blocked texts; add tag-based allowlist.")
         items.append("Expose blocked/sent counters in /metrics to spot spikes.")
 
-    # 4) Endpoint usage → observability
-    vt = REM / f"voice_trigger_{day}.log"
-    geo = GEOF / f"http_ingest_{day}.log"
-    if vt.exists():
-        n = sum(1 for _ in vt.open("r", encoding="utf-8"))
-        items.append(f"Instrument /voice_trigger latency + status; today={n} hits.")
-    if geo.exists():
-        n = sum(1 for _ in geo.open("r", encoding="utf-8"))
-        items.append(f"Add geofence rule tests; today={n} ingests.")
-
-    # 5) Repo hygiene (always valuable)
-    items.append("Keep rolling logs untracked; rotate per-day everywhere (done—verify weekly).")
+    # hygiene/testing
+    items.append("Keep rolling logs untracked; rotate per-day everywhere (verify weekly).")
     items.append("Add unit tests for /voice_trigger and /geo; fail CI on regression.")
 
-    # Deduplicate and guarantee at least 5
+    # dedup + guarantee >=5
     seen, dedup = set(), []
     for s in items:
         if s and s not in seen:
@@ -84,10 +105,10 @@ def synthesize(day: str):
     return dedup[:10]
 
 def write_self_improvement(day: str, items):
-    AGENTS.mkdir(parents=True, exist_ok=True)
-    out = ["# Self-improvement suggestions", ""] + [f"- {s}" for s in items]
-    path = AGENTS / f"self_improvement_{day}.md"
-    path.write_text("\n".join(out) + "\n", encoding="utf-8")
+    out=["# Self-improvement suggestions",""]+[f"- {s}" for s in items]
+    path = AG / f"self_improvement_{day}.md"
+    AG.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(out)+"\n", encoding="utf-8")
     return path
 
 def main():
@@ -96,10 +117,13 @@ def main():
     args = ap.parse_args()
     day = args.date
 
-    ensure_metrics_snapshot()
-    items = synthesize(day)
-    path = write_self_improvement(day, items)
-    print(f"Wrote {path} with {len(items)} items at {iso_now()}")
+    metrics = build_metrics(day)
+    write_metrics(day, metrics)
 
-if __name__ == "__main__":
+    actions = synthesize(day)
+    path = write_self_improvement(day, actions)
+
+    print(f"Wrote {path.name} (items={len(actions)}), metrics for {day}, at {iso_now()}")
+
+if __name__=="__main__":
     main()
