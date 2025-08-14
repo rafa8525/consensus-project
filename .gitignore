@@ -121,3 +121,5 @@ memory/logs/heartbeat/heartbeat_log.txt
 memory/logs/heartbeat/last_heartbeat.txt
 memory/logs/watchdog/failure_log.txt
 memory/logs/watchdog/weekly_alert_log.txt
+memory/logs/security/security_audit_log.txt
+.gitignore.bak*
