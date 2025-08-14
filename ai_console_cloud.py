@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 import time
 import requests
@@ -26,7 +27,7 @@ def send_sms(body):
     if body != last_error:
         try:
             client = Client(ACCOUNT_SID, AUTH_TOKEN)
-            message = client.messages.create(
+            message = send_sms(
                 body=body,
                 from_=FROM_PHONE,
                 to=TO_PHONE

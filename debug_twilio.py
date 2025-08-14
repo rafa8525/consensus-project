@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 from datetime import datetime, date
 from twilio.rest import Client
@@ -25,7 +26,7 @@ def send_reminder(message=None):
         write_log(f"ENV CHECK — FROM: {TWILIO_FROM_NUMBER}, TO: {TO_NUMBER}")
 
         client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-        twilio_msg = client.messages.create(
+        twilio_msg = send_sms(
             to=TO_NUMBER,
             from_=TWILIO_FROM_NUMBER,
             body=message

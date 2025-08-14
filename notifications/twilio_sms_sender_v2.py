@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 
 from twilio.rest import Client
 import os
@@ -24,7 +25,7 @@ def send_sms_to(name: str, message: str):
     to_number = CONTACTS[name]
     try:
         client = Client(ACCOUNT_SID, AUTH_TOKEN)
-        sms = client.messages.create(
+        sms = send_sms(
             body=message,
             messaging_service_sid=MESSAGING_SERVICE_SID,
             to=to_number

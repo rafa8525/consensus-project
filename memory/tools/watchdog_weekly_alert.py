@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 #!/usr/bin/env python3
 import os
 import time
@@ -79,7 +80,7 @@ def upload_to_drive():
 
 def send_sms_alert(message):
     client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-    client.messages.create(
+    send_sms(
         body=message,
         from_=TWILIO_FROM_NUMBER,
         to=TWILIO_TO_NUMBER

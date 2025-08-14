@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 import json
 from datetime import datetime
@@ -52,7 +53,7 @@ error_log_path = os.path.join(log_dir, "sms_errors.md")
 # Send SMS and log
 for reminder in reminders.get("reminders", []):
     try:
-        message = client.messages.create(
+        message = send_sms(
             body=reminder["message"],
             from_=from_number,
             to=to_number

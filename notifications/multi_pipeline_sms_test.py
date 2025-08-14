@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 from twilio.rest import Client
 import os
 from dotenv import load_dotenv
@@ -19,7 +20,7 @@ client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 for msg in messages:
     try:
-        response = client.messages.create(
+        response = send_sms(
             body=msg,
             from_=FROM_PHONE,
             to=TO_PHONE
