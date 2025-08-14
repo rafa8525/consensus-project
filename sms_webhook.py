@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 from flask import Flask, request, jsonify
 from twilio.rest import Client
 from dotenv import load_dotenv
@@ -23,7 +24,7 @@ def send_sms():
     message_body = data.get('message', 'Test message from AI!')
     try:
         client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-        message = client.messages.create(
+        message = send_sms(
             body=message_body,
             from_=TWILIO_PHONE_NUMBER,
             to=TARGET_PHONE_NUMBER

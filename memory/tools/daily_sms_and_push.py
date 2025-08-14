@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 
 import os
 import sys
@@ -22,7 +23,7 @@ def send_sms_via_twilio(body):
         if not all([account_sid, auth_token, from_number, to_number]):
             raise ValueError("Missing one or more Twilio environment variables.")
         client = Client(account_sid, auth_token)
-        client.messages.create(body=body, from_=from_number, to=to_number)
+        send_sms(body=body, from_=from_number, to=to_number)
         logging.info("SMS sent successfully.")
     except Exception as e:
         logging.error(f"Failed to send SMS: {e}")

@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 import threading
 from datetime import datetime, timedelta
@@ -23,7 +24,7 @@ def send_sms_alert(message):
         return
     try:
         client = Client(TWILIO_SID, TWILIO_AUTH)
-        client.messages.create(
+        send_sms(
             to=TWILIO_TO,
             from_=TWILIO_FROM,
             body=message

@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 # send_reminder_util.py
 
 from twilio.rest import Client
@@ -11,7 +12,7 @@ def send_reminder(message="Reminder: Don't forget to check in!"):
         to_number = os.environ.get("TWILIO_TO_NUMBER")
 
         client = Client(account_sid, auth_token)
-        message = client.messages.create(
+        message = send_sms(
             body=message,
             from_=from_number,
             to=to_number

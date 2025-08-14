@@ -1,3 +1,4 @@
+from common.twilio_guard import send_sms
 import os
 import random
 from twilio.rest import Client
@@ -22,7 +23,7 @@ def get_random_questions(filepath, n=3):
 
 def send_sms(body):
     client = Client(account_sid, auth_token)
-    message = client.messages.create(
+    message = send_sms(
         to=user_to_number,
         from_=twilio_from_number,
         body=body
