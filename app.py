@@ -1,305 +1,158 @@
-# app.py — single-file bridge for ChatGPT Voice ↔ backend (PythonAnywhere-ready)
-# Endpoints:
-#   GET  /                     -> ping/version summary
-#   GET  /health, /healthz     -> quick system sanity
-#   GET  /version              -> git head
-#   GET  /metrics              -> daily counters + last-hit timestamps + allow_send flag
-#   POST /voice_trigger        -> baseline 200; optional SMS via twilio_guard; token-protected
-#   GET  /geo                  -> ingest a location ping (uses GEO_TOKEN; int accuracy to engine)
-#   GET  /voice/status         -> last absorption + last GitHub memory update
-#   GET  /ask                  -> simple memory Q&A over search_index.json
-#   GET  /remind               -> schedule a reminder (text, when)
-
-import os, json, subprocess
+# app.py
+import os, sys, hmac, hashlib, json, subprocess
 from pathlib import Path
+from datetime import datetime, timezone, date
 from flask import Flask, request, jsonify
-from datetime import datetime, timezone
 
-# ---- Paths
-BASE = Path.home() / "consensus-project"
-MEM  = BASE / "memory"
-LOGD = MEM / "logs"
-GEOD = LOGD / "geofencing"
-REMD = LOGD / "reminders"
+# --- Safety defaults (SMS off by default) ---
+os.environ.setdefault("TWILIO_SILENCE", "1")
+os.environ.setdefault("TWILIO_ALLOW_SEND", "0")
 
-# ---- Flask
-app = Flask(__name__)
-app.url_map.strict_slashes = False  # accept both /route and /route/
+# --- Project root ---
+CP_ROOT = Path("/home/rafa1215/consensus-project").resolve()
 
-# ---- Config / Env
-GEO_TOKEN   = os.environ.get("GEO_TOKEN", "bvJkujAO1MOtHL6WL5RhbdayMEF7ILBnIy4OFzXzkgg")
-VOICE_TOKEN = os.environ.get("VOICE_TOKEN")  # if set, /voice_trigger requires X-Voice-Token header
-TWILIO_TO   = os.environ.get("TWILIO_TO")     # e.g. +1XXXXXXXXXX
-TWILIO_FROM = os.environ.get("TWILIO_FROM")   # e.g. +1XXXXXXXXXX
-ALLOW_SEND  = os.environ.get("TWILIO_ALLOW_SEND", "0") == "1"
+# --- Tokens (set via ~/.pa_env.json or PA Web->Env) ---
+VOICE_TOKEN = os.getenv("VOICE_TOKEN", "")
+GEO_TOKEN   = os.getenv("GEO_TOKEN",  "bvJkujAO1MOtHL6WL5RhbdayMEF7ILBnIy4OFzXzkgg")
+GH_SECRET   = os.getenv("GITHUB_WEBHOOK_SECRET", "")  # set this below in step 3
 
-# Safe SMS wrapper (guarded; pre-commit-safe)
-try:
-    from common.twilio_guard import send_sms
-except Exception:
-    send_sms = None  # baseline works without SMS
+# --- Logs ---
+LOGS = CP_ROOT / "memory" / "logs"
+LOGS.mkdir(parents=True, exist_ok=True)
+GEOF_DIR = LOGS / "geofencing"; GEOF_DIR.mkdir(exist_ok=True)
+REM_DIR  = LOGS / "reminders";  REM_DIR.mkdir(exist_ok=True)
+HB_DIR   = LOGS / "heartbeat";  HB_DIR.mkdir(exist_ok=True)
+SYS_DIR  = LOGS / "system";     SYS_DIR.mkdir(exist_ok=True)
 
-# ---- Helpers
-def now_iso():
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+HTTP_INGEST = GEOF_DIR / f"http_ingest_{date.today().isoformat()}.log"
+VOICE_TRIG  = REM_DIR  / f"voice_trigger_{date.today().isoformat()}.log"
+ABSORB_HB   = HB_DIR   / "memory_absorption_heartbeat.log"   # rolling (git-ignored)
+ABSORB_LAST = HB_DIR   / "last_absorbed_commit.txt"          # last commit absorbed
 
-def run(cmd):
-    p = subprocess.Popen(cmd, cwd=str(BASE),
-                         stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    out, err = p.communicate(timeout=60)
-    return p.returncode, out.strip(), err.strip()
+app = Flask("consensus_app")
 
-def dated_log_path(dirpath: Path, base_name: str) -> Path:
-    dirpath.mkdir(parents=True, exist_ok=True)
-    return dirpath / f"{base_name}_{datetime.now().date()}.log"
+def _nowiso():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-def append_log(path: Path, line: str):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8") as f:
-        f.write(line.rstrip() + "\n")
+def _run(cmd):
+    r = subprocess.run(cmd, cwd=str(CP_ROOT), text=True, capture_output=True)
+    return r.returncode, (r.stdout or "").strip(), (r.stderr or "").strip()
 
-def git_head():
-    rc, out, err = run(["git", "log", "-1", "--format=%H %cI %s"])
-    return out if rc == 0 else None
+def _append(p: Path, line: str):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with open(p, "a", encoding="utf-8") as f: f.write(line + "\n")
 
-# -----------------------------
-# Root & health
-# -----------------------------
-@app.get("/")
-def root():
-    return jsonify(ok=True, ts=now_iso(), version=git_head())
+def _count_today(path: Path, needle: str = "") -> int:
+    if not path.exists(): return 0
+    d = date.today().isoformat()
+    n = 0
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        for ln in f:
+            if d in ln and (needle in ln if needle else True):
+                n += 1
+    return n
 
-@app.get("/health")
-def health():
-    status = {"time": now_iso(), "version": git_head()}
-    idx = MEM/"index"/"search_index.json"
-    status["index_ok"] = idx.exists()
-    if idx.exists():
-        try:
-            j = json.loads(idx.read_text(encoding="utf-8"))
-            status["indexed_files"] = j.get("total_files")
-            status["index_generated_at"] = j.get("generated_at")
-        except Exception:
-            status["indexed_files"] = None
+def absorb_memory(source="manual"):
+    """
+    Pulls latest repo, records last absorbed commit, and appends a heartbeat.
+    ChatGPT Voice should read ABSORB_LAST / ABSORB_HB to know freshness.
+    """
+    ts = _nowiso()
+    _run(["git", "fetch", "origin"])
+    # Stay on current branch but fast-forward
+    _run(["git", "pull", "--ff-only", "origin", "v1.1-dev"])
+    rc, head, _ = _run(["git", "rev-parse", "HEAD"])
+    commit_txt = head if rc == 0 else "unknown"
+    ABSORB_LAST.write_text(f"{commit_txt} {ts}\n", encoding="utf-8")
+    _append(ABSORB_HB, f"[{ts}] source={source} commit={commit_txt}")
+    return {"ok": True, "ts": ts, "commit": commit_txt, "source": source}
 
-    hb = LOGD/"heartbeat"/"memory_absorption_heartbeat.log"
-    if hb.exists():
-        try:
-            last = hb.read_text(encoding="utf-8").strip().splitlines()[-1]
-            if last.startswith("[") and "]" in last:
-                status["last_absorption_iso"] = last.split("]")[0][1:]
-        except Exception:
-            pass
+# ------------------- Existing endpoints kept -------------------
 
-    today = datetime.utcnow().strftime("%Y-%m-%d")
-    status["geofence_heartbeat_today"] = (GEOD/f"heartbeat_{today}.md").exists()
-
-    return jsonify(ok=True, **status)
-
-@app.get("/healthz")
+@app.route("/healthz", methods=["GET"])
 def healthz():
-    return "ok", 200
+    return "ok"
 
-@app.get("/version")
-def version():
-    return jsonify(ok=True, version=git_head(), ts=now_iso())
-
-# -----------------------------
-# /metrics  (simple counters for today)
-# -----------------------------
-@app.get("/metrics")
+@app.route("/metrics", methods=["GET"])
 def metrics():
-    from datetime import date
-    today = date.today().isoformat()
-
-    vt_path  = REMD / f"voice_trigger_{today}.log"
-    geo_path = GEOD / f"http_ingest_{today}.log"
-
-    def count_lines(p: Path) -> int:
-        try:
-            with p.open("r", encoding="utf-8") as f:
-                return sum(1 for _ in f)
-        except Exception:
-            return 0
-
-    def last_voice_ts() -> str | None:
-        try:
-            with vt_path.open("r", encoding="utf-8") as f:
-                last = None
-                for last in f:  # iterate to last line
-                    pass
-                if last:
-                    return json.loads(last).get("ts")
-        except Exception:
-            return None
-
-    def last_geo_ts() -> str | None:
-        try:
-            with geo_path.open("r", encoding="utf-8") as f:
-                last = None
-                for last in f:
-                    pass
-                if last and last.startswith("[") and "]" in last:
-                    return last.split("]")[0][1:]
-        except Exception:
-            return None
-
-    out = {
-        "ts": now_iso(),
-        "version": git_head(),
-        "twilio_allow_send": ALLOW_SEND,
-        "voice_trigger_hits_today": count_lines(vt_path),
-        "last_voice_trigger_iso": last_voice_ts(),
-        "geo_ingests_today": count_lines(geo_path),
-        "last_geo_ingest_iso": last_geo_ts(),
+    # basic version
+    rc, ver, _ = _run(["git", "log", "-1", "--pretty=%H %cI %s"])
+    resp = {
+        "ok": True,
+        "ts": _nowiso(),
+        "version": ver if rc == 0 else "",
+        # voice / geo as before (may be zero if unused)
+        "voice_trigger_hits_today": _count_today(REM_DIR / f"voice_trigger_{date.today().isoformat()}.log"),
+        "geo_ingests_today": _count_today(HTTP_INGEST),
+        "twilio_allow_send": os.getenv("TWILIO_ALLOW_SEND", "0") == "1",
+        # NEW: memory absorption metrics
+        "memory_absorb_hits_today": _count_today(ABSORB_HB),
+        "last_memory_absorb_iso": (ABSORB_LAST.read_text().split()[-1] if ABSORB_LAST.exists() else None),
     }
-    return jsonify(ok=True, **out), 200
+    return jsonify(resp)
 
-# -----------------------------
-# /voice_trigger (POST, token-protected if VOICE_TOKEN set)
-# -----------------------------
-@app.post("/voice_trigger")
-def voice_trigger():
-    # Optional header token to restrict access
-    if VOICE_TOKEN and request.headers.get("X-Voice-Token") != VOICE_TOKEN:
-        return jsonify(ok=False, rc=401, err="unauthorized"), 401
-
-    # Accept JSON or form payloads; never fails the endpoint (baseline 200)
-    try:
-        payload = request.get_json(silent=True) or request.form.to_dict() or {}
-    except Exception:
-        payload = {}
-
-    # Log every invocation (date-rotated file)
-    logline = {
-        "ts": now_iso(),
-        "ip": request.headers.get("X-Forwarded-For", request.remote_addr),
-        "ua": request.headers.get("User-Agent", ""),
-        "keys": sorted(list(payload.keys()))
-    }
-    append_log(dated_log_path(REMD, "voice_trigger"), json.dumps(logline, ensure_ascii=False))
-
-    # Optional: send an SMS only if explicitly allowed and guard is available
-    send_status = {"status": "skipped"}
-    if ALLOW_SEND and send_sms and TWILIO_TO and TWILIO_FROM:
-        try:
-            body = f"voice_trigger ping {logline['ts']}"
-            send_status = send_sms(body=body, to=TWILIO_TO, from_=TWILIO_FROM, tag="voice")
-        except Exception as e:
-            send_status = {"status": "error", "reason": str(e)}
-
-    return jsonify(ok=True, ts=logline["ts"], send=send_status), 200
-
-# -----------------------------
-# /geo  (token-protected; integer accuracy to engine)
-# -----------------------------
-@app.get("/geo")
+@app.route("/geo", methods=["GET"])
+@app.route("/geo/", methods=["GET"])
 def geo():
     token = request.args.get("token", "")
-    if not GEO_TOKEN or token != GEO_TOKEN:
-        return jsonify(ok=False, rc=401, err="unauthorized"), 401
-
+    if not token or token != GEO_TOKEN:
+        return jsonify({"ok": False, "rc": 401, "err": "unauthorized"}), 401
     try:
-        lat = float(request.args["lat"])
-        lon = float(request.args["lon"])
-        acc_raw = request.args.get("acc", "50")
-        acc_f = float(acc_raw)
-        acc_i = int(round(acc_f))  # engine expects integer accuracy
-        src = request.args.get("src", "http")
+        lat = float(request.args["lat"]); lon = float(request.args["lon"])
+        acc = int(round(float(request.args.get("acc", "50"))))
     except Exception:
-        return jsonify(ok=False, rc=400, err="lat/lon required"), 400
+        return jsonify({"ok": False, "rc": 400, "err": "bad-params"}), 400
+    src = request.args.get("src", "http")
+    rc, out, err = _run(["python3","tools/geofence_engine.py","--lat",str(lat),"--lon",str(lon),"--acc",str(acc),"--source",src])
+    _append(HTTP_INGEST, f"[{_nowiso()}] lat={lat} lon={lon} acc={acc} src={src} rc={rc} out={out} err={err}")
+    return jsonify({"ok": rc==0, "rc": rc, "out": out, "err": err, "ts": _nowiso(), "acc_used": acc})
 
-    engine = BASE / "tools" / "geofence_engine.py"
-    if engine.exists():
-        cmd = ["python3", str(engine), "--lat", str(lat), "--lon", str(lon),
-               "--acc", str(acc_i), "--source", src]
-        rc, out, err = run(cmd)
-    else:
-        rc, out, err = 0, "engine_missing", ""
+@app.route("/voice_trigger", methods=["POST"])
+def voice_trigger():
+    tok = request.headers.get("X-Voice-Token","")
+    if not tok or tok != VOICE_TOKEN:
+        return jsonify({"ok": False, "rc": 401, "err": "unauthorized"}), 401
+    _append(REM_DIR / f"voice_trigger_{date.today().isoformat()}.log",
+            json.dumps({"ts": _nowiso(), "ip": request.remote_addr, "ua": request.headers.get("User-Agent",""), "keys": list(request.form.keys())}))
+    # This endpoint stays a dry-run notifier; real SMS is guarded elsewhere
+    return jsonify({"ok": True, "send": {"status":"skipped"}, "ts": _nowiso()})
 
-    # Append an HTTP ingest trace (date-rotated)
-    append_log(
-        dated_log_path(GEOD, "http_ingest"),
-        f"[{now_iso()}] lat={lat} lon={lon} acc={acc_f}({acc_i}) src={src} rc={rc} out={out} err={err}"
-    )
+# ------------------- NEW: Manual absorb endpoint -------------------
 
-    return jsonify(ok=(rc == 0), rc=rc, out=out, err=err, ts=now_iso(), acc_used=acc_i)
+@app.route("/memory/absorb", methods=["POST"])
+def memory_absorb_manual():
+    tok = request.headers.get("X-Voice-Token","")
+    if not tok or tok != VOICE_TOKEN:
+        return jsonify({"ok": False, "rc": 401, "err": "unauthorized"}), 401
+    return jsonify(absorb_memory(source="manual"))
 
-# -----------------------------
-# /voice/status
-# -----------------------------
-@app.get("/voice/status")
-def voice_status():
-    hb = LOGD/"heartbeat"/"memory_absorption_heartbeat.log"
-    last_absorb = None; idx_count = None
-    if hb.exists():
-        try:
-            last = hb.read_text(encoding="utf-8").strip().splitlines()[-1]
-            if last.startswith("[") and "]" in last:
-                last_absorb = last.split("]")[0][1:]
-            if "indexed=" in last:
-                idx_count = int(last.split("indexed=")[1].split()[0].strip().rstrip(","))
-        except Exception:
-            pass
+# ------------------- NEW: GitHub webhook (push) -------------------
 
-    rc, out, err = run(["git", "log", "-1", "--format=%H %cI %s", "--", "memory/"])
-    last_git = out if rc == 0 else None
-    return jsonify(ok=True, last_absorption_iso=last_absorb,
-                   approx_indexed_files=idx_count, last_github_update=last_git)
+def _verify_github_signature(raw_body: bytes) -> bool:
+    if not GH_SECRET: 
+        return False
+    sig = request.headers.get("X-Hub-Signature-256","")
+    if not sig.startswith("sha256="): 
+        return False
+    digest = "sha256=" + hmac.new(GH_SECRET.encode("utf-8"), raw_body, hashlib.sha256).hexdigest()
+    # Use constant-time compare
+    return hmac.compare_digest(sig, digest)
 
-# -----------------------------
-# /ask?q=...
-# -----------------------------
-@app.get("/ask")
-def ask():
-    q = (request.args.get("q", "") or "").strip().lower()
-    if not q:
-        return jsonify(ok=False, rc=400, err="missing q"), 400
+@app.route("/github_webhook", methods=["POST"])
+def github_webhook():
+    raw = request.get_data()
+    if not _verify_github_signature(raw):
+        return jsonify({"ok": False, "rc": 401, "err": "bad-signature"}), 401
+    event = request.headers.get("X-GitHub-Event","")
+    if event != "push":
+        return jsonify({"ok": True, "skipped": f"event={event}"}), 200
+    payload = request.get_json(silent=True) or {}
+    ref = payload.get("ref","")
+    # Only absorb on v1.1-dev pushes (adjust if you want more branches)
+    if ref not in ("refs/heads/v1.1-dev",):
+        return jsonify({"ok": True, "skipped": f"ref={ref}"}), 200
+    result = absorb_memory(source="github_push")
+    return jsonify(result), 200
 
-    idx = MEM/"index"/"search_index.json"
-    if not idx.exists():
-        return jsonify(ok=False, rc=503, err="index missing"), 503
-
-    try:
-        data = json.loads(idx.read_text(encoding="utf-8"))
-    except Exception as e:
-        return jsonify(ok=False, rc=500, err=f"bad index: {e}"), 500
-
-    hits = []
-    for item in data.get("manifest", []):
-        text = " ".join([
-            str(item.get("title", "")),
-            " ".join(item.get("keywords", [])),
-            item.get("path", "")
-        ]).lower()
-        score = sum(text.count(tok) for tok in q.split() if tok)
-        if score > 0:
-            hits.append({
-                "path": item.get("path", ""),
-                "title": item.get("title", ""),
-                "score": score
-            })
-    hits.sort(key=lambda x: x["score"], reverse=True)
-    return jsonify(ok=True, query=q, results=hits[:10])
-
-# -----------------------------
-# /remind?text=...&when=...
-# -----------------------------
-@app.get("/remind")
-def remind():
-    text = request.args.get("text", "").strip()
-    when = request.args.get("when", "").strip()
-    if not text or not when:
-        return jsonify(ok=False, rc=400, err="text and when required"), 400
-    script = BASE / "tools" / "remind.py"
-    if not script.exists():
-        return jsonify(ok=False, rc=503, err="remind.py missing"), 503
-    rc, out, err = run(["python3", str(script), "--text", text, "--when", when])
-    return jsonify(ok=(rc == 0), rc=rc, out=out, err=err)
-
-# ---- WSGI entry point for PythonAnywhere
+# WSGI entrypoint
 application = app
-
-if __name__ == "__main__":
-    # Local debugging only; PythonAnywhere uses WSGI
-    app.run(host="0.0.0.0", port=8000, debug=True)
