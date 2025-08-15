@@ -1,4 +1,4 @@
-from .common import iso_now
+from tools.agent_plugins.common import iso_now
 def run():
     return [{
       "agent":"AI Role Assigner",
