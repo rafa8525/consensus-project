@@ -76,7 +76,8 @@ def append_barcode_log(d, entries, overwrite=False):
     lines = [] if overwrite else (p.read_text(encoding="utf-8").splitlines() if p.exists() else [])
     if not lines: lines = [f"# Barcode Log — {d}", ""]
     for e in entries:
-        klass = f" [{e['klass']}]" if e.get("klass") else ""
+        k = normalize_klass(e.get("klass"))
+        klass = f" [{k}]" if k else ""
         lines.append(f"- {e['when']} — {e['item']}{klass} — {e['cal']} kcal; P {e['protein_g']}g / F {e['fat_g']}g / NC {e['net_carbs_g']}g (TC {e['carbs_g']}g, Fiber {e['fiber_g']}g)")
     p.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -104,7 +105,7 @@ def parse_rows(rows, idx):
         get = lambda key: (row[idx[key]] if key in idx and idx[key] < len(row) else "")
         d     = to_day(get("timestamp"))
         item  = (get("item") or "(unknown)").strip()
-        klass = (get("class") or "").strip()
+        klass = normalize_klass(get("class") or "")
         # Strict: only capture explicit units; ignore stray numbers
         cal   = fnum_unit(get("details"), want_kcal=True)
         prot  = fnum_unit(get("details"))
@@ -219,3 +220,13 @@ def parse_rows(rows, idx):
 
 if __name__ == "__main__":
     main()
+
+def normalize_klass(s):
+    s=(s or "").strip()
+    t="".join(ch for ch in s if ch.isalnum() or ch.isspace()).lower()
+    if "slightly" in t and "keto" in t:
+        return "Slightly Keto"
+    if "keto" in t:
+        return "Keto"
+    return ""
+
