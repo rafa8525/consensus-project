@@ -1,5 +1,5 @@
 {
-  "mode": "rebuild",
+  "mode": "incremental",
   "headers_raw": [
     "5449000000996",
     "2025-06-23 16:43:42.132",
