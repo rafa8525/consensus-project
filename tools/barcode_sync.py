@@ -165,9 +165,6 @@ def main():
     DBG.write_text(json.dumps({"mode":"incremental","headers_raw":hdr_raw,"headers":hdr_can,"idx":idx}, indent=2), encoding="utf-8")
     print(f"Imported rows: {len(new_rows)} days: {len(grouped)} at {iso_now()} (mapping in {DBG.name})")
 
-if __name__ == "__main__":
-    main()
-
 # --- strict extractors (require a nearby label) ---
 def _extract_kcal(text: str) -> float:
     if not text: return 0.0
@@ -219,3 +216,6 @@ def parse_rows(rows, idx):
         g["entries"].append(e)
         t = g["totals"]; t["cal"]+=cal; t["protein_g"]+=prot; t["fat_g"]+=fat; t["carbs_g"]+=carbs; t["net_carbs_g"]+=net
     return grouped
+
+if __name__ == "__main__":
+    main()
