@@ -1,0 +1,24 @@
+{
+  "mode": "rebuild",
+  "headers_raw": [
+    "5449000000996",
+    "2025-06-23 16:43:42.132",
+    "Coca-Cola Can",
+    "10.6g",
+    "\u26a0\ufe0f Slightly Keto"
+  ],
+  "headers": [
+    "barcode",
+    "timestamp",
+    "item",
+    "details",
+    "class"
+  ],
+  "idx": {
+    "barcode": 0,
+    "timestamp": 1,
+    "item": 2,
+    "details": 3,
+    "class": 4
+  }
+}
