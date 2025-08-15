@@ -167,3 +167,55 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# --- strict extractors (require a nearby label) ---
+def _extract_kcal(text: str) -> float:
+    if not text: return 0.0
+    m = re.search(r'([-+]?\d+(?:[.,]\d+)?)\s*(?:k?cal|calories)\b', str(text), re.I)
+    return float(m.group(1).replace(',', '.')) if m else 0.0
+
+def _extract_macro_g(text: str, kind: str) -> float:
+    if not text: return 0.0
+    t = str(text)
+    kinds = {
+        "protein": r'(?:protein|prot\b)',
+        "fat":     r'\bfat\b',
+        "carbs":   r'(?:carb(?:s)?|carbohydrate(?:s)?)',
+        "fiber":   r'(?:fiber|fibre)',
+        "net":     r'net\s*carb(?:s)?',
+    }
+    lab = kinds.get(kind, r'$^')  # never matches if unknown
+    # label … number g  OR  number g … label (<= ~10 non-word chars between)
+    p1 = re.search(rf'(?i){lab}[^\d]{{0,10}}([-+]?\d+(?:[.,]\d+)?)\s*g', t)
+    if p1:
+        return float(p1.group(1).replace(',', '.'))
+    p2 = re.search(rf'(?i)([-+]?\d+(?:[.,]\d+)?)\s*g[^\w]{{0,10}}{lab}', t)
+    return float(p2.group(1).replace(',', '.')) if p2 else 0.0
+
+# --- OVERRIDE: parse_rows now uses strict label-based macros ---
+def parse_rows(rows, idx):
+    grouped = {}
+    for row in rows:
+        get = lambda key: (row[idx[key]] if key in idx and idx[key] < len(row) else "")
+        d     = to_day(get("timestamp"))
+        item  = (get("item") or "(unknown)").strip()
+        klass = (get("class") or "").strip()
+        details = get("details")
+
+        cal   = _extract_kcal(details)
+        prot  = _extract_macro_g(details, "protein")
+        fat   = _extract_macro_g(details, "fat")
+        carbs = _extract_macro_g(details, "carbs")
+        fiber = _extract_macro_g(details, "fiber")
+        net   = _extract_macro_g(details, "net")
+        if net == 0 and carbs > 0:
+            net = max(carbs - fiber, 0.0)
+
+        when  = (get("timestamp") or iso_now()).strip()
+        e = {"when":when,"item":item,"klass":klass,"cal":int(cal),
+             "protein_g":round(prot,1),"fat_g":round(fat,1),
+             "carbs_g":round(carbs,1),"fiber_g":round(fiber,1),"net_carbs_g":round(net,1)}
+        g = grouped.setdefault(d, {"entries": [], "totals": {"cal":0,"protein_g":0.0,"fat_g":0.0,"carbs_g":0.0,"net_carbs_g":0.0}})
+        g["entries"].append(e)
+        t = g["totals"]; t["cal"]+=cal; t["protein_g"]+=prot; t["fat_g"]+=fat; t["carbs_g"]+=carbs; t["net_carbs_g"]+=net
+    return grouped
