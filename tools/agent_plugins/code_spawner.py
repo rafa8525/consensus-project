@@ -1,5 +1,5 @@
 from pathlib import Path
-from .common import last_git_commit
+from tools.agent_plugins.common import last_git_commit
 
 def run():
     out=[]
