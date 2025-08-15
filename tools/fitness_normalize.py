@@ -1,98 +1,75 @@
-cd /home/rafa1215/consensus-project
-
-# 1) Normalizer for fitness logs (safe, idempotent)
-cat > tools/fitness_normalize.py <<'PY'
 #!/usr/bin/env python3
-import re, sys
-from datetime import date
+import argparse
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-BASE   = Path.home() / "consensus-project"
-FITDIR = BASE / "memory" / "logs" / "fitness"
-FITDIR.mkdir(parents=True, exist_ok=True)
+BASE = Path.home() / "consensus-project" / "memory" / "logs" / "fitness"
+BASE.mkdir(parents=True, exist_ok=True)
 
-FNAME_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})\.md$")
+TEMPLATE = (
+    "# Fitness — {d}\n"
+    "- ts: {ts}\n"
+    "- steps: 0\n"
+    "- active_minutes: 0\n"
+    "- workouts: []\n"
+    '- totals: { "cal_burned": 0, "distance_km": 0.0 }\n'
+    '- notes: ""\n'
+)
 
-def header_for(day: str) -> str:
-    return f"# Fitness — {day}\n"
+KEEP_KEYS = ("- ts:", "- steps:", "- active_minutes:", "- workouts:", "- totals:", "- notes:")
 
-def normalize_file(p: Path) -> bool:
-    m = FNAME_RE.match(p.name)
-    if not m:
-        return False
-    day = "-".join(m.groups())
-    orig = p.read_text(encoding="utf-8")
-    lines = orig.splitlines()
-    changed = False
+def normalize_day(d: date):
+    p = BASE / f"{d.isoformat()}.md"
+    if not p.exists():
+        p.write_text(TEMPLATE.format(d=d.isoformat(), ts=_now()), encoding="utf-8")
+        return p
 
-    # Ensure header
-    want_header = header_for(day).rstrip("\n")
-    if not lines:
-        lines = [want_header, f"- ts: {date.today().isoformat()}T00:00:00Z", "- steps: 0", "- workouts: []", '- notes: ""']
-        changed = True
-    else:
-        if not lines[0].startswith("# Fitness —"):
-            lines.insert(0, want_header)
-            changed = True
-        elif lines[0] != want_header:
-            lines[0] = want_header
-            changed = True
+    lines = p.read_text(encoding="utf-8").splitlines()
+    out, seen = [], set()
 
-    # Normalize whitespace and ensure at least one "- ts:" entry
-    seen_ts = any(re.match(r"^\s*-\s*ts:\s*", ln) for ln in lines)
-    new = []
+    # header
+    out.append(f"# Fitness — {d.isoformat()}")
+
+    # keep only the first occurrence of each key, drop filler/duplicates
     for ln in lines:
-        s = ln.rstrip().replace("\t", "  ")
-        if s != ln:
-            changed = True
-        new.append(s)
-    lines = new
+        s = ln.strip()
+        for k in KEEP_KEYS:
+            if s.startswith(k) and k not in seen:
+                # strip any ancient filler if ever present (none expected here)
+                out.append(ln)
+                seen.add(k)
+                break
 
-    if not seen_ts:
-        lines += [f"- ts: {date.today().isoformat()}T00:00:00Z", "- steps: 0", "- workouts: []", '- notes: ""']
-        changed = True
+    # fill missing keys
+    if "- ts:" not in seen:
+        out.append(f"- ts: {_now()}")
+    if "- steps:" not in seen:
+        out.append("- steps: 0")
+    if "- active_minutes:" not in seen:
+        out.append("- active_minutes: 0")
+    if "- workouts:" not in seen:
+        out.append("- workouts: []")
+    if "- totals:" not in seen:
+        out.append('- totals: { "cal_burned": 0, "distance_km": 0.0 }')
+    if "- notes:" not in seen:
+        out.append('- notes: ""')
 
-    out = "\n".join(lines).rstrip() + "\n"
-    if changed and out != orig:
-        p.write_text(out, encoding="utf-8")
-    return changed
+    p.write_text("\n".join(out) + "\n", encoding="utf-8")
+    return p
+
+def _now():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 def main():
-    changed = 0
-    for p in sorted(FITDIR.iterdir()):
-        if p.is_file() and FNAME_RE.match(p.name):
-            if normalize_file(p):
-                changed += 1
-    print(f"fitness_normalize: changed={changed}")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date", help="YYYY-MM-DD (default: today)")
+    ap.add_argument("--backfill", type=int, default=0, help="also normalize N days back")
+    args = ap.parse_args()
+
+    target = date.fromisoformat(args.date) if args.date else date.today()
+    normalize_day(target)
+    for i in range(1, max(0, args.backfill) + 1):
+        normalize_day(target - timedelta(days=i))
 
 if __name__ == "__main__":
     main()
-PY
-chmod +x tools/fitness_normalize.py
-
-# 2) Run it (idempotent)
-python3 tools/fitness_normalize.py
-
-# 3) Pre-commit guard: ensure today's fitness file exists and has a ts entry
-cat > .git/hooks/pre-commit <<'SH'
-#!/usr/bin/env bash
-set -e
-d=$(date +%F)
-f="memory/logs/fitness/${d}.md"
-if [ ! -f "$f" ]; then
-  echo "# Fitness — ${d}" > "$f"
-  printf -- "- ts: %s\n- steps: 0\n- workouts: []\n- notes: \"\"\n" "$(date -u +%FT%TZ)" >> "$f"
-  git add "$f"
-fi
-if ! grep -qE '^\s*-\s*ts:\s' "$f"; then
-  echo "ERROR: fitness log $f missing '- ts:' entry" >&2
-  exit 1
-fi
-exit 0
-SH
-chmod +x .git/hooks/pre-commit
-
-# 4) Commit any normalized files + tool
-git add tools/fitness_normalize.py memory/logs/fitness/*.md
-git commit -m "Fitness: normalize per-day files; add pre-commit guard to ensure daily entry"
-git push origin v1.1-dev
