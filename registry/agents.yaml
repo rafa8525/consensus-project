@@ -1,0 +1,14 @@
+min_suggestions_per_day: 6
+agents:
+  - name: AI Evolutionist
+    plugin: evolutionist
+  - name: AI Code Spawner
+    plugin: code_spawner
+  - name: AI Feedback Looper
+    plugin: feedback_looper
+  - name: AI Adaptive Strategist
+    plugin: strategist
+  - name: AI Context Weaver
+    plugin: context_weaver
+  - name: AI Role Assigner
+    plugin: role_assigner
