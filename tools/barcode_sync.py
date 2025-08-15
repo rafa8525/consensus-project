@@ -218,9 +218,6 @@ def parse_rows(rows, idx):
         t = g["totals"]; t["cal"]+=cal; t["protein_g"]+=prot; t["fat_g"]+=fat; t["carbs_g"]+=carbs; t["net_carbs_g"]+=net
     return grouped
 
-if __name__ == "__main__":
-    main()
-
 def normalize_klass(s):
     s=(s or "").strip()
     t="".join(ch for ch in s if ch.isalnum() or ch.isspace()).lower()
@@ -230,3 +227,6 @@ def normalize_klass(s):
         return "Keto"
     return ""
 
+
+if __name__ == "__main__":
+    main()
