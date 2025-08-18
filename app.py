@@ -156,3 +156,39 @@ def github_webhook():
 
 # WSGI entrypoint
 application = app
+# --- VOICE LAST ABSORB (reads /metrics) ---
+from flask import request, jsonify  # likely already imported; safe to re-import
+import urllib.request, json, pathlib
+
+def _voice_token():
+    try:
+        p = pathlib.Path("/home/rafa1215/.pa_env.json")
+        return json.loads(p.read_text()).get("VOICE_TOKEN","")
+    except Exception:
+        return ""
+
+@app.get("/voice/last_absorb")
+def voice_last_absorb():
+    # Optional auth: require X-Voice-Token if present in ~/.pa_env.json
+    tok = _voice_token()
+    if tok and request.headers.get("X-Voice-Token","") != tok:
+        return jsonify({"ok": False, "error": "unauthorized"}), 401
+
+    # Call our own /metrics to avoid duplicating logic
+    base = request.url_root.rstrip("/")
+    try:
+        with urllib.request.urlopen(base + "/metrics", timeout=10) as r:
+            m = json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        return jsonify({"ok": False, "text": "I can't reach metrics right now.", "error": str(e)}), 503
+
+    ts   = m.get("last_memory_absorb_iso")
+    hits = int(m.get("memory_absorb_hits_today", 0) or 0)
+
+    if not ts:
+        text = "No GitHub memory absorb is recorded yet."
+    else:
+        text = f"The latest GitHub memory absorb was at {ts} UTC. Absorbs today: {hits}."
+
+    return jsonify({"ok": True, "text": text, "ts": ts, "hits_today": hits})
+# --- END VOICE LAST ABSORB ---
