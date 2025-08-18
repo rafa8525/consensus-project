@@ -1,0 +1,93 @@
+[
+  {
+    "barcode": "75500000010",
+    "timestamp": "2025-06-24 14:27:44.089",
+    "item": "(unknown)",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "36000214000",
+    "timestamp": "2025-06-24 16:25:33.021",
+    "item": "Kleenex Ultra Soft",
+    "details": "3-ply facial tissues, cube box",
+    "class": "Keto"
+  },
+  {
+    "barcode": "73852514599",
+    "timestamp": "2025-06-24 16:39:15.077",
+    "item": "Purell Hand Sanitizer",
+    "details": "Advanced formula, 2 fl oz travel bottle",
+    "class": "Keto"
+  },
+  {
+    "barcode": "708747151930",
+    "timestamp": "2025-06-24 17:51:10.663",
+    "item": "Gourmet Nut Power Up Trail Mix",
+    "details": "High Energy Mix – Non-GMO, gluten-free snack pack, 14 oz bag",
+    "class": "Keto"
+  },
+  {
+    "barcode": "47495112900",
+    "timestamp": "2025-06-25 17:13:42.959",
+    "item": "Nature’s Bakery Fig Bar",
+    "details": "Whole wheat, twin-pack bar",
+    "class": "Slightly Keto"
+  },
+  {
+    "barcode": "https://www.youtube.com/watch?v=Xi_KJ-wDBo0",
+    "timestamp": "2025-07-04 19:14:36.138",
+    "item": "(unknown)",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "810142330954",
+    "timestamp": "2025-07-04 19:15:42.814",
+    "item": "(unknown)",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "633148100013",
+    "timestamp": "2025-07-13 19:34:19.079",
+    "item": "Tajin, Clasico Seasoning for Fruits and Vegetables, 5 Oz",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "633148100129",
+    "timestamp": "2025-07-13 19:34:39.720",
+    "item": "Tajin Chile Lime Sauce 15.38oz",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "96619204212",
+    "timestamp": "2025-07-13 19:35:02.168",
+    "item": "Vitarain Zero Blueberry Pomegranate Kirkland 20 oz",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "23278501017",
+    "timestamp": "2025-07-25 11:59:50.401",
+    "item": "Sonoma Creamery Pepperoni Pizza Crisps",
+    "details": "9.5 oz (269g)13g protein per serving",
+    "class": ""
+  },
+  {
+    "barcode": "16571910303",
+    "timestamp": "2025-07-28 16:40:56.820",
+    "item": "Sparkling Ice Black Raspberry Sparkling Water",
+    "details": "",
+    "class": ""
+  },
+  {
+    "barcode": "76183003121",
+    "timestamp": "2025-08-16 19:00:03.974",
+    "item": "(unknown)",
+    "details": "",
+    "class": ""
+  }
+]
