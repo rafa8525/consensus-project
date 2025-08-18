@@ -129,3 +129,4 @@ memory/logs/nutrition/barcode_log_YYYY-MM-DD.md
 memory/logs/nutrition/YYYY-MM-DD_nutrition_log.md
 tools/barcode_sync.py.bak.*
 memory/logs/heartbeat/*.log
+memory/logs/nutrition/barcode_sync_debug_*.json
