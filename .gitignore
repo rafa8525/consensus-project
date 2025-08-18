@@ -130,3 +130,4 @@ memory/logs/nutrition/YYYY-MM-DD_nutrition_log.md
 tools/barcode_sync.py.bak.*
 memory/logs/heartbeat/*.log
 memory/logs/nutrition/barcode_sync_debug_*.json
+memory/logs/heartbeat/last_absorbed_commit.txt
