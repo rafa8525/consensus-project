@@ -246,3 +246,33 @@ def _summarize(records):
         return " ".join(parts)
     except Exception:
         return "I have a cached barcode snapshot, but summarizing it failed. You can still ask me to look up specific items."
+
+
+# --- VOICE JSON ERRORHANDLER (BEGIN) ---
+try:
+    from werkzeug.exceptions import HTTPException as _VHTTP
+except Exception:
+    _VHTTP = None
+
+@app.errorhandler(Exception)
+def _voice_json_errors(e):
+    # Use voice token aliases defined earlier: _VREQ, _VJ, _VPath, _VDT, _VTZ
+    try:
+        path = _VREQ.path
+    except Exception:
+        path = ""
+    if path.startswith("/voice/"):
+        # Log and return JSON instead of the default HTML error page
+        try:
+            _logdir = _VPath.home() / "consensus-project" / "memory" / "logs" / "agents" / "heartbeat"
+            _logdir.mkdir(parents=True, exist_ok=True)
+            with (_logdir / f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
+                f.write(f"[ERROR] {path}: {e}\\n")
+        except Exception:
+            pass
+        return _VJ({"ok": False, "error": "server_error"}), 200
+    if _VHTTP and isinstance(e, _VHTTP):
+        return e
+    return "Internal Server Error", 500
+# --- VOICE JSON ERRORHANDLER (END) ---
+
