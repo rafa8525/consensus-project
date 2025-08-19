@@ -292,3 +292,9 @@ def voice_barcode_probe():
         return _VJ({"ok": False, "error": "unauthorized"}), 401
     recs = _load_cache()
     return _VJ({"ok": True, "count": len(recs), "has_cache": bool(recs), "sample": recs[:2]})
+
+# Ensure the JSON error handler is always active for any app instance
+try:
+    app.register_error_handler(Exception, _voice_json_errors)
+except Exception:
+    pass
