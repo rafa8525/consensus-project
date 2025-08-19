@@ -298,3 +298,33 @@ try:
     app.register_error_handler(Exception, _voice_json_errors)
 except Exception:
     pass
+
+# --- VOICE JSON WRAPPER (BEGIN) ---
+from functools import wraps as _VWRAPS
+
+def _voice_json_from_exc(e):
+    try:
+        import traceback as _VTB
+        _logdir = _VPath.home() / "consensus-project" / "memory" / "logs" / "agents" / "heartbeat"
+        _logdir.mkdir(parents=True, exist_ok=True)
+        path = ""
+        try:
+            path = _VREQ.path
+        except Exception:
+            pass
+        with (_logdir / f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
+            f.write(f"[ERROR] {path}: {e}\n{_VTB.format_exc()}\n")
+    except Exception:
+        pass
+    reason = str(e) if "_voice_debug" in globals() and _voice_debug() else "hidden"
+    return _VJ({"ok": False, "error": "server_error", "reason": reason}), 200
+
+def voice_safe(fn):
+    @_VWRAPS(fn)
+    def _inner(*a, **kw):
+        try:
+            return fn(*a, **kw)
+        except Exception as e:
+            return _voice_json_from_exc(e)
+    return _inner
+# --- VOICE JSON WRAPPER (END) ---
