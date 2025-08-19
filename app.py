@@ -264,13 +264,14 @@ def _voice_json_errors(e):
     if path.startswith("/voice/"):
         # Log and return JSON instead of the default HTML error page
         try:
+            import traceback as _VTB
             _logdir = _VPath.home() / "consensus-project" / "memory" / "logs" / "agents" / "heartbeat"
             _logdir.mkdir(parents=True, exist_ok=True)
             with (_logdir / f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
                 f.write(f"[ERROR] {path}: {e}\\n")
         except Exception:
             pass
-        return _VJ({"ok": False, "error": "server_error"}), 200
+        return _VJ({"ok": False, "error": "server_error", "reason": str(e) if _voice_debug() else "hidden"}), 200
     if _VHTTP and isinstance(e, _VHTTP):
         return e
     return "Internal Server Error", 500
