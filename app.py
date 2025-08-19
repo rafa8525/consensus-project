@@ -228,8 +228,8 @@ def _summarize(records):
     try:
         records = records or []
         n = len(records)
-        keto = sum(1 for r in records if ((r.get("class") or "").lower().startswith("keto")))
-        slightly = sum(1 for r in records if ((r.get("class") or "").lower().startswith("slightly")))
+        keto = sum(1 for r in records if (r.get("class","").lower().startswith("keto")))
+        slightly = sum(1 for r in records if (r.get("class","").lower().startswith("slightly")))
         import re as __re
         nonfood = sum(1 for r in records if __re.search(r"(tissue|towel|sanitizer|soap|detergent|shampoo|deodorant|lotion|trash bag)", (r.get("item") or "").lower()))
         seen, last_items = set(), []
@@ -237,134 +237,10 @@ def _summarize(records):
             it = (r.get("item") or "(unknown)").strip()
             if it and it not in seen:
                 last_items.append(it); seen.add(it)
-            if len(last_items) == 10:
-                break
+            if len(last_items) == 10: break
         parts = [f"I have {n} cached barcode rows. Keto-tagged: {keto}, Slightly Keto: {slightly}, non-food: {nonfood}."]
         if last_items:
-            tail = ", ".join(last_items[:5]) + ("" if len(last_items) <= 5 else ", ...")
-            parts.append("Recent items: " + tail)
+            parts.append("Recent items: " + ", ".join(last_items[:5]) + ("" if len(last_items)<=5 else ", ..."))
         return " ".join(parts)
     except Exception:
-        return "I have a cached barcode snapshot, but summarizing it failed. You can still ask me to look up specific items."
-
-
-# --- VOICE JSON ERRORHANDLER (BEGIN) ---
-try:
-    from werkzeug.exceptions import HTTPException as _VHTTP
-except Exception:
-    _VHTTP = None
-
-@app.errorhandler(Exception)
-def _voice_json_errors(e):
-    # Use voice token aliases defined earlier: _VREQ, _VJ, _VPath, _VDT, _VTZ
-    try:
-        path = _VREQ.path
-    except Exception:
-        path = ""
-    if path.startswith("/voice/"):
-        # Log and return JSON instead of the default HTML error page
-        try:
-            import traceback as _VTB
-            _logdir = _VPath.home() / "consensus-project" / "memory" / "logs" / "agents" / "heartbeat"
-            _logdir.mkdir(parents=True, exist_ok=True)
-            with (_logdir / f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
-                f.write(f"[ERROR] {path}: {e}\\n")
-        except Exception:
-            pass
-        return _VJ({"ok": False, "error": "server_error", "reason": str(e) if _voice_debug() else "hidden"}), 200
-    if _VHTTP and isinstance(e, _VHTTP):
-        return e
-    return "Internal Server Error", 500
-# --- VOICE JSON ERRORHANDLER (END) ---
-
-
-
-@app.route("/voice/_explode", methods=["GET"])
-def voice_explode():
-    if not _voice_guard():
-        return _VJ({"ok": False, "error": "unauthorized"}), 401
-    raise ValueError("boom for debug")
-
-
-@app.route("/voice/barcode_probe", methods=["GET"])
-def voice_barcode_probe():
-    if not _voice_guard():
-        return _VJ({"ok": False, "error": "unauthorized"}), 401
-    recs = _load_cache()
-    return _VJ({"ok": True, "count": len(recs), "has_cache": bool(recs), "sample": recs[:2]})
-
-# Ensure the JSON error handler is always active for any app instance
-try:
-    app.register_error_handler(Exception, _voice_json_errors)
-except Exception:
-    pass
-
-# --- VOICE JSON WRAPPER (BEGIN) ---
-from functools import wraps as _VWRAPS
-
-def _voice_json_from_exc(e):
-    try:
-        import traceback as _VTB
-        _logdir = _VPath.home() / "consensus-project" / "memory" / "logs" / "agents" / "heartbeat"
-        _logdir.mkdir(parents=True, exist_ok=True)
-        path = ""
-        try:
-            path = _VREQ.path
-        except Exception:
-            pass
-        with (_logdir / f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
-            f.write(f"[ERROR] {path}: {e}\n{_VTB.format_exc()}\n")
-    except Exception:
-        pass
-    reason = str(e) if "_voice_debug" in globals() and _voice_debug() else "hidden"
-    return _VJ({"ok": False, "error": "server_error", "reason": reason}), 200
-
-def voice_safe(fn):
-    @_VWRAPS(fn)
-    def _inner(*a, **kw):
-        try:
-            return fn(*a, **kw)
-        except Exception as e:
-            return _voice_json_from_exc(e)
-    return _inner
-# --- VOICE JSON WRAPPER (END) ---
-
-
-# --- VOICE FORCE WRAP (BEGIN) ---
-# Ensure all /voice handlers return JSON even if decorators were missed.
-try:
-    try: voice_barcode_summary = voice_safe(voice_barcode_summary)
-    except Exception: pass
-    try: voice_barcode_lookup  = voice_safe(voice_barcode_lookup)
-    except Exception: pass
-    try: voice_explode = voice_safe(voice_explode)
-    except Exception: pass
-except Exception:
-    pass
-# --- VOICE FORCE WRAP (END) ---
-
-
-
-# --- VOICE AFTER_REQUEST JSON GUARD (BEGIN) ---
-try:
-    @app.after_request
-    def _voice_after(resp):
-        try:
-            path = ""
-            try: path = _VREQ.path
-            except Exception: pass
-            if path.startswith("/voice/") and getattr(resp, "mimetype", "") != "application/json":
-                reason = "non_json_response"
-                try:
-                    if "_voice_debug" in globals() and _voice_debug():
-                        reason = f"{reason}:{getattr(resp, 'status', 'unknown')}"
-                except Exception:
-                    pass
-                return _VJ({"ok": False, "error": "server_error", "reason": reason}), 200
-        except Exception:
-            pass
-        return resp
-except Exception:
-    pass
-# --- VOICE AFTER_REQUEST JSON GUARD (END) ---
-
+        return "I have a cached barcode snapshot, but summarizing it failed."
