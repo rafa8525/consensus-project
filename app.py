@@ -328,3 +328,43 @@ def voice_safe(fn):
             return _voice_json_from_exc(e)
     return _inner
 # --- VOICE JSON WRAPPER (END) ---
+
+
+# --- VOICE FORCE WRAP (BEGIN) ---
+# Ensure all /voice handlers return JSON even if decorators were missed.
+try:
+    try: voice_barcode_summary = voice_safe(voice_barcode_summary)
+    except Exception: pass
+    try: voice_barcode_lookup  = voice_safe(voice_barcode_lookup)
+    except Exception: pass
+    try: voice_explode = voice_safe(voice_explode)
+    except Exception: pass
+except Exception:
+    pass
+# --- VOICE FORCE WRAP (END) ---
+
+
+
+# --- VOICE AFTER_REQUEST JSON GUARD (BEGIN) ---
+try:
+    @app.after_request
+    def _voice_after(resp):
+        try:
+            path = ""
+            try: path = _VREQ.path
+            except Exception: pass
+            if path.startswith("/voice/") and getattr(resp, "mimetype", "") != "application/json":
+                reason = "non_json_response"
+                try:
+                    if "_voice_debug" in globals() and _voice_debug():
+                        reason = f"{reason}:{getattr(resp, 'status', 'unknown')}"
+                except Exception:
+                    pass
+                return _VJ({"ok": False, "error": "server_error", "reason": reason}), 200
+        except Exception:
+            pass
+        return resp
+except Exception:
+    pass
+# --- VOICE AFTER_REQUEST JSON GUARD (END) ---
+
