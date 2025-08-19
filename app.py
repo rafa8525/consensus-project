@@ -277,3 +277,18 @@ def _voice_json_errors(e):
     return "Internal Server Error", 500
 # --- VOICE JSON ERRORHANDLER (END) ---
 
+
+
+@app.route("/voice/_explode", methods=["GET"])
+def voice_explode():
+    if not _voice_guard():
+        return _VJ({"ok": False, "error": "unauthorized"}), 401
+    raise ValueError("boom for debug")
+
+
+@app.route("/voice/barcode_probe", methods=["GET"])
+def voice_barcode_probe():
+    if not _voice_guard():
+        return _VJ({"ok": False, "error": "unauthorized"}), 401
+    recs = _load_cache()
+    return _VJ({"ok": True, "count": len(recs), "has_cache": bool(recs), "sample": recs[:2]})
