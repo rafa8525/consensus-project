@@ -225,55 +225,24 @@ def _load_cache():
     except Exception:
         return []
 def _summarize(records):
-    n = len(records)
-    keto = sum(1 for r in records if (r.get("class") or "").lower().startswith("keto"))
-    slightly = sum(1 for r in records if (r.get("class") or "").lower().startswith("slightly"))
-    nonfood = sum(1 for r in records if _VRE.search(r"(tissue|towel|sanitizer|soap|detergent|shampoo|deodorant|lotion|trash bag)", (r.get("item") or "").lower()))
-    # last 10 distinct, newest first
-    seen, last_items = set(), []
-    for r in reversed(records):
-        it = (r.get("item") or "(unknown)").strip()
-        if it and it not in seen:
-            last_items.append(it); seen.add(it)
-        if len(last_items) == 10: break
-    msg = []
-    msg.append(f"I have {n} cached barcode rows. Keto-tagged: {keto}, Slightly Keto: {slightly}, non-food: {nonfood}.")
-    if last_items:
-        msg.append("Recent items: " + ", ".join(last_items[:5]) + ("" if len(last_items)<=5 else ", …"))
-    return " ".join(msg)
-
-def _lookup(records, q):
-    ql = (q or "").strip().lower()
-    if not ql: return []
-    hits = []
-    for r in reversed(records):  # prefer most recent
-        hay = " ".join([r.get("item",""), r.get("details",""), r.get("class","")]).lower()
-        if all(tok in hay for tok in ql.split()):
-            hits.append(r)
-        if len(hits) >= 12: break
-    return hits
-@app.route("/voice/barcode_summary", methods=["GET"])
-def voice_barcode_summary():
-    if not _voice_guard():
-        return _VJ({"ok": False, "error": "unauthorized"}), 401
-    recs = _load_cache()
-    text = _summarize(recs) if recs else "I don't have a cached barcode snapshot yet."
-    return _VJ({"ok": True, "text": text, "ts": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")})
-
-@app.route("/voice/barcode_lookup", methods=["GET"])
-def voice_barcode_lookup():
-    if not _voice_guard():
-        return _VJ({"ok": False, "error": "unauthorized"}), 401
-    q = _VREQ.args.get("q","")
-    recs = _load_cache()
-    hits = _lookup(recs, q)
-    if not hits:
-        return _VJ({"ok": True, "text": f"No matches for '{q}'.", "count": 0, "items": []})
-    names = []
-    for r in hits[:5]:
-        k = (r.get("class") or "").strip()
-        names.append(f"{r.get('item','(unknown)')}{(' ['+k+']') if k else ''}")
-    line = f"Found {len(hits)} match(es). Top: " + "; ".join(names) + "."
-    return _VJ({"ok": True, "text": line, "count": len(hits), "items": hits})
-
-# --- VOICE BARCODE HELPERS (END) ---
+    try:
+        records = records or []
+        n = len(records)
+        keto = sum(1 for r in records if ((r.get("class") or "").lower().startswith("keto")))
+        slightly = sum(1 for r in records if ((r.get("class") or "").lower().startswith("slightly")))
+        import re as __re
+        nonfood = sum(1 for r in records if __re.search(r"(tissue|towel|sanitizer|soap|detergent|shampoo|deodorant|lotion|trash bag)", (r.get("item") or "").lower()))
+        seen, last_items = set(), []
+        for r in reversed(records):
+            it = (r.get("item") or "(unknown)").strip()
+            if it and it not in seen:
+                last_items.append(it); seen.add(it)
+            if len(last_items) == 10:
+                break
+        parts = [f"I have {n} cached barcode rows. Keto-tagged: {keto}, Slightly Keto: {slightly}, non-food: {nonfood}."]
+        if last_items:
+            tail = ", ".join(last_items[:5]) + ("" if len(last_items) <= 5 else ", ...")
+            parts.append("Recent items: " + tail)
+        return " ".join(parts)
+    except Exception:
+        return "I have a cached barcode snapshot, but summarizing it failed. You can still ask me to look up specific items."
