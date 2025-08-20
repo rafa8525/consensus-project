@@ -310,3 +310,44 @@ for _name in ("voice_barcode_summary","voice_barcode_lookup","voice_status","voi
         pass
 # --- VOICE REWRAP (END) ---
 
+
+
+# --- VOICE FINAL JSON ENFORCER (BEGIN) ---
+try:
+    @app.after_request
+    def _voice_final_json(resp):
+        try:
+            path = ""
+            try: 
+                path = _VREQ.path  # from earlier helpers
+            except Exception:
+                pass
+            if path.startswith("/voice/"):
+                # Normalize to JSON, even on errors or HTML fallbacks.
+                try:
+                    body = resp.get_data(as_text=True)
+                except Exception:
+                    body = ""
+                # If it's not valid JSON, replace the body.
+                import json as _J
+                try:
+                    _J.loads(body)
+                except Exception:
+                    body = _J.dumps({"ok": False, "error": "server_error", "reason": "invalid_json"})
+                    try:
+                        resp.set_data(body)
+                    except Exception:
+                        # absolute last resort: hard Response
+                        from flask import Response as _VResp
+                        return _VResp(body, status=200, mimetype="application/json")
+                # Always JSON mimetype; keep 200 on errors to avoid proxy HTML pages.
+                resp.mimetype = "application/json"
+                if resp.status_code >= 400:
+                    resp.status_code = 200
+        except Exception:
+            pass
+        return resp
+except Exception:
+    pass
+# --- VOICE FINAL JSON ENFORCER (END) ---
+
