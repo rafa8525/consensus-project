@@ -1,3 +1,5 @@
 {"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "No memory/ changes to sync.\nremote=537 local=595\n", "stderr": "", "duration_s": 37.811, "ts_utc": "2025-08-20T16:11:19.252632+00:00"}
 {"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.001, "ts_utc": "2025-08-20T16:43:15.374445+00:00"}
 {"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.001, "ts_utc": "2025-08-20T16:52:23.941800+00:00"}
+{"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.001, "ts_utc": "2025-08-20T21:19:10.643962+00:00"}
+{"event": "absorb", "mode": "scheduled", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.002, "ts_utc": "2025-08-20T21:19:10.755658+00:00"}
