@@ -251,23 +251,23 @@ def _summarize(records):
 @app.route("/voice/_status", methods=["GET"])
 def voice_status():
     if not _voice_guard():
-        return _VJ({"ok": False, "error": "unauthorized"}), 401
+        return _voice_json({"ok": False, "error": "unauthorized"}), 401
     try:
         recs = _load_cache()
-        return _VJ({
+        return _voice_json({
             "ok": True,
             "routes": ["barcode_summary","barcode_lookup","barcode_probe","_explode","_status"],
             "cache_rows": len(recs),
             "now": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")
         })
     except Exception as e:
-        return _VJ({"ok": False, "error": "server_error", "reason": str(e) if _voice_debug() else "hidden"}), 200
+        return _voice_json({"ok": False, "error": "server_error", "reason": str(e) if _voice_debug() else "hidden"}), 200
 
 
 @app.route("/voice/_selftest", methods=["GET"])
 def voice_selftest():
     if not _voice_guard():
-        return _VJ({"ok": False, "error": "unauthorized"}), 401
+        return _voice_json({"ok": False, "error": "unauthorized"}), 401
     info = {}
     try: info["have__VJ"] = bool(_VJ); 
     except Exception as e: info["have__VJ"] = f"ERR:{e}"
@@ -280,7 +280,7 @@ def voice_selftest():
         info["summary_try"] = _summarize(recs)
     except Exception as e:
         info["load_or_summary_err"] = str(e)
-    return _VJ({"ok": True, "selftest": info})
+    return _voice_json({"ok": True, "selftest": info})
 
 
 # --- VOICE JSON CORE (BEGIN) ---
@@ -293,34 +293,12 @@ import json as _VJSON
 
 def _voice_json(payload, status=200):
     try:
-        return _VJ(payload), status
-    except Exception:
-        if _VResp is None: raise
+        from flask import Response as _VResp
+        import json as _VJSON
         return _VResp(_VJSON.dumps(payload), status=status, mimetype="application/json")
-
-def voice_safe(fn):
-    @_VWRAPS(fn)
-    def _inner(*a, **kw):
-        try:
-            return fn(*a, **kw)
-        except Exception as e:
-            # log + always JSON
-            try:
-                import traceback as _VTB
-                _logdir = _VPath.home()/"consensus-project"/"memory"/"logs"/"agents"/"heartbeat"
-                _logdir.mkdir(parents=True, exist_ok=True)
-                with (_logdir/f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
-                    path=""
-                    try: path=_VREQ.path
-                    except Exception: pass
-                    f.write(f"[ERROR] {path}: {e}\n{_VTB.format_exc()}\n")
-            except Exception:
-                pass
-            try: dbg = ("_voice_debug" in globals()) and _voice_debug()
-            except Exception: dbg = False
-            reason = str(e) if dbg else "hidden"
-            return _voice_json({"ok": False, "error": "server_error", "reason": reason}, 200)
-    return _inner
+    except Exception:
+        # absolute last resort: still-valid JSON string
+        return '{"ok": false, "error": "server_error", "reason": "resp_build_failed"}', 200
 # --- VOICE JSON CORE (END) ---
 
 
