@@ -281,3 +281,54 @@ def voice_selftest():
     except Exception as e:
         info["load_or_summary_err"] = str(e)
     return _VJ({"ok": True, "selftest": info})
+
+
+# --- VOICE JSON CORE (BEGIN) ---
+from functools import wraps as _VWRAPS
+try:
+    from flask import Response as _VResp
+except Exception:
+    _VResp = None
+import json as _VJSON
+
+def _voice_json(payload, status=200):
+    try:
+        return _VJ(payload), status
+    except Exception:
+        if _VResp is None: raise
+        return _VResp(_VJSON.dumps(payload), status=status, mimetype="application/json")
+
+def voice_safe(fn):
+    @_VWRAPS(fn)
+    def _inner(*a, **kw):
+        try:
+            return fn(*a, **kw)
+        except Exception as e:
+            # log + always JSON
+            try:
+                import traceback as _VTB
+                _logdir = _VPath.home()/"consensus-project"/"memory"/"logs"/"agents"/"heartbeat"
+                _logdir.mkdir(parents=True, exist_ok=True)
+                with (_logdir/f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
+                    path=""
+                    try: path=_VREQ.path
+                    except Exception: pass
+                    f.write(f"[ERROR] {path}: {e}\n{_VTB.format_exc()}\n")
+            except Exception:
+                pass
+            try: dbg = ("_voice_debug" in globals()) and _voice_debug()
+            except Exception: dbg = False
+            reason = str(e) if dbg else "hidden"
+            return _voice_json({"ok": False, "error": "server_error", "reason": reason}, 200)
+    return _inner
+# --- VOICE JSON CORE (END) ---
+
+
+# --- VOICE REWRAP (BEGIN) ---
+for _name in ("voice_barcode_summary","voice_barcode_lookup","voice_status","voice_barcode_probe","voice_explode","voice_selftest"):
+    try:
+        globals()[_name] = voice_safe(globals()[_name])
+    except Exception:
+        pass
+# --- VOICE REWRAP (END) ---
+
