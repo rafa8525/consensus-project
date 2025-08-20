@@ -1,64 +1,75 @@
 #!/usr/bin/env python3
-# Auto-triggers /memory/absorb when memory/ has newer commits than server metrics.
-import json, subprocess, urllib.request, urllib.error, os
-from datetime import datetime, timezone
+import json, os, subprocess, sys
 from pathlib import Path
-ROOT = Path.home() / "consensus-project"
-METRICS_URL = "https://rafa1215.pythonanywhere.com/metrics"
-ABSORB_URL  = "https://rafa1215.pythonanywhere.com/memory/absorb"
-LOG_DIR = ROOT / "memory" / "logs" / "agents" / "heartbeat"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-LOG = LOG_DIR / f"absorb_guard_{datetime.now(timezone.utc).date().isoformat()}.log"
+from datetime import datetime, timedelta, timezone
+LOG_FILE = Path("memory/logs/absorb/absorb_log.jsonl")
 
-def iso_to_dt(s: str):
-    if not s: return None
-    try:
-        return datetime.fromisoformat(s.replace("Z", "+00:00"))
-    except Exception:
-        return None
+# Define your “intended” windows (Pacific time)
+# AM window: 10:00 PT target, valid 08:00–12:00
+# PM window: 16:00 PT target, valid 14:00–18:00
+PT_OFFSET = -7  # PDT; switch to -8 for PST or compute via zoneinfo if available
+def now_pt():
+    return datetime.utcnow() + timedelta(hours=PT_OFFSET)
 
-def log(msg: str):
-    with LOG.open("a", encoding="utf-8") as f:
-        f.write(msg + "\n")
-def last_memory_commit_dt():
-    try:
-        out = subprocess.check_output(
-            ["git","log","-1","--pretty=%cI","--","memory"],
-            cwd=ROOT, text=True
-        ).strip()
-        return iso_to_dt(out)
-    except Exception as e:
-        log(f"[{datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}] absorb_guard: git error: {e}")
-        return None
-def fetch_metrics():
-    try:
-        with urllib.request.urlopen(METRICS_URL, timeout=15) as r:
-            return json.loads(r.read().decode("utf-8"))
-    except Exception as e:
-        log(f"[{datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}] absorb_guard: metrics fetch error: {e}")
-        return {}
+WINDOWS = {
+    "am": {"start": (8, 0), "end": (12, 0)},
+    "pm": {"start": (14, 0), "end": (18, 0)},
+}
 
-def post_absorb():
-    try:
-        tok = json.loads((Path.home()/".pa_env.json").read_text()).get("VOICE_TOKEN","")
-        if not tok:
-            raise RuntimeError("VOICE_TOKEN missing in ~/.pa_env.json")
-        req = urllib.request.Request(ABSORB_URL, method="POST", headers={"X-Voice-Token": tok})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            return json.loads(r.read().decode("utf-8"))
-    except Exception as e:
-        log(f"[{datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}] absorb_guard: absorb POST error: {e}")
-        return {"ok": False}
+def in_window(dt_pt, which):
+    h1,m1 = WINDOWS[which]["start"]
+    h2,m2 = WINDOWS[which]["end"]
+    start = dt_pt.replace(hour=h1, minute=m1, second=0, microsecond=0)
+    end   = dt_pt.replace(hour=h2, minute=m2, second=0, microsecond=0)
+    return start <= dt_pt <= end
+
+def read_log():
+    if not LOG_FILE.exists():
+        return []
+    rows = []
+    with LOG_FILE.open("r", encoding="utf-8") as f:
+        for line in f:
+            try:
+                rows.append(json.loads(line))
+            except:
+                pass
+    return rows
+
+def had_success_for_day(rows, day_str, which):
+    for r in reversed(rows):
+        ts = r.get("ts_utc")
+        if not ts: 
+            continue
+        if r.get("event")=="absorb" and r.get("status")=="ok":
+            d = ts[:10]  # YYYY-MM-DD
+            if d==day_str and r.get("target_window")==which:
+                return True
+    return False
+
+def run_catchup(which):
+    env = os.environ.copy()
+    env["RUN_MODE"] = "catchup"
+    env["TARGET_WINDOW"] = which
+    cmd = [sys.executable, "tools/absorb_runner.py"]
+    return subprocess.call(cmd, env=env)
+
 def main():
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    m = fetch_metrics()
-    last_absorb = iso_to_dt(m.get("last_memory_absorb_iso"))
-    last_commit = last_memory_commit_dt()
+    rows = read_log()
+    now = now_pt()
+    today = now.date().isoformat()
 
-    if last_commit and (not last_absorb or last_absorb < last_commit):
-        resp = post_absorb()
-        log(f"[{now}] absorb_guard: TRIGGERED; commit newer than absorb. resp.ok={resp.get('ok')} commit={resp.get('commit')}")
-    else:
-        log(f"[{now}] absorb_guard: OK; absorb up-to-date.")
+    # For each window, decide: OK, still pending, or missed+catchup
+    for which in ("am","pm"):
+        # If already successful today, skip
+        if had_success_for_day(rows, today, which):
+            continue
+        # If we’re still inside the window, do nothing (scheduled job should hit)
+        if in_window(now, which):
+            continue
+        # If window has passed and success not logged -> run catch-up
+        # (also covers the case where scheduled job failed silently)
+        rc = run_catchup(which)
+        # Optional: if rc!=0, you could trigger your SMS/voice escalation here
+
 if __name__ == "__main__":
     main()
