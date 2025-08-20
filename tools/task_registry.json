@@ -1,0 +1,48 @@
+{
+  "tasks": {
+    "absorb_memory": {
+      "cmd": "~/consensus-project/tools/absorb_once.sh",
+      "schedule": { "every_minutes": 15 }
+    },
+    "auto_git_sync": {
+      "cmd": "/usr/bin/python3 auto_git_sync.py",
+      "schedule": { "every_minutes": 60 }
+    },
+    "auto_memory_sync": {
+      "cmd": "/usr/bin/python3 tools/auto_memory_sync.py",
+      "schedule": { "every_minutes": 60 }
+    },
+    "heartbeat_logger": {
+      "cmd": "/usr/bin/python3 heartbeat_logger.py",
+      "schedule": { "every_minutes": 60 }
+    },
+    "daily_fitness_log": {
+      "cmd": "/usr/bin/python3 memory/tools/generate_daily_fitness_log.py",
+      "schedule": { "daily_at": "06:10" }
+    },
+    "heartbeat_status": {
+      "cmd": "/usr/bin/python3 memory/tools/generate_heartbeat_schedule_status.py",
+      "schedule": { "daily_at": "06:45" }
+    },
+    "nutrition_pipeline": {
+      "cmd": "/usr/bin/python3 memory/tools/auto_log_meals_from_sheet.py && /usr/bin/python3 memory/tools/parse_food_log_sheet.py",
+      "schedule": { "daily_at": "18:00" }
+    },
+    "geofencing_status": {
+      "cmd": "/usr/bin/python3 memory/tools/log_geofencing_status.py",
+      "schedule": { "daily_at": "20:35" }
+    },
+    "voice_reminder": {
+      "cmd": "/usr/bin/python3 memory/tools/daily_voice_reminder.py",
+      "schedule": { "every_minutes": 60 }
+    },
+    "weekly_status": {
+      "cmd": "/usr/bin/python3 memory/tools/generate_weekly_status.py",
+      "schedule": { "weekly_at": "Sun 07:00" }
+    },
+    "monthly_security_audit": {
+      "cmd": "/usr/bin/python3 memory/tools/security_audit_runner.py",
+      "schedule": { "monthly_at": { "day": 1, "time": "02:00" } }
+    }
+  }
+}
