@@ -244,3 +244,81 @@ def _summarize(records):
         return " ".join(parts)
     except Exception:
         return "I have a cached barcode snapshot, but summarizing it failed."
+
+
+# --- VOICE HTTPEX JSON HANDLERS (BEGIN) ---
+try:
+    from werkzeug.exceptions import HTTPException as _VHHTTP
+except Exception:
+    _VHHTTP = None
+
+def _voice_json_payload(error="server_error", reason="hidden"):
+    try:
+        if "_voice_debug" in globals() and _voice_debug():
+            return {"ok": False, "error": error, "reason": reason}
+    except Exception:
+        pass
+    return {"ok": False, "error": error}
+
+def _voice_jsonify_for(path, status_code, reason):
+    # Always 200 for Voice to avoid HTML error pages from proxies,
+    # carry reason only when X-Debug: 1.
+    from flask import jsonify as _VJ
+    if path.startswith("/voice/"):
+        return _VJ(_voice_json_payload("server_error", reason)), 200
+    return None
+
+# Convert *all* HTTPExceptions to JSON for /voice/*
+if _VHHTTP:
+    @app.errorhandler(_VHHTTP)
+    def _voice_http_error(e):
+        try:
+            path = ""
+            try: path = _VREQ.path
+            except Exception: pass
+            resp = _voice_jsonify_for(path, getattr(e, "code", 500), str(e))
+            if resp is not None:
+                return resp
+        except Exception:
+            pass
+        return e
+
+# Convert any other exception to JSON for /voice/*
+@app.errorhandler(Exception)
+def _voice_any_error(e):
+    try:
+        path = ""
+        try: path = _VREQ.path
+        except Exception: pass
+        resp = _voice_jsonify_for(path, 500, str(e))
+        if resp is not None:
+            # Log traceback too
+            try:
+                import traceback as _VTB
+                _logdir = _VPath.home() / "consensus-project" / "memory" / "logs" / "agents" / "heartbeat"
+                _logdir.mkdir(parents=True, exist_ok=True)
+                with (_logdir / f"voice_errors_{_VDT.now(_VTZ).date().isoformat()}.log").open("a", encoding="utf-8") as f:
+                    f.write(f"[ERROR] {path}: {e}\n{_VTB.format_exc()}\n")
+            except Exception:
+                pass
+            return resp
+    except Exception:
+        pass
+    return "Internal Server Error", 500
+# --- VOICE HTTPEX JSON HANDLERS (END) ---
+
+
+@app.route("/voice/_status", methods=["GET"])
+def voice_status():
+    if not _voice_guard():
+        return _VJ({"ok": False, "error": "unauthorized"}), 401
+    try:
+        recs = _load_cache()
+        return _VJ({
+            "ok": True,
+            "routes": ["barcode_summary","barcode_lookup","barcode_probe","_explode","_status"],
+            "cache_rows": len(recs),
+            "now": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")
+        })
+    except Exception as e:
+        return _VJ({"ok": False, "error": "server_error", "reason": str(e) if _voice_debug() else "hidden"}), 200
