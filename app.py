@@ -251,19 +251,17 @@ def _summarize(records):
 @app.route("/voice/_status", methods=["GET"])
 def voice_status():
     if not _voice_guard():
-        return _voice_json({"ok": False, "error": "unauthorized"}), 401
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
     try:
         recs = _load_cache()
         return _voice_json({
             "ok": True,
-            "routes": ["barcode_summary","barcode_lookup","barcode_probe","_explode","_status"],
+            "routes": ["_status","_selftest","barcode_probe","barcode_summary","barcode_lookup"],
             "cache_rows": len(recs),
             "now": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")
-        })
-    except Exception as e:
-        return _voice_json({"ok": False, "error": "server_error", "reason": str(e) if _voice_debug() else "hidden"}), 200
-
-
+        }, 200)
+    except Exception:
+        return _voice_json({"ok": False, "error": "server_error"}, 200)
 @app.route("/voice/_selftest", methods=["GET"])
 def voice_selftest():
     if not _voice_guard():
@@ -350,4 +348,65 @@ try:
 except Exception:
     pass
 # --- VOICE FINAL JSON ENFORCER (END) ---
+
+
+@app.route("/voice/barcode_summary", methods=["GET"])
+def voice_barcode_summary():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    try:
+        recs = _load_cache()
+        text = _summarize(recs) if recs else "I don't have a cached barcode snapshot yet."
+        return _voice_json({"ok": True, "text": text, "ts": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")}, 200)
+    except Exception:
+        return _voice_json({"ok": False, "error": "server_error"}, 200)
+
+
+@app.route("/voice/barcode_lookup", methods=["GET"])
+def voice_barcode_lookup():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    q = _VREQ.args.get("q","")
+    try:
+        recs = _load_cache()
+        if not q.strip():
+            return _voice_json({"ok": True, "text": "No query provided.", "count": 0, "items": []}, 200)
+        hits = _lookup(recs, q)
+        if not hits:
+            return _voice_json({"ok": True, "text": f"No matches for '{q}'.", "count": 0, "items": []}, 200)
+        names=[]
+        for r in hits[:5]:
+            k=(r.get("class") or "").strip()
+            names.append(f"{r.get('item','(unknown)')}{(' ['+k+']') if k else ''}")
+        line=f"Found {len(hits)} match(es). Top: "+"; ".join(names)+"."
+        return _voice_json({"ok": True, "text": line, "count": len(hits), "items": hits}, 200)
+    except Exception:
+        return _voice_json({"ok": False, "error": "server_error"}, 200)
+
+
+@app.route("/voice/barcode_probe", methods=["GET"])
+def voice_barcode_probe():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    try:
+        recs = _load_cache()
+        return _voice_json({"ok": True, "count": len(recs), "has_cache": bool(recs), "sample": recs[:2]}, 200)
+    except Exception:
+        return _voice_json({"ok": False, "error": "server_error"}, 200)
+
+
+@app.route("/voice/_selftest", methods=["GET"])
+def voice_selftest():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    info = {}
+    try:
+        info["have__VJ"] = True
+        info["cache_path"] = str(_CACHE); info["cache_exists"] = _CACHE.exists()
+        recs = _load_cache(); info["cache_len"] = len(recs); info["first"] = recs[0] if recs else None
+        info["summary_try"] = _summarize(recs)
+        return _voice_json({"ok": True, "selftest": info}, 200)
+    except Exception:
+        info["error"] = "server_error"
+        return _voice_json({"ok": False, "selftest": info}, 200)
 
