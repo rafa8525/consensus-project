@@ -3,3 +3,6 @@
 {"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.001, "ts_utc": "2025-08-20T16:52:23.941800+00:00"}
 {"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.001, "ts_utc": "2025-08-20T21:19:10.643962+00:00"}
 {"event": "absorb", "mode": "scheduled", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.002, "ts_utc": "2025-08-20T21:19:10.755658+00:00"}
+{"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.002, "ts_utc": "2025-08-21T16:18:34.419247+00:00"}
+{"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.002, "ts_utc": "2025-08-21T17:06:46.190960+00:00"}
+{"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.006, "ts_utc": "2025-08-21T17:07:27.303544+00:00"}
