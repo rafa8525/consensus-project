@@ -1,4 +1,3 @@
-cat > tools/absorb_status_report.py <<'PY'
 #!/usr/bin/env python3
 import sys, json
 from pathlib import Path
@@ -101,5 +100,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-PY
-chmod +x tools/absorb_status_report.py

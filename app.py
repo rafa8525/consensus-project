@@ -1,399 +1,241 @@
 # app.py
-import os, sys, hmac, hashlib, json, subprocess
-from pathlib import Path
+# Flask app for Consensus Project (PythonAnywhere)
+# - Stable /metrics + /memory/absorb
+# - Voice endpoints: /voice/last_absorb, /voice/barcode_* (+ _status, _selftest, _map, _explode)
+# - Single global JSON error handler scoped to /voice/* only (no after_request mutation)
+
+import os, json, subprocess, re
 from datetime import datetime, timezone, date
-from flask import Flask, request, jsonify
+from pathlib import Path
+from flask import Flask, request, Response
+try:
+    from werkzeug.exceptions import HTTPException  # type: ignore
+except Exception:
+    HTTPException = None  # fallback
 
-# --- Safety defaults (SMS off by default) ---
-os.environ.setdefault("TWILIO_SILENCE", "1")
-os.environ.setdefault("TWILIO_ALLOW_SEND", "0")
+# -------------------------------------------------------------------
+# App & constants
+# -------------------------------------------------------------------
+app = Flask(__name__)
 
-# --- Project root ---
-CP_ROOT = Path("/home/rafa1215/consensus-project").resolve()
+ROOT = Path.home() / "consensus-project"
+LOGS = ROOT / "memory" / "logs"
+HEARTBEAT = LOGS / "heartbeat"
+AGENTS_HEARTBEAT = LOGS / "agents" / "heartbeat"
+NUT = LOGS / "nutrition"
+BARCODE_CACHE = NUT / "barcode_cache.json"
+ABSORB_STATE = HEARTBEAT / "last_absorb_state.json"  # persistent absorb info
+HEARTBEAT.mkdir(parents=True, exist_ok=True)
+AGENTS_HEARTBEAT.mkdir(parents=True, exist_ok=True)
+NUT.mkdir(parents=True, exist_ok=True)
 
-# --- Tokens (set via ~/.pa_env.json or PA Web->Env) ---
-VOICE_TOKEN = os.getenv("VOICE_TOKEN", "")
-GEO_TOKEN   = os.getenv("GEO_TOKEN",  "bvJkujAO1MOtHL6WL5RhbdayMEF7ILBnIy4OFzXzkgg")
-GH_SECRET   = os.getenv("GITHUB_WEBHOOK_SECRET", "")  # set this below in step 3
-
-# --- Logs ---
-LOGS = CP_ROOT / "memory" / "logs"
-LOGS.mkdir(parents=True, exist_ok=True)
-GEOF_DIR = LOGS / "geofencing"; GEOF_DIR.mkdir(exist_ok=True)
-REM_DIR  = LOGS / "reminders";  REM_DIR.mkdir(exist_ok=True)
-HB_DIR   = LOGS / "heartbeat";  HB_DIR.mkdir(exist_ok=True)
-SYS_DIR  = LOGS / "system";     SYS_DIR.mkdir(exist_ok=True)
-
-HTTP_INGEST = GEOF_DIR / f"http_ingest_{date.today().isoformat()}.log"
-VOICE_TRIG  = REM_DIR  / f"voice_trigger_{date.today().isoformat()}.log"
-ABSORB_HB   = HB_DIR   / "memory_absorption_heartbeat.log"   # rolling (git-ignored)
-ABSORB_LAST = HB_DIR   / "last_absorbed_commit.txt"          # last commit absorbed
-
-app = Flask("consensus_app")
-
-def _nowiso():
+# -------------------------------------------------------------------
+# Helpers
+# -------------------------------------------------------------------
+def _utcnow_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-def _run(cmd):
-    r = subprocess.run(cmd, cwd=str(CP_ROOT), text=True, capture_output=True)
-    return r.returncode, (r.stdout or "").strip(), (r.stderr or "").strip()
-
-def _append(p: Path, line: str):
-    p.parent.mkdir(parents=True, exist_ok=True)
-    with open(p, "a", encoding="utf-8") as f: f.write(line + "\n")
-
-def _count_today(path: Path, needle: str = "") -> int:
-    if not path.exists(): return 0
-    d = date.today().isoformat()
-    n = 0
-    with open(path, "r", encoding="utf-8", errors="ignore") as f:
-        for ln in f:
-            if d in ln and (needle in ln if needle else True):
-                n += 1
-    return n
-
-def absorb_memory(source="manual"):
-    """
-    Pulls latest repo, records last absorbed commit, and appends a heartbeat.
-    ChatGPT Voice should read ABSORB_LAST / ABSORB_HB to know freshness.
-    """
-    ts = _nowiso()
-    _run(["git", "fetch", "origin"])
-    # Stay on current branch but fast-forward
-    _run(["git", "pull", "--ff-only", "origin", "v1.1-dev"])
-    rc, head, _ = _run(["git", "rev-parse", "HEAD"])
-    commit_txt = head if rc == 0 else "unknown"
-    ABSORB_LAST.write_text(f"{commit_txt} {ts}\n", encoding="utf-8")
-    _append(ABSORB_HB, f"[{ts}] source={source} commit={commit_txt}")
-    return {"ok": True, "ts": ts, "commit": commit_txt, "source": source}
-
-# ------------------- Existing endpoints kept -------------------
-
-@app.route("/healthz", methods=["GET"])
-def healthz():
-    return "ok"
-
-@app.route("/metrics", methods=["GET"])
-def metrics():
-    # basic version
-    rc, ver, _ = _run(["git", "log", "-1", "--pretty=%H %cI %s"])
-    resp = {
-        "ok": True,
-        "ts": _nowiso(),
-        "version": ver if rc == 0 else "",
-        # voice / geo as before (may be zero if unused)
-        "voice_trigger_hits_today": _count_today(REM_DIR / f"voice_trigger_{date.today().isoformat()}.log"),
-        "geo_ingests_today": _count_today(HTTP_INGEST),
-        "twilio_allow_send": os.getenv("TWILIO_ALLOW_SEND", "0") == "1",
-        # NEW: memory absorption metrics
-        "memory_absorb_hits_today": _count_today(ABSORB_HB),
-        "last_memory_absorb_iso": (ABSORB_LAST.read_text().split()[-1] if ABSORB_LAST.exists() else None),
-    }
-    return jsonify(resp)
-
-@app.route("/geo", methods=["GET"])
-@app.route("/geo/", methods=["GET"])
-def geo():
-    token = request.args.get("token", "")
-    if not token or token != GEO_TOKEN:
-        return jsonify({"ok": False, "rc": 401, "err": "unauthorized"}), 401
+def _read_token() -> str:
     try:
-        lat = float(request.args["lat"]); lon = float(request.args["lon"])
-        acc = int(round(float(request.args.get("acc", "50"))))
-    except Exception:
-        return jsonify({"ok": False, "rc": 400, "err": "bad-params"}), 400
-    src = request.args.get("src", "http")
-    rc, out, err = _run(["python3","tools/geofence_engine.py","--lat",str(lat),"--lon",str(lon),"--acc",str(acc),"--source",src])
-    _append(HTTP_INGEST, f"[{_nowiso()}] lat={lat} lon={lon} acc={acc} src={src} rc={rc} out={out} err={err}")
-    return jsonify({"ok": rc==0, "rc": rc, "out": out, "err": err, "ts": _nowiso(), "acc_used": acc})
-
-@app.route("/voice_trigger", methods=["POST"])
-def voice_trigger():
-    tok = request.headers.get("X-Voice-Token","")
-    if not tok or tok != VOICE_TOKEN:
-        return jsonify({"ok": False, "rc": 401, "err": "unauthorized"}), 401
-    _append(REM_DIR / f"voice_trigger_{date.today().isoformat()}.log",
-            json.dumps({"ts": _nowiso(), "ip": request.remote_addr, "ua": request.headers.get("User-Agent",""), "keys": list(request.form.keys())}))
-    # This endpoint stays a dry-run notifier; real SMS is guarded elsewhere
-    return jsonify({"ok": True, "send": {"status":"skipped"}, "ts": _nowiso()})
-
-# ------------------- NEW: Manual absorb endpoint -------------------
-
-@app.route("/memory/absorb", methods=["POST"])
-def memory_absorb_manual():
-    tok = request.headers.get("X-Voice-Token","")
-    if not tok or tok != VOICE_TOKEN:
-        return jsonify({"ok": False, "rc": 401, "err": "unauthorized"}), 401
-    return jsonify(absorb_memory(source="manual"))
-
-# ------------------- NEW: GitHub webhook (push) -------------------
-
-def _verify_github_signature(raw_body: bytes) -> bool:
-    if not GH_SECRET: 
-        return False
-    sig = request.headers.get("X-Hub-Signature-256","")
-    if not sig.startswith("sha256="): 
-        return False
-    digest = "sha256=" + hmac.new(GH_SECRET.encode("utf-8"), raw_body, hashlib.sha256).hexdigest()
-    # Use constant-time compare
-    return hmac.compare_digest(sig, digest)
-
-@app.route("/github_webhook", methods=["POST"])
-def github_webhook():
-    raw = request.get_data()
-    if not _verify_github_signature(raw):
-        return jsonify({"ok": False, "rc": 401, "err": "bad-signature"}), 401
-    event = request.headers.get("X-GitHub-Event","")
-    if event != "push":
-        return jsonify({"ok": True, "skipped": f"event={event}"}), 200
-    payload = request.get_json(silent=True) or {}
-    ref = payload.get("ref","")
-    # Only absorb on v1.1-dev pushes (adjust if you want more branches)
-    if ref not in ("refs/heads/v1.1-dev",):
-        return jsonify({"ok": True, "skipped": f"ref={ref}"}), 200
-    result = absorb_memory(source="github_push")
-    return jsonify(result), 200
-
-# WSGI entrypoint
-application = app
-# --- VOICE LAST ABSORB (reads /metrics) ---
-from flask import request, jsonify  # likely already imported; safe to re-import
-import urllib.request, json, pathlib
-
-def _voice_token():
-    try:
-        p = pathlib.Path("/home/rafa1215/.pa_env.json")
-        return json.loads(p.read_text()).get("VOICE_TOKEN","")
+        cfg = json.loads((Path.home()/".pa_env.json").read_text())
+        return str(cfg.get("VOICE_TOKEN","")).strip()
     except Exception:
         return ""
 
-@app.get("/voice/last_absorb")
-def voice_last_absorb():
-    # Optional auth: require X-Voice-Token if present in ~/.pa_env.json
-    tok = _voice_token()
-    if tok and request.headers.get("X-Voice-Token","") != tok:
-        return jsonify({"ok": False, "error": "unauthorized"}), 401
+def _voice_guard() -> bool:
+    stored = _read_token()
+    sent = request.headers.get("X-Voice-Token","").strip()
+    return bool(stored) and stored == sent
 
-    # Call our own /metrics to avoid duplicating logic
-    base = request.url_root.rstrip("/")
+def _voice_debug() -> bool:
+    v = request.headers.get("X-Debug","")
+    return str(v).strip().lower() in {"1","true","yes","on"}
+
+def _voice_json(payload: dict, status: int = 200) -> Response:
+    # Always produce JSON Response (no jsonify) to avoid proxy quirks
+    return Response(json.dumps(payload, ensure_ascii=False), status=status, mimetype="application/json")
+
+def _log_voice_error(e: Exception) -> None:
     try:
-        with urllib.request.urlopen(base + "/metrics", timeout=10) as r:
-            m = json.loads(r.read().decode("utf-8"))
-    except Exception as e:
-        return jsonify({"ok": False, "text": "I can't reach metrics right now.", "error": str(e)}), 503
+        import traceback as tb
+        path = ""
+        try: path = request.path
+        except Exception: pass
+        AGENTS_HEARTBEAT.mkdir(parents=True, exist_ok=True)
+        with (AGENTS_HEARTBEAT / f"voice_errors_{date.today().isoformat()}.log").open("a", encoding="utf-8") as f:
+            f.write(f"[{_utcnow_iso()}] {path}: {e}\n{tb.format_exc()}\n")
+    except Exception:
+        pass
 
-    ts   = m.get("last_memory_absorb_iso")
-    hits = int(m.get("memory_absorb_hits_today", 0) or 0)
+def _git_version() -> str:
+    try:
+        sha = subprocess.check_output(["git","rev-parse","HEAD"], cwd=ROOT, text=True).strip()
+        line = subprocess.check_output(["git","show","-s","--format=%cI %s","HEAD"], cwd=ROOT, text=True).strip()
+        return f"{sha} {line}"
+    except Exception:
+        return "unknown"
 
-    if not ts:
-        text = "No GitHub memory absorb is recorded yet."
+def _read_absorb_state() -> dict:
+    try:
+        return json.loads(ABSORB_STATE.read_text(encoding="utf-8"))
+    except Exception:
+        return {"ts":"", "hits_today":0, "date":""}
+
+def _write_absorb_state(ts_iso: str) -> dict:
+    today = date.today().isoformat()
+    st = _read_absorb_state()
+    if st.get("date") == today:
+        hits = int(st.get("hits_today",0)) + 1
     else:
-        text = f"The latest GitHub memory absorb was at {ts} UTC. Absorbs today: {hits}."
+        hits = 1
+    new = {"ts": ts_iso, "hits_today": hits, "date": today}
+    ABSORB_STATE.write_text(json.dumps(new, indent=2), encoding="utf-8")
+    return new
 
-    return jsonify({"ok": True, "text": text, "ts": ts, "hits_today": hits})
-# --- END VOICE LAST ABSORB ---
+# -------------------------------------------------------------------
+# Metrics & Absorb
+# -------------------------------------------------------------------
+@app.route("/metrics", methods=["GET"])
+def metrics():
+    st = _read_absorb_state()
+    return _voice_json({
+        "last_memory_absorb_iso": st.get("ts",""),
+        "memory_absorb_hits_today": st.get("hits_today", 0),
+        "version": _git_version(),
+    }, 200)
 
-# --- VOICE BARCODE HELPERS (BEGIN) ---
-from pathlib import Path as _VPath
-from datetime import datetime as _VDT, timezone as _VTZ
-from flask import request as _VREQ, jsonify as _VJ
-import json as _VJSON, re as _VRE, subprocess as _VSUB
-
-_CACHE = _VPath.home() / "consensus-project" / "memory" / "logs" / "nutrition" / "barcode_cache.json"
-def _voice_guard():
+@app.route("/memory/absorb", methods=["POST","GET"])
+def memory_absorb():
+    # Keep token-gated to prevent abuse (same token as voice)
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    now = _utcnow_iso()
+    st = _write_absorb_state(now)
+    # Include HEAD commit ref for your absorb_guard logs
     try:
-        cfg = _VJSON.loads((_VPath.home()/".pa_env.json").read_text())
-        stored = cfg.get("VOICE_TOKEN","")
-        sent   = _VREQ.headers.get("X-Voice-Token","")
-        return bool(stored) and stored == sent
+        commit = subprocess.check_output(["git","rev-parse","HEAD"], cwd=ROOT, text=True).strip()
     except Exception:
-        return False
+        commit = "unknown"
+    return _voice_json({"ok": True, "commit": commit, "ts": st["ts"], "hits_today": st["hits_today"]}, 200)
+
+# -------------------------------------------------------------------
+# Voice: last_absorb (reads metrics)
+# -------------------------------------------------------------------
+@app.route("/voice/last_absorb", methods=["GET"])
+def voice_last_absorb():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    st = _read_absorb_state()
+    ts = st.get("ts","")
+    hits = int(st.get("hits_today",0))
+    text = f"The latest GitHub memory absorb was at {ts} UTC. Absorbs today: {hits}." if ts else \
+           "I don't have a recorded GitHub memory absorb yet."
+    return _voice_json({"ok": True, "ts": ts, "hits_today": hits, "text": text}, 200)
+
+# -------------------------------------------------------------------
+# Voice: Barcode helpers
+# -------------------------------------------------------------------
 def _try_refresh_cache():
-    if not _CACHE.exists():
-        try:
-            _VSUB.check_call(["python3","tools/barcode_cache.py"],
-                             cwd=str(_VPath.home()/ "consensus-project"))
-        except Exception:
-            pass
-
-def _load_cache():
-    _try_refresh_cache()
-    if not _CACHE.exists():
-        return []
+    if BARCODE_CACHE.exists():
+        return
+    # Best-effort refresh (non-fatal)
     try:
-        return _VJSON.loads(_CACHE.read_text(encoding="utf-8"))
+        subprocess.check_call(["python3","tools/barcode_cache.py"], cwd=ROOT)
+    except Exception:
+        pass
+
+def _load_cache() -> list:
+    _try_refresh_cache()
+    try:
+        return json.loads(BARCODE_CACHE.read_text(encoding="utf-8"))
     except Exception:
         return []
-def _summarize(records):
+
+def _summarize(records: list) -> str:
     try:
         records = records or []
         n = len(records)
         keto = sum(1 for r in records if (r.get("class","").lower().startswith("keto")))
         slightly = sum(1 for r in records if (r.get("class","").lower().startswith("slightly")))
-        import re as __re
-        nonfood = sum(1 for r in records if __re.search(r"(tissue|towel|sanitizer|soap|detergent|shampoo|deodorant|lotion|trash bag)", (r.get("item") or "").lower()))
+        nonfood = 0
+        nf_re = re.compile(r"(tissue|towel|sanitizer|soap|detergent|shampoo|deodorant|lotion|trash bag)", re.I)
+        for r in records:
+            if nf_re.search((r.get("item") or "") + " " + (r.get("details") or "")):
+                nonfood += 1
         seen, last_items = set(), []
         for r in reversed(records):
             it = (r.get("item") or "(unknown)").strip()
             if it and it not in seen:
                 last_items.append(it); seen.add(it)
             if len(last_items) == 10: break
-        parts = [f"I have {n} cached barcode rows. Keto-tagged: {keto}, Slightly Keto: {slightly}, non-food: {nonfood}."]
+        msg = f"I have {n} cached barcode rows. Keto-tagged: {keto}, Slightly Keto: {slightly}, non-food: {nonfood}."
         if last_items:
-            parts.append("Recent items: " + ", ".join(last_items[:5]) + ("" if len(last_items)<=5 else ", ..."))
-        return " ".join(parts)
+            tail = ", ".join(last_items[:5]) + ("" if len(last_items) <= 5 else ", ...")
+            msg += " Recent items: " + tail
+        return msg
     except Exception:
         return "I have a cached barcode snapshot, but summarizing it failed."
 
+def _lookup(records: list, q: str) -> list:
+    q = (q or "").strip().lower()
+    if not q: return []
+    toks = q.split()
+    hits = []
+    for r in reversed(records):
+        hay = " ".join([r.get("item",""), r.get("details",""), r.get("class","")]).lower()
+        if all(t in hay for t in toks):
+            hits.append(r)
+        if len(hits) >= 50:
+            break
+    return hits
 
-
-
-@app.route("/voice/_status", methods=["GET"])
-def voice_status():
-    if not _voice_guard():
-        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
-    try:
-        recs = _load_cache()
-        return _voice_json({
-            "ok": True,
-            "routes": ["_status","_selftest","barcode_probe","barcode_summary","barcode_lookup"],
-            "cache_rows": len(recs),
-            "now": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")
-        }, 200)
-    except Exception:
-        return _voice_json({"ok": False, "error": "server_error"}, 200)
-@app.route("/voice/_selftest", methods=["GET"])
-def voice_selftest():
-    if not _voice_guard():
-        return _voice_json({"ok": False, "error": "unauthorized"}), 401
-    info = {}
-    try: info["have__VJ"] = bool(_VJ); 
-    except Exception as e: info["have__VJ"] = f"ERR:{e}"
-    try: info["cache_path"] = str(_CACHE); info["cache_exists"] = _CACHE.exists()
-    except Exception as e: info["cache_exists"] = f"ERR:{e}"
-    try:
-        recs = _load_cache()
-        info["cache_len"] = len(recs)
-        info["first"] = recs[0] if recs else None
-        info["summary_try"] = _summarize(recs)
-    except Exception as e:
-        info["load_or_summary_err"] = str(e)
-    return _voice_json({"ok": True, "selftest": info})
-
-
-# --- VOICE JSON CORE (BEGIN) ---
-from functools import wraps as _VWRAPS
-try:
-    from flask import Response as _VResp
-except Exception:
-    _VResp = None
-import json as _VJSON
-
-def _voice_json(payload, status=200):
-    try:
-        from flask import Response as _VResp
-        import json as _VJSON
-        return _VResp(_VJSON.dumps(payload), status=status, mimetype="application/json")
-    except Exception:
-        # absolute last resort: still-valid JSON string
-        return '{"ok": false, "error": "server_error", "reason": "resp_build_failed"}', 200
-# --- VOICE JSON CORE (END) ---
-
-
-# --- VOICE REWRAP (BEGIN) ---
-for _name in ("voice_barcode_summary","voice_barcode_lookup","voice_status","voice_barcode_probe","voice_explode","voice_selftest"):
-    try:
-        globals()[_name] = voice_safe(globals()[_name])
-    except Exception:
-        pass
-# --- VOICE REWRAP (END) ---
-
-
-
-# --- VOICE FINAL JSON ENFORCER (BEGIN) ---
-try:
-    @app.after_request
-    def _voice_final_json(resp):
-        try:
-            path = ""
-            try: 
-                path = _VREQ.path  # from earlier helpers
-            except Exception:
-                pass
-            if path.startswith("/voice/"):
-                # Normalize to JSON, even on errors or HTML fallbacks.
-                try:
-                    body = resp.get_data(as_text=True)
-                except Exception:
-                    body = ""
-                # If it's not valid JSON, replace the body.
-                import json as _J
-                try:
-                    _J.loads(body)
-                except Exception:
-                    body = _J.dumps({"ok": False, "error": "server_error", "reason": "invalid_json"})
-                    try:
-                        resp.set_data(body)
-                    except Exception:
-                        # absolute last resort: hard Response
-                        from flask import Response as _VResp
-                        return _VResp(body, status=200, mimetype="application/json")
-                # Always JSON mimetype; keep 200 on errors to avoid proxy HTML pages.
-                resp.mimetype = "application/json"
-                if resp.status_code >= 400:
-                    resp.status_code = 200
-        except Exception:
-            pass
-        return resp
-except Exception:
-    pass
-# --- VOICE FINAL JSON ENFORCER (END) ---
-
-
+# -------------------------------------------------------------------
+# Voice: Barcode routes
+# -------------------------------------------------------------------
 @app.route("/voice/barcode_summary", methods=["GET"])
 def voice_barcode_summary():
     if not _voice_guard():
         return _voice_json({"ok": False, "error": "unauthorized"}, 401)
-    try:
-        recs = _load_cache()
-        text = _summarize(recs) if recs else "I don't have a cached barcode snapshot yet."
-        return _voice_json({"ok": True, "text": text, "ts": _VDT.now(_VTZ).strftime("%Y-%m-%dT%H:%M:%SZ")}, 200)
-    except Exception:
-        return _voice_json({"ok": False, "error": "server_error"}, 200)
-
+    recs = _load_cache()
+    text = _summarize(recs) if recs else "I don't have a cached barcode snapshot yet."
+    return _voice_json({"ok": True, "text": text, "ts": _utcnow_iso()}, 200)
 
 @app.route("/voice/barcode_lookup", methods=["GET"])
 def voice_barcode_lookup():
     if not _voice_guard():
         return _voice_json({"ok": False, "error": "unauthorized"}, 401)
-    q = _VREQ.args.get("q","")
-    try:
-        recs = _load_cache()
-        if not q.strip():
-            return _voice_json({"ok": True, "text": "No query provided.", "count": 0, "items": []}, 200)
-        hits = _lookup(recs, q)
-        if not hits:
-            return _voice_json({"ok": True, "text": f"No matches for '{q}'.", "count": 0, "items": []}, 200)
-        names=[]
-        for r in hits[:5]:
-            k=(r.get("class") or "").strip()
-            names.append(f"{r.get('item','(unknown)')}{(' ['+k+']') if k else ''}")
-        line=f"Found {len(hits)} match(es). Top: "+"; ".join(names)+"."
-        return _voice_json({"ok": True, "text": line, "count": len(hits), "items": hits}, 200)
-    except Exception:
-        return _voice_json({"ok": False, "error": "server_error"}, 200)
-
+    q = request.args.get("q","")
+    recs = _load_cache()
+    if not q.strip():
+        return _voice_json({"ok": True, "text": "No query provided.", "count": 0, "items": []}, 200)
+    hits = _lookup(recs, q)
+    if not hits:
+        return _voice_json({"ok": True, "text": f"No matches for '{q}'.", "count": 0, "items": []}, 200)
+    names = []
+    for r in hits[:5]:
+        k = (r.get("class") or "").strip()
+        names.append(f"{r.get('item','(unknown)')}{(' ['+k+']') if k else ''}")
+    line = f"Found {len(hits)} match(es). Top: " + "; ".join(names) + "."
+    return _voice_json({"ok": True, "text": line, "count": len(hits), "items": hits}, 200)
 
 @app.route("/voice/barcode_probe", methods=["GET"])
 def voice_barcode_probe():
     if not _voice_guard():
         return _voice_json({"ok": False, "error": "unauthorized"}, 401)
-    try:
-        recs = _load_cache()
-        return _voice_json({"ok": True, "count": len(recs), "has_cache": bool(recs), "sample": recs[:2]}, 200)
-    except Exception:
-        return _voice_json({"ok": False, "error": "server_error"}, 200)
+    recs = _load_cache()
+    return _voice_json({"ok": True, "count": len(recs), "has_cache": bool(recs), "sample": recs[:2]}, 200)
 
+@app.route("/voice/_status", methods=["GET"])
+def voice_status():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    recs = _load_cache()
+    return _voice_json({
+        "ok": True,
+        "routes": ["_status","_selftest","_map","barcode_probe","barcode_summary","barcode_lookup","last_absorb"],
+        "cache_rows": len(recs),
+        "now": _utcnow_iso()
+    }, 200)
 
 @app.route("/voice/_selftest", methods=["GET"])
 def voice_selftest():
@@ -401,12 +243,89 @@ def voice_selftest():
         return _voice_json({"ok": False, "error": "unauthorized"}, 401)
     info = {}
     try:
-        info["have__VJ"] = True
-        info["cache_path"] = str(_CACHE); info["cache_exists"] = _CACHE.exists()
-        recs = _load_cache(); info["cache_len"] = len(recs); info["first"] = recs[0] if recs else None
+        info["cache_path"] = str(BARCODE_CACHE)
+        info["cache_exists"] = BARCODE_CACHE.exists()
+        recs = _load_cache()
+        info["cache_len"] = len(recs)
+        info["first"] = recs[0] if recs else None
         info["summary_try"] = _summarize(recs)
         return _voice_json({"ok": True, "selftest": info}, 200)
-    except Exception:
+    except Exception as e:
         info["error"] = "server_error"
+        _log_voice_error(e)
         return _voice_json({"ok": False, "selftest": info}, 200)
 
+@app.route("/voice/_map", methods=["GET"])
+def voice_map():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    try:
+        rules = sorted([str(r.rule) for r in app.url_map.iter_rules() if str(r.rule).startswith("/voice/")])
+        return _voice_json({"ok": True, "rules": rules}, 200)
+    except Exception as e:
+        _log_voice_error(e)
+        return _voice_json({"ok": False, "error": "server_error"}, 200)
+
+# Debug: intentional error to verify JSON handler (use X-Debug: 1 to reveal reason)
+@app.route("/voice/_explode", methods=["GET"])
+def voice_explode():
+    if not _voice_guard():
+        return _voice_json({"ok": False, "error": "unauthorized"}, 401)
+    raise ValueError("boom for debug")
+
+# -------------------------------------------------------------------
+# Single global error handler limited to /voice/*
+# -------------------------------------------------------------------
+@app.errorhandler(Exception)
+def _voice_global_errors(e):
+    try:
+        path = ""
+        try: path = request.path
+        except Exception: pass
+
+        # Only intercept voice routes
+        if str(path).startswith("/voice/"):
+            _log_voice_error(e)
+            dbg = _voice_debug()
+            reason = str(e) if dbg else "hidden"
+            return _voice_json({"ok": False, "error": "server_error", "reason": reason}, 200)
+
+        # Non-voice: default handling
+        if HTTPException and isinstance(e, HTTPException):
+            return e  # let Flask craft the proper response
+        return ("Internal Server Error", 500)
+    except Exception:
+        # Final safety for voice paths
+        try:
+            if str(request.path).startswith("/voice/"):
+                return _voice_json({"ok": False, "error": "server_error", "reason": "handler_failed"}, 200)
+        except Exception:
+            pass
+        return ("Internal Server Error", 500)
+
+# -------------------------------------------------------------------
+# Entry point (for local debug)
+# -------------------------------------------------------------------
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT","5000")))
+
+# --- VOICE CLEAN ERROR HANDLERS (BEGIN) ---
+from flask import request as _VREQ
+@app.errorhandler(Exception)
+def _voice_exc(e):
+    try:
+        if str(getattr(_VREQ, "path", "")).startswith("/voice/"):
+            return _voice_json({"ok": False, "error": "server_error"}, 200)
+    except Exception:
+        pass
+    raise e
+
+@app.errorhandler(404)
+def _voice_404(e):
+    try:
+        if str(getattr(_VREQ, "path", "")).startswith("/voice/"):
+            return _voice_json({"ok": False, "error": "not_found"}, 200)
+    except Exception:
+        pass
+    return e
+# --- VOICE CLEAN ERROR HANDLERS (END) ---

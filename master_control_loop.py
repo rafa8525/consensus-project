@@ -3,8 +3,34 @@ import os
 import subprocess
 import time
 from datetime import datetime
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 
-# Define all tasks
+# === Memory Watchdog ===
+class MemoryAbsorbHandler(FileSystemEventHandler):
+    def __init__(self, absorb_cmd):
+        super().__init__()
+        self.absorb_cmd = absorb_cmd
+
+    def on_created(self, event):
+        if not event.is_directory:
+            subprocess.Popen(self.absorb_cmd, shell=True)
+
+    def on_modified(self, event):
+        if not event.is_directory:
+            subprocess.Popen(self.absorb_cmd, shell=True)
+
+def start_memory_watcher():
+    memory_path = os.path.expanduser("~/consensus-project/memory")
+    absorb_cmd = "/usr/bin/python3 ~/consensus-project/tools/absorb_runner.py && /usr/bin/python3 ~/consensus-project/tools/absorb_log_append.py auto"
+    event_handler = MemoryAbsorbHandler(absorb_cmd)
+    observer = Observer()
+    observer.schedule(event_handler, memory_path, recursive=True)
+    observer.start()
+    print(f"[{datetime.now()}] INFO: Watching '{memory_path}' for changes...")
+    return observer
+
+# === Task Definitions ===
 TASKS = [
     {
         "name": "Daily SMS and Push",
@@ -62,7 +88,19 @@ def run_task(task):
 if __name__ == "__main__":
     print(f"[{datetime.now()}] INFO: === Master Control Loop Started ===")
     ensure_log_dirs()
+
+    # Start memory watcher
+    observer = start_memory_watcher()
+
+    # Run all tasks once at startup
     for task in TASKS:
         print(f"[{datetime.now()}] INFO: Starting task: {task['name']}")
         run_task(task)
-    print(f"[{datetime.now()}] INFO: === Master Control Loop Finished ===")
+
+    # Keep process alive (so Always-on task runs forever)
+    try:
+        while True:
+            time.sleep(60)  # idle loop, memory watcher runs in background
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
