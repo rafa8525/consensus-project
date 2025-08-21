@@ -6,3 +6,5 @@
 {"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.002, "ts_utc": "2025-08-21T16:18:34.419247+00:00"}
 {"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.002, "ts_utc": "2025-08-21T17:06:46.190960+00:00"}
 {"event": "absorb", "mode": "scheduled", "target_window": "am", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.006, "ts_utc": "2025-08-21T17:07:27.303544+00:00"}
+{"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.008, "ts_utc": "2025-08-21T21:35:29.528763+00:00"}
+{"event": "absorb", "mode": "catchup", "target_window": "pm", "status": "ok", "rc": 0, "stdout": "ABSORB_OK\n", "stderr": "", "duration_s": 0.005, "ts_utc": "2025-08-21T21:40:11.731936+00:00"}
