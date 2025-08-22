@@ -12,3 +12,4 @@ memory/secrets/
 memory/keys/
 *.key
 *.pem
+/memory/logs/
