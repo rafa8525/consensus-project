@@ -1,0 +1,36 @@
+version: "1.0"
+tasks:
+  - feature_id: absorb-and-sync
+    title: GitHub Memory Absorb & Sync
+    owner_agents: [AI Genesis, AI Time Architect]
+    window: am
+    healthcheck: logs/absorb/absorb_guard.log
+    command: bash -lc 'if [ -f config/absorb_cmd.txt ]; then sh -c "$(cat config/absorb_cmd.txt)"; else echo "No absorb_cmd.txt"; fi'
+
+  - feature_id: vpn-test
+    title: VPN Testing Suite (placeholder)
+    owner_agents: [AI Sandbox Engineer, AI Reverse Engineer of Thought]
+    window: pm
+    healthcheck: logs/security/vpn_tests/latest.log
+    command: bash -lc 'echo Run VPN tests; true'
+
+  - feature_id: status-report
+    title: Status Report Synthesis (placeholder)
+    owner_agents: [AI Thought Distiller]
+    window: pm
+    healthcheck: logs/reports/status.log
+    command: bash -lc 'echo Build status report; true'
+
+  - feature_id: weekly-reminder
+    title: Weekly Update Reminder (placeholder)
+    owner_agents: [AI Feedback Looper]
+    window: weekly
+    healthcheck: logs/reports/update_reminder.log
+    command: bash -lc 'echo Weekly reminder; true'
+
+  - feature_id: monthly-audit
+    title: Monthly Security Audit (placeholder)
+    owner_agents: [AI Consensus Democracy, AI Post‑Singularity Engineer]
+    window: monthly
+    healthcheck: logs/security/audit.log
+    command: bash -lc 'echo Security audit; true'
