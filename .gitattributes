@@ -5,3 +5,4 @@
 *.exe filter=lfs diff=lfs merge=lfs -text
 ai-dashboard-starter/ai-dashboard.zip filter=lfs diff=lfs merge=lfs -text
 .venv/Lib/site-packages/chromadb_rust_bindings/chromadb_rust_bindings.pyd filter=lfs diff=lfs merge=lfs -text
+consensus-dashboard/node_modules/@esbuild/win32-x64/esbuild.exe filter=lfs diff=lfs merge=lfs -text
