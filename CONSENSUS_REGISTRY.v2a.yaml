@@ -1,0 +1,20 @@
+  - feature_id: heartbeat-am
+    title: Heartbeat Logger (AM)
+    owner_agents: [AI Heartbeat Nurse]
+    window: am
+    healthcheck: logs/scheduler/$(date +%F)_heartbeat_status.log
+    command: bash -lc 'bash tools/heartbeat_logger.sh'
+
+  - feature_id: heartbeat-pm
+    title: Heartbeat Logger (PM)
+    owner_agents: [AI Heartbeat Nurse]
+    window: pm
+    healthcheck: logs/scheduler/$(date +%F)_heartbeat_status.log
+    command: bash -lc 'bash tools/heartbeat_logger.sh'
+
+  - feature_id: am-follow-on
+    title: AM → PM Follow-on Kick
+    owner_agents: [AI Time Architect]
+    window: am
+    healthcheck: logs/reports/status.log
+    command: bash -lc 'WINDOW=pm CONSENSUS_REGISTRY=CONSENSUS_REGISTRY.v2a.yaml /usr/bin/python3 tools/consensus_dispatcher.py >/dev/null 2>&1 || true'
