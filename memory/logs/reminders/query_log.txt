@@ -1,4 +1,0 @@
-2025-07-10 18:58:53.960020 - QUERY: how many files are in the memory folder? - RESPONSE: There are 1 files in memory. Breakdown: {'.': 0, 'logs': 0, 'logs/reminders': 1}
-2025-07-10 19:06:23.659840 - QUERY: how many files are in the memory folder? - RESPONSE: There are 6 files in memory. Breakdown: {'.': 4, 'logs': 0, 'logs/reminders': 2}
-2025-07-10 19:12:38.272810 - QUERY: how many files are in the memory folder? - RESPONSE: There are 6 files in memory. Breakdown: {'.': 4, 'logs': 0, 'logs/reminders': 2}
-2025-07-10 19:21:07.349789 - QUERY: GitHub memory file count - RESPONSE: There are 75 files in GitHub memory. Breakdown: {'.': 43, 'backups': 1, 'contracts': 5, 'github_sync': 1, 'logs': 11, 'logs/finance': 1, 'logs/fitness': 1, 'logs/geofencing': 1, 'logs/nutrition': 1, 'logs/project-updates': 1, 'logs/system': 3, 'logs/tests': 1, 'logs/transport': 1, 'logs/twilio': 4}

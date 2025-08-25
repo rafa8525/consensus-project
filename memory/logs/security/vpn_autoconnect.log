@@ -1,5 +1,0 @@
-[2025-08-11T20:29:00.951574] SSID='<unknown>' public=True status='rc=127 /bin/sh: 1: wg: not found'
-[2025-08-11T20:29:00.955504] DRY_RUN: would run: wg-quick up wg0
-[2025-08-11T20:31:15.292819] SSID='<unknown>' public=False status='rc=127 /bin/sh: 1: wg: not found'
-[2025-08-11T20:31:33.307513] SSID='<unknown>' public=True status='rc=127 /bin/sh: 1: wg: not found'
-[2025-08-11T20:32:36.820580] SSID='<unknown>' public=False status='rc=0 '
