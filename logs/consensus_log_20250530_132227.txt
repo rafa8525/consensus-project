@@ -1,9 +1,0 @@
-2025-05-30 13:22:27,944 - INFO - Consensus CLI Agent simulation starting...
-
-2025-05-30 13:22:27,944 - INFO - [Planner] Received goal: run test sequence
-2025-05-30 13:22:27,944 - INFO - [Planner] Generated task plan: ['Step 1 for run test sequence', 'Step 2 for run test sequence']
-2025-05-30 13:22:27,944 - INFO - [Researcher] Enriched tasks: ['Step 1 for run test sequence [context added]', 'Step 2 for run test sequence [context added]']
-2025-05-30 13:22:27,944 - INFO - \u2705 Step 1 for run test sequence [context added] \u2192 done
-2025-05-30 13:22:27,944 - INFO - \u2705 Step 2 for run test sequence [context added] \u2192 done
-2025-05-30 13:22:27,960 - INFO - [MemoryManager] Memory log updated: ['\u2705 Step 1 for run test sequence [context added] \u2192 done', '\u2705 Step 2 for run test sequence [context added] \u2192 done']
-2025-05-30 13:22:27,960 - INFO - Full agent simulation complete.

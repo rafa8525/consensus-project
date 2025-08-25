@@ -1,6 +1,0 @@
-2025-05-30 14:13:37,547 - INFO - Consensus CLI Agent simulation starting...
-
-2025-05-30 14:13:37,547 - INFO - [Planner] Initialized with deeper task modeling
-2025-05-30 14:13:37,547 - INFO - [Researcher] Initialized with deep role
-2025-05-30 14:13:37,547 - INFO - [Executor] Initialized with enhanced logic
-2025-05-30 14:13:37,547 - INFO - [Planner] Received goal: find smart glasses
