@@ -1,6 +1,0 @@
-[VPN TEST LOG - July 28, 2025]
-✓ Public Wi-Fi detection simulation triggered
-✓ VPN auto-activation confirmed
-✓ Failover test: Passed
-✓ Latency check: Acceptable
-✓ Log write success
