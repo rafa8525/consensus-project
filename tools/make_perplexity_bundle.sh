@@ -15,8 +15,12 @@ ts="$(date -Is)"; out="logs/reports/perplexity_prompt_${ts}.txt"
   sed -n '1,200p' CONSENSUS_REGISTRY.v2a.yaml
   echo
   echo "2) Latest dispatcher results (AM & PM):"
-  WINDOW=am CONSENSUS_REGISTRY=CONSENSUS_REGISTRY.v2a.yaml /usr/bin/python3 tools/consensus_dispatcher.py
-  WINDOW=pm CONSENSUS_REGISTRY=CONSENSUS_REGISTRY.v2a.yaml /usr/bin/python3 tools/consensus_dispatcher.py
+  if [ "${CONSENSUS_DEPTH:-0}" = "0" ]; then
+    timeout 45s bash -lc 'WINDOW=am CONSENSUS_REGISTRY=CONSENSUS_REGISTRY.v2a.yaml /usr/bin/python3 tools/consensus_dispatcher.py' || echo "[bundle] AM dispatcher timed out"
+    timeout 45s bash -lc 'WINDOW=pm CONSENSUS_REGISTRY=CONSENSUS_REGISTRY.v2a.yaml /usr/bin/python3 tools/consensus_dispatcher.py' || echo "[bundle] PM dispatcher timed out"
+  else
+    echo "[bundle] Skipping nested dispatcher (depth=${CONSENSUS_DEPTH})"
+  fi
   echo
   echo "3) Today’s heartbeats:"
   tail -n 30 logs/scheduler/$(date +%F)_heartbeat_status.log 2>/dev/null || true
