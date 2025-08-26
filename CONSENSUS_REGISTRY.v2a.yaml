@@ -4,18 +4,21 @@
   - AI Heartbeat Nurse
   window: am
   command: bash -lc 'bash tools/heartbeat_logger.sh'
+  timeout_sec: 20
 - feature_id: am-follow-on
   title: AM → PM Follow-on (once per day)
   owner_agents:
   - AI Time Architect
   window: am
   command: bash -lc 'bash tools/run_pm_once.sh'
+  timeout_sec: 20
 - feature_id: heartbeat-pm
   title: Heartbeat Logger (PM)
   owner_agents:
   - AI Heartbeat Nurse
   window: pm
   command: bash -lc 'bash tools/heartbeat_logger.sh'
+  timeout_sec: 20
 - feature_id: memory-agent-am
   title: MemoryAgent (AM write)
   owner_agents:
@@ -23,6 +26,7 @@
   window: am
   command: bash -lc 'PYTHONPATH="$PWD/tools" /usr/bin/python3 -m agents.memory_agent
     "AM note"'
+  timeout_sec: 20
 - feature_id: memory-agent-pm
   title: MemoryAgent (PM write)
   owner_agents:
@@ -30,18 +34,21 @@
   window: pm
   command: bash -lc 'PYTHONPATH="$PWD/tools" /usr/bin/python3 -m agents.memory_agent
     "PM note"'
+  timeout_sec: 20
 - feature_id: absorb-am
   title: Absorb Memory (AM)
   owner_agents:
   - AI Sync Sentinel
   window: am
   command: bash -lc 'bash tools/absorb_memory.sh'
+  timeout_sec: 45
 - feature_id: publish-pm
   title: Publish Memory (PM)
   owner_agents:
   - AI Commit Steward
   window: pm
   command: bash -lc 'bash tools/publish_memory.sh'
+  timeout_sec: 60
 - feature_id: perplexity-bundle-if-errors
   title: Generate Perplexity bundle if errors exist
   owner_agents:
