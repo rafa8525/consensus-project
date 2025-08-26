@@ -1,0 +1,6 @@
+2025-05-30 11:10:57,980 - INFO - Goal received: plan company retreat
+2025-05-30 11:10:57,980 - INFO - Task plan: ['Step 1 for plan company retreat', 'Step 2 for plan company retreat']
+2025-05-30 11:10:57,980 - INFO - Enriched plan: ['Step 1 for plan company retreat [context added]', 'Step 2 for plan company retreat [context added]']
+2025-05-30 11:10:57,980 - INFO - \u2705 Step 1 for plan company retreat [context added] \u2192 done
+2025-05-30 11:10:57,980 - INFO - \u2705 Step 2 for plan company retreat [context added] \u2192 done
+2025-05-30 11:10:57,996 - INFO - Results stored in memory.
