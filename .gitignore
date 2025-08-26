@@ -140,3 +140,9 @@ logs/archive/
 logs/scheduler/*_heartbeat_status.log
 csv/agent_learnings_*.csv
 config/GITHUB_MEMORY_REPO_URL.txt
+
+# --- Track memory subtree (including logs) ---
+!memory/
+!memory/**
+!memory/logs/
+!memory/logs/**
