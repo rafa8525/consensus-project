@@ -35,3 +35,8 @@
   owner_agents: [AI Commit Steward]
   window: pm
   command: bash -lc 'bash tools/publish_memory.sh'
+- feature_id: perplexity-bundle-if-errors
+  title: Generate Perplexity bundle if errors exist
+  owner_agents: [AI Incident Scribe]
+  window: am
+  command: bash -lc 'bash tools/make_perplexity_bundle.sh'
