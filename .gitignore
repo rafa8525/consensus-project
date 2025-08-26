@@ -146,3 +146,7 @@ config/GITHUB_MEMORY_REPO_URL.txt
 !memory/**
 !memory/logs/
 !memory/logs/**
+
+# Track memory subtree
+!memory/
+!memory/**
