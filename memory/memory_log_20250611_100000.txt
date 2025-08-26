@@ -1,5 +1,0 @@
-[20250611_100000] GOAL: Build persistent memory support into the AI Consensus System.
-Add: memory viewer, CLI filtering, and keyword search.
-[20250611_100000] planner ran 3 tasks
-[20250611_100000] executor confirmed 2 outputs
-[20250611_100000] researcher fetched 1 summary
