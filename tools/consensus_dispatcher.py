@@ -24,7 +24,8 @@ def run_task(t):
     if not cmd:
         return 0, "", ""
     timeout_sec = int(t.get("timeout_sec", os.environ.get("TASK_TIMEOUT_SEC", "90")))
-    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    env=os.environ.copy(); env['CONSENSUS_DEPTH']=str(int(os.environ.get('CONSENSUS_DEPTH','0'))+1)
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
     try:
         out, err = p.communicate(timeout=timeout_sec)
         return p.returncode, out or "", err or ""
@@ -36,6 +37,9 @@ def run_task(t):
         return 124, (out or ""), err
 def main():
     tasks = load_registry(REG_PATH)
+    depth = int(os.environ.get('CONSENSUS_DEPTH','0'))
+    if depth>0:
+        tasks = [t for t in tasks if not t.get('no_recurse', False)]
     to_run = [t for t in tasks if t.get("window") == WINDOW]
     results = []
     for t in to_run:
