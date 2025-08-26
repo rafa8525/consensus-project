@@ -1,42 +1,52 @@
 - feature_id: heartbeat-am
   title: Heartbeat Logger (AM)
-  owner_agents: [AI Heartbeat Nurse]
+  owner_agents:
+  - AI Heartbeat Nurse
   window: am
   command: bash -lc 'bash tools/heartbeat_logger.sh'
-
 - feature_id: am-follow-on
   title: AM → PM Follow-on (once per day)
-  owner_agents: [AI Time Architect]
+  owner_agents:
+  - AI Time Architect
   window: am
   command: bash -lc 'bash tools/run_pm_once.sh'
-
 - feature_id: heartbeat-pm
   title: Heartbeat Logger (PM)
-  owner_agents: [AI Heartbeat Nurse]
+  owner_agents:
+  - AI Heartbeat Nurse
   window: pm
   command: bash -lc 'bash tools/heartbeat_logger.sh'
 - feature_id: memory-agent-am
   title: MemoryAgent (AM write)
-  owner_agents: [AI Memory Curator]
+  owner_agents:
+  - AI Memory Curator
   window: am
-  command: bash -lc 'PYTHONPATH="$PWD/tools" /usr/bin/python3 -m agents.memory_agent "AM note"'
+  command: bash -lc 'PYTHONPATH="$PWD/tools" /usr/bin/python3 -m agents.memory_agent
+    "AM note"'
 - feature_id: memory-agent-pm
   title: MemoryAgent (PM write)
-  owner_agents: [AI Memory Curator]
+  owner_agents:
+  - AI Memory Curator
   window: pm
-  command: bash -lc 'PYTHONPATH="$PWD/tools" /usr/bin/python3 -m agents.memory_agent "PM note"'
+  command: bash -lc 'PYTHONPATH="$PWD/tools" /usr/bin/python3 -m agents.memory_agent
+    "PM note"'
 - feature_id: absorb-am
   title: Absorb Memory (AM)
-  owner_agents: [AI Sync Sentinel]
+  owner_agents:
+  - AI Sync Sentinel
   window: am
   command: bash -lc 'bash tools/absorb_memory.sh'
 - feature_id: publish-pm
   title: Publish Memory (PM)
-  owner_agents: [AI Commit Steward]
+  owner_agents:
+  - AI Commit Steward
   window: pm
   command: bash -lc 'bash tools/publish_memory.sh'
 - feature_id: perplexity-bundle-if-errors
   title: Generate Perplexity bundle if errors exist
-  owner_agents: [AI Incident Scribe]
+  owner_agents:
+  - AI Incident Scribe
   window: am
   command: bash -lc 'bash tools/make_perplexity_bundle.sh'
+  no_recurse: true
+  timeout_sec: 20
