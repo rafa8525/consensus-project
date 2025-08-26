@@ -1,1 +1,0 @@
-VPN activation protocols require initiating the client, verifying the endpoint, and enabling secure handshakes. These steps should be followed in order.

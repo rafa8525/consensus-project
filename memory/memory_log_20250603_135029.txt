@@ -1,4 +1,0 @@
-[20250603_135029] GOAL: 
-[20250603_135029] planner ran 3 tasks
-[20250603_135029] executor confirmed 2 outputs
-[20250603_135029] researcher fetched 1 summary

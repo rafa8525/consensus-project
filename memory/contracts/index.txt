@@ -1,9 +1,0 @@
-# Contract Files Index
-
-This index lists all contract-related files stored in the memory/contracts folder.
-
-1. star_performance_agreement.txt
-   - Clean summary version of Star Performance Agreement (1 line version, legacy).
-   
-2. star_performance_agreement_full.txt
-   - Full OCR extraction of the original 3-page Star Performance Agreement PDF (no summarization).
