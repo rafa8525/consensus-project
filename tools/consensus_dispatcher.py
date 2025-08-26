@@ -1,35 +1,39 @@
 #!/usr/bin/env python3
-import os, sys, json, subprocess
+import os, sys, json, subprocess, datetime
+
 try:
     import yaml
 except ImportError:
-    print("Missing PyYAML: pip install pyyaml", file=sys.stderr); sys.exit(2)
+    print("Missing PyYAML: pip install pyyaml", file=sys.stderr)
+    sys.exit(2)
 
 REG_PATH = os.environ.get("CONSENSUS_REGISTRY", "CONSENSUS_REGISTRY.v2a.yaml")
 WINDOW   = os.environ.get("WINDOW", "am")
-
 def load_registry(path):
     with open(path, 'r', encoding='utf-8') as f:
         reg = yaml.safe_load(f) or []
-    # Allow: (A) top-level list; (B) {"tasks": [...]} mapping
     if isinstance(reg, list):
-        tasks = reg
+        tasks = [t for t in reg if isinstance(t, dict)]
     elif isinstance(reg, dict):
-        tasks = reg.get("tasks", [])
+        tasks = [t for t in reg.get("tasks", []) if isinstance(t, dict)]
     else:
         tasks = []
-    # normalize task dicts
-    return [t for t in tasks if isinstance(t, dict)]
-
+    return tasks
 def run_task(t):
     cmd = t.get("command")
     if not cmd:
         return 0, "", ""
-    # shell= True so your existing commands work as-is
+    timeout_sec = int(t.get("timeout_sec", os.environ.get("TASK_TIMEOUT_SEC", "90")))
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    out, err = p.communicate()
-    return p.returncode, out, err
-
+    try:
+        out, err = p.communicate(timeout=timeout_sec)
+        return p.returncode, out or "", err or ""
+    except subprocess.TimeoutExpired:
+        p.kill()
+        out, err = p.communicate()
+        note = "\n[dispatcher] timeout after {}s".format(timeout_sec)
+        err = ((err or "") + note).strip()
+        return 124, (out or ""), err
 def main():
     tasks = load_registry(REG_PATH)
     to_run = [t for t in tasks if t.get("window") == WINDOW]
@@ -37,13 +41,13 @@ def main():
     for t in to_run:
         rc, out, err = run_task(t)
         results.append({
-            "ts": __import__("datetime").datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
+            "ts": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
             "feature_id": t.get("feature_id",""),
             "title": t.get("title",""),
             "window": t.get("window",""),
             "rc": rc,
-            "stdout": out.strip(),
-            "stderr": err.strip(),
+            "stdout": (out or "").strip(),
+            "stderr": (err or "").strip(),
         })
     print(json.dumps({"ran": len(to_run), "window": WINDOW, "results": results}, indent=2))
 
