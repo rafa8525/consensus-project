@@ -1,0 +1,2874 @@
+2025-07-21 22:15:40 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-21 22:15:40 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-21 23:15:32 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-21 23:15:32 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 00:15:37 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 00:15:38 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 01:15:34 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 01:15:34 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 02:15:30 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 02:15:30 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 03:15:34 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 03:15:34 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 04:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 04:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 05:15:32 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 05:15:32 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 06:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 06:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 07:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 07:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 08:15:29 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 08:15:29 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 09:15:27 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 09:15:27 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 10:15:41 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 10:15:41 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 11:15:45 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 11:15:46 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 12:15:46 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 12:15:46 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 13:15:38 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 13:15:38 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 14:15:38 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 14:15:38 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 15:15:34 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 15:15:34 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 16:15:36 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 16:15:36 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 17:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 17:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-22 18:15:39 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-22 18:15:39 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 05:15:32 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 05:15:32 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 06:15:41 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 06:15:41 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 07:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 07:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 08:15:33 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 08:15:33 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 09:15:30 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 09:15:30 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 10:15:38 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 10:15:38 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 11:15:38 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 11:15:38 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 12:15:41 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 12:15:41 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 13:15:34 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 13:15:34 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 14:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 14:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 15:15:29 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 15:15:29 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 16:15:28 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 16:15:28 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 17:15:29 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 17:15:29 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 18:15:32 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 18:15:33 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 19:15:24 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 19:15:25 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 20:15:30 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 20:15:31 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 21:15:27 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 21:15:27 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 22:15:33 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 22:15:33 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-27 23:15:29 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-27 23:15:29 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 00:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 00:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 01:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 01:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 02:15:29 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 02:15:29 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 03:15:30 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 03:15:30 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 04:15:32 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 04:15:33 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 05:15:30 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 05:15:31 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 06:15:37 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 06:15:37 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 07:15:39 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 07:15:39 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 08:15:30 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 08:15:30 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 09:15:27 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 09:15:27 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 10:15:37 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 10:15:37 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 11:15:42 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 11:15:43 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 12:15:43 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 12:15:44 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 13:15:31 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 13:15:32 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 14:15:38 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 14:15:38 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 15:15:27 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 15:15:27 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 16:15:32 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 16:15:32 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 17:15:33 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 17:15:33 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 18:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 18:15:36 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 19:15:35 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 19:15:35 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 20:15:34 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 20:15:34 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 21:15:28 | /send_sms_reminder | Status: 200 | {"sid":null,"status":"success"}
+
+2025-07-28 21:15:29 | /voice_trigger | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-28 22:15:35 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-28 22:15:36 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-28 23:15:31 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-28 23:15:31 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 00:15:42 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 00:15:42 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 01:15:35 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 01:15:35 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 02:15:27 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 02:15:27 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 03:15:29 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 03:15:29 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 04:15:29 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 04:15:29 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 05:15:30 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 05:15:31 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 06:15:42 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 06:15:42 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 07:15:35 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 07:15:35 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 08:15:26 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 08:15:26 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 09:15:24 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 09:15:24 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 10:15:33 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 10:15:33 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 11:15:34 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 11:15:34 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 12:15:36 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 12:15:36 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 13:15:33 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 13:15:33 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 14:15:34 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 14:15:34 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 15:15:24 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 15:15:24 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 16:15:30 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 16:15:30 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 17:15:29 | /send_sms_reminder | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 17:15:29 | /voice_trigger | Status: 500 | 
+<html>
+    <head>
+        <title>Something went wrong :-(</title>
+        <link href="https://www.p
+2025-07-29 18:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-29 18:15:33 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-29 19:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-29 19:15:30 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-29 20:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-29 20:15:34 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-29 21:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-29 21:15:29 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-29 22:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-29 22:15:36 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-29 23:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-29 23:15:30 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 00:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 00:15:36 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 01:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 01:15:35 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 02:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 02:15:28 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 03:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 03:15:28 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 04:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 04:15:31 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 05:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 05:15:34 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 06:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 06:15:41 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 07:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 07:15:38 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 08:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 08:15:28 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 09:15:23 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 09:15:24 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 10:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 10:15:34 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 11:15:47 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 11:15:47 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 12:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 12:15:35 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 13:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 13:15:32 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 14:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 14:15:34 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 15:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 15:15:27 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 16:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 16:15:38 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 17:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 17:15:34 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 18:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 18:15:31 | /voice_trigger | Status: 400 | {"message":"No reminder text provided","status":"error"}
+
+2025-07-30 19:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 19:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-30 20:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 20:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-30 21:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 21:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-30 22:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 22:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-30 23:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-30 23:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 00:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 00:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 01:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 01:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 02:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 02:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 03:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 03:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 04:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 04:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 05:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 05:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 06:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 06:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 07:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 07:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 08:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 08:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 09:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 09:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 10:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 10:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 11:15:45 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 11:15:46 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 12:15:48 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 12:15:49 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 13:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 13:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 14:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 14:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 15:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 15:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 16:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 16:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 17:15:46 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 17:15:46 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 18:15:46 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 18:15:46 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 19:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 19:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 20:15:43 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 20:15:43 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 21:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 21:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 22:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 22:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-07-31 23:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-07-31 23:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 00:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 00:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 01:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 01:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 02:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 02:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 03:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 03:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 04:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 04:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 05:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 05:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 06:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 06:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 07:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 07:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 08:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 08:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 09:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 09:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 10:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 10:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 11:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 11:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 12:16:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 12:16:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 13:16:03 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 13:16:03 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 14:17:06 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 14:17:08 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 15:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 15:15:43 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 16:15:46 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 16:15:46 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 17:15:45 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 17:15:45 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 18:16:01 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 18:16:01 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 19:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 19:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 20:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 20:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 21:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 21:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 22:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 22:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-01 23:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-01 23:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 00:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 00:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 01:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 01:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 02:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 02:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 03:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 03:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 04:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 04:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 05:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 05:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 06:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 06:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 07:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 07:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 08:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 08:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 09:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 09:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 10:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 10:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 11:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 11:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 12:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 12:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 13:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 13:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 14:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 14:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 15:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 15:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 16:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 16:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 17:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 17:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 18:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 18:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 19:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 19:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 20:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 20:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 21:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 21:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 22:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 22:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-02 23:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-02 23:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 00:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 00:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 01:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 01:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 02:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 02:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 03:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 03:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 04:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 04:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 05:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 05:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 06:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 06:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 07:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 07:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 08:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 08:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 09:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 09:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 10:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 10:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 11:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 11:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 12:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 12:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 13:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 13:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 14:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 14:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 15:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 15:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 16:15:24 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 16:15:24 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 17:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 17:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 18:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 18:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 19:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 19:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 20:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 20:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 21:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 21:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 22:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 22:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-03 23:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-03 23:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 00:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 00:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 01:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 01:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 02:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 02:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 03:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 03:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 04:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 04:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 05:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 05:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 06:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 06:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 07:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 07:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 08:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 08:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 09:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 09:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 10:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 10:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 11:15:49 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 11:15:49 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 12:15:43 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 12:15:43 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 13:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 13:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 14:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 14:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 15:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 15:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 16:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 16:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 17:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 17:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 18:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 18:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 19:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 19:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 20:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 20:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 21:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 21:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 22:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 22:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-04 23:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-04 23:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 00:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 00:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 01:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 01:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 02:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 02:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 03:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 03:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 04:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 04:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 05:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 05:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 06:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 06:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 07:15:45 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 07:15:45 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 08:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 08:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 09:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 09:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 10:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 10:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 11:15:43 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 11:15:43 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 12:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 12:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 13:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 13:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 14:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 14:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 15:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 15:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 16:03:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 16:03:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 16:09:07 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 16:09:07 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 16:11:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 16:11:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 16:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 16:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 16:18:57 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 16:18:57 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 16:28:57 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 16:28:57 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 17:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 17:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 18:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 18:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 19:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 19:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 20:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 20:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 21:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 21:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 22:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 22:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-05 23:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-05 23:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 00:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 00:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 01:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 01:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 02:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 02:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 03:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 03:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 04:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 04:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 05:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 05:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 06:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 06:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 07:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 07:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 08:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 08:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 09:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 09:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 10:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 10:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 11:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 11:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 12:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 12:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 13:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 13:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 14:15:25 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 14:15:25 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 15:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 15:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 16:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 16:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 16:19:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 16:19:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 16:36:24 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 16:36:24 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 16:58:06 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 16:58:06 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 17:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 17:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 18:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 18:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 19:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 19:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 20:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 20:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 21:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 21:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 22:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 22:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-06 23:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-06 23:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 03:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 03:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 04:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 04:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 05:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 05:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 06:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 06:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 07:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 07:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 08:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 08:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 09:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 09:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 10:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 10:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 11:15:46 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 11:15:46 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 12:15:44 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 12:15:44 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 13:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 13:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 14:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 14:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 15:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 15:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 16:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 16:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 17:15:47 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 17:15:47 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 18:15:46 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 18:15:46 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 19:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 19:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 20:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 20:15:43 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 21:15:43 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 21:15:43 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 22:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 22:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-07 23:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-07 23:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 00:15:46 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 00:15:47 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 01:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 01:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 02:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 02:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 03:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 03:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 04:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 04:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 05:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 05:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 06:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 06:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 07:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 07:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 08:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 08:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 09:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 09:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 10:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 10:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 11:15:44 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 11:15:44 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 12:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 12:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 13:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 13:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 14:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 14:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 15:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 15:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 16:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 16:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 17:15:44 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 17:15:44 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 18:15:48 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 18:15:48 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 19:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 19:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 20:15:40 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 20:15:40 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 21:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 21:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 22:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 22:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-08 23:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-08 23:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 00:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 00:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 01:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 01:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 02:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 02:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 03:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 03:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 04:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 04:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 05:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 05:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 06:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 06:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 07:15:42 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 07:15:42 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 08:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 08:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 09:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 09:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 10:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 10:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 11:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 11:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 12:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 12:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 13:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 13:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 14:15:34 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 14:15:34 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 15:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 15:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 16:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 16:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 17:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 17:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 18:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 18:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 19:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 19:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 20:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 20:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 21:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 21:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 22:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 22:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-09 23:15:31 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-09 23:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 00:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 00:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 01:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 01:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 02:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 02:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 03:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 03:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 04:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 04:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 05:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 05:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 06:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 06:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 07:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 07:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 08:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 08:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 09:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 09:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 10:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 10:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 11:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 11:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 12:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 12:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 13:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 13:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 14:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 14:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 15:15:24 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 15:15:24 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 16:15:26 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 16:15:26 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 17:15:24 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 17:15:24 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 18:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 18:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 19:15:25 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 19:15:25 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 20:15:29 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 20:15:29 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 21:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 21:15:30 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 22:15:30 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 22:15:31 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-10 23:15:28 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-10 23:15:28 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 00:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 00:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 01:15:33 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 01:15:33 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 02:15:27 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 02:15:27 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 03:15:32 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 03:15:32 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 04:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 04:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 05:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 05:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 06:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 06:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 07:15:41 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 07:15:41 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 08:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 08:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 09:15:36 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 09:15:36 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 10:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 10:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 11:15:48 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 11:15:48 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 12:15:44 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 12:15:44 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 13:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 13:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 14:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 14:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 15:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 15:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 16:15:37 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 16:15:37 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 17:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 17:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 18:15:39 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 18:15:39 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 19:15:35 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 19:15:35 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
+2025-08-11 20:15:38 | /send_sms_reminder | Status: 404 | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+2025-08-11 20:15:38 | /voice_trigger | Status: 400 | {"message":"No query provided","status":"error"}
+
