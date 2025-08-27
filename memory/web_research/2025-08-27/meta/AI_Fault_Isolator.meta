@@ -1,0 +1,5 @@
+agent=AI Fault Isolator
+url=https://serverfault.com
+status_line=HTTPSTATUS:200
+status_code=200
+title=Server Fault
