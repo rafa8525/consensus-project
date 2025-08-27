@@ -4,7 +4,6 @@ DATE_DIR="memory/web_research/$(date +%F)"
 OUT_META="$DATE_DIR/meta"
 SUMMARY="$DATE_DIR/summary.csv"
 mkdir -p "$DATE_DIR"
-
 {
   echo "agent,url,status_code,title"
   for m in "$OUT_META"/*.meta; do
@@ -17,5 +16,4 @@ mkdir -p "$DATE_DIR"
     printf '%s,"%s",%s,"%s"\n' "$agent" "$url" "$code" "$title"
   done
 } > "$SUMMARY"
-
 echo "[summary] wrote $SUMMARY"
