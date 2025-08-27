@@ -150,3 +150,5 @@ config/GITHUB_MEMORY_REPO_URL.txt
 # Track memory subtree
 !memory/
 !memory/**
+memory/logs/system/github_sync_log.md
+memory/logs/system/
