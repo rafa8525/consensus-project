@@ -1,0 +1,27 @@
+2025-08-27 17:01:36 [fanout_web_research.sh] Starting web research crawl
+2025-08-27 17:01:36 [fanout_web_research.sh] CSV: csv/55_Agents___Support_Sites.csv (5 lines)
+2025-08-27 17:01:36 [fanout_web_research.sh] OUT: memory/web_research/2025-08-27
+2025-08-27 17:01:36 [fanout_web_research.sh] Workers: 6
+2025-08-27 17:01:36 [fanout_web_research.sh] Dry run: YES
+2025-08-27 17:01:36 [fanout_web_research.sh] Extracted 4 agent,url pairs
+2025-08-27 17:01:36 [fanout_web_research.sh] DRY RUN:
+  [AI Mutator] https://cookbook.openai.com
+  [AI Breeder] https://learn.microsoft.com/
+  [AI Hyper-Constructor] https://learn.microsoft.com/azure/
+  [AI Fault Isolator] https://serverfault.com
+2025-08-27 17:01:45 [fanout_web_research.sh] Starting web research crawl
+2025-08-27 17:01:45 [fanout_web_research.sh] CSV: csv/55_Agents___Support_Sites.csv (5 lines)
+2025-08-27 17:01:45 [fanout_web_research.sh] OUT: memory/web_research/2025-08-27
+2025-08-27 17:01:45 [fanout_web_research.sh] Workers: 6
+2025-08-27 17:01:45 [fanout_web_research.sh] Dry run: NO
+2025-08-27 17:01:45 [fanout_web_research.sh] Extracted 4 agent,url pairs
+2025-08-27 17:01:46 [fanout_web_research.sh] Fetching 4 URLs with 6 workers...
+[AI Mutator] cached
+[AI Breeder] cached
+[AI Hyper-Constructor] cached
+[AI Fault Isolator] cached
+2025-08-27 17:01:46 [fanout_web_research.sh] Generating summary...
+2025-08-27 17:01:46 [fanout_web_research.sh] Complete: processed=4 success=1
+2025-08-27 17:01:46 [fanout_web_research.sh]   Raw:     memory/web_research/2025-08-27/raw/
+2025-08-27 17:01:46 [fanout_web_research.sh]   Meta:    memory/web_research/2025-08-27/meta/
+2025-08-27 17:01:46 [fanout_web_research.sh]   Summary: memory/web_research/2025-08-27/summary.csv
