@@ -565,3 +565,203 @@ error: failed to push some refs to 'https://github.com/rafa8525/consensus-projec
 [2025-08-28T20:44:49.279676] stderr: From https://github.com/rafa8525/consensus-project
  * branch              v1.1-dev   -> FETCH_HEAD
 [2025-08-28T20:44:49.285553] Running: git add -A
+[2025-08-28T20:44:52.097041] Running: git commit -m "Auto-log sync for 2025-08-28 20:44:52"
+[2025-08-28T20:44:53.721765] stdout: [v1.1-dev-clean ff4a083c] Auto-log sync for 2025-08-28 20:44:52
+ 170 files changed, 65315 insertions(+), 6 deletions(-)
+ create mode 100644 config.yaml
+ create mode 100644 memory/logs/agents/daily_sms_and_push.log
+ create mode 100644 memory/logs/heartbeat/heartbeat.log
+ create mode 100644 memory/logs/heartbeat/heartbeat_error.log
+ create mode 100644 memory/logs/heartbeat/last_heartbeat.txt
+ create mode 100644 memory/logs/heartbeat/voice_reminder_heartbeat.log
+ create mode 100644 memory/logs/reminders/voice_reminders.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-01-55_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-01-57_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-12_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-12_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-13_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-13_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-14_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-16_geofencing_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-17_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-19_monthly_security_audit.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T23-01-57_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-05_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-10_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-29_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-29_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-30_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T01-02-57_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-35_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-45_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-46_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-46_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T03-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-02-47_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-02-49_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-05_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-06_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-07_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-03_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-07_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-30_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-31_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-32_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T06-03-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-36_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-56_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-57_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-58_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-04-00_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-04-01_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T08-03-05_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-02-45_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-00_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-01_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-03_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T10-02-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-02-44_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-00_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-01_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-03_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-19_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-24_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-48_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-49_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-50_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T13-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-14_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-16_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-36_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-37_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-37_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T15-01-53_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-35_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-37_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-49_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-50_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T17-02-33_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-37_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-50_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-51_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-51_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-52_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T19-02-54_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T19-02-55_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T20-02-16_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T20-02-20_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T21-01-50_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T21-01-51_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T23-02-27_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T23-02-28_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-25_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-27_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-34_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-35_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-35_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T01-02-47_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-28_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-29_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-36_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-37_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-37_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T03-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-39_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-51_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-52_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-52_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-07_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-12_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-28_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-29_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-30_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T06-03-16_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-31_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-33_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-46_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-48_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-49_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-50_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T08-03-01_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-43_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-55_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-55_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-56_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T10-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-44_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-57_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-57_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-58_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-03-39_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-03-42_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-01_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-04_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-08_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T13-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-17_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-33_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-34_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-35_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T15-01-56_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-46_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-47_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-57_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-58_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-58_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T17-02-23_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-34_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-41_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-42_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-43_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-44_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-18_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-45_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-46_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-47_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-48_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T20-02-42_absorb_memory.log
+ create mode 100644 memory/logs/support_recovery/find_scan.log
+ create mode 100755 start_master.sh
+ create mode 100755 tools/absorb_once.sh
+[2025-08-28T20:44:53.726068] Running: git config pack.windowMemory 10m
+[2025-08-28T20:44:53.751430] Running: git config pack.packSizeLimit 20m
+[2025-08-28T20:44:53.789179] Running: git push origin v1.1-dev
+[2025-08-28T20:44:54.223323] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-28T20:44:54.226699] ❌ Git push failed.
+[2025-08-28 20:44:54.247699] Task succeeded: Auto Git Sync
+[2025-08-28T20:50:14.689971] Running: git pull origin v1.1-dev
+[2025-08-28T20:50:15.745295] stdout: Already up to date.
+[2025-08-28T20:50:15.749069] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T20:50:15.753043] Running: git add -A
+[2025-08-28T20:50:22.172850] Running: git commit -m "Auto-log sync for 2025-08-28 20:50:22"
+[2025-08-28T20:53:11.841938] Running: git pull origin v1.1-dev
+[2025-08-28T20:53:13.204322] stdout: Already up to date.
+[2025-08-28T20:53:13.208230] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T20:53:13.211710] Running: git add -A
+[2025-08-28T20:53:21.734963] Running: git commit -m "Auto-log sync for 2025-08-28 20:53:21"
+[2025-08-28T21:01:46.482322] Running: git pull origin v1.1-dev
+[2025-08-28T21:01:48.053253] stdout: Already up to date.
+[2025-08-28T21:01:48.067694] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T21:01:48.083596] Running: git add -A
