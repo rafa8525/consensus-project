@@ -1,0 +1,16 @@
+=== Scan started: 2025-08-28T17:17:57+00:00 ===
+# A) Other clones/trees on this box with fitness folder
+/home/rafa1215/consensus-project/memory/logs/fitness
+/home/rafa1215/reminder-api/memory/logs/fitness
+/home/rafa1215/memory/logs/fitness
+# B) Large fitness-related files (archives/logs/CSVs/JSON)
+/home/rafa1215/consensus-project.backup.1755900877/memory/logs/scheduler/2025-08-22T22-02-28_daily_fitness_log.log	4 KB
+/home/rafa1215/consensus-project/memory/logs/fitness/2025-07-22_fitness_log.csv	4 KB
+/home/rafa1215/consensus-project/memory/logs/scheduler/2025-08-26T22-02-13_daily_fitness_log.log	4 KB
+/home/rafa1215/consensus-project/memory/logs/scheduler/2025-08-27T07-03-58_daily_fitness_log.log	4 KB
+/home/rafa1215/consensus-project/memory/logs/scheduler/2025-08-28T07-03-49_daily_fitness_log.log	4 KB
+/home/rafa1215/memory/logs/fitness/2025-07-22_fitness_log.csv	4 KB
+# C) Mentions in scheduler logs
+memory/logs/scheduler/2025-08-27T07-03-36_auto_git_sync.log:9: create mode 100644 memory/logs/fitness/2025-08-27.md
+memory/logs/scheduler/2025-08-28T07-03-33_auto_git_sync.log:9: create mode 100644 memory/logs/fitness/2025-08-28.md
+=== Scan finished: 2025-08-28T17:19:08+00:00 ===
