@@ -153,3 +153,7 @@ config/GITHUB_MEMORY_REPO_URL.txt
 memory/logs/system/github_sync_log.md
 memory/logs/system/
 memory/logs/system/github_sync_log.md
+
+# never commit runtime logs
+memory/logs/**.log
+memory/logs/system/*.md
