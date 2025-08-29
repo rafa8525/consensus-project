@@ -80,7 +80,17 @@ def run_task(task):
             f.write(log_entry)
         print(f"[INFO] {log_entry.strip()}")
     except Exception as e:
-        self.logger.error(f"Exception: {e}")
+                try:
+                    policy = getattr(self, 'sms_policy', None) or SmsPolicy(self.config.base_dir)
+                    policy.record('ERROR', to_number, message, status='ERROR', meta={'err': str(e)})
+                except Exception:
+                    pass
+
+        error_entry = f"[{datetime.now()}] Task exception: {task['name']} - {e}\n"
+        with open(task["log"], "a") as f:
+            f.write(error_entry)
+        print(f"[ERROR] {error_entry.strip()}")
+
 if __name__ == "__main__":
     print(f"[{datetime.now()}] INFO: === Master Control Loop Started ===")
     ensure_log_dirs()
