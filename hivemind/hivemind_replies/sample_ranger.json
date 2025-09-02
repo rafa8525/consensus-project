@@ -1,0 +1,11 @@
+{
+  "agent_name": "Reliability Ranger",
+  "primary_risks": ["Guard respawns on rc=0", "Lock not released on crash"],
+  "recommendations": [
+    {"title":"Guard: stop on rc=0","detail":"Break loop when rc==0 to avoid thrash.","priority":1},
+    {"title":"Lock cleanup","detail":"Ensure SIGTERM handler removes lockfile; verify at start.","priority":2}
+  ],
+  "code_changes": [],
+  "test_steps": ["Kill child; confirm guard respawns once.", "Check lock removed on exit."],
+  "references": []
+}
