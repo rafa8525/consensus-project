@@ -1,0 +1,11 @@
+{
+  "agent_name": "Example Agent",
+  "primary_risks": ["Fork storms", "SMS spam"],
+  "recommendations": [
+    {"title":"Finish queue_worker.py","detail":"Complete at-most-once job claim + done/ finalization with try/finally.","priority":1},
+    {"title":"Guard SMS by default","detail":"Ensure SMS_ENABLED=false and whitelist only.","priority":1}
+  ],
+  "code_changes": [],
+  "test_steps": ["Run smoke_test", "Run guard for 30m"],
+  "references": []
+}
