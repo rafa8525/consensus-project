@@ -9,5 +9,5 @@ export MCL_CHECK_SEC="${MCL_CHECK_SEC:-10}"
 export MCL_GRACE_START_SEC="${MCL_GRACE_START_SEC:-60}"
 export MCL_MAX_RESTARTS="${MCL_MAX_RESTARTS:-12}"
 export MCL_RESTART_COOLDOWN_SEC="${MCL_RESTART_COOLDOWN_SEC:-10}"
-exec python3.10 mcl_guard.py
+exec python3.10 mcl_guard_rc0safe.py
 export MCL_ENTRY="${MCL_ENTRY:-safe_loop.py}"
