@@ -1,0 +1,42 @@
+[
+  {
+    "key": "d28610e2c1",
+    "title": "Finish queue_worker.py",
+    "detail": "Complete at-most-once job claim + done/ finalization with try/finally.",
+    "priority": 1,
+    "agent": "Example Agent",
+    "sources": [
+      "Example Agent"
+    ]
+  },
+  {
+    "key": "7734ee2d09",
+    "title": "Guard SMS by default",
+    "detail": "Ensure SMS_ENABLED=false and whitelist only.",
+    "priority": 1,
+    "agent": "Example Agent",
+    "sources": [
+      "Example Agent"
+    ]
+  },
+  {
+    "key": "9040949745",
+    "title": "Guard: stop on rc=0",
+    "detail": "Break loop when rc==0 to avoid thrash.",
+    "priority": 1,
+    "agent": "Reliability Ranger",
+    "sources": [
+      "Reliability Ranger"
+    ]
+  },
+  {
+    "key": "0fbb8109e6",
+    "title": "Lock cleanup",
+    "detail": "Ensure SIGTERM handler removes lockfile; verify at start.",
+    "priority": 2,
+    "agent": "Reliability Ranger",
+    "sources": [
+      "Reliability Ranger"
+    ]
+  }
+]

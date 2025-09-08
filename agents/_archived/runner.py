@@ -9,12 +9,16 @@ memory_file = Path(f"memory/memory_log_{timestamp}.txt")
 digest_file = Path("logs/daily_digest.txt")
 goal_file = Path("scheduled_goal.txt")
 
-goal = goal_file.read_text(encoding="utf-8").strip() if goal_file.exists() else "No goal set."
+goal = (
+    goal_file.read_text(encoding="utf-8").strip()
+    if goal_file.exists()
+    else "No goal set."
+)
 log_lines = [
     f"[{timestamp}] GOAL: {goal}",
     f"[{timestamp}] planner ran 3 tasks",
     f"[{timestamp}] executor confirmed 2 outputs",
-    f"[{timestamp}] researcher fetched 1 summary"
+    f"[{timestamp}] researcher fetched 1 summary",
 ]
 
 Path("logs").mkdir(exist_ok=True)
