@@ -1,0 +1,13 @@
+=== DIRECTORY FRESHNESS (newest file mtime in each) ===
+memory                               ->  0d old
+memory/logs                          ->  0d old
+memory/logs/system                   ->  0d old
+memory/queue                         ->  3d old
+upload_sync                          ->  10d old
+upload_sync/auto_push                ->  10d old
+upload_sync/auto_push/synced         ->  16d old
+hivemind                             ->  5d old
+tools                                ->  10d old
+web                                  ->  16d old
+agents                               ->  2d old
+mcl_v2                               ->  3d old

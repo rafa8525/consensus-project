@@ -1,0 +1,12 @@
+system:
+  base_dir: "/home/rafa1215/consensus-project"
+
+geofences:
+  - name: "Clavo & Canela"
+    lat: 38.0057
+    lon: -121.8092
+    radius_m: 120
+  - name: "Side Gate Brewing"
+    lat: 38.0178
+    lon: -121.8240
+    radius_m: 120

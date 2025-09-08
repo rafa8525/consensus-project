@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consensus Agent Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        textarea { width: 100%; height: 50px; }
+        select, button { margin-top: 10px; }
+        .log-box { background: black; color: lime; padding: 10px; font-family: monospace; height: 200px; overflow-y: scroll; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h2>🧠 Consensus Agent Dashboard</h2>
+
+    <div class="card">
+        <h3>🎁 Scheduled Goal</h3>
+        <textarea id="goalBox" placeholder="Enter daily goal..."></textarea>
+        <br>
+        <button onclick="saveGoal()">📄 Save</button>
+    </div>
+
+    <div class="card">
+        <h3>📄 Daily Digest</h3>
+        <a href="/download-digest">View or download full digest</a>
+        <pre id="digestBox">Loading...</pre>
+    </div>
+
+    <div class="card">
+        <h3>🌃 Agent Activity Chart</h3>
+        <canvas id="activityChart" height="150"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>🔍 Memory Replay</h3>
+        <select id="memoryList" onchange="loadMemory()"></select>
+        <pre id="memoryContent">Select a memory file to view its content.</pre>
+    </div>
+
+    <div class="card">
+        <h3>📁 Live Log Stream</h3>
+        <button onclick="toggleScrollLock()">😐 Toggle Scroll Lock</button>
+        <span id="scrollStatus">Autoscroll enabled</span>
+        <pre class="log-box" id="logBox">Loading logs...</pre>
+    </div>
+
+    <script>
+        let scrollLock = false;
+
+        async function saveGoal() {
+            const goal = document.getElementById('goalBox').value;
+            const form = new FormData();
+            form.append('goal', goal);
+            await fetch('/save-goal', { method: 'POST', body: form });
+        }
+
+        async function loadGoal() {
+            const response = await fetch('/goal');
+            const text = await response.text();
+            document.getElementById('goalBox').value = text;
+        }
+
+        async function loadDigest() {
+            const res = await fetch('/digest');
+            const txt = await res.text();
+            document.getElementById('digestBox').textContent = txt;
+        }
+
+        async function loadChartData() {
+            const res = await fetch('/chart-data');
+            const json = await res.json();
+            const ctx = document.getElementById('activityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(json),
+                    datasets: [{
+                        label: 'Agent Task Count',
+                        data: Object.values(json),
+                        backgroundColor: 'skyblue'
+                    }]
+                }
+            });
+        }
+
+        async function loadMemoryList() {
+            const res = await fetch('/memory-logs');
+            const files = await res.json();
+            const sel = document.getElementById('memoryList');
+            sel.innerHTML = '';
+            if (files.length === 0) {
+                sel.innerHTML = '<option disabled>No logs found</option>';
+                return;
+            }
+            files.forEach(f => {
+                const o = document.createElement('option');
+                o.value = f;
+                o.textContent = f;
+                sel.appendChild(o);
+            });
+            loadMemory();
+        }
+
+        async function loadMemory() {
+            const file = document.getElementById('memoryList').value;
+            const res = await fetch(`/memory/${file}`);
+            const txt = await res.text();
+            document.getElementById('memoryContent').textContent = txt;
+        }
+
+        async function loadLogs() {
+            const res = await fetch('/logs/current');
+            const txt = await res.text();
+            const box = document.getElementById('logBox');
+            box.textContent = txt;
+            if (!scrollLock) box.scrollTop = box.scrollHeight;
+        }
+
+        function toggleScrollLock() {
+            scrollLock = !scrollLock;
+            document.getElementById('scrollStatus').textContent = scrollLock ? "Autoscroll disabled" : "Autoscroll enabled";
+        }
+
+        loadGoal();
+        loadDigest();
+        loadChartData();
+        loadMemoryList();
+        loadLogs();
+        setInterval(loadLogs, 5000);
+    </script>
+</body>
+</html>
