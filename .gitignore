@@ -157,3 +157,11 @@ memory/logs/system/github_sync_log.md
 # never commit runtime logs
 memory/logs/**.log
 memory/logs/system/*.md
+memory/logs/**
+memory/queue/**
+memory/heartbeat/**
+_sim_unpack/**
+*.jsonl
+__pycache__/**
+.pytest_cache/**
+.coverage
