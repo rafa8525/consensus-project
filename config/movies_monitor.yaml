@@ -1,0 +1,9 @@
+movies_monitor:
+  source_url: "https://script.google.com/macros/s/AKfycbxQs3VzUhEaZ_SLscAQMfUVTtj26Ks9LSHahyoqmDEGtE0K0YhjCcS6q-45RX9pLeZn4Q/exec?source=sheet&fileId=11UFRzYxR_YO-utoa_vG1RxFctGVAxuOMkpm6mX4rews&sheet=Sheet1"
+  last_checked_pst: "2025-09-09T11:38:03-07:00"
+  baseline_established: true
+  seen_ids: []
+  seen_titles:
+    - "The Last Witch Hunter"
+    - "Pacific Rim"
+    - "Godzilla vs. Kong"
