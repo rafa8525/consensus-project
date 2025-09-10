@@ -2,4 +2,4 @@
 
 _Auto-generated index for imported planning/support docs._
 
-> No files found to import from /mnt/data.
+> No files were found in /mnt/data. Nothing to import.
