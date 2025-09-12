@@ -171,3 +171,9 @@ memory/heartbeat/**
 _sim_unpack/**
 *.log
 *.jsonl
+memory/logs/**
+memory/queue/**
+memory/heartbeat/**
+_sim_unpack/**
+*.log
+*.jsonl
