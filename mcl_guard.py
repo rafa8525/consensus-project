@@ -1,101 +1,78 @@
 #!/usr/bin/env python3
-import os, time, subprocess, signal, sys
-from pathlib import Path
-from datetime import datetime
-PROJECT_DIR = Path(os.environ.get("PROJECT_DIR") or (Path.home()/ "consensus-project"))
-HB = PROJECT_DIR / "memory/logs/heartbeat/last_heartbeat.txt"
-LOGDIR = PROJECT_DIR / "memory/logs/system"
-LOGDIR.mkdir(parents=True, exist_ok=True)
-LOG = LOGDIR / "mcl_guard.log"
-RUNLOG = LOGDIR / "mcl_run.out"
-MCL_ENTRY = os.environ.get("MCL_ENTRY", "master_control_loop.py")
-PIDFILE = LOGDIR / "mcl_guard.pid"
+"""
+mcl_guard.py
+Heartbeat-based supervisor for the Master Control Loop (MCL).
+Now with extended logging of loop launches, exits, and restarts.
+"""
 
-# Stall/health thresholds (env-overridable)
-MAX_STALL   = int(os.environ.get("MCL_MAX_STALL_SEC", "120"))   # restart if heartbeat older than this
-CHECK_EVERY = int(os.environ.get("MCL_CHECK_SEC", "10"))        # guard loop tick
-GRACE_START = int(os.environ.get("MCL_GRACE_START_SEC", "60"))  # grace after spawn
-MAX_RESTARTS= int(os.environ.get("MCL_MAX_RESTARTS", "12"))     # limit per session
-COOLDOWN    = int(os.environ.get("MCL_RESTART_COOLDOWN_SEC", "10"))
-def log(msg):
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with LOG.open("a", encoding="utf-8") as f:
+import os
+import subprocess
+import time
+from datetime import datetime, timedelta
+
+# Config
+HEARTBEAT_FILE = "memory/logs/heartbeat/heartbeat.log"
+LOG_FILE = "memory/logs/system/mcl_guard.md"
+MCL_COMMAND = ["python3", "master_control_loop.py"]
+MAX_AGE_MINUTES = 10   # heartbeat staleness threshold
+CHECK_INTERVAL = 60    # seconds between checks
+
+process = None
+
+
+def log(msg: str):
+    ts = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"[{ts}] {msg}\n")
+    print(f"[{ts}] {msg}", flush=True)
 
-def already_running():
-    try:
-        if PIDFILE.exists():
-            pid = int(PIDFILE.read_text().strip())
-            os.kill(pid, 0)
-            return True
-    except Exception:
-        pass
+
+def heartbeat_is_stale() -> bool:
+    if not os.path.exists(HEARTBEAT_FILE):
+        log("⚠️ No heartbeat file found.")
+        return True
+    mtime = datetime.fromtimestamp(os.path.getmtime(HEARTBEAT_FILE))
+    if datetime.utcnow() - mtime > timedelta(minutes=MAX_AGE_MINUTES):
+        log(f"⚠️ Heartbeat stale (last update {mtime}).")
+        return True
     return False
 
-def write_pid():
-    PIDFILE.write_text(str(os.getpid()))
 
-def spawn_child():
-    runfh = RUNLOG.open("a")
-    p = subprocess.Popen(
-        ["python3.10", MCL_ENTRY],
-        cwd=str(PROJECT_DIR),
-        stdout=runfh, stderr=subprocess.STDOUT,
-        preexec_fn=os.setsid
-    )
-    return p, runfh
+def restart_mcl():
+    global process
+    if process and process.poll() is None:
+        process.terminate()
+        log("⚠️ Terminated existing loop before restart.")
 
-def killpg(p, sig):
     try:
-        os.killpg(os.getpgid(p.pid), sig)
-    except Exception:
-        pass
+        log(f"🔄 Launching: {' '.join(MCL_COMMAND)}")
+        process = subprocess.Popen(MCL_COMMAND)
+        log(f"✅ Spawned master_control_loop.py pid={process.pid}")
+    except Exception as e:
+        log(f"❌ Failed to launch MCL: {e}")
 
-def hb_age_sec():
-    try:
-        return time.time() - HB.stat().st_mtime
-    except FileNotFoundError:
-        return 1e9
+
 def main():
-    if already_running():
-        print("mcl_guard already running; exiting.")
-        return 0
-    write_pid()
-    restarts = 0
+    log("🚀 mcl_guard.py started.")
+    restart_mcl()
+
     while True:
-        p, runfh = spawn_child()
-        log(f"spawned loop pid={p.pid}")
-        start = time.time()
-        while True:
-            time.sleep(CHECK_EVERY)
-            # child finished?
-            rc = p.poll()
-            if rc is not None:
-                log(f"loop exited rc={rc}")
-                try: runfh.close()
-                except Exception: pass
-                time.sleep(COOLDOWN)
-                restarts += 1
-                if restarts > MAX_RESTARTS:
-                    log("max restarts reached; stopping")
-                    return 1
-                break  # respawn
-            # stall check (after grace)
-            if time.time() - start < GRACE_START:
-                continue
-            age = hb_age_sec()
-            if age > MAX_STALL:
-                log(f"heartbeat stall ({int(age)}s > {MAX_STALL}s); restarting")
-                killpg(p, signal.SIGTERM); time.sleep(5)
-                killpg(p, signal.SIGKILL)
-                try: runfh.close()
-                except Exception: pass
-                time.sleep(COOLDOWN)
-                restarts += 1
-                if restarts > MAX_RESTARTS:
-                    log("max restarts reached after stall; stopping")
-                    return 1
-                break  # respawn
+        time.sleep(CHECK_INTERVAL)
+
+        # If the process is gone, restart it
+        if process and process.poll() is not None:
+            log(f"⚠️ Loop exited rc={process.returncode}, restarting...")
+            restart_mcl()
+            continue
+
+        # If heartbeat stale, restart it
+        if heartbeat_is_stale():
+            log("⚠️ Restarting loop due to stale heartbeat...")
+            restart_mcl()
+        else:
+            log("✅ Loop alive, heartbeat fresh.")
+
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
