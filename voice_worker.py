@@ -1,48 +1,60 @@
 #!/usr/bin/env python3
-"""
-voice_worker.py
-Processes queued voice trigger jobs and sends SMS via Twilio.
-"""
+import os
+import time
+import json
+import logging
+from datetime import datetime, timezone
 
-import os, time, json
-from pathlib import Path
-from twilio.rest import Client
+LOG_DIR = "memory/logs/system"
+WORKER_LOG = os.path.join(LOG_DIR, "voice_worker.log")
+HEARTBEAT_FILE = os.path.join(LOG_DIR, "voice_worker_heartbeat.json")
 
-# Folders
-QUEUE_DIR = Path("queue/processing")
-DONE_DIR = Path("queue/done")
-LOG_FILE = Path("memory/logs/reminders/voice_trigger.md")
+os.makedirs(LOG_DIR, exist_ok=True)
 
-QUEUE_DIR.mkdir(parents=True, exist_ok=True)
-DONE_DIR.mkdir(parents=True, exist_ok=True)
-LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    filename=WORKER_LOG,
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
 
-# Twilio credentials from environment variables
-account_sid = os.getenv("TWILIO_ACCOUNT_SID")
-auth_token = os.getenv("TWILIO_AUTH_TOKEN")
-from_number = os.getenv("TWILIO_FROM_NUMBER")
-to_number = os.getenv("TWILIO_TO_NUMBER")
+def log_text_heartbeat():
+    """Append a plain heartbeat line to the log with flush + fsync."""
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    line = f"HEARTBEAT: {ts}\n"
+    with open(WORKER_LOG, "a", encoding="utf-8") as f:
+        f.write(line)
+        f.flush()
+        os.fsync(f.fileno())
+    logging.info(f"HEARTBEAT: {ts}")
+    print(line.strip(), flush=True)
 
-client = Client(account_sid, auth_token)
+def log_json_heartbeat():
+    """Write heartbeat as an atomic JSON file."""
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    data = {"timestamp": ts, "pid": os.getpid(), "status": "alive"}
+    tmp_file = HEARTBEAT_FILE + ".tmp"
+    with open(tmp_file, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_file, HEARTBEAT_FILE)  # atomic rename
+    logging.info(f"❤️ VOICE_WORKER_HEARTBEAT {ts}")
 
-def log(msg: str):
-    ts = time.strftime("%Y-%m-%dT%H:%M:%S")
-    line = f"[{ts}] {msg}"
-    print(line, flush=True)
-    with open(LOG_FILE, "a") as f:
-        f.write(line + "\n")
+def check_for_voice_trigger():
+    """Stub: Replace with actual trigger detection logic."""
+    logging.info("🎤 Checking for new voice trigger...")
 
-while True:
-    for job_file in QUEUE_DIR.glob("voice_trigger_*.json"):
-        job = json.loads(job_file.read_text())
+def main():
+    logging.info("🚀 voice_worker.py started")
+    while True:
         try:
-            client.messages.create(
-                body=job["message"],
-                from_=from_number,
-                to=to_number
-            )
-            log(f"✅ SMS sent for {job_file.name}")
+            check_for_voice_trigger()
+            log_text_heartbeat()
+            log_json_heartbeat()
+            time.sleep(5)  # heartbeat interval
         except Exception as e:
-            log(f"❌ SMS failed for {job_file.name}: {e}")
-        job_file.rename(DONE_DIR / job_file.name)
-    time.sleep(10)
+            logging.error(f"Voice worker error: {e}", exc_info=True)
+            time.sleep(5)
+
+if __name__ == "__main__":
+    main()
