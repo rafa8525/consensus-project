@@ -1,103 +1,72 @@
 #!/usr/bin/env python3
 """
-github_sync.py – Enhanced with Heartbeat Integration
-
-This agent:
-1. Performs GitHub sync with pre-push safety checks.
-2. Logs activity to memory/logs/system/github_sync_log.md
-3. Sends structured heartbeat JSON via heartbeat_utils for monitoring.
+GitHub Sync Agent with JSON heartbeat
+Handles auto-commit and push of memory folder safely.
 """
 
 import os
-import sys
-import subprocess
 import time
+import json
+import subprocess
+import logging
 from datetime import datetime, timezone
-from pathlib import Path
 
-# Import shared heartbeat utility
-from heartbeat_utils import write_heartbeat
+# Config
+PROJECT_DIR = os.path.expanduser("~/consensus-project")
+LOG_FILE = os.path.join(PROJECT_DIR, "memory/logs/system/github_sync.log")
+HEARTBEAT_FILE = os.path.join(PROJECT_DIR, "memory/logs/system/github_sync_heartbeat.json")
+HEARTBEAT_INTERVAL = 60  # seconds
+SYNC_INTERVAL = 300       # run sync every 5 minutes
 
-# Paths
-LOG_FILE = "memory/logs/system/github_sync_log.md"
-BRANCH = "v1.1-dev"
+# Setup logging
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+logger = logging.getLogger("GitHubSync")
 
-def log(message: str):
-    """Append timestamped message to the sync log."""
+def write_heartbeat():
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {message}\n")
-    print(f"[{ts}] {message}")
+    data = {"timestamp": ts, "pid": os.getpid(), "status": "alive"}
+    tmp_file = HEARTBEAT_FILE + ".tmp"
+    with open(tmp_file, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_file, HEARTBEAT_FILE)
+    logger.info(f"❤️ GITHUB_SYNC_HEARTBEAT {ts}")
 
-def run_command(cmd: list[str]) -> tuple[int, str, str]:
-    """Run a shell command and capture output."""
+def run_git_sync():
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, check=False)
-        return result.returncode, result.stdout.strip(), result.stderr.strip()
-    except Exception as e:
-        return 1, "", str(e)
+        logger.info("🔍 Running safety pre-push checks...")
+        subprocess.run(["git", "-C", PROJECT_DIR, "add", "-A"], check=True)
+        commit_msg = f"Auto-sync {datetime.now(timezone.utc).isoformat()}"
+        subprocess.run(["git", "-C", PROJECT_DIR, "commit", "-m", commit_msg], check=False)
+        subprocess.run(["git", "-C", PROJECT_DIR, "push", "origin", "v1.1-dev"], check=True)
+        logger.info("✅ GitHub sync completed successfully")
+    except subprocess.CalledProcessError as e:
+        logger.error(f"❌ GitHub sync failed: {e}")
 
-def safety_checks() -> bool:
-    """Run lightweight pre-push checks before syncing."""
-    log("🔍 Running safety pre-push checks...")
-    code, out, err = run_command(["git", "status", "--porcelain"])
-    if code != 0:
-        log(f"❌ Git status failed: {err}")
-        return False
-    if not out:
-        log("✅ Working tree clean")
-    else:
-        log("⚠️ Uncommitted changes detected, proceeding with caution")
-    return True
+def run_sync_agent():
+    logger.info("🚀 GitHub Sync Agent started")
+    last_sync = 0
+    while True:
+        try:
+            now = time.time()
+            if now - last_sync >= SYNC_INTERVAL:
+                run_git_sync()
+                last_sync = now
 
-def sync_to_github():
-    """Perform GitHub commit and push with heartbeat updates."""
-    log("🚀 Starting GitHub sync...")
+            # Heartbeat
+            write_heartbeat()
 
-    # Update heartbeat at start
-    write_heartbeat("github_sync", status="starting")
+            time.sleep(HEARTBEAT_INTERVAL)
 
-    if not safety_checks():
-        log("❌ Safety checks failed, aborting sync")
-        write_heartbeat("github_sync", status="failed_checks")
-        return
-
-    # Add changes
-    code, out, err = run_command(["git", "add", "-A"])
-    if code != 0:
-        log(f"❌ Git add failed: {err}")
-        write_heartbeat("github_sync", status="add_failed")
-        return
-
-    # Commit (allow empty to force sync heartbeat)
-    commit_msg = f"Auto-sync {datetime.now(timezone.utc).isoformat()}"
-    code, out, err = run_command(["git", "commit", "-m", commit_msg, "--allow-empty"])
-    if code == 0:
-        log(f"✅ Commit created: {commit_msg}")
-    else:
-        log(f"ℹ️ Commit skipped: {err}")
-
-    # Push
-    code, out, err = run_command(["git", "push", "origin", BRANCH])
-    if code == 0:
-        log(f"✅ GitHub sync completed successfully\n{out}")
-        write_heartbeat("github_sync", status="synced")
-    else:
-        log(f"❌ GitHub push failed: {err}")
-        write_heartbeat("github_sync", status="push_failed")
-
-def main():
-    try:
-        sync_to_github()
-    except KeyboardInterrupt:
-        log("⚠️ Interrupted by user")
-        write_heartbeat("github_sync", status="interrupted")
-        sys.exit(1)
-    except Exception as e:
-        log(f"💥 Unexpected error: {e}")
-        write_heartbeat("github_sync", status="crashed")
-        sys.exit(1)
+        except Exception as e:
+            logger.error(f"❌ Error in GitHub Sync loop: {e}")
+            time.sleep(HEARTBEAT_INTERVAL)
 
 if __name__ == "__main__":
-    main()
+    run_sync_agent()
