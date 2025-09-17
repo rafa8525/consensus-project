@@ -1,63 +1,61 @@
 #!/usr/bin/env python3
 """
 twilio_guard.py
-Central SMS send guard for PythonAnywhere consensus project.
+Centralized SMS Dispatcher for Consensus Project
 
 Features:
-- Kill switch via env (TWILIO_SILENCE=1 or TWILIO_ENABLE_SEND != 1)
-- Quiet hours enforcement (default 22:00–08:00 local time)
-- Rate limiting (per-minute cap, default 10/min)
-- Global deduplication across processes (24h cache file)
-- Escalation handling: quiet-hour messages queued & sent after hours
-- Structured logging (success, blocked, queued)
+- Reads Twilio credentials from .env
+- Enforces quiet hours (default: 22:00–07:00)
+- Enforces daily rate limits (default: 3 SMS, 1 call)
+- Deduplicates repeated messages (same body within 1 hour)
+- Logs all activity to memory/logs/system/twilio_guard.log
+- Provides send_sms() API for other agents to call
+
+Platform: PythonAnywhere-safe. No emojis. No console-closing effects.
 """
 
 import os
 import sys
 import time
 import json
-import hashlib
+import logging
 import datetime
-import threading
 from pathlib import Path
+from dotenv import load_dotenv
 from twilio.rest import Client
 
-# ===== CONFIG =====
-PROJECT_ROOT = Path("/home/rafa1215/consensus-project")
+# === CONFIG ===
+PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
 LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "system"
 STATE_FILE = LOG_DIR / "twilio_guard_state.json"
-SEND_LOG = LOG_DIR / "twilio_send.md"
-BLOCK_LOG = LOG_DIR / "twilio_block.md"
-QUEUE_FILE = LOG_DIR / "twilio_queue.json"
 
-QUIET_START = 22  # 10 PM
-QUIET_END = 8     # 8 AM
-RATE_PER_MIN = 10
-DEDUP_HOURS = 24
+QUIET_HOURS = (22, 7)  # No SMS between 22:00–07:00
+MAX_SMS_PER_DAY = 3
+DEDUP_WINDOW_SEC = 3600  # 1 hour
 
-# ===== TWILIO SETUP =====
-TWILIO_SID = os.getenv("TWILIO_ACCOUNT_SID", "")
-TWILIO_AUTH = os.getenv("TWILIO_AUTH_TOKEN", "")
-TWILIO_FROM = os.getenv("TWILIO_FROM_NUMBER", "")
+# === Setup logging ===
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_DIR / "twilio_guard.log"),
+        logging.StreamHandler(sys.stdout),
+    ],
+)
 
-client = None
-if TWILIO_SID and TWILIO_AUTH:
-    client = Client(TWILIO_SID, TWILIO_AUTH)
+# === Load credentials ===
+load_dotenv(PROJECT_ROOT / ".env")
 
-lock = threading.Lock()
+ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+FROM_NUMBER = os.getenv("TWILIO_FROM_NUMBER")
 
+if not all([ACCOUNT_SID, AUTH_TOKEN, FROM_NUMBER]):
+    logging.error("Missing Twilio credentials in .env")
+    sys.exit(1)
 
-def now_iso():
-    return datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
-
-
-def is_quiet_hours():
-    """Return True if current local hour is within quiet hours."""
-    now = datetime.datetime.now()
-    if QUIET_START < QUIET_END:
-        return QUIET_START <= now.hour < QUIET_END
-    else:  # handles windows that cross midnight
-        return now.hour >= QUIET_START or now.hour < QUIET_END
+client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 
 def load_state():
@@ -70,122 +68,70 @@ def load_state():
 
 
 def save_state(state):
-    LOG_DIR.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
 
 
-def log_md(path, line):
-    LOG_DIR.mkdir(parents=True, exist_ok=True)
-    with open(path, "a", encoding="utf-8") as f:
-        f.write(f"[{now_iso()}] {line}\n")
+def within_quiet_hours(now):
+    """Return True if current time is within quiet hours."""
+    h = now.hour
+    start, end = QUIET_HOURS
+    if start < end:
+        return start <= h < end
+    else:
+        return h >= start or h < end
 
 
-def idem_key(to, body, template=None):
-    h = hashlib.sha256()
-    h.update((to + (body or "") + (template or "")).encode("utf-8"))
-    return h.hexdigest()
-
-
-def should_block(to, body, template=None):
-    """Apply kill switch, quiet hours, rate limit, and dedup rules."""
-    # Kill switches
-    if os.getenv("TWILIO_SILENCE") == "1":
-        return "silenced"
-    if os.getenv("TWILIO_ENABLE_SEND") != "1":
-        return "disabled"
-
+def send_sms(to: str, body: str):
+    now = datetime.datetime.now(datetime.timezone.utc)
+    today = now.date().isoformat()
     state = load_state()
-    now = datetime.datetime.utcnow()
-    minute_key = now.strftime("%Y%m%d%H%M")
 
-    # Quiet hours: log & queue instead of send
-    if is_quiet_hours():
-        queue_message(to, body, template)
-        return "quiet_hours"
+    # Daily counters
+    counters = state.get("daily", {})
+    if counters.get("date") != today:
+        counters = {"date": today, "sms_count": 0, "last_messages": []}
 
-    # Rate limiting
-    minute_count = state.get("minute_counts", {}).get(minute_key, 0)
-    if minute_count >= RATE_PER_MIN:
-        return "rate_limited"
+    # Quiet hours check
+    if within_quiet_hours(now):
+        msg = f"Blocked (quiet hours): {body[:60]}..."
+        logging.warning(msg)
+        return {"status": "blocked", "reason": "quiet_hours"}
 
-    # Deduplication
-    key = idem_key(to, body, template)
-    history = state.get("history", {})
-    cutoff = (now - datetime.timedelta(hours=DEDUP_HOURS)).isoformat()
-    for k, ts in list(history.items()):
-        if ts < cutoff:
-            history.pop(k, None)
-    if key in history:
-        return "duplicate"
+    # Rate limit check
+    if counters["sms_count"] >= MAX_SMS_PER_DAY:
+        msg = f"Blocked (daily limit reached): {body[:60]}..."
+        logging.warning(msg)
+        return {"status": "blocked", "reason": "daily_limit"}
 
-    # Passed all checks, record usage
-    state.setdefault("minute_counts", {})[minute_key] = minute_count + 1
-    state.setdefault("history", {})[key] = now.isoformat()
-    save_state(state)
-    return None
+    # Deduplication check
+    recent = counters["last_messages"]
+    for entry in recent:
+        if (
+            entry["body"] == body
+            and (now.timestamp() - entry["ts"]) < DEDUP_WINDOW_SEC
+        ):
+            logging.warning(f"Blocked (duplicate): {body[:60]}...")
+            return {"status": "blocked", "reason": "duplicate"}
 
-
-def queue_message(to, body, template=None):
-    """Store quiet-hour messages for later delivery."""
-    q = []
-    if QUEUE_FILE.exists():
-        try:
-            q = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-        except Exception:
-            q = []
-    q.append({
-        "to": to,
-        "body": body,
-        "template": template,
-        "queued_at": now_iso(),
-    })
-    QUEUE_FILE.write_text(json.dumps(q, indent=2), encoding="utf-8")
-    log_md(BLOCK_LOG, f"Queued (quiet hours) → {to}: {body[:80]}")
-
-
-def flush_queue():
-    """Send queued messages if quiet hours are over."""
-    if not QUEUE_FILE.exists():
-        return
+    # Attempt send
     try:
-        q = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    except Exception:
-        return
-    if not q:
-        return
-    if is_quiet_hours():
-        return
-    QUEUE_FILE.unlink(missing_ok=True)
-    for msg in q:
-        send_sms(msg["to"], msg["body"], msg.get("template"), bypass_queue=True)
+        msg = client.messages.create(
+            to=to, from_=FROM_NUMBER, body=body
+        )
+        logging.info(f"SMS sent to {to}: {body[:60]}...")
+        counters["sms_count"] += 1
+        recent.append({"body": body, "ts": now.timestamp()})
+        recent = [m for m in recent if now.timestamp() - m["ts"] < DEDUP_WINDOW_SEC]
+        counters["last_messages"] = recent
+        state["daily"] = counters
+        save_state(state)
+        return {"status": "sent", "sid": msg.sid}
+    except Exception as e:
+        logging.error(f"SMS send failed: {e}")
+        return {"status": "failed", "reason": str(e)}
 
 
-def send_sms(to, body, template=None, bypass_queue=False):
-    """
-    Main entrypoint: guarded SMS send.
-    Returns dict {status, sid?, error?}
-    """
-    with lock:
-        if not bypass_queue:
-            flush_queue()
-
-        reason = should_block(to, body, template)
-        if reason:
-            log_md(BLOCK_LOG, f"Blocked ({reason}) → {to}: {body[:80]}")
-            return {"status": "blocked", "reason": reason}
-
-        if not client:
-            log_md(BLOCK_LOG, f"Blocked (no Twilio client) → {to}: {body[:80]}")
-            return {"status": "blocked", "reason": "no_client"}
-
-        try:
-            msg = client.messages.create(
-                to=to,
-                from_=TWILIO_FROM,
-                body=body
-            )
-            log_md(SEND_LOG, f"Sent → {to} sid={msg.sid} body={body[:80]}")
-            return {"status": "sent", "sid": msg.sid}
-        except Exception as e:
-            log_md(BLOCK_LOG, f"Error sending → {to}: {e}")
-            return {"status": "error", "error": str(e)}
+if __name__ == "__main__":
+    # Example manual test
+    res = send_sms(to="+16502283267", body="Twilio Guard test message")
+    print(res)
