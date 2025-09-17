@@ -1,71 +1,82 @@
 #!/usr/bin/env python3
-"""
-integration_reporter.py
-Hourly log summarizer for Consensus Project
-
-Scans guard/sync logs for anomalies and appends a summary to integration_report.md.
-Safe to run under cron or guard loops; never closes the console.
-
-Author: AI Consensus Project
-"""
+# integration_reporter.py
+# Purpose: Summarize system health across guards and services into one report.
+# Safe for PythonAnywhere. No emojis, no console-closing behavior.
 
 import os
-import re
+import json
 import datetime
+from pathlib import Path
 
-# Paths
-BASE_DIR = os.path.expanduser("~/consensus-project")
-LOG_DIR = os.path.join(BASE_DIR, "memory/logs/system")
-REPORT_FILE = os.path.join(LOG_DIR, "integration_report.md")
+# ===== CONFIG =====
+PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
+LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "system"
+REPORT_FILE = LOG_DIR / "integration_report.md"
 
-LOG_FILES = {
-    "MCL Guard": os.path.join(LOG_DIR, "mcl_guard.log"),
-    "Voice Guard": os.path.join(LOG_DIR, "voice_guard.log"),
-    "GitHub Sync": os.path.join(LOG_DIR, "github_sync_launcher.log"),
-}
+VOICE_GUARD_LOG = LOG_DIR / "voice_guard.log"
+GITHUB_SYNC_LOG = LOG_DIR / "github_sync_launcher.log"
+ABSORB_STATUS = LOG_DIR / "absorb_status.json"
+ABSORB_GUARD_LOG = LOG_DIR / "absorb_guard.md"
 
-# Patterns for anomaly detection
-ERROR_PATTERNS = [
-    r"❌",               # explicit failure markers
-    r"Error",            # generic error
-    r"FAILED",           # uppercase fails
-    r"Resource temporarily unavailable",
-    r"stale",            # heartbeat stale
-]
+# ===== UTILS =====
+def now_iso():
+    return datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-def scan_log(file_path):
-    """Return list of anomaly lines from the given log file."""
-    if not os.path.exists(file_path):
-        return [f"(no log file found: {file_path})"]
-
-    anomalies = []
+def safe_tail(path: Path, n=20):
+    if not path.exists():
+        return [f"{path.name} not found"]
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
+        with path.open("r", encoding="utf-8") as f:
             lines = f.readlines()
-        # Look only at last 200 lines for brevity
-        for line in lines[-200:]:
-            if any(re.search(pattern, line, re.IGNORECASE) for pattern in ERROR_PATTERNS):
-                anomalies.append(line.strip())
+        return lines[-n:]
     except Exception as e:
-        anomalies.append(f"(error reading log {file_path}: {e})")
+        return [f"Error reading {path.name}: {e}"]
 
-    return anomalies or ["No anomalies detected."]
+def load_json(path: Path):
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
 
-def write_report():
-    """Write the hourly summary report to integration_report.md"""
-    now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-    with open(REPORT_FILE, "a", encoding="utf-8") as f:
-        f.write(f"\n## Integration Report {now}\n")
-        for name, path in LOG_FILES.items():
-            f.write(f"\n### {name} ({os.path.basename(path)})\n")
-            anomalies = scan_log(path)
-            for line in anomalies:
-                f.write(f"- {line}\n")
+# ===== SECTION COLLECTORS =====
+def collect_voice_guard():
+    lines = safe_tail(VOICE_GUARD_LOG, 5)
+    return ["### Voice Guard"] + lines
 
+def collect_github_sync():
+    lines = safe_tail(GITHUB_SYNC_LOG, 5)
+    return ["### GitHub Sync"] + lines
+
+def collect_absorb_guard():
+    status = load_json(ABSORB_STATUS)
+    lines = safe_tail(ABSORB_GUARD_LOG, 5)
+    out = ["### Absorb Guard"]
+    if status:
+        out.append("Absorb Status JSON:")
+        out.append(json.dumps(status, indent=2))
+    else:
+        out.append("No absorb_status.json available.")
+    out.append("Recent absorb_guard.md lines:")
+    out.extend(lines)
+    return out
+
+# ===== MAIN =====
 def main():
-    os.makedirs(LOG_DIR, exist_ok=True)
-    write_report()
-    print(f"[{datetime.datetime.utcnow().isoformat()}Z] ✅ Integration report written to {REPORT_FILE}")
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    sections = []
+
+    sections.append(f"# Integration Report\nGenerated {now_iso()}\n")
+
+    sections.extend(collect_voice_guard())
+    sections.append("")  # spacer
+    sections.extend(collect_github_sync())
+    sections.append("")
+    sections.extend(collect_absorb_guard())
+
+    REPORT_FILE.write_text("\n".join(sections), encoding="utf-8")
+    print(f"[{now_iso()}] Integration report written to {REPORT_FILE}")
 
 if __name__ == "__main__":
     main()
