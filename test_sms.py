@@ -1,32 +1,53 @@
 #!/usr/bin/env python3
 """
 test_sms.py
-Purpose: Standalone test harness for twilio_guard.send_sms
-Safe: No console closure, logs both to stdout and project log file
+Safe tester for twilio_guard.py
+
+- Sends 3 test messages to verify daily limits
+- Tries a duplicate message (should be blocked)
+- Prints results clearly to console
 """
 
 import datetime
 from pathlib import Path
-from twilio_guard import send_sms
+import importlib.util
+import sys
 
-# Config
+PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
+GUARD_FILE = PROJECT_ROOT / "twilio_guard.py"
+
+# Dynamically load twilio_guard.py
+spec = importlib.util.spec_from_file_location("twilio_guard", str(GUARD_FILE))
+twilio_guard = importlib.util.module_from_spec(spec)
+sys.modules["twilio_guard"] = twilio_guard
+spec.loader.exec_module(twilio_guard)
+
 TO_NUMBER = "+16502283267"
-LOG_FILE = Path("/home/rafa1215/consensus-project/memory/logs/system/sms_test.md")
 
-def log(line: str):
-    ts = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with LOG_FILE.open("a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {line}\n")
-    print(f"[{ts}] {line}")
+def run_tests():
+    now = datetime.datetime.now()
+    print(f"[{now.isoformat()}] Starting SMS guard tests\n")
 
-def main():
-    body = "✅ Test SMS from twilio_guard test script"
-    try:
-        result = send_sms(to=TO_NUMBER, body=body)
-        log(f"SUCCESS: SMS sent to {TO_NUMBER}. Result: {result}")
-    except Exception as e:
-        log(f"ERROR: Failed to send SMS to {TO_NUMBER}. Error: {e}")
+    # 1. Send first message
+    res1 = twilio_guard.send_sms(TO_NUMBER, "Test 1: First message")
+    print("Test 1:", res1)
+
+    # 2. Send duplicate immediately (should be blocked as duplicate)
+    res2 = twilio_guard.send_sms(TO_NUMBER, "Test 1: First message")
+    print("Test 2 (duplicate):", res2)
+
+    # 3. Send two more distinct messages (to hit daily limit)
+    res3 = twilio_guard.send_sms(TO_NUMBER, "Test 2: Second message")
+    print("Test 3:", res3)
+
+    res4 = twilio_guard.send_sms(TO_NUMBER, "Test 3: Third message")
+    print("Test 4:", res4)
+
+    # 4. Try a 4th message (should be blocked by daily limit)
+    res5 = twilio_guard.send_sms(TO_NUMBER, "Test 4: Over daily limit")
+    print("Test 5 (limit exceeded):", res5)
+
+    print("\n✅ Done. Check memory/logs/system/twilio_guard.log for details.")
 
 if __name__ == "__main__":
-    main()
+    run_tests()
