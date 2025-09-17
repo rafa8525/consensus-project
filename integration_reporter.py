@@ -1,82 +1,77 @@
 #!/usr/bin/env python3
 # integration_reporter.py
-# Purpose: Summarize system health across guards and services into one report.
-# Safe for PythonAnywhere. No emojis, no console-closing behavior.
+# Purpose: Unified health reporter for core services with daily roll-ups
 
 import os
-import json
 import datetime
 from pathlib import Path
 
-# ===== CONFIG =====
 PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
 LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "system"
 REPORT_FILE = LOG_DIR / "integration_report.md"
+DATESTAMP = datetime.date.today().isoformat()
+DAILY_FILE = LOG_DIR / f"integration_report_{DATESTAMP}.md"
 
-VOICE_GUARD_LOG = LOG_DIR / "voice_guard.log"
+# Known log sources
+VOICE_GUARD_LOG = LOG_DIR / "voice_guard.md"
 GITHUB_SYNC_LOG = LOG_DIR / "github_sync_launcher.log"
-ABSORB_STATUS = LOG_DIR / "absorb_status.json"
-ABSORB_GUARD_LOG = LOG_DIR / "absorb_guard.md"
+ABSORB_MD = LOG_DIR / "absorb_guard.md"
+ABSORB_STATUS_JSON = LOG_DIR / "absorb_status.json"
 
-# ===== UTILS =====
 def now_iso():
-    return datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
-def safe_tail(path: Path, n=20):
+def tail_lines(path: Path, n: int = 20):
+    """Read the last N lines of a file, or return a message if missing."""
     if not path.exists():
         return [f"{path.name} not found"]
-    try:
-        with path.open("r", encoding="utf-8") as f:
-            lines = f.readlines()
-        return lines[-n:]
-    except Exception as e:
-        return [f"Error reading {path.name}: {e}"]
+    with path.open("r", encoding="utf-8", errors="ignore") as f:
+        lines = f.readlines()
+        return lines[-n:] if lines else ["(empty)"]
 
-def load_json(path: Path):
-    if not path.exists():
-        return None
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return None
+def build_report():
+    lines = []
+    lines.append("# Integration Report")
+    lines.append(f"Generated {now_iso()}")
 
-# ===== SECTION COLLECTORS =====
-def collect_voice_guard():
-    lines = safe_tail(VOICE_GUARD_LOG, 5)
-    return ["### Voice Guard"] + lines
+    # --- Voice Guard ---
+    lines.append("### Voice Guard")
+    lines.extend([f"    {l.strip()}" for l in tail_lines(VOICE_GUARD_LOG, 10)])
 
-def collect_github_sync():
-    lines = safe_tail(GITHUB_SYNC_LOG, 5)
-    return ["### GitHub Sync"] + lines
+    # --- GitHub Sync ---
+    lines.append("### GitHub Sync")
+    lines.extend([f"    {l.strip()}" for l in tail_lines(GITHUB_SYNC_LOG, 15)])
 
-def collect_absorb_guard():
-    status = load_json(ABSORB_STATUS)
-    lines = safe_tail(ABSORB_GUARD_LOG, 5)
-    out = ["### Absorb Guard"]
-    if status:
-        out.append("Absorb Status JSON:")
-        out.append(json.dumps(status, indent=2))
-    else:
-        out.append("No absorb_status.json available.")
-    out.append("Recent absorb_guard.md lines:")
-    out.extend(lines)
-    return out
+    # --- Absorb Guard ---
+    lines.append("### Absorb Guard")
+    if ABSORB_STATUS_JSON.exists():
+        try:
+            data = ABSORB_STATUS_JSON.read_text(encoding="utf-8")
+            lines.append("Absorb Status JSON:")
+            lines.append("```json")
+            lines.append(data.strip())
+            lines.append("```")
+        except Exception as e:
+            lines.append(f"    Failed to read absorb_status.json: {e}")
+    lines.append("Recent absorb_guard.md lines:")
+    lines.extend([f"    {l.strip()}" for l in tail_lines(ABSORB_MD, 10)])
 
-# ===== MAIN =====
-def main():
-    LOG_DIR.mkdir(parents=True, exist_ok=True)
-    sections = []
+    return "\n".join(lines) + "\n"
 
-    sections.append(f"# Integration Report\nGenerated {now_iso()}\n")
+def write_reports():
+    report = build_report()
+    os.makedirs(LOG_DIR, exist_ok=True)
 
-    sections.extend(collect_voice_guard())
-    sections.append("")  # spacer
-    sections.extend(collect_github_sync())
-    sections.append("")
-    sections.extend(collect_absorb_guard())
+    # Rolling report
+    with REPORT_FILE.open("w", encoding="utf-8") as f:
+        f.write(report)
 
-    REPORT_FILE.write_text("\n".join(sections), encoding="utf-8")
-    print(f"[{now_iso()}] Integration report written to {REPORT_FILE}")
+    # Daily roll-up (append so history accumulates)
+    with DAILY_FILE.open("a", encoding="utf-8") as f:
+        f.write(report)
+        f.write("\n---\n\n")
+
+    print(f"[{now_iso()}] Integration report written to {REPORT_FILE} and {DAILY_FILE}")
 
 if __name__ == "__main__":
-    main()
+    write_reports()
