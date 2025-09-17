@@ -1,178 +1,142 @@
 #!/usr/bin/env python3
 """
-MCL Guard - Monitors master_control_loop.py and github_sync.py
+mcl_guard.py - Guard for Master Control Loop and Integration Reporter
 
-This script ensures both core services stay alive and healthy by:
-1. Checking JSON heartbeat files for freshness
-2. Falling back to log file parsing if JSON missing/invalid
-3. Restarting processes intelligently (cooldowns + max retries)
-4. Logging all activity to memory/logs/system/mcl_guard.log
+Monitors:
+1. master_control_loop.py (Always-On)
+2. integration_reporter.py (hourly)
+
+Actions:
+- Checks if processes are alive
+- Verifies heartbeat/report freshness
+- Restarts master_control_loop.py if missing or stale
+- Logs all activity to memory/logs/system/mcl_guard.log
 """
 
 import os
 import sys
-import json
 import time
+import json
 import subprocess
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
-# Config
-SERVICES = {
-    "master_control_loop.py": {
-        "heartbeat": "memory/logs/system/mcl_heartbeat.json",
-        "log": "memory/logs/system/mcl.log",
-        "timeout": 90,  # seconds
-    },
-    "github_sync.py": {
-        "heartbeat": "memory/logs/system/github_sync_heartbeat.json",
-        "log": "memory/logs/system/github_sync.log",
-        "timeout": 120,  # seconds
-    }
-}
-GUARD_SLEEP_INTERVAL = 15
-MAX_RESTART_ATTEMPTS = 3
-RESTART_COOLDOWN = 30  # seconds
+# === Config ===
+PROJECT_DIR = os.path.expanduser("~/consensus-project")
+LOG_FILE = os.path.join(PROJECT_DIR, "memory/logs/system/mcl_guard.log")
 
-# Setup logging
-os.makedirs("memory/logs/system", exist_ok=True)
+MCL_SCRIPT = "master_control_loop.py"
+MCL_HEARTBEAT = os.path.join(PROJECT_DIR, "memory/logs/system/mcl_heartbeat.json")
+MCL_TIMEOUT = 120  # seconds
+
+INTEGRATION_REPORT = os.path.join(PROJECT_DIR, "memory/logs/system/integration_report.md")
+REPORT_TIMEOUT = 3700  # ~1h + grace
+
+SLEEP_INTERVAL = 30  # seconds between checks
+
+# === Logging setup ===
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("memory/logs/system/mcl_guard.log"),
-        logging.StreamHandler()
-    ]
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.FileHandler(LOG_FILE), logging.StreamHandler()]
 )
-logger = logging.getLogger("MCL_Guard")
+logger = logging.getLogger(__name__)
 
 
-class ServiceGuard:
-    def __init__(self, name, heartbeat, log, timeout):
-        self.name = name
-        self.heartbeat_file = Path(heartbeat)
-        self.log_file = Path(log)
-        self.timeout = timeout
-        self.restart_attempts = 0
-        self.last_restart_time = 0
-        self.pid = None
-
-    def read_json_heartbeat(self):
-        try:
-            if not self.heartbeat_file.exists():
-                return None
-            data = json.loads(self.heartbeat_file.read_text())
-            ts_str = data.get("timestamp")
-            if not ts_str:
-                return None
-            hb_time = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-            age = (datetime.now(timezone.utc) - hb_time).total_seconds()
-            return {"age": age, "pid": data.get("pid"), "status": data.get("status")}
-        except Exception as e:
-            logger.debug(f"{self.name} JSON heartbeat error: {e}")
-            return None
-
-    def parse_log_heartbeat(self):
-        try:
-            if not self.log_file.exists():
-                return None
-            lines = self.log_file.read_text().splitlines()[-50:]
-            for line in reversed(lines):
-                if "HEARTBEAT:" in line:
-                    ts_str = line.split("HEARTBEAT:")[-1].strip()
-                    try:
-                        hb_time = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-                        age = (datetime.now(timezone.utc) - hb_time).total_seconds()
-                        return {"age": age, "pid": "unknown", "status": "alive"}
-                    except Exception:
-                        continue
-            return None
-        except Exception as e:
-            logger.debug(f"{self.name} log parse error: {e}")
-            return None
-
-    def get_heartbeat(self):
-        hb = self.read_json_heartbeat()
-        if hb:
-            return hb
-        return self.parse_log_heartbeat()
-
-    def is_running(self):
-        try:
-            result = subprocess.run(
-                ["pgrep", "-f", self.name],
-                capture_output=True, text=True, timeout=5
-            )
-            if result.returncode == 0 and result.stdout.strip():
-                self.pid = result.stdout.strip().split("\n")[0]
-                return True
-            self.pid = None
-            return False
-        except Exception as e:
-            logger.error(f"Error checking {self.name} process: {e}")
-            return False
-
-    def can_restart(self):
-        now = time.time()
-        if now - self.last_restart_time < RESTART_COOLDOWN:
-            return False
-        if self.restart_attempts >= MAX_RESTART_ATTEMPTS:
-            return False
-        return True
-
-    def restart(self):
-        if not self.can_restart():
-            return False
-        try:
-            subprocess.Popen(
-                ["python3", self.name],
-                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                start_new_session=True
-            )
-            self.restart_attempts += 1
-            self.last_restart_time = time.time()
-            logger.warning(f"{self.name} restarted (attempt {self.restart_attempts})")
-            return True
-        except Exception as e:
-            logger.error(f"Failed to restart {self.name}: {e}")
-            self.restart_attempts += 1
-            self.last_restart_time = time.time()
-            return False
-
-    def check(self):
-        hb = self.get_heartbeat()
-        if not hb:
-            if self.is_running():
-                logger.warning(f"{self.name} running but no heartbeat")
-                return "running_no_hb"
-            else:
-                logger.error(f"{self.name} not running - restarting")
-                return "restarted" if self.restart() else "restart_failed"
-
-        if hb["age"] > self.timeout:
-            if self.is_running():
-                logger.error(f"{self.name} heartbeat stale ({hb['age']:.1f}s)")
-                return "hung"
-            else:
-                logger.error(f"{self.name} not running (stale heartbeat) - restarting")
-                return "restarted" if self.restart() else "restart_failed"
-
-        # Fresh heartbeat
-        if self.restart_attempts > 0:
-            self.restart_attempts = 0
-        logger.info(f"{self.name} healthy (age {hb['age']:.1f}s)")
-        return "healthy"
+# === Helpers ===
+def read_json_heartbeat(path, timeout):
+    """Check freshness of a JSON heartbeat file."""
+    if not os.path.exists(path):
+        return False, f"Missing {path}"
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        ts = datetime.fromisoformat(data["timestamp"].replace("Z", "+00:00"))
+        age = (datetime.now(timezone.utc) - ts).total_seconds()
+        if age > timeout:
+            return False, f"Stale ({age:.1f}s old)"
+        return True, f"Fresh ({age:.1f}s old)"
+    except Exception as e:
+        return False, f"Error reading heartbeat: {e}"
 
 
-def main():
-    guards = [ServiceGuard(name, **cfg) for name, cfg in SERVICES.items()]
-    logger.info("🚀 MCL Guard started - monitoring core services")
+def check_integration_report():
+    """Verify integration_report.md is updated hourly."""
+    if not os.path.exists(INTEGRATION_REPORT):
+        return False, "Missing integration_report.md"
+    try:
+        mtime = os.path.getmtime(INTEGRATION_REPORT)
+        age = time.time() - mtime
+        if age > REPORT_TIMEOUT:
+            return False, f"Report stale ({age:.1f}s old)"
+        return True, f"Report fresh ({age:.1f}s old)"
+    except Exception as e:
+        return False, f"Error checking report: {e}"
+
+
+def is_process_running(name):
+    """Check if process with given script name is alive."""
+    try:
+        result = subprocess.run(
+            ["pgrep", "-f", name],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        return result.returncode == 0 and bool(result.stdout.strip())
+    except Exception as e:
+        logger.error(f"Error checking process {name}: {e}")
+        return False
+
+
+def restart_process(script):
+    """Restart a Python script in background."""
+    try:
+        logger.info(f"🔄 Restarting {script}...")
+        subprocess.Popen(
+            ["python3", os.path.join(PROJECT_DIR, script)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True
+        )
+        time.sleep(2)
+        return is_process_running(script)
+    except Exception as e:
+        logger.error(f"Failed to restart {script}: {e}")
+        return False
+
+
+# === Main loop ===
+def run():
+    logger.info("🚀 mcl_guard.py started.")
     while True:
-        for g in guards:
-            g.check()
-        time.sleep(GUARD_SLEEP_INTERVAL)
+        # --- Check master_control_loop ---
+        alive, msg = read_json_heartbeat(MCL_HEARTBEAT, MCL_TIMEOUT)
+        if alive:
+            logger.info(f"✅ master_control_loop healthy: {msg}")
+        else:
+            logger.warning(f"⚠️ master_control_loop issue: {msg}")
+            if not is_process_running(MCL_SCRIPT):
+                if restart_process(MCL_SCRIPT):
+                    logger.info("✅ master_control_loop restarted successfully")
+                else:
+                    logger.error("❌ master_control_loop restart failed")
+
+        # --- Check integration_reporter ---
+        ok, msg = check_integration_report()
+        if ok:
+            logger.info(f"✅ Integration Reporter healthy: {msg}")
+        else:
+            logger.warning(f"⚠️ Integration Reporter issue: {msg}")
+
+        time.sleep(SLEEP_INTERVAL)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        run()
+    except KeyboardInterrupt:
+        logger.info("mcl_guard.py stopped manually")
+        sys.exit(0)
