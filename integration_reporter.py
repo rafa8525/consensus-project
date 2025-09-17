@@ -19,7 +19,7 @@ ABSORB_MD = LOG_DIR / "absorb_guard.md"
 ABSORB_STATUS_JSON = LOG_DIR / "absorb_status.json"
 
 def now_iso():
-    return datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 def tail_lines(path: Path, n: int = 20):
     """Read the last N lines of a file, or return a message if missing."""
