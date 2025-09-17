@@ -1,4 +1,3 @@
-
 import os
 import requests
 
@@ -9,7 +8,7 @@ if not GITHUB_TOKEN:
 
 headers = {
     "Authorization": f"token {GITHUB_TOKEN}",
-    "Accept": "application/vnd.github.v3+json"
+    "Accept": "application/vnd.github.v3+json",
 }
 
 # Set your GitHub details
@@ -24,17 +23,14 @@ with open(file_path, "r", encoding="utf-8") as f:
     content = f.read()
 
 import base64
+
 encoded_content = base64.b64encode(content.encode()).decode()
 
 # Construct the API URL
 url = f"https://api.github.com/repos/{repo}/contents/{path}"
 
 # Construct the JSON payload
-payload = {
-    "message": commit_message,
-    "branch": branch,
-    "content": encoded_content
-}
+payload = {"message": commit_message, "branch": branch, "content": encoded_content}
 
 # Make the request to upload the file
 response = requests.put(url, headers=headers, json=payload)
