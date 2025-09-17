@@ -1,0 +1,4 @@
+Agent,Focus,Role,SupportSite
+Reliability Ranger,Failure isolation & watchdogs,Site Reliability,https://sre.google/sre-book/chapters/monitoring-distributed-systems/
+RateLimit Raccoon,SMS policy & anti-spam,Messaging Safety,https://www.twilio.com/docs/usage/rate-limits
+Queue Quokka,File-queue idempotency & retries,System Integration,https://docs.python.org/3/library/pathlib.html

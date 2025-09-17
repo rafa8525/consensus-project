@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+import os
+import subprocess
+import time
+from datetime import datetime
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("MCL")
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+# === Memory Watchdog ===
+class MemoryAbsorbHandler(FileSystemEventHandler):
+    def __init__(self, absorb_cmd):
+        super().__init__()
+        self.absorb_cmd = absorb_cmd
+
+    def on_created(self, event):
+        if not event.is_directory:
+            subprocess.Popen(self.absorb_cmd, shell=True)
+
+    def on_modified(self, event):
+        # disabled to prevent fork storms; handled by scheduler/guard
+        return
+
+def start_memory_watcher():
+    memory_path = os.path.expanduser("~/consensus-project/memory")
+    absorb_cmd = "/usr/bin/python3 ~/consensus-project/tools/absorb_runner.py && /usr/bin/python3 ~/consensus-project/tools/absorb_log_append.py auto"
+    event_handler = MemoryAbsorbHandler(absorb_cmd)
+    observer = Observer()
+    observer.schedule(event_handler, memory_path, recursive=True)
+    observer.start()
+    print(f"[{datetime.now()}] INFO: Watching '{memory_path}' for changes...")
+    return observer
+
+# === Task Definitions ===
+TASKS = [
+    {
+        "name": "Daily SMS and Push",
+        "script": "/home/rafa1215/consensus-project/daily_sms_and_push.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/agents/daily_sms_and_push.log"
+    },
+    {
+        "name": "Auto Git Sync",
+        "script": "/home/rafa1215/consensus-project/auto_git_sync.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/git/git_sync_log.txt"
+    },
+    {
+        "name": "Heartbeat Logger",
+        "script": "/home/rafa1215/consensus-project/heartbeat_logger.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/heartbeat/heartbeat_log.txt"
+    },
+    {
+        "name": "Watchdog Log Checker",
+        "script": "/home/rafa1215/consensus-project/watchdog_log_checker.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/watchdog/failure_log.txt"
+    },
+    {
+        "name": "Security Audit",
+        "script": "/home/rafa1215/consensus-project/memory/tools/security_audit_runner.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/security/security_audit_log.txt"
+    },
+    {
+        "name": "Weekly Watchdog Alert",
+        "script": "/home/rafa1215/consensus-project/memory/tools/watchdog_weekly_alert.py",
+        "log": "/home/rafa1215/consensus-project/memory/logs/watchdog/weekly_alert_log.txt"
+    }
+]
+
+# Ensure log directories exist
+def ensure_log_dirs():
+    for task in TASKS:
+        log_dir = os.path.dirname(task["log"])
+        os.makedirs(log_dir, exist_ok=True)
+
+# Execute a single task and log result
+def run_task(task):
+    try:
+        result = subprocess.run(["python3", task["script"]], capture_output=True, text=True, timeout=120)
+        status = "succeeded" if result.returncode == 0 else f"failed (code {result.returncode})"
+        log_entry = f"[{datetime.now()}] Task {status}: {task['name']}\n"
+        with open(task["log"], "a") as f:
+            f.write(log_entry)
+        print(f"[INFO] {log_entry.strip()}")
+    except Exception as e:
+        logger.error(f"Exception: {e}")
+if __name__ == "__main__":
+    print(f"[{datetime.now()}] INFO: === Master Control Loop Started ===")
+    ensure_log_dirs()
+
+    # Start memory watcher
+    observer = start_memory_watcher()
+
+    # Run all tasks once at startup
+    for task in TASKS:
+        print(f"[{datetime.now()}] INFO: Starting task: {task['name']}")
+        run_task(task)
+
+    # Keep process alive (so Always-on task runs forever)
+    try:
+        while True:
+            time.sleep(60)  # idle loop, memory watcher runs in background
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+# --- begin: sms policy guardrails ---
+import hashlib as _hashlib_guard
+class SmsPolicy:
+    def __init__(self, base_dir):
+        from pathlib import Path
+        self.base = Path(base_dir)
+        self.ledger = self.base / "memory" / "logs" / "system" / "sms_ledger.jsonl"
+        import os
+        self.enabled = os.getenv("SMS_ENABLED","false").lower() == "true"
+        self.whitelist = set([s.strip() for s in os.getenv("SMS_WHITELIST","").split(",") if s.strip()])
+        self.quiet = os.getenv("SMS_QUIET_HOURS","21-08")
+        self.max_per_hour = int(os.getenv("SMS_MAX_PER_HOUR","1"))
+        self.max_per_day  = int(os.getenv("SMS_MAX_PER_DAY","2"))
+        self.allow_voice  = os.getenv("ALLOW_VOICE_CALLS","false").lower() == "true"
+        self.ledger.parent.mkdir(parents=True, exist_ok=True)
+    def _now_local(self):
+        from datetime import datetime
+import logging
+        return datetime.now()
+    def _in_quiet_hours(self, now):
+        try:
+            start,end = self.quiet.split("-"); s,e = int(start), int(end); h = now.hour
+            return (s<=h<=23 or 0<=h<e) if s>e else (s<=h<e)
+        except Exception: return False
+    def _hash_key(self, type_, to, subject=""):
+        day = self._now_local().strftime("%Y-%m-%d")
+        raw = f"{type_}|{to}|{subject}|{day}"
+        return _hashlib_guard.sha256(raw.encode()).hexdigest()[:16]
+    def _counts(self, to):
+        per_hour=per_day=0
+        now = self._now_local()
+        hr_cut  = now.replace(minute=0, second=0, microsecond=0)
+        day_cut = now.replace(hour=0, minute=0, second=0, microsecond=0)
+        if self.ledger.exists():
+            for line in self.ledger.open():
+                try:
+                    import json, datetime as _dtm
+                    rec = json.loads(line)
+                    if rec.get("to")!=to: continue
+                    ts = _dtm.datetime.fromisoformat(rec["timestamp"])
+                    if ts>=hr_cut: per_hour+=1
+                    if ts>=day_cut: per_day+=1
+                except Exception: pass
+        return per_hour, per_day
+    def _seen(self, key):
+        if not self.ledger.exists(): return False
+        for line in self.ledger.open():
+            try:
+                import json
+                if json.loads(line).get("id")==key: return True
+            except Exception: pass
+        return False
+    def should_send(self, type_, to, subject=""):
+        if not self.enabled: return False, "SKIP_DISABLED"
+        if self.whitelist and to not in self.whitelist: return False, "SKIP_NOT_WHITELISTED"
+        if self._in_quiet_hours(self._now_local()): return False, "SKIP_QUIET_HOURS"
+        ph,pd = self._counts(to)
+        if ph>=self.max_per_hour: return False, "SKIP_RATE_HOURLY"
+        if pd>=self.max_per_day:  return False, "SKIP_RATE_DAILY"
+        key = self._hash_key(type_, to, subject)
+        if self._seen(key): return False, "SKIP_DUPLICATE"
+        return True, key
+    def record(self, id_, to, body, status, meta=None):
+        import json
+        rec = {"timestamp": self._now_local().isoformat(timespec="seconds"),
+            "id": id_, "to": to, "status": status, "body": (body or "")[:200],
+            "meta": meta or {}}
+        self.ledger.parent.mkdir(parents=True, exist_ok=True)
+        with self.ledger.open("a") as f: f.write(json.dumps(rec)+"\n")
+# --- end: sms policy guardrails ---
+    def run_security_audit_if_first_day(self):
+        if datetime.now().day == 1:
+            self.run_security_audit()
+
+    def setup_schedules(self):
+        schedule.clear()
+        schedule.every().hour.do(self.absorb_memory)
+        schedule.every().day.at('10:00').do(self.check_swim_nudge)
+        schedule.every().day.at('23:30').do(self.generate_fitness_summary)
+        schedule.every(14).days.at('09:00').do(self.generate_ride_deals_report)
+        schedule.every().day.at('11:00').do(self.run_security_audit_if_first_day)
+
+
