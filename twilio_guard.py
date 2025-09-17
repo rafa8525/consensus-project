@@ -1,71 +1,118 @@
 #!/usr/bin/env python3
 # twilio_guard.py
-# Purpose: Safe Twilio SMS sender with dotenv loading, sandbox guardrails, and logging.
+# Purpose: Controlled Twilio SMS sender with quiet hours, whitelist, and rate limits.
+# Safe defaults: no emoji, no console-closing side effects.
 
 import os
 import sys
-import json
-import datetime
+import time
 import logging
+import datetime
 from pathlib import Path
-from dotenv import load_dotenv
+from collections import defaultdict
 from twilio.rest import Client
 
-# ====== CONFIG ======
-PROJECT_ROOT = Path(__file__).resolve().parent
-LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "system"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-LOG_FILE = LOG_DIR / "twilio_guard.log"
+# --- Paths ---
+PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
+LOG_FILE = PROJECT_ROOT / "memory" / "logs" / "system" / "twilio_guard.log"
+LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
+# --- Logging setup ---
 logging.basicConfig(
-    filename=LOG_FILE,
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_FILE, encoding="utf-8"),
+        logging.StreamHandler(sys.stdout)
+    ]
 )
 
-# ====== LOAD ENV ======
-load_dotenv(dotenv_path=PROJECT_ROOT / ".env")
+# --- Load env ---
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "").strip()
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "").strip()
+TWILIO_FROM_NUMBER = os.getenv("TWILIO_FROM_NUMBER", "").strip()
 
-ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
-AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
-FROM_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
-SAFE_MODE = os.getenv("SMS_SAFE_MODE", "ON").upper()  # ON = sandbox; OFF = live
+SMS_ENABLED = os.getenv("SMS_ENABLED", "false").lower() == "true"
+SMS_WHITELIST = [n.strip() for n in os.getenv("SMS_WHITELIST", "").split(",") if n.strip()]
+SMS_QUIET_HOURS = os.getenv("SMS_QUIET_HOURS", "21-08")
+SMS_MAX_PER_HOUR = int(os.getenv("SMS_MAX_PER_HOUR", "1"))
+SMS_MAX_PER_DAY = int(os.getenv("SMS_MAX_PER_DAY", "2"))
 
-def check_credentials():
-    return all([ACCOUNT_SID, AUTH_TOKEN, FROM_NUMBER])
+# --- State for rate limiting ---
+sent_log = defaultdict(list)  # {number: [timestamps]}
 
-# ====== SMS FUNCTION ======
+def within_quiet_hours():
+    """Return True if current UTC time is within quiet hours."""
+    try:
+        start, end = SMS_QUIET_HOURS.split("-")
+        start_h, end_h = int(start), int(end)
+        now_h = datetime.datetime.utcnow().hour
+        if start_h < end_h:
+            return start_h <= now_h < end_h
+        else:
+            # overnight range (e.g., 21-08)
+            return now_h >= start_h or now_h < end_h
+    except Exception:
+        return False
+
+def rate_limit_check(to_number: str) -> tuple[bool, str]:
+    """Check per-hour and per-day limits."""
+    now = time.time()
+    one_hour = 3600
+    one_day = 86400
+
+    # Filter old timestamps
+    sent_log[to_number] = [t for t in sent_log[to_number] if now - t < one_day]
+
+    # Hourly check
+    if sum(1 for t in sent_log[to_number] if now - t < one_hour) >= SMS_MAX_PER_HOUR:
+        return False, "hourly limit reached"
+
+    # Daily check
+    if len(sent_log[to_number]) >= SMS_MAX_PER_DAY:
+        return False, "daily limit reached"
+
+    return True, "ok"
+
 def send_sms(to: str, body: str):
     ts = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-    if not check_credentials():
-        msg = f"[{ts}] ERROR: Missing Twilio credentials in .env"
-        print(msg)
-        logging.error(msg)
+
+    if not SMS_ENABLED:
+        logging.warning(f"[{ts}] SMS disabled by config. To={to} Body={body[:40]}")
+        return {"status": "disabled"}
+
+    if not TWILIO_ACCOUNT_SID or not TWILIO_AUTH_TOKEN or not TWILIO_FROM_NUMBER:
+        logging.error(f"[{ts}] Missing Twilio credentials. Cannot send SMS.")
         return {"status": "error", "reason": "missing_credentials"}
 
-    if SAFE_MODE == "ON":
-        msg = f"[{ts}] SMS (sandbox, not sent): to={to}, body={body}"
-        print(msg)
-        logging.info(msg)
-        return {"status": "sandbox", "to": to, "body": body}
+    if SMS_WHITELIST and to not in SMS_WHITELIST:
+        logging.warning(f"[{ts}] Blocked: {to} not in whitelist")
+        return {"status": "blocked", "reason": "not_whitelisted"}
+
+    if within_quiet_hours():
+        logging.warning(f"[{ts}] Blocked: quiet hours. To={to}")
+        return {"status": "blocked", "reason": "quiet_hours"}
+
+    ok, reason = rate_limit_check(to)
+    if not ok:
+        logging.warning(f"[{ts}] Blocked: {reason}. To={to}")
+        return {"status": "blocked", "reason": reason}
 
     try:
-        client = Client(ACCOUNT_SID, AUTH_TOKEN)
-        sms = client.messages.create(
+        client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+        msg = client.messages.create(
             body=body,
-            from_=FROM_NUMBER,
+            from_=TWILIO_FROM_NUMBER,
             to=to
         )
-        result = {"status": "sent", "sid": sms.sid}
-        msg = f"[{ts}] SUCCESS: SMS sent to {to}, SID={sms.sid}"
-        print(msg)
-        logging.info(msg)
-        return result
+        sent_log[to].append(time.time())
+        logging.info(f"[{ts}] SMS sent. To={to} SID={msg.sid}")
+        return {"status": "success", "sid": msg.sid}
     except Exception as e:
-        err = f"[{ts}] ERROR sending SMS: {repr(e)}"
-        print(err)
-        logging.error(err)
+        logging.error(f"[{ts}] SMS send failed: {e}")
         return {"status": "error", "reason": str(e)}
 
 if __name__ == "__main__":
-    print("twilio_guard.py loaded. Use send_sms(to, body) in scripts.")
+    # Example standalone usage
+    result = send_sms(os.getenv("SMS_TO_NUMBER", "+16502283267"), "Test message from twilio_guard.py")
+    print(result)
