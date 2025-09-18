@@ -178,3 +178,4 @@ _sim_unpack/**
 *.log
 *.jsonl
 .github/workflows/ci.yml
+.github/workflows/ci.yml
