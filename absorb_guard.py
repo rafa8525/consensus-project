@@ -1,83 +1,66 @@
 #!/usr/bin/env python3
-"""
-absorb_guard.py
-Protects absorption + git push with retries, checkpointing, and self-repair.
-"""
-
 import subprocess
 import time
 import json
+import logging
 from datetime import datetime
 from pathlib import Path
 
-# Config
-PROJECT_ROOT = Path.home() / "consensus-project"
-ABSORB_CMD = str(PROJECT_ROOT / "tools" / "absorb_once.sh")
-CHECKPOINT_FILE = PROJECT_ROOT / "memory" / "logs" / "system" / "last_absorb_status.json"
-MAX_RETRIES = 3
-RETRY_DELAY_BASE = 5  # seconds
+# === Setup logging ===
+log_dir = Path("memory/logs/system")
+log_dir.mkdir(parents=True, exist_ok=True)
 
-def run_command(cmd):
-    """Run shell command, capture output."""
-    try:
-        result = subprocess.run(
-            cmd, shell=True, text=True,
-            capture_output=True, cwd=PROJECT_ROOT
-        )
-        return result.returncode, result.stdout.strip(), result.stderr.strip()
-    except Exception as e:
-        return 1, "", str(e)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(log_dir / "absorb_guard.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("absorb_guard")
 
-def write_checkpoint(status, details=""):
-    """Save last run status to checkpoint file."""
-    checkpoint = {
-        "timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "status": status,
-        "details": details
-    }
-    CHECKPOINT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(CHECKPOINT_FILE, "w") as f:
-        json.dump(checkpoint, f, indent=2)
-    print(f"[checkpoint] {checkpoint}")
+STATUS_FILE = log_dir / "last_absorb_status.json"
+ABSORB_CMD = ["bash", "tools/absorb_once.sh"]  # adjust if needed
 
-def clean_index_lock():
-    """Remove stale git index.lock if exists."""
-    lockfile = PROJECT_ROOT / ".git" / "index.lock"
-    if lockfile.exists():
-        lockfile.unlink()
-        print("[repair] Removed stale .git/index.lock")
+
+def write_status(status: str, details: str = ""):
+    ts = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    payload = {"timestamp": ts, "status": status, "details": details}
+    with STATUS_FILE.open("w") as f:
+        json.dump(payload, f, indent=2)
+    logger.info(f"[checkpoint] {payload}")
+
+
+def run_once():
+    for attempt in range(1, 4):  # up to 3 retries
+        logger.info(f"[guard] Attempt {attempt}/3")
+        try:
+            result = subprocess.run(
+                ABSORB_CMD, capture_output=True, text=True, timeout=300
+            )
+            if result.returncode == 0:
+                logger.info("[guard] SUCCESS")
+                write_status("success")
+                return True
+            else:
+                logger.warning(f"[guard] FAIL rc={result.returncode}")
+                logger.warning(result.stderr.strip())
+                write_status("failure", f"rc={result.returncode}")
+        except Exception as e:
+            logger.error(f"[guard] Exception: {e}")
+            write_status("error", str(e))
+        time.sleep(5)
+    return False
+
 
 def main():
-    print(f"[guard] Starting absorb_guard at {datetime.utcnow().isoformat()}Z")
+    while True:
+        logger.info(f"[guard] Starting absorb_guard at {datetime.utcnow().isoformat()}Z")
+        run_once()
+        logger.info("[guard] Sleeping 30m before next run...")
+        time.sleep(1800)
 
-    for attempt in range(1, MAX_RETRIES + 1):
-        print(f"[guard] Attempt {attempt}/{MAX_RETRIES}")
-
-        # Clean stale locks before each try
-        clean_index_lock()
-
-        rc, out, err = run_command(ABSORB_CMD)
-        if rc == 0:
-            print("[guard] SUCCESS")
-            write_checkpoint("success", out)
-            return 0
-
-        # Failed attempt
-        print(f"[guard] FAIL rc={rc}")
-        if err:
-            print(f"[stderr]\n{err}")
-        if out:
-            print(f"[stdout]\n{out}")
-
-        # Exponential backoff before retry
-        delay = RETRY_DELAY_BASE * attempt
-        print(f"[guard] Sleeping {delay}s before retry...")
-        time.sleep(delay)
-
-    # If we get here → all retries failed
-    print("[guard] ERROR: All attempts failed")
-    write_checkpoint("failure", err or "unknown error")
-    return 1
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
