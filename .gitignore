@@ -179,3 +179,9 @@ _sim_unpack/**
 *.jsonl
 .github/workflows/ci.yml
 .github/workflows/ci.yml
+memory/logs/*
+/.keep
+# Ignore all logs
+memory/logs/*
+# But keep placeholder files
+!memory/logs/*/.keep
