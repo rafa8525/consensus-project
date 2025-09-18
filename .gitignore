@@ -177,3 +177,4 @@ memory/heartbeat/**
 _sim_unpack/**
 *.log
 *.jsonl
+.github/workflows/ci.yml
