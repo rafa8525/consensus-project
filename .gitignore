@@ -104,33 +104,33 @@ ai-dashboard-starter/*.zip
 # Keep sensitive & large volatile files out
 memory/*.secret
 memory/private_*.txt
-memory/logs/heartbeat/full_memory_absorption.log
+# memory/logs/heartbeat/full_memory_absorption.log
 # Preserve empty dirs
 !memory/**/.gitkeep
 # --- end memory rules ---
 memory/.env
-memory/logs/heartbeat/archive/**
-memory/logs/heartbeat/archive/**
+# memory/logs/heartbeat/archive/**
+# memory/logs/heartbeat/archive/**
 # ---- rolling logs to keep untracked (use date-stamped files instead) ----
-memory/logs/agents/*.log
-memory/logs/git/git_sync_log.txt
-memory/logs/github_sync/sync.log
-memory/logs/heartbeat/heartbeat.log
-memory/logs/heartbeat/heartbeat_error.log
-memory/logs/heartbeat/heartbeat_log.txt
-memory/logs/heartbeat/last_heartbeat.txt
-memory/logs/watchdog/failure_log.txt
-memory/logs/watchdog/weekly_alert_log.txt
-memory/logs/security/security_audit_log.txt
+# memory/logs/agents/*.log
+# memory/logs/git/git_sync_log.txt
+# memory/logs/github_sync/sync.log
+# memory/logs/heartbeat/heartbeat.log
+# memory/logs/heartbeat/heartbeat_error.log
+# memory/logs/heartbeat/heartbeat_log.txt
+# memory/logs/heartbeat/last_heartbeat.txt
+# memory/logs/watchdog/failure_log.txt
+# memory/logs/watchdog/weekly_alert_log.txt
+# memory/logs/security/security_audit_log.txt
 .gitignore.bak*
-memory/logs/agents/metrics.jsonl
-memory/logs/nutrition/.barcode_sync_state.json
-memory/logs/nutrition/barcode_log_YYYY-MM-DD.md
-memory/logs/nutrition/YYYY-MM-DD_nutrition_log.md
+# memory/logs/agents/metrics.jsonl
+# memory/logs/nutrition/.barcode_sync_state.json
+# memory/logs/nutrition/barcode_log_YYYY-MM-DD.md
+# memory/logs/nutrition/YYYY-MM-DD_nutrition_log.md
 tools/barcode_sync.py.bak.*
-memory/logs/heartbeat/*.log
-memory/logs/nutrition/barcode_sync_debug_*.json
-memory/logs/heartbeat/last_absorbed_commit.txt
+# memory/logs/heartbeat/*.log
+# memory/logs/nutrition/barcode_sync_debug_*.json
+# memory/logs/heartbeat/last_absorbed_commit.txt
 config/GITHUB_MEMORY_REPO_URL.txt
 /.cache/
 /logs/
@@ -150,14 +150,14 @@ config/GITHUB_MEMORY_REPO_URL.txt
 # Track memory subtree
 !memory/
 !memory/**
-memory/logs/system/github_sync_log.md
-memory/logs/system/
-memory/logs/system/github_sync_log.md
+# memory/logs/system/github_sync_log.md
+# memory/logs/system/
+# memory/logs/system/github_sync_log.md
 
 # never commit runtime logs
-memory/logs/**.log
-memory/logs/system/*.md
-memory/logs/**
+# memory/logs/**.log
+# memory/logs/system/*.md
+# memory/logs/**
 memory/queue/**
 memory/heartbeat/**
 _sim_unpack/**
@@ -165,13 +165,13 @@ _sim_unpack/**
 __pycache__/**
 .pytest_cache/**
 .coverage
-memory/logs/**
+# memory/logs/**
 memory/queue/**
 memory/heartbeat/**
 _sim_unpack/**
 *.log
 *.jsonl
-memory/logs/**
+# memory/logs/**
 memory/queue/**
 memory/heartbeat/**
 _sim_unpack/**
@@ -179,9 +179,9 @@ _sim_unpack/**
 *.jsonl
 .github/workflows/ci.yml
 .github/workflows/ci.yml
-memory/logs/*
+# memory/logs/*
 /.keep
 # Ignore all logs
-memory/logs/*
+# memory/logs/*
 # But keep placeholder files
 !memory/logs/*/.keep
