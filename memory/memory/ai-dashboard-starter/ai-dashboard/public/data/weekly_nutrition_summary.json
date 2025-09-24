@@ -1,0 +1,6 @@
+[
+  { "date": "2025-06-10", "meal": "Eggs + avocado", "keto": true },
+  { "date": "2025-06-11", "meal": "Chicken salad", "keto": true },
+  { "date": "2025-06-12", "meal": "Soup (Progresso)", "keto": false },
+  { "date": "2025-06-13", "meal": "Steak + broccoli", "keto": true }
+]
