@@ -242,3 +242,4 @@ Traceback (most recent call last):
     with open(HEARTBEAT_LOG_FILE, "a", encoding="utf-8") as f:
          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/memory/logs/heartbeat/heartbeat.log'
+2025-09-24 21:02:33,306 INFO Heartbeat logger started.
