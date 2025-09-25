@@ -1,6 +1,7 @@
 Absorb Status (AM/PM) — last 14 days
 YYYY-MM-DD | AM | PM | Notes
 ----------------------------------------
+2025-09-25 | —  | —  | MISS
 2025-09-24 | —  | —  | MISS
 2025-09-23 | —  | —  | MISS
 2025-09-22 | —  | —  | MISS
@@ -14,5 +15,4 @@ YYYY-MM-DD | AM | PM | Notes
 2025-09-14 | —  | —  | MISS
 2025-09-13 | —  | —  | MISS
 2025-09-12 | —  | —  | MISS
-2025-09-11 | —  | —  | MISS
 Tip: run `python3 tools/absorb_status_report.py 14` for two weeks.
