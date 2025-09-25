@@ -1644,3 +1644,17 @@
 2025-09-25 12:01:02,742 [INFO] [guard] SUCCESS
 2025-09-25 12:01:02,846 [INFO] [checkpoint] {'timestamp': '2025-09-25T12:01:02Z', 'status': 'success', 'details': ''}
 2025-09-25 12:01:02,846 [INFO] [guard] Sleeping 30m before next run...
+/home/rafa1215/consensus-project/absorb_guard.py:59: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  logger.info(f"[guard] Starting absorb_guard at {datetime.utcnow().isoformat()}Z")
+2025-09-25 12:05:57,472 [INFO] [guard] Starting absorb_guard at 2025-09-25T12:05:57.472318Z
+2025-09-25 12:05:57,472 [INFO] [guard] Starting absorb_guard at 2025-09-25T12:05:57.472318Z
+2025-09-25 12:05:57,472 [INFO] [guard] Attempt 1/3
+2025-09-25 12:05:57,472 [INFO] [guard] Attempt 1/3
+2025-09-25 12:05:57,495 [INFO] [guard] SUCCESS
+2025-09-25 12:05:57,495 [INFO] [guard] SUCCESS
+/home/rafa1215/consensus-project/absorb_guard.py:28: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  ts = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+2025-09-25 12:05:57,505 [INFO] [checkpoint] {'timestamp': '2025-09-25T12:05:57Z', 'status': 'success', 'details': ''}
+2025-09-25 12:05:57,505 [INFO] [checkpoint] {'timestamp': '2025-09-25T12:05:57Z', 'status': 'success', 'details': ''}
+2025-09-25 12:05:57,505 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 12:05:57,505 [INFO] [guard] Sleeping 30m before next run...
