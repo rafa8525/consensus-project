@@ -612,3 +612,53 @@
 2025-09-25 05:05:57,047 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:05:57Z', 'status': 'success', 'details': ''}
 2025-09-25 05:05:57,047 [INFO] [guard] Sleeping 30m before next run...
 2025-09-25 05:05:57,047 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:44,749 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:44.749456Z
+2025-09-25 05:30:44,750 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:44,937 [INFO] [guard] SUCCESS
+2025-09-25 05:30:44,950 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:44Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:44,950 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:46,685 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:46.684970Z
+2025-09-25 05:30:46,685 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:46,720 [INFO] [guard] SUCCESS
+2025-09-25 05:30:46,733 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:46Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:46,733 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:47,524 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:47.524462Z
+2025-09-25 05:30:47,524 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:47,553 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:47.553461Z
+2025-09-25 05:30:47,553 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:47,576 [INFO] [guard] SUCCESS
+2025-09-25 05:30:47,591 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:47Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:47,592 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:47,610 [INFO] [guard] SUCCESS
+2025-09-25 05:30:47,621 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:47Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:47,621 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:48,201 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:48.201457Z
+2025-09-25 05:30:48,201 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:48,223 [INFO] [guard] SUCCESS
+2025-09-25 05:30:48,232 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:48Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:48,232 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:48,443 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:48.443459Z
+2025-09-25 05:30:48,443 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:48,493 [INFO] [guard] SUCCESS
+2025-09-25 05:30:48,503 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:48Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:48,504 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:48,629 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:48.629494Z
+2025-09-25 05:30:48,629 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:48,686 [INFO] [guard] SUCCESS
+2025-09-25 05:30:48,693 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:48Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:48,693 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:49,822 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:49.822461Z
+2025-09-25 05:30:49,822 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:49,856 [INFO] [guard] SUCCESS
+2025-09-25 05:30:49,866 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:49Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:49,866 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:30:54,570 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:30:54.570462Z
+2025-09-25 05:30:54,570 [INFO] [guard] Attempt 1/3
+2025-09-25 05:30:54,606 [INFO] [guard] SUCCESS
+2025-09-25 05:30:54,614 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:30:54Z', 'status': 'success', 'details': ''}
+2025-09-25 05:30:54,614 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 05:31:08,041 [INFO] [guard] Starting absorb_guard at 2025-09-25T05:31:08.041458Z
+2025-09-25 05:31:08,041 [INFO] [guard] Attempt 1/3
+2025-09-25 05:31:08,064 [INFO] [guard] SUCCESS
+2025-09-25 05:31:08,073 [INFO] [checkpoint] {'timestamp': '2025-09-25T05:31:08Z', 'status': 'success', 'details': ''}
+2025-09-25 05:31:08,073 [INFO] [guard] Sleeping 30m before next run...
