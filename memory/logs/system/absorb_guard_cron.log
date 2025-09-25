@@ -983,3 +983,68 @@
 2025-09-25 09:30:59,577 [INFO] [guard] SUCCESS
 2025-09-25 09:30:59,586 [INFO] [checkpoint] {'timestamp': '2025-09-25T09:30:59Z', 'status': 'success', 'details': ''}
 2025-09-25 09:30:59,586 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:47,818 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:47.818477Z
+2025-09-25 10:00:47,819 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:47,931 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:47.931481Z
+2025-09-25 10:00:47,931 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:48,618 [INFO] [guard] SUCCESS
+2025-09-25 10:00:48,770 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:48Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:48,770 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:49,425 [INFO] [guard] SUCCESS
+2025-09-25 10:00:49,437 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:49Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:49,437 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:49,476 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:49.476127Z
+2025-09-25 10:00:49,476 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:49,520 [INFO] [guard] SUCCESS
+2025-09-25 10:00:49,526 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:49Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:49,527 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:51,568 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:51.568141Z
+2025-09-25 10:00:51,568 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:51,838 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:51.838502Z
+2025-09-25 10:00:52,083 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:52,851 [INFO] [guard] SUCCESS
+2025-09-25 10:00:52,884 [INFO] [guard] SUCCESS
+2025-09-25 10:00:53,069 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:52Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:53,069 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:53,308 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:53.308624Z
+2025-09-25 10:00:53,309 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:53,310 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:52Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:53,311 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:53,719 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:53.719611Z
+2025-09-25 10:00:53,719 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:53,886 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:53.886294Z
+2025-09-25 10:00:53,886 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:54,127 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:54.127746Z
+2025-09-25 10:00:54,270 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:54,495 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:54.495206Z
+2025-09-25 10:00:54,495 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:54,953 [INFO] [guard] SUCCESS
+2025-09-25 10:00:55,039 [INFO] [guard] SUCCESS
+2025-09-25 10:00:55,072 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:55Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:55,072 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:55,072 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:54Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:55,072 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:55,321 [INFO] [guard] SUCCESS
+2025-09-25 10:00:55,415 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:55Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:55,415 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:55,445 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:55.445506Z
+2025-09-25 10:00:55,445 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:55,842 [INFO] [guard] SUCCESS
+2025-09-25 10:00:55,869 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:55.869498Z
+2025-09-25 10:00:55,869 [INFO] [guard] Attempt 1/3
+2025-09-25 10:00:56,268 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:55Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:56,268 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:56,371 [INFO] [guard] SUCCESS
+2025-09-25 10:00:56,494 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:56Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:56,494 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:57,154 [INFO] [guard] SUCCESS
+2025-09-25 10:00:57,403 [INFO] [guard] SUCCESS
+2025-09-25 10:00:57,445 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:57Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:57,445 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:57,504 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:00:57Z', 'status': 'success', 'details': ''}
+2025-09-25 10:00:57,504 [INFO] [guard] Sleeping 30m before next run...
+2025-09-25 10:00:59,912 [INFO] [guard] Starting absorb_guard at 2025-09-25T10:00:59.912608Z
+2025-09-25 10:00:59,912 [INFO] [guard] Attempt 1/3
+2025-09-25 10:01:00,717 [INFO] [guard] SUCCESS
+2025-09-25 10:01:00,938 [INFO] [checkpoint] {'timestamp': '2025-09-25T10:01:00Z', 'status': 'success', 'details': ''}
+2025-09-25 10:01:00,938 [INFO] [guard] Sleeping 30m before next run...
