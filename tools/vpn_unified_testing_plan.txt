@@ -1,0 +1,32 @@
+Unified VPN Testing Plan
+
+1. Wi-Fi Detection Test
+   - Connect to public SSID (e.g., BART-WiFi, MuniFreeWiFi).
+   - Verify VPN auto-activates within 5 seconds.
+
+2. Disconnect Test
+   - Switch to private SSID.
+   - Confirm VPN disconnects cleanly.
+
+3. Load Test
+   - Run simulated browsing load for 15 minutes.
+   - Record latency, throughput, and failures.
+
+4. Stress Test
+   - Push 10x normal traffic for 5 minutes.
+   - Record stability and response.
+
+5. Failover Test
+   - Kill VPN process mid-session.
+   - Confirm watchdog restarts VPN and connection resumes.
+
+6. Endurance Test
+   - Keep VPN active for 6 continuous hours.
+   - Record performance degradation, if any.
+
+7. Concurrency Test
+   - Simulate 5 concurrent devices (parallel pings/cURLs).
+   - Verify VPN stability.
+
+8. Logging
+   - Append results to: /home/rafa1215/memory/logs/system/vpn_test_report.md
