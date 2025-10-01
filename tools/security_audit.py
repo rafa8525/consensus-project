@@ -1,55 +1,112 @@
 #!/usr/bin/env python3
+"""
+security_audit.py
+Phase 4: Security Hardening
+
+Purpose:
+- Run daily security checks on the project environment.
+- File permission audit (detect world-writable files).
+- Package audit (check outdated or vulnerable packages).
+- Credential audit (scan logs/code for exposed secrets).
+"""
+
 import os
 import datetime
 import subprocess
+from pathlib import Path
+import re
 
-BASE_DIR = "/home/rafa1215/consensus-project/memory"
-SECURITY_DIR = os.path.join(BASE_DIR, "logs/security")
-HEARTBEAT_FILE = os.path.join(BASE_DIR, "logs/system/heartbeat.md")
+BASE_DIR = Path("/home/rafa1215/consensus-project")
+LOG_DIR = BASE_DIR / "memory" / "logs" / "security"
+HEARTBEAT_FILE = BASE_DIR / "memory" / "logs" / "system" / "heartbeat.md"
+AUDIT_FILE = LOG_DIR / "security_audit.md"
 
-os.makedirs(SECURITY_DIR, exist_ok=True)
+os.makedirs(LOG_DIR, exist_ok=True)
 
 def heartbeat_log(status: str):
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(HEARTBEAT_FILE, "a") as f:
         f.write(f"[{ts}] SECURITY: {status}\n")
-    print(f"[HEARTBEAT] {status}")
 
-def run_command(cmd):
+# ====== Checks ======
+def check_permissions():
+    issues = []
+    for root, dirs, files in os.walk(BASE_DIR):
+        for name in files:
+            path = Path(root) / name
+            try:
+                mode = path.stat().st_mode
+                if mode & 0o002:  # world-writable
+                    issues.append(f"World-writable file: {path}")
+            except:
+                continue
+    return issues
+
+def check_packages():
+    issues = []
     try:
-        result = subprocess.getoutput(cmd)
-        return result.strip()
+        result = subprocess.run(
+            ["pip", "list", "--outdated"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=False
+        )
+        if result.stdout:
+            for line in result.stdout.splitlines()[2:]:
+                parts = line.split()
+                if len(parts) >= 3:
+                    pkg, ver, latest = parts[0], parts[1], parts[2]
+                    issues.append(f"Outdated package: {pkg} {ver} -> {latest}")
     except Exception as e:
-        return f"ERROR: {e}"
+        issues.append(f"Package audit error: {e}")
+    return issues
 
-def run_security_audit():
+def check_credentials():
+    issues = []
+    secret_patterns = [
+        re.compile(r"AKIA[0-9A-Z]{16}"),   # AWS keys
+        re.compile(r"sk_live_[0-9a-zA-Z]{24,}"),  # Stripe keys
+        re.compile(r"TWILIO_[A-Z_]+"),     # Twilio env vars
+        re.compile(r"[0-9a-fA-F]{32,}"),   # generic long hex
+    ]
+    scan_dirs = [BASE_DIR / "tools", BASE_DIR / "memory" / "logs"]
+    for d in scan_dirs:
+        for root, dirs, files in os.walk(d):
+            for name in files:
+                path = Path(root) / name
+                try:
+                    text = path.read_text(errors="ignore")
+                    for pat in secret_patterns:
+                        if pat.search(text):
+                            issues.append(f"Potential credential in {path}")
+                            break
+                except:
+                    continue
+    return issues
+
+# ====== Main ======
+def run_audit():
     ts = datetime.datetime.now().strftime("%Y-%m-%d")
-    report_file = os.path.join(SECURITY_DIR, f"security_audit_{ts}.md")
+    issues = []
 
-    checks = {}
-    checks["Open Ports"] = run_command("ss -tuln | head -20")
-    checks["Running Processes"] = run_command("ps -eo pid,comm --sort=-%mem | head -10")
-    checks["Disk Usage"] = run_command("df -h | head -10")
-    checks["Recent Auth Failures"] = run_command("grep 'Failed password' /var/log/auth.log | tail -10 || echo 'No access to auth.log'")
-    checks["Firewall Status"] = run_command("ufw status || echo 'ufw not installed'")
-    checks["System Updates"] = run_command("apt list --upgradable 2>/dev/null | head -10")
+    issues.extend(check_permissions())
+    issues.extend(check_packages())
+    issues.extend(check_credentials())
 
-    with open(report_file, "w") as f:
-        f.write(f"# Security Audit Report — {ts}\n\n")
-        for section, result in checks.items():
-            f.write(f"## {section}\n```\n{result}\n```\n\n")
-
-    heartbeat_log("SUCCESS: Security audit completed")
-    return report_file
+    with open(AUDIT_FILE, "a") as f:
+        f.write(f"# Security Audit {ts}\n")
+        if issues:
+            for i in issues:
+                f.write(f"- {i}\n")
+            heartbeat_log(f"{len(issues)} issues detected")
+        else:
+            f.write("- No issues detected\n")
+            heartbeat_log("Clean")
 
 if __name__ == "__main__":
-    # Only run on the 1st of each month
-    if datetime.datetime.now().day != 1:
-        heartbeat_log("INFO: Audit skipped (not 1st of month)")
-        exit(0)
-
     try:
-        report = run_security_audit()
-        print(f"Security audit saved: {report}")
+        # Only run full audit on 1st of each month
+        if datetime.datetime.now().day == 1:
+            run_audit()
+        else:
+            heartbeat_log("INFO: Audit skipped (not 1st of month)")
     except Exception as e:
-        heartbeat_log(f"ERROR: Security audit failed — {e}")
+        heartbeat_log(f"ERROR: Security audit crashed — {e}")
