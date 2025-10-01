@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    "Fitbit",
+    "Xfinity",
+    "Pixel Watch",
+    "COROS Pace 3"
+  ],
+  "edges": [
+    [
+      "Fitbit",
+      "Xfinity",
+      {
+        "source": "milestone_report_phase3_2025-09-29.md"
+      }
+    ],
+    [
+      "Pixel Watch",
+      "Fitbit",
+      {
+        "source": "milestone_report_phase2_2025-09-29.md"
+      }
+    ],
+    [
+      "Pixel Watch",
+      "COROS Pace 3",
+      {
+        "source": "milestone_report_phase2_2025-09-29.md"
+      }
+    ]
+  ]
+}

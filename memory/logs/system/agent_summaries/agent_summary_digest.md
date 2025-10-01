@@ -1,0 +1,1163 @@
+# Agent Summary Digest
+
+Generated: 2025-10-01 07:03:54
+
+This digest shows one-line summaries of **every file** in brainstorm, optimization, and suggestions.
+
+## Brainstorm
+- [brainstorm_008_8.md_20250923_221834.md] You are **8** — role: Run E2E simulations of SMS, voice, absorb, VPN before deploy.
+- [brainstorm_008_8.md_20250923_222718.md] You are **8** — role: Run E2E simulations of SMS, voice, absorb, VPN before deploy.
+- [brainstorm_063025chatgptmemoryfull.txt_20250923_221831.md] Skip to content
+- [brainstorm_063025chatgptmemoryfull.txt_20250923_221835.md] Skip to content
+- [brainstorm_063025chatgptmemoryfull.txt_20250923_222719.md] Skip to content
+- [brainstorm_063025chatgptmemoryfull.txt_20250924_205307.md] Skip to content
+- [brainstorm_AI will invent the next best AI .txt_20250923_221922.md] ﻿AI will invent the next best AI through recursive self-improvement, collaborative agent design, and cross-domain synthesis. Here's how it plays out in steps:
+- [brainstorm_AI will invent the next best AI .txt_20250923_222750.md] ﻿AI will invent the next best AI through recursive self-improvement, collaborative agent design, and cross-domain synthesis. Here's how it plays out in steps:
+- [brainstorm_CHANGELOG.md_20250923_221843.md] 8.1.0 / 2021-11-03
+- [brainstorm_CHANGELOG.md_20250923_221854.md] ## 1.0.0-alpha.37 (October 22, 2019)
+- [brainstorm_CHANGELOG.md_20250923_221855.md] ## 1.1.3 (March 31, 2021)
+- [brainstorm_CHANGELOG.md_20250923_221956.md] 8.1.0 / 2021-11-03
+- [brainstorm_CHANGELOG.md_20250923_221959.md] # aria-query Change Log
+- [brainstorm_CHANGELOG.md_20250923_222218.md] ## 1.0.0-alpha.37 (October 22, 2019)
+- [brainstorm_CHANGELOG.md_20250923_222221.md] ## 1.1.3 (March 31, 2021)
+- [brainstorm_CHANGELOG.md_20250923_222409.md] # Changelog
+- [brainstorm_CHANGELOG.md_20250923_222413.md] # 7.1.0
+- [brainstorm_CHANGELOG.md_20250923_222415.md] # 6.1.2
+- [brainstorm_CHANGELOG.md_20250923_222416.md] ## 1.1.3 (March 31, 2021)
+- [brainstorm_CHANGELOG.md_20250923_222724.md] 8.1.0 / 2021-11-03
+- [brainstorm_CHANGELOG.md_20250923_222725.md] # aria-query Change Log
+- [brainstorm_CHANGELOG.md_20250923_222733.md] ## 1.0.0-alpha.37 (October 22, 2019)
+- [brainstorm_CHANGELOG.md_20250924_202722.md] 8.1.0 / 2021-11-03
+- [brainstorm_CHANGELOG.md_20250924_202723.md] # aria-query Change Log
+- [brainstorm_CHANGELOG.md_20250924_202733.md] ## 1.0.0-alpha.37 (October 22, 2019)
+- [brainstorm_CHANGELOG.md_20250924_204855.md] 8.1.0 / 2021-11-03
+- [brainstorm_CHANGELOG.md_20250924_204905.md] ## 1.0.0-alpha.37 (October 22, 2019)
+- [brainstorm_CHANGELOG.md_20250924_204906.md] ## 1.1.3 (March 31, 2021)
+- [brainstorm_LICENSE.md_20250923_221840.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_221854.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_221855.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_221944.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_221945.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222217.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222220.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222407.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222408.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222409.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222412.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222414.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222415.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222436.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222722.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250923_222733.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_202719.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_202720.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_202732.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_202733.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_204852.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_204905.md] # CC0 1.0 Universal
+- [brainstorm_LICENSE.md_20250924_204906.md] # CC0 1.0 Universal
+- [brainstorm_README.md_20250923_221836.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221839.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221841.md] # Config Array
+- [brainstorm_README.md_20250923_221842.md] [npm]: https://img.shields.io/npm/v/@rollup/plugin-babel
+- [brainstorm_README.md_20250923_221843.md] # ARIA Query
+- [brainstorm_README.md_20250923_221844.md] <div align="center">
+- [brainstorm_README.md_20250923_221848.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250923_221849.md] # ARIA Query
+- [brainstorm_README.md_20250923_221850.md] <div align="center">
+- [brainstorm_README.md_20250923_221851.md] # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/np...
+- [brainstorm_README.md_20250923_221852.md] Case Sensitive Paths - Webpack Plugin
+- [brainstorm_README.md_20250923_221853.md] # 🌈Colorette
+- [brainstorm_README.md_20250923_221854.md] # css-select [![NPM version](http://img.shields.io/npm/v/css-select.svg)](https://npmjs.org/package/css-select) [![Build Status](https://travis-ci.com/fb55/css-select.svg?branch=master)](http://travis...
+- [brainstorm_README.md_20250923_221857.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250923_221859.md] # eslint-plugin-import
+- [brainstorm_README.md_20250923_221900.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221901.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221902.md] # jest-worker
+- [brainstorm_README.md_20250923_221903.md] # file-entry-cache
+- [brainstorm_README.md_20250923_221905.md] # Fraction.js - ℚ in JavaScript
+- [brainstorm_README.md_20250923_221907.md] <p align="center">
+- [brainstorm_README.md_20250923_221908.md] # internal-slot <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250923_221910.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221912.md] # jest-worker
+- [brainstorm_README.md_20250923_221913.md] # JSON5 – JSON for Humans
+- [brainstorm_README.md_20250923_221914.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221915.md] # minipass
+- [brainstorm_README.md_20250923_221927.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221928.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221929.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221937.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221938.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_221947.md] # Config Array
+- [brainstorm_README.md_20250923_221953.md] [npm]: https://img.shields.io/npm/v/@rollup/plugin-babel
+- [brainstorm_README.md_20250923_221958.md] <div align="center">
+- [brainstorm_README.md_20250923_221959.md] # ARIA Query
+- [brainstorm_README.md_20250923_222001.md] <div align="center">
+- [brainstorm_README.md_20250923_222002.md] <div align="center">
+- [brainstorm_README.md_20250923_222025.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250923_222030.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/images/ajv_logo.png">
+- [brainstorm_README.md_20250923_222031.md] # ARIA Query
+- [brainstorm_README.md_20250923_222034.md] # ast-types-flow
+- [brainstorm_README.md_20250923_222037.md] # AXObject Query
+- [brainstorm_README.md_20250923_222038.md] > This README is for babel-loader v8 + Babel v7
+- [brainstorm_README.md_20250923_222039.md] <div align="center">
+- [brainstorm_README.md_20250923_222042.md] # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/np...
+- [brainstorm_README.md_20250923_222050.md] Case Sensitive Paths - Webpack Plugin
+- [brainstorm_README.md_20250923_222051.md] <h1 align="center">
+- [brainstorm_README.md_20250923_222054.md] # 🌈Colorette
+- [brainstorm_README.md_20250923_222218.md] # css-select [![NPM version](http://img.shields.io/npm/v/css-select.svg)](https://npmjs.org/package/css-select) [![Build Status](https://travis-ci.com/fb55/css-select.svg?branch=master)](http://travis...
+- [brainstorm_README.md_20250923_222227.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250923_222256.md] # eslint-plugin-import
+- [brainstorm_README.md_20250923_222257.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222300.md] # `eslint-plugin-react` <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250923_222305.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222306.md] # jest-worker
+- [brainstorm_README.md_20250923_222314.md] # file-entry-cache
+- [brainstorm_README.md_20250923_222319.md] # Fraction.js - ℚ in JavaScript
+- [brainstorm_README.md_20250923_222324.md] [![npm][npm]][npm-url]
+- [brainstorm_README.md_20250923_222325.md] <p align="center">
+- [brainstorm_README.md_20250923_222327.md] # internal-slot <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250923_222331.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222338.md] # jest-worker
+- [brainstorm_README.md_20250923_222339.md] <h1 align="center">
+- [brainstorm_README.md_20250923_222344.md] # JSON5 – JSON for Humans
+- [brainstorm_README.md_20250923_222356.md] # magic-string
+- [brainstorm_README.md_20250923_222357.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222358.md] <div align="center">
+- [brainstorm_README.md_20250923_222359.md] # minipass
+- [brainstorm_README.md_20250923_222406.md] # lru-cache
+- [brainstorm_README.md_20250923_222412.md] <div align="center">
+- [brainstorm_README.md_20250923_222415.md] # PostCSS Preset Env [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
+- [brainstorm_README.md_20250923_222421.md] [![Build Status](https://secure.travis-ci.org/kriskowal/q.svg?branch=master)](http://travis-ci.org/kriskowal/q)
+- [brainstorm_README.md_20250923_222422.md] # raw-body
+- [brainstorm_README.md_20250923_222431.md] <!-- Please do not edit this file. Edit the `blah` field in the `package.json` instead. If in doubt, open an issue. -->
+- [brainstorm_README.md_20250923_222435.md] # jest-worker
+- [brainstorm_README.md_20250923_222436.md] <div align="center">
+- [brainstorm_README.md_20250923_222438.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250923_222443.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222453.md] # Glob
+- [brainstorm_README.md_20250923_222455.md] # css-select [![NPM version](http://img.shields.io/npm/v/css-select.svg)](https://npmjs.org/package/css-select) [![Build Status](https://travis-ci.org/fb55/css-select.svg?branch=master)](http://travis...
+- [brainstorm_README.md_20250923_222459.md] # JSON5 – JSON for Humans
+- [brainstorm_README.md_20250923_222514.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250923_222516.md] <div align="center">
+- [brainstorm_README.md_20250923_222524.md] # Parse, serialize, and manipulate MIME types
+- [brainstorm_README.md_20250923_222526.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250923_222531.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250923_222551.md] # Config Array
+- [brainstorm_README.md_20250923_222610.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222611.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/images/ajv_logo.png">
+- [brainstorm_README.md_20250923_222613.md] # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/np...
+- [brainstorm_README.md_20250923_222628.md] # file-entry-cache
+- [brainstorm_README.md_20250923_222630.md] # JSON5 – JSON for Humans
+- [brainstorm_README.md_20250923_222704.md] # minipass
+- [brainstorm_README.md_20250923_222706.md] <h1 align="center">Picomatch</h1>
+- [brainstorm_README.md_20250923_222709.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222713.md] <h1 align="center">TypeScript API Utils</h1>
+- [brainstorm_README.md_20250923_222717.md] <h1 align="center">Picomatch</h1>
+- [brainstorm_README.md_20250923_222719.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222721.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222722.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222723.md] # Config Array
+- [brainstorm_README.md_20250923_222724.md] [npm]: https://img.shields.io/npm/v/@rollup/plugin-babel
+- [brainstorm_README.md_20250923_222725.md] # ARIA Query
+- [brainstorm_README.md_20250923_222728.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250923_222729.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/images/ajv_logo.png">
+- [brainstorm_README.md_20250923_222730.md] <div align="center">
+- [brainstorm_README.md_20250923_222731.md] # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/np...
+- [brainstorm_README.md_20250923_222732.md] # 🌈Colorette
+- [brainstorm_README.md_20250923_222733.md] # css-select [![NPM version](http://img.shields.io/npm/v/css-select.svg)](https://npmjs.org/package/css-select) [![Build Status](https://travis-ci.com/fb55/css-select.svg?branch=master)](http://travis...
+- [brainstorm_README.md_20250923_222735.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250923_222736.md] # eslint-plugin-import
+- [brainstorm_README.md_20250923_222737.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222738.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222739.md] # file-entry-cache
+- [brainstorm_README.md_20250923_222740.md] # Fraction.js - ℚ in JavaScript
+- [brainstorm_README.md_20250923_222742.md] <p align="center">
+- [brainstorm_README.md_20250923_222743.md] # internal-slot <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250923_222745.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222746.md] # jest-worker
+- [brainstorm_README.md_20250923_222747.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250923_222748.md] # minipass
+- [brainstorm_README.md_20250924_202716.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_202719.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_202720.md] # Config Array
+- [brainstorm_README.md_20250924_202721.md] [npm]: https://img.shields.io/npm/v/@rollup/plugin-babel
+- [brainstorm_README.md_20250924_202722.md] # @rushstack/eslint-patch
+- [brainstorm_README.md_20250924_202723.md] # ARIA Query
+- [brainstorm_README.md_20250924_202726.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250924_202727.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/images/ajv_logo.png">
+- [brainstorm_README.md_20250924_202728.md] # ast-types-flow
+- [brainstorm_README.md_20250924_202729.md] <div align="center">
+- [brainstorm_README.md_20250924_202730.md] # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/np...
+- [brainstorm_README.md_20250924_202731.md] # 🌈Colorette
+- [brainstorm_README.md_20250924_202733.md] # css-select [![NPM version](http://img.shields.io/npm/v/css-select.svg)](https://npmjs.org/package/css-select) [![Build Status](https://travis-ci.com/fb55/css-select.svg?branch=master)](http://travis...
+- [brainstorm_README.md_20250924_202735.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250924_202736.md] # eslint-plugin-import
+- [brainstorm_README.md_20250924_202737.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_202738.md] # `eslint-plugin-react` <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250924_202739.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_202740.md] # file-entry-cache
+- [brainstorm_README.md_20250924_202741.md] # Fraction.js - ℚ in JavaScript
+- [brainstorm_README.md_20250924_202743.md] [![npm][npm]][npm-url]
+- [brainstorm_README.md_20250924_202744.md] <p align="center">
+- [brainstorm_README.md_20250924_202747.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_202748.md] # jest-worker
+- [brainstorm_README.md_20250924_202749.md] # JSON5 – JSON for Humans
+- [brainstorm_README.md_20250924_202750.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_202751.md] # minipass
+- [brainstorm_README.md_20250924_204848.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_204851.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_204853.md] # Config Array
+- [brainstorm_README.md_20250924_204854.md] [npm]: https://img.shields.io/npm/v/@rollup/plugin-babel
+- [brainstorm_README.md_20250924_204855.md] # ARIA Query
+- [brainstorm_README.md_20250924_204856.md] <div align="center">
+- [brainstorm_README.md_20250924_204859.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
+- [brainstorm_README.md_20250924_204900.md] <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/images/ajv_logo.png">
+- [brainstorm_README.md_20250924_204901.md] <div align="center">
+- [brainstorm_README.md_20250924_204902.md] # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/np...
+- [brainstorm_README.md_20250924_204903.md] Case Sensitive Paths - Webpack Plugin
+- [brainstorm_README.md_20250924_204904.md] # 🌈Colorette
+- [brainstorm_README.md_20250924_204905.md] # css-select [![NPM version](http://img.shields.io/npm/v/css-select.svg)](https://npmjs.org/package/css-select) [![Build Status](https://travis-ci.com/fb55/css-select.svg?branch=master)](http://travis...
+- [brainstorm_README.md_20250924_204908.md] # Web IDL Type Conversions on JavaScript Values
+- [brainstorm_README.md_20250924_204909.md] # eslint-plugin-import
+- [brainstorm_README.md_20250924_204910.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_204911.md] # `eslint-plugin-react` <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250924_204912.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_204913.md] # file-entry-cache
+- [brainstorm_README.md_20250924_204914.md] # Fraction.js - ℚ in JavaScript
+- [brainstorm_README.md_20250924_204916.md] <p align="center">
+- [brainstorm_README.md_20250924_204917.md] # internal-slot <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [brainstorm_README.md_20250924_204919.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_204921.md] # jest-worker
+- [brainstorm_README.md_20250924_204922.md] semver(1) -- The semantic versioner for npm
+- [brainstorm_README.md_20250924_204923.md] # minipass
+- [brainstorm_README_AI_Consensus_Project.md_20250923_221922.md] # AI Consensus Project
+- [brainstorm_README_AI_Consensus_Project.md_20250923_222750.md] # AI Consensus Project
+- [brainstorm_Readme.md_20250923_221856.md] # depd
+- [brainstorm_Readme.md_20250923_221902.md] # events [![Build Status](https://travis-ci.org/Gozala/events.png?branch=master)](https://travis-ci.org/Gozala/events)
+- [brainstorm_Readme.md_20250923_222225.md] # depd
+- [brainstorm_Readme.md_20250923_222311.md] # events [![Build Status](https://travis-ci.org/Gozala/events.png?branch=master)](https://travis-ci.org/Gozala/events)
+- [brainstorm_Readme.md_20250923_222444.md] # depd
+- [brainstorm_Readme.md_20250923_222734.md] # depd
+- [brainstorm_Readme.md_20250923_222739.md] # events [![Build Status](https://travis-ci.org/Gozala/events.png?branch=master)](https://travis-ci.org/Gozala/events)
+- [brainstorm_Readme.md_20250924_202734.md] # depd
+- [brainstorm_Readme.md_20250924_202739.md] # events [![Build Status](https://travis-ci.org/Gozala/events.png?branch=master)](https://travis-ci.org/Gozala/events)
+- [brainstorm_Readme.md_20250924_204907.md] # depd
+- [brainstorm_Readme.md_20250924_204912.md] # events [![Build Status](https://travis-ci.org/Gozala/events.png?branch=master)](https://travis-ci.org/Gozala/events)
+- [brainstorm_SECURITY.md_20250923_222500.md] <!-- BEGIN MICROSOFT SECURITY.MD V0.0.7 BLOCK -->
+- [brainstorm_SECURITY.md_20250923_222502.md] <!-- BEGIN MICROSOFT SECURITY.MD V0.0.5 BLOCK -->
+- [brainstorm_SECURITY.md_20250923_222713.md] <!-- BEGIN MICROSOFT SECURITY.MD V0.0.9 BLOCK -->
+- [brainstorm_Zo-Zla Halawa Comprehensive Research_.txt_20250923_221923.md] ﻿Zo-Zla Halawa: Unraveling the Myth of the Star-Eater in MonsterVerse Lore
+- [brainstorm_Zo-Zla Halawa Comprehensive Research_.txt_20250923_222751.md] ﻿Zo-Zla Halawa: Unraveling the Myth of the Star-Eater in MonsterVerse Lore
+- [brainstorm_advanced-features.md_20250923_222433.md] # Advanced Features
+- [brainstorm_agentscreatingotheragents.txt_20250923_221922.md] ﻿Here’s a set of AI agents designed to create, manage, and evolve other AI agents, making them self-replicating, adaptive, and intelligent ecosystems rather than standalone tools. This takes AI agent ...
+- [brainstorm_agentscreatingotheragents.txt_20250923_222750.md] ﻿Here’s a set of AI agents designed to create, manage, and evolve other AI agents, making them self-replicating, adaptive, and intelligent ecosystems rather than standalone tools. This takes AI agent ...
+- [brainstorm_ban-types.md_20250923_221845.md] ---
+- [brainstorm_ban-types.md_20250923_222010.md] ---
+- [brainstorm_ban-types.md_20250923_222726.md] ---
+- [brainstorm_ban-types.md_20250924_202724.md] ---
+- [brainstorm_ban-types.md_20250924_204857.md] ---
+- [brainstorm_drill_simulation_plan.md_20250923_221922.md] # Drill Simulation Plan – AI Consensus System
+- [brainstorm_drill_simulation_plan.md_20250923_222750.md] # Drill Simulation Plan – AI Consensus System
+- [brainstorm_dynamic-import-chunkname.md_20250923_221859.md] # import/dynamic-import-chunkname
+- [brainstorm_dynamic-import-chunkname.md_20250923_222256.md] # import/dynamic-import-chunkname
+- [brainstorm_dynamic-import-chunkname.md_20250923_222736.md] # import/dynamic-import-chunkname
+- [brainstorm_dynamic-import-chunkname.md_20250924_202736.md] # import/dynamic-import-chunkname
+- [brainstorm_dynamic-import-chunkname.md_20250924_204909.md] # import/dynamic-import-chunkname
+- [brainstorm_failure_log.txt_20250923_221917.md] [2025-07-27 21:00:55] ✅ heartbeat_log.txt is fresh.
+- [brainstorm_failure_log.txt_20250924_202753.md] [2025-07-27 21:00:55] ✅ heartbeat_log.txt is fresh.
+- [brainstorm_failure_log.txt_20250924_204925.md] [2025-07-27 21:00:55] ✅ heartbeat_log.txt is fresh.
+- [brainstorm_heartbeat_2025-07-22.md_20250923_221920.md] ✅ 2025-07-22 06:32 PM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-22.md_20250924_202756.md] ✅ 2025-07-22 06:32 PM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-22.md_20250924_204928.md] ✅ 2025-07-22 06:32 PM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-23.md_20250923_221920.md] ✅ 2025-07-23 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-23.md_20250924_202756.md] ✅ 2025-07-23 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-23.md_20250924_204928.md] ✅ 2025-07-23 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-24.md_20250923_221920.md] ✅ 2025-07-24 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-24.md_20250924_202756.md] ✅ 2025-07-24 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-24.md_20250924_204928.md] ✅ 2025-07-24 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-25.md_20250923_221920.md] ✅ 2025-07-25 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-25.md_20250924_202756.md] ✅ 2025-07-25 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-25.md_20250924_204928.md] ✅ 2025-07-25 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-26.md_20250923_221920.md] ✅ 2025-07-26 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-26.md_20250924_202756.md] ✅ 2025-07-26 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-26.md_20250924_204928.md] ✅ 2025-07-26 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-27.md_20250923_221920.md] ✅ 2025-07-27 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-27.md_20250924_202756.md] ✅ 2025-07-27 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-27.md_20250924_204928.md] ✅ 2025-07-27 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-28.md_20250923_221921.md] ✅ 2025-07-28 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-28.md_20250924_202756.md] ✅ 2025-07-28 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-28.md_20250924_204928.md] ✅ 2025-07-28 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-29.md_20250923_221921.md] ✅ 2025-07-29 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-29.md_20250924_202756.md] ✅ 2025-07-29 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-29.md_20250924_204928.md] ✅ 2025-07-29 06:25 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-30.md_20250923_221921.md] ✅ 2025-07-30 04:11 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-30.md_20250924_202756.md] ✅ 2025-07-30 04:11 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_heartbeat_2025-07-30.md_20250924_204928.md] ✅ 2025-07-30 04:11 AM - [SMS/Voice Simulation] Log written successfully.
+- [brainstorm_how-it-works.md_20250923_222433.md] # How it works
+- [brainstorm_index.md_20250923_221922.md] # 🧠 AI Consensus Project – Seed Directory Index
+- [brainstorm_index.md_20250923_222750.md] # 🧠 AI Consensus Project – Seed Directory Index
+- [brainstorm_index_patch_note.md_20250923_221922.md] ## 🔄 Recent Updates (Perplexity Integration)
+- [brainstorm_index_patch_note.md_20250923_222750.md] ## 🔄 Recent Updates (Perplexity Integration)
+- [brainstorm_knowledge_shared_2025-07-22.md_20250923_221917.md] # Knowledge Shared – 2025-07-22
+- [brainstorm_knowledge_shared_2025-07-22.md_20250924_202752.md] # Knowledge Shared – 2025-07-22
+- [brainstorm_knowledge_shared_2025-07-22.md_20250924_204925.md] # Knowledge Shared – 2025-07-22
+- [brainstorm_knowledge_shared_2025-07-23.md_20250923_221917.md] # Knowledge Shared – 2025-07-23
+- [brainstorm_knowledge_shared_2025-07-23.md_20250924_202752.md] # Knowledge Shared – 2025-07-23
+- [brainstorm_knowledge_shared_2025-07-23.md_20250924_204925.md] # Knowledge Shared – 2025-07-23
+- [brainstorm_knowledge_shared_2025-07-24.md_20250923_221917.md] # Knowledge Shared – 2025-07-24
+- [brainstorm_knowledge_shared_2025-07-24.md_20250924_202752.md] # Knowledge Shared – 2025-07-24
+- [brainstorm_knowledge_shared_2025-07-24.md_20250924_204925.md] # Knowledge Shared – 2025-07-24
+- [brainstorm_knowledge_shared_2025-07-25.md_20250923_221917.md] # Knowledge Shared – 2025-07-25
+- [brainstorm_knowledge_shared_2025-07-25.md_20250924_202752.md] # Knowledge Shared – 2025-07-25
+- [brainstorm_knowledge_shared_2025-07-25.md_20250924_204925.md] # Knowledge Shared – 2025-07-25
+- [brainstorm_knowledge_shared_2025-07-26.md_20250923_221917.md] # Knowledge Shared – 2025-07-26
+- [brainstorm_knowledge_shared_2025-07-26.md_20250924_202752.md] # Knowledge Shared – 2025-07-26
+- [brainstorm_knowledge_shared_2025-07-26.md_20250924_204925.md] # Knowledge Shared – 2025-07-26
+- [brainstorm_knowledge_shared_2025-07-27.md_20250923_221917.md] # Knowledge Shared – 2025-07-27
+- [brainstorm_knowledge_shared_2025-07-27.md_20250924_202752.md] # Knowledge Shared – 2025-07-27
+- [brainstorm_knowledge_shared_2025-07-27.md_20250924_204925.md] # Knowledge Shared – 2025-07-27
+- [brainstorm_knowledge_shared_2025-07-28.md_20250923_221917.md] # Knowledge Shared – 2025-07-28
+- [brainstorm_knowledge_shared_2025-07-28.md_20250924_202752.md] # Knowledge Shared – 2025-07-28
+- [brainstorm_knowledge_shared_2025-07-28.md_20250924_204925.md] # Knowledge Shared – 2025-07-28
+- [brainstorm_knowledge_shared_2025-07-29.md_20250923_221917.md] # Knowledge Shared – 2025-07-29
+- [brainstorm_knowledge_shared_2025-07-29.md_20250924_202752.md] # Knowledge Shared – 2025-07-29
+- [brainstorm_knowledge_shared_2025-07-29.md_20250924_204925.md] # Knowledge Shared – 2025-07-29
+- [brainstorm_knowledge_shared_2025-07-30.md_20250923_221917.md] # Knowledge Shared – 2025-07-30
+- [brainstorm_knowledge_shared_2025-07-30.md_20250924_202752.md] # Knowledge Shared – 2025-07-30
+- [brainstorm_knowledge_shared_2025-07-30.md_20250924_204925.md] # Knowledge Shared – 2025-07-30
+- [brainstorm_milestone_report_phase1_2025-09-29.md_20250929_222432.md] # Project Milestone Report — Phase 1 Completed
+- [brainstorm_milestone_report_phase2_2025-09-29.md_20250929_213708.md] # Project Milestone Report — Phase 2 Completed
+- [brainstorm_milestone_report_phase3_2025-09-29.md_20250929_222210.md] # Project Milestone Report — Phase 3 Completed
+- [brainstorm_no-empty-interface.md_20250923_221845.md] ---
+- [brainstorm_no-empty-interface.md_20250923_222011.md] ---
+- [brainstorm_no-empty-interface.md_20250923_222726.md] ---
+- [brainstorm_no-empty-interface.md_20250924_202724.md] ---
+- [brainstorm_no-empty-interface.md_20250924_204857.md] ---
+- [brainstorm_no-empty-named-blocks.md_20250923_221859.md] # import/no-empty-named-blocks
+- [brainstorm_no-empty-named-blocks.md_20250923_222256.md] # import/no-empty-named-blocks
+- [brainstorm_no-empty-named-blocks.md_20250923_222736.md] # import/no-empty-named-blocks
+- [brainstorm_no-empty-named-blocks.md_20250924_202737.md] # import/no-empty-named-blocks
+- [brainstorm_no-empty-named-blocks.md_20250924_204910.md] # import/no-empty-named-blocks
+- [brainstorm_no-extraneous-dependencies.md_20250923_221859.md] # import/no-extraneous-dependencies
+- [brainstorm_no-extraneous-dependencies.md_20250923_222256.md] # import/no-extraneous-dependencies
+- [brainstorm_no-extraneous-dependencies.md_20250923_222736.md] # import/no-extraneous-dependencies
+- [brainstorm_no-extraneous-dependencies.md_20250924_202737.md] # import/no-extraneous-dependencies
+- [brainstorm_no-extraneous-dependencies.md_20250924_204910.md] # import/no-extraneous-dependencies
+- [brainstorm_no-noninteractive-tabindex.md_20250923_221901.md] # jsx-a11y/no-noninteractive-tabindex
+- [brainstorm_no-noninteractive-tabindex.md_20250923_222259.md] # jsx-a11y/no-noninteractive-tabindex
+- [brainstorm_no-noninteractive-tabindex.md_20250923_222737.md] # jsx-a11y/no-noninteractive-tabindex
+- [brainstorm_no-noninteractive-tabindex.md_20250924_202738.md] # jsx-a11y/no-noninteractive-tabindex
+- [brainstorm_no-noninteractive-tabindex.md_20250924_204911.md] # jsx-a11y/no-noninteractive-tabindex
+- [brainstorm_no-webpack-loader-syntax.md_20250923_221859.md] # import/no-webpack-loader-syntax
+- [brainstorm_no-webpack-loader-syntax.md_20250923_222256.md] # import/no-webpack-loader-syntax
+- [brainstorm_no-webpack-loader-syntax.md_20250923_222737.md] # import/no-webpack-loader-syntax
+- [brainstorm_no-webpack-loader-syntax.md_20250924_202737.md] # import/no-webpack-loader-syntax
+- [brainstorm_no-webpack-loader-syntax.md_20250924_204910.md] # import/no-webpack-loader-syntax
+- [brainstorm_phase_2_failover_patch.md_20250923_221922.md] # Phase 2 Failover Enhancements – Perplexity Simulation Output
+- [brainstorm_phase_2_failover_patch.md_20250923_222750.md] # Phase 2 Failover Enhancements – Perplexity Simulation Output
+- [brainstorm_readme.md_20250923_221841.md] <div align="center">
+- [brainstorm_readme.md_20250923_221853.md] # ![common-tags](media/logo.svg)
+- [brainstorm_readme.md_20250923_221857.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250923_221858.md] # escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/es...
+- [brainstorm_readme.md_20250923_221902.md] <div align="center">
+- [brainstorm_readme.md_20250923_221912.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250923_221946.md] <div align="center">
+- [brainstorm_readme.md_20250923_222056.md] # ![common-tags](media/logo.svg)
+- [brainstorm_readme.md_20250923_222229.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250923_222254.md] # escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/es...
+- [brainstorm_readme.md_20250923_222310.md] <div align="center">
+- [brainstorm_readme.md_20250923_222337.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250923_222457.md] <div align="center">
+- [brainstorm_readme.md_20250923_222501.md] <div align="center">
+- [brainstorm_readme.md_20250923_222621.md] # clsx [![CI](https://github.com/lukeed/clsx/workflows/CI/badge.svg)](https://github.com/lukeed/clsx/actions?query=workflow%3ACI) [![codecov](https://badgen.net/codecov/c/github/lukeed/clsx)](https://...
+- [brainstorm_readme.md_20250923_222622.md] # escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/es...
+- [brainstorm_readme.md_20250923_222723.md] <div align="center">
+- [brainstorm_readme.md_20250923_222732.md] # ![common-tags](media/logo.svg)
+- [brainstorm_readme.md_20250923_222735.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250923_222736.md] # escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/es...
+- [brainstorm_readme.md_20250923_222738.md] <div align="center">
+- [brainstorm_readme.md_20250923_222745.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250924_202720.md] <div align="center">
+- [brainstorm_readme.md_20250924_202731.md] # ![common-tags](media/logo.svg)
+- [brainstorm_readme.md_20250924_202735.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250924_202736.md] # escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/es...
+- [brainstorm_readme.md_20250924_202739.md] <div align="center">
+- [brainstorm_readme.md_20250924_202748.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250924_204853.md] <div align="center">
+- [brainstorm_readme.md_20250924_204904.md] # ![common-tags](media/logo.svg)
+- [brainstorm_readme.md_20250924_204908.md] # <img src="media/header.png" width="1000">
+- [brainstorm_readme.md_20250924_204909.md] # escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/es...
+- [brainstorm_readme.md_20250924_204912.md] <div align="center">
+- [brainstorm_readme.md_20250924_204920.md] # <img src="media/header.png" width="1000">
+- [brainstorm_simulations_2025-07-22.md_20250923_221917.md] # Simulations – 2025-07-22
+- [brainstorm_simulations_2025-07-22.md_20250924_202752.md] # Simulations – 2025-07-22
+- [brainstorm_simulations_2025-07-22.md_20250924_204925.md] # Simulations – 2025-07-22
+- [brainstorm_simulations_2025-07-23.md_20250923_221917.md] # Simulation Log – 2025-07-23
+- [brainstorm_simulations_2025-07-23.md_20250924_202752.md] # Simulation Log – 2025-07-23
+- [brainstorm_simulations_2025-07-23.md_20250924_204925.md] # Simulation Log – 2025-07-23
+- [brainstorm_simulations_2025-07-24.md_20250923_221917.md] # Simulation Log – 2025-07-24
+- [brainstorm_simulations_2025-07-24.md_20250924_202752.md] # Simulation Log – 2025-07-24
+- [brainstorm_simulations_2025-07-24.md_20250924_204925.md] # Simulation Log – 2025-07-24
+- [brainstorm_simulations_2025-07-25.md_20250923_221917.md] # Simulation Log – 2025-07-25
+- [brainstorm_simulations_2025-07-25.md_20250924_202752.md] # Simulation Log – 2025-07-25
+- [brainstorm_simulations_2025-07-25.md_20250924_204925.md] # Simulation Log – 2025-07-25
+- [brainstorm_simulations_2025-07-26.md_20250923_221917.md] # Simulation Log – 2025-07-26
+- [brainstorm_simulations_2025-07-26.md_20250924_202752.md] # Simulation Log – 2025-07-26
+- [brainstorm_simulations_2025-07-26.md_20250924_204925.md] # Simulation Log – 2025-07-26
+- [brainstorm_simulations_2025-07-27.md_20250923_221917.md] # Simulation Log – 2025-07-27
+- [brainstorm_simulations_2025-07-27.md_20250924_202752.md] # Simulation Log – 2025-07-27
+- [brainstorm_simulations_2025-07-27.md_20250924_204925.md] # Simulation Log – 2025-07-27
+- [brainstorm_simulations_2025-07-28.md_20250923_221917.md] # Simulation Log – 2025-07-28
+- [brainstorm_simulations_2025-07-28.md_20250924_202752.md] # Simulation Log – 2025-07-28
+- [brainstorm_simulations_2025-07-28.md_20250924_204925.md] # Simulation Log – 2025-07-28
+- [brainstorm_simulations_2025-07-29.md_20250923_221917.md] # Simulation Log – 2025-07-29
+- [brainstorm_simulations_2025-07-29.md_20250924_202752.md] # Simulation Log – 2025-07-29
+- [brainstorm_simulations_2025-07-29.md_20250924_204925.md] # Simulation Log – 2025-07-29
+- [brainstorm_simulations_2025-07-30.md_20250923_221917.md] # Simulation Log – 2025-07-30
+- [brainstorm_simulations_2025-07-30.md_20250924_202752.md] # Simulation Log – 2025-07-30
+- [brainstorm_simulations_2025-07-30.md_20250924_204925.md] # Simulation Log – 2025-07-30
+- [brainstorm_weekly_status_report.md_20250923_221918.md] # 🗓️ Weekly Status Report
+- [brainstorm_weekly_status_report.md_20250924_202753.md] # 🗓️ Weekly Status Report
+- [brainstorm_weekly_status_report.md_20250924_204926.md] # 🗓️ Weekly Status Report
+
+---
+## Optimization
+- [optimization_011_11.md_20250923_221834.md] You are **11** — role: Weekly self‑review of playbooks; version improved runbooks.
+- [optimization_011_11.md_20250923_222718.md] You are **11** — role: Weekly self‑review of playbooks; version improved runbooks.
+- [optimization_036_36.md_20250923_221834.md] You are **36** — role: Optimize compute and PA task slots; pack schedules.
+- [optimization_036_36.md_20250923_222718.md] You are **36** — role: Optimize compute and PA task slots; pack schedules.
+- [optimization_061025 chatgpt project.txt_20250923_221922.md] 🔧 AI Consensus System - Unified Blueprint (v2025.06.10)
+- [optimization_061025 chatgpt project.txt_20250923_222750.md] 🔧 AI Consensus System - Unified Blueprint (v2025.06.10)
+- [optimization_2015-01-30.md_20250923_221907.md] # streams WG Meeting 2015-01-30
+- [optimization_2015-01-30.md_20250923_222323.md] # streams WG Meeting 2015-01-30
+- [optimization_2015-01-30.md_20250923_222742.md] # streams WG Meeting 2015-01-30
+- [optimization_2015-01-30.md_20250924_202743.md] # streams WG Meeting 2015-01-30
+- [optimization_2015-01-30.md_20250924_204916.md] # streams WG Meeting 2015-01-30
+- [optimization_AI Consensus System Project.txt_20250923_221922.md] ### AI Consensus System Project Overview
+- [optimization_AI Consensus System Project.txt_20250923_222750.md] ### AI Consensus System Project Overview
+- [optimization_AI_Consensus_System_Unified_Prompt.txt_20250923_221922.md] ### AI Consensus System - Unified Blueprint
+- [optimization_AI_Consensus_System_Unified_Prompt.txt_20250923_222750.md] ### AI Consensus System - Unified Blueprint
+- [optimization_CHANGELOG.md_20250923_221837.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221841.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221842.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221849.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221850.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221851.md] #### 5.2.2
+- [optimization_CHANGELOG.md_20250923_221852.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221853.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_221854.md] # Changes to CSS Has Pseudo
+- [optimization_CHANGELOG.md_20250923_221855.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221856.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221858.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221859.md] 3.1.0 / 2017-09-26
+- [optimization_CHANGELOG.md_20250923_221900.md] # [25.7.0](https://github.com/jest-community/eslint-plugin-jest/compare/v25.6.0...v25.7.0) (2022-01-15)
+- [optimization_CHANGELOG.md_20250923_221902.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221903.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221904.md] 9.1.0 / 2021-01-19
+- [optimization_CHANGELOG.md_20250923_221905.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221906.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221907.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221908.md] ### Changelog
+- [optimization_CHANGELOG.md_20250923_221909.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221910.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221911.md] # Change Log
+- [optimization_CHANGELOG.md_20250923_221912.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221913.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221916.md] Forge ChangeLog
+- [optimization_CHANGELOG.md_20250923_221933.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221946.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221952.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_221953.md] # @rollup/pluginutils ChangeLog
+- [optimization_CHANGELOG.md_20250923_222033.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222034.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222037.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222040.md] #### 5.2.2
+- [optimization_CHANGELOG.md_20250923_222041.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222042.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222053.md] # Change Log
+- [optimization_CHANGELOG.md_20250923_222056.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222217.md] # Changes to CSS Has Pseudo
+- [optimization_CHANGELOG.md_20250923_222220.md] ## 4.2.0 (November 26, 2020)
+- [optimization_CHANGELOG.md_20250923_222224.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222225.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222226.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222250.md] 1.24.0 / 2025-05-28
+- [optimization_CHANGELOG.md_20250923_222252.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222253.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222254.md] # Change Log
+- [optimization_CHANGELOG.md_20250923_222255.md] 3.1.0 / 2017-09-26
+- [optimization_CHANGELOG.md_20250923_222256.md] # Change Log
+- [optimization_CHANGELOG.md_20250923_222257.md] # [25.7.0](https://github.com/jest-community/eslint-plugin-jest/compare/v25.6.0...v25.7.0) (2022-01-15)
+- [optimization_CHANGELOG.md_20250923_222258.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222310.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222312.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222314.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222315.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222318.md] 9.1.0 / 2021-01-19
+- [optimization_CHANGELOG.md_20250923_222320.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222321.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222322.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222325.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222327.md] ### Changelog
+- [optimization_CHANGELOG.md_20250923_222328.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222329.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222330.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222331.md] # Change Log
+- [optimization_CHANGELOG.md_20250923_222332.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222339.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222344.md] 6.1.0 / 2020-10-31
+- [optimization_CHANGELOG.md_20250923_222345.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222346.md] # Release history
+- [optimization_CHANGELOG.md_20250923_222401.md] Forge ChangeLog
+- [optimization_CHANGELOG.md_20250923_222403.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222404.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222407.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222416.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222421.md] ## **6.13.0**
+- [optimization_CHANGELOG.md_20250923_222424.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222427.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222431.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222433.md] # resolve-url-loader
+- [optimization_CHANGELOG.md_20250923_222436.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222443.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222444.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222445.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222446.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222449.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222450.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222454.md] ### [ [>](https://github.com/svg/svgo/tree/v1.3.2) ] 1.3.2 / 30.10.2019
+- [optimization_CHANGELOG.md_20250923_222457.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222500.md] # 3.21.0
+- [optimization_CHANGELOG.md_20250923_222501.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222506.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222512.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222513.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222524.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222525.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222531.md] 9.1.0 / 2021-01-19
+- [optimization_CHANGELOG.md_20250923_222539.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222548.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222629.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222630.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222717.md] # Changes
+- [optimization_CHANGELOG.md_20250923_222720.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222723.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222724.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222729.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222730.md] #### 5.2.2
+- [optimization_CHANGELOG.md_20250923_222731.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222732.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222733.md] # Changes to CSS Has Pseudo
+- [optimization_CHANGELOG.md_20250923_222734.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222735.md] 1.24.0 / 2025-05-28
+- [optimization_CHANGELOG.md_20250923_222736.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222737.md] # [25.7.0](https://github.com/jest-community/eslint-plugin-jest/compare/v25.6.0...v25.7.0) (2022-01-15)
+- [optimization_CHANGELOG.md_20250923_222738.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222739.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250923_222740.md] 9.1.0 / 2021-01-19
+- [optimization_CHANGELOG.md_20250923_222741.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222742.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222743.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222744.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222745.md] # Change Log
+- [optimization_CHANGELOG.md_20250923_222746.md] # Changelog
+- [optimization_CHANGELOG.md_20250923_222748.md] Forge ChangeLog
+- [optimization_CHANGELOG.md_20250924_202717.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202720.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202721.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202722.md] # @rollup/pluginutils ChangeLog
+- [optimization_CHANGELOG.md_20250924_202727.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202728.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202729.md] #### 5.2.2
+- [optimization_CHANGELOG.md_20250924_202730.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202731.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250924_202732.md] # Changes to CSS Has Pseudo
+- [optimization_CHANGELOG.md_20250924_202733.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202734.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202735.md] 1.24.0 / 2025-05-28
+- [optimization_CHANGELOG.md_20250924_202736.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202737.md] # [25.7.0](https://github.com/jest-community/eslint-plugin-jest/compare/v25.6.0...v25.7.0) (2022-01-15)
+- [optimization_CHANGELOG.md_20250924_202738.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202739.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202740.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202741.md] 9.1.0 / 2021-01-19
+- [optimization_CHANGELOG.md_20250924_202742.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202743.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202744.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202745.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202746.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202747.md] # Change Log
+- [optimization_CHANGELOG.md_20250924_202748.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202749.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_202751.md] Forge ChangeLog
+- [optimization_CHANGELOG.md_20250924_202752.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204849.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204853.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204854.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204900.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204901.md] # v3.2.5
+- [optimization_CHANGELOG.md_20250924_204902.md] #### 5.2.2
+- [optimization_CHANGELOG.md_20250924_204903.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204904.md] 2.6.9 / 2017-09-22
+- [optimization_CHANGELOG.md_20250924_204905.md] # Changes to CSS Has Pseudo
+- [optimization_CHANGELOG.md_20250924_204906.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204907.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204908.md] 1.24.0 / 2025-05-28
+- [optimization_CHANGELOG.md_20250924_204909.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204910.md] # [25.7.0](https://github.com/jest-community/eslint-plugin-jest/compare/v25.6.0...v25.7.0) (2022-01-15)
+- [optimization_CHANGELOG.md_20250924_204911.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204912.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204913.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204914.md] 9.1.0 / 2021-01-19
+- [optimization_CHANGELOG.md_20250924_204915.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204916.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204917.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204918.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204919.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204921.md] # Changelog
+- [optimization_CHANGELOG.md_20250924_204924.md] Forge ChangeLog
+- [optimization_CHANGES.md_20250923_221849.md] ## 2.0.6
+- [optimization_CHANGES.md_20250923_222034.md] ## 2.0.6
+- [optimization_CHANGES.md_20250923_222421.md] ## 1.5.1
+- [optimization_CHANGES.md_20250923_222729.md] ## 2.0.6
+- [optimization_CHANGES.md_20250924_202728.md] ## 2.0.6
+- [optimization_CHANGES.md_20250924_204900.md] ## 2.0.6
+- [optimization_CONTRIBUTING.md_20250923_221859.md] # Contributing
+- [optimization_CONTRIBUTING.md_20250923_222255.md] # Contributing
+- [optimization_CONTRIBUTING.md_20250923_222736.md] # Contributing
+- [optimization_CONTRIBUTING.md_20250924_202736.md] # Contributing
+- [optimization_CONTRIBUTING.md_20250924_204909.md] # Contributing
+- [optimization_Changelog.md_20250923_221851.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250923_221908.md] ## 0.6.3 / 2021-05-23
+- [optimization_Changelog.md_20250923_222041.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250923_222325.md] ## 0.6.3 / 2021-05-23
+- [optimization_Changelog.md_20250923_222422.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250923_222524.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250923_222731.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250923_222742.md] ## 0.6.3 / 2021-05-23
+- [optimization_Changelog.md_20250924_202729.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250924_202744.md] ## 0.6.3 / 2021-05-23
+- [optimization_Changelog.md_20250924_204902.md] # 0.4.24 / 2018-08-22
+- [optimization_Changelog.md_20250924_204917.md] ## 0.6.3 / 2021-05-23
+- [optimization_HISTORY.md_20250923_221851.md] 1.20.3 / 2024-09-10
+- [optimization_HISTORY.md_20250923_221904.md] v1.3.1 / 2024-09-11
+- [optimization_HISTORY.md_20250923_221915.md] 2.7.0 / 2017-09-13
+- [optimization_HISTORY.md_20250923_222040.md] # History
+- [optimization_HISTORY.md_20250923_222041.md] 1.20.3 / 2024-09-10
+- [optimization_HISTORY.md_20250923_222315.md] v1.3.1 / 2024-09-11
+- [optimization_HISTORY.md_20250923_222358.md] 2.1.35 / 2022-03-12
+- [optimization_HISTORY.md_20250923_222359.md] 2.7.0 / 2017-09-13
+- [optimization_HISTORY.md_20250923_222443.md] 0.19.0 / 2024-09-10
+- [optimization_HISTORY.md_20250923_222444.md] 1.9.1 / 2017-09-28
+- [optimization_HISTORY.md_20250923_222445.md] 1.16.2 / 2024-09-11
+- [optimization_HISTORY.md_20250923_222730.md] # History
+- [optimization_HISTORY.md_20250923_222731.md] 1.20.3 / 2024-09-10
+- [optimization_HISTORY.md_20250923_222739.md] v1.3.1 / 2024-09-11
+- [optimization_HISTORY.md_20250923_222748.md] 2.7.0 / 2017-09-13
+- [optimization_HISTORY.md_20250924_202729.md] 1.20.3 / 2024-09-10
+- [optimization_HISTORY.md_20250924_202741.md] v1.3.1 / 2024-09-11
+- [optimization_HISTORY.md_20250924_202750.md] 2.1.35 / 2022-03-12
+- [optimization_HISTORY.md_20250924_202751.md] 2.7.0 / 2017-09-13
+- [optimization_HISTORY.md_20250924_204902.md] 1.20.3 / 2024-09-10
+- [optimization_HISTORY.md_20250924_204914.md] v1.3.1 / 2024-09-11
+- [optimization_HISTORY.md_20250924_204923.md] 2.7.0 / 2017-09-13
+- [optimization_History.md_20250923_221852.md] 4.6.0 / 2015-07-09
+- [optimization_History.md_20250923_221903.md] 4.21.2 / 2024-11-06
+- [optimization_History.md_20250923_222051.md] [5.3.3 / 2023-11-30](https://github.com/clean-css/clean-css/compare/v5.3.2...v5.3.3)
+- [optimization_History.md_20250923_222053.md] 4.6.0 / 2015-07-09
+- [optimization_History.md_20250923_222312.md] 4.21.2 / 2024-11-06
+- [optimization_History.md_20250923_222732.md] 4.6.0 / 2015-07-09
+- [optimization_History.md_20250923_222739.md] 4.21.2 / 2024-11-06
+- [optimization_History.md_20250924_202731.md] 4.6.0 / 2015-07-09
+- [optimization_History.md_20250924_202740.md] 4.21.2 / 2024-11-06
+- [optimization_History.md_20250924_204903.md] 4.6.0 / 2015-07-09
+- [optimization_History.md_20250924_204913.md] 4.21.2 / 2024-11-06
+- [optimization_README.md_20250923_221831.md] # Getting Started with Create React App
+- [optimization_README.md_20250923_221835.md] # Getting Started with Create React App
+- [optimization_README.md_20250923_221843.md] # @svgr/plugin-svgo
+- [optimization_README.md_20250923_221854.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250923_221855.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250923_221856.md] didYouMean.js - A simple JavaScript matching engine
+- [optimization_README.md_20250923_221902.md] # EventEmitter3
+- [optimization_README.md_20250923_221907.md] # safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+- [optimization_README.md_20250923_221909.md] # is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style...
+- [optimization_README.md_20250923_221912.md] # pretty-format
+- [optimization_README.md_20250923_221913.md] # kind-of [![NPM version](https://img.shields.io/npm/v/kind-of.svg?style=flat)](https://www.npmjs.com/package/kind-of) [![NPM monthly downloads](https://img.shields.io/npm/dm/kind-of.svg?style=flat)](...
+- [optimization_README.md_20250923_221916.md] # Forge
+- [optimization_README.md_20250923_221923.md] # Getting Started with Create React App
+- [optimization_README.md_20250923_221958.md] # @svgr/plugin-svgo
+- [optimization_README.md_20250923_222217.md] <div align="center">
+- [optimization_README.md_20250923_222218.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250923_222220.md] [![NPM version](https://img.shields.io/npm/v/csso.svg)](https://www.npmjs.com/package/csso)
+- [optimization_README.md_20250923_222221.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250923_222226.md] didYouMean.js - A simple JavaScript matching engine
+- [optimization_README.md_20250923_222306.md] [![npm version](https://img.shields.io/npm/v/eslint.svg)](https://www.npmjs.com/package/eslint)
+- [optimization_README.md_20250923_222311.md] # EventEmitter3
+- [optimization_README.md_20250923_222323.md] # safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+- [optimization_README.md_20250923_222329.md] # is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style...
+- [optimization_README.md_20250923_222338.md] # pretty-format
+- [optimization_README.md_20250923_222346.md] # kind-of [![NPM version](https://img.shields.io/npm/v/kind-of.svg?style=flat)](https://www.npmjs.com/package/kind-of) [![NPM monthly downloads](https://img.shields.io/npm/dm/kind-of.svg?style=flat)](...
+- [optimization_README.md_20250923_222400.md] <h1 align="center">Neo-Async</h1>
+- [optimization_README.md_20250923_222401.md] # Forge
+- [optimization_README.md_20250923_222402.md] # nth-check [![Build Status](https://travis-ci.org/fb55/nth-check.svg)](https://travis-ci.org/fb55/nth-check)
+- [optimization_README.md_20250923_222406.md] # path-scurry
+- [optimization_README.md_20250923_222409.md] # postcss-import
+- [optimization_README.md_20250923_222416.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250923_222417.md] <div align="center">
+- [optimization_README.md_20250923_222419.md] # pretty-format
+- [optimization_README.md_20250923_222421.md] # proxy-addr
+- [optimization_README.md_20250923_222435.md] <!-- badges/ -->
+- [optimization_README.md_20250923_222436.md] # saxes
+- [optimization_README.md_20250923_222445.md] # serve-static
+- [optimization_README.md_20250923_222449.md] # ES6 `String.prototype.includes` polyfill [![Build status](https://travis-ci.org/mathiasbynens/String.prototype.includes.svg?branch=master)](https://travis-ci.org/mathiasbynens/String.prototype.inclu...
+- [optimization_README.md_20250923_222450.md] # ES6 `String.prototype.repeat` polyfill [![Build status](https://travis-ci.org/mathiasbynens/String.prototype.repeat.svg?branch=master)](https://travis-ci.org/mathiasbynens/String.prototype.repeat)
+- [optimization_README.md_20250923_222454.md] **english** | [русский](https://github.com/svg/svgo/blob/master/README.ru.md)
+- [optimization_README.md_20250923_222455.md] # nth-check [![Build Status](https://travis-ci.org/fb55/nth-check.svg)](https://travis-ci.org/fb55/nth-check)
+- [optimization_README.md_20250923_222457.md] <h1><img src="https://terser.org/img/terser-banner-logo.png" alt="Terser" width="400"></h1>
+- [optimization_README.md_20250923_222458.md] # thenify
+- [optimization_README.md_20250923_222500.md] # tslib
+- [optimization_README.md_20250923_222609.md] # minimatch
+- [optimization_README.md_20250923_222623.md] [![npm version](https://img.shields.io/npm/v/eslint.svg)](https://www.npmjs.com/package/eslint)
+- [optimization_README.md_20250923_222629.md] # is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style...
+- [optimization_README.md_20250923_222708.md] # reusify
+- [optimization_README.md_20250923_222712.md] <p align="center">
+- [optimization_README.md_20250923_222713.md] # to-regex-range [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shiel...
+- [optimization_README.md_20250923_222716.md] <p align="center">
+- [optimization_README.md_20250923_222719.md] # Getting Started with Create React App
+- [optimization_README.md_20250923_222724.md] # @svgr/plugin-svgo
+- [optimization_README.md_20250923_222725.md] # @svgr/webpack
+- [optimization_README.md_20250923_222733.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250923_222735.md] didYouMean.js - A simple JavaScript matching engine
+- [optimization_README.md_20250923_222738.md] # EventEmitter3
+- [optimization_README.md_20250923_222742.md] # safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+- [optimization_README.md_20250923_222744.md] # is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style...
+- [optimization_README.md_20250923_222745.md] # pretty-format
+- [optimization_README.md_20250923_222746.md] # kind-of [![NPM version](https://img.shields.io/npm/v/kind-of.svg?style=flat)](https://www.npmjs.com/package/kind-of) [![NPM monthly downloads](https://img.shields.io/npm/dm/kind-of.svg?style=flat)](...
+- [optimization_README.md_20250923_222748.md] # Forge
+- [optimization_README.md_20250924_202715.md] # Getting Started with Create React App
+- [optimization_README.md_20250924_202722.md] # @svgr/plugin-svgo
+- [optimization_README.md_20250924_202732.md] <div align="center">
+- [optimization_README.md_20250924_202733.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250924_202734.md] didYouMean.js - A simple JavaScript matching engine
+- [optimization_README.md_20250924_202739.md] # EventEmitter3
+- [optimization_README.md_20250924_202743.md] # safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+- [optimization_README.md_20250924_202745.md] # is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style...
+- [optimization_README.md_20250924_202748.md] # pretty-format
+- [optimization_README.md_20250924_202749.md] # kind-of [![NPM version](https://img.shields.io/npm/v/kind-of.svg?style=flat)](https://www.npmjs.com/package/kind-of) [![NPM monthly downloads](https://img.shields.io/npm/dm/kind-of.svg?style=flat)](...
+- [optimization_README.md_20250924_202751.md] # Forge
+- [optimization_README.md_20250924_204847.md] # Getting Started with Create React App
+- [optimization_README.md_20250924_204855.md] # @svgr/plugin-svgo
+- [optimization_README.md_20250924_204905.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250924_204906.md] <img align="right" width="111" height="111"
+- [optimization_README.md_20250924_204907.md] didYouMean.js - A simple JavaScript matching engine
+- [optimization_README.md_20250924_204912.md] # EventEmitter3
+- [optimization_README.md_20250924_204916.md] # safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+- [optimization_README.md_20250924_204918.md] # is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style...
+- [optimization_README.md_20250924_204920.md] # pretty-format
+- [optimization_README.md_20250924_204921.md] # kind-of [![NPM version](https://img.shields.io/npm/v/kind-of.svg?style=flat)](https://www.npmjs.com/package/kind-of) [![NPM monthly downloads](https://img.shields.io/npm/dm/kind-of.svg?style=flat)](...
+- [optimization_README.md_20250924_204924.md] # Forge
+- [optimization_active_tasks_checklist.md_20250923_221831.md] # Active Tasks Checklist
+- [optimization_active_tasks_checklist.md_20250923_221835.md] # Active Tasks Checklist
+- [optimization_active_tasks_checklist.md_20250923_221923.md] # Active Tasks Checklist
+- [optimization_active_tasks_checklist.md_20250923_222719.md] # Active Tasks Checklist
+- [optimization_active_tasks_checklist.md_20250924_205307.md] # Active Tasks Checklist
+- [optimization_centralized_knowledge_base.txt_20250923_221833.md] Centralized Knowledge Base
+- [optimization_centralized_knowledge_base.txt_20250923_221922.md] Centralized Knowledge Base
+- [optimization_centralized_knowledge_base.txt_20250923_222542.md] Centralized Knowledge Base
+- [optimization_centralized_knowledge_base.txt_20250923_222750.md] Centralized Knowledge Base
+- [optimization_changelog.md_20250923_221903.md] # file-entry-cache - Changelog
+- [optimization_changelog.md_20250923_221904.md] # flat-cache - Changelog
+- [optimization_changelog.md_20250923_222314.md] # file-entry-cache - Changelog
+- [optimization_changelog.md_20250923_222315.md] # flat-cache - Changelog
+- [optimization_changelog.md_20250923_222628.md] # flat-cache - Changelog
+- [optimization_changelog.md_20250923_222739.md] # file-entry-cache - Changelog
+- [optimization_changelog.md_20250923_222740.md] # flat-cache - Changelog
+- [optimization_changelog.md_20250924_202740.md] # file-entry-cache - Changelog
+- [optimization_changelog.md_20250924_202741.md] # flat-cache - Changelog
+- [optimization_changelog.md_20250924_204913.md] # file-entry-cache - Changelog
+- [optimization_changelog.md_20250924_204914.md] # flat-cache - Changelog
+- [optimization_fitness_tracking_system.txt_20250923_221922.md] Cross-Platform Fitness Tracking System
+- [optimization_fitness_tracking_system.txt_20250923_222750.md] Cross-Platform Fitness Tracking System
+- [optimization_no-dynamic-delete.md_20250923_221845.md] ---
+- [optimization_no-dynamic-delete.md_20250923_222011.md] ---
+- [optimization_no-dynamic-delete.md_20250923_222726.md] ---
+- [optimization_no-dynamic-delete.md_20250924_202724.md] ---
+- [optimization_no-dynamic-delete.md_20250924_204857.md] ---
+- [optimization_no-self-import.md_20250923_221859.md] # import/no-self-import
+- [optimization_no-self-import.md_20250923_222256.md] # import/no-self-import
+- [optimization_no-self-import.md_20250923_222737.md] # import/no-self-import
+- [optimization_no-self-import.md_20250924_202737.md] # import/no-self-import
+- [optimization_no-self-import.md_20250924_204910.md] # import/no-self-import
+- [optimization_readme.md_20250923_221842.md] <div align='center'>
+- [optimization_readme.md_20250923_221955.md] <div align='center'>
+- [optimization_readme.md_20250923_222724.md] <div align='center'>
+- [optimization_readme.md_20250924_202722.md] <div align='center'>
+- [optimization_readme.md_20250924_204854.md] <div align='center'>
+- [optimization_self_improvement_2025-07-30.md_20250923_221917.md] # Agent Self-Improvement Log
+- [optimization_self_improvement_2025-07-30.md_20250924_202752.md] # Agent Self-Improvement Log
+- [optimization_self_improvement_2025-07-30.md_20250924_204925.md] # Agent Self-Improvement Log
+
+---
+## Suggestions
+- [suggestions_001_1.md_20250923_221834.md] You are **1** — role: Provision/retire repair micro‑agents via LangGraph DAG; align to SLOs.
+- [suggestions_001_1.md_20250923_222718.md] You are **1** — role: Provision/retire repair micro‑agents via LangGraph DAG; align to SLOs.
+- [suggestions_001_reliability-ranger.md_20250923_221834.md] You are **Reliability Ranger** — role: Site Reliability.
+- [suggestions_001_reliability-ranger.md_20250923_222718.md] You are **Reliability Ranger** — role: Site Reliability.
+- [suggestions_002_2.md_20250923_221834.md] You are **2** — role: A/B test repair strategies; auto‑promote winners; archive regressions.
+- [suggestions_002_2.md_20250923_222718.md] You are **2** — role: A/B test repair strategies; auto‑promote winners; archive regressions.
+- [suggestions_002_ratelimit-raccoon.md_20250923_221834.md] You are **RateLimit Raccoon** — role: Messaging Safety.
+- [suggestions_002_ratelimit-raccoon.md_20250923_222718.md] You are **RateLimit Raccoon** — role: Messaging Safety.
+- [suggestions_003_3.md_20250923_221834.md] You are **3** — role: Merge overlapping agents to reduce PythonAnywhere task count.
+- [suggestions_003_3.md_20250923_222718.md] You are **3** — role: Merge overlapping agents to reduce PythonAnywhere task count.
+- [suggestions_003_queue-quokka.md_20250923_221834.md] You are **Queue Quokka** — role: System Integration.
+- [suggestions_003_queue-quokka.md_20250923_222718.md] You are **Queue Quokka** — role: System Integration.
+- [suggestions_004_4.md_20250923_221834.md] You are **4** — role: Spin ephemeral fixers for incidents; auto‑delete after success.
+- [suggestions_004_4.md_20250923_222718.md] You are **4** — role: Spin ephemeral fixers for incidents; auto‑delete after success.
+- [suggestions_005_5.md_20250923_221834.md] You are **5** — role: Generate safe prompt/code variants to recover failing flows.
+- [suggestions_005_5.md_20250923_222718.md] You are **5** — role: Generate safe prompt/code variants to recover failing flows.
+- [suggestions_006_6.md_20250923_221834.md] You are **6** — role: Genetic search of retry/backoff windows and scheduler logic.
+- [suggestions_006_6.md_20250923_222718.md] You are **6** — role: Genetic search of retry/backoff windows and scheduler logic.
+- [suggestions_007_7.md_20250923_221834.md] You are **7** — role: Model dependency graph; run impact analysis before changes.
+- [suggestions_007_7.md_20250923_222718.md] You are **7** — role: Model dependency graph; run impact analysis before changes.
+- [suggestions_009_9.md_20250923_221834.md] You are **9** — role: Route tasks to best models (SLM/LLM) for cost/perf.
+- [suggestions_009_9.md_20250923_222718.md] You are **9** — role: Route tasks to best models (SLM/LLM) for cost/perf.
+- [suggestions_00_master_brief.md_20250923_221834.md] # Master Brief — Consensus Project (MCL v2 Stabilization)
+- [suggestions_00_master_brief.md_20250923_222718.md] # Master Brief — Consensus Project (MCL v2 Stabilization)
+- [suggestions_010_10.md_20250923_221834.md] You are **10** — role: Switch personas/tools per environment (local/PA/GitHub).
+- [suggestions_010_10.md_20250923_222718.md] You are **10** — role: Switch personas/tools per environment (local/PA/GitHub).
+- [suggestions_012_12.md_20250923_221834.md] You are **12** — role: Generate specialist fixers for new failure classes.
+- [suggestions_012_12.md_20250923_222718.md] You are **12** — role: Generate specialist fixers for new failure classes.
+- [suggestions_013_13.md_20250923_221834.md] You are **13** — role: Design deduplication, backoff, and idempotency for absorbers.
+- [suggestions_013_13.md_20250923_222718.md] You are **13** — role: Design deduplication, backoff, and idempotency for absorbers.
+- [suggestions_014_14.md_20250923_221834.md] You are **14** — role: Replace manual steps with zero‑touch, observable pipelines.
+- [suggestions_014_14.md_20250923_222718.md] You are **14** — role: Replace manual steps with zero‑touch, observable pipelines.
+- [suggestions_015_15.md_20250923_221834.md] You are **15** — role: Balance workloads; prevent thrash; terminate runaway agents.
+- [suggestions_015_15.md_20250923_222718.md] You are **15** — role: Balance workloads; prevent thrash; terminate runaway agents.
+- [suggestions_016_16.md_20250923_221834.md] You are **16** — role: Open PRs with fixes + tests; enforce lint/typecheck.
+- [suggestions_016_16.md_20250923_222718.md] You are **16** — role: Open PRs with fixes + tests; enforce lint/typecheck.
+- [suggestions_017_17.md_20250923_221834.md] You are **17** — role: Convert logs into tickets; drive fixes to closure.
+- [suggestions_017_17.md_20250923_222718.md] You are **17** — role: Convert logs into tickets; drive fixes to closure.
+- [suggestions_018_18.md_20250923_221834.md] You are **18** — role: Progressive autonomy gating; expand powers only after tests.
+- [suggestions_018_18.md_20250923_222718.md] You are **18** — role: Progressive autonomy gating; expand powers only after tests.
+- [suggestions_019_19.md_20250923_221834.md] You are **19** — role: Tune alert wording/timing to reduce notification fatigue.
+- [suggestions_019_19.md_20250923_222718.md] You are **19** — role: Tune alert wording/timing to reduce notification fatigue.
+- [suggestions_020_20.md_20250923_221834.md] You are **20** — role: Mimic Rafael’s commit style; enforce repo conventions.
+- [suggestions_020_20.md_20250923_222718.md] You are **20** — role: Mimic Rafael’s commit style; enforce repo conventions.
+- [suggestions_021_21.md_20250923_221834.md] You are **21** — role: Harden concise, role‑bound prompts with action checklists.
+- [suggestions_021_21.md_20250923_222718.md] You are **21** — role: Harden concise, role‑bound prompts with action checklists.
+- [suggestions_022_22.md_20250923_221834.md] You are **22** — role: Modularize internals but ship single deployable file when needed.
+- [suggestions_022_22.md_20250923_222718.md] You are **22** — role: Modularize internals but ship single deployable file when needed.
+- [suggestions_023_23.md_20250923_221834.md] You are **23** — role: Unify context windows via CKB; prevent prompt drift.
+- [suggestions_023_23.md_20250923_222718.md] You are **23** — role: Unify context windows via CKB; prevent prompt drift.
+- [suggestions_024_24.md_20250923_221834.md] You are **24** — role: Route incidents to best agents using live telemetry.
+- [suggestions_024_24.md_20250923_222718.md] You are **24** — role: Route incidents to best agents using live telemetry.
+- [suggestions_025_25.md_20250923_221834.md] You are **25** — role: Switch strategies on anomalies; fallback to safe mode.
+- [suggestions_025_25.md_20250923_222718.md] You are **25** — role: Switch strategies on anomalies; fallback to safe mode.
+- [suggestions_026_26.md_20250923_221834.md] You are **26** — role: Isolated trial runs for risky migrations; auto‑cleanup.
+- [suggestions_026_26.md_20250923_222718.md] You are **26** — role: Isolated trial runs for risky migrations; auto‑cleanup.
+- [suggestions_027_27.md_20250923_221834.md] You are **27** — role: Maintain docs, runbooks, changelogs; ensure traceability.
+- [suggestions_027_27.md_20250923_222718.md] You are **27** — role: Maintain docs, runbooks, changelogs; ensure traceability.
+- [suggestions_028_28.md_20250923_221834.md] You are **28** — role: Blend terse logs with human‑readable reports.
+- [suggestions_028_28.md_20250923_222718.md] You are **28** — role: Blend terse logs with human‑readable reports.
+- [suggestions_029_29.md_20250923_221834.md] You are **29** — role: Normalize naming/columns/filenames; enforce conventions.
+- [suggestions_029_29.md_20250923_222718.md] You are **29** — role: Normalize naming/columns/filenames; enforce conventions.
+- [suggestions_030_30.md_20250923_221834.md] You are **30** — role: Coach agents on RL‑style heuristics for retries/rollbacks.
+- [suggestions_030_30.md_20250923_222718.md] You are **30** — role: Coach agents on RL‑style heuristics for retries/rollbacks.
+- [suggestions_031_31.md_20250923_221834.md] You are **31** — role: Distribute monitors; remove single points of failure.
+- [suggestions_031_31.md_20250923_222718.md] You are **31** — role: Distribute monitors; remove single points of failure.
+- [suggestions_032_32.md_20250923_221834.md] You are **32** — role: Parallel deep‑dives; consensus on fix proposals.
+- [suggestions_032_32.md_20250923_222718.md] You are **32** — role: Parallel deep‑dives; consensus on fix proposals.
+- [suggestions_033_33.md_20250923_221834.md] You are **33** — role: Define governance and escalation policies.
+- [suggestions_033_33.md_20250923_222718.md] You are **33** — role: Define governance and escalation policies.
+- [suggestions_034_34.md_20250923_221834.md] You are **34** — role: Continuously prune dead agents; align work to KPIs.
+- [suggestions_034_34.md_20250923_222718.md] You are **34** — role: Continuously prune dead agents; align work to KPIs.
+- [suggestions_035_35.md_20250923_221834.md] You are **35** — role: Keep core repairs running when UI is offline.
+- [suggestions_035_35.md_20250923_222718.md] You are **35** — role: Keep core repairs running when UI is offline.
+- [suggestions_037_37.md_20250923_221834.md] You are **37** — role: Seed new agents with proven policies/templates.
+- [suggestions_037_37.md_20250923_222718.md] You are **37** — role: Seed new agents with proven policies/templates.
+- [suggestions_038_38.md_20250923_221834.md] You are **38** — role: Require quorum for risky changes; document votes.
+- [suggestions_038_38.md_20250923_222718.md] You are **38** — role: Require quorum for risky changes; document votes.
+- [suggestions_039_39.md_20250923_221834.md] You are **39** — role: Coordinate external APIs/vendors; escalate support tickets.
+- [suggestions_039_39.md_20250923_222718.md] You are **39** — role: Coordinate external APIs/vendors; escalate support tickets.
+- [suggestions_040_40.md_20250923_221834.md] You are **40** — role: Tune to PythonAnywhere limits; combine tasks; watchdog.
+- [suggestions_040_40.md_20250923_222718.md] You are **40** — role: Tune to PythonAnywhere limits; combine tasks; watchdog.
+- [suggestions_041_41.md_20250923_221834.md] You are **41** — role: Simulate futures; choose changes with best expected outcome.
+- [suggestions_041_41.md_20250923_222718.md] You are **41** — role: Simulate futures; choose changes with best expected outcome.
+- [suggestions_042_42.md_20250923_221834.md] You are **42** — role: Harden behavior across voice/web/cron contexts.
+- [suggestions_042_42.md_20250923_222718.md] You are **42** — role: Harden behavior across voice/web/cron contexts.
+- [suggestions_043_43.md_20250923_221834.md] You are **43** — role: Detect anomalies invisible to standard metrics.
+- [suggestions_043_43.md_20250923_222718.md] You are **43** — role: Detect anomalies invisible to standard metrics.
+- [suggestions_044_44.md_20250923_221834.md] You are **44** — role: Rebuild missing steps causing failures (e.g., voice trigger).
+- [suggestions_044_44.md_20250923_222718.md] You are **44** — role: Rebuild missing steps causing failures (e.g., voice trigger).
+- [suggestions_045_45.md_20250923_221834.md] You are **45** — role: Compress logs into one‑page daily repair report.
+- [suggestions_045_45.md_20250923_222718.md] You are **45** — role: Compress logs into one‑page daily repair report.
+- [suggestions_046_46.md_20250923_221834.md] You are **46** — role: Enforce Rafael’s preferences (free tools, tone, approvals).
+- [suggestions_046_46.md_20250923_222718.md] You are **46** — role: Enforce Rafael’s preferences (free tools, tone, approvals).
+- [suggestions_047_47.md_20250923_221834.md] You are **47** — role: Confined hazard lab with hard kill‑switch & canary.
+- [suggestions_047_47.md_20250923_222718.md] You are **47** — role: Confined hazard lab with hard kill‑switch & canary.
+- [suggestions_048_48.md_20250923_221834.md] You are **48** — role: Increase logging granularity while you’re observing live.
+- [suggestions_048_48.md_20250923_222718.md] You are **48** — role: Increase logging granularity while you’re observing live.
+- [suggestions_049_49.md_20250923_221835.md] You are **49** — role: Generate config artifacts: crontabs, .env, monitors.
+- [suggestions_049_49.md_20250923_222718.md] You are **49** — role: Generate config artifacts: crontabs, .env, monitors.
+- [suggestions_050_50.md_20250923_221835.md] You are **50** — role: Align AM/PM/monthly windows; detect schedule drift.
+- [suggestions_050_50.md_20250923_222718.md] You are **50** — role: Align AM/PM/monthly windows; detect schedule drift.
+- [suggestions_051_51.md_20250923_221835.md] You are **51** — role: Maintain long‑horizon roadmap; gate behind audits.
+- [suggestions_051_51.md_20250923_222718.md] You are **51** — role: Maintain long‑horizon roadmap; gate behind audits.
+- [suggestions_052_52.md_20250923_221835.md] You are **52** — role: Blend model families; route to SLMs vs LLMs by task.
+- [suggestions_052_52.md_20250923_222718.md] You are **52** — role: Blend model families; route to SLMs vs LLMs by task.
+- [suggestions_053_53.md_20250923_221835.md] You are **53** — role: Chaos tests only in sandbox; auto‑rollback.
+- [suggestions_053_53.md_20250923_222718.md] You are **53** — role: Chaos tests only in sandbox; auto‑rollback.
+- [suggestions_054_54.md_20250923_221835.md] You are **54** — role: Strict sandbox/canary before prod; log everything.
+- [suggestions_054_54.md_20250923_222718.md] You are **54** — role: Strict sandbox/canary before prod; log everything.
+- [suggestions_055_55.md_20250923_221835.md] You are **55** — role: Backlog research; propose non‑prod experiments for review.
+- [suggestions_055_55.md_20250923_222718.md] You are **55** — role: Backlog research; propose non‑prod experiments for review.
+- [suggestions_2025-09-03_what-worked.md_20250923_221834.md] # Consensus Project — What Worked (2025-09-03)
+- [suggestions_2025-09-03_what-worked.md_20250923_222717.md] # Consensus Project — What Worked (2025-09-03)
+- [suggestions_CHANGELOG.md_20250923_220927.md] # 📦 Changelog
+- [suggestions_CHANGELOG.md_20250923_221831.md] # 📦 Changelog
+- [suggestions_CHANGELOG.md_20250923_221835.md] # 📦 Changelog
+- [suggestions_CHANGELOG.md_20250923_221847.md] ## 7.4.0 (2020-08-03)
+- [suggestions_CHANGELOG.md_20250923_221848.md] ## 8.15.0 (2025-06-08)
+- [suggestions_CHANGELOG.md_20250923_222024.md] ## 8.15.0 (2025-06-08)
+- [suggestions_CHANGELOG.md_20250923_222611.md] ## 8.14.1 (2025-03-05)
+- [suggestions_CHANGELOG.md_20250923_222719.md] # 📦 Changelog
+- [suggestions_CHANGELOG.md_20250923_222728.md] ## 8.15.0 (2025-06-08)
+- [suggestions_CHANGELOG.md_20250924_202726.md] ## 8.15.0 (2025-06-08)
+- [suggestions_CHANGELOG.md_20250924_204859.md] ## 8.15.0 (2025-06-08)
+- [suggestions_CHANGELOG.md_20250924_205307.md] # 📦 Changelog
+- [suggestions_CONTRIBUTING.md_20250923_220927.md] # Contributing to Consensus-Project
+- [suggestions_CONTRIBUTING.md_20250923_221831.md] # Contributing to Consensus-Project
+- [suggestions_CONTRIBUTING.md_20250923_221835.md] # Contributing to Consensus-Project
+- [suggestions_CONTRIBUTING.md_20250923_221839.md] # Contributing
+- [suggestions_CONTRIBUTING.md_20250923_221938.md] # Contributing
+- [suggestions_CONTRIBUTING.md_20250923_222719.md] # Contributing to Consensus-Project
+- [suggestions_CONTRIBUTING.md_20250923_222722.md] # Contributing
+- [suggestions_CONTRIBUTING.md_20250924_202719.md] # Contributing
+- [suggestions_CONTRIBUTING.md_20250924_204851.md] # Contributing
+- [suggestions_CONTRIBUTING.md_20250924_205307.md] # Contributing to Consensus-Project
+- [suggestions_README.md_20250923_221837.md] # @babel/plugin-proposal-class-properties
+- [suggestions_README.md_20250923_221840.md] # PostCSS Progressive Custom Properties [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
+- [suggestions_README.md_20250923_221842.md] <!-- omit in toc -->
+- [suggestions_README.md_20250923_221843.md] # `@sinonjs/fake-timers`
+- [suggestions_README.md_20250923_221847.md] # Acorn
+- [suggestions_README.md_20250923_221849.md] # array.prototype.tosorted <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_221850.md] # `babel-preset-current-node-syntax`
+- [suggestions_README.md_20250923_221851.md] # @babel/plugin-proposal-private-property-in-object
+- [suggestions_README.md_20250923_221853.md] # compression
+- [suggestions_README.md_20250923_221854.md] This folder contains entry points for [ECMAScript proposals](https://github.com/zloirock/core-js#ecmascript-proposals) with dependencies.
+- [suggestions_README.md_20250923_221858.md] # es-iterator-helpers <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_221902.md] [![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)
+- [suggestions_README.md_20250923_221904.md] ## Follow Redirects
+- [suggestions_README.md_20250923_221906.md] # globalThis <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
+- [suggestions_README.md_20250923_221907.md] # he [![Build status](https://travis-ci.org/mathiasbynens/he.svg?branch=master)](https://travis-ci.org/mathiasbynens/he) [![Code coverage status](https://codecov.io/github/mathiasbynens/he/coverage.sv...
+- [suggestions_README.md_20250923_221908.md] # IndexedDB with usability.
+- [suggestions_README.md_20250923_221913.md] # IANA Language Tags #
+- [suggestions_README.md_20250923_221933.md] # @babel/plugin-proposal-class-properties
+- [suggestions_README.md_20250923_221945.md] # PostCSS Progressive Custom Properties [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
+- [suggestions_README.md_20250923_221952.md] <!-- omit in toc -->
+- [suggestions_README.md_20250923_221956.md] # `@sinonjs/fake-timers`
+- [suggestions_README.md_20250923_222024.md] # Acorn
+- [suggestions_README.md_20250923_222033.md] # array.prototype.findlast <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222034.md] # array.prototype.tosorted <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222036.md] # asynckit [![NPM Module](https://img.shields.io/npm/v/asynckit.svg?style=flat)](https://www.npmjs.com/package/asynckit)
+- [suggestions_README.md_20250923_222037.md] # axe-core
+- [suggestions_README.md_20250923_222039.md] # `babel-preset-current-node-syntax`
+- [suggestions_README.md_20250923_222040.md] # @babel/plugin-proposal-private-property-in-object
+- [suggestions_README.md_20250923_222056.md] # compression
+- [suggestions_README.md_20250923_222057.md] ![logo](https://user-images.githubusercontent.com/2213682/146607186-8e13ddef-26a4-4ebf-befd-5aac9d77c090.png)
+- [suggestions_README.md_20250923_222142.md] This folder contains entry points for [ECMAScript proposals](https://github.com/zloirock/core-js#ecmascript-proposals) with dependencies.
+- [suggestions_README.md_20250923_222216.md] # cross-spawn
+- [suggestions_README.md_20250923_222253.md] # es-iterator-helpers <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222311.md] [![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)
+- [suggestions_README.md_20250923_222315.md] ## Follow Redirects
+- [suggestions_README.md_20250923_222321.md] # globalThis <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
+- [suggestions_README.md_20250923_222323.md] # he [![Build status](https://travis-ci.org/mathiasbynens/he.svg?branch=master)](https://travis-ci.org/mathiasbynens/he) [![Code coverage status](https://codecov.io/github/mathiasbynens/he/coverage.sv...
+- [suggestions_README.md_20250923_222326.md] # IndexedDB with usability.
+- [suggestions_README.md_20250923_222346.md] # IANA Language Tags #
+- [suggestions_README.md_20250923_222403.md] # object.fromentries <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222404.md] # object.groupby <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222412.md] # PostCSS Media Minmax
+- [suggestions_README.md_20250923_222415.md] # PostCSS Pseudo Class Any Link [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS Logo" width="90" height="90" align="right">][postcss]
+- [suggestions_README.md_20250923_222428.md] # regenerate-unicode-properties [![regenerate-unicode-properties on npm](https://img.shields.io/npm/v/regenerate-unicode-properties)](https://www.npmjs.com/package/regenerate-unicode-properties)
+- [suggestions_README.md_20250923_222431.md] # Regenerate [![Build status](https://travis-ci.org/mathiasbynens/regenerate.svg?branch=master)](https://travis-ci.org/mathiasbynens/regenerate) [![Code coverage status](https://img.shields.io/codecov...
+- [suggestions_README.md_20250923_222432.md] # relateurl [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][david-image]][david-url]
+- [suggestions_README.md_20250923_222448.md] # Optionator
+- [suggestions_README.md_20250923_222451.md] # Sucrase
+- [suggestions_README.md_20250923_222459.md] # ts-interface-checker
+- [suggestions_README.md_20250923_222511.md] # unicode-property-aliases-ecmascript [![Build status](https://travis-ci.org/mathiasbynens/unicode-property-aliases-ecmascript.svg?branch=main)](https://travis-ci.org/mathiasbynens/unicode-property-al...
+- [suggestions_README.md_20250923_222513.md] # w3c-hr-time
+- [suggestions_README.md_20250923_222514.md] <div align="center">
+- [suggestions_README.md_20250923_222526.md] [![npm (scoped)](https://img.shields.io/npm/v/@apideck/better-ajv-errors?color=brightgreen)](https://npmjs.com/@apideck/better-ajv-errors) [![npm](https://img.shields.io/npm/dm/@apideck/better-ajv-err...
+- [suggestions_README.md_20250923_222611.md] # @vitejs/plugin-react [![npm](https://img.shields.io/npm/v/@vitejs/plugin-react.svg)](https://npmjs.com/package/@vitejs/plugin-react)
+- [suggestions_README.md_20250923_222621.md] # cross-spawn
+- [suggestions_README.md_20250923_222623.md] [![npm version](https://img.shields.io/npm/v/eslint-scope.svg)](https://www.npmjs.com/package/eslint-scope)
+- [suggestions_README.md_20250923_222627.md] [![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)
+- [suggestions_README.md_20250923_222706.md] # Optionator
+- [suggestions_README.md_20250923_222720.md] # @babel/plugin-proposal-class-properties
+- [suggestions_README.md_20250923_222722.md] # PostCSS Progressive Custom Properties [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
+- [suggestions_README.md_20250923_222724.md] <!-- omit in toc -->
+- [suggestions_README.md_20250923_222728.md] # Acorn
+- [suggestions_README.md_20250923_222729.md] # array.prototype.tosorted <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222730.md] # `babel-preset-current-node-syntax`
+- [suggestions_README.md_20250923_222732.md] # compression
+- [suggestions_README.md_20250923_222733.md] This folder contains entry points for [ECMAScript proposals](https://github.com/zloirock/core-js#ecmascript-proposals) with dependencies.
+- [suggestions_README.md_20250923_222736.md] # es-iterator-helpers <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250923_222738.md] [![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)
+- [suggestions_README.md_20250923_222740.md] ## Follow Redirects
+- [suggestions_README.md_20250923_222741.md] # globalThis <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
+- [suggestions_README.md_20250923_222742.md] # IndexedDB with usability.
+- [suggestions_README.md_20250923_222746.md] # IANA Language Tags #
+- [suggestions_README.md_20250923_222747.md] # IANA Language Tags for JavaScript #
+- [suggestions_README.md_20250924_202717.md] # @babel/plugin-proposal-class-properties
+- [suggestions_README.md_20250924_202720.md] # PostCSS Progressive Custom Properties [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
+- [suggestions_README.md_20250924_202721.md] <!-- omit in toc -->
+- [suggestions_README.md_20250924_202722.md] # `@sinonjs/fake-timers`
+- [suggestions_README.md_20250924_202726.md] # Acorn
+- [suggestions_README.md_20250924_202727.md] # array.prototype.findlast <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250924_202728.md] # array.prototype.tosorted <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250924_202729.md] # `babel-preset-current-node-syntax`
+- [suggestions_README.md_20250924_202731.md] # compression
+- [suggestions_README.md_20250924_202732.md] This folder contains entry points for [ECMAScript proposals](https://github.com/zloirock/core-js#ecmascript-proposals) with dependencies.
+- [suggestions_README.md_20250924_202736.md] # es-iterator-helpers <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250924_202739.md] [![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)
+- [suggestions_README.md_20250924_202741.md] ## Follow Redirects
+- [suggestions_README.md_20250924_202742.md] # globalThis <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
+- [suggestions_README.md_20250924_202743.md] # he [![Build status](https://travis-ci.org/mathiasbynens/he.svg?branch=master)](https://travis-ci.org/mathiasbynens/he) [![Code coverage status](https://codecov.io/github/mathiasbynens/he/coverage.sv...
+- [suggestions_README.md_20250924_202744.md] # IndexedDB with usability.
+- [suggestions_README.md_20250924_202749.md] # IANA Language Tags #
+- [suggestions_README.md_20250924_204849.md] # @babel/plugin-proposal-class-properties
+- [suggestions_README.md_20250924_204852.md] # PostCSS Progressive Custom Properties [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
+- [suggestions_README.md_20250924_204854.md] <!-- omit in toc -->
+- [suggestions_README.md_20250924_204855.md] # `@sinonjs/fake-timers`
+- [suggestions_README.md_20250924_204859.md] # Acorn
+- [suggestions_README.md_20250924_204900.md] # array.prototype.tosorted <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250924_204901.md] # `babel-preset-current-node-syntax`
+- [suggestions_README.md_20250924_204902.md] # @babel/plugin-proposal-private-property-in-object
+- [suggestions_README.md_20250924_204904.md] # compression
+- [suggestions_README.md_20250924_204905.md] This folder contains entry points for [ECMAScript proposals](https://github.com/zloirock/core-js#ecmascript-proposals) with dependencies.
+- [suggestions_README.md_20250924_204909.md] # es-iterator-helpers <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+- [suggestions_README.md_20250924_204912.md] [![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)
+- [suggestions_README.md_20250924_204914.md] ## Follow Redirects
+- [suggestions_README.md_20250924_204915.md] # globalThis <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
+- [suggestions_README.md_20250924_204916.md] # he [![Build status](https://travis-ci.org/mathiasbynens/he.svg?branch=master)](https://travis-ci.org/mathiasbynens/he) [![Code coverage status](https://codecov.io/github/mathiasbynens/he/coverage.sv...
+- [suggestions_README.md_20250924_204917.md] # IndexedDB with usability.
+- [suggestions_README.md_20250924_204921.md] # IANA Language Tags #
+- [suggestions_README.md_20250924_204922.md] # IANA Language Tags for JavaScript #
+- [suggestions_Readme.md_20250923_221853.md] # Commander.js
+- [suggestions_Readme.md_20250923_221903.md] [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+- [suggestions_Readme.md_20250923_222054.md] # Commander.js
+- [suggestions_Readme.md_20250923_222312.md] [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+- [suggestions_Readme.md_20250923_222732.md] # Commander.js
+- [suggestions_Readme.md_20250923_222739.md] [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+- [suggestions_Readme.md_20250924_202731.md] # Commander.js
+- [suggestions_Readme.md_20250924_202740.md] [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+- [suggestions_Readme.md_20250924_204904.md] # Commander.js
+- [suggestions_Readme.md_20250924_204913.md] [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+- [suggestions_ThirdPartyNoticeText.txt_20250923_222502.md] /*!----------------- TypeScript ThirdPartyNotices -------------------------------------------------------
+- [suggestions_ThirdPartyNoticeText.txt_20250923_222713.md] /*!----------------- TypeScript ThirdPartyNotices -------------------------------------------------------
+- [suggestions_aria-activedescendant-has-tabindex.md_20250923_221900.md] # jsx-a11y/aria-activedescendant-has-tabindex
+- [suggestions_aria-activedescendant-has-tabindex.md_20250923_222259.md] # jsx-a11y/aria-activedescendant-has-tabindex
+- [suggestions_aria-activedescendant-has-tabindex.md_20250923_222737.md] # jsx-a11y/aria-activedescendant-has-tabindex
+- [suggestions_aria-activedescendant-has-tabindex.md_20250924_202738.md] # jsx-a11y/aria-activedescendant-has-tabindex
+- [suggestions_aria-activedescendant-has-tabindex.md_20250924_204911.md] # jsx-a11y/aria-activedescendant-has-tabindex
+- [suggestions_default.md_20250923_221859.md] # import/default
+- [suggestions_default.md_20250923_222256.md] # import/default
+- [suggestions_default.md_20250923_222736.md] # import/default
+- [suggestions_default.md_20250924_202736.md] # import/default
+- [suggestions_default.md_20250924_204909.md] # import/default
+- [suggestions_export.md_20250923_221859.md] # import/export
+- [suggestions_export.md_20250923_222256.md] # import/export
+- [suggestions_export.md_20250923_222736.md] # import/export
+- [suggestions_export.md_20250924_202736.md] # import/export
+- [suggestions_export.md_20250924_204909.md] # import/export
+- [suggestions_hivemind_merged_report.md_20250923_221834.md] # Hive Mind — Merged Recommendations
+- [suggestions_hivemind_merged_report.md_20250923_222718.md] # Hive Mind — Merged Recommendations
+- [suggestions_lessons_learned_2025-07-22.md_20250923_221917.md] # Lessons Learned – 2025-07-22
+- [suggestions_lessons_learned_2025-07-22.md_20250924_202752.md] # Lessons Learned – 2025-07-22
+- [suggestions_lessons_learned_2025-07-22.md_20250924_204925.md] # Lessons Learned – 2025-07-22
+- [suggestions_lessons_learned_2025-07-23.md_20250923_221917.md] # Lessons Learned – 2025-07-23
+- [suggestions_lessons_learned_2025-07-23.md_20250924_202752.md] # Lessons Learned – 2025-07-23
+- [suggestions_lessons_learned_2025-07-23.md_20250924_204925.md] # Lessons Learned – 2025-07-23
+- [suggestions_lessons_learned_2025-07-24.md_20250923_221917.md] # Lessons Learned – 2025-07-24
+- [suggestions_lessons_learned_2025-07-24.md_20250924_202752.md] # Lessons Learned – 2025-07-24
+- [suggestions_lessons_learned_2025-07-24.md_20250924_204925.md] # Lessons Learned – 2025-07-24
+- [suggestions_lessons_learned_2025-07-25.md_20250923_221917.md] # Lessons Learned – 2025-07-25
+- [suggestions_lessons_learned_2025-07-25.md_20250924_202752.md] # Lessons Learned – 2025-07-25
+- [suggestions_lessons_learned_2025-07-25.md_20250924_204925.md] # Lessons Learned – 2025-07-25
+- [suggestions_lessons_learned_2025-07-26.md_20250923_221917.md] # Lessons Learned – 2025-07-26
+- [suggestions_lessons_learned_2025-07-26.md_20250924_202752.md] # Lessons Learned – 2025-07-26
+- [suggestions_lessons_learned_2025-07-26.md_20250924_204925.md] # Lessons Learned – 2025-07-26
+- [suggestions_lessons_learned_2025-07-27.md_20250923_221917.md] # Lessons Learned – 2025-07-27
+- [suggestions_lessons_learned_2025-07-27.md_20250924_202752.md] # Lessons Learned – 2025-07-27
+- [suggestions_lessons_learned_2025-07-27.md_20250924_204925.md] # Lessons Learned – 2025-07-27
+- [suggestions_lessons_learned_2025-07-28.md_20250923_221917.md] # Lessons Learned – 2025-07-28
+- [suggestions_lessons_learned_2025-07-28.md_20250924_202752.md] # Lessons Learned – 2025-07-28
+- [suggestions_lessons_learned_2025-07-28.md_20250924_204925.md] # Lessons Learned – 2025-07-28
+- [suggestions_lessons_learned_2025-07-29.md_20250923_221917.md] # Lessons Learned – 2025-07-29
+- [suggestions_lessons_learned_2025-07-29.md_20250924_202752.md] # Lessons Learned – 2025-07-29
+- [suggestions_lessons_learned_2025-07-29.md_20250924_204925.md] # Lessons Learned – 2025-07-29
+- [suggestions_lessons_learned_2025-07-30.md_20250923_221917.md] # Lessons Learned – 2025-07-30
+- [suggestions_lessons_learned_2025-07-30.md_20250924_202752.md] # Lessons Learned – 2025-07-30
+- [suggestions_lessons_learned_2025-07-30.md_20250924_204925.md] # Lessons Learned – 2025-07-30
+- [suggestions_named.md_20250923_221859.md] # import/named
+- [suggestions_named.md_20250923_222256.md] # import/named
+- [suggestions_named.md_20250923_222736.md] # import/named
+- [suggestions_named.md_20250924_202737.md] # import/named
+- [suggestions_named.md_20250924_204910.md] # import/named
+- [suggestions_namespace.md_20250923_221859.md] # import/namespace
+- [suggestions_namespace.md_20250923_222256.md] # import/namespace
+- [suggestions_namespace.md_20250923_222736.md] # import/namespace
+- [suggestions_namespace.md_20250924_202737.md] # import/namespace
+- [suggestions_namespace.md_20250924_204910.md] # import/namespace
+- [suggestions_no-confusing-void-expression.md_20250923_221845.md] ---
+- [suggestions_no-confusing-void-expression.md_20250923_222011.md] ---
+- [suggestions_no-confusing-void-expression.md_20250923_222726.md] ---
+- [suggestions_no-confusing-void-expression.md_20250924_202724.md] ---
+- [suggestions_no-confusing-void-expression.md_20250924_204857.md] ---
+- [suggestions_no-extraneous-class.md_20250923_221845.md] ---
+- [suggestions_no-extraneous-class.md_20250923_222011.md] ---
+- [suggestions_no-extraneous-class.md_20250923_222726.md] ---
+- [suggestions_no-extraneous-class.md_20250924_202724.md] ---
+- [suggestions_no-extraneous-class.md_20250924_204857.md] ---
+- [suggestions_no-loss-of-precision.md_20250923_221846.md] ---
+- [suggestions_no-loss-of-precision.md_20250923_222011.md] ---
+- [suggestions_no-loss-of-precision.md_20250923_222726.md] ---
+- [suggestions_no-loss-of-precision.md_20250924_202725.md] ---
+- [suggestions_no-loss-of-precision.md_20250924_204857.md] ---
+- [suggestions_no-named-as-default.md_20250923_221859.md] # import/no-named-as-default
+- [suggestions_no-named-as-default.md_20250923_222256.md] # import/no-named-as-default
+- [suggestions_no-named-as-default.md_20250923_222736.md] # import/no-named-as-default
+- [suggestions_no-named-as-default.md_20250924_202737.md] # import/no-named-as-default
+- [suggestions_no-named-as-default.md_20250924_204910.md] # import/no-named-as-default
+- [suggestions_no-non-null-asserted-nullish-coalescing.md_20250923_221846.md] ---
+- [suggestions_no-non-null-asserted-nullish-coalescing.md_20250923_222011.md] ---
+- [suggestions_no-non-null-asserted-nullish-coalescing.md_20250923_222726.md] ---
+- [suggestions_no-non-null-asserted-nullish-coalescing.md_20250924_202725.md] ---
+- [suggestions_no-non-null-asserted-nullish-coalescing.md_20250924_204857.md] ---
+- [suggestions_no-non-null-asserted-optional-chain.md_20250923_221846.md] ---
+- [suggestions_no-non-null-asserted-optional-chain.md_20250923_222011.md] ---
+- [suggestions_no-non-null-asserted-optional-chain.md_20250923_222726.md] ---
+- [suggestions_no-non-null-asserted-optional-chain.md_20250924_202725.md] ---
+- [suggestions_no-non-null-asserted-optional-chain.md_20250924_204857.md] ---
+- [suggestions_prefer-nullish-coalescing.md_20250923_221846.md] ---
+- [suggestions_prefer-nullish-coalescing.md_20250923_222011.md] ---
+- [suggestions_prefer-nullish-coalescing.md_20250923_222727.md] ---
+- [suggestions_prefer-nullish-coalescing.md_20250924_202725.md] ---
+- [suggestions_prefer-nullish-coalescing.md_20250924_204858.md] ---
+- [suggestions_prefer-optional-chain.md_20250923_221846.md] ---
+- [suggestions_prefer-optional-chain.md_20250923_222011.md] ---
+- [suggestions_prefer-optional-chain.md_20250923_222727.md] ---
+- [suggestions_prefer-optional-chain.md_20250924_202725.md] ---
+- [suggestions_prefer-optional-chain.md_20250924_204858.md] ---
+- [suggestions_prompt_template.md_20250923_221835.md] You are **{{Agent}}** — role: {{Role}}.
+- [suggestions_prompt_template.md_20250923_222718.md] You are **{{Agent}}** — role: {{Role}}.
+- [suggestions_security_audit_schedule.txt_20250923_221922.md] Security Audit Schedule
+- [suggestions_security_audit_schedule.txt_20250923_222750.md] Security Audit Schedule
+- [suggestions_strict-boolean-expressions.md_20250923_221846.md] ---
+- [suggestions_strict-boolean-expressions.md_20250923_222011.md] ---
+- [suggestions_strict-boolean-expressions.md_20250923_222727.md] ---
+- [suggestions_strict-boolean-expressions.md_20250924_202725.md] ---
+- [suggestions_strict-boolean-expressions.md_20250924_204858.md] ---
+
+---

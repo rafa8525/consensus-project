@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="source" attr.type="string"/>
+<graph edgedefault="directed"><node id="Fitbit"/>
+<node id="Xfinity"/>
+<node id="Pixel Watch"/>
+<node id="COROS Pace 3"/>
+<edge source="Fitbit" target="Xfinity">
+  <data key="d0">milestone_report_phase3_2025-09-29.md</data>
+</edge>
+<edge source="Pixel Watch" target="Fitbit">
+  <data key="d0">milestone_report_phase2_2025-09-29.md</data>
+</edge>
+<edge source="Pixel Watch" target="COROS Pace 3">
+  <data key="d0">milestone_report_phase2_2025-09-29.md</data>
+</edge>
+</graph></graphml>

@@ -14,3 +14,19 @@ rtt min/avg/max/mdev = 0.635/0.657/0.686/0.017 ms
 [2025-09-30 02:02:55] Error during VPN connect: [Errno 2] No such file or directory: 'openvpn'
 [2025-09-30 02:02:55] === Unified VPN Runner Completed ===
 
+[2025-10-01 02:02:37] === Starting Unified VPN Runner ===
+[2025-10-01 02:02:37] No agents_assignments.csv found — using default responsibilities.
+[2025-10-01 02:02:37] Detected SSID: /bin/sh: 1: nmcli: not found
+[2025-10-01 02:02:37] Safe network or unknown SSID, ensuring VPN is disconnected.
+[2025-10-01 02:02:37] VPN not running, nothing to disconnect.
+[2025-10-01 02:02:37] VPN not active, attempting restart.
+[2025-10-01 02:02:40] VPN restart failed.
+[2025-10-01 02:02:41] Load test response time: 0.506860s
+[2025-10-01 02:02:50] Stress test result: 10 packets transmitted, 10 received, 0% packet loss, time 9016ms
+rtt min/avg/max/mdev = 0.983/1.002/1.033/0.014 ms
+[2025-10-01 02:02:50] Concurrency test launched (3 parallel curls).
+[2025-10-01 02:02:50] Running failover test...
+[2025-10-01 02:02:50] VPN not running, nothing to disconnect.
+[2025-10-01 02:02:52] Error during VPN connect: [Errno 2] No such file or directory: 'openvpn'
+[2025-10-01 02:02:52] === Unified VPN Runner Completed ===
+
