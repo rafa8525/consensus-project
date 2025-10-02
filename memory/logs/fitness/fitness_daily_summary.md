@@ -1,10 +1,11 @@
-# Fitness Report 2025-10-01
+# Fitness Report 2025-10-02
 
-- Fitbit: 0 steps, HR 0
-- Pixel Watch (Google Fit): 0 steps, HR 0
-- COROS Pace 3: 0 steps, HR 0
-- Samsung Health: 0 steps, HR 0 (missing)
+## Device Sync
+- Fitbit: 3780 steps, HR 82 bpm
+- Pixel Watch 3: 7952 steps, HR 123 bpm
+- Samsung Watch: 3380 steps, HR 70 bpm
+- COROS Pace 3: 9846 steps, HR 88 bpm
 
-## Gamification
-- Current streak: 2 days
-- Badges: None
+## Streaks
+- Workout Streak: 3 days
+- Nutrition Streak: 3 days
