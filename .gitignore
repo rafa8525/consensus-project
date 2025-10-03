@@ -185,3 +185,15 @@ _sim_unpack/**
 # memory/logs/*
 # But keep placeholder files
 !memory/logs/*/.keep
+# --- Volatile runtime logs (do not track) ---
+memory/logs/heartbeat/
+memory/logs/scheduler/
+memory/logs/system/master_control_heartbeat.json
+
+# --- Optimization dumps: keep only the curated set in current/ ---
+memory/logs/system/optimization/*.md
+!memory/logs/system/optimization/current/
+!memory/logs/system/optimization/current/*.md
+
+# --- Archives (avoid repo bloat) ---
+memory/logs/archive/*.tar.gz
