@@ -5,12 +5,14 @@ import subprocess, sys
 
 ROOT = Path("/home/rafa1215/consensus-project")
 
-def run(cmd, cwd=ROOT):
-    return subprocess.run(cmd, cwd=str(cwd), text=True, capture_output=True)
+def run(cmd):
+    """Run a git command in ROOT, capture stdout/stderr."""
+    return subprocess.run(cmd, cwd=str(ROOT), text=True, capture_output=True)
 
 def main():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+    # Stage only relevant project paths
     paths = [
         "memory/logs/status",
         "memory/logs/system",
@@ -26,7 +28,7 @@ def main():
         print("ERR: git add failed:", add.stderr.strip())
         sys.exit(add.returncode)
 
-    # If nothing staged, exit cleanly
+    # Skip commit if nothing is staged
     diff = run(["git", "diff", "--cached", "--quiet"])
     if diff.returncode == 0:
         print("ℹ No changes to commit.")
