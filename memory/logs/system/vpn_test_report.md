@@ -181,3 +181,15 @@ SUCCESS
   "readme": "https://ipinfo.io/missingauth"
 }
 
+## VPN Test — 2025-10-03 20:29:33
+- DNS: **PASS** — Resolved dns.google
+- Outbound: **PASS** — TCP 1.1.1.1:53 ok
+- PublicIP: **PASS** — 54.221.143.67
+- ENV VPN_ENABLED: `unset`
+
+## VPN Test — 2025-10-03 20:53:29
+- DNS: **PASS** — Resolved dns.google
+- Outbound: **PASS** — TCP 1.1.1.1:53 ok
+- PublicIP: **PASS** — 54.221.143.67
+- ENV VPN_ENABLED: `unset`
+

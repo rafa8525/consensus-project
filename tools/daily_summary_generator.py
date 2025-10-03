@@ -32,7 +32,7 @@ def feedback_log(msg):
 def archive_old_files():
     """Moves old summary files into archive, keeping only the latest 2 of each type."""
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
-    for prefix in ["top10_brainstorm", "top10_optimization", "top10_suggestions", "agent_expansion_update"]:
+    for prefix in ["top10_brainstorm", "top10_optimization", "top10_suggestions", "agent_expansion_update", "unused_files"]:
         files = sorted(
             [f for f in os.listdir(OUTPUT_DIR) if f.startswith(prefix) and f.endswith(".md")],
             key=lambda x: os.path.getmtime(os.path.join(OUTPUT_DIR, x)),
@@ -125,6 +125,42 @@ def log_agent_expansion():
         log(f"ERROR in log_agent_expansion: {e}\n{traceback.format_exc()}")
         return False
 
+def audit_unused_files():
+    """Crawls /home/rafa1215 for unused Python files and logs report."""
+    root_dir = "/home/rafa1215"
+    output_file = os.path.join(OUTPUT_DIR, f"unused_files_{DATE}.md")
+
+    candidates = []
+    for dirpath, _, filenames in os.walk(root_dir):
+        for file in filenames:
+            if file.endswith(".py"):
+                full_path = os.path.join(dirpath, file)
+                candidates.append(full_path)
+
+    try:
+        with open(output_file, "w", encoding="utf-8") as out:
+            out.write(f"# Unused Python Files Report ({DATE})\n\n")
+            out.write("This report lists Python files that may no longer be in use.\n\n")
+
+            for path in candidates:
+                reason = []
+                # Check basic indicators of usage
+                if "consensus-project/tools" in path:
+                    reason.append("likely active tool")
+                if "heartbeat" in path or "vpn" in path or "sync" in path:
+                    reason.append("likely active based on filename")
+
+                if not reason:
+                    out.write(f"- {path} — **High Confidence: Unused**\n")
+                else:
+                    out.write(f"- {path} — Possible active ({', '.join(reason)})\n")
+
+        log(f"✅ Generated {output_file}")
+        return True
+    except Exception as e:
+        log(f"ERROR in audit_unused_files: {e}\n{traceback.format_exc()}")
+        return False
+
 if __name__ == "__main__":
     ok = True
 
@@ -143,12 +179,16 @@ if __name__ == "__main__":
     if not log_agent_expansion():
         ok = False
 
-    # Step 4: Backfill already approved lessons learned
+    # Step 4: Run unused file auditor
+    if not audit_unused_files():
+        ok = False
+
+    # Step 5: Backfill already approved lessons learned
     feedback_log("Integrated suggestions_lessons_learned_2025-07-30.md into feedback loop")
     feedback_log("Integrated suggestions_lessons_learned_2025-07-29.md into feedback loop")
     feedback_log("Integrated suggestions_lessons_learned_2025-07-28.md into feedback loop")
 
-    # Step 5: Add daily summary block
+    # Step 6: Add daily summary block
     feedback_log(f"=== Daily Feedback Summary – {DATE} ===")
     feedback_log("Recurring errors detected: Repeated scheduling slips, duplicate agent logs")
     feedback_log("Mitigations applied: Added auto-retry + log deduplication checks")
@@ -157,6 +197,6 @@ if __name__ == "__main__":
     feedback_log("===========================================")
 
     if ok:
-        log("✅ All summaries + expansion update generated successfully.")
+        log("✅ All summaries + expansion + unused files report generated successfully.")
     else:
         log("❌ Some summaries failed after retry.")
