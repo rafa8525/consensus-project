@@ -1,0 +1,5 @@
+reddit:r/AIAgents
+reddit:r/automation
+reddit:r/selfhosted
+keyword:"anticipatory AI assistants"
+keyword:"proactive personal agents"
