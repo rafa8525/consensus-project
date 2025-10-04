@@ -1,57 +1,8 @@
-## Activation Test — 2025-10-02 20:33:16
+## Activation Test — 2025-10-03 07:28:17
 SUCCESS
-54.221.143.67
+52.207.196.103
 
-## Load Test Attempt 1 — 2025-10-02 20:33:16
-SUCCESS
-<!doctype html>
-<html>
-<head>
-    <title>Example Domain</title>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
-    }
-    div {
-        width: 600px;
-        margin: 5em auto;
-        padding: 2em;
-        background-color: #fdfdff;
-        border-radius: 0.5em;
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    @media (max-width: 700px) {
-        div {
-            margin: 0 auto;
-            width: auto;
-        }
-    }
-    </style>    
-</head>
-
-<body>
-<div>
-    <h1>Example Domain</h1>
-    <p>This domain is for use in illustrative examples in documents. You may use this
-    domain in literature without prior coordination or asking for permission.</p>
-    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
-</div>
-</body>
-</html>
-
-## Load Test Attempt 2 — 2025-10-02 20:33:16
+## Load Test Attempt 1 — 2025-10-03 07:28:17
 SUCCESS
 <!doctype html>
 <html>
@@ -100,7 +51,7 @@ SUCCESS
 </body>
 </html>
 
-## Load Test Attempt 3 — 2025-10-02 20:33:16
+## Load Test Attempt 2 — 2025-10-03 07:28:17
 SUCCESS
 <!doctype html>
 <html>
@@ -149,28 +100,77 @@ SUCCESS
 </body>
 </html>
 
-## Stress Test (Ping) — 2025-10-02 20:33:21
+## Load Test Attempt 3 — 2025-10-03 07:28:18
+SUCCESS
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+
+## Stress Test (Ping) — 2025-10-03 07:28:22
 SUCCESS
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=0.693 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=0.733 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.683 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=0.652 ms
-64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=0.694 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=0.994 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=1.04 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.995 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=1.02 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=1.04 ms
 
 --- 8.8.8.8 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 4109ms
-rtt min/avg/max/mdev = 0.652/0.691/0.733/0.025 ms
+5 packets transmitted, 5 received, 0% packet loss, time 4004ms
+rtt min/avg/max/mdev = 0.994/1.016/1.040/0.019 ms
 
-## Failover Test (DNS) — 2025-10-02 20:33:36
+## Failover Test (DNS) — 2025-10-03 07:28:37
 FAIL
 
 
-## Detection Test (IP Fingerprint) — 2025-10-02 20:33:36
+## Detection Test (IP Fingerprint) — 2025-10-03 07:28:37
 SUCCESS
 {
-  "ip": "54.221.143.67",
-  "hostname": "ec2-54-221-143-67.compute-1.amazonaws.com",
+  "ip": "52.207.196.103",
+  "hostname": "ec2-52-207-196-103.compute-1.amazonaws.com",
   "city": "Ashburn",
   "region": "Virginia",
   "country": "US",
@@ -181,11 +181,23 @@ SUCCESS
   "readme": "https://ipinfo.io/missingauth"
 }
 
-## Activation Test — 2025-10-03 02:02:39
+## VPN Test — 2025-10-03 20:29:33
+- DNS: **PASS** — Resolved dns.google
+- Outbound: **PASS** — TCP 1.1.1.1:53 ok
+- PublicIP: **PASS** — 54.221.143.67
+- ENV VPN_ENABLED: `unset`
+
+## VPN Test — 2025-10-03 20:53:29
+- DNS: **PASS** — Resolved dns.google
+- Outbound: **PASS** — TCP 1.1.1.1:53 ok
+- PublicIP: **PASS** — 54.221.143.67
+- ENV VPN_ENABLED: `unset`
+
+## Activation Test — 2025-10-04 02:02:42
 SUCCESS
 52.207.196.103
 
-## Load Test Attempt 1 — 2025-10-03 02:02:40
+## Load Test Attempt 1 — 2025-10-04 02:02:43
 SUCCESS
 <!doctype html>
 <html>
@@ -234,7 +246,7 @@ SUCCESS
 </body>
 </html>
 
-## Load Test Attempt 2 — 2025-10-03 02:02:41
+## Load Test Attempt 2 — 2025-10-04 02:02:44
 SUCCESS
 <!doctype html>
 <html>
@@ -283,7 +295,7 @@ SUCCESS
 </body>
 </html>
 
-## Load Test Attempt 3 — 2025-10-03 02:02:43
+## Load Test Attempt 3 — 2025-10-04 02:02:44
 SUCCESS
 <!doctype html>
 <html>
@@ -332,24 +344,24 @@ SUCCESS
 </body>
 </html>
 
-## Stress Test (Ping) — 2025-10-03 02:02:47
+## Stress Test (Ping) — 2025-10-04 02:02:48
 SUCCESS
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=1.02 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=0.967 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.991 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=0.981 ms
-64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=0.983 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=1.03 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=0.964 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.965 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=0.989 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=0.989 ms
 
 --- 8.8.8.8 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 4030ms
-rtt min/avg/max/mdev = 0.967/0.989/1.023/0.018 ms
+5 packets transmitted, 5 received, 0% packet loss, time 4022ms
+rtt min/avg/max/mdev = 0.964/0.988/1.034/0.025 ms
 
-## Failover Test (DNS) — 2025-10-03 02:03:02
+## Failover Test (DNS) — 2025-10-04 02:03:03
 FAIL
 
 
-## Detection Test (IP Fingerprint) — 2025-10-03 02:03:02
+## Detection Test (IP Fingerprint) — 2025-10-04 02:03:04
 SUCCESS
 {
   "ip": "52.207.196.103",
