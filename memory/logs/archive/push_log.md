@@ -1,8 +1,2 @@
-[2025-09-30 07:03:36] Notification: Time to log today’s workout!
-[2025-09-30 07:03:36] Notification: Remember to scan your meal barcodes.
-[2025-10-01 07:03:50] Notification: Time to log today’s workout!
-[2025-10-01 07:03:50] Notification: Remember to scan your meal barcodes.
-[2025-10-02 07:04:08] Notification: Time to log today’s workout!
-[2025-10-02 07:04:08] Notification: Remember to scan your meal barcodes.
-[2025-10-03 07:03:47] Notification: Time to log today’s workout!
-[2025-10-03 07:03:47] Notification: Remember to scan your meal barcodes.
+[2025-10-04 07:03:43] Notification: Time to log today’s workout!
+[2025-10-04 07:03:43] Notification: Remember to scan your meal barcodes.
