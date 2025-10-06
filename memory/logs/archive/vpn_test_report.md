@@ -1,8 +1,8 @@
-## Activation Test — 2025-10-05 02:02:41
+## Activation Test — 2025-10-06 02:02:34
 SUCCESS
 52.207.196.103
 
-## Load Test Attempt 1 — 2025-10-05 02:02:42
+## Load Test Attempt 1 — 2025-10-06 02:02:35
 SUCCESS
 <!doctype html>
 <html>
@@ -51,7 +51,7 @@ SUCCESS
 </body>
 </html>
 
-## Load Test Attempt 2 — 2025-10-05 02:02:43
+## Load Test Attempt 2 — 2025-10-06 02:02:37
 SUCCESS
 <!doctype html>
 <html>
@@ -100,7 +100,7 @@ SUCCESS
 </body>
 </html>
 
-## Load Test Attempt 3 — 2025-10-05 02:02:43
+## Load Test Attempt 3 — 2025-10-06 02:02:37
 SUCCESS
 <!doctype html>
 <html>
@@ -149,24 +149,24 @@ SUCCESS
 </body>
 </html>
 
-## Stress Test (Ping) — 2025-10-05 02:02:47
+## Stress Test (Ping) — 2025-10-06 02:02:42
 SUCCESS
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=1.10 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=1.03 ms
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=1.01 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=1.02 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=1.02 ms
-64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=1.03 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.991 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=0.988 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=0.988 ms
 
 --- 8.8.8.8 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 4014ms
-rtt min/avg/max/mdev = 1.012/1.036/1.097/0.030 ms
+5 packets transmitted, 5 received, 0% packet loss, time 4067ms
+rtt min/avg/max/mdev = 0.988/1.001/1.028/0.016 ms
 
-## Failover Test (DNS) — 2025-10-05 02:03:03
+## Failover Test (DNS) — 2025-10-06 02:02:57
 FAIL
 
 
-## Detection Test (IP Fingerprint) — 2025-10-05 02:03:03
+## Detection Test (IP Fingerprint) — 2025-10-06 02:02:57
 SUCCESS
 {
   "ip": "52.207.196.103",

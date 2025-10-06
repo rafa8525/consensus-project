@@ -1,8 +1,8 @@
 cat > "$ROOT/templates/project_status_report_template.md" <<'MD'
-# Weekly Status — 2025-W40
-**Date range:** 2025-09-29 to 2025-10-05  
+# Weekly Status — 2025-W41
+**Date range:** 2025-10-06 to 2025-10-12  
 **Branch:** v1.1-dev  
-**Generated at:** 2025-10-05 16:02:01
+**Generated at:** 2025-10-06 06:28:17
 
 ## Highlights
 - …
