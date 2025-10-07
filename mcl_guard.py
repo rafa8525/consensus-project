@@ -1,361 +1,117 @@
-<<<<<<< HEAD
 #!/usr/bin/env python3
-# mcl_guard.py
-# Purpose: Robust, idempotent guard that runs the memory "absorb" task with auto-retry,
-#          exponential backoff with jitter, lockfile protection, and structured logging.
-# Platform: PythonAnywhere-safe. No emojis. No console closing side effects.
+"""
+Master Control Loop — Guard Supervisor
+--------------------------------------
+Purpose:
+Continuously monitors and runs all core Consensus-Project tasks
+in a controlled, fault-tolerant cycle.
 
-import os
-import sys
-import json
-import time
-import random
-import shutil
-import subprocess
-import datetime
-import traceback
+Includes:
+ • Knowledge-base verification
+ • VPN test suite
+ • Security audit
+ • Fitness tracker
+ • Memory manifest logger
+ • Weekly status generator (Sunday)
+ • Self-heal + logging
+
+Location: /home/rafa1215/consensus-project/mcl_guard.py
+"""
+
+import subprocess, time, os, sys, traceback
+from datetime import datetime, timedelta
 from pathlib import Path
 
-# ====== CONFIG ======
-PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
-LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "system"
-HEARTBEAT_DIR = PROJECT_ROOT / "memory" / "logs" / "heartbeat"
-STATUS_JSON = PROJECT_ROOT / "memory" / "logs" / "system" / "absorb_status.json"
-MD_LOG = PROJECT_ROOT / "memory" / "logs" / "system" / "absorb_guard.md"
-LOCKFILE = PROJECT_ROOT / "memory" / "locks" / "absorb_guard.lock"
-MIN_FREE_MB = 300  # fail fast if free space below this
-MAX_RETRIES = 8
-BASE_BACKOFF_SEC = 10
-BACKOFF_CAP_SEC = 300  # max backoff cap
-GIT_BIN = "/usr/bin/git"
+ROOT = Path("/home/rafa1215/consensus-project")
+TOOLS = ROOT / "tools"
+LOGS = ROOT / "memory" / "logs" / "system"
+LOGS.mkdir(parents=True, exist_ok=True)
+HEARTBEAT = LOGS / "mcl_guard_heartbeat.log"
 
-# Command to run the actual absorption. Adjust if your absorb script differs.
-# Option A (preferred if present):
-ABSORB_CMD = ["python3", "tools/absorb_memory.py", "--full-scan"]
-# Option B (fallbacks — uncomment if you use one of these instead):
-# ABSORB_CMD = ["python3", "absorb_runner.py"]
-# ABSORB_CMD = ["python3", "tools/absorb_status_report.py", "--run-and-write"]
+# ---------------------------------------------------------------------------
+# Configuration
+# ---------------------------------------------------------------------------
+TASKS = {
+    # Hourly / frequent safety checks
+    "verify_kb_permissions.py":   {"interval": 60 * 60},
+    "log_memory_manifest.py":     {"interval": 60 * 60 * 6},
 
-# ====== UTILS ======
-def now_utc_iso():
-    return datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    # Daily tasks
+    "fitness_tracker.py":         {"interval": 60 * 60 * 24, "run_at": "22:00"},
 
-def ensure_dirs():
-    for d in [LOG_DIR, HEARTBEAT_DIR, LOCKFILE.parent]:
-        d.mkdir(parents=True, exist_ok=True)
+    # Weekly tasks
+    "vpn_test_suite.py":          {"interval": 60 * 60 * 24 * 7, "run_on": "Mon"},
+    "generate_weekly_status.py":  {"interval": 60 * 60 * 24 * 7, "run_on": "Sun"},
 
-def log_md(line: str):
-    ensure_dirs()
-    ts = now_utc_iso()
-    with MD_LOG.open("a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {line}\n")
+    # Monthly task
+    "run_security_audit.py":      {"interval": 60 * 60 * 24 * 30, "run_day": 1},
+}
 
-def write_status(status: dict):
-    ensure_dirs()
-    # merge with previous to preserve history fields if any
-    prev = {}
-    if STATUS_JSON.exists():
-        try:
-            prev = json.loads(STATUS_JSON.read_text(encoding="utf-8"))
-        except Exception:
-            prev = {}
-    prev.update(status)
-    STATUS_JSON.write_text(json.dumps(prev, indent=2), encoding="utf-8")
-
-def heartbeat(note: str):
-    ensure_dirs()
-    date = datetime.date.today().isoformat()
-    hb_path = HEARTBEAT_DIR / f"absorb_guard_{date}.md"
-    ts = now_utc_iso()
-    with hb_path.open("a", encoding="utf-8") as f:
-        f.write(f"- {ts} {note}\n")
-
-def have_enough_disk_space(path="/home"):
-    try:
-        total, used, free = shutil.disk_usage(path)
-        free_mb = free // (1024 * 1024)
-        return free_mb >= MIN_FREE_MB, free_mb
-    except Exception:
-        return True, -1
-
-def run(cmd, cwd=None, env=None, timeout=None):
-    return subprocess.run(
-        cmd,
-        cwd=str(cwd) if cwd else None,
-        env=env,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        timeout=timeout,
-        check=False,
-    )
-
-def with_lock(lockfile: Path):
-    # very simple pid lock
-    if lockfile.exists():
-        try:
-            data = json.loads(lockfile.read_text(encoding="utf-8"))
-            pid = data.get("pid")
-            ts = data.get("time")
-        except Exception:
-            pid, ts = None, None
-        # If stale lock (process no longer exists), clear it
-        if pid and not os.path.exists(f"/proc/{pid}"):
-            try:
-                lockfile.unlink(missing_ok=True)
-            except Exception:
-                pass
-        else:
-            return False
-    # create lock
-    try:
-        lockfile.write_text(json.dumps({"pid": os.getpid(), "time": now_utc_iso()}), encoding="utf-8")
-        return True
-    except Exception:
-        return False
-
-def release_lock(lockfile: Path):
-    try:
-        lockfile.unlink(missing_ok=True)
-    except Exception:
-        pass
-
-def git_safe_pull():
-    # optional: keep local working copy up-to-date before absorb
-    if not shutil.which(GIT_BIN):
-        return True, "git not found; skipping"
-    cmds = [
-        [GIT_BIN, "status", "--porcelain"],
-        [GIT_BIN, "pull", "--rebase", "--autostash"],
-    ]
-    for cmd in cmds:
-        p = run(cmd, cwd=PROJECT_ROOT)
-        if p.returncode != 0:
-            return False, f"cmd={' '.join(cmd)} rc={p.returncode} err={p.stderr.strip()}"
-    return True, "git pull ok"
-
-# ====== MAIN LOGIC ======
-def main():
-    ensure_dirs()
-    ts = now_utc_iso()
-    log_md("mcl_guard start")
-    heartbeat("start")
-
-    # Disk space check
-    ok_space, free_mb = have_enough_disk_space("/")
-    if not ok_space:
-        msg = f"Insufficient disk space: {free_mb} MB free; need >= {MIN_FREE_MB} MB"
-        log_md(msg)
-        write_status({
-            "last_run": ts,
-            "last_result": "failure",
-            "last_error": msg,
-            "free_mb": free_mb
-        })
-        heartbeat("fail: low disk space")
-        return 2
-
-    # Optional: keep repository synced
-    ok_pull, pull_msg = git_safe_pull()
-    if not ok_pull:
-        log_md(f"git sync warning: {pull_msg}")
-
-    # Concurrency guard
-    if not with_lock(LOCKFILE):
-        msg = "Another absorb_guard instance appears to be running; exiting."
-        log_md(msg)
-        write_status({
-            "last_run": ts,
-            "last_result": "skipped",
-            "reason": "lock",
-        })
-        heartbeat("skipped: lock")
-        return 0
-
-    try:
-        attempt = 0
-        last_err = ""
-        while attempt <= MAX_RETRIES:
-            attempt += 1
-            start = time.time()
-            log_md(f"attempt {attempt} running: {' '.join(ABSORB_CMD)}")
-            p = run(ABSORB_CMD, cwd=PROJECT_ROOT, timeout=60*25)  # 25m hard timeout
-            dur = round(time.time() - start, 2)
-
-            if p.returncode == 0:
-                # success
-                log_md(f"attempt {attempt} success in {dur}s")
-                write_status({
-                    "last_run": ts,
-                    "last_result": "success",
-                    "last_success_time": now_utc_iso(),
-                    "duration_sec": dur,
-                    "stdout_tail": p.stdout[-800:].strip() if p.stdout else "",
-                })
-                heartbeat("success")
-                return 0
-
-            # failure path
-            last_err = f"rc={p.returncode} stdout_tail={p.stdout[-400:].strip() if p.stdout else ''} stderr_tail={p.stderr[-400:].strip() if p.stderr else ''}"
-            log_md(f"attempt {attempt} failed in {dur}s: {last_err}")
-
-            if attempt > MAX_RETRIES:
-                break
-
-            # backoff with jitter
-            backoff = min(BACKOFF_CAP_SEC, BASE_BACKOFF_SEC * (2 ** (attempt - 1)))
-            backoff = int(backoff * (0.8 + 0.4 * random.random()))
-            heartbeat(f"retrying in {backoff}s")
-            time.sleep(backoff)
-
-        # if we exit loop without success:
-        log_md("all retries exhausted; giving up for this run")
-        write_status({
-            "last_run": ts,
-            "last_result": "failure",
-            "last_error": last_err,
-            "retries": MAX_RETRIES
-        })
-        heartbeat("failure after retries")
-        return 1
-
-    except Exception as e:
-        err = f"guard exception: {repr(e)}\n{traceback.format_exc()}"
-        log_md(err)
-        write_status({
-            "last_run": ts,
-            "last_result": "failure",
-            "last_error": err
-        })
-        heartbeat("exception")
-        return 3
-
-    finally:
-        release_lock(LOCKFILE)
-        log_md("mcl_guard end")
-
-if __name__ == "__main__":
-    rc = main()
-    sys.exit(rc)
-=======
-#!/usr/bin/env python3
-import os, time, subprocess, signal, sys
-from pathlib import Path
-from datetime import datetime
-
-PROJECT_DIR = Path(os.environ.get("PROJECT_DIR") or (Path.home() / "consensus-project"))
-HB = PROJECT_DIR / "memory/logs/heartbeat/last_heartbeat.txt"
-LOGDIR = PROJECT_DIR / "memory/logs/system"
-LOGDIR.mkdir(parents=True, exist_ok=True)
-LOG = LOGDIR / "mcl_guard.log"
-RUNLOG = LOGDIR / "mcl_run.out"
-MCL_ENTRY = os.environ.get("MCL_ENTRY", "master_control_loop.py")
-PIDFILE = LOGDIR / "mcl_guard.pid"
-
-# Stall/health thresholds (env-overridable)
-MAX_STALL = int(
-    os.environ.get("MCL_MAX_STALL_SEC", "120")
-)  # restart if heartbeat older than this
-CHECK_EVERY = int(os.environ.get("MCL_CHECK_SEC", "10"))  # guard loop tick
-GRACE_START = int(os.environ.get("MCL_GRACE_START_SEC", "60"))  # grace after spawn
-MAX_RESTARTS = int(os.environ.get("MCL_MAX_RESTARTS", "12"))  # limit per session
-COOLDOWN = int(os.environ.get("MCL_RESTART_COOLDOWN_SEC", "10"))
-
-
-def log(msg):
+# ---------------------------------------------------------------------------
+# Utilities
+# ---------------------------------------------------------------------------
+def log(msg: str):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with LOG.open("a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {msg}\n")
+    line = f"[{ts}] {msg}"
+    print(line)
+    with open(HEARTBEAT, "a") as f:
+        f.write(line + "\n")
 
+def should_run(task, meta):
+    """Determine whether to run a task based on day/time rules."""
+    now = datetime.now()
+    if "run_on" in meta and now.strftime("%a") != meta["run_on"]:
+        return False
+    if "run_day" in meta and now.day != meta["run_day"]:
+        return False
+    if "run_at" in meta:
+        h, m = map(int, meta["run_at"].split(":"))
+        if not (now.hour == h and now.minute >= m and now.minute < m + 10):
+            return False
+    last_file = LOGS / f".last_{task}"
+    if last_file.exists():
+        last_time = datetime.fromtimestamp(last_file.stat().st_mtime)
+        if (now - last_time) < timedelta(seconds=meta["interval"]):
+            return False
+    last_file.touch()
+    return True
 
-def already_running():
+def run_task(task):
+    """Run a tool safely with error capture."""
+    path = TOOLS / task
+    if not path.exists():
+        log(f"⚠️  Missing task: {task}")
+        return
     try:
-        if PIDFILE.exists():
-            pid = int(PIDFILE.read_text().strip())
-            os.kill(pid, 0)
-            return True
-    except Exception:
-        pass
-    return False
+        cmd = [sys.executable, str(path)]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
+        if result.returncode == 0:
+            log(f"✅ {task} executed successfully")
+        else:
+            log(f"❌ {task} exited with code {result.returncode}")
+            log(result.stderr.strip())
+    except Exception as e:
+        log(f"❌ Exception running {task}: {e}")
+        traceback.print_exc(file=open(LOGS / "mcl_guard_errors.log", "a"))
 
-
-def write_pid():
-    PIDFILE.write_text(str(os.getpid()))
-
-
-def spawn_child():
-    runfh = RUNLOG.open("a")
-    p = subprocess.Popen(
-        ["python3.10", MCL_ENTRY],
-        cwd=str(PROJECT_DIR),
-        stdout=runfh,
-        stderr=subprocess.STDOUT,
-        preexec_fn=os.setsid,
-    )
-    return p, runfh
-
-
-def killpg(p, sig):
-    try:
-        os.killpg(os.getpgid(p.pid), sig)
-    except Exception:
-        pass
-
-
-def hb_age_sec():
-    try:
-        return time.time() - HB.stat().st_mtime
-    except FileNotFoundError:
-        return 1e9
-
-
+# ---------------------------------------------------------------------------
+# Main Loop
+# ---------------------------------------------------------------------------
 def main():
-    if already_running():
-        print("mcl_guard already running; exiting.")
-        return 0
-    write_pid()
-    restarts = 0
+    log("🔁 MCL Guard starting supervision cycle")
     while True:
-        p, runfh = spawn_child()
-        log(f"spawned loop pid={p.pid}")
-        start = time.time()
-        while True:
-            time.sleep(CHECK_EVERY)
-            # child finished?
-            rc = p.poll()
-            if rc is not None:
-                log(f"loop exited rc={rc}")
-                try:
-                    runfh.close()
-                except Exception:
-                    pass
-                time.sleep(COOLDOWN)
-                restarts += 1
-                if restarts > MAX_RESTARTS:
-                    log("max restarts reached; stopping")
-                    return 1
-                break  # respawn
-            # stall check (after grace)
-            if time.time() - start < GRACE_START:
-                continue
-            age = hb_age_sec()
-            if age > MAX_STALL:
-                log(f"heartbeat stall ({int(age)}s > {MAX_STALL}s); restarting")
-                killpg(p, signal.SIGTERM)
-                time.sleep(5)
-                killpg(p, signal.SIGKILL)
-                try:
-                    runfh.close()
-                except Exception:
-                    pass
-                time.sleep(COOLDOWN)
-                restarts += 1
-                if restarts > MAX_RESTARTS:
-                    log("max restarts reached after stall; stopping")
-                    return 1
-                break  # respawn
-
+        for task, meta in TASKS.items():
+            if should_run(task, meta):
+                run_task(task)
+        # Heartbeat update
+        log("💓 Guard heartbeat OK")
+        time.sleep(60)  # check every minute
 
 if __name__ == "__main__":
-    sys.exit(main())
->>>>>>> v1.1-dev-clean
+    try:
+        main()
+    except KeyboardInterrupt:
+        log("🛑 Guard stopped manually")
+    except Exception as e:
+        log(f"❌ Fatal error: {e}")
+        traceback.print_exc(file=open(LOGS / "mcl_guard_errors.log", "a"))

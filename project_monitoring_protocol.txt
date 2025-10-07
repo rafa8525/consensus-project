@@ -1,0 +1,14 @@
+# Project Monitoring Protocol
+
+Purpose: Evaluate and report project progress automatically.
+
+Components:
+- Weekly status template
+- Progress evaluation plan
+- Update reminders
+- Next-step scheduler
+
+Implementation:
+1. Every Friday 09:00 PST run generate_weekly_status.py.
+2. Write report to memory/logs/status/YYYY-WW-status.md.
+3. Send SMS/email summary via Twilio fallback.

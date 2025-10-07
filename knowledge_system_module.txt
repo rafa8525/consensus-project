@@ -1,0 +1,13 @@
+# Knowledge System Module
+
+Purpose: Shared, centralized knowledge base for all AI agents.
+
+Functions:
+- Store and retrieve insights for collaboration
+- Enable reinforcement learning across agents
+- Track accuracy and adaptability metrics
+
+Implementation:
+1. Agents write discoveries to memory/ckb/insights/.
+2. Consensus engine reads and merges updates daily.
+3. Evaluate duplicate knowledge entries and prune monthly.

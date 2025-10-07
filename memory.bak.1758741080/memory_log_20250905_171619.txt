@@ -1,4 +1,0 @@
-status
-steps
-summary
-used_findings
