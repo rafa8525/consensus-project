@@ -1,0 +1,12 @@
+Automatic VPN Activation Feature
+
+Purpose: Enhance privacy measures by activating VPN on public Wi-Fi detection
+
+Benefits:
+- Data protection on unsecured networks
+- Mitigation of security risks
+
+Implementation:
+- Implement automatic VPN activation feature
+- Ensure seamless integration and operation
+- Enhance privacy and security measures

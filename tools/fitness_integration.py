@@ -1,107 +1,127 @@
 #!/usr/bin/env python3
-import os
-import datetime
-import json
-import random
+"""
+Fitness Integration Module — AI Consensus System
+------------------------------------------------
 
-BASE_DIR = "/home/rafa1215/consensus-project/memory"
-FITNESS_DIR = os.path.join(BASE_DIR, "logs/fitness")
-NUTRITION_DIR = os.path.join(BASE_DIR, "logs/nutrition")
-REPORT_FILE = os.path.join(FITNESS_DIR, "fitness_daily_summary.md")
-HEARTBEAT_FILE = os.path.join(BASE_DIR, "logs/system/heartbeat.md")
+Purpose:
+- Aggregate and normalize fitness data from multiple sources:
+  * Pixel Watch 3 (primary)
+  * Samsung Watch (BMI readings)
+  * Manual pool/swim entries
+  * Fitbit logs (optional)
+- Update daily summary and BMI metrics in /memory/logs/fitness/
 
-os.makedirs(FITNESS_DIR, exist_ok=True)
-os.makedirs(NUTRITION_DIR, exist_ok=True)
+Outputs:
+- memory/logs/fitness/fitness_summary_YYYYMMDD.md
+- memory/logs/fitness/latest_fitness.md
+"""
 
-# --- Heartbeat logger ---
-def heartbeat_log(status: str):
-    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(HEARTBEAT_FILE, "a") as f:
-        f.write(f"[{ts}] FITNESS: {status}\n")
-    print(f"[HEARTBEAT] {status}")
+from pathlib import Path
+from datetime import datetime
+import json, random
 
-# --- Device Sync (stubbed) ---
-def sync_devices():
-    devices = ["Fitbit", "Pixel Watch 3", "Samsung Watch", "COROS Pace 3"]
-    synced = []
-    for d in devices:
-        synced.append({
-            "device": d,
-            "steps": random.randint(3000, 12000),
-            "hr": random.randint(60, 140)
-        })
-    return synced
+ROOT = Path("/home/rafa1215/consensus-project")
+FITNESS_DIR = ROOT / "memory" / "logs" / "fitness"
+FITNESS_DIR.mkdir(parents=True, exist_ok=True)
 
-# --- Barcode Scanner Stub ---
-def scan_barcode(upc: str):
-    mock_db = {
-        "755000000010": "Texas Pete Hot Sauce (Keto)",
-        "73852145599": "Purell Sanitizer (Non-food)",
-        "708747151930": "Power Up Trail Mix (Not Keto)"
+# --- Configuration ---
+USER_HEIGHT_INCHES = 67  # 5'7"
+TARGET_WEIGHT_LBS = 185
+CURRENT_WEIGHT_LBS = 218  # default baseline
+BMI_WARNING_THRESHOLD = 30.0
+
+# --- Mocked integrations (replace with APIs later) ---
+def pixel_watch_data():
+    """Simulated step + heart-rate data pulled from Pixel Watch."""
+    return {
+        "steps": random.randint(6000, 12000),
+        "active_minutes": random.randint(45, 120),
+        "avg_hr": random.randint(75, 110),
+        "max_hr": random.randint(120, 145),
     }
-    return mock_db.get(upc, "Unknown Item")
 
-# --- Geolocation Facility ---
-def log_geofence(location: str, action: str):
-    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    path = os.path.join(FITNESS_DIR, "geofence_log.md")
-    with open(path, "a") as f:
-        f.write(f"[{ts}] {action} at {location}\n")
+def samsung_watch_bmi():
+    """Simulated BMI reading from Samsung Watch."""
+    weight = CURRENT_WEIGHT_LBS + random.uniform(-1.5, 1.5)
+    height_m = USER_HEIGHT_INCHES * 0.0254
+    bmi = round(weight / (height_m ** 2), 1)
+    return {"weight_lbs": round(weight, 1), "bmi": bmi}
 
-# --- Push Notifications (stubbed) ---
-def send_push(msg: str):
-    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    path = os.path.join(FITNESS_DIR, "push_log.md")
-    with open(path, "a") as f:
-        f.write(f"[{ts}] Notification: {msg}\n")
+def swim_activity_log():
+    """Simulate swim laps -> step equivalents."""
+    laps = random.choice([0, 25, 50])
+    step_equiv = laps * 27
+    return {"laps": laps, "step_equiv": step_equiv}
 
-# --- Gamification ---
-def update_streaks():
-    streaks_file = os.path.join(FITNESS_DIR, "streaks.json")
-    data = {"workout_streak": 0, "nutrition_streak": 0}
-    if os.path.exists(streaks_file):
-        with open(streaks_file, "r") as f:
-            data = json.load(f)
-    data["workout_streak"] += 1
-    data["nutrition_streak"] += 1
-    with open(streaks_file, "w") as f:
-        json.dump(data, f)
-    return data
+# --- Computation ---
+def compute_progress(weight, target):
+    diff = weight - target
+    pct = max(0, round((1 - (diff / weight)) * 100, 1))
+    return min(pct, 100.0)
 
-# --- Daily Report ---
-def generate_daily_report():
-    ts = datetime.datetime.now().strftime("%Y-%m-%d")
-    try:
-        synced = sync_devices()
-        streaks = update_streaks()
-    except Exception as e:
-        heartbeat_log(f"ERROR: Device sync or streak update failed — {e}")
-        return None
+def build_summary():
+    now = datetime.now()
+    pixel = pixel_watch_data()
+    samsung = samsung_watch_bmi()
+    swim = swim_activity_log()
 
-    summary = [f"# Fitness Report {ts}\n"]
-    summary.append("## Device Sync")
-    for s in synced:
-        summary.append(f"- {s['device']}: {s['steps']} steps, HR {s['hr']} bpm")
+    total_steps = pixel["steps"] + swim["step_equiv"]
+    bmi = samsung["bmi"]
+    weight = samsung["weight_lbs"]
+    progress_pct = compute_progress(weight, TARGET_WEIGHT_LBS)
+    status = "⚠️ Above Target" if bmi >= BMI_WARNING_THRESHOLD else "✅ Within Target Range"
 
-    summary.append("\n## Streaks")
-    summary.append(f"- Workout Streak: {streaks['workout_streak']} days")
-    summary.append(f"- Nutrition Streak: {streaks['nutrition_streak']} days")
+    summary = {
+        "timestamp": now.isoformat(),
+        "steps": total_steps,
+        "active_minutes": pixel["active_minutes"],
+        "avg_hr": pixel["avg_hr"],
+        "max_hr": pixel["max_hr"],
+        "laps": swim["laps"],
+        "weight_lbs": weight,
+        "bmi": bmi,
+        "progress_to_goal_%": progress_pct,
+        "status": status,
+    }
+    return summary
 
-    try:
-        with open(REPORT_FILE, "w") as f:
-            f.write("\n".join(summary))
-    except Exception as e:
-        heartbeat_log(f"ERROR: Could not write daily report — {e}")
-        return None
+# --- Logging ---
+def write_summary(summary):
+    now = datetime.now()
+    file_path = FITNESS_DIR / f"fitness_summary_{now:%Y%m%d}.md"
+    latest = FITNESS_DIR / "latest_fitness.md"
 
-    heartbeat_log("SUCCESS: Fitness daily report generated")
-    return REPORT_FILE
+    lines = [
+        f"# Daily Fitness Summary — {now:%Y-%m-%d %H:%M:%S}",
+        "",
+        f"- Steps (incl. swim): {summary['steps']}",
+        f"- Active Minutes: {summary['active_minutes']}",
+        f"- Heart Rate Avg/Max: {summary['avg_hr']} / {summary['max_hr']}",
+        f"- Swim Laps: {summary['laps']}",
+        f"- Weight: {summary['weight_lbs']} lbs",
+        f"- BMI: {summary['bmi']}",
+        f"- Progress Toward Goal: {summary['progress_to_goal_%']}%",
+        f"- Status: {summary['status']}",
+        "",
+        "Auto-generated by AI Consensus System.",
+    ]
+
+    file_path.write_text("\n".join(lines))
+    latest.write_text(f"Latest fitness summary: {file_path.name}\n")
+
+    # Also dump raw JSON for data science modules
+    json_path = FITNESS_DIR / f"fitness_data_{now:%Y%m%d}.json"
+    json_path.write_text(json.dumps(summary, indent=2))
+
+    print(f"✅ Fitness summary written: {file_path}")
+    print(f"📎 Pointer updated -> latest_fitness.md")
+    if summary["status"].startswith("⚠️"):
+        print("🚨 Alert: BMI exceeds healthy threshold.")
+
+# --- Main ---
+def main():
+    summary = build_summary()
+    write_summary(summary)
 
 if __name__ == "__main__":
-    report = generate_daily_report()
-    if report:
-        log_geofence("Local Gym", "Workout Logged")
-        log_geofence("Smith’s Landing", "Meal Logged")
-        send_push("Time to log today’s workout!")
-        send_push("Remember to scan your meal barcodes.")
-        print(f"Daily fitness report generated: {report}")
+    main()

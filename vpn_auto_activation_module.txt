@@ -1,0 +1,18 @@
+# VPN Auto Activation Module
+
+Purpose: Activate VPN automatically on public Wi-Fi for privacy protection.
+
+Includes:
+- Auto-connect logic
+- Load, stress, failover, and endurance testing
+- Monthly reliability validation
+
+Benefits:
+- Prevents data leaks on unsecured networks
+- Seamless reconnect after Wi-Fi switch
+
+Implementation Steps:
+1. Detect SSIDs tagged as public.
+2. Trigger VPN service via shell or API.
+3. Run test cycle covering load, stress, and failover.
+4. Log results to memory/logs/system/vpn_test_report.md.

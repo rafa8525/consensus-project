@@ -1,0 +1,16 @@
+# Fitness Tracking Full Plan
+
+Purpose: Unify BMI monitoring, wearable sync, and gamified progress.
+
+Features:
+- Real-time activity logs from Pixel/Coros/Fitbit
+- Goal setting + diet plan tracking
+- Barcode scanning for keto classification
+- Cross-platform (Android, watch, laptop)
+- Push reminders for missed workouts
+
+Implementation:
+1. Pull metrics from Fitbit/Pixel Watch.
+2. Convert swim laps → step equivalents.
+3. Log to memory/logs/fitness/YYYY-MM-DD.md.
+4. Sync summaries weekly to Google Sheets.
