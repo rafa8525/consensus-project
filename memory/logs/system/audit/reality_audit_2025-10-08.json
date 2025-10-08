@@ -1,0 +1,7 @@
+{
+  "checked_on": "2025-10-08 16:02:36.402722",
+  "integration": "/home/rafa1215/consensus-project/memory/logs/system/integration_manifest_2025-10-08.json",
+  "memory": "None",
+  "differences": {},
+  "error": "Missing manifest(s). Run integration_manifest.py and log_memory_manifest.py first."
+}

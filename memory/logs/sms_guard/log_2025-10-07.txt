@@ -1,0 +1,4 @@
+[2025-10-07 22:21:40] ✅ Sent SMS: Heartbeat OK 2025-10-07 22:21:39.985922 | SID=SM25d192f69ef6bf01bd5a01ed19f1e0c2
+[2025-10-07 22:21:42] Remaining queued: 0
+[2025-10-07 23:05:34] ✅ Sent SMS: Heartbeat OK 2025-10-07 23:05:34.306880 | SID=SM1d48610fbe98ee4136e1cc64a13f16a0
+[2025-10-07 23:05:36] Remaining queued: 0
