@@ -44,3 +44,6 @@
 [34m[49mhttps://www.twilio.com/docs/errors/21604[0m
 
 
+2025-10-09 09:02:16.643783 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-10-09.md | Total: 10
+2025-10-09 09:02:21.528140 | ⚠️ SMS attempt 1 failed: HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+2025-10-09 09:02:31.572334 | ❌ SMS retry failed: HTTP 401 error: Unable to create record: Authentication Error - No credentials provided

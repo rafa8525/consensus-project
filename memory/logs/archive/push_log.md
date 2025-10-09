@@ -1,2 +1,2 @@
-[2025-10-06 07:03:58] Notification: Time to log today’s workout!
-[2025-10-06 07:03:58] Notification: Remember to scan your meal barcodes.
+[2025-10-08 07:03:20] CRITICAL: Unpaid bill: Xfinity Internet (due 2025-10-01)
+[2025-10-08 07:03:20] CRITICAL: Unpaid bill: Spotify (due 2025-10-05)

@@ -1,2 +1,3 @@
-# Finance Audit 2025-10-07
-- No bills found
+# Finance Audit 2025-10-08
+- MISSING: Xfinity Internet (due 2025-10-01)
+- MISSING: Spotify (due 2025-10-05)
