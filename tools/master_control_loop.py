@@ -1,89 +1,94 @@
 #!/usr/bin/env python3
 """
-Master Control Loop (v2025.10.08)
-AI Consensus System — Self-Evolution Edition
-------------------------------------------------
-Orchestrates daily agent tasks, shared intelligence aggregation,
-and recursive self-improvement cycles.
+Master Control Loop — AI Consensus System (v2025.10.09)
+Fully autonomous orchestrator for all system agents.
+Includes emotion tracking, predictive task flow, and recursive evolution.
+
+Author: Rafael Lymburner (AI Consensus System)
 """
 
-import subprocess
-import time
-from datetime import datetime
-from pathlib import Path
-import logging
-import sys
+import os, sys, datetime, time, subprocess, traceback
 
-# -----------------------
-# CONFIGURATION
-# -----------------------
-BASE_DIR = Path("/home/rafa1215/consensus-project")
-TOOLS_DIR = BASE_DIR / "tools"
-LOG_FILE = BASE_DIR / "memory/logs/system/master_control_log.md"
+BASE = "/home/rafa1215/consensus-project"
+TOOLS = f"{BASE}/tools"
+LOG_DIR = f"{BASE}/memory/logs/system"
+HEARTBEAT = f"{LOG_DIR}/heartbeat_master.log"
+EVOLVE_FLAG = "--evolve" in sys.argv
 
-# Core modules
-SHARED_INTELLIGENCE = TOOLS_DIR / "shared_intelligence_loop.py"
-RECURSIVE_EVOLUTION = TOOLS_DIR / "recursive_evolution_loop.py"
-HEARTBEAT_SCHEDULER = TOOLS_DIR / "heartbeat_scheduler_loop.py"
+# ---------- Utility Functions ---------- #
 
-# Logging setup
-logging.basicConfig(
-    filename=LOG_FILE,
-    level=logging.INFO,
-    format="[{asctime}] {levelname}: {message}",
-    style="{"
-)
+def log(msg):
+    ts = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
+    line = f"{ts} {msg}"
+    print(line)
+    os.makedirs(LOG_DIR, exist_ok=True)
+    with open(HEARTBEAT, "a") as f:
+        f.write(line + "\n")
 
-def log_console(message: str):
-    print(message)
-    logging.info(message)
-
-# -----------------------
-# MODULE EXECUTION HELPERS
-# -----------------------
-def run_module(script_path: Path, description: str):
-    """Execute a module and log its result."""
+def run_script(path, desc):
     try:
-        log_console(f"▶ Starting: {description}")
-        subprocess.run(["python3", str(script_path)], check=True)
-        log_console(f"✅ Completed: {description}")
-    except subprocess.CalledProcessError as e:
-        log_console(f"⚠️ Error while running {description}: {e}")
-    except Exception as ex:
-        log_console(f"❌ Unexpected failure in {description}: {ex}")
-
-# -----------------------
-# CORE CYCLE
-# -----------------------
-def run_master_cycle():
-    log_console("🚀 Master Control Loop started.")
-    start_time = datetime.now()
-
-    # 1. Run heartbeat
-    run_module(HEARTBEAT_SCHEDULER, "Heartbeat Scheduler")
-
-    # 2. Run shared intelligence sync
-    run_module(SHARED_INTELLIGENCE, "Shared Intelligence Loop")
-
-    # 3. Run recursive self-evolution test
-    run_module(RECURSIVE_EVOLUTION, "Recursive Evolution Loop")
-
-    # 4. Wrap up
-    duration = (datetime.now() - start_time).total_seconds()
-    log_console(f"🏁 Cycle completed in {duration:.2f} seconds.\n")
-
-# -----------------------
-# MAIN LOOP
-# -----------------------
-if __name__ == "__main__":
-    try:
-        while True:
-            run_master_cycle()
-            # Wait 6 hours between full cycles (adjustable)
-            time.sleep(6 * 60 * 60)
-    except KeyboardInterrupt:
-        log_console("🛑 Master Control Loop stopped manually.")
-        sys.exit(0)
+        start = time.time()
+        subprocess.run(["python3", path], timeout=120, check=True)
+        elapsed = round(time.time() - start, 2)
+        log(f"✅ {desc} completed in {elapsed}s")
+    except subprocess.TimeoutExpired:
+        log(f"⚠️ Timeout running {desc}")
+    except subprocess.CalledProcessError:
+        log(f"❌ Error running {desc}")
     except Exception as e:
-        log_console(f"❌ Fatal error: {e}")
-        sys.exit(1)
+        log(f"❌ Exception in {desc}: {e}\n{traceback.format_exc()}")
+
+# ---------- Core Autonomous Tasks ---------- #
+
+def run_emotion_state_tracker():
+    path = f"{TOOLS}/emotion_state_tracker.py"
+    if os.path.exists(path):
+        run_script(path, "Emotion State Tracker")
+
+def run_predictive_task_flow():
+    path = f"{TOOLS}/predictive_task_flow.py"
+    if os.path.exists(path):
+        run_script(path, "Predictive Task Flow")
+
+def run_recursive_evolution():
+    path = f"{TOOLS}/recursive_evolution_manager.py"
+    if os.path.exists(path):
+        run_script(path, "Recursive Evolution Manager")
+
+# ---------- Existing Agent Invocations ---------- #
+
+def run_standard_agents():
+    agents = [
+        ("heartbeat_scheduler_loop.py", "Heartbeat Scheduler"),
+        ("vpn_test_suite.py", "VPN Test Suite"),
+        ("fitness_tracking_integrator.py", "Fitness Tracking Integrator"),
+        ("security_audit_agent.py", "Security Audit Agent"),
+        ("daily_summary_generator.py", "Daily Summary Generator"),
+    ]
+    for fname, desc in agents:
+        path = f"{TOOLS}/{fname}"
+        if os.path.exists(path):
+            run_script(path, desc)
+
+# ---------- Control Flow ---------- #
+
+def main():
+    log("=== Master Control Loop Start ===")
+
+    # 1. Emotional awareness before all scheduling
+    run_emotion_state_tracker()
+
+    # 2. Predictive task generation (proactive flow)
+    run_predictive_task_flow()
+
+    # 3. Standard agents (VPN, Fitness, Security, Summary)
+    run_standard_agents()
+
+    # 4. Recursive self-evolution (weekly or manual trigger)
+    if EVOLVE_FLAG or datetime.datetime.today().weekday() == 6:  # Sunday
+        run_recursive_evolution()
+
+    log("=== Master Control Loop End ===\n")
+
+if __name__ == "__main__":
+    main()
