@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Master Control Loop — AI Consensus System (v2025.10.09)
+Master Control Loop — AI Consensus System (v2025.10.09+VOICE)
 Fully autonomous orchestrator for all system agents.
-Includes emotion tracking, predictive task flow, and recursive evolution.
+Includes emotion tracking, predictive task flow, recursive evolution,
+and ChatGPT Voice synchronization for full historical awareness.
 
 Author: Rafael Lymburner (AI Consensus System)
 """
@@ -70,6 +71,21 @@ def run_standard_agents():
         if os.path.exists(path):
             run_script(path, desc)
 
+# ---------- Voice Awareness Integration ---------- #
+
+def run_voice_context_update():
+    """Ensure ChatGPT Voice always has full project knowledge and recent events."""
+    voice_scripts = [
+        ("voice_context_loader.py", "Voice Context Digest Builder"),
+        ("generate_daily_state.py", "Voice Daily State Summary"),
+    ]
+    for fname, desc in voice_scripts:
+        path = f"{TOOLS}/{fname}"
+        if os.path.exists(path):
+            run_script(path, desc)
+        else:
+            log(f"⚠️ Missing voice tool: {fname}")
+
 # ---------- Control Flow ---------- #
 
 def main():
@@ -87,6 +103,9 @@ def main():
     # 4. Recursive self-evolution (weekly or manual trigger)
     if EVOLVE_FLAG or datetime.datetime.today().weekday() == 6:  # Sunday
         run_recursive_evolution()
+
+    # 5. Voice awareness — keeps ChatGPT Voice informed of all progress
+    run_voice_context_update()
 
     log("=== Master Control Loop End ===\n")
 
