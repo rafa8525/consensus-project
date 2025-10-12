@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-12_07-03-27",
+  "variants": [
+    {
+      "id": 1,
+      "scores": {
+        "speed": 35.6543,
+        "resilience": 100,
+        "accuracy": 50.0
+      },
+      "total": 65.69629
+    },
+    {
+      "id": 2,
+      "scores": {
+        "speed": 19.3002,
+        "resilience": 100,
+        "accuracy": 50.0
+      },
+      "total": 60.79006
+    },
+    {
+      "id": 3,
+      "scores": {
+        "speed": 9.8303,
+        "resilience": 100,
+        "accuracy": 50.0
+      },
+      "total": 57.94909
+    },
+    {
+      "id": 4,
+      "scores": {
+        "speed": 11.0958,
+        "resilience": 100,
+        "accuracy": 50.0
+      },
+      "total": 58.32874
+    },
+    {
+      "id": 5,
+      "scores": {
+        "speed": 15.181600000000001,
+        "resilience": 100,
+        "accuracy": 50.0
+      },
+      "total": 59.55448
+    }
+  ],
+  "best_variant": {
+    "id": 1,
+    "scores": {
+      "speed": 35.6543,
+      "resilience": 100,
+      "accuracy": 50.0
+    },
+    "total": 65.69629
+  }
+}
