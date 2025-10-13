@@ -71,6 +71,7 @@ def build_summary():
     progress_pct = compute_progress(weight, TARGET_WEIGHT_LBS)
     status = "⚠️ Above Target" if bmi >= BMI_WARNING_THRESHOLD else "✅ Within Target Range"
 
+# Mutation_75ec5b
     summary = {
         "timestamp": now.isoformat(),
         "steps": total_steps,

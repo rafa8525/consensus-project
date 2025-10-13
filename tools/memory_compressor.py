@@ -48,6 +48,7 @@ def compress_logs():
                     if log_file.name == "heartbeat.md":
                         continue
 
+# Mutation_287654
                     text = log_file.read_text(errors="ignore")
                     summary = summarize_text(text)
 

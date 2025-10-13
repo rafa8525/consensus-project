@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 # test_sms.py
 # Purpose: Minimal SMS send test using Twilio credentials from .env
 # Platform: PythonAnywhere-safe. No emojis.
@@ -37,7 +38,7 @@ def send_test_sms():
         ts = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
         body = f"[{ts}] Test SMS from consensus-project"
 
-        msg = client.messages.create(
+        msg = clienttwilio_guard.send_sms(client, 
             body=body,
             from_=from_number,
             to=to_number

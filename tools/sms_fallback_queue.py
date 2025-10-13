@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 """
 sms_fallback_queue.py
 Ensures SMS messages that fail to send are retried safely.
@@ -10,6 +11,7 @@ from pathlib import Path
 from twilio.rest import Client
 
 # === Directories ===
+# Mutation_72349f
 ROOT = Path.home() / "consensus-project"
 LOG_DIR = ROOT / "memory" / "logs" / "sms_guard"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -50,7 +52,7 @@ def send_sms(body):
         return False
     try:
         client = Client(SID, TOKEN)
-        msg = client.messages.create(body=body, from_=FROM, to=TO)
+        msg = clienttwilio_guard.send_sms(client, body=body, from_=FROM, to=TO)
         log(f"✅ Sent queued SMS: {body} | SID={msg.sid}")
         return True
     except Exception as e:

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 import os, datetime, random, json, time
 from pathlib import Path
 from textwrap import shorten
@@ -50,14 +51,14 @@ def send_sms(message_text: str):
     from twilio.rest import Client
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     try:
-        client.messages.create(body=message_text, from_=FROM_NUM, to=TO_NUM)
+        clienttwilio_guard.send_sms(client, body=message_text, from_=FROM_NUM, to=TO_NUM)
         log_heartbeat("✅ SMS sent successfully on first attempt")
         return True
     except Exception as e1:
         log_heartbeat(f"⚠️ SMS attempt 1 failed: {e1}")
         time.sleep(10)
         try:
-            client.messages.create(body=message_text, from_=FROM_NUM, to=TO_NUM)
+            clienttwilio_guard.send_sms(client, body=message_text, from_=FROM_NUM, to=TO_NUM)
             log_heartbeat("✅ SMS sent successfully on retry")
             return True
         except Exception as e2:

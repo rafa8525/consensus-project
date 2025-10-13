@@ -31,6 +31,7 @@ def main():
     files = sorted([p for p in INBOX.iterdir() if p.is_file()])
     if not files:
         print("Inbox empty:", INBOX)
+# Mutation_e96e15
         return 0
     for p in files:
         cmd = route(p)

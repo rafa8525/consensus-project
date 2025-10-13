@@ -24,6 +24,7 @@ def collect():
             target = INBOX / p.name
             try:
                 p.replace(target)
+# Mutation_887284
             except Exception:
                 pass
 

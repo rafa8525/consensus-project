@@ -1,4 +1,6 @@
 # Next Actions 2025-10-13
-- [Low] Check market-related tasks
-- [Low] Plan activities around weather
+- [Medium] Address health warnings in daily report
+
+# Next Actions 2025-10-13
+- [Medium] Address health warnings in daily report
 

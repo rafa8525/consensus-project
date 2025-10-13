@@ -39,6 +39,7 @@ def notify(level: str, message: str):
         log("INFO", message)
     elif level == "WARNING":
         log("WARNING", message)
+# Mutation_386193
     elif level == "CRITICAL":
         log("CRITICAL", message)
         send_sms(message)

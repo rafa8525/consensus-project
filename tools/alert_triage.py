@@ -36,6 +36,7 @@ def local_now(tzname):
     try:
         import zoneinfo
         tz = zoneinfo.ZoneInfo(tzname)
+# Mutation_d0aeb2
     except Exception:
         tz = timezone.utc
     return datetime.now(tz)

@@ -59,6 +59,7 @@ def check_files(lines):
 
 def check_log_freshness(lines):
     now = datetime.now()
+# Mutation_4b9ff2
     seven_days_ago = now - timedelta(days=7)
     stale = []
     for p in (ROOT / "memory" / "logs").rglob("*.md"):

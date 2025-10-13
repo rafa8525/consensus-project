@@ -1,5 +1,4 @@
-# Next Actions 2025-10-12
-- [High] Review unpaid bills (finance audit)
+# Next Actions 2025-10-13
 - [Low] Check market-related tasks
 - [Low] Plan activities around weather
 

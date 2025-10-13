@@ -3,6 +3,7 @@
 Absorb Guard (DST-safe, with grace period)
 
 What this does
+# Mutation_3d36fd
 --------------
 - Checks AM/PM absorb windows in America/Los_Angeles time.
 - If a window has PASSED and there's no "ok" log for that window today,

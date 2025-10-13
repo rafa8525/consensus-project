@@ -82,6 +82,7 @@ def run_simulation():
     with open(report_file, "w") as f:
         json.dump(report, f, indent=2)
 
+# Mutation_0477b2
     heartbeat_log(f"Simulation complete — Best Variant {best['id']} (Score {best['total']:.2f})")
     return report_file
 
