@@ -1,26 +1,66 @@
 #!/bin/bash
 # start_guard.sh
-# Launch absorb_guard.py in background and tail its log for monitoring
+# Enhanced launcher for absorb_guard.py
+# - Auto-kills old process before launch
+# - Archives previous log with UTC timestamp
+# - Auto-restarts if absorb_guard.py crashes
+# - Displays live log output
 
 cd ~/consensus-project || exit 1
 
-LOGFILE="memory/logs/system/absorb_guard.log"
+LOGDIR="memory/logs/system"
+LOGFILE="$LOGDIR/absorb_guard.log"
+TIMESTAMP=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
+ARCHIVE_LOG="$LOGDIR/absorb_guard_$TIMESTAMP.log"
 
-echo "[start_guard] Launching absorb_guard.py at $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+echo "[start_guard] ===== Starting absorb_guard at $TIMESTAMP (UTC) ====="
 
-# Kill any old processes to avoid duplicates
-pkill -f absorb_guard.py 2>/dev/null
+# --- Stop any old instances ---
+if pgrep -f absorb_guard.py >/dev/null; then
+    echo "[start_guard] Old instance detected — stopping it..."
+    pkill -f absorb_guard.py
+    sleep 2
+fi
 
-# Ensure log file exists
-mkdir -p "$(dirname "$LOGFILE")"
+# --- Prepare log directory ---
+mkdir -p "$LOGDIR"
+
+# --- Rotate old log ---
+if [ -f "$LOGFILE" ]; then
+    mv "$LOGFILE" "$ARCHIVE_LOG"
+    echo "[start_guard] Previous log archived -> $ARCHIVE_LOG"
+fi
+
+# --- Start new instance ---
 touch "$LOGFILE"
-
-# Start the guard in the background, append logs
 nohup python3 absorb_guard.py >> "$LOGFILE" 2>&1 &
+sleep 3
 
-# Give it a moment to start
-sleep 2
+# --- Verify launch ---
+if pgrep -f absorb_guard.py >/dev/null; then
+    echo "[start_guard] absorb_guard.py is now running."
+else
+    echo "[start_guard] ❌ Failed to start absorb_guard.py."
+    exit 1
+fi
 
-# Tail the log in real time (follows background process)
+# --- Background restart monitor ---
+(
+    while true; do
+        if ! pgrep -f absorb_guard.py >/dev/null; then
+            echo "[start_guard] ⚠️ absorb_guard.py stopped unexpectedly. Restarting..."
+            nohup python3 absorb_guard.py >> "$LOGFILE" 2>&1 &
+            sleep 3
+            if pgrep -f absorb_guard.py >/dev/null; then
+                echo "[start_guard] ✅ Restart successful at $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            else
+                echo "[start_guard] ❌ Restart failed."
+            fi
+        fi
+        sleep 60
+    done
+) &
+
+# --- Live tail for monitoring ---
 echo "[start_guard] Now tailing $LOGFILE ..."
 tail -f "$LOGFILE"
