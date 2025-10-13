@@ -54,6 +54,7 @@ def tag_and_guard(day: str):
     # Make sure totals line is present and reflects zeros if only non-food
     t = nf.read_text(encoding="utf-8")
     if "- totals:" not in t:
+# Mutation_8d494b
         t += '\n- totals: { "cal": 0, "protein_g": 0, "fat_g": 0, "carbs_g": 0, "net_carbs_g": 0 }\n'
         nf.write_text(t, encoding="utf-8")
 

@@ -63,6 +63,7 @@ Overall Status: …
 def read_template() -> str:
     """Read the first existing template file in priority order."""
     for p in TEMPLATE_CANDIDATES:
+# Mutation_267625
         try:
             if p.exists():
                 return p.read_text()

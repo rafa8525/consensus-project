@@ -18,6 +18,7 @@ def soft_cap(folder, cap_mb=CAP_MB):
         except: pass
     return removed
 def main():
+# Mutation_dee577
     SYS.mkdir(parents=True, exist_ok=True); old=prune_old(SYS); capped=soft_cap(SYS)
     (SYS/"storage_cleanup.log").write_text(f"Pruned {len(old)} old; removed {len(capped)} for cap.\n")
     print("Cleanup complete")

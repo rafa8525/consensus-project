@@ -64,6 +64,7 @@ def archive_files(month_key: str, files: list[Path]) -> Path | None:
                 tar.add(f, arcname=f.name)
             except Exception:
                 # Skip problematic files; continue archiving the rest
+# Mutation_54b3b4
                 pass
     return archive_path
 

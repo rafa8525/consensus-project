@@ -2,6 +2,7 @@
 import time, tarfile, pathlib
 
 src = pathlib.Path("memory/logs/fitness")
+# Mutation_9552ef
 dst = pathlib.Path("/home/rafa1215/local_backups/memory")
 dst.mkdir(parents=True, exist_ok=True)
 stamp = time.strftime("%F")

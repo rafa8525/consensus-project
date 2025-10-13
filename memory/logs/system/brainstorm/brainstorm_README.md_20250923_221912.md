@@ -1,247 +1,522 @@
-# jest-worker
+<h1 align="center">
+    <img width="100" height="100" src="logo.svg" alt=""><br>
+    jsdom
+</h1>
 
-Module for executing heavy tasks under forked processes in parallel, by providing a `Promise` based interface, minimum overhead, and bound workers.
+jsdom is a pure-JavaScript implementation of many web standards, notably the WHATWG [DOM](https://dom.spec.whatwg.org/) and [HTML](https://html.spec.whatwg.org/multipage/) Standards, for use with Node.js. In general, the goal of the project is to emulate enough of a subset of a web browser to be useful for testing and scraping real-world web applications.
 
-The module works by providing an absolute path of the module to be loaded in all forked processes. Files relative to a node module are also accepted. All methods are exposed on the parent process as promises, so they can be `await`'ed. Child (worker) methods can either be synchronous or asynchronous.
+The latest versions of jsdom require Node.js v10 or newer. (Versions of jsdom below v16 still work with previous Node.js versions, but are unsupported.)
 
-The module also implements support for bound workers. Binding a worker means that, based on certain parameters, the same task will always be executed by the same worker. The way bound workers work is by using the returned string of the `computeWorkerKey` method. If the string was used before for a task, the call will be queued to the related worker that processed the task earlier; if not, it will be executed by the first available worker, then sticked to the worker that executed it; so the next time it will be processed by the same worker. If you have no preference on the worker executing the task, but you have defined a `computeWorkerKey` method because you want _some_ of the tasks to be sticked, you can return `null` from it.
+## Basic usage
 
-The list of exposed methods can be explicitly provided via the `exposedMethods` option. If it is not provided, it will be obtained by requiring the child module into the main process, and analyzed via reflection. Check the "minimal example" section for a valid one.
-
-## Install
-
-```sh
-$ yarn add jest-worker
+```js
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 ```
 
-## Example
+To use jsdom, you will primarily use the `JSDOM` constructor, which is a named export of the jsdom main module. Pass the constructor a string. You will get back a `JSDOM` object, which has a number of useful properties, notably `window`:
 
-This example covers the minimal usage:
-
-### File `parent.js`
-
-```javascript
-import {Worker as JestWorker} from 'jest-worker';
-
-async function main() {
-  const worker = new JestWorker(require.resolve('./Worker'));
-  const result = await worker.hello('Alice'); // "Hello, Alice"
-}
-
-main();
+```js
+const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
 ```
 
-### File `worker.js`
+(Note that jsdom will parse the HTML you pass it just like a browser does, including implied `<html>`, `<head>`, and `<body>` tags.)
 
-```javascript
-export function hello(param) {
-  return 'Hello, ' + param;
-}
+The resulting object is an instance of the `JSDOM` class, which contains a number of useful properties and methods besides `window`. In general, it can be used to act on the jsdom from the "outside," doing things that are not possible with the normal DOM APIs. For simple cases, where you don't need any of this functionality, we recommend a coding pattern like
+
+```js
+const { window } = new JSDOM(`...`);
+// or even
+const { document } = (new JSDOM(`...`)).window;
 ```
 
-## Experimental worker
+Full documentation on everything you can do with the `JSDOM` class is below, in the section "`JSDOM` Object API".
 
-Node 10 shipped with [worker-threads](https://nodejs.org/api/worker_threads.html), a "threading API" that uses SharedArrayBuffers to communicate between the main process and its child threads. This experimental Node feature can significantly improve the communication time between parent and child processes in `jest-worker`.
+## Customizing jsdom
 
-Since `worker_threads` are considered experimental in Node, you have to opt-in to this behavior by passing `enableWorkerThreads: true` when instantiating the worker. While the feature was unflagged in Node 11.7.0, you'll need to run the Node process with the `--experimental-worker` flag for Node 10.
+The `JSDOM` constructor accepts a second parameter which can be used to customize your jsdom in the following ways.
 
-## API
+### Simple options
 
-The `Worker` export is a constructor that is initialized by passing the worker path, plus an options object.
+```js
+const dom = new JSDOM(``, {
+  url: "https://example.org/",
+  referrer: "https://example.com/",
+  contentType: "text/html",
+  includeNodeLocations: true,
+  storageQuota: 10000000
+});
+```
 
-### `workerPath: string` (required)
+- `url` sets the value returned by `window.location`, `document.URL`, and `document.documentURI`, and affects things like resolution of relative URLs within the document and the same-origin restrictions and referrer used while fetching subresources. It defaults to `"about:blank"`.
+- `referrer` just affects the value read from `document.referrer`. It defaults to no referrer (which reflects as the empty string).
+- `contentType` affects the value read from `document.contentType`, as well as how the document is parsed: as HTML or as XML. Values that are not a [HTML mime type](https://mimesniff.spec.whatwg.org/#html-mime-type) or an [XML mime type](https://mimesniff.spec.whatwg.org/#xml-mime-type) will throw. It defaults to `"text/html"`. If a `charset` parameter is present, it can affect [binary data processing](#encoding-sniffing).
+- `includeNodeLocations` preserves the location info produced by the HTML parser, allowing you to retrieve it with the `nodeLocation()` method (described below). It also ensures that line numbers reported in exception stack traces for code running inside `<script>` elements are correct. It defaults to `false` to give the best performance, and cannot be used with an XML content type since our XML parser does not support location info.
+- `storageQuota` is the maximum size in code units for the separate storage areas used by `localStorage` and `sessionStorage`. Attempts to store data larger than this limit will cause a `DOMException` to be thrown. By default, it is set to 5,000,000 code units per origin, as inspired by the HTML specification.
 
-Node module name or absolute path of the file to be loaded in the child processes. Use `require.resolve` to transform a relative path into an absolute one.
+Note that both `url` and `referrer` are canonicalized before they're used, so e.g. if you pass in `"https:example.com"`, jsdom will interpret that as if you had given `"https://example.com/"`. If you pass an unparseable URL, the call will throw. (URLs are parsed and serialized according to the [URL Standard](https://url.spec.whatwg.org/).)
 
-### `options: Object` (optional)
+### Executing scripts
 
-#### `exposedMethods: $ReadOnlyArray<string>` (optional)
+jsdom's most powerful ability is that it can execute scripts inside the jsdom. These scripts can modify the content of the page and access all the web platform APIs jsdom implements.
 
-List of method names that can be called on the child processes from the parent process. You cannot expose any method named like a public `Worker` method, or starting with `_`. If you use method auto-discovery, then these methods will not be exposed, even if they exist.
+However, this is also highly dangerous when dealing with untrusted content. The jsdom sandbox is not foolproof, and code running inside the DOM's `<script>`s can, if it tries hard enough, get access to the Node.js environment, and thus to your machine. As such, the ability to execute scripts embedded in the HTML is disabled by default:
 
-#### `numWorkers: number` (optional)
+```js
+const dom = new JSDOM(`<body>
+  <script>document.body.appendChild(document.createElement("hr"));</script>
+</body>`);
 
-Amount of workers to spawn. Defaults to the number of CPUs minus 1.
+// The script will not be executed, by default:
+dom.window.document.body.children.length === 1;
+```
 
-#### `maxRetries: number` (optional)
+To enable executing scripts inside the page, you can use the `runScripts: "dangerously"` option:
 
-Maximum amount of times that a dead child can be re-spawned, per call. Defaults to `3`, pass `Infinity` to allow endless retries.
+```js
+const dom = new JSDOM(`<body>
+  <script>document.body.appendChild(document.createElement("hr"));</script>
+</body>`, { runScripts: "dangerously" });
 
-#### `forkOptions: Object` (optional)
+// The script will be executed and modify the DOM:
+dom.window.document.body.children.length === 2;
+```
 
-Allow customizing all options passed to `childProcess.fork`. By default, some values are set (`cwd`, `env` and `execArgv`), but you can override them and customize the rest. For a list of valid values, check [the Node documentation](https://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options).
+Again we emphasize to only use this when feeding jsdom code you know is safe. If you use it on arbitrary user-supplied code, or code from the Internet, you are effectively running untrusted Node.js code, and your machine could be compromised.
 
-#### `computeWorkerKey: (method: string, ...args: Array<any>) => ?string` (optional)
+If you want to execute _external_ scripts, included via `<script src="">`, you'll also need to ensure that they load them. To do this, add the option `resources: "usable"` [as described below](#loading-subresources). (You'll likely also want to set the `url` option, for the reasons discussed there.)
 
-Every time a method exposed via the API is called, `computeWorkerKey` is also called in order to bound the call to a worker. This is useful for workers that are able to cache the result or part of it. You bound calls to a worker by making `computeWorkerKey` return the same identifier for all different calls. If you do not want to bind the call to any worker, return `null`.
+Event handler attributes, like `<div onclick="">`, are also governed by this setting; they will not function unless `runScripts` is set to `"dangerously"`. (However, event handler _properties_, like `div.onclick = ...`, will function regardless of `runScripts`.)
 
-The callback you provide is called with the method name, plus all the rest of the arguments of the call. Thus, you have full control to decide what to return. Check a practical example on bound workers under the "bound worker usage" section.
+If you are simply trying to execute script "from the outside", instead of letting `<script>` elements and event handlers attributes run "from the inside", you can use the `runScripts: "outside-only"` option, which enables fresh copies of all the JavaScript spec-provided globals to be installed on `window`. This includes things like `window.Array`, `window.Promise`, etc. It also, notably, includes `window.eval`, which allows running scripts, but with the jsdom `window` as the global:
 
-By default, no process is bound to any worker.
+```js
+const { window } = new JSDOM(``, { runScripts: "outside-only" });
 
-#### `setupArgs: Array<mixed>` (optional)
+window.eval(`document.body.innerHTML = "<p>Hello, world!</p>";`);
+window.document.body.children.length === 1;
+```
 
-The arguments that will be passed to the `setup` method during initialization.
+This is turned off by default for performance reasons, but is safe to enable.
 
-#### `WorkerPool: (workerPath: string, options?: WorkerPoolOptions) => WorkerPoolInterface` (optional)
+(Note that in the default configuration, without setting `runScripts`, the values of `window.Array`, `window.eval`, etc. will be the same as those provided by the outer Node.js environment. That is, `window.eval === eval` will hold, so `window.eval` will not run scripts in a useful way.)
 
-Provide a custom worker pool to be used for spawning child processes. By default, Jest will use a node thread pool if available and fall back to child process threads.
+We strongly advise against trying to "execute scripts" by mashing together the jsdom and Node global environments (e.g. by doing `global.window = dom.window`), and then executing scripts or test code inside the Node global environment. Instead, you should treat jsdom like you would a browser, and run all scripts and tests that need access to a DOM inside the jsdom environment, using `window.eval` or `runScripts: "dangerously"`. This might require, for example, creating a browserify bundle to execute as a `<script>` element—just like you would in a browser.
 
-#### `enableWorkerThreads: boolean` (optional)
+Finally, for advanced use cases you can use the `dom.getInternalVMContext()` method, documented below.
 
-`jest-worker` will automatically detect if `worker_threads` are available, but will not use them unless passed `enableWorkerThreads: true`.
+### Pretending to be a visual browser
 
-### `workerSchedulingPolicy: 'round-robin' | 'in-order'` (optional)
+jsdom does not have the capability to render visual content, and will act like a headless browser by default. It provides hints to web pages through APIs such as `document.hidden` that their content is not visible.
 
-Specifies the policy how tasks are assigned to workers if multiple workers are _idle_:
+When the `pretendToBeVisual` option is set to `true`, jsdom will pretend that it is rendering and displaying content. It does this by:
 
-- `round-robin` (default): The task will be sequentially distributed onto the workers. The first task is assigned to the worker 1, the second to the worker 2, to ensure that the work is distributed across workers.
-- `in-order`: The task will be assigned to the first free worker starting with worker 1 and only assign the work to worker 2 if the worker 1 is busy.
+* Changing `document.hidden` to return `false` instead of `true`
+* Changing `document.visibilityState` to return `"visible"` instead of `"prerender"`
+* Enabling `window.requestAnimationFrame()` and `window.cancelAnimationFrame()` methods, which otherwise do not exist
 
-Tasks are always assigned to the first free worker as soon as tasks start to queue up. The scheduling policy does not define the task scheduling which is always first-in, first-out.
+```js
+const window = (new JSDOM(``, { pretendToBeVisual: true })).window;
 
-### `taskQueue`: TaskQueue` (optional)
+window.requestAnimationFrame(timestamp => {
+  console.log(timestamp > 0);
+});
+```
 
-The task queue defines in which order tasks (method calls) are processed by the workers. `jest-worker` ships with a `FifoQueue` and `PriorityQueue`:
+Note that jsdom still [does not do any layout or rendering](#unimplemented-parts-of-the-web-platform), so this is really just about _pretending_ to be visual, not about implementing the parts of the platform a real, visual web browser would implement.
 
-- `FifoQueue` (default): Processes the method calls (tasks) in the call order.
-- `PriorityQueue`: Processes the method calls by a computed priority in natural ordering (lower priorities first). Tasks with the same priority are processed in any order (FIFO not guaranteed). The constructor accepts a single argument, the function that is passed the name of the called function and the arguments and returns a numerical value for the priority: `new require('jest-worker').PriorityQueue((method, filename) => filename.length)`.
+### Loading subresources
 
-## JestWorker
+#### Basic options
 
-### Methods
+By default, jsdom will not load any subresources such as scripts, stylesheets, images, or iframes. If you'd like jsdom to load such resources, you can pass the `resources: "usable"` option, which will load all usable resources. Those are:
 
-The returned `JestWorker` instance has all the exposed methods, plus some additional ones to interact with the workers itself:
+* Frames and iframes, via `<frame>` and `<iframe>`
+* Stylesheets, via `<link rel="stylesheet">`
+* Scripts, via `<script>`, but only if `runScripts: "dangerously"` is also set
+* Images, via `<img>`, but only if the `canvas` npm package is also installed (see "[Canvas Support](#canvas-support)" below)
 
-#### `getStdout(): Readable`
+When attempting to load resources, recall that the default value for the `url` option is `"about:blank"`, which means that any resources included via relative URLs will fail to load. (The result of trying to parse the URL `/something` against the URL `about:blank` is an error.) So, you'll likely want to set a non-default value for the `url` option in those cases, or use one of the [convenience APIs](#convenience-apis) that do so automatically.
 
-Returns a `ReadableStream` where the standard output of all workers is piped. Note that the `silent` option of the child workers must be set to `true` to make it work. This is the default set by `jest-worker`, but keep it in mind when overriding options through `forkOptions`.
+#### Advanced configuration
 
-#### `getStderr(): Readable`
+_This resource loader system is new as of jsdom v12.0.0, and we'd love your feedback on whether it meets your needs and how easy it is to use. Please file an issue to discuss!_
 
-Returns a `ReadableStream` where the standard error of all workers is piped. Note that the `silent` option of the child workers must be set to `true` to make it work. This is the default set by `jest-worker`, but keep it in mind when overriding options through `forkOptions`.
+To more fully customize jsdom's resource-loading behavior, you can pass an instance of the `ResourceLoader` class as the `resources` option value:
 
-#### `end()`
+```js
+const resourceLoader = new jsdom.ResourceLoader({
+  proxy: "http://127.0.0.1:9001",
+  strictSSL: false,
+  userAgent: "Mellblomenator/9000",
+});
+const dom = new JSDOM(``, { resources: resourceLoader });
+```
 
-Finishes the workers by killing all workers. No further calls can be done to the `Worker` instance.
+The three options to the `ResourceLoader` constructor are:
 
-Returns a Promise that resolves with `{ forceExited: boolean }` once all workers are dead. If `forceExited` is `true`, at least one of the workers did not exit gracefully, which likely happened because it executed a leaky task that left handles open. This should be avoided, force exiting workers is a last resort to prevent creating lots of orphans.
+- `proxy` is the address of an HTTP proxy to be used.
+- `strictSSL` can be set to false to disable the requirement that SSL certificates be valid.
+- `userAgent` affects the `User-Agent` header sent, and thus the resulting value for `navigator.userAgent`. It defaults to <code>\`Mozilla/5.0 (${process.platform || "unknown OS"}) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/${jsdomVersion}\`</code>.
 
-**Note:**
+You can further customize resource fetching by subclassing `ResourceLoader` and overriding the `fetch()` method. For example, here is a version that only returns results for requests to a trusted origin:
 
-`await`ing the `end()` Promise immediately after the workers are no longer needed before proceeding to do other useful things in your program may not be a good idea. If workers have to be force exited, `jest-worker` may go through multiple stages of force exiting (e.g. SIGTERM, later SIGKILL) and give the worker overall around 1 second time to exit on its own. During this time, your program will wait, even though it may not be necessary that all workers are dead before continuing execution.
+```js
+class CustomResourceLoader extends jsdom.ResourceLoader {
+  fetch(url, options) {
+    // Override the contents of this script to do something unusual.
+    if (url === "https://example.com/some-specific-script.js") {
+      return Promise.resolve(Buffer.from("window.someGlobal = 5;"));
+    }
 
-Consider deliberately leaving this Promise floating (unhandled resolution). After your program has done the rest of its work and is about to exit, the Node process will wait for the Promise to resolve after all workers are dead as the last event loop task. That way you parallelized computation time of your program and waiting time and you didn't delay the outputs of your program unnecessarily.
-
-### Worker IDs
-
-Each worker has a unique id (index that starts with `1`), which is available inside the worker as `process.env.JEST_WORKER_ID`.
-
-## Setting up and tearing down the child process
-
-The child process can define two special methods (both of them can be asynchronous):
-
-- `setup()`: If defined, it's executed before the first call to any method in the child.
-- `teardown()`: If defined, it's executed when the farm ends.
-
-# More examples
-
-## Standard usage
-
-This example covers the standard usage:
-
-### File `parent.js`
-
-```javascript
-import {Worker as JestWorker} from 'jest-worker';
-
-async function main() {
-  const myWorker = new JestWorker(require.resolve('./Worker'), {
-    exposedMethods: ['foo', 'bar', 'getWorkerId'],
-    numWorkers: 4,
-  });
-
-  console.log(await myWorker.foo('Alice')); // "Hello from foo: Alice"
-  console.log(await myWorker.bar('Bob')); // "Hello from bar: Bob"
-  console.log(await myWorker.getWorkerId()); // "3" -> this message has sent from the 3rd worker
-
-  const {forceExited} = await myWorker.end();
-  if (forceExited) {
-    console.error('Workers failed to exit gracefully');
+    return super.fetch(url, options);
   }
 }
-
-main();
 ```
 
-### File `worker.js`
+jsdom will call your custom resource loader's `fetch()` method whenever it encounters a "usable" resource, per the above section. The method takes a URL string, as well as a few options which you should pass through unmodified if calling `super.fetch()`. It must return a promise for a Node.js `Buffer` object, or return `null` if the resource is intentionally not to be loaded. In general, most cases will want to delegate to `super.fetch()`, as shown.
 
-```javascript
-export function foo(param) {
-  return 'Hello from foo: ' + param;
-}
+One of the options you will receive in `fetch()` will be the element (if applicable) that is fetching a resource.
 
-export function bar(param) {
-  return 'Hello from bar: ' + param;
-}
+```js
+class CustomResourceLoader extends jsdom.ResourceLoader {
+  fetch(url, options) {
+    if (options.element) {
+      console.log(`Element ${options.element.localName} is requesting the url ${url}`);
+    }
 
-export function getWorkerId() {
-  return process.env.JEST_WORKER_ID;
-}
-```
-
-## Bound worker usage:
-
-This example covers the usage with a `computeWorkerKey` method:
-
-### File `parent.js`
-
-```javascript
-import {Worker as JestWorker} from 'jest-worker';
-
-async function main() {
-  const myWorker = new JestWorker(require.resolve('./Worker'), {
-    computeWorkerKey: (method, filename) => filename,
-  });
-
-  // Transform the given file, within the first available worker.
-  console.log(await myWorker.transform('/tmp/foo.js'));
-
-  // Wait a bit.
-  await sleep(10000);
-
-  // Transform the same file again. Will immediately return because the
-  // transformed file is cached in the worker, and `computeWorkerKey` ensures
-  // the same worker that processed the file the first time will process it now.
-  console.log(await myWorker.transform('/tmp/foo.js'));
-
-  const {forceExited} = await myWorker.end();
-  if (forceExited) {
-    console.error('Workers failed to exit gracefully');
+    return super.fetch(url, options);
   }
 }
-
-main();
 ```
 
-### File `worker.js`
+### Virtual consoles
 
-```javascript
-import babel from '@babel/core';
+Like web browsers, jsdom has the concept of a "console". This records both information directly sent from the page, via scripts executing inside the document, as well as information from the jsdom implementation itself. We call the user-controllable console a "virtual console", to distinguish it from the Node.js `console` API and from the inside-the-page `window.console` API.
 
-const cache = Object.create(null);
+By default, the `JSDOM` constructor will return an instance with a virtual console that forwards all its output to the Node.js console. To create your own virtual console and pass it to jsdom, you can override this default by doing
 
-export function transform(filename) {
-  if (cache[filename]) {
-    return cache[filename];
+```js
+const virtualConsole = new jsdom.VirtualConsole();
+const dom = new JSDOM(``, { virtualConsole });
+```
+
+Code like this will create a virtual console with no behavior. You can give it behavior by adding event listeners for all the possible console methods:
+
+```js
+virtualConsole.on("error", () => { ... });
+virtualConsole.on("warn", () => { ... });
+virtualConsole.on("info", () => { ... });
+virtualConsole.on("dir", () => { ... });
+// ... etc. See https://console.spec.whatwg.org/#logging
+```
+
+(Note that it is probably best to set up these event listeners *before* calling `new JSDOM()`, since errors or console-invoking script might occur during parsing.)
+
+If you simply want to redirect the virtual console output to another console, like the default Node.js one, you can do
+
+```js
+virtualConsole.sendTo(console);
+```
+
+There is also a special event, `"jsdomError"`, which will fire with error objects to report errors from jsdom itself. This is similar to how error messages often show up in web browser consoles, even if they are not initiated by `console.error`. So far, the following errors are output this way:
+
+- Errors loading or parsing subresources (scripts, stylesheets, frames, and iframes)
+- Script execution errors that are not handled by a window `onerror` event handler that returns `true` or calls `event.preventDefault()`
+- Not-implemented errors resulting from calls to methods, like `window.alert`, which jsdom does not implement, but installs anyway for web compatibility
+
+If you're using `sendTo(c)` to send errors to `c`, by default it will call `c.error(errorStack[, errorDetail])` with information from `"jsdomError"` events. If you'd prefer to maintain a strict one-to-one mapping of events to method calls, and perhaps handle `"jsdomError"`s yourself, then you can do
+
+```js
+virtualConsole.sendTo(c, { omitJSDOMErrors: true });
+```
+
+### Cookie jars
+
+Like web browsers, jsdom has the concept of a cookie jar, storing HTTP cookies. Cookies that have a URL on the same domain as the document, and are not marked HTTP-only, are accessible via the `document.cookie` API. Additionally, all cookies in the cookie jar will impact the fetching of subresources.
+
+By default, the `JSDOM` constructor will return an instance with an empty cookie jar. To create your own cookie jar and pass it to jsdom, you can override this default by doing
+
+```js
+const cookieJar = new jsdom.CookieJar(store, options);
+const dom = new JSDOM(``, { cookieJar });
+```
+
+This is mostly useful if you want to share the same cookie jar among multiple jsdoms, or prime the cookie jar with certain values ahead of time.
+
+Cookie jars are provided by the [tough-cookie](https://www.npmjs.com/package/tough-cookie) package. The `jsdom.CookieJar` constructor is a subclass of the tough-cookie cookie jar which by default sets the `looseMode: true` option, since that [matches better how browsers behave](https://github.com/whatwg/html/issues/804). If you want to use tough-cookie's utilities and classes yourself, you can use the `jsdom.toughCookie` module export to get access to the tough-cookie module instance packaged with jsdom.
+
+### Intervening before parsing
+
+jsdom allows you to intervene in the creation of a jsdom very early: after the `Window` and `Document` objects are created, but before any HTML is parsed to populate the document with nodes:
+
+```js
+const dom = new JSDOM(`<p>Hello</p>`, {
+  beforeParse(window) {
+    window.document.childNodes.length === 0;
+    window.someCoolAPI = () => { /* ... */ };
+  }
+});
+```
+
+This is especially useful if you are wanting to modify the environment in some way, for example adding shims for web platform APIs jsdom does not support.
+
+## `JSDOM` object API
+
+Once you have constructed a `JSDOM` object, it will have the following useful capabilities:
+
+### Properties
+
+The property `window` retrieves the `Window` object that was created for you.
+
+The properties `virtualConsole` and `cookieJar` reflect the options you pass in, or the defaults created for you if nothing was passed in for those options.
+
+### Serializing the document with `serialize()`
+
+The `serialize()` method will return the [HTML serialization](https://html.spec.whatwg.org/#html-fragment-serialisation-algorithm) of the document, including the doctype:
+
+```js
+const dom = new JSDOM(`<!DOCTYPE html>hello`);
+
+dom.serialize() === "<!DOCTYPE html><html><head></head><body>hello</body></html>";
+
+// Contrast with:
+dom.window.document.documentElement.outerHTML === "<html><head></head><body>hello</body></html>";
+```
+
+### Getting the source location of a node with `nodeLocation(node)`
+
+The `nodeLocation()` method will find where a DOM node is within the source document, returning the [parse5 location info](https://www.npmjs.com/package/parse5#options-locationinfo) for the node:
+
+```js
+const dom = new JSDOM(
+  `<p>Hello
+    <img src="foo.jpg">
+  </p>`,
+  { includeNodeLocations: true }
+);
+
+const document = dom.window.document;
+const bodyEl = document.body; // implicitly created
+const pEl = document.querySelector("p");
+const textNode = pEl.firstChild;
+const imgEl = document.querySelector("img");
+
+console.log(dom.nodeLocation(bodyEl));   // null; it's not in the source
+console.log(dom.nodeLocation(pEl));      // { startOffset: 0, endOffset: 39, startTag: ..., endTag: ... }
+console.log(dom.nodeLocation(textNode)); // { startOffset: 3, endOffset: 13 }
+console.log(dom.nodeLocation(imgEl));    // { startOffset: 13, endOffset: 32 }
+```
+
+Note that this feature only works if you have set the `includeNodeLocations` option; node locations are off by default for performance reasons.
+
+### Interfacing with the Node.js `vm` module using `getInternalVMContext()`
+
+The built-in [`vm`](https://nodejs.org/api/vm.html) module of Node.js is what underpins jsdom's script-running magic. Some advanced use cases, like pre-compiling a script and then running it multiple times, benefit from using the `vm` module directly with a jsdom-created `Window`.
+
+To get access to the [contextified global object](https://nodejs.org/api/vm.html#vm_what_does_it_mean_to_contextify_an_object), suitable for use with the `vm` APIs, you can use the `getInternalVMContext()` method:
+
+```js
+const { Script } = require("vm");
+
+const dom = new JSDOM(``, { runScripts: "outside-only" });
+const script = new Script(`
+  if (!this.ran) {
+    this.ran = 0;
   }
 
-  // jest-worker can handle both immediate results and thenables. If a
-  // thenable is returned, it will be await'ed until it resolves.
-  return babel.transformFileAsync(filename).then(result => {
-    cache[filename] = result;
+  ++this.ran;
+`);
 
-    return result;
-  });
-}
+const vmContext = dom.getInternalVMContext();
+
+script.runInContext(vmContext);
+script.runInContext(vmContext);
+script.runInContext(vmContext);
+
+console.assert(dom.window.ran === 3);
 ```
+
+This is somewhat-advanced functionality, and we advise sticking to normal DOM APIs (such as `window.eval()` or `document.createElement("script")`) unless you have very specific needs.
+
+Note that this method will throw an exception if the `JSDOM` instance was created without `runScripts` set, or if you are [using jsdom in a web browser](#running-jsdom-inside-a-web-browser).
+
+### Reconfiguring the jsdom with `reconfigure(settings)`
+
+The `top` property on `window` is marked `[Unforgeable]` in the spec, meaning it is a non-configurable own property and thus cannot be overridden or shadowed by normal code running inside the jsdom, even using `Object.defineProperty`.
+
+Similarly, at present jsdom does not handle navigation (such as setting `window.location.href = "https://example.com/"`); doing so will cause the virtual console to emit a `"jsdomError"` explaining that this feature is not implemented, and nothing will change: there will be no new `Window` or `Document` object, and the existing `window`'s `location` object will still have all the same property values.
+
+However, if you're acting from outside the window, e.g. in some test framework that creates jsdoms, you can override one or both of these using the special `reconfigure()` method:
+
+```js
+const dom = new JSDOM();
+
+dom.window.top === dom.window;
+dom.window.location.href === "about:blank";
+
+dom.reconfigure({ windowTop: myFakeTopForTesting, url: "https://example.com/" });
+
+dom.window.top === myFakeTopForTesting;
+dom.window.location.href === "https://example.com/";
+```
+
+Note that changing the jsdom's URL will impact all APIs that return the current document URL, such as `window.location`, `document.URL`, and `document.documentURI`, as well as the resolution of relative URLs within the document, and the same-origin checks and referrer used while fetching subresources. It will not, however, perform navigation to the contents of that URL; the contents of the DOM will remain unchanged, and no new instances of `Window`, `Document`, etc. will be created.
+
+## Convenience APIs
+
+### `fromURL()`
+
+In addition to the `JSDOM` constructor itself, jsdom provides a promise-returning factory method for constructing a jsdom from a URL:
+
+```js
+JSDOM.fromURL("https://example.com/", options).then(dom => {
+  console.log(dom.serialize());
+});
+```
+
+The returned promise will fulfill with a `JSDOM` instance if the URL is valid and the request is successful. Any redirects will be followed to their ultimate destination.
+
+The options provided to `fromURL()` are similar to those provided to the `JSDOM` constructor, with the following additional restrictions and consequences:
+
+- The `url` and `contentType` options cannot be provided.
+- The `referrer` option is used as the HTTP `Referer` request header of the initial request.
+- The `resources` option also affects the initial request; this is useful if you want to, for example, configure a proxy (see above).
+- The resulting jsdom's URL, content type, and referrer are determined from the response.
+- Any cookies set via HTTP `Set-Cookie` response headers are stored in the jsdom's cookie jar. Similarly, any cookies already in a supplied cookie jar are sent as HTTP `Cookie` request headers.
+
+### `fromFile()`
+
+Similar to `fromURL()`, jsdom also provides a `fromFile()` factory method for constructing a jsdom from a filename:
+
+```js
+JSDOM.fromFile("stuff.html", options).then(dom => {
+  console.log(dom.serialize());
+});
+```
+
+The returned promise will fulfill with a `JSDOM` instance if the given file can be opened. As usual in Node.js APIs, the filename is given relative to the current working directory.
+
+The options provided to `fromFile()` are similar to those provided to the `JSDOM` constructor, with the following additional defaults:
+
+- The `url` option will default to a file URL corresponding to the given filename, instead of to `"about:blank"`.
+- The `contentType` option will default to `"application/xhtml+xml"` if the given filename ends in `.xht`, `.xhtml`, or `.xml`; otherwise it will continue to default to `"text/html"`.
+
+### `fragment()`
+
+For the very simplest of cases, you might not need a whole `JSDOM` instance with all its associated power. You might not even need a `Window` or `Document`! Instead, you just need to parse some HTML, and get a DOM object you can manipulate. For that, we have `fragment()`, which creates a `DocumentFragment` from a given string:
+
+```js
+const frag = JSDOM.fragment(`<p>Hello</p><p><strong>Hi!</strong>`);
+
+frag.childNodes.length === 2;
+frag.querySelector("strong").textContent === "Hi!";
+// etc.
+```
+
+Here `frag` is a [`DocumentFragment`](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) instance, whose contents are created by parsing the provided string. The parsing is done using a `<template>` element, so you can include any element there (including ones with weird parsing rules like `<td>`). It's also important to note that the resulting `DocumentFragment` will not have [an associated browsing context](https://html.spec.whatwg.org/multipage/#concept-document-bc): that is, elements' `ownerDocument` will have a null `defaultView` property, resources will not load, etc.
+
+All invocations of the `fragment()` factory result in `DocumentFragment`s that share the same template owner `Document`. This allows many calls to `fragment()` with no extra overhead. But it also means that calls to `fragment()` cannot be customized with any options.
+
+Note that serialization is not as easy with `DocumentFragment`s as it is with full `JSDOM` objects. If you need to serialize your DOM, you should probably use the `JSDOM` constructor more directly. But for the special case of a fragment containing a single element, it's pretty easy to do through normal means:
+
+```js
+const frag = JSDOM.fragment(`<p>Hello</p>`);
+console.log(frag.firstChild.outerHTML); // logs "<p>Hello</p>"
+```
+
+## Other noteworthy features
+
+### Canvas support
+
+jsdom includes support for using the [`canvas`](https://www.npmjs.com/package/canvas) package to extend any `<canvas>` elements with the canvas API. To make this work, you need to include `canvas` as a dependency in your project, as a peer of `jsdom`. If jsdom can find the `canvas` package, it will use it, but if it's not present, then `<canvas>` elements will behave like `<div>`s. Since jsdom v13, version 2.x of `canvas` is required; version 1.x is no longer supported.
+
+### Encoding sniffing
+
+In addition to supplying a string, the `JSDOM` constructor can also be supplied binary data, in the form of a Node.js [`Buffer`](https://nodejs.org/docs/latest/api/buffer.html) or a standard JavaScript binary data type like `ArrayBuffer`, `Uint8Array`, `DataView`, etc. When this is done, jsdom will [sniff the encoding](https://html.spec.whatwg.org/multipage/syntax.html#encoding-sniffing-algorithm) from the supplied bytes, scanning for `<meta charset>` tags just like a browser does.
+
+If the supplied `contentType` option contains a `charset` parameter, that encoding will override the sniffed encoding—unless a UTF-8 or UTF-16 BOM is present, in which case those take precedence. (Again, this is just like a browser.)
+
+This encoding sniffing also applies to `JSDOM.fromFile()` and `JSDOM.fromURL()`. In the latter case, any `Content-Type` headers sent with the response will take priority, in the same fashion as the constructor's `contentType` option.
+
+Note that in many cases supplying bytes in this fashion can be better than supplying a string. For example, if you attempt to use Node.js's `buffer.toString("utf-8")` API, Node.js will not strip any leading BOMs. If you then give this string to jsdom, it will interpret it verbatim, leaving the BOM intact. But jsdom's binary data decoding code will strip leading BOMs, just like a browser; in such cases, supplying `buffer` directly will give the desired result.
+
+### Closing down a jsdom
+
+Timers in the jsdom (set by `window.setTimeout()` or `window.setInterval()`) will, by definition, execute code in the future in the context of the window. Since there is no way to execute code in the future without keeping the process alive, outstanding jsdom timers will keep your Node.js process alive. Similarly, since there is no way to execute code in the context of an object without keeping that object alive, outstanding jsdom timers will prevent garbage collection of the window on which they are scheduled.
+
+If you want to be sure to shut down a jsdom window, use `window.close()`, which will terminate all running timers (and also remove any event listeners on the window and document).
+
+### Running jsdom inside a web browser
+
+jsdom has some support for being run inside a web browser, using [browserify](https://browserify.org/). That is, inside a web browser, you can use a browserified jsdom to create an entirely self-contained set of plain JavaScript objects which look and act much like the browser's existing DOM objects, while being entirely independent of them. "Virtual DOM", indeed!
+
+jsdom's primary target is still Node.js, and so we use language features that are only present in recent Node.js versions (namely, Node.js v8+). Thus, older browsers will likely not work. (Even transpilation will not help: we use `Proxy`s extensively throughout the jsdom codebase.)
+
+Notably, jsdom works well inside a web worker. The original contributor, [@lawnsea](https://github.com/lawnsea/), who made this possible, has [published a paper](https://pdfs.semanticscholar.org/47f0/6bb6607a975500a30e9e52d7c9fbc0034e27.pdf) about his project which uses this capability.
+
+Not everything works perfectly when running jsdom inside a web browser. Sometimes that is because of fundamental limitations (such as not having filesystem access), but sometimes it is simply because we haven't spent enough time making the appropriate small tweaks. Bug reports are certainly welcome.
+
+### Debugging the DOM using Chrome Devtools
+
+As of Node.js v6 you can debug programs using Chrome Devtools. See the [official documentation](https://nodejs.org/en/docs/inspector/) for how to get started.
+
+By default jsdom elements are formatted as plain old JS objects in the console. To make it easier to debug, you can use [jsdom-devtools-formatter](https://github.com/viddo/jsdom-devtools-formatter), which lets you inspect them like real DOM elements.
+
+## Caveats
+
+### Asynchronous script loading
+
+People often have trouble with asynchronous script loading when using jsdom. Many pages load scripts asynchronously, but there is no way to tell when they're done doing so, and thus when it's a good time to run your code and inspect the resulting DOM structure. This is a fundamental limitation; we cannot predict what scripts on the web page will do, and so cannot tell you when they are done loading more scripts.
+
+This can be worked around in a few ways. The best way, if you control the page in question, is to use whatever mechanisms are given by the script loader to detect when loading is done. For example, if you're using a module loader like RequireJS, the code could look like:
+
+```js
+// On the Node.js side:
+const window = (new JSDOM(...)).window;
+window.onModulesLoaded = () => {
+  console.log("ready to roll!");
+};
+```
+
+```html
+<!-- Inside the HTML you supply to jsdom -->
+<script>
+requirejs(["entry-module"], () => {
+  window.onModulesLoaded();
+});
+</script>
+```
+
+If you do not control the page, you could try workarounds such as polling for the presence of a specific element.
+
+For more details, see the discussion in [#640](https://github.com/jsdom/jsdom/issues/640), especially [@matthewkastor](https://github.com/matthewkastor)'s [insightful comment](https://github.com/jsdom/jsdom/issues/640#issuecomment-22216965).
+
+### Unimplemented parts of the web platform
+
+Although we enjoy adding new features to jsdom and keeping it up to date with the latest web specs, it has many missing APIs. Please feel free to file an issue for anything missing, but we're a small and busy team, so a pull request might work even better.
+
+Beyond just features that we haven't gotten to yet, there are two major features that are currently outside the scope of jsdom. These are:
+
+- **Navigation**: the ability to change the global object, and all other objects, when clicking a link or assigning `location.href` or similar.
+- **Layout**: the ability to calculate where elements will be visually laid out as a result of CSS, which impacts methods like `getBoundingClientRects()` or properties like `offsetTop`.
+
+Currently jsdom has dummy behaviors for some aspects of these features, such as sending a "not implemented" `"jsdomError"` to the virtual console for navigation, or returning zeros for many layout-related properties. Often you can work around these limitations in your code, e.g. by creating new `JSDOM` instances for each page you "navigate" to during a crawl, or using `Object.defineProperty()` to change what various layout-related getters and methods return.
+
+Note that other tools in the same space, such as PhantomJS, do support these features. On the wiki, we have a more complete writeup about [jsdom vs. PhantomJS](https://github.com/jsdom/jsdom/wiki/jsdom-vs.-PhantomJS).
+
+## Supporting jsdom
+
+jsdom is a community-driven project maintained by a team of [volunteers](https://github.com/orgs/jsdom/people). You could support jsdom by:
+
+- [Getting professional support for jsdom](https://tidelift.com/subscription/pkg/npm-jsdom?utm_source=npm-jsdom&utm_medium=referral&utm_campaign=readme) as part of a Tidelift subscription. Tidelift helps making open source sustainable for us while giving teams assurances for maintenance, licensing, and security.
+- [Contributing](https://github.com/jsdom/jsdom/blob/master/Contributing.md) directly to the project.
+
+## Getting help
+
+If you need help with jsdom, please feel free to use any of the following venues:
+
+- The [mailing list](https://groups.google.com/group/jsdom) (best for "how do I" questions)
+- The [issue tracker](https://github.com/jsdom/jsdom/issues) (best for bug reports)
+- The Matrix room: [#jsdom:matrix.org](https://matrix.to/#/#jsdom:matrix.org)

@@ -30,6 +30,7 @@ def load_log():
 
 def day_has(entries, day_date, window):
     for e in entries:
+# Mutation_d5e956
         if e.get("window") != window: continue
         ts = e.get("ts")
         try: dt = datetime.fromisoformat(ts)

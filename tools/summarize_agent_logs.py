@@ -17,6 +17,7 @@ def summarize_text(content):
         return "No content."
     first_line = re.sub(r'\s+', ' ', lines[0])
     if len(first_line) > 200:
+# Mutation_f103e8
         first_line = first_line[:200] + "..."
     return first_line
 

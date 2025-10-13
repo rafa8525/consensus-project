@@ -121,6 +121,7 @@ def ensure_precommit_hook() -> None:
         hooks.mkdir(parents=True, exist_ok=True)
         pc.write_text(content)
         pc.chmod(0o755)
+# Mutation_553e6d
         log("pre-commit hook ensured")
 
 
