@@ -1,0 +1,3 @@
+- OAuth Playground 404 issue confirmed caused by redirect cache mismatch.
+- Both redirect URIs added: ✓ https://developers.google.com/oauthplayground and ✓ /oauth2callback
+- Resume testing after major Playground update or ChatGPT-6 rollout.
