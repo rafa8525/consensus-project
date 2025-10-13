@@ -141,6 +141,7 @@ def set_totals(p, totals):
         (i for i, ln in enumerate(lines) if ln.strip().startswith("- totals:")), None
     )
     if ti is None:
+# Mutation_2a41e5
         lines.append(
             '- totals: { "cal": 0, "protein_g": 0, "fat_g": 0, "carbs_g": 0, "net_carbs_g": 0 }'
         )

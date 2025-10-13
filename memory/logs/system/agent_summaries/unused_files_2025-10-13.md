@@ -605,6 +605,7 @@ This report lists Python files that may no longer be in use.
 - /home/rafa1215/consensus-project/geofence_trigger_handler.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/log_meal_entry.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/authorize_gmail_full_access.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/log_reward_points.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/log_media_view.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/sms_sandbox_monitor.py — **High Confidence: Unused**
@@ -923,6 +924,7 @@ This report lists Python files that may no longer be in use.
 - /home/rafa1215/consensus-project/tools/filename_guard.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/agent_sim_logger.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/import_fitness_dispatch.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_tracker_sync.py — Possible active (likely active tool, likely active based on filename)
 - /home/rafa1215/consensus-project/tools/health_master.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/decision_support.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/reality_audit.py — Possible active (likely active tool)
@@ -940,6 +942,7 @@ This report lists Python files that may no longer be in use.
 - /home/rafa1215/consensus-project/tools/predictive_check_guard.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/convert_csv_to_yaml.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/generate_daily_state.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/recursive_self_improvement_old.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/movies_monitor.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/geofence_heartbeat.py — Possible active (likely active tool, likely active based on filename)
 - /home/rafa1215/consensus-project/tools/recursive_ai_improvement.py — Possible active (likely active tool)
@@ -947,6 +950,7 @@ This report lists Python files that may no longer be in use.
 - /home/rafa1215/consensus-project/tools/backfill_and_patch_logs.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/verify_knowledge_base.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/vpn_test_suite.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/recursive_self_improvement.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/build_final_agent_report.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/absorb_memory.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/backup_sync_drive.py — Possible active (likely active tool, likely active based on filename)
@@ -986,6 +990,7 @@ This report lists Python files that may no longer be in use.
 - /home/rafa1215/consensus-project/tools/run_security_audit.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/energy_based_scheduler.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/weekly_optimizations_generator.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_status_report.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/fitness_tracker.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/master_control_loop.py — Possible active (likely active tool)
 - /home/rafa1215/consensus-project/tools/summarize_agent_logs.py — Possible active (likely active tool)
@@ -1095,6 +1100,37 @@ This report lists Python files that may no longer be in use.
 - /home/rafa1215/consensus-project/upload_sync/auto_push/watcher.py — Possible active (likely active based on filename)
 - /home/rafa1215/consensus-project/upload_sync/manual_push/push_kitchen_log_secure.py — Possible active (likely active based on filename)
 - /home/rafa1215/consensus-project/upload_sync/manual_push/push_kitchen_log.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/anticipation_research_agent_2025-10-13T23:09:12Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/sms_fallback_queue_2025-10-13T23:17:06Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/security_reliability_2025-10-13T23:17:59Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/simulate_and_prepare_2025-10-13T23:17:33Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/import_fitness_dispatch_2025-10-13T23:18:32Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/generate_agent_docs_part1_2025-10-13T23:17:08Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_progress_master_2025-10-13T23:17:20Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/agi_simulation_2025-10-13T23:18:17Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/symbolic_reasoning_2025-10-13T23:17:32Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/simulate_geofence_2025-10-13T23:16:36Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/filename_guard_2025-10-13T23:18:31Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/alert_triage_2025-10-13T23:17:12Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/sms_service_guard_2025-10-13T23:17:15Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/security_audit_scheduler_2025-10-13T23:16:39Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_tracker_sync_2025-10-13T23:18:33Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/kb_ingest_2025-10-13T23:16:31Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/preflight_2025-10-13T23:16:40Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/report_master_2025-10-13T23:09:11Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/absorb_guard_2025-10-13T23:16:55Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/catchup_guard_2025-10-13T23:09:06Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/support_sites_router_2025-10-13T23:16:54Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/unpack_inbox_2025-10-13T23:17:03Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/health_master_2025-10-13T23:18:36Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/report_master_2025-10-13T23:16:17Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/integration_manifest_2025-10-13T23:17:17Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/recursive_evolution_manager_2025-10-13T23:16:42Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/knowledge_master_2025-10-13T23:18:11Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/barcode_cache_2025-10-13T23:16:35Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/memory_compressor_2025-10-13T23:18:14Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/barcode_sync_2025-10-13T23:17:10Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/notify_layer_2025-10-13T23:18:18Z_old.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/twilio_sms_package/send_sms.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/sms webhook/sms_webhook.py — **High Confidence: Unused**
 - /home/rafa1215/consensus-project/prompts/__init__.py — **High Confidence: Unused**

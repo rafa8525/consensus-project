@@ -21,3 +21,16 @@
 [2025-10-13 20:05:28] Heartbeat OK 2025-10-13 20:05:28.660027 (no SMS sent)
 [2025-10-13 21:05:29] Heartbeat OK 2025-10-13 21:05:29.204909 (no SMS sent)
 [2025-10-13 22:05:30] Heartbeat OK 2025-10-13 22:05:30.570488 (no SMS sent)
+[2025-10-13 23:05:31] Heartbeat OK 2025-10-13 23:05:31.519591 (no SMS sent)
+[2025-10-13 23:17:15] ⚠️ SMS disabled by environment flag.
+[2025-10-13 23:17:15] ALERT SENT: ⚠️ Consensus System Alert:
+Missing environment variable: TWILIO_ACCOUNT_SID
+Missing environment variable: TWILIO_AUTH_TOKEN
+Missing environment variable: TWILIO_PHONE_NUMBER
+Missing environment variable: MY_PHONE_NUMBER
+[2025-10-13 23:17:15] ⚠️ SMS disabled by environment flag.
+[2025-10-13 23:17:15] ALERT SENT: ⚠️ Consensus System Alert:
+Missing environment variable: TWILIO_ACCOUNT_SID
+Missing environment variable: TWILIO_AUTH_TOKEN
+Missing environment variable: TWILIO_PHONE_NUMBER
+Missing environment variable: MY_PHONE_NUMBER

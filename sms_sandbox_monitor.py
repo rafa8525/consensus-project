@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 # sms_sandbox_monitor.py
 # Purpose: Safe, low-frequency SMS test harness for Twilio
 # - Sends at most 1 SMS per run
@@ -54,7 +55,7 @@ def main():
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
     try:
-        msg = client.messages.create(
+        msg = clienttwilio_guard.send_sms(client, 
             to=TO_NUMBER,
             from_=FROM_NUMBER,
             body=f"[Sandbox Test] Hello Rafael — {now_iso()}",

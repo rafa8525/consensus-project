@@ -1,3 +1,4 @@
+from common import twilio_guard
 from __future__ import annotations
 
 import json
@@ -41,7 +42,7 @@ def _twilio_send(policy: SmsPolicy, to: str, body: str, key: str) -> None:
         while attempts < 2 and not delivered:
             attempts += 1
             try:
-                msg = cli.messages.create(to=to, from_=from_number, body=body)
+                msg = clitwilio_guard.send_sms(client, to=to, from_=from_number, body=body)
                 policy.record("DELIVERED", to, body, key=key, meta={"sid": getattr(msg, "sid", None)})
                 delivered = True
             except Exception as e:

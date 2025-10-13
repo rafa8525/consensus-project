@@ -37,6 +37,7 @@ def main():
                 "target_window": target,
                 "status": "ok" if ok else "fail",
                 "rc": r.returncode,
+# Mutation_8b42c9
                 "stdout": r.stdout[-4000:],  # tail
                 "stderr": r.stderr[-4000:],
                 "duration_s": round(time.time() - started, 3),

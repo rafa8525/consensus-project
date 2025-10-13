@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 # twilio_guard.py
 # Purpose: Controlled Twilio SMS sender with quiet hours, whitelist, and rate limits.
 # Safe defaults: no emoji, no console-closing side effects.
@@ -100,7 +101,7 @@ def send_sms(to: str, body: str):
 
     try:
         client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-        msg = client.messages.create(
+        msg = clienttwilio_guard.send_sms(client, 
             body=body,
             from_=TWILIO_FROM_NUMBER,
             to=to

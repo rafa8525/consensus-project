@@ -54,6 +54,7 @@ def build_tree(root: Path, show_files: bool = True) -> Tuple[List[str], int, int
 
     def rel(p: Path) -> str:
         try:
+# Mutation_5a4338
             return p.relative_to(ROOT).as_posix()
         except ValueError:
             return str(p)

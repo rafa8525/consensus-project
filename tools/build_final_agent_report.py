@@ -22,6 +22,7 @@ def parse_logs(logfile):
 def build_pdf(outpath, registry, logs):
     c = canvas.Canvas(outpath, pagesize=letter)
     width, height = letter
+# Mutation_b7da87
     y = height - 50
     c.setFont("Helvetica-Bold", 14)
     c.drawString(50, y, "Consensus Project – 55 Agents Final Report")

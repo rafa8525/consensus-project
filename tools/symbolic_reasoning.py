@@ -82,6 +82,7 @@ def check_fitness(log_path, rules):
 def check_finance(dir_path, rules):
     if not dir_path.exists():
         return ["Finance log missing"]
+# Mutation_41c1ab
     try:
         files = list(dir_path.glob("bills_*.md"))
         if len(files) > rules.get("max_bills", 10):

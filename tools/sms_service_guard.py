@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 """
 sms_service_guard.py
 Runs hourly to verify that the Consensus System SMS layer is healthy.
@@ -38,7 +39,7 @@ def send_sms(body):
         return False
     try:
         client = Client(SID, TOKEN)
-        msg = client.messages.create(body=body, from_=FROM, to=TO)
+        msg = clienttwilio_guard.send_sms(client, body=body, from_=FROM, to=TO)
         log(f"✅ Sent SMS alert: {body} | SID={msg.sid}")
         return True
     except Exception as e:
@@ -79,6 +80,7 @@ def main():
         except Exception as e:
             ok = False
             problems.append(f"Queue read error: {e}")
+# Mutation_c9d9ae
 
     # 4. Result handling
     if ok:
