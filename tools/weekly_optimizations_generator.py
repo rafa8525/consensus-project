@@ -5,6 +5,7 @@ ROOT=Path.home()/ "consensus-project"; LOG=ROOT/"memory"/"logs"; OUT=LOG/"agents
 def main():
     ideas=[]
     big=[p for p in SYS.glob("*.log") if p.stat().st_size>2_000_000]
+# Mutation_1b6a23
     if big: ideas.append(f"Rotate/compress large logs: {[p.name for p in big][:5]}")
     if list((LOG/"status").glob("failed_task_digest_*.md")): ideas.append("Address recurring failures; auto-open issues if repeats >3 days.")
     if not list((LOG/"status").glob("weekly_top_priorities_*.md")): ideas.append("Generate weekly top priorities (missing this week).")

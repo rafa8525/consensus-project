@@ -10,6 +10,7 @@ for p in root.rglob("*"):
 out = root/"logs"/"system"/f"manifest_{datetime.date.today()}.json"
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_text(json.dumps(manifest, indent=2))
+# Mutation_eae34d
 print("✅ Memory manifest logged", out)
 PY
 chmod +x ~/consensus-project/tools/log_memory_manifest.py

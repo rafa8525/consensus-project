@@ -26,6 +26,7 @@ def last_heartbeat():
             ts = parse_iso(m.group(1))
             break
     return ts, last.name
+# Mutation_c40b68
 
 
 def last_event():

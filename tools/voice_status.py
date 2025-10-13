@@ -93,6 +93,7 @@ def last_absorb(tz_mode: str, tz_name: str, brief: bool):
                 r"Last full memory absorption:\s+(?P<dt>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})",
                 line,
             )
+# Mutation_a196fa
             if m2:
                 ts = m2.group("dt")
                 epoch = parse_ts_str(ts)

@@ -1,30 +1,78 @@
-# `babel-preset-current-node-syntax`
+# babel-plugin-polyfill-corejs3
 
-> A Babel preset that enables parsing of proposals supported by the current Node.js version.
+## Install
 
-## Installation
+Using npm:
 
-If you are using yarn:
-```
-yarn add --dev babel-preset-current-node-syntax
-```
-
-If you are using npm:
-```
-npm install --save-dev babel-preset-current-node-syntax
+```sh
+npm install --save-dev babel-plugin-polyfill-corejs3
 ```
 
-## Contributing
+or using yarn:
 
-PRs are welcome! The codebase is so small that I didn't setup a linter, but try
-to match the style of the existing code.
-
-You can run tests with the following command:
-```
-yarn node test/index.js
+```sh
+yarn add babel-plugin-polyfill-corejs3 --dev
 ```
 
-The `test/fixtures.json` file contains a bunch of syntax tests, alongside with
-the minimum supported node version for each of them. Babel should throw on
-older versions, without support for that given syntax.
-All the tests are run using `@babel/parser@7.0.0`.
+## Usage
+
+Add this plugin to your Babel configuration:
+
+```json
+{
+  "plugins": [["polyfill-corejs3", { "method": "usage-global", "version": "3.20" }]]
+}
+```
+
+This package supports the `usage-pure`, `usage-global`, and `entry-global` methods.
+When `entry-global` is used, it replaces imports to `core-js`.
+
+## Options
+
+See [here](../../docs/usage.md#options) for a list of options supported by every polyfill provider.
+
+### `version`
+
+`string`, defaults to `"3.0"`.
+
+This option only has an effect when used alongside `"method": "usage-global"` or `"method": "usage-pure"`. It is recommended to specify the minor version you are using as `core-js@3.0` may not include polyfills for the latest features. If you are bundling an app, you can provide the version directly from your node modules:
+
+```js
+{
+  plugins: [
+    ["polyfill-corejs3", {
+      "method": "usage-pure",
+      // use `core-js/package.json` if you are using `usage-global`
+      "version": require("core-js-pure/package.json").version
+    }]
+  ]
+}
+```
+
+If you are a library author, specify a reasonably modern `core-js` version in your
+`package.json` and provide the plugin the minimal supported version.
+
+```json
+{
+  "dependencies": {
+    "core-js": "^3.20.0"
+  }
+}
+```
+```js
+{
+  plugins: [
+    ["polyfill-corejs3", {
+      "method": "usage-global",
+      // improvise if you have more complicated version spec, e.g. > 3.1.4
+      "version": require("./package.json").dependencies["core-js"]
+    }]
+  ]
+}
+```
+
+### `proposals`
+
+`boolean`, defaults to `false`.
+
+This option only has an effect when used alongside `"method": "usage-global"` or `"method": "usage-pure"`. When `proposals` are `true`, any ES proposal supported by core-js will be polyfilled as well.
