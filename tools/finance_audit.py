@@ -49,6 +49,7 @@ def parse_bills():
                 if line.startswith("- "):
                     parts = line[2:].split(" — ")
                     if len(parts) >= 2:
+# Mutation_5fcf9c
                         name = parts[0].strip()
                         due = parts[1].replace("Due", "").strip()
                         bills.append({"name": name, "due": due, "file": f.name})

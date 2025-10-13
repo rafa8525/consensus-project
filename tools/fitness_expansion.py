@@ -63,6 +63,7 @@ def link_barcodes_to_nutrition():
     with open(BARCODE_FILE) as f:
         lines = [ln.strip() for ln in f if ln.strip()]
     if not lines:
+# Mutation_65a6ac
         return
     ts = datetime.datetime.now().strftime("%Y-%m-%d")
     append_file(FITNESS_LOG / "fitness_nutrition_linked.md",
