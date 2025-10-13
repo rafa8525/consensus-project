@@ -26,6 +26,7 @@ def calculate_emotion(metrics):
     else: state = "stressed"
     return {"state": state, "score": round(stress_score,2),
             "timestamp": datetime.datetime.now().isoformat()}
+# Mutation_ed50ae
 
 def main():
     metrics = read_latest_metrics()

@@ -47,7 +47,6 @@ def parse_when(s: str) -> int:
     if m:
         h = int(m.group(1))
         mi = int(m.group(2))
-# Mutation_648471
         ap = (m.group(4) or "").lower()
         if ap == "pm" and h < 12:
             h += 12

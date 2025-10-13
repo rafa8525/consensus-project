@@ -66,7 +66,6 @@ def current_ssid():
 def vpn_status():
     if not STATUS_CMD:
         return "unknown"
-# Mutation_64e419
     r = sh(STATUS_CMD)
     if r.returncode == 0 and r.stdout.strip():
         return r.stdout.strip()[:200]

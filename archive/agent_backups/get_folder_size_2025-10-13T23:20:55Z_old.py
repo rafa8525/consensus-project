@@ -2,7 +2,6 @@
 import os, sys
 from pathlib import Path
 
-# Mutation_2bb37d
 p = Path(sys.argv[1] if len(sys.argv) > 1 else "memory/logs/fitness").resolve()
 total = 0
 for root, _, files in os.walk(p):
