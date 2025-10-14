@@ -63,3 +63,6 @@
 2025-10-13 23:17:21.787025 | ⚠️ SMS attempt 1 failed: HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
 2025-10-13 23:17:26.144325 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-10-13.md | Total: 10
 2025-10-13 23:17:26.451524 | ⚠️ SMS attempt 1 failed: HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+2025-10-14 09:02:30.528493 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-10-14.md | Total: 10
+2025-10-14 09:02:31.874614 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-10-14 09:02:41.888745 | ❌ SMS retry failed: name 'clienttwilio_guard' is not defined
