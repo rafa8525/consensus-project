@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-10-14T16:20:52Z",
+  "top_5": [
+    {
+      "agent": "kb_ingest.py",
+      "score": 0.549,
+      "latency": 4.878,
+      "success": true
+    },
+    {
+      "agent": "vpn_runner.py",
+      "score": 0.547,
+      "latency": 3.062,
+      "success": false
+    },
+    {
+      "agent": "memory_compressor.py",
+      "score": 0.547,
+      "latency": 1.309,
+      "success": true
+    },
+    {
+      "agent": "reminder_master.py",
+      "score": 0.547,
+      "latency": 4.529,
+      "success": false
+    },
+    {
+      "agent": "barcode_cache.py",
+      "score": 0.546,
+      "latency": 2.994,
+      "success": false
+    }
+  ],
+  "average_score": 0.5018,
+  "success_rate": 0.7078
+}
