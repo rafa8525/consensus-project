@@ -1,0 +1,280 @@
+agents:
+- id: Agent_1
+  name: AI Genesis
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_2
+  name: AI Evolutionist
+  role: Unspecified
+  description: "No description \u2014 Refined specialization: Recursive Self-Improvement\
+    \ Planner"
+  priority: 4
+- id: Agent_3
+  name: AI Hybridizer
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_4
+  name: AI Replicator
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_5
+  name: AI Mutator
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_6
+  name: AI Breeder
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_7
+  name: AI Hyper-Constructor
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_8
+  name: AI Sandbox Engineer
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_9
+  name: AI Neural Sculptor
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_10
+  name: AI Time Architect
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_11
+  name: AI Iteration Orchestrator
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_12
+  name: AI Fault Isolator
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_13
+  name: AI Hotfix Deployer
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_14
+  name: AI Rollback Specialist
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_15
+  name: AI State Auditor
+  role: Unspecified
+  description: "No description \u2014 Refined specialization: Security & Integrity\
+    \ Monitor"
+  priority: 6
+- id: Agent_16
+  name: AI Log Whisperer
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_17
+  name: AI Failure Cartographer
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_18
+  name: AI Incident Scribe
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_19
+  name: AI Metric Watcher
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_20
+  name: AI SLA Guardian
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_21
+  name: AI SRE Liaison
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_22
+  name: AI Circuit Breaker
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_23
+  name: AI Canary Runner
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_24
+  name: AI Chaos Monkey
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_25
+  name: AI Memory Curator
+  role: Unspecified
+  description: "No description \u2014 Refined specialization: Memory Compression &\
+    \ Recall"
+  priority: 6
+- id: Agent_26
+  name: AI Commit Steward
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_27
+  name: AI Sync Sentinel
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_28
+  name: AI Conflict Mediator
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_29
+  name: AI Merge Referee
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_30
+  name: AI LFS Wrangler
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_31
+  name: AI Credential Smith
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_32
+  name: AI Token Custodian
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_33
+  name: AI Secret Keeper
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_34
+  name: AI Vault Master
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_35
+  name: AI Scheduler Wrangler
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_36
+  name: AI Heartbeat Nurse
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_37
+  name: AI Watchdog Tuner
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_38
+  name: AI Health Reporter
+  role: Unspecified
+  description: "No description \u2014 Refined specialization: Data Reporting & Visualization\
+    \ Unit"
+  priority: 4
+- id: Agent_39
+  name: AI Telemetry Router
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_40
+  name: AI Alert Harvester
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_41
+  name: AI Quarantine Ops
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_42
+  name: AI Sandbox Janitor
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_43
+  name: AI Hygiene Officer
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_44
+  name: AI Standards Librarian
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_45
+  name: AI Drift Detector
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_46
+  name: AI Change Diffuser
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_47
+  name: AI Rollout Pilot
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_48
+  name: AI Backout Pilot
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_49
+  name: AI Docker Whisperer
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_50
+  name: AI Container Surgeon
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_51
+  name: AI K8s Navigator
+  role: Unspecified
+  description: No description
+  priority: 4
+- id: Agent_52
+  name: AI Env Cartographer
+  role: Unspecified
+  description: No description
+  priority: 6
+- id: Agent_53
+  name: AI Network Quarterback
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_54
+  name: AI Zero-Downtime Coach
+  role: Unspecified
+  description: No description
+  priority: 5
+- id: Agent_55
+  name: AI Regression Tracker
+  role: Unspecified
+  description: No description
+  priority: 5
