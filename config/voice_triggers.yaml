@@ -1,0 +1,16 @@
+voice_triggers:
+  - phrase: "check my gmail"
+    action: "python3 /home/rafa1215/consensus-project/agents/gmail_agent.py"
+    description: "Fetch and summarize unread Gmail messages."
+
+  - phrase: "summarize unread messages"
+    action: "python3 /home/rafa1215/consensus-project/agents/gmail_agent.py"
+    description: "Summarize Gmail unread messages and log them."
+
+  - phrase: "read my gmail"
+    action: "python3 /home/rafa1215/consensus-project/agents/gmail_voice_reader.py"
+    description: "Read top Gmail summaries aloud."
+
+  - phrase: "urgent gmail alert"
+    action: "python3 /home/rafa1215/consensus-project/agents/gmail_alert_agent.py"
+    description: "Check for critical Gmail keywords (PG&E, invoice, security, OpenAI alert) and trigger immediate voice/SMS alert."
