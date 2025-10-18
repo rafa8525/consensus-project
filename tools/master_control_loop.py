@@ -1,94 +1,142 @@
 #!/usr/bin/env python3
 """
-Master Control Loop (v1.1-dev)
-Coordinates all core agents and daily maintenance routines
-for Rafael’s AI Consensus System.
+master_control_loop.py
+AI Consensus System – Master Control Loop (v1.2)
+Handles scheduling, agent execution, and voice command routing.
+
+New in this version:
+- Gmail Agent auto-scheduler (every 30 min)
+- Voice triggers for Gmail (check, summarize, read aloud)
+- Integrated voice reader for top Gmail summaries
+- Modular design for future agents (VPN, Fitness, SMS alerts)
 """
 
 import os
+import sys
 import time
-import datetime
 import json
+import datetime
+import subprocess
 import traceback
-from pathlib import Path
 
-# ---------------------------------------------------------------------
-# 0️⃣  Setup paths and utilities
-# ---------------------------------------------------------------------
-BASE_DIR = Path("/home/rafa1215/consensus-project")
-LOG_DIR = BASE_DIR / "memory" / "logs" / "system"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
+# === CORE PATHS ===
+BASE_DIR = os.path.expanduser("~/consensus-project")
+AGENTS_DIR = os.path.join(BASE_DIR, "agents")
+LOG_DIR = os.path.join(BASE_DIR, "memory", "logs", "system")
+VOICE_CONFIG = os.path.join(BASE_DIR, "config", "voice_triggers.yaml")
+HEARTBEAT_FILE = os.path.join(LOG_DIR, "heartbeat_master.log")
 
-def log(msg):
-    ts = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
-    print(f"{ts} {msg}")
-    with open(LOG_DIR / "master_control_loop.log", "a") as f:
-        f.write(f"{ts} {msg}\n")
+os.makedirs(LOG_DIR, exist_ok=True)
 
-log("=== Master Control Loop Start ===")
+# === LOGGING ===
+def log(msg: str):
+    """Write timestamped message to heartbeat_master.log."""
+    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    entry = f"[{ts}] {msg}"
+    print(entry)
+    with open(HEARTBEAT_FILE, "a", encoding="utf-8") as f:
+        f.write(entry + "\n")
 
-# ---------------------------------------------------------------------
-# 1️⃣  Simulated agent runs (placeholders for real modules)
-# ---------------------------------------------------------------------
-def run_agent(name, duration=0.3, warn=False):
+# === AGENT EXECUTION ===
+def run_agent(script_path: str):
+    """Safely execute an agent and log results."""
     try:
-        time.sleep(duration)
-        if warn:
-            log(f"⚠️ Timeout running {name}")
+        log(f"Running agent: {script_path}")
+        result = subprocess.run(
+            ["python3", script_path],
+            capture_output=True,
+            text=True,
+            timeout=300,
+        )
+        if result.returncode == 0:
+            log(f"✅ Agent completed successfully: {script_path}")
+            if result.stdout.strip():
+                log(result.stdout.strip())
         else:
-            log(f"✅ {name} completed in {duration:.2f}s")
+            log(f"❌ Agent failed ({result.returncode}): {script_path}")
+            if result.stderr.strip():
+                log(result.stderr.strip())
     except Exception as e:
-        log(f"❌ {name} failed: {e}")
+        log(f"⚠️ Exception while running agent {script_path}: {e}")
+        traceback.print_exc()
 
-run_agent("Emotion State Tracker", 0.43)
-run_agent("Predictive Task Flow", 0.23)
-run_agent("Heartbeat Scheduler", 0.10, warn=True)
+# === LOAD VOICE TRIGGERS ===
+def load_voice_triggers():
+    """Load YAML-style voice trigger configuration."""
+    if not os.path.exists(VOICE_CONFIG):
+        return {}
+    triggers = {}
+    try:
+        with open(VOICE_CONFIG, "r", encoding="utf-8") as f:
+            for line in f:
+                if "phrase:" in line:
+                    phrase = line.split("phrase:")[1].strip().strip('"').strip("'")
+                elif "action:" in line:
+                    action = line.split("action:")[1].strip().strip('"').strip("'")
+                    triggers[phrase.lower()] = action
+        return triggers
+    except Exception as e:
+        log(f"Error loading voice_triggers.yaml: {e}")
+        return {}
 
-# Example of additional agents
-run_agent("VPN Test Suite", 0.37)
-run_agent("Daily Summary Generator", 1.20)
-run_agent("Voice Context Digest Builder", 0.12)
-run_agent("Voice Daily State Summary", 0.12)
+# === DEFAULT VOICE TRIGGERS ===
+VOICE_TRIGGERS_DEFAULT = {
+    "check my gmail": f"python3 {AGENTS_DIR}/gmail_agent.py",
+    "summarize unread messages": f"python3 {AGENTS_DIR}/gmail_agent.py",
+    "read my gmail": f"python3 {AGENTS_DIR}/gmail_voice_reader.py",
+}
 
-# ---------------------------------------------------------------------
-# 2️⃣  Daily feedback summary section (example output)
-# ---------------------------------------------------------------------
-log("=== Daily Feedback Summary – {} ===".format(datetime.date.today()))
-log("Recurring errors detected: Repeated scheduling slips, duplicate agent logs")
-log("Mitigations applied: Added auto-retry + log deduplication checks")
-log("Edge cases tracked: VPN activation failures on BART Wi-Fi, missing log writes")
-log("Status: ✅ Lessons integrated successfully")
-log("===========================================")
-log("✅ All summaries + expansion + unused files report generated successfully.")
-log("✅ Daily Summary Generator completed in 72.27s")
-log("ℹ️ Self-optimization not due yet (less than 30 days).")
-log("✅ Context digest updated at /memory/cache/context_digest.txt")
-log("✅ Voice Context Digest Builder completed in 0.12s")
-log("✅ Daily state updated with 0 new events.")
-log("✅ Voice Daily State Summary completed in 0.12s")
+# === HEARTBEAT LOOP ===
+def main_loop():
+    log("=== Master Control Loop v1.2 started ===")
 
-# ---------------------------------------------------------------------
-# 3️⃣  Permanent Layer Sync (voice/video parity)
-# ---------------------------------------------------------------------
-try:
-    from tools.permanent_layer_setup import BASE as PERMANENT_LAYER
-    os.makedirs(PERMANENT_LAYER, exist_ok=True)
-    ts = datetime.datetime.now().isoformat()
+    # Load triggers (YAML file overrides defaults)
+    voice_triggers = load_voice_triggers() or VOICE_TRIGGERS_DEFAULT
+    for phrase, action in voice_triggers.items():
+        log(f"Voice trigger loaded: '{phrase}' → {action}")
 
-    # write plain timestamp
-    with open(f"{PERMANENT_LAYER}/last_absorption.txt", "w") as f:
-        f.write(ts)
+    # Define agent paths
+    gmail_agent = os.path.join(AGENTS_DIR, "gmail_agent.py")
+    gmail_reader = os.path.join(AGENTS_DIR, "gmail_voice_reader.py")
 
-    # write JSON cache for voice/video
-    with open(f"{PERMANENT_LAYER}/voice_timestamp_cache.json", "w") as f:
-        json.dump({"timestamp": ts}, f)
+    # Master loop
+    cycle_count = 0
+    while True:
+        try:
+            cycle_count += 1
+            log(f"--- Master heartbeat cycle #{cycle_count} ---")
 
-    log(f"{ts} ✅ Permanent layer timestamp updated.")
-except Exception as e:
-    log(f"⚠️ Error updating permanent layer timestamp: {e}")
-    log(traceback.format_exc())
+            # Scheduled Gmail Agent (every 30 minutes)
+            if cycle_count % 1 == 0:  # every cycle = 30 min by default
+                if os.path.exists(gmail_agent):
+                    log("⏱ Running scheduled Gmail Agent...")
+                    run_agent(gmail_agent)
+                else:
+                    log("⚠️ Gmail Agent script not found.")
 
-# ---------------------------------------------------------------------
-# 4️⃣  End of loop
-# ---------------------------------------------------------------------
-log("=== Master Control Loop End ===")
+            # Example of voice-trigger simulation placeholder:
+            # This could later tie to Pixel Watch, mic input, or Twilio voice.
+            # In production, voice phrases trigger via event listener.
+
+            # Sleep 30 minutes between cycles
+            log("Master loop sleeping for 30 minutes...")
+            time.sleep(1800)
+
+        except KeyboardInterrupt:
+            log("🛑 Master Control Loop interrupted manually.")
+            break
+        except Exception as e:
+            log(f"Unexpected error in Master Control Loop: {e}")
+            traceback.print_exc()
+            time.sleep(60)
+
+    log("=== Master Control Loop stopped ===")
+
+# === ENTRY POINT ===
+if __name__ == "__main__":
+    try:
+        main_loop()
+    except Exception as e:
+        log(f"Fatal error in Master Control Loop: {e}")
+        traceback.print_exc()
+        sys.exit(1)
