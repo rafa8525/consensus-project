@@ -1,780 +1,1248 @@
 
 
-## Gmail Summary – 2025-10-17 17:09:52
-- **🤖 The AI Trick I Learned From My 14-Year-Old**
-  From: "Dharmesh @ simple.ai" <agentai@mail.beehiiv.com>
-  Date: 2025-10-17 17:03
-  Snippet: How I use AI to make better business decisions ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+## Gmail Summary – 2025-10-18 07:30:38
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
 
-- **Nano Banana coming to Search, NotebookLM and Photos**
-  From: News from Google <thekeyword-noreply@google.com>
-  Date: 2025-10-17 09:56
-  Snippet: Plus, 6 new ways Google is protecting you from scams ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Misfits by Affliction | Out Now 💀**
-  From: Zumiez <zumiez@eml.zumiez.com>
-  Date: 2025-10-17 18:22
-  Snippet: Shop the new collab from Affliction and Misfits with clothing + accessories for men and women. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **$20 Off, Free Delivery & More Spooky Savings!**
-  From: BevMo <bevmo@em.bevmo.com>
-  Date: 2025-10-17 13:15
-  Snippet: Check out this month&#39;s BOGO deals drop ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **Man claiming to be with PG&E just tried to scam...**
-  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 16:11
-  Snippet: They got my poor elderly neighbor. Guy was alone wearing a red polo shirt with a logo on the left arm. He was African American...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **[Task Update] Memory and index drift detected**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 16:09
-  Snippet: Task update from ChatGPT Memory and index drift detected View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
-
-- **Rafael, enroll to avoid seasonal billing peaks**
-  From: Pacific Gas and Electric Company <noreply@em.pge.com>
-  Date: 2025-10-17 10:05
-  Snippet: Avoid surprises with Budget Billing Ver en español &gt; PG&amp;E company logo Budget Billing gives you more predictable bills and fewer surprises Enroll now » An elderly couple sitting on the couch
-
-- **Create healthier habits with the Headspace app**
-  From: Kaiser Permanente <members@respond.kp.org>
-  Date: 2025-10-17 10:56
-  Snippet: Get emotional wellness support and coaching at no cost. Self-care made easy. To view in browser, click here. Kaiser Permanente An app for everyday wellness As a Kaiser Permanente member, you can use
-
-- **[Task Update] Start Phase 1 AI Consensus System upgrade**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 16:02
-  Snippet: Task update from ChatGPT Start Phase 1 AI Consensus System upgrade View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
-
-- **KP - Your Prescriptions Are Arriving Soon**
-  From: Kaiser Permanente <kp-donotreply-dnp@notifications.kp.org>
-  Date: 2025-10-17 15:28
-  Snippet: Kaiser Permanente Logo home Your Prescriptions Are Arriving Soon Hi, RAFAEL. Your prescriptions are out for delivery. Track my order Tracking link: #9200190393449054529109 Prescription(s) in this
-
-
-## Gmail Summary – 2025-10-17 17:30:47
-- **[Task Update] Time to send AGI Ops heartbeat**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 17:30
-  Snippet: Task update from ChatGPT Time to send AGI Ops heartbeat View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy
-
-- **🤖 The AI Trick I Learned From My 14-Year-Old**
-  From: "Dharmesh @ simple.ai" <agentai@mail.beehiiv.com>
-  Date: 2025-10-17 17:03
-  Snippet: How I use AI to make better business decisions ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **Nano Banana coming to Search, NotebookLM and Photos**
-  From: News from Google <thekeyword-noreply@google.com>
-  Date: 2025-10-17 09:56
-  Snippet: Plus, 6 new ways Google is protecting you from scams ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Misfits by Affliction | Out Now 💀**
-  From: Zumiez <zumiez@eml.zumiez.com>
-  Date: 2025-10-17 18:22
-  Snippet: Shop the new collab from Affliction and Misfits with clothing + accessories for men and women. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **$20 Off, Free Delivery & More Spooky Savings!**
-  From: BevMo <bevmo@em.bevmo.com>
-  Date: 2025-10-17 13:15
-  Snippet: Check out this month&#39;s BOGO deals drop ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **Man claiming to be with PG&E just tried to scam...**
-  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 16:11
-  Snippet: They got my poor elderly neighbor. Guy was alone wearing a red polo shirt with a logo on the left arm. He was African American...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **[Task Update] Memory and index drift detected**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 16:09
-  Snippet: Task update from ChatGPT Memory and index drift detected View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
-
-- **Rafael, enroll to avoid seasonal billing peaks**
-  From: Pacific Gas and Electric Company <noreply@em.pge.com>
-  Date: 2025-10-17 10:05
-  Snippet: Avoid surprises with Budget Billing Ver en español &gt; PG&amp;E company logo Budget Billing gives you more predictable bills and fewer surprises Enroll now » An elderly couple sitting on the couch
-
-- **Create healthier habits with the Headspace app**
-  From: Kaiser Permanente <members@respond.kp.org>
-  Date: 2025-10-17 10:56
-  Snippet: Get emotional wellness support and coaching at no cost. Self-care made easy. To view in browser, click here. Kaiser Permanente An app for everyday wellness As a Kaiser Permanente member, you can use
-
-- **[Task Update] Start Phase 1 AI Consensus System upgrade**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 16:02
-  Snippet: Task update from ChatGPT Start Phase 1 AI Consensus System upgrade View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
-
-
-## Gmail Summary – 2025-10-17 18:30:52
-- **👉 81 from your 1986 class joined — recognize anyone?**
+- **Rafael, we just shared a post from Classmates Staff! 👀**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 12:25
-  Snippet: Rafael, see who joined from Riordan High School See who&#39;s here! Classmates.com Riordan High School 3052 people total from your school are here! See who is here New members have joined Grad Class |
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
 
-- **Be on the look out in a black car looks...**
-  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 18:14
-  Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **The Events Calendar Product Updates**
-  From: Nathan at The Events Calendar <no-reply@theeventscalendar.com>
-  Date: 2025-10-17 18:07
-  Snippet: Product Updates Product Updates for October 2025 Product Updates for October 2025 Hi there, Every two weeks we bring you the latest product updates from The Events Calendar, keeping you informed about
-
-- **Best Google Pixel 10 Pro upgrade deals today**
+- **BMI and pool laps tracking reminder update**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-17 18:04
-  Snippet: T-Mobile free upgrade: T-Mobile offers a free Pixel 10 Pro ($999 value) with Pixel 7 Pro trade-in and new line or qualifying plan, credited over 24 months, requiring taxes/fees upfront. Comparative
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
 
-- **You paid Gilbert Tria $28.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-17 17:52
-  Snippet: You paid Gilbert Tria $28.00 You paid Gilbert Tria $ 28 . 00 Ride share See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445589434667371019 Payment Method CITIBANK FSB account
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
 
-- **You paid Asia Lopez $40.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-17 17:51
-  Snippet: You paid Asia Lopez $40.00 You paid Asia Lopez $ 40 . 00 Live scan See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445589069829867100 Payment Method CITIBANK FSB account ending in
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **Celebrate National Pasta Day with this Delicious Sweepstakes!**
-  From: Gofobo Screenings <no-reply@gofobo.com>
-  Date: 2025-10-17 17:44
-  Snippet: Noodle Your Way Enter to Win One (1) $25 Olive Garden Gift Card ENTER NOW OTHER SWEEPSTAKES YOU MIGHT LIKE National Taco Day ENTER NOW Slapshot Showdown ENTER NOW Goal Getter ENTER NOW Facebook Twitter
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **[Task Update] Time to send AGI Ops heartbeat**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 17:30
-  Snippet: Task update from ChatGPT Time to send AGI Ops heartbeat View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy
-
-- **🤖 The AI Trick I Learned From My 14-Year-Old**
-  From: "Dharmesh @ simple.ai" <agentai@mail.beehiiv.com>
-  Date: 2025-10-17 17:03
-  Snippet: How I use AI to make better business decisions ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **Nano Banana coming to Search, NotebookLM and Photos**
-  From: News from Google <thekeyword-noreply@google.com>
-  Date: 2025-10-17 09:56
-  Snippet: Plus, 6 new ways Google is protecting you from scams ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-
-## Gmail Summary – 2025-10-17 19:30:40
-- **today's a good day to win!**
-  From: "McDonald's" <McDonalds@m.mcdonalds.com>
-  Date: 2025-10-17 19:16
-  Snippet: get free fries &amp; play Monopoly at McD&#39;s too. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **Order Confirmation for Rafael from Pho Huynh Hiep - Kevin's Noodle House**
-  From: DoorDash Order <no-reply@doordash.com>
-  Date: 2025-10-17 18:33
-  Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **👉 81 from your 1986 class joined — recognize anyone?**
+- **Someone looked you up, Rafael**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 12:25
-  Snippet: Rafael, see who joined from Riordan High School See who&#39;s here! Classmates.com Riordan High School 3052 people total from your school are here! See who is here New members have joined Grad Class |
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
 
-- **Be on the look out in a black car looks...**
+- **You paid Asia Lopez $60.00**
+  From: Venmo <venmo@venmo.com>
+  Date: 2025-10-18 01:53
+  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
+
+- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-18 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+
+- **Rafael, add Akshara Raina - L2 Technical Logistics Coordinator**
+  From: LinkedIn <messages-noreply@linkedin.com>
+  Date: 2025-10-18 01:46
+  Snippet: L2 Technical Logistics Coordinator ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+
+## Gmail Summary – 2025-10-18 08:30:43
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+
+- **Someone looked you up, Rafael**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+
+- **You paid Asia Lopez $60.00**
+  From: Venmo <venmo@venmo.com>
+  Date: 2025-10-18 01:53
+  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
+
+- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-18 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+
+
+## Gmail Summary – 2025-10-18 09:30:44
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+
+- **Someone looked you up, Rafael**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+
+- **You paid Asia Lopez $60.00**
+  From: Venmo <venmo@venmo.com>
+  Date: 2025-10-18 01:53
+  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
+
+- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-18 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+
+
+## Gmail Summary – 2025-10-18 10:30:41
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+
+- **Someone looked you up, Rafael**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+
+- **You paid Asia Lopez $60.00**
+  From: Venmo <venmo@venmo.com>
+  Date: 2025-10-18 01:53
+  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
+
+- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-18 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+
+
+## Gmail Summary – 2025-10-18 11:30:41
+- **Dan Gable, “I Was Born into Wrestling”**
+  From: Rmagazine <rmag@substack.com>
+  Date: 2025-10-18 11:02
+  Snippet: A family tragedy deepens drive for success ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+
+- **Someone looked you up, Rafael**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+
+- **You paid Asia Lopez $60.00**
+  From: Venmo <venmo@venmo.com>
+  Date: 2025-10-18 01:53
+  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
+
+
+## Gmail Summary – 2025-10-18 12:30:40
+- **Dan Gable, “I Was Born into Wrestling”**
+  From: Rmagazine <rmag@substack.com>
+  Date: 2025-10-18 11:02
+  Snippet: A family tragedy deepens drive for success ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+
+- **Someone looked you up, Rafael**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+
+- **You paid Asia Lopez $60.00**
+  From: Venmo <venmo@venmo.com>
+  Date: 2025-10-18 01:53
+  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
+
+
+## Gmail Summary – 2025-10-18 13:30:46
+- **Bay Area news articles roundup (Oct 11–18, 2025)**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 13:05
+  Snippet: Local initiatives and government: Pittsburg launches self-sufficiency program, Walnut Creek starts lake restoration, and Rep. Kiley proposes redistricting legislation, reflecting robust community
+
+- **Dan Gable, “I Was Born into Wrestling”**
+  From: Rmagazine <rmag@substack.com>
+  Date: 2025-10-18 11:02
+  Snippet: A family tragedy deepens drive for success ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+- **Earn cash for every friend you bring to Comet 💰**
+  From: Perplexity <team@mail.perplexity.ai>
+  Date: 2025-10-18 04:16
+  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+
+- **You have 3 new invitations**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 03:07
+  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **4 Results for 'For Sale in Pittsburg'**
+  From: Zillow <instant-updates@mail.zillow.com>
+  Date: 2025-10-18 02:37
+  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+
+- **Someone looked you up, Rafael**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-17 20:20
+  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+
+
+## Gmail Summary – 2025-10-18 14:30:46
+- **What Andrej Karpathy Really Thinks About AGI (and Why It’s Still 10 Years Away)**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-18 14:25
+  Snippet: October 18, 2025 | Read Online What Andrej Karpathy Really Thinks About AGI (and Why It&#39;s Still 10 Years Away) In partnership with Become the go-to AI expert in 30 days AI keeps coming up at work,
+
+- **[New] Your Family Tree Map is available**
+  From: Genomelink <hello@genomelink.io>
+  Date: 2025-10-18 10:21
+  Snippet: Explore your family&#39;s journey across time and place. Import your family tree to unlock interactive tools like YourRoots Map, Weekly Genealogy Hints, and AI Ancestor Finder. Explore for Free
+
+- **Jumpstart Your Holidays: Gift Boxes & Panettone**
+  From: Eataly <ciao@eataly.com>
+  Date: 2025-10-18 16:09
+  Snippet: It&#39;s never too early to start planning for the holidays! We&#39;ve got everything you need when you shop online, from curated gift boxes to artisanal panettone. The holidays are almost here. ‌ ‌ ‌
+
+- **Notification: Pack your lunch @ Sat Oct 18, 2025 6:45am - 7:45am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-18 13:35
+  Snippet: Pack your lunch You have been invited by Rafael Lopez to attend an event named Pack your lunch on Saturday Oct 18, 2025 ⋅ 6:45am – 7:45am (Pacific Time - Los Angeles). You have an upcoming event Pack
+
+- **Bay Area news articles roundup (Oct 11–18, 2025)**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 13:05
+  Snippet: Local initiatives and government: Pittsburg launches self-sufficiency program, Walnut Creek starts lake restoration, and Rep. Kiley proposes redistricting legislation, reflecting robust community
+
+- **Dan Gable, “I Was Born into Wrestling”**
+  From: Rmagazine <rmag@substack.com>
+  Date: 2025-10-18 11:02
+  Snippet: A family tragedy deepens drive for success ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **[Task Update] Summarize daily prediction feed**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 07:46
+  Snippet: Task update from ChatGPT Summarize daily prediction feed View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Every Blumhouse horror movie ranked**
+  From: "IMDb.com" <do-not-reply@imdb.com>
+  Date: 2025-10-18 07:07
+  Snippet: From &#39;Black Phone 2&#39; to &#39;Paranormal Activity,&#39; see how IMDb fans rate these terrifying tales. banner image Ranking Blumhouse Horror Ranking Blumhouse Horror Image Blumhouse Productions
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 01:01
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **BMI and pool laps tracking reminder update**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 05:07
+  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+
+
+## Gmail Summary – 2025-10-18 15:30:39
+- **Have you heard?! VLONE is now at Zumiez 😱**
+  From: Zumiez <zumiez@eml.zumiez.com>
+  Date: 2025-10-18 17:14
+  Snippet: Shop VLONE, with hoodies, tees, and sweatpants to take your fits to the next level. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Watch the ALL THAT WE LOVE Official Trailer - Releasing November 7**
+  From: Gofobo Screenings <no-reply@gofobo.com>
+  Date: 2025-10-18 15:15
+  Snippet: CHECK OUT THE OFFICIAL TRAILER FOR &#39;ALL THAT WE LOVE&#39; Trailer Image WATCH NOW ALL THAT WE LOVE Release Date: November 07, 2025 Synopsis: Emma (Margaret Cho) faces an empty nest and renewed
+
+- **🔥 New Tutorial! Learn how to animate with Timelines in Spline**
+  From: Spline Tutorials <hello@mail.spline.design>
+  Date: 2025-10-18 15:07
+  Snippet: Learn about Timeline Animations Hey there 👋🏼 Our latest tutorial takes you step-by-step through one of our most powerful features: Timeline Animations. Create stunning, smooth, and complex animations
+
+- **Dress up your sub with chips and a drink​**
+  From: SUBWAY Restaurants <news@mktg.subway.com>
+  Date: 2025-10-18 14:10
+  Snippet: It looks even more delicious as a meal. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **10/18/2025 Local Crime Map and Crime Report powered by SpotCrime**
+  From: Personalized SpotCrime Report <system@spotcrime.com>
+  Date: 2025-10-18 07:45
+  Snippet: Daily Crime Alert - Oct 18, 2025 VIEW AS A WEB PAGE Learn more about OpenWeb Nearby Recent Incidents 10 miles around 375 Mildred Ave, Pittsburg, CA 94565, USA SpotCrime Weekly Reads: AI in police
+
+- **What Andrej Karpathy Really Thinks About AGI (and Why It’s Still 10 Years Away)**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-18 14:25
+  Snippet: October 18, 2025 | Read Online What Andrej Karpathy Really Thinks About AGI (and Why It&#39;s Still 10 Years Away) In partnership with Become the go-to AI expert in 30 days AI keeps coming up at work,
+
+- **[New] Your Family Tree Map is available**
+  From: Genomelink <hello@genomelink.io>
+  Date: 2025-10-18 10:21
+  Snippet: Explore your family&#39;s journey across time and place. Import your family tree to unlock interactive tools like YourRoots Map, Weekly Genealogy Hints, and AI Ancestor Finder. Explore for Free
+
+- **Jumpstart Your Holidays: Gift Boxes & Panettone**
+  From: Eataly <ciao@eataly.com>
+  Date: 2025-10-18 16:09
+  Snippet: It&#39;s never too early to start planning for the holidays! We&#39;ve got everything you need when you shop online, from curated gift boxes to artisanal panettone. The holidays are almost here. ‌ ‌ ‌
+
+- **Notification: Pack your lunch @ Sat Oct 18, 2025 6:45am - 7:45am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-18 13:35
+  Snippet: Pack your lunch You have been invited by Rafael Lopez to attend an event named Pack your lunch on Saturday Oct 18, 2025 ⋅ 6:45am – 7:45am (Pacific Time - Los Angeles). You have an upcoming event Pack
+
+- **Bay Area news articles roundup (Oct 11–18, 2025)**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 13:05
+  Snippet: Local initiatives and government: Pittsburg launches self-sufficiency program, Walnut Creek starts lake restoration, and Rep. Kiley proposes redistricting legislation, reflecting robust community
+
+
+## Gmail Summary – 2025-10-18 16:30:45
+- **[Task Update] Memory index drift detected**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 16:03
+  Snippet: Task update from ChatGPT Memory index drift detected View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy ·
+
+- **Seriously, if you're missing a package and have a camera...**
+  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 16:02
+  Snippet: In the videos posted, a lady drops off my package, and shortly after, a guy shows up within 15 seconds. He walks through the...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **[Task Update] Phase 1 AI system upgrade finished**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 16:01
+  Snippet: Task update from ChatGPT Phase 1 AI system upgrade finished View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Fiberglass RV Forums Newsletter Issue 767 - October 2025 - Week 42**
+  From: Fiberglass RV Forums <support@mail.fiberglassrv.com>
+  Date: 2025-10-18 16:00
+  Snippet: Connect with other Fiberglass RV Owners to share tips, tricks, and photos! logo A Great Campground Experience - Amarillo / Oasis The Oasis RV Resort in Amarillo lives up to its name! Certainly not
+
+- **Just shipped: New API key page, playground revamp, and more!**
+  From: Google AI Studio <googleaistudio-noreply@google.com>
+  Date: 2025-10-18 08:41
+  Snippet: Because the best developer experiences don&#39;t take weekends off. ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏
+
+- **Have you heard?! VLONE is now at Zumiez 😱**
+  From: Zumiez <zumiez@eml.zumiez.com>
+  Date: 2025-10-18 17:14
+  Snippet: Shop VLONE, with hoodies, tees, and sweatpants to take your fits to the next level. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Watch the ALL THAT WE LOVE Official Trailer - Releasing November 7**
+  From: Gofobo Screenings <no-reply@gofobo.com>
+  Date: 2025-10-18 15:15
+  Snippet: CHECK OUT THE OFFICIAL TRAILER FOR &#39;ALL THAT WE LOVE&#39; Trailer Image WATCH NOW ALL THAT WE LOVE Release Date: November 07, 2025 Synopsis: Emma (Margaret Cho) faces an empty nest and renewed
+
+- **🔥 New Tutorial! Learn how to animate with Timelines in Spline**
+  From: Spline Tutorials <hello@mail.spline.design>
+  Date: 2025-10-18 15:07
+  Snippet: Learn about Timeline Animations Hey there 👋🏼 Our latest tutorial takes you step-by-step through one of our most powerful features: Timeline Animations. Create stunning, smooth, and complex animations
+
+- **Dress up your sub with chips and a drink​**
+  From: SUBWAY Restaurants <news@mktg.subway.com>
+  Date: 2025-10-18 14:10
+  Snippet: It looks even more delicious as a meal. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **10/18/2025 Local Crime Map and Crime Report powered by SpotCrime**
+  From: Personalized SpotCrime Report <system@spotcrime.com>
+  Date: 2025-10-18 07:45
+  Snippet: Daily Crime Alert - Oct 18, 2025 VIEW AS A WEB PAGE Learn more about OpenWeb Nearby Recent Incidents 10 miles around 375 Mildred Ave, Pittsburg, CA 94565, USA SpotCrime Weekly Reads: AI in police
+
+
+## Gmail Summary – 2025-10-18 17:30:43
+- **Cuddle Alert: Win an Espresso Jellycat Plush!**
+  From: Gofobo Screenings <no-reply@gofobo.com>
+  Date: 2025-10-18 17:30
+  Snippet: Sip &amp; Snuggle Enter to Win One (1) Jellycat Amuseables Espresso Cup Coffee ENTER NOW OTHER SWEEPSTAKES YOU MIGHT LIKE Noodle Your Way ENTER NOW Goal Getter ENTER NOW Nights of Frights ENTER NOW
+
+- **[Task Update] AGI Ops status: sync and health check**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 17:30
+  Snippet: Task update from ChatGPT AGI Ops status: sync and health check View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Last chance! 15% off custom keepsakes**
+  From: Canva <marketing@engage.canva.com>
+  Date: 2025-10-18 17:19
+  Snippet: Plus a new print product perfect for gifting ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿
+
+- **NEW Tier 1 Tool Launch: AutoSegment Split Webinar - Oct 30**
+  From: GEDmatch <do_not_reply_mm@gedmatch.com>
+  Date: 2025-10-18 17:19
+  Snippet: Find the latest news and content to help you get the most out of your GEDmatch experience. ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏
+
+- **Rafael, a summary of activity on your profile!**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 11:12
+  Snippet: Here&#39;s your recap Image placeholder Profile Visits 8 This Year 24 Since Joining See visits » You&#39;ve Been Remembered 1 Times Since Joining See who remembers you » You have a Yearbook On
+
+- **Whats up with the mail truck it’s Been leaking brake...**
   From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 18:14
+  Date: 2025-10-18 17:05
+  Snippet: Hopefully I can have a conversation with the driver it&#39;s leaving spots in front of every mail box stop.͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **New: De-risk your research, map citations clearly 🗺️**
+  From: Liner <liner@linermail.com>
+  Date: 2025-10-18 17:00
+  Snippet: New agents that add confidence to your research Before you spend weeks and hundreds of dollars on a study that might not work, test it first. Survey Simulator lets you validate your design with AI
+
+- **$20 Off, Don't Ghost This Deal!**
+  From: BevMo <bevmo@em.bevmo.com>
+  Date: 2025-10-18 13:19
+  Snippet: Stack the savings with our BOGO 5¢ Deals! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **[Task Update] Memory index drift detected**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 16:03
+  Snippet: Task update from ChatGPT Memory index drift detected View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy ·
+
+- **Seriously, if you're missing a package and have a camera...**
+  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 16:02
+  Snippet: In the videos posted, a lady drops off my package, and shortly after, a guy shows up within 15 seconds. He walks through the...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+
+## Gmail Summary – 2025-10-18 18:30:49
+- **Pixel 10 Pro upgrade deals: Best Buy tops list**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 18:08
+  Snippet: Best Buy new top offer: Up to $760 trade-in plus $200 credit (≈$960 total) when upgrading to Pixel 10 Pro, clearly marked as the NEW BEST DEAL over other options. T-Mobile and Google Store details: T-
+
+- **You appeared in 43 searches**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 17:47
+  Snippet: See who searched for your profile ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Cuddle Alert: Win an Espresso Jellycat Plush!**
+  From: Gofobo Screenings <no-reply@gofobo.com>
+  Date: 2025-10-18 17:30
+  Snippet: Sip &amp; Snuggle Enter to Win One (1) Jellycat Amuseables Espresso Cup Coffee ENTER NOW OTHER SWEEPSTAKES YOU MIGHT LIKE Noodle Your Way ENTER NOW Goal Getter ENTER NOW Nights of Frights ENTER NOW
+
+- **[Task Update] AGI Ops status: sync and health check**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 17:30
+  Snippet: Task update from ChatGPT AGI Ops status: sync and health check View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Last chance! 15% off custom keepsakes**
+  From: Canva <marketing@engage.canva.com>
+  Date: 2025-10-18 17:19
+  Snippet: Plus a new print product perfect for gifting ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿
+
+- **NEW Tier 1 Tool Launch: AutoSegment Split Webinar - Oct 30**
+  From: GEDmatch <do_not_reply_mm@gedmatch.com>
+  Date: 2025-10-18 17:19
+  Snippet: Find the latest news and content to help you get the most out of your GEDmatch experience. ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏
+
+- **Rafael, a summary of activity on your profile!**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 11:12
+  Snippet: Here&#39;s your recap Image placeholder Profile Visits 8 This Year 24 Since Joining See visits » You&#39;ve Been Remembered 1 Times Since Joining See who remembers you » You have a Yearbook On
+
+- **Whats up with the mail truck it’s Been leaking brake...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 17:05
+  Snippet: Hopefully I can have a conversation with the driver it&#39;s leaving spots in front of every mail box stop.͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **New: De-risk your research, map citations clearly 🗺️**
+  From: Liner <liner@linermail.com>
+  Date: 2025-10-18 17:00
+  Snippet: New agents that add confidence to your research Before you spend weeks and hundreds of dollars on a study that might not work, test it first. Survey Simulator lets you validate your design with AI
+
+- **$20 Off, Don't Ghost This Deal!**
+  From: BevMo <bevmo@em.bevmo.com>
+  Date: 2025-10-18 13:19
+  Snippet: Stack the savings with our BOGO 5¢ Deals! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+
+## Gmail Summary – 2025-10-18 19:30:40
+- **📷 You’ve got a new photo from Riordan High School**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 13:24
+  Snippet: See the photo &gt;&gt; Someone from Riordan High School uploaded a photo. 1 new photos uploaded this month! View photo » Facebook X Instagram LinkedIn Grad Class | Inbox | Visitors | Yearbook | Profile
+
+- **Our Best Buy Outlet Event has so much to offer...**
+  From: Best Buy Outlet Event <BestBuy@email.bestbuy.com>
+  Date: 2025-10-18 15:23
+  Snippet: Don&#39;t forget to check out today&#39;s Deal of the Day Raphael L. | View Account View: Web BEST BUY Top Deals Outlet TVs Computers Cell Phones Appliances Limited-time Outlet Event. Save up to 50% on
+
+- **Your Home Report for 255 Atherton Ave - Values, Forecast, Neighborhood Activity**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-18 19:13
+  Snippet: Home data and nearby activity for your saved home.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Get up to 30% OFF! Gear up and save 🛠️**
+  From: "Lowe’s Home Improvement" <lowes@e.lowes.com>
+  Date: 2025-10-18 13:04
+  Snippet: Plus, don&#39;t miss out on our carpet deal. View email as a webpage. Lowe&#39;s MyLowe&#39;s Login TOOLS BATHROOM DAILY DEALS APPLIANCES upto 30% off select tools and accessories HGTV Home® by Sherwin
+
+- **$13 & up—Black Jacket Symphony play rock’s greatest hits in**
+  From: Travelzoo <exclusive@us.travelzoo.com>
+  Date: 2025-10-18 14:59
+  Snippet: Hear &#39;Back in Black,&#39; &#39;Houses of the Holy&#39; &amp; more this month | Travelzoo $13 &amp; up—Black Jacket Symphony play rock&#39;s greatest hits in By Xavier Vilar-Brasser | Source: The
+
+- **Pixel 10 Pro upgrade deals: Best Buy tops list**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-18 18:08
+  Snippet: Best Buy new top offer: Up to $760 trade-in plus $200 credit (≈$960 total) when upgrading to Pixel 10 Pro, clearly marked as the NEW BEST DEAL over other options. T-Mobile and Google Store details: T-
+
+- **You appeared in 43 searches**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 17:47
+  Snippet: See who searched for your profile ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Cuddle Alert: Win an Espresso Jellycat Plush!**
+  From: Gofobo Screenings <no-reply@gofobo.com>
+  Date: 2025-10-18 17:30
+  Snippet: Sip &amp; Snuggle Enter to Win One (1) Jellycat Amuseables Espresso Cup Coffee ENTER NOW OTHER SWEEPSTAKES YOU MIGHT LIKE Noodle Your Way ENTER NOW Goal Getter ENTER NOW Nights of Frights ENTER NOW
+
+- **[Task Update] AGI Ops status: sync and health check**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-18 17:30
+  Snippet: Task update from ChatGPT AGI Ops status: sync and health check View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy
+
+- **Last chance! 15% off custom keepsakes**
+  From: Canva <marketing@engage.canva.com>
+  Date: 2025-10-18 17:19
+  Snippet: Plus a new print product perfect for gifting ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿
+
+
+## Gmail Summary – 2025-10-18 20:30:45
+- **I found 4-5 old photo albums at one of my...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 20:09
+  Snippet: I found 4-5 old photo albums at one of my jobs here in the Bay Area. Owner said the photo albums were left in a car he bought 10...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Does anybody know what’s going on Port Chicago Road by...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 19:58
   Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **The Events Calendar Product Updates**
-  From: Nathan at The Events Calendar <no-reply@theeventscalendar.com>
-  Date: 2025-10-17 18:07
-  Snippet: Product Updates Product Updates for October 2025 Product Updates for October 2025 Hi there, Every two weeks we bring you the latest product updates from The Events Calendar, keeping you informed about
+- **📷 You’ve got a new photo from Riordan High School**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 13:24
+  Snippet: See the photo &gt;&gt; Someone from Riordan High School uploaded a photo. 1 new photos uploaded this month! View photo » Facebook X Instagram LinkedIn Grad Class | Inbox | Visitors | Yearbook | Profile
 
-- **Best Google Pixel 10 Pro upgrade deals today**
+- **Our Best Buy Outlet Event has so much to offer...**
+  From: Best Buy Outlet Event <BestBuy@email.bestbuy.com>
+  Date: 2025-10-18 15:23
+  Snippet: Don&#39;t forget to check out today&#39;s Deal of the Day Raphael L. | View Account View: Web BEST BUY Top Deals Outlet TVs Computers Cell Phones Appliances Limited-time Outlet Event. Save up to 50% on
+
+- **Your Home Report for 255 Atherton Ave - Values, Forecast, Neighborhood Activity**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-18 19:13
+  Snippet: Home data and nearby activity for your saved home.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Get up to 30% OFF! Gear up and save 🛠️**
+  From: "Lowe’s Home Improvement" <lowes@e.lowes.com>
+  Date: 2025-10-18 13:04
+  Snippet: Plus, don&#39;t miss out on our carpet deal. View email as a webpage. Lowe&#39;s MyLowe&#39;s Login TOOLS BATHROOM DAILY DEALS APPLIANCES upto 30% off select tools and accessories HGTV Home® by Sherwin
+
+- **$13 & up—Black Jacket Symphony play rock’s greatest hits in**
+  From: Travelzoo <exclusive@us.travelzoo.com>
+  Date: 2025-10-18 14:59
+  Snippet: Hear &#39;Back in Black,&#39; &#39;Houses of the Holy&#39; &amp; more this month | Travelzoo $13 &amp; up—Black Jacket Symphony play rock&#39;s greatest hits in By Xavier Vilar-Brasser | Source: The
+
+- **Pixel 10 Pro upgrade deals: Best Buy tops list**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-17 18:04
-  Snippet: T-Mobile free upgrade: T-Mobile offers a free Pixel 10 Pro ($999 value) with Pixel 7 Pro trade-in and new line or qualifying plan, credited over 24 months, requiring taxes/fees upfront. Comparative
+  Date: 2025-10-18 18:08
+  Snippet: Best Buy new top offer: Up to $760 trade-in plus $200 credit (≈$960 total) when upgrading to Pixel 10 Pro, clearly marked as the NEW BEST DEAL over other options. T-Mobile and Google Store details: T-
 
-- **You paid Gilbert Tria $28.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-17 17:52
-  Snippet: You paid Gilbert Tria $28.00 You paid Gilbert Tria $ 28 . 00 Ride share See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445589434667371019 Payment Method CITIBANK FSB account
+- **You appeared in 43 searches**
+  From: LinkedIn <notifications-noreply@linkedin.com>
+  Date: 2025-10-18 17:47
+  Snippet: See who searched for your profile ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **You paid Asia Lopez $40.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-17 17:51
-  Snippet: You paid Asia Lopez $40.00 You paid Asia Lopez $ 40 . 00 Live scan See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445589069829867100 Payment Method CITIBANK FSB account ending in
-
-- **Celebrate National Pasta Day with this Delicious Sweepstakes!**
+- **Cuddle Alert: Win an Espresso Jellycat Plush!**
   From: Gofobo Screenings <no-reply@gofobo.com>
-  Date: 2025-10-17 17:44
-  Snippet: Noodle Your Way Enter to Win One (1) $25 Olive Garden Gift Card ENTER NOW OTHER SWEEPSTAKES YOU MIGHT LIKE National Taco Day ENTER NOW Slapshot Showdown ENTER NOW Goal Getter ENTER NOW Facebook Twitter
-
-- **[Task Update] Time to send AGI Ops heartbeat**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 17:30
-  Snippet: Task update from ChatGPT Time to send AGI Ops heartbeat View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy
+  Date: 2025-10-18 17:30
+  Snippet: Sip &amp; Snuggle Enter to Win One (1) Jellycat Amuseables Espresso Cup Coffee ENTER NOW OTHER SWEEPSTAKES YOU MIGHT LIKE Noodle Your Way ENTER NOW Goal Getter ENTER NOW Nights of Frights ENTER NOW
 
 
-## Gmail Summary – 2025-10-17 20:30:43
-- **I believe it was UPS who just delivered a package...**
-  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 20:07
-  Snippet: A relative accidentally opened it BEFORE assuming it was for us. It is not, it&#39;s been opened but this is not ours. The name on...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+## Gmail Summary – 2025-10-18 21:30:46
+- **Alert - Chatting: 3 new AIs**
+  From: "There's An AI For That" <alerts@theresanaiforthat.com>
+  Date: 2025-10-18 21:15
+  Snippet: We found these AI tools just for you → View full web version Hi, Rafael. Here are your daily AI tool alerts. Trending AIs on TAAFT #1 History Sleep AI-generated boring history lectures for better sleep
 
-- **[Task Update] Missing data in critical logs**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 20:01
-  Snippet: Task update from ChatGPT Missing data in critical logs View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy
+- **PSA: If your political post appears on my feed and...**
+  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 21:08
+  Snippet: By the NextDoor Terms of Service, you&#39;re breaking the rules. I won&#39;t hesitate to report any post that breaks the rules, that...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **Vehicle vs street pole W.**
-  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 19:56
-  Snippet: 10th and L street Antioch. Driver tried to flee but was apprehended by Antioch Pd.͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Accepted: Maribel get dressed @ Fri Oct 17, 2025 4:30pm - 5:30pm (PDT) (Rafael Lopez)**
-  From: Maribel Alva <malva20000@gmail.com>
-  Date: 2025-10-17 19:41
-  Snippet: Maribel get dressed Maribel Alva has accepted this invitation. Join with Google Meet Meeting link meet.google.com/zdk-tbie-zja When Friday Oct 17, 2025 ⋅ 4:30pm – 5:30pm (Pacific Time - Los Angeles)
-
-- **Rafael, meet your new favorite credit card**
+- **Rafael, you still have scores to view!**
   From: Experian <support@e.usa.experian.com>
-  Date: 2025-10-17 13:37
-  Snippet: Packed with perks, built for your lifestyle. Experian Logo Membership ID# 10016906190977 Sign In Upgrade your wallet today Get rewarded for everyday spending and explore special perks with a new credit
+  Date: 2025-10-18 14:30
+  Snippet: You may be getting only 1/3 of the credit info you need. Experian Logo Membership ID# 10016906190977 Sign In View your full credit profile Your Experian credit report is just the beginning. Now check
 
-- **Check Out the New Trailer for PRIMATE, in theaters January 9**
-  From: Gofobo Screenings <no-reply@gofobo.com>
-  Date: 2025-10-17 19:34
-  Snippet: CHECK OUT THE OFFICIAL TRAILER FOR &#39;PRIMATE&#39; Trailer Image WATCH NOW PRIMATE Release Date: January 09, 2026 Synopsis: In PRIMATE, a group of friends&#39; tropical vacation turns into a
+- **I found 4-5 old photo albums at one of my...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 20:09
+  Snippet: I found 4-5 old photo albums at one of my jobs here in the Bay Area. Owner said the photo albums were left in a car he bought 10...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **today's a good day to win!**
-  From: "McDonald's" <McDonalds@m.mcdonalds.com>
-  Date: 2025-10-17 19:16
-  Snippet: get free fries &amp; play Monopoly at McD&#39;s too. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **Order Confirmation for Rafael from Pho Huynh Hiep - Kevin's Noodle House**
-  From: DoorDash Order <no-reply@doordash.com>
-  Date: 2025-10-17 18:33
+- **Does anybody know what’s going on Port Chicago Road by...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 19:58
   Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **👉 81 from your 1986 class joined — recognize anyone?**
+- **📷 You’ve got a new photo from Riordan High School**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 12:25
-  Snippet: Rafael, see who joined from Riordan High School See who&#39;s here! Classmates.com Riordan High School 3052 people total from your school are here! See who is here New members have joined Grad Class |
+  Date: 2025-10-18 13:24
+  Snippet: See the photo &gt;&gt; Someone from Riordan High School uploaded a photo. 1 new photos uploaded this month! View photo » Facebook X Instagram LinkedIn Grad Class | Inbox | Visitors | Yearbook | Profile
 
-- **Be on the look out in a black car looks...**
+- **Our Best Buy Outlet Event has so much to offer...**
+  From: Best Buy Outlet Event <BestBuy@email.bestbuy.com>
+  Date: 2025-10-18 15:23
+  Snippet: Don&#39;t forget to check out today&#39;s Deal of the Day Raphael L. | View Account View: Web BEST BUY Top Deals Outlet TVs Computers Cell Phones Appliances Limited-time Outlet Event. Save up to 50% on
+
+- **Your Home Report for 255 Atherton Ave - Values, Forecast, Neighborhood Activity**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-18 19:13
+  Snippet: Home data and nearby activity for your saved home.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Get up to 30% OFF! Gear up and save 🛠️**
+  From: "Lowe’s Home Improvement" <lowes@e.lowes.com>
+  Date: 2025-10-18 13:04
+  Snippet: Plus, don&#39;t miss out on our carpet deal. View email as a webpage. Lowe&#39;s MyLowe&#39;s Login TOOLS BATHROOM DAILY DEALS APPLIANCES upto 30% off select tools and accessories HGTV Home® by Sherwin
+
+- **$13 & up—Black Jacket Symphony play rock’s greatest hits in**
+  From: Travelzoo <exclusive@us.travelzoo.com>
+  Date: 2025-10-18 14:59
+  Snippet: Hear &#39;Back in Black,&#39; &#39;Houses of the Holy&#39; &amp; more this month | Travelzoo $13 &amp; up—Black Jacket Symphony play rock&#39;s greatest hits in By Xavier Vilar-Brasser | Source: The
+
+
+## Gmail Summary – 2025-10-18 22:30:44
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
+
+- **Alert - Chatting: 3 new AIs**
+  From: "There's An AI For That" <alerts@theresanaiforthat.com>
+  Date: 2025-10-18 21:15
+  Snippet: We found these AI tools just for you → View full web version Hi, Rafael. Here are your daily AI tool alerts. Trending AIs on TAAFT #1 History Sleep AI-generated boring history lectures for better sleep
+
+- **PSA: If your political post appears on my feed and...**
+  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 21:08
+  Snippet: By the NextDoor Terms of Service, you&#39;re breaking the rules. I won&#39;t hesitate to report any post that breaks the rules, that...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Rafael, you still have scores to view!**
+  From: Experian <support@e.usa.experian.com>
+  Date: 2025-10-18 14:30
+  Snippet: You may be getting only 1/3 of the credit info you need. Experian Logo Membership ID# 10016906190977 Sign In View your full credit profile Your Experian credit report is just the beginning. Now check
+
+- **I found 4-5 old photo albums at one of my...**
   From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 18:14
+  Date: 2025-10-18 20:09
+  Snippet: I found 4-5 old photo albums at one of my jobs here in the Bay Area. Owner said the photo albums were left in a car he bought 10...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Does anybody know what’s going on Port Chicago Road by...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 19:58
   Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
+- **📷 You’ve got a new photo from Riordan High School**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 13:24
+  Snippet: See the photo &gt;&gt; Someone from Riordan High School uploaded a photo. 1 new photos uploaded this month! View photo » Facebook X Instagram LinkedIn Grad Class | Inbox | Visitors | Yearbook | Profile
 
-## Gmail Summary – 2025-10-17 21:30:44
-- **Alert - Chatting: 2 new AIs**
+- **Our Best Buy Outlet Event has so much to offer...**
+  From: Best Buy Outlet Event <BestBuy@email.bestbuy.com>
+  Date: 2025-10-18 15:23
+  Snippet: Don&#39;t forget to check out today&#39;s Deal of the Day Raphael L. | View Account View: Web BEST BUY Top Deals Outlet TVs Computers Cell Phones Appliances Limited-time Outlet Event. Save up to 50% on
+
+
+## Gmail Summary – 2025-10-18 23:30:46
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
+
+- **Alert - Chatting: 3 new AIs**
   From: "There's An AI For That" <alerts@theresanaiforthat.com>
-  Date: 2025-10-17 21:15
-  Snippet: Open to view these 4 AI tools → ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-18 21:15
+  Snippet: We found these AI tools just for you → View full web version Hi, Rafael. Here are your daily AI tool alerts. Trending AIs on TAAFT #1 History Sleep AI-generated boring history lectures for better sleep
 
-- **Not my Kittens but I relate.**
+- **PSA: If your political post appears on my feed and...**
   From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 21:08
-  Snippet: These neighborhoods are out of control!͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+  Date: 2025-10-18 21:08
+  Snippet: By the NextDoor Terms of Service, you&#39;re breaking the rules. I won&#39;t hesitate to report any post that breaks the rules, that...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **You have a vital records hint**
-  From: Ancestry <ancestry@email.ancestry.com>
-  Date: 2025-10-17 15:05
-  Snippet: Make new discoveries with hints. Ancestry 60% OFF DNA KIT 60% OFF DNA KIT Rafael, see what we&#39;ve uncovered about Salvador Ramos. View all hints Record Banner Image Record Banner Image Rafael,
+- **Rafael, you still have scores to view!**
+  From: Experian <support@e.usa.experian.com>
+  Date: 2025-10-18 14:30
+  Snippet: You may be getting only 1/3 of the credit info you need. Experian Logo Membership ID# 10016906190977 Sign In View your full credit profile Your Experian credit report is just the beginning. Now check
 
-- **KP - Your Prescriptions Have Arrived**
-  From: Kaiser Permanente <kp-donotreply-dnp@notifications.kp.org>
-  Date: 2025-10-17 21:04
-  Snippet: Kaiser Permanente Logo home Your Prescriptions Have Arrived Hi, RAFAEL. Your prescriptions were delivered on October 17 at 1:28 PM. Prescription(s) in this delivery: JAR*** Note: Orders with multiple
-
-- **A simple way to cut monthly expenses for a full year**
-  From: Xfinity <xfinity@updates.xfinity.com>
-  Date: 2025-10-17 16:59
-  Snippet: Join the nation&#39;s most reliable network, and save while you do it Xfinity Mobile Logo Xfinity Mobile saves you money Xfinity Internet members can keep their money in their wallet and their device
-
-- **The Most Haunted Local Spots**
-  From: DoTheBay Top Picks <toppicks@dothebay.com>
-  Date: 2025-10-17 20:52
-  Snippet: Vertigo with SF Symphony | Exploratorium After Dark | Kaytranada + Justice | August Hall Giveaways View this email in your browser Just Announced and On Sale Now at August Hall Meet us in the pit for
-
-- **End the week with FREE food 🎉**
-  From: Grubhub <email@a.grubhub.com>
-  Date: 2025-10-17 20:37
-  Snippet: Celebrate Freebie Fridays with McDonald&#39;s and more! ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏
-
-- **I believe it was UPS who just delivered a package...**
-  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 20:07
-  Snippet: A relative accidentally opened it BEFORE assuming it was for us. It is not, it&#39;s been opened but this is not ours. The name on...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **[Task Update] Missing data in critical logs**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 20:01
-  Snippet: Task update from ChatGPT Missing data in critical logs View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy
-
-- **Vehicle vs street pole W.**
+- **I found 4-5 old photo albums at one of my...**
   From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 19:56
-  Snippet: 10th and L street Antioch. Driver tried to flee but was apprehended by Antioch Pd.͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+  Date: 2025-10-18 20:09
+  Snippet: I found 4-5 old photo albums at one of my jobs here in the Bay Area. Owner said the photo albums were left in a car he bought 10...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-
-## Gmail Summary – 2025-10-17 22:30:46
-- **Lol, if I knew it was that easy, I would...**
+- **Does anybody know what’s going on Port Chicago Road by...**
   From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 22:09
+  Date: 2025-10-18 19:58
   Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **Alert - Chatting: 2 new AIs**
-  From: "There's An AI For That" <alerts@theresanaiforthat.com>
-  Date: 2025-10-17 21:15
-  Snippet: Open to view these 4 AI tools → ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+- **📷 You’ve got a new photo from Riordan High School**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 13:24
+  Snippet: See the photo &gt;&gt; Someone from Riordan High School uploaded a photo. 1 new photos uploaded this month! View photo » Facebook X Instagram LinkedIn Grad Class | Inbox | Visitors | Yearbook | Profile
 
-- **Not my Kittens but I relate.**
-  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 21:08
-  Snippet: These neighborhoods are out of control!͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **You have a vital records hint**
-  From: Ancestry <ancestry@email.ancestry.com>
-  Date: 2025-10-17 15:05
-  Snippet: Make new discoveries with hints. Ancestry 60% OFF DNA KIT 60% OFF DNA KIT Rafael, see what we&#39;ve uncovered about Salvador Ramos. View all hints Record Banner Image Record Banner Image Rafael,
-
-- **A simple way to cut monthly expenses for a full year**
-  From: Xfinity <xfinity@updates.xfinity.com>
-  Date: 2025-10-17 16:59
-  Snippet: Join the nation&#39;s most reliable network, and save while you do it Xfinity Mobile Logo Xfinity Mobile saves you money Xfinity Internet members can keep their money in their wallet and their device
-
-- **The Most Haunted Local Spots**
-  From: DoTheBay Top Picks <toppicks@dothebay.com>
-  Date: 2025-10-17 20:52
-  Snippet: Vertigo with SF Symphony | Exploratorium After Dark | Kaytranada + Justice | August Hall Giveaways View this email in your browser Just Announced and On Sale Now at August Hall Meet us in the pit for
-
-- **End the week with FREE food 🎉**
-  From: Grubhub <email@a.grubhub.com>
-  Date: 2025-10-17 20:37
-  Snippet: Celebrate Freebie Fridays with McDonald&#39;s and more! ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏
-
-- **I believe it was UPS who just delivered a package...**
-  From: Atherton Ave Safety Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 20:07
-  Snippet: A relative accidentally opened it BEFORE assuming it was for us. It is not, it&#39;s been opened but this is not ours. The name on...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **[Task Update] Missing data in critical logs**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-17 20:01
-  Snippet: Task update from ChatGPT Missing data in critical logs View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center · Privacy policy
-
-- **Vehicle vs street pole W.**
-  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 19:56
-  Snippet: 10th and L street Antioch. Driver tried to flee but was apprehended by Antioch Pd.͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+- **Our Best Buy Outlet Event has so much to offer...**
+  From: Best Buy Outlet Event <BestBuy@email.bestbuy.com>
+  Date: 2025-10-18 15:23
+  Snippet: Don&#39;t forget to check out today&#39;s Deal of the Day Raphael L. | View Account View: Web BEST BUY Top Deals Outlet TVs Computers Cell Phones Appliances Limited-time Outlet Event. Save up to 50% on
 
 
-## Gmail Summary – 2025-10-17 23:30:52
-- **Notification: Maribel get dressed @ Fri Oct 17, 2025 4:30pm - 5:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-17 23:20
-  Snippet: Maribel get dressed Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel get dressed on Friday Oct 17, 2025 ⋅ 4:30pm – 5:30pm (Pacific Time - Los Angeles). You
+## Gmail Summary – 2025-10-19 00:30:42
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **What should you explore next for Encarnacion Villegas?**
-  From: Ancestry <ancestry@email.ancestry.com>
-  Date: 2025-10-17 17:12
-  Snippet: A search on Ancestry ® may help you make more discoveries. Look deeper Ancestry There&#39;s still more to discover. You&#39;ve started to uncover the story of Encarnacion Villegas—what will you find
-
-- **🦾 AI's Future: Utopia or Chaos?**
+- **🦾 AI Robot Phone Is Coming**
   From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-17 23:07
-  Snippet: Superintelligence mapped, Claude Skills, AI travel booking, bubble warning, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **IMPORTANT News About Gigabrain Search**
-  From: Robert from GigaBrain <hello@thegigabrain.com>
-  Date: 2025-10-17 23:05
-  Snippet: It&#39;s going away next week... Hey there, I need to share some difficult news with you. Gigabrain search is shutting down next week. Here&#39;s what happened: Reddit launched their own &#39;Reddit
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
 
-- **📣 $6 Big Box: 2Pc Signature Chicken or 3Pc Tenders AND…**
-  From: Popeyes <offers@m.popeyes.com>
-  Date: 2025-10-17 23:02
-  Snippet: 2 regular sides and a biscuit too! ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **Disclosure About Your ROBERT HALF INC. Retirement Plan - Quarterly statement available**
-  From: Fidelity Investments <Fidelity.Investments@mail.fidelity.com>
-  Date: 2025-10-17 16:42
-  Snippet: RAFAEL LOPEZ ROBERT HALF INC. Login Review your Quarterly Statement Important information about your retirement plan is now available. Please review this information. Plans include ROBERT HALF INC. 401
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
 
-- **SMC Alert: San Mateo County Sheriff’s Office: ROAD CLOSURE in Woodside due to broken fire hydrant. USE alternate routes.**
-  From: SMC ALERT <smcgov@email.getrave.com>
-  Date: 2025-10-17 18:37
-  Snippet: SMC Alert: San Mateo County Sheriff&#39;s Office: ROAD CLOSURE in Woodside on Portola Road between Mountain Home and Woodside Road due to broken fire hydrant. Significant traffic delays are expected.
+- **Alert - Chatting: 3 new AIs**
+  From: "There's An AI For That" <alerts@theresanaiforthat.com>
+  Date: 2025-10-18 21:15
+  Snippet: We found these AI tools just for you → View full web version Hi, Rafael. Here are your daily AI tool alerts. Trending AIs on TAAFT #1 History Sleep AI-generated boring history lectures for better sleep
 
-- **Lol, if I knew it was that easy, I would...**
+- **PSA: If your political post appears on my feed and...**
+  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 21:08
+  Snippet: By the NextDoor Terms of Service, you&#39;re breaking the rules. I won&#39;t hesitate to report any post that breaks the rules, that...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Rafael, you still have scores to view!**
+  From: Experian <support@e.usa.experian.com>
+  Date: 2025-10-18 14:30
+  Snippet: You may be getting only 1/3 of the credit info you need. Experian Logo Membership ID# 10016906190977 Sign In View your full credit profile Your Experian credit report is just the beginning. Now check
+
+- **I found 4-5 old photo albums at one of my...**
   From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 22:09
+  Date: 2025-10-18 20:09
+  Snippet: I found 4-5 old photo albums at one of my jobs here in the Bay Area. Owner said the photo albums were left in a car he bought 10...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Does anybody know what’s going on Port Chicago Road by...**
+  From: Atherton Ave Trending Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 19:58
   Snippet: ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **Alert - Chatting: 2 new AIs**
-  From: "There's An AI For That" <alerts@theresanaiforthat.com>
-  Date: 2025-10-17 21:15
-  Snippet: Open to view these 4 AI tools → ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **Not my Kittens but I relate.**
-  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
-  Date: 2025-10-17 21:08
-  Snippet: These neighborhoods are out of control!͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-
-## Gmail Summary – 2025-10-18 00:30:48
-- **Streams to Make You Scream (And Laugh)**
-  From: Hulu <hulu@hulumail.com>
-  Date: 2025-10-17 18:29
-  Snippet: Halloween plays on Hulu all October long. View in browser Hulu Huluween Now Screaming Turn Halloween Into Huluween This October Hulu has something for everybody to watch — from sorta scary to super
-
-- **You paid Gilbert Tria $28.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 00:12
-  Snippet: You paid Gilbert Tria $28.00 You paid Gilbert Tria $ 28 . 00 Ride share See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445780641427512392 Payment Method CITIBANK FSB account
-
-- **JOIN US: Please Join Asm. Ávila Farías for a Pumpkin Giveaway**
-  From: Assemblymember.AvilaFarias@outreach.assembly.ca.gov
-  Date: 2025-10-17 16:32
-  Snippet: I am a strong believer in the power of community. It is a powerful medium that fosters open dialogue, shared solutions, connection and support. With the spirit of the holidays in mind, there is no
-
-- **Notification: Maribel get dressed @ Fri Oct 17, 2025 4:30pm - 5:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-17 23:20
-  Snippet: Maribel get dressed Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel get dressed on Friday Oct 17, 2025 ⋅ 4:30pm – 5:30pm (Pacific Time - Los Angeles). You
-
-- **What should you explore next for Encarnacion Villegas?**
-  From: Ancestry <ancestry@email.ancestry.com>
-  Date: 2025-10-17 17:12
-  Snippet: A search on Ancestry ® may help you make more discoveries. Look deeper Ancestry There&#39;s still more to discover. You&#39;ve started to uncover the story of Encarnacion Villegas—what will you find
-
-- **🦾 AI's Future: Utopia or Chaos?**
-  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-17 23:07
-  Snippet: Superintelligence mapped, Claude Skills, AI travel booking, bubble warning, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-
-- **IMPORTANT News About Gigabrain Search**
-  From: Robert from GigaBrain <hello@thegigabrain.com>
-  Date: 2025-10-17 23:05
-  Snippet: It&#39;s going away next week... Hey there, I need to share some difficult news with you. Gigabrain search is shutting down next week. Here&#39;s what happened: Reddit launched their own &#39;Reddit
-
-- **📣 $6 Big Box: 2Pc Signature Chicken or 3Pc Tenders AND…**
-  From: Popeyes <offers@m.popeyes.com>
-  Date: 2025-10-17 23:02
-  Snippet: 2 regular sides and a biscuit too! ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌
-
-- **Disclosure About Your ROBERT HALF INC. Retirement Plan - Quarterly statement available**
-  From: Fidelity Investments <Fidelity.Investments@mail.fidelity.com>
-  Date: 2025-10-17 16:42
-  Snippet: RAFAEL LOPEZ ROBERT HALF INC. Login Review your Quarterly Statement Important information about your retirement plan is now available. Please review this information. Plans include ROBERT HALF INC. 401
-
-- **SMC Alert: San Mateo County Sheriff’s Office: ROAD CLOSURE in Woodside due to broken fire hydrant. USE alternate routes.**
-  From: SMC ALERT <smcgov@email.getrave.com>
-  Date: 2025-10-17 18:37
-  Snippet: SMC Alert: San Mateo County Sheriff&#39;s Office: ROAD CLOSURE in Woodside on Portola Road between Mountain Home and Woodside Road due to broken fire hydrant. Significant traffic delays are expected.
-
-
-## Gmail Summary – 2025-10-18 01:30:44
-- **Your deals are here**
-  From: "Amazon.com" <store-news@amazon.com>
-  Date: 2025-10-18 01:23
-  Snippet: Shop up to 35% off Halloween deals, savings up to 75% off &amp; more͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
-
-- **Notification: Maribel take vitamin D @ Fri Oct 17, 2025 6:30pm - 7:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:19
-  Snippet: Maribel take vitamin D Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel take vitamin D on Friday Oct 17, 2025 ⋅ 6:30pm – 7:30pm (Pacific Time - Los Angeles
+## Gmail Summary – 2025-10-19 01:30:43
+- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 01:27
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
 - **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
   From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-18 00:42
+  Date: 2025-10-19 00:55
   Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Streams to Make You Scream (And Laugh)**
-  From: Hulu <hulu@hulumail.com>
-  Date: 2025-10-17 18:29
-  Snippet: Halloween plays on Hulu all October long. View in browser Hulu Huluween Now Screaming Turn Halloween Into Huluween This October Hulu has something for everybody to watch — from sorta scary to super
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **You paid Gilbert Tria $28.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 00:12
-  Snippet: You paid Gilbert Tria $28.00 You paid Gilbert Tria $ 28 . 00 Ride share See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445780641427512392 Payment Method CITIBANK FSB account
-
-- **JOIN US: Please Join Asm. Ávila Farías for a Pumpkin Giveaway**
-  From: Assemblymember.AvilaFarias@outreach.assembly.ca.gov
-  Date: 2025-10-17 16:32
-  Snippet: I am a strong believer in the power of community. It is a powerful medium that fosters open dialogue, shared solutions, connection and support. With the spirit of the holidays in mind, there is no
-
-- **Notification: Maribel get dressed @ Fri Oct 17, 2025 4:30pm - 5:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-17 23:20
-  Snippet: Maribel get dressed Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel get dressed on Friday Oct 17, 2025 ⋅ 4:30pm – 5:30pm (Pacific Time - Los Angeles). You
-
-- **What should you explore next for Encarnacion Villegas?**
-  From: Ancestry <ancestry@email.ancestry.com>
-  Date: 2025-10-17 17:12
-  Snippet: A search on Ancestry ® may help you make more discoveries. Look deeper Ancestry There&#39;s still more to discover. You&#39;ve started to uncover the story of Encarnacion Villegas—what will you find
-
-- **🦾 AI's Future: Utopia or Chaos?**
+- **🦾 AI Robot Phone Is Coming**
   From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-17 23:07
-  Snippet: Superintelligence mapped, Claude Skills, AI travel booking, bubble warning, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **IMPORTANT News About Gigabrain Search**
-  From: Robert from GigaBrain <hello@thegigabrain.com>
-  Date: 2025-10-17 23:05
-  Snippet: It&#39;s going away next week... Hey there, I need to share some difficult news with you. Gigabrain search is shutting down next week. Here&#39;s what happened: Reddit launched their own &#39;Reddit
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
+
+- **Alert - Chatting: 3 new AIs**
+  From: "There's An AI For That" <alerts@theresanaiforthat.com>
+  Date: 2025-10-18 21:15
+  Snippet: We found these AI tools just for you → View full web version Hi, Rafael. Here are your daily AI tool alerts. Trending AIs on TAAFT #1 History Sleep AI-generated boring history lectures for better sleep
+
+- **PSA: If your political post appears on my feed and...**
+  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 21:08
+  Snippet: By the NextDoor Terms of Service, you&#39;re breaking the rules. I won&#39;t hesitate to report any post that breaks the rules, that...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Rafael, you still have scores to view!**
+  From: Experian <support@e.usa.experian.com>
+  Date: 2025-10-18 14:30
+  Snippet: You may be getting only 1/3 of the credit info you need. Experian Logo Membership ID# 10016906190977 Sign In View your full credit profile Your Experian credit report is just the beginning. Now check
 
 
-## Gmail Summary – 2025-10-18 02:30:49
-- **Someone looked you up, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 20:20
-  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
-
-- **You paid Asia Lopez $60.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 01:53
-  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
-
-- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+## Gmail Summary – 2025-10-19 02:30:47
+- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-19 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
-- **Rafael, add Akshara Raina - L2 Technical Logistics Coordinator**
-  From: LinkedIn <messages-noreply@linkedin.com>
-  Date: 2025-10-18 01:46
-  Snippet: L2 Technical Logistics Coordinator ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Your deals are here**
-  From: "Amazon.com" <store-news@amazon.com>
-  Date: 2025-10-18 01:23
-  Snippet: Shop up to 35% off Halloween deals, savings up to 75% off &amp; more͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
-
-- **Notification: Maribel take vitamin D @ Fri Oct 17, 2025 6:30pm - 7:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:19
-  Snippet: Maribel take vitamin D Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel take vitamin D on Friday Oct 17, 2025 ⋅ 6:30pm – 7:30pm (Pacific Time - Los Angeles
+- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 01:27
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
 - **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
   From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-18 00:42
+  Date: 2025-10-19 00:55
   Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Streams to Make You Scream (And Laugh)**
-  From: Hulu <hulu@hulumail.com>
-  Date: 2025-10-17 18:29
-  Snippet: Halloween plays on Hulu all October long. View in browser Hulu Huluween Now Screaming Turn Halloween Into Huluween This October Hulu has something for everybody to watch — from sorta scary to super
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **You paid Gilbert Tria $28.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 00:12
-  Snippet: You paid Gilbert Tria $28.00 You paid Gilbert Tria $ 28 . 00 Ride share See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445780641427512392 Payment Method CITIBANK FSB account
+- **🦾 AI Robot Phone Is Coming**
+  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **JOIN US: Please Join Asm. Ávila Farías for a Pumpkin Giveaway**
-  From: Assemblymember.AvilaFarias@outreach.assembly.ca.gov
-  Date: 2025-10-17 16:32
-  Snippet: I am a strong believer in the power of community. It is a powerful medium that fosters open dialogue, shared solutions, connection and support. With the spirit of the holidays in mind, there is no
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
+
+- **Alert - Chatting: 3 new AIs**
+  From: "There's An AI For That" <alerts@theresanaiforthat.com>
+  Date: 2025-10-18 21:15
+  Snippet: We found these AI tools just for you → View full web version Hi, Rafael. Here are your daily AI tool alerts. Trending AIs on TAAFT #1 History Sleep AI-generated boring history lectures for better sleep
+
+- **PSA: If your political post appears on my feed and...**
+  From: Atherton Ave Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 21:08
+  Snippet: By the NextDoor Terms of Service, you&#39;re breaking the rules. I won&#39;t hesitate to report any post that breaks the rules, that...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
 
-## Gmail Summary – 2025-10-18 03:30:53
-- **You have 3 new invitations**
-  From: LinkedIn <notifications-noreply@linkedin.com>
-  Date: 2025-10-18 03:07
-  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+## Gmail Summary – 2025-10-19 03:30:46
+- **Rafael, you have 3 profile visits**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 20:58
+  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
 
-- **4 Results for 'For Sale in Pittsburg'**
+- **2 Results for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-18 02:37
+  Date: 2025-10-19 02:39
   Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Someone looked you up, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 20:20
-  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
-
-- **You paid Asia Lopez $60.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 01:53
-  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
-
-- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-19 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
-- **Rafael, add Akshara Raina - L2 Technical Logistics Coordinator**
-  From: LinkedIn <messages-noreply@linkedin.com>
-  Date: 2025-10-18 01:46
-  Snippet: L2 Technical Logistics Coordinator ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Your deals are here**
-  From: "Amazon.com" <store-news@amazon.com>
-  Date: 2025-10-18 01:23
-  Snippet: Shop up to 35% off Halloween deals, savings up to 75% off &amp; more͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
-
-- **Notification: Maribel take vitamin D @ Fri Oct 17, 2025 6:30pm - 7:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:19
-  Snippet: Maribel take vitamin D Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel take vitamin D on Friday Oct 17, 2025 ⋅ 6:30pm – 7:30pm (Pacific Time - Los Angeles
+- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 01:27
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
 - **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
   From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-18 00:42
+  Date: 2025-10-19 00:55
   Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Streams to Make You Scream (And Laugh)**
-  From: Hulu <hulu@hulumail.com>
-  Date: 2025-10-17 18:29
-  Snippet: Halloween plays on Hulu all October long. View in browser Hulu Huluween Now Screaming Turn Halloween Into Huluween This October Hulu has something for everybody to watch — from sorta scary to super
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **🦾 AI Robot Phone Is Coming**
+  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
 
 
-## Gmail Summary – 2025-10-18 04:30:46
-- **Earn cash for every friend you bring to Comet 💰**
-  From: Perplexity <team@mail.perplexity.ai>
-  Date: 2025-10-18 04:16
-  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+## Gmail Summary – 2025-10-19 04:30:43
+- **Rafael, you have 3 profile visits**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 20:58
+  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
 
-- **You have 3 new invitations**
-  From: LinkedIn <notifications-noreply@linkedin.com>
-  Date: 2025-10-18 03:07
-  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **4 Results for 'For Sale in Pittsburg'**
+- **2 Results for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-18 02:37
+  Date: 2025-10-19 02:39
   Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Someone looked you up, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 20:20
-  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
-
-- **You paid Asia Lopez $60.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 01:53
-  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
-
-- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-19 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
-- **Rafael, add Akshara Raina - L2 Technical Logistics Coordinator**
-  From: LinkedIn <messages-noreply@linkedin.com>
-  Date: 2025-10-18 01:46
-  Snippet: L2 Technical Logistics Coordinator ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Your deals are here**
-  From: "Amazon.com" <store-news@amazon.com>
-  Date: 2025-10-18 01:23
-  Snippet: Shop up to 35% off Halloween deals, savings up to 75% off &amp; more͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
-
-- **Notification: Maribel take vitamin D @ Fri Oct 17, 2025 6:30pm - 7:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:19
-  Snippet: Maribel take vitamin D Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel take vitamin D on Friday Oct 17, 2025 ⋅ 6:30pm – 7:30pm (Pacific Time - Los Angeles
+- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 01:27
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
 - **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
   From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-18 00:42
+  Date: 2025-10-19 00:55
   Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-## Gmail Summary – 2025-10-18 05:30:42
-- **BMI and pool laps tracking reminder update**
+- **🦾 AI Robot Phone Is Coming**
+  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Your monthly account statement is here, Rafael**
+  From: Experian <support@s.usa.experian.com>
+  Date: 2025-10-18 15:58
+  Snippet: Review your account statement Experian Logo Membership ID# 10016906190977 Sign In Check out your monthly account statement 0 unread notifications 0 new in the past 30 days Your credit rating is good
+
+
+## Gmail Summary – 2025-10-19 05:30:42
+- **BMI and pool log alert policy**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-18 05:07
-  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+  Date: 2025-10-19 05:02
+  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
 
-- **Earn cash for every friend you bring to Comet 💰**
-  From: Perplexity <team@mail.perplexity.ai>
-  Date: 2025-10-18 04:16
-  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+- **Rafael, you have 3 profile visits**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 20:58
+  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
 
-- **You have 3 new invitations**
-  From: LinkedIn <notifications-noreply@linkedin.com>
-  Date: 2025-10-18 03:07
-  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **4 Results for 'For Sale in Pittsburg'**
+- **2 Results for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-18 02:37
+  Date: 2025-10-19 02:39
   Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Someone looked you up, Rafael**
+- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-19 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+
+- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 01:27
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 00:55
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **🦾 AI Robot Phone Is Coming**
+  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+
+- **A few of my outlets had went out including the...**
+  From: Atherton Ave Recommendation Posts <reply@ss.email.nextdoor.com>
+  Date: 2025-10-18 22:03
+  Snippet: I reached out to him early the next morning and he responded within 15 minutes. Once here he figured out the problem and gave me...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+
+## Gmail Summary – 2025-10-19 06:30:50
+- **Unlock profile views and private messages, Rafael**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 20:20
-  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
+  Date: 2025-10-18 23:48
+  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
 
-- **You paid Asia Lopez $60.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 01:53
-  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
-
-- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
-
-- **Rafael, add Akshara Raina - L2 Technical Logistics Coordinator**
-  From: LinkedIn <messages-noreply@linkedin.com>
-  Date: 2025-10-18 01:46
-  Snippet: L2 Technical Logistics Coordinator ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **Your deals are here**
-  From: "Amazon.com" <store-news@amazon.com>
-  Date: 2025-10-18 01:23
-  Snippet: Shop up to 35% off Halloween deals, savings up to 75% off &amp; more͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
-
-- **Notification: Maribel take vitamin D @ Fri Oct 17, 2025 6:30pm - 7:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:19
-  Snippet: Maribel take vitamin D Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel take vitamin D on Friday Oct 17, 2025 ⋅ 6:30pm – 7:30pm (Pacific Time - Los Angeles
-
-
-## Gmail Summary – 2025-10-18 06:30:50
-- **BMI and pool laps tracking reminder update**
+- **BMI and pool log alert policy**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-18 05:07
-  Snippet: Reminder saved: Log your BMI and pool laps. Policy applied — if you miss 2 consecutive logs or 3 workouts, an automatic gentle alert will be triggered according to sms_escalation_policy.md. Your Coros
+  Date: 2025-10-19 05:02
+  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
 
-- **Earn cash for every friend you bring to Comet 💰**
-  From: Perplexity <team@mail.perplexity.ai>
-  Date: 2025-10-18 04:16
-  Snippet: Share your referral link. Get paid for qualified referrals. No limits. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏
+- **Rafael, you have 3 profile visits**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-18 20:58
+  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
 
-- **You have 3 new invitations**
-  From: LinkedIn <notifications-noreply@linkedin.com>
-  Date: 2025-10-18 03:07
-  Snippet: You have 3 new invitations ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **4 Results for 'For Sale in Pittsburg'**
+- **2 Results for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-18 02:37
+  Date: 2025-10-19 02:39
   Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Someone looked you up, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-17 20:20
-  Snippet: 👉👉 You&#39;ve got profile activity waiting—check it out Hey Rafael, The good ol&#39; days live on! Explore memories » Your CM stats! Glimpse at the photos your schoolmates have shared.... 24 visits to
-
-- **You paid Asia Lopez $60.00**
-  From: Venmo <venmo@venmo.com>
-  Date: 2025-10-18 01:53
-  Snippet: You paid Asia Lopez $60.00 You paid Asia Lopez $ 60 . 00 Dinner See transaction Transaction details Date Oct 17, 2025 Transaction ID 4445831329893392123 Payment Method CITIBANK FSB account ending in
-
-- **Notification: water the lawn @ Fri Oct 17, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Friday Oct 17, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-19 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
-- **Rafael, add Akshara Raina - L2 Technical Logistics Coordinator**
-  From: LinkedIn <messages-noreply@linkedin.com>
-  Date: 2025-10-18 01:46
-  Snippet: L2 Technical Logistics Coordinator ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 01:27
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Your deals are here**
-  From: "Amazon.com" <store-news@amazon.com>
-  Date: 2025-10-18 01:23
-  Snippet: Shop up to 35% off Halloween deals, savings up to 75% off &amp; more͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-19 00:55
+  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Notification: Maribel take vitamin D @ Fri Oct 17, 2025 6:30pm - 7:30pm (PDT) (Rafael Lopez)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-18 01:19
-  Snippet: Maribel take vitamin D Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Maribel take vitamin D on Friday Oct 17, 2025 ⋅ 6:30pm – 7:30pm (Pacific Time - Los Angeles
+- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
+  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
+  Date: 2025-10-18 23:58
+  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **🦾 AI Robot Phone Is Coming**
+  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
+  Date: 2025-10-18 23:45
+  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **You have  3 items unclaimed.**
+  From: Temu <email@news.temuemail.com>
+  Date: 2025-10-18 22:03
+  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
