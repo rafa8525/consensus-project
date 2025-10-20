@@ -1,0 +1,3393 @@
+# Unused Python Files Report (2025-10-20)
+
+This report lists Python files that may no longer be in use.
+
+- /home/rafa1215/generate_token.py — **High Confidence: Unused**
+- /home/rafa1215/github_visibility_checker.py — **High Confidence: Unused**
+- /home/rafa1215/.pythonstartup.py — **High Confidence: Unused**
+- /home/rafa1215/watchdog_log_checker.py — **High Confidence: Unused**
+- /home/rafa1215/simulate_sms_test.py — **High Confidence: Unused**
+- /home/rafa1215/heartbeat_logger.py — Possible active (likely active based on filename)
+- /home/rafa1215/restart_and_verify.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/test_twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/voice_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/launch_mcl.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/generate_token.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/run_all_tasks_once.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/memory_indexer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/test_sms.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/absorb_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/pythonanywhere_task_combined.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/debug_twilio.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/send_proactive_questions.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_upc_corrections.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/upload_test_file.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/zip_logs_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_guard_rc0safe.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/pythonanywhere_daily_task_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/vpn_fallback_monitor.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/watchdog_log_checker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/voice_trigger_utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/twilio_config_loader.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_swim_laps.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_existing_logs_only.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/verify_sms_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/verify_nutrition_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/upload_weekly_summary_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/query_memory_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agent_code_review_logger.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/webhook_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/master-control-loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/daily_sms_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/email_to_sheet_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/auto_commit_kb_cron_ready.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_steps_hr.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_kitchen_log_secure_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/encrypt_note.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_kitchen_log_with_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/verify_fitness_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/upload_backup_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/dashboard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/heartbeat_logger.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/phase9_bootstrap_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/ai_console_cloud.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/validate_twilio_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/integration_reporter.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_progress_evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_active_tasks_to_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/drive_test_upload.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_kitchen_log_secure_v3.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/memory_auto_commit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/batch_push_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_barcode_item.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_active_tasks_final.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/flask_app_with_query_memory_index.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/check_fitness_logs.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_privacy_alert.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/swarm_debate_logger.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/heartbeat_log_writer.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/generate_weekly_log_summary.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/memory_auto_commit_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/verify_sleep_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/heartbeat_utils.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/auto_commit_kb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/git-filter-repo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agent_heartbeat_check.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/add_reminder_form.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/find_large_files.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/absorb_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/safe_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents_recommendation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/finalizer_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/test_io.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_device_metric.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/verify_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/role_checker_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_kitchen_log_secure.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/backup_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/send_reminder_util.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/geofence_trigger_handler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_meal_entry.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/log_reward_points.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_media_view.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/sms_sandbox_monitor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agent_self_assessment.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_agent_insight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_fallback_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/weekly_status_updater.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/github_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/log_financial_risk.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/push_kitchen_log_dynamic_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_agent_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/master_control_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/log_agent_lesson.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/smoke_test.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/geofence_reminder_map.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/run_agent_sweep.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/generate_weekly_log_summary_no_restriction.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/flask_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/safe_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/daily_digest_logger.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agent_self_optimization_logger.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/voice_worker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/send_reminder_now.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/geofence_wsgi.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/overnight_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/vpn_auto_connect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/security_audit_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/heartbeat_scheduler_loop.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/log_initializer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/replace_direct_twilio_calls.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/health_monitor_recovery.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/auto_knowledge_base_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/notifications/twilio_sms_sender_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/notifications/multi_pipeline_sms_test.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/notifications/twilio_sms_sender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/scheduler_setup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/logging_setup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/queue_worker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/sms_policy.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/lockfile.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/tasks.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/mcl_v2/paths.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/core/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/launch_mcl.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/generate_token.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/run_all_tasks_once.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/memory_indexer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/pythonanywhere_task_combined.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/debug_twilio.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/send_proactive_questions.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_upc_corrections.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/upload_test_file.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/zip_logs_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/mcl_guard_rc0safe.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/pythonanywhere_daily_task_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/vpn_fallback_monitor.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/watchdog_log_checker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/voice_trigger_utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/twilio_config_loader.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_swim_laps.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_existing_logs_only.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/verify_sms_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/verify_nutrition_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/upload_weekly_summary_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/query_memory_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/mcl_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/webhook_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/daily_sms_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/email_to_sheet_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/auto_commit_kb_cron_ready.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_steps_hr.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_kitchen_log_secure_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/encrypt_note.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_kitchen_log_with_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/verify_fitness_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/upload_backup_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/dashboard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/phase9_bootstrap_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/ai_console_cloud.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/validate_twilio_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_progress_evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_active_tasks_to_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_kitchen_log_secure_v3.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/memory_auto_commit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/batch_push_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_barcode_item.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_active_tasks_final.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/flask_app_with_query_memory_index.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/check_fitness_logs.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_privacy_alert.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/heartbeat_log_writer.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/generate_weekly_log_summary.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/memory_auto_commit_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/verify_sleep_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/auto_commit_kb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/git-filter-repo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agent_heartbeat_check.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/add_reminder_form.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/find_large_files.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/safe_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/test_io.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_device_metric.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/verify_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_kitchen_log_secure.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/send_reminder_util.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/geofence_trigger_handler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_meal_entry.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_reward_points.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_media_view.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agent_self_assessment.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_agent_insight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_fallback_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/weekly_status_updater.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_financial_risk.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/push_kitchen_log_dynamic_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_agent_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/log_agent_lesson.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/geofence_reminder_map.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/generate_weekly_log_summary_no_restriction.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/flask_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/safe_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/send_reminder_now.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/geofence_wsgi.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/vpn_auto_connect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/security_audit_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/health_monitor_recovery.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/auto_knowledge_base_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/notifications/twilio_sms_sender_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/notifications/multi_pipeline_sms_test.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/notifications/twilio_sms_sender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/mcl_v2/logging_setup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/core/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/seed/generate_index_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/consensus/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/consensus/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/consensus/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/consensus/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/consensus/memory_viewer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents_notify.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/catchup_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/barcode_cache.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/simulate_geofence.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/preflight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/support_sites_router.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/absorb_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/fitness_normalize.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/core_sanity_suite.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/unpack_inbox.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/barcode_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/alert_triage.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/reminder_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/ask_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/absorb_status_report.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents_postclean.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/consensus_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/filename_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/import_fitness_dispatch.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/nutrition_normalize.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/fix_remaining_twilio_calls.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/geofence_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/absorb_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/verify_logs_tree.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/absorb_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/write_memory_heartbeats.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents_orchestrator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/geofence_engine.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/geo_receiver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/dedupe_normalized.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/get_folder_size.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/remind.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/vpn_autoconnect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/health_check_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/absorb_log_append.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/gen_status_report.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents_daily_improvement.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/pa_tasks_audit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/audit_geofencing.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/run_task.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/status_report_builder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/barcode_postfilter.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/backup_fitness.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/absorb_hourly.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/voice_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/watchdog_memory_absorb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/voice_geo_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents/utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents/memory_sink.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agents/memory_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/router/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/router/writer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/router/errors.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/router/recommender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/router/sites.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/router/net.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/importers/samsung_health_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/importers/apple_health_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/importers/fitbit_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/importers/google_fit_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/importers/_shared.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/importers/strava_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/context_weaver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/common.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/evolutionist.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/feedback_looper.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/strategist.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/code_spawner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tools/agent_plugins/role_assigner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/scripts/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/scripts/auto_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/send_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/log_insights.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/executor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/evaluator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/generate_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/self_improver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/memory_manager.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/planner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/weekly_backup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/supervisor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/core/agent_base.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/core/event_bus.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/core/metrics.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/core/store.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/_archived/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/_archived/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/agents/_archived/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/agent_dispatcher_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/agent_team_demo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/agent_dispatch_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/data_analyst_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/fitness_coach_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/legal_advisor_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/modules/agent_dispatcher/test_agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tests/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/tests/test_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/common/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/common/twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/consensus-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/hivemind/normalize_csv.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/hivemind/generate_agent_prompts.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/hivemind/normalize_csv_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/hivemind/hivemind_aggregator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/ai-dashboard/node_modules/shell-quote/print.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/ai-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/reminder agent/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/upload_sync/auto_push/watcher.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/upload_sync/manual_push/push_kitchen_log_secure.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/upload_sync/manual_push/push_kitchen_log.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/_sim_unpack/twilio_sms_package/send_sms.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/sms webhook/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/_sim_unpack/prompts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/seed/generate_index_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/consensus/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/consensus/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/consensus/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/consensus/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/consensus/memory_viewer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents_notify.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/catchup_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/barcode_cache.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/simulate_geofence.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/preflight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/support_sites_router.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/absorb_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/fitness_normalize.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/core_sanity_suite.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/unpack_inbox.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/barcode_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/tools/alert_triage.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/reminder_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/ask_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/absorb_status_report.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents_postclean.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/consensus_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/filename_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/import_fitness_dispatch.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/nutrition_normalize.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/fix_remaining_twilio_calls.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/movies_monitor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/geofence_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/tools/absorb_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/backup_sync_drive.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/tools/verify_logs_tree.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/absorb_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/write_memory_heartbeats.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/tools/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents_orchestrator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/geofence_engine.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/geo_receiver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/dedupe_normalized.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/get_folder_size.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/remind.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/vpn_autoconnect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/tools/github_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/tools/health_check_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/absorb_log_append.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/gen_status_report.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents_daily_improvement.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/pa_tasks_audit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/audit_geofencing.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/run_task.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/status_report_builder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/barcode_postfilter.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/backup_fitness.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/absorb_hourly.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/voice_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/watchdog_memory_absorb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/voice_geo_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents/utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents/memory_sink.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agents/memory_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/router/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/router/writer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/router/errors.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/router/recommender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/router/sites.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/router/net.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/importers/samsung_health_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/importers/apple_health_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/importers/fitbit_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/importers/google_fit_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/importers/_shared.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/importers/strava_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/context_weaver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/common.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/evolutionist.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/feedback_looper.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/strategist.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/code_spawner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tools/agent_plugins/role_assigner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/scripts/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/scripts/auto_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/agents/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/send_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/log_insights.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/executor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/evaluator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/generate_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/self_improver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/memory_manager.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/planner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/weekly_backup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/supervisor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/core/agent_base.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/core/event_bus.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/core/metrics.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/core/store.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/_archived/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/_archived/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/agents/_archived/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/agent_dispatcher_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/agent_team_demo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/agent_dispatch_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/data_analyst_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/fitness_coach_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/legal_advisor_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/modules/agent_dispatcher/test_agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/memory/tools/daily_voice_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tests/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tests/test_sms_policy.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/tests/test_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/common/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/common/twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/consensus-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/hivemind/normalize_csv.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/hivemind/generate_agent_prompts.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/hivemind/normalize_csv_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/hivemind/hivemind_aggregator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/dashboard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/test_io.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/core/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/consensus/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/consensus/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/consensus/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/consensus/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/consensus/memory_viewer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/send_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/log_insights.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/executor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/generate_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/memory_manager.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/agents/planner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/tests/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/tests/test_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/.cache/github_memory_repo/prompts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/ai-dashboard/node_modules/shell-quote/print.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/ai-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/reminder agent/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/upload_sync/auto_push/watcher.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/upload_sync/manual_push/push_kitchen_log_secure.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/upload_sync/manual_push/push_kitchen_log.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project-old/twilio_sms_package/send_sms.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/sms webhook/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project-old/prompts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.ipython/profile_default/startup/00-env.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/test_twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/voice_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/launch_mcl.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/generate_token.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/run_all_tasks_once.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory_indexer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/test_sms.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/absorb_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/pythonanywhere_task_combined.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/debug_twilio.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/send_proactive_questions.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_upc_corrections.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/upload_test_file.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/zip_logs_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_guard_rc0safe.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/pythonanywhere_daily_task_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/vpn_fallback_monitor.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/watchdog_log_checker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/voice_trigger_utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/twilio_config_loader.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_swim_laps.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_existing_logs_only.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/verify_sms_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/verify_nutrition_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/upload_weekly_summary_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/query_memory_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/webhook_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/master-control-loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/daily_sms_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/email_to_sheet_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/auto_commit_kb_cron_ready.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_steps_hr.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_kitchen_log_secure_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/encrypt_note.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_kitchen_log_with_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/verify_fitness_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/upload_backup_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/dashboard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/heartbeat_logger.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/phase9_bootstrap_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/daily_summary_generator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/ai_console_cloud.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/validate_twilio_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/integration_reporter.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_progress_evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_active_tasks_to_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_kitchen_log_secure_v3.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory_auto_commit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/batch_push_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_barcode_item.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_active_tasks_final.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/flask_app_with_query_memory_index.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/cleanup_archives.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/check_fitness_logs.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_privacy_alert.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/heartbeat_log_writer.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/generate_weekly_log_summary.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory_auto_commit_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/verify_sleep_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/heartbeat_utils.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/auto_commit_kb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/git-filter-repo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agent_heartbeat_check.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/add_reminder_form.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/find_large_files.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/absorb_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/safe_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents_recommendation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/finalizer_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/test_io.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_device_metric.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/verify_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/role_checker_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_kitchen_log_secure.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/backup_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/send_reminder_util.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/geofence_trigger_handler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_meal_entry.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/authorize_gmail_full_access.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_reward_points.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_media_view.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/sms_sandbox_monitor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agent_self_assessment.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_agent_insight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_fallback_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/weekly_status_updater.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/github_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/log_financial_risk.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/push_kitchen_log_dynamic_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_agent_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/master_control_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_agent_lesson.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/smoke_test.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/geofence_reminder_map.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/generate_weekly_log_summary_no_restriction.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/flask_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/safe_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/voice_worker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/send_reminder_now.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/geofence_wsgi.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/vpn_auto_connect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/security_audit_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/log_initializer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/health_monitor_recovery.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/auto_knowledge_base_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/notifications/twilio_sms_sender_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/notifications/multi_pipeline_sms_test.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/notifications/twilio_sms_sender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/scheduler_setup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/logging_setup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/queue_worker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/sms_policy.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/lockfile.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/tasks.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/mcl_v2/paths.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/core/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/launch_mcl.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/generate_token.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/run_all_tasks_once.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/memory_indexer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/pythonanywhere_task_combined.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/debug_twilio.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/send_proactive_questions.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_upc_corrections.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/upload_test_file.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/zip_logs_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/mcl_guard_rc0safe.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/pythonanywhere_daily_task_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/vpn_fallback_monitor.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/watchdog_log_checker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/voice_trigger_utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/twilio_config_loader.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_swim_laps.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_existing_logs_only.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/verify_sms_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/verify_nutrition_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/upload_weekly_summary_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/query_memory_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/mcl_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/webhook_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/daily_sms_and_push.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/email_to_sheet_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/auto_commit_kb_cron_ready.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_steps_hr.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_kitchen_log_secure_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/encrypt_note.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_kitchen_log_with_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/verify_fitness_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/upload_backup_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/dashboard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/phase9_bootstrap_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/ai_console_cloud.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/validate_twilio_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_progress_evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_active_tasks_to_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_kitchen_log_secure_v3.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/memory_auto_commit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/batch_push_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_barcode_item.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_active_tasks_final.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/flask_app_with_query_memory_index.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/check_fitness_logs.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_privacy_alert.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/heartbeat_log_writer.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/generate_weekly_log_summary.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/memory_auto_commit_merged.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/verify_sleep_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/auto_commit_kb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/git-filter-repo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agent_heartbeat_check.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/add_reminder_form.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/find_large_files.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/safe_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/test_io.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_device_metric.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/verify_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/push_kitchen_log_secure.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/send_reminder_util.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/geofence_trigger_handler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_meal_entry.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/log_reward_points.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_media_view.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agent_self_assessment.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_agent_insight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_fallback_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/weekly_status_updater.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_financial_risk.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/push_kitchen_log_dynamic_sha.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_agent_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/log_agent_lesson.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/geofence_reminder_map.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/generate_weekly_log_summary_no_restriction.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/flask_app.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/safe_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/send_reminder_now.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/geofence_wsgi.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/vpn_auto_connect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/security_audit_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/health_monitor_recovery.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/auto_knowledge_base_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/notifications/twilio_sms_sender_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/notifications/multi_pipeline_sms_test.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/notifications/twilio_sms_sender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/mcl_v2/logging_setup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/core/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/seed/generate_index_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/consensus/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/consensus/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/consensus/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/consensus/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/consensus/memory_viewer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents_notify.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/catchup_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/barcode_cache.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/simulate_geofence.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/preflight.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/support_sites_router.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/absorb_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/fitness_normalize.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/core_sanity_suite.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/unpack_inbox.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/barcode_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/tools/alert_triage.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/reminder_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/ask_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/absorb_status_report.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents_postclean.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/consensus_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/filename_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/import_fitness_dispatch.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/nutrition_normalize.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/fix_remaining_twilio_calls.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/geofence_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/tools/absorb_memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/verify_logs_tree.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/absorb_runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/write_memory_heartbeats.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/tools/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents_orchestrator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/geofence_engine.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/geo_receiver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/dedupe_normalized.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/get_folder_size.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/remind.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/vpn_autoconnect.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/tools/health_check_loop.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/absorb_log_append.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/gen_status_report.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents_daily_improvement.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/pa_tasks_audit.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/audit_geofencing.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/run_task.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/status_report_builder.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/barcode_postfilter.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/backup_fitness.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/absorb_hourly.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/voice_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/watchdog_memory_absorb.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/voice_geo_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents/utils.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents/memory_sink.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agents/memory_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/router/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/router/writer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/router/errors.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/router/recommender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/router/sites.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/router/net.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/importers/samsung_health_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/importers/apple_health_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/importers/fitbit_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/importers/google_fit_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/importers/_shared.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/importers/strava_import.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/context_weaver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/common.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/evolutionist.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/feedback_looper.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/strategist.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/code_spawner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tools/agent_plugins/role_assigner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/scripts/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/scripts/auto_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/agents/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/send_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/log_insights.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/executor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/evaluator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/generate_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/self_improver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/memory_manager.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/planner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/weekly_backup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/supervisor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/core/agent_base.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/core/event_bus.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/core/metrics.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/core/store.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/_archived/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/_archived/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/agents/_archived/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/agent_dispatcher_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/agent_team_demo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/agent_dispatch_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/data_analyst_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/fitness_coach_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/legal_advisor_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/modules/agent_dispatcher/test_agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tests/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/tests/test_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/common/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/common/twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/hivemind/normalize_csv.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/hivemind/generate_agent_prompts.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/hivemind/normalize_csv_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/hivemind/hivemind_aggregator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/reminder agent/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/upload_sync/auto_push/watcher.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/upload_sync/manual_push/push_kitchen_log_secure.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/upload_sync/manual_push/push_kitchen_log.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/_sim_unpack/twilio_sms_package/send_sms.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/sms webhook/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/_sim_unpack/prompts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/seed/generate_index_md.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/consensus/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/consensus/main.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/consensus/menu.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/consensus/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/consensus/memory_viewer.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/tools/agents_notify.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/catchup_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/report_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/anticipation_research_agent.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/system_bootstrap.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/__init__.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/kb_ingest.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/self_heal_wrapper.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/cross_agent_fitness_intelligence.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/barcode_cache.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/simulate_geofence.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/security_audit_scheduler.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/preflight.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/recursive_evolution_manager.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_runner_patched.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/support_sites_router.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/security_audit.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_normalize.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/core_sanity_suite.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_vpn_smartlink.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/unpack_inbox.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/sms_fallback_queue.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_agent_docs_part1.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/auto_documentation_agent.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/barcode_sync.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/alert_triage.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/reminder_runner.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/optimize_agent_priorities.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/sms_service_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/permanent_layer_verifier.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/integration_manifest.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/recursive_evolution_loop.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_progress_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/movie_recommender.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/symbolic_reasoning.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/simulate_and_prepare.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/cron_diagnose_and_fix.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/ask_memory.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/vpn_runner.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/system_guard_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/security_reliability.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/mcl_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/knowledge_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_status_report.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/memory_compressor.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents_postclean.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/self_generation_engine.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agi_simulation.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/benchmark_agents.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/notify_layer.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/consensus_dispatcher.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/filename_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_sim_logger.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/import_fitness_dispatch.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_tracker_sync.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/health_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/decision_support.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/reality_audit.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/nutrition_normalize.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/daily_summary_generator.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_agent_docs_part2.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_integration.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/scenario_simulation_engine.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fix_remaining_twilio_calls.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/ai_evolutionist.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_integration_live.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/predictive_foresight_engine.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents_loop.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/finance_media.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/voice_context_loader.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/predictive_task_flow.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/update_knowledge_base.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/predictive_check_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/convert_csv_to_yaml.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_daily_state.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/scenario_simulation_suite.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/recursive_self_improvement_old.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/refine_agent_registry.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/movies_monitor.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/geofence_heartbeat.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/recursive_ai_improvement.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/knowledge_graph.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/backfill_and_patch_logs.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/verify_knowledge_base.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/vpn_test_suite.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/recursive_self_improvement.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/build_final_agent_report.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_memory.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/backup_sync_drive.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/verify_logs_tree.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_runner.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/sports_predictor.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_agent_docs_part3.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/write_memory_heartbeats.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/scheduler.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/top_priorities_report.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents_orchestrator.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/finance_audit.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/geofence_engine.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/geo_receiver.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/sandbox_executor.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/dedupe_normalized.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/get_folder_size.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/finance_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/gmail_auth_setup.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/unified_privacy_guardian.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/gmail_refresh_guard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_daily_agent_manifest.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/vpn_test_runner.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/permanent_layer_setup.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/benchmark_dashboard.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/remind.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/emotion_state_tracker.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/vpn_autoconnect.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/fitness_expansion.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/calendar_sync_guard.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/agi_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/github_sync.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/evolutionary_agi.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/health_check_loop.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_log_append.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/gen_status_report.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/knowledge_sharing.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents_daily_improvement.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/nutrition_pipeline.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/deep_agent_backfill.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/pa_tasks_audit.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/run_security_audit.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/sms_persistence_daemon.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/energy_based_scheduler.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/weekly_optimizations_generator.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_status_report.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitness_tracker.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/master_control_loop.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/meta_learning_core.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/summarize_agent_logs.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/daily_agent_progress_logger.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/storage_cleanup.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/audit_geofencing.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/run_task.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_log_parser.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/status_report_builder.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/adaptive_code_evolver.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/barcode_postfilter.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/cleanup_agent.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/auto_documentation.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/movie_sync_agent.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/backup_fitness.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/absorb_hourly.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/reminder_master.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/fitbit_ingestor.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/log_memory_manifest.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/final_validation_reporter.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/failed_task_digest.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/log_rotate.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/backfill_and_patch_logs_v2.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_final_readme.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/progress_evaluator.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/git_auto_commit.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/shared_intelligence_loop.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/security_audit_runner.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/verify_kb_permissions.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/self_improvement_loop.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/heartbeat_scheduler_loop.py — Possible active (likely active tool, likely active based on filename)
+- /home/rafa1215/consensus-project/tools/fitbit_auth_manual.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/voice_status.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/watchdog_memory_absorb.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/voice_geo_status.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_weekly_report.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/generate_weekly_status.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents/__init__.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents/utils.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents/memory_sink.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agents/memory_agent.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/ai_evolution_sandbox/run_cycle.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/router/__init__.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/router/writer.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/router/errors.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/router/recommender.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/router/sites.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/router/net.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/importers/samsung_health_import.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/importers/apple_health_import.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/importers/fitbit_import.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/importers/google_fit_import.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/importers/_shared.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/importers/strava_import.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/__init__.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/context_weaver.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/common.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/evolutionist.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/feedback_looper.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/strategist.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/code_spawner.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/tools/agent_plugins/role_assigner.py — Possible active (likely active tool)
+- /home/rafa1215/consensus-project/scripts/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/scripts/auto_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/agents/gmail_alert_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/gmail_misc_split_by_sender.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/hot_weather_swim_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/send_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/log_insights.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/executor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/gmail_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/evaluator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/gmail_misc_merge_batches.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/gmail_misc_sorter_by_name.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/memory.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/gmail_voice_reader.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/generate_digest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/self_improver.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/memory_manager.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/planner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/weekly_backup.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/gmail_misc_sorter.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/supervisor.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/core/agent_base.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/core/event_bus.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/core/metrics.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/core/store.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/_archived/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/_archived/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/agents/_archived/runner.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/agent_dispatcher_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/project_manager_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/agent_team_demo.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/agent_dispatch_api.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/data_analyst_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/fitness_coach_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/legal_advisor_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/modules/agent_dispatcher/test_agent_dispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory/logs/system/.last_log_memory_manifest.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory/logs/system/.last_vpn_test_suite.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/memory/logs/system/.last_verify_kb_permissions.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory/logs/system/.last_fitness_tracker.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/memory/logs/system/.last_generate_weekly_status.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/tests/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/tests/test_sms_policy.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/tests/test_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/common/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/common/twilio_guard.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/consensus-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/hivemind/normalize_csv.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/hivemind/generate_agent_prompts.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/hivemind/normalize_csv_v2.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/hivemind/hivemind_aggregator.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/ai-dashboard/node_modules/shell-quote/print.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/ai-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/reminder agent/reminder_agent.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/upload_sync/auto_push/watcher.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/upload_sync/manual_push/push_kitchen_log_secure.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/upload_sync/manual_push/push_kitchen_log.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/anticipation_research_agent_2025-10-13T23:09:12Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/build_final_agent_report_2025-10-13T23:20:07Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/voice_context_loader_2025-10-13T23:19:14Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/finance_media_2025-10-13T23:19:12Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/verify_logs_tree_2025-10-13T23:20:22Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/generate_daily_state_2025-10-13T23:19:20Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/weekly_optimizations_generator_2025-10-13T23:21:48Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/sms_fallback_queue_2025-10-13T23:17:06Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/security_reliability_2025-10-13T23:17:59Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/simulate_and_prepare_2025-10-13T23:17:33Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/predictive_task_flow_2025-10-13T23:19:15Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/write_memory_heartbeats_2025-10-13T23:20:30Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/get_folder_size_2025-10-13T23:20:55Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/finance_audit_2025-10-13T23:20:50Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/verify_knowledge_base_2025-10-13T23:19:54Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/import_fitness_dispatch_2025-10-13T23:18:32Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_integration_live_2025-10-13T23:19:07Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/progress_evaluator_2025-10-13T23:23:07Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/recursive_ai_improvement_2025-10-13T23:19:39Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/emotion_state_tracker_2025-10-13T23:21:08Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/catchup_guard_2025-10-13T23:19:23Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/log_rotate_2025-10-13T23:22:53Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/generate_agent_docs_part1_2025-10-13T23:17:08Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/generate_status_report_2025-10-13T23:21:49Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/run_task_2025-10-13T23:22:19Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/log_memory_manifest_2025-10-13T23:22:38Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_progress_master_2025-10-13T23:17:20Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/agi_simulation_2025-10-13T23:18:17Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/shared_intelligence_loop_2025-10-13T23:23:10Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/symbolic_reasoning_2025-10-13T23:17:32Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/simulate_geofence_2025-10-13T23:16:36Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/filename_guard_2025-10-13T23:18:31Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/alert_triage_2025-10-13T23:17:12Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/sms_service_guard_2025-10-13T23:17:15Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_integration_2025-10-13T23:18:53Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/security_audit_scheduler_2025-10-13T23:16:39Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/scheduler_2025-10-13T23:20:32Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_tracker_sync_2025-10-13T23:18:33Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/kb_ingest_2025-10-13T23:16:31Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/voice_status_2025-10-13T23:23:26Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/backup_fitness_2025-10-13T23:22:35Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_tracker_2025-10-13T23:21:50Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/absorb_hourly_2025-10-13T23:22:36Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/vpn_autoconnect_2025-10-13T23:21:09Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/final_validation_reporter_2025-10-13T23:22:40Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/storage_cleanup_2025-10-13T23:22:07Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/preflight_2025-10-13T23:16:40Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/knowledge_graph_2025-10-13T23:19:42Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/backup_sync_drive_2025-10-13T23:20:20Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/git_auto_commit_2025-10-13T23:23:09Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/report_master_2025-10-13T23:09:11Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/status_report_builder_2025-10-13T23:22:21Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/remind_2025-10-13T23:21:06Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/agent_log_parser_2025-10-13T23:22:20Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/summarize_agent_logs_2025-10-13T23:22:04Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/absorb_guard_2025-10-13T23:16:55Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/report_master_2025-10-13T23:19:25Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/catchup_guard_2025-10-13T23:09:06Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/support_sites_router_2025-10-13T23:16:54Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/unpack_inbox_2025-10-13T23:17:03Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/agents_loop_2025-10-13T23:19:08Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/health_master_2025-10-13T23:18:36Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/geo_receiver_2025-10-13T23:20:53Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/report_master_2025-10-13T23:16:17Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/absorb_log_append_2025-10-13T23:21:26Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/security_audit_runner_2025-10-13T23:23:11Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/integration_manifest_2025-10-13T23:17:17Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/run_security_audit_2025-10-13T23:21:45Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/nutrition_normalize_2025-10-13T23:18:40Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/reminder_master_2025-10-13T23:22:37Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/recursive_evolution_manager_2025-10-13T23:16:42Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/voice_geo_status_2025-10-13T23:23:38Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/knowledge_master_2025-10-13T23:18:11Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/generate_weekly_status_2025-10-13T23:23:40Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/movies_monitor_2025-10-13T23:19:37Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/health_check_loop_2025-10-13T23:21:25Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/barcode_cache_2025-10-13T23:16:35Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/absorb_runner_2025-10-13T23:20:23Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/barcode_postfilter_2025-10-13T23:22:23Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/knowledge_sharing_2025-10-13T23:21:29Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/fitness_expansion_2025-10-13T23:21:10Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/memory_compressor_2025-10-13T23:18:14Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/agents_daily_improvement_2025-10-13T23:21:30Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/archive/agent_backups/barcode_sync_2025-10-13T23:17:10Z_old.py — Possible active (likely active based on filename)
+- /home/rafa1215/consensus-project/archive/agent_backups/notify_layer_2025-10-13T23:18:18Z_old.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/twilio_sms_package/send_sms.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/sms webhook/sms_webhook.py — **High Confidence: Unused**
+- /home/rafa1215/consensus-project/prompts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/memory_indexer.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/debug_twilio.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/vpn_fallback_monitor.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/voice_trigger_utils.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/twilio_config_loader.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_swim_laps.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/verify_sms_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/verify_nutrition_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/upload_weekly_summary_to_drive.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/query_memory_api.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/run_perplexity_sync_audit.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/log_steps_hr.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/encrypt_note.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/verify_fitness_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/status_health_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/validate_twilio_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/sms_worker.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_progress_evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_barcode_item.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/flask_app_with_query_memory_index.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/check_fitness_logs.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_privacy_alert.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/heartbeat_log_writer.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/generate_weekly_log_summary.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/verify_sleep_log_integrity.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_device_metric.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/verify_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/send_reminder_util.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/geofence_trigger_handler.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_meal_entry.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/auto_git_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/verify_log_integrity_all.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_reward_points.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_media_view.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/send_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/inject_daily_anomaly.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_agent_insight.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_fallback_reminder.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/weekly_status_updater.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_financial_risk.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_agent_simulation.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/log_agent_lesson.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/geofence_reminder_map.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/run_perplexity_brain.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/generate_weekly_log_summary_no_restriction.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/flask_app.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/safe_github_memory_sync.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/voice_trigger_queue.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/geofence_wsgi.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/vpn_auto_connect.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/security_audit_runner.py — **High Confidence: Unused**
+- /home/rafa1215/reminder-api/temp_sync_repo/dashboard.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/menu.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/test_io.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/core/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/consensus/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/consensus/main.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/consensus/menu.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/consensus/scheduler.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/consensus/memory_viewer.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/researcher.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/send_digest.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/log_insights.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/executor.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/generate_digest.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/memory_manager.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/agents/planner.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/memory/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/tests/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/tests/test_pipeline.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/temp_sync_repo/prompts/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/reminder-api/memory/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/mysite/flask_app.py — **High Confidence: Unused**
+- /home/rafa1215/memory/dashboard.py — **High Confidence: Unused**
+- /home/rafa1215/memory/menu.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agent_heartbeat_check.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/add_reminder_form.py — **High Confidence: Unused**
+- /home/rafa1215/memory/test_io.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agent_self_assessment.py — **High Confidence: Unused**
+- /home/rafa1215/memory/logs/system/daily_status_autofill.py — **High Confidence: Unused**
+- /home/rafa1215/memory/logs/reminders/log_voice_reminder_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/core/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/memory/consensus/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/memory/consensus/main.py — **High Confidence: Unused**
+- /home/rafa1215/memory/consensus/menu.py — **High Confidence: Unused**
+- /home/rafa1215/memory/consensus/scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/memory/consensus/memory_viewer.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/log_voice_reminder_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/log_github_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/agent_self_improvement_master.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/log_vpn_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/daily_heartbeat_master.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/log_agents_activity_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/voice_reminder_watcher.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/log_perplexity_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/log_finance_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/log_calendar_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/voice_trigger.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/log_fitness_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/log_always_on_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/daily_master_loop.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/log_sms_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/log_system_health_heartbeat.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/reminder_scheduler_loop.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/generate_heartbeat_schedule_status.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/tools/voice_memory_lookup.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/generate_daily_fitness_log.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/reminder_scheduler.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tools/heartbeat_scheduler_loop.py — Possible active (likely active based on filename)
+- /home/rafa1215/memory/agents/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/researcher.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/runner.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/send_digest.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/log_insights.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/executor.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/generate_digest.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/memory_manager.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/planner.py — **High Confidence: Unused**
+- /home/rafa1215/memory/agents/weekly_backup.py — **High Confidence: Unused**
+- /home/rafa1215/memory/.venv/Lib/site-packages/opentelemetry/proto/logs/v1/logs_pb2.py — **High Confidence: Unused**
+- /home/rafa1215/memory/.venv/Lib/site-packages/opentelemetry/proto/collector/logs/v1/logs_service_pb2.py — **High Confidence: Unused**
+- /home/rafa1215/memory/.venv/Lib/site-packages/opentelemetry/proto/collector/logs/v1/logs_service_pb2_grpc.py — **High Confidence: Unused**
+- /home/rafa1215/memory/memory/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tests/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/memory/tests/test_pipeline.py — **High Confidence: Unused**
+- /home/rafa1215/memory/ai-dashboard/node_modules/flatted/python/flatted.py — **High Confidence: Unused**
+- /home/rafa1215/memory/prompts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/barcode_keto_logger/barcode_keto_logger.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/py.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/mccabe.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/discover_files.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/defaults.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/violation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/processor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/_compat.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/style_guide.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/checker.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/plugins/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/plugins/finder.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/plugins/reporter.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/plugins/pyflakes.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/plugins/pycodestyle.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/api/legacy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/options/manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/options/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/options/config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/options/parse_args.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/options/aggregator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/formatting/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/formatting/base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/formatting/_windows_color.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/formatting/default.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/main/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/main/debug.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/main/cli.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/main/options.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flake8/main/application.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/compat.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_argcomplete.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/warning_types.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/logging.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/stepwise.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/monkeypatch.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/main.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/pastebin.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/unraisableexception.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/faulthandler.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/pytester_assertions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/pathlib.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/legacypath.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/runner.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/scope.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/timing.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/hookspec.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/pytester.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/setupplan.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/threadexception.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/python_api.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/terminal.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/doctest.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/tmpdir.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/deprecated.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/warnings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/python_path.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/fixtures.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/freeze_support.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/junitxml.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/outcomes.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/stash.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/debugging.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/cacheprovider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/reports.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/helpconfig.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/python.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/skipping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/nodes.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/setuponly.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/unittest.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/capture.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/recwarn.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/mark/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/mark/structures.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/mark/expression.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/config/compat.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/config/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/config/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/config/findpaths.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/config/argparsing.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/assertion/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/assertion/truncate.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/assertion/rewrite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/assertion/util.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_io/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_io/pprint.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_io/saferepr.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_io/terminalwriter.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_io/wcwidth.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_py/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_py/path.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_py/error.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_code/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_code/code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/_pytest/_code/source.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/google_auth_oauthlib/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/google_auth_oauthlib/flow.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/google_auth_oauthlib/helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/google_auth_oauthlib/interactive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/google_auth_oauthlib/tool/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/google_auth_oauthlib/tool/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/ruff/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/ruff/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/watchmedo.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/events.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/tricks/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/polling.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/inotify.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/inotify_buffer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/kqueue.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/api.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/fsevents2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/inotify_c.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/read_directory_changes.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/winapi.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/observers/fsevents.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/event_debouncer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/patterns.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/platform.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/process_watcher.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/bricks.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/dirsnapshot.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/echo.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/watchdog/utils/delayed_queue.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/schedule/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/file.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/_pure_python_crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/transport.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/_openssl_crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/clientsecrets.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/tools.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/service_account.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/_pkce.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/_pycrypto_crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/appengine.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/keyring_storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/multiprocess_file_storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/_appengine_ndb.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/devshell.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/sqlalchemy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/_metadata.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/flask_util.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/xsrfutil.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/gce.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/dictionary_storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/models.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/signals.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/views.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/site.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/decorators.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/oauth2client/contrib/django_util/apps.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/request_validator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/twiml/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/twiml/messaging_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/twiml/fax_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/twiml/voice_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/deserialize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/instance_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/domain.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/page.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/obsolete.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/instance_resource.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/values.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/list_resource.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/serialize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/base/client_base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/auth_strategy/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/auth_strategy/token_auth_strategy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/auth_strategy/auth_strategy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/auth_strategy/auth_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/auth_strategy/no_auth_strategy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/token_manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/async_http_client.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/client_token_manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/request.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/validation_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/http_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/http/orgs_token_manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/access_token/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/access_token/grants.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/taskrouter/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/taskrouter/capabilities.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/validation/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/jwt/client/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/credential/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/credential/orgs_credential_provider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/credential/client_credential_provider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/credential/credential_provider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/IamBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/v1/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/v1/get_api_keys.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/v1/api_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/iam/v1/new_api_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/monitor/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/monitor/MonitorBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/monitor/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/monitor/v1/alert.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/monitor/v1/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/PreviewIamBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/versionless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/versionless/organization/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/versionless/organization/role_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/versionless/organization/user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/versionless/organization/account.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/v1/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview_iam/v1/authorize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/frontline_api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/frontline_api/FrontlineApiBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/frontline_api/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/frontline_api/v1/user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/AccountsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/secondary_auth_token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/bulk_contacts.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/safelist.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/auth_token_promotion.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/bulk_consents.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/credential/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/credential/public_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/accounts/v1/credential/aws.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/IpMessagingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/user/user_binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/channel/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v2/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/ip_messaging/v1/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/TrunkingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/trunk/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/trunk/ip_access_control_list.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/trunk/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/trunk/credential_list.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/trunk/origination_url.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trunking/v1/trunk/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/AssistantsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/policy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/tool.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/knowledge/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/knowledge/chunk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/knowledge/knowledge_status.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/assistant/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/assistant/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/assistant/feedback.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/assistant/assistants_tool.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/assistant/assistants_knowledge.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/session/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/assistants/v1/session/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/IntelligenceBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/service.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/operator_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/custom_operator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/operator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/operator_attachments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/operator_attachment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/prebuilt_operator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/transcript/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/transcript/operator_result.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/transcript/media.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/intelligence/v2/transcript/sentence.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/SupersimBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/usage_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/network.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/sms_command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/settings_update.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/ip_command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/fleet.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/esim_profile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/network_access_profile/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/network_access_profile/network_access_profile_network.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/sim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/sim/billing_period.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/supersim/v1/sim/sim_ip_address.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/TrusthubBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/compliance_tollfree_inquiries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/end_user_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/policies.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/end_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/supporting_document_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/supporting_document.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/compliance_inquiries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/compliance_registration_inquiries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/customer_profiles/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/customer_profiles/customer_profiles_channel_endpoint_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/customer_profiles/customer_profiles_entity_assignments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/customer_profiles/customer_profiles_evaluations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/trust_products/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/trust_products/trust_products_channel_endpoint_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/trust_products/trust_products_evaluations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/trusthub/v1/trust_products/trust_products_entity_assignments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/ContentBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v2/content_and_approvals.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v2/content.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v1/legacy_content.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v1/content_and_approvals.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v1/content/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v1/content/approval_create.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/content/v1/content/approval_fetch.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/EventsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/event_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/sink/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/sink/sink_validate.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/sink/sink_test.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/subscription/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/subscription/subscribed_event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/schema/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/events/v1/schema/schema_version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/InsightsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/call_summaries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/setting.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/conference/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/conference/conference_participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/room/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/room/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/call/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/call/metric.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/call/annotation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/call/call_summary.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/insights/v1/call/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/oauth/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/oauth/OauthBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/oauth/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/oauth/v1/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/oauth/v1/authorize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/ProxyBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/short_code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/session/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/session/interaction.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/session/participant/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/proxy/v1/service/session/participant/message_interaction.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/StudioBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow_validate.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/flow_test_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/flow_revision.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/execution/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/execution/execution_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/execution/execution_step/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v2/flow/execution/execution_step/execution_step_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/engagement/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/engagement/engagement_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/engagement/step/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/engagement/step/step_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/execution/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/execution/execution_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/execution/execution_step/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/studio/v1/flow/execution/execution_step/execution_step_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/lookups/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/lookups/LookupsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/lookups/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/lookups/v2/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/lookups/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/lookups/v1/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/MicrovisorBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/account_config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/account_secret.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/device/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/device/device_config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/device/device_secret.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/app/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/microvisor/v1/app/app_manifest.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/NotifyBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/v1/service/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/notify/v1/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/VoiceBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/byoc_trunk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/archived_call.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/source_ip_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/ip_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/dialing_permissions/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/dialing_permissions/settings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/dialing_permissions/bulk_country_update.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/dialing_permissions/country/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/dialing_permissions/country/highrisk_special_prefix.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/connection_policy/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/voice/v1/connection_policy/connection_policy_target.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/VideoBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/composition_hook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/composition_settings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/composition.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/recording_settings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/recording_rules.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/room_recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/participant/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/participant/subscribe_rules.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/participant/anonymize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/participant/subscribed_track.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/video/v1/room/participant/published_track.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/PreviewBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/hosted_numbers/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/hosted_numbers/hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/hosted_numbers/authorization_document/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/hosted_numbers/authorization_document/dependent_hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/wireless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/wireless/command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/wireless/rate_plan.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/wireless/sim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/wireless/sim/usage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/marketplace/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/marketplace/available_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/marketplace/available_add_on/available_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/marketplace/installed_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/preview/marketplace/installed_add_on/installed_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/VerifyBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/safelist.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/template.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/verification_attempt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/verification_attempts_summary.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/form.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/access_token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/verification_check.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/verification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/messaging_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/rate_limit/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/rate_limit/bucket.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/entity/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/entity/factor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/entity/new_factor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/entity/challenge/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/verify/v2/service/entity/challenge/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/PricingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v2/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v2/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v2/voice/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v2/voice/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v2/voice/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/phone_number/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/phone_number/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/voice/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/voice/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/voice/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/messaging/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/pricing/v1/messaging/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/ApiBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/short_code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/transcription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/authorized_connect_app.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/outgoing_caller_id.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/application.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/validation_request.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/new_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/new_signing_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/signing_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/balance.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/connect_app.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/toll_free.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/mobile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/local.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/assigned_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/assigned_add_on/assigned_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/message/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/message/feedback.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/message/media.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/conference/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/conference/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/conference/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/recording/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/recording/transcription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/recording/add_on_result/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/recording/add_on_result/payload/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/recording/add_on_result/payload/data.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/trigger.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/yesterday.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/monthly.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/daily.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/today.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/last_month.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/all_time.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/this_month.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/usage/record/yearly.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/credential_list/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/credential_list/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/credential_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/ip_access_control_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/auth_calls_ip_access_control_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/auth_calls_credential_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_registrations/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_registrations/auth_registrations_credential_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/ip_access_control_list/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/sip/ip_access_control_list/ip_address.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/shared_cost.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/toll_free.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/machine_to_machine.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/voip.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/national.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/mobile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/local.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/address/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/address/dependent_phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/payment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/siprec.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/transcription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/user_defined_message_subscription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/stream.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/user_defined_message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/call/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/queue/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/api/v2010/account/queue/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/TaskrouterBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/activity.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workspace_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workspace_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workspace_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/workflow_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/workflow_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/workflow_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queues_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_bulk_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/worker_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/workers_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/workers_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/reservation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/workers_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/worker/worker_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/taskrouter/v1/workspace/task/reservation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/NumbersBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/bundle_clone.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/bulk_hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/end_user_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/end_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/supporting_document_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/supporting_document.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/regulation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/bundle_copy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/replace_items.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/item_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/authorization_document/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v2/authorization_document/dependent_hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/porting_webhook_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/signing_request_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/porting_webhook_configuration_delete.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/eligibility.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/bulk_eligibility.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/porting_webhook_configuration_fetch.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/porting_portability.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/porting_port_in_phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/numbers/v1/porting_port_in.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/SyncBase.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_map/sync_map_permission.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_map/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_map/sync_map_item.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/document/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/document/document_permission.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_stream/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_stream/stream_message.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_list/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_list/sync_list_item.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/sync/v1/service/sync_list/sync_list_permission.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/WirelessBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/usage_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/rate_plan.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/sim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/sim/usage_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/wireless/v1/sim/data_session.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/ServerlessBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/asset/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/asset/asset_version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/function/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/function/function_version/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/function/function_version/function_version_content.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/build/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/build/build_status.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/environment/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/environment/deployment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/environment/variable.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/serverless/v1/service/environment/log.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/MessagingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v2/channels_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/deactivations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/domain_certs.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/domain_config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/request_managed_cert.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/tollfree_verification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/external_campaign.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/usecase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/linkshortening_messaging_service_domain_association.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/domain_config_messaging_service.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/linkshortening_messaging_service.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/alpha_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/channel_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/short_code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/us_app_to_person.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/destination_alpha_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/service/us_app_to_person_usecase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/brand_registration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/brand_registration/brand_vetting.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/messaging/v1/brand_registration/brand_registration_otp.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/ConversationsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/conversation_with_participants.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/participant_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/address_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/configuration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/configuration/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/user/user_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/conversation_with_participants.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/participant_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/configuration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/configuration/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/configuration/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/user/user_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/conversation/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/conversation/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/conversation/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/conversation/message/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/service/conversation/message/delivery_receipt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/conversation/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/conversation/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/conversation/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/conversation/message/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/conversations/v1/conversation/message/delivery_receipt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/FlexApiBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v2/web_channels.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v2/flex_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/flex_flow.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_segments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/provisioning_status.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_questionnaires_category.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/assessments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin_version_archive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_settings_answer_sets.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_assessments_comment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_questionnaires.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_settings_comment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_conversations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_questionnaires_question.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/web_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin_configuration_archive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_user_roles.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/insights_session.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin_archive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin_release.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin/plugin_versions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin_configuration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/plugin_configuration/configured_plugin.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/interaction/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/interaction_transfer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/interaction_channel_participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/interaction_channel_invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/routes/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/routes/RoutesBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/routes/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/routes/v2/trunk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/routes/v2/sip_domain.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/routes/v2/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/BulkexportsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/v1/export_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/v1/export/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/v1/export/job.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/v1/export/export_custom_job.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/bulkexports/v1/export/day.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/MarketplaceBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/referral_conversion.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/module_data_management.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/module_data.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/available_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/available_add_on/available_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/installed_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/installed_add_on/installed_add_on_usage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/marketplace/v1/installed_add_on/installed_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/ChatBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/user/user_binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/channel/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v2/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v1/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v3/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/twilio/rest/chat/v3/channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flask_cors/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flask_cors/extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flask_cors/decorator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flask_cors/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/flask_cors/core.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/pytest/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/pytest/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/spreadsheet.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/urls.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/http_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/cell.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/auth.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.10/site-packages/gspread/worksheet.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/git_filter_repo.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/_IntegerNative.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/_IntegerGMP.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/Numbers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/Primality.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/_IntegerBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Math/_IntegerCustom.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/IO/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/IO/PKCS8.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/IO/_PBES.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/IO/PEM.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/RFC1751.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/_cpu_features.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/strxor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/asn1.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/_raw_api.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/py3compat.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/Padding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/Counter.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Util/_file_system.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_eax.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/Salsa20.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/Blowfish.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/PKCS1_OAEP.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_cfb.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/ARC2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_ccm.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_ecb.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/DES.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_kwp.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/PKCS1_v1_5.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_gcm.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_EKSBlowfish.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_pkcs1_oaep_decode.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/CAST.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/ChaCha20.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_kw.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/ARC4.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/DES3.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_ofb.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_openpgp.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/ChaCha20_Poly1305.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_siv.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_cbc.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_ocb.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/AES.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Cipher/_mode_ctr.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/_point.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/DSA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/_montgomery.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/ElGamal.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/ECC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/_curve.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/_openssh.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/_edwards.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/RSA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/PublicKey/_nist_ecc.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/loader.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/st_common.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Math/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Math/test_modexp.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Math/test_Primality.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Math/test_modmult.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Math/test_Numbers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/IO/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/IO/test_PBES.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/IO/test_PKCS8.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/test_Padding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/test_Counter.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/test_asn1.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/test_strxor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/test_rfc1751.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Util/test_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_SIV.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_KW.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_ChaCha20.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_Blowfish.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_ARC4.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/common.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_OpenPGP.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_EAX.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_AES.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_CCM.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_OFB.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_CBC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_Salsa20.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_GCM.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_OCB.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_CAST.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_pkcs1_oaep.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_CFB.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_DES.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_DES3.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_CTR.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_ARC2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_pkcs1_15.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Cipher/test_ChaCha20_Poly1305.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_ElGamal.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_RSA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_import_RSA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_import_Curve25519.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_ECC_Ed448.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_ECC_NIST.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_ECC_Curve25519.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_DSA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_ECC_Curve448.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_ECC_Ed25519.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_import_Curve448.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_import_ECC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/PublicKey/test_import_DSA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Random/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Random/test_random.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Signature/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Signature/test_eddsa.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Signature/test_pss.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Signature/test_dss.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Signature/test_pkcs1_15.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_cSHAKE.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_KangarooTwelve.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/common.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_TupleHash.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_MD4.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_HMAC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_KMAC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA384.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_RIPEMD160.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_TurboSHAKE.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_BLAKE2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHAKE.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_Poly1305.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA1.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_MD5.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA3_384.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA512.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA3_256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_MD2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA3_224.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA224.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_CMAC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_keccak.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Hash/test_SHA3_512.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Protocol/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Protocol/test_ecdh.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Protocol/test_HPKE.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Protocol/test_rfc1751.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Protocol/test_KDF.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/SelfTest/Protocol/test_SecretSharing.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Random/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Random/random.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/eddsa.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/PKCS1_v1_5.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/pss.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/pkcs1_15.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/PKCS1_PSS.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Signature/DSS.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/MD2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/cSHAKE256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/TupleHash128.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA3_384.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA512.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/cSHAKE128.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/TupleHash256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA3_224.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/BLAKE2s.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/KMAC256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHAKE256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/KangarooTwelve.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA1.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/RIPEMD160.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/CMAC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA224.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/TurboSHAKE128.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/MD4.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/HMAC.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA384.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA3_512.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/Poly1305.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/KMAC128.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/BLAKE2b.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHA3_256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/RIPEMD.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/TurboSHAKE256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/keccak.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/SHAKE128.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Hash/MD5.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Protocol/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Protocol/HPKE.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Protocol/DH.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Protocol/KDF.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/Cryptodome/Protocol/SecretSharing.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google_auth_oauthlib/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google_auth_oauthlib/flow.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google_auth_oauthlib/helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google_auth_oauthlib/interactive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google_auth_oauthlib/tool/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google_auth_oauthlib/tool/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/propcache/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/propcache/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/propcache/api.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/propcache/_helpers_py.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fitbit/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fitbit/compliance.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fitbit/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fitbit/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fitbit/api.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/_indent.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/download_folder.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/parse_url.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/__main__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/download.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/extractall.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gdown/cached_download.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/apiclient/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/test/support/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/test/support/testresult.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/test/support/script_helper.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/pyzipper/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/pyzipper/__version__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/pyzipper/zipfile_aes.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/pyzipper/zipfile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/frozenlist/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/watchmedo.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/events.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/tricks/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/polling.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/inotify.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/inotify_buffer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/kqueue.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/api.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/fsevents2.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/inotify_c.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/read_directory_changes.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/winapi.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/observers/fsevents.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/event_debouncer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/patterns.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/platform.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/process_watcher.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/bricks.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/dirsnapshot.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/echo.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/watchdog/utils/delayed_queue.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiosignal/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/template.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/ttfonts.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/py3k.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/fpdf.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/fonts.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/html.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/fpdf/php.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/pytest_plugin.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/test_utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/payload.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/http_writer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_routedef.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_urldispatcher.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/http_websocket.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/streams.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client_middleware_digest_auth.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/cookiejar.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client_reqrep.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_ws.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_cookie_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/resolver.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_protocol.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/http_exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client_ws.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_middlewares.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/http_parser.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/connector.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/formdata.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client_exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/tracing.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client_middlewares.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_request.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_runner.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/typedefs.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/tcp_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/multipart.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/base_protocol.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/worker.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/abc.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/hdrs.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_app.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/compression_utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/http.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_fileresponse.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/payload_streamer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_server.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/web_log.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/client_proto.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/log.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/writer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/reader_py.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/models.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/reader.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp/_websocket/reader_c.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/file.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/_pure_python_crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/transport.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/_openssl_crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/clientsecrets.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/tools.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/service_account.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/_pkce.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/_pycrypto_crypt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/appengine.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/keyring_storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/multiprocess_file_storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/_appengine_ndb.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/devshell.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/sqlalchemy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/_metadata.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/flask_util.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/xsrfutil.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/gce.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/dictionary_storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/models.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/signals.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/views.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/site.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/storage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/decorators.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/oauth2client/contrib/django_util/apps.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/gdch_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/_id_token_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/id_token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/credentials.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/_credentials_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/reauth.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/webauthn_types.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/webauthn_handler_factory.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/_client_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/webauthn_handler.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/service_account.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/_service_account_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/_reauth_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/sts.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/oauth2/challenges.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_default_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/credentials.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/app_engine.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_credentials_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_service_account_info.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aws.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/impersonated_credentials.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_refresh_worker.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_jwt_async.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/environment_vars.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/identity_pool.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/iam.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/api_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_oauth2client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_cloud_sdk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_credentials_base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/external_account.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_exponential_backoff.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/metrics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/_default.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/jwt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/downscoped.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/pluggable.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/external_account_authorized_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aio/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aio/credentials.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aio/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aio/transport/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aio/transport/sessions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/aio/transport/aiohttp.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/rsa.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/_python_rsa.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/_cryptography_rsa.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/crypt/es256.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/compute_engine/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/compute_engine/credentials.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/compute_engine/_metadata.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/urllib3.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/requests.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/mtls.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/grpc.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/_custom_tls_signer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/_aiohttp_requests.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/_http_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/_mtls_helper.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/google/auth/transport/_requests_base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/request_validator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/twiml/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/twiml/messaging_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/twiml/fax_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/twiml/voice_response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/deserialize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/instance_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/domain.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/page.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/obsolete.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/instance_resource.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/values.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/list_resource.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/serialize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/base/client_base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/auth_strategy/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/auth_strategy/token_auth_strategy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/auth_strategy/auth_strategy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/auth_strategy/auth_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/auth_strategy/no_auth_strategy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/token_manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/async_http_client.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/client_token_manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/response.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/request.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/validation_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/http_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/http/orgs_token_manager.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/access_token/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/access_token/grants.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/taskrouter/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/taskrouter/capabilities.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/validation/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/jwt/client/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/credential/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/credential/orgs_credential_provider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/credential/client_credential_provider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/credential/credential_provider.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/IamBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/v1/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/v1/get_api_keys.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/v1/api_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/iam/v1/new_api_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/monitor/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/monitor/MonitorBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/monitor/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/monitor/v1/alert.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/monitor/v1/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/PreviewIamBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/versionless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/versionless/organization/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/versionless/organization/role_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/versionless/organization/user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/versionless/organization/account.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/v1/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview_iam/v1/authorize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/frontline_api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/frontline_api/FrontlineApiBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/frontline_api/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/frontline_api/v1/user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/AccountsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/secondary_auth_token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/bulk_contacts.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/safelist.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/auth_token_promotion.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/bulk_consents.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/credential/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/credential/public_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/accounts/v1/credential/aws.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/IpMessagingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/user/user_binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/channel/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v2/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/ip_messaging/v1/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/TrunkingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/trunk/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/trunk/ip_access_control_list.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/trunk/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/trunk/credential_list.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/trunk/origination_url.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trunking/v1/trunk/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/AssistantsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/policy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/tool.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/knowledge/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/knowledge/chunk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/knowledge/knowledge_status.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/assistant/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/assistant/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/assistant/feedback.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/assistant/assistants_tool.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/assistant/assistants_knowledge.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/session/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/assistants/v1/session/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/IntelligenceBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/service.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/operator_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/custom_operator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/operator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/operator_attachments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/operator_attachment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/prebuilt_operator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/transcript/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/transcript/operator_result.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/transcript/media.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/intelligence/v2/transcript/sentence.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/SupersimBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/usage_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/network.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/sms_command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/settings_update.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/ip_command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/fleet.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/esim_profile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/network_access_profile/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/network_access_profile/network_access_profile_network.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/sim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/sim/billing_period.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/supersim/v1/sim/sim_ip_address.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/TrusthubBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/compliance_tollfree_inquiries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/end_user_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/policies.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/end_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/supporting_document_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/supporting_document.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/compliance_inquiries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/compliance_registration_inquiries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/customer_profiles/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/customer_profiles/customer_profiles_channel_endpoint_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/customer_profiles/customer_profiles_entity_assignments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/customer_profiles/customer_profiles_evaluations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/trust_products/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/trust_products/trust_products_channel_endpoint_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/trust_products/trust_products_evaluations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/trusthub/v1/trust_products/trust_products_entity_assignments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/ContentBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v2/content_and_approvals.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v2/content.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v1/legacy_content.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v1/content_and_approvals.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v1/content/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v1/content/approval_create.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/content/v1/content/approval_fetch.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/EventsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/event_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/sink/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/sink/sink_validate.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/sink/sink_test.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/subscription/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/subscription/subscribed_event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/schema/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/events/v1/schema/schema_version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/InsightsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/call_summaries.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/setting.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/conference/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/conference/conference_participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/room/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/room/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/call/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/call/metric.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/call/annotation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/call/call_summary.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/insights/v1/call/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/oauth/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/oauth/OauthBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/oauth/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/oauth/v1/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/oauth/v1/authorize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/ProxyBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/short_code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/session/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/session/interaction.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/session/participant/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/proxy/v1/service/session/participant/message_interaction.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/StudioBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow_validate.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/flow_test_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/flow_revision.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/execution/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/execution/execution_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/execution/execution_step/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v2/flow/execution/execution_step/execution_step_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/engagement/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/engagement/engagement_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/engagement/step/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/engagement/step/step_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/execution/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/execution/execution_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/execution/execution_step/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/studio/v1/flow/execution/execution_step/execution_step_context.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/lookups/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/lookups/LookupsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/lookups/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/lookups/v2/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/lookups/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/lookups/v1/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/MicrovisorBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/account_config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/account_secret.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/device/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/device/device_config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/device/device_secret.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/app/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/microvisor/v1/app/app_manifest.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/NotifyBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/v1/service/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/notify/v1/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/VoiceBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/byoc_trunk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/archived_call.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/source_ip_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/ip_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/dialing_permissions/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/dialing_permissions/settings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/dialing_permissions/bulk_country_update.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/dialing_permissions/country/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/dialing_permissions/country/highrisk_special_prefix.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/connection_policy/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/voice/v1/connection_policy/connection_policy_target.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/VideoBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/composition_hook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/composition_settings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/composition.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/recording_settings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/recording_rules.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/room_recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/participant/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/participant/subscribe_rules.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/participant/anonymize.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/participant/subscribed_track.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/video/v1/room/participant/published_track.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/PreviewBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/hosted_numbers/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/hosted_numbers/hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/hosted_numbers/authorization_document/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/hosted_numbers/authorization_document/dependent_hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/wireless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/wireless/command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/wireless/rate_plan.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/wireless/sim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/wireless/sim/usage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/marketplace/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/marketplace/available_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/marketplace/available_add_on/available_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/marketplace/installed_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/preview/marketplace/installed_add_on/installed_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/VerifyBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/safelist.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/template.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/verification_attempt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/verification_attempts_summary.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/form.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/access_token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/verification_check.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/verification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/messaging_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/rate_limit/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/rate_limit/bucket.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/entity/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/entity/factor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/entity/new_factor.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/entity/challenge/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/verify/v2/service/entity/challenge/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/PricingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v2/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v2/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v2/voice/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v2/voice/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v2/voice/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/phone_number/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/phone_number/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/voice/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/voice/number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/voice/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/messaging/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/pricing/v1/messaging/country.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/ApiBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/token.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/short_code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/transcription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/authorized_connect_app.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/outgoing_caller_id.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/application.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/validation_request.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/new_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/new_signing_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/signing_key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/balance.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/connect_app.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/key.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/toll_free.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/mobile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/local.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/assigned_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/incoming_phone_number/assigned_add_on/assigned_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/feedback.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/message/media.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/conference/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/conference/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/conference/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/recording/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/recording/transcription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/recording/add_on_result/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/recording/add_on_result/payload/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/recording/add_on_result/payload/data.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/trigger.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/yesterday.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/monthly.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/daily.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/today.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/last_month.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/all_time.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/this_month.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/usage/record/yearly.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/credential_list/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/credential_list/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/credential_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/ip_access_control_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/auth_calls_ip_access_control_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_calls/auth_calls_credential_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_registrations/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/domain/auth_types/auth_type_registrations/auth_registrations_credential_list_mapping.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/ip_access_control_list/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/sip/ip_access_control_list/ip_address.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/shared_cost.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/toll_free.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/machine_to_machine.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/voip.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/national.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/mobile.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/available_phone_number_country/local.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/address/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/address/dependent_phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/payment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/siprec.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/transcription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/user_defined_message_subscription.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/stream.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/user_defined_message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/recording.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/call/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/queue/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/api/v2010/account/queue/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/TaskrouterBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/activity.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workspace_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workspace_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workspace_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/event.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/workflow_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/workflow_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/workflow/workflow_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queues_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task_queue/task_queue_bulk_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/worker_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/workers_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/workers_cumulative_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/reservation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/workers_real_time_statistics.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/worker/worker_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/taskrouter/v1/workspace/task/reservation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/NumbersBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/bundle_clone.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/bulk_hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/end_user_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/end_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/supporting_document_type.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/supporting_document.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/regulation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/bundle_copy.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/evaluation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/replace_items.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/regulatory_compliance/bundle/item_assignment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/authorization_document/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v2/authorization_document/dependent_hosted_number_order.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/porting_webhook_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/signing_request_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/porting_webhook_configuration_delete.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/eligibility.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/bulk_eligibility.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/porting_webhook_configuration_fetch.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/porting_portability.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/porting_port_in_phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/numbers/v1/porting_port_in.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/SyncBase.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_map/sync_map_permission.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_map/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_map/sync_map_item.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/document/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/document/document_permission.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_stream/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_stream/stream_message.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_list/__init__.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_list/sync_list_item.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/sync/v1/service/sync_list/sync_list_permission.py — Possible active (likely active based on filename)
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/WirelessBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/usage_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/command.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/rate_plan.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/sim/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/sim/usage_record.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/wireless/v1/sim/data_session.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/ServerlessBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/asset/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/asset/asset_version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/function/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/function/function_version/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/function/function_version/function_version_content.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/build/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/build/build_status.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/environment/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/environment/deployment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/environment/variable.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/serverless/v1/service/environment/log.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/MessagingBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v2/channels_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/deactivations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/domain_certs.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/domain_config.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/request_managed_cert.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/tollfree_verification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/external_campaign.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/usecase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/linkshortening_messaging_service_domain_association.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/domain_config_messaging_service.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/linkshortening_messaging_service.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/alpha_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/channel_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/short_code.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/us_app_to_person.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/destination_alpha_sender.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/service/us_app_to_person_usecase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/brand_registration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/brand_registration/brand_vetting.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/messaging/v1/brand_registration/brand_registration_otp.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/ConversationsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/conversation_with_participants.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/participant_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/address_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/configuration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/configuration/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/user/user_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/conversation_with_participants.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/participant_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/configuration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/configuration/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/configuration/notification.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/user/user_conversation.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/conversation/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/conversation/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/conversation/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/conversation/message/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/service/conversation/message/delivery_receipt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/conversation/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/conversation/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/conversation/participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/conversation/message/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/conversations/v1/conversation/message/delivery_receipt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/FlexApiBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v2/web_channels.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v2/flex_user.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/flex_flow.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_segments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/provisioning_status.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_questionnaires_category.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/assessments.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin_version_archive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_settings_answer_sets.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_assessments_comment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_questionnaires.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_settings_comment.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_conversations.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_questionnaires_question.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/web_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin_configuration_archive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_user_roles.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/insights_session.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin_archive.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin_release.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin/plugin_versions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin_configuration/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/plugin_configuration/configured_plugin.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/interaction/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/interaction_transfer.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/interaction_channel_participant.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/flex_api/v1/interaction/interaction_channel/interaction_channel_invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/routes/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/routes/RoutesBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/routes/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/routes/v2/trunk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/routes/v2/sip_domain.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/routes/v2/phone_number.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/BulkexportsBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/v1/export_configuration.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/v1/export/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/v1/export/job.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/v1/export/export_custom_job.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/bulkexports/v1/export/day.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/MarketplaceBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/referral_conversion.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/module_data_management.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/module_data.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/available_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/available_add_on/available_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/installed_add_on/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/installed_add_on/installed_add_on_usage.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/marketplace/v1/installed_add_on/installed_add_on_extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/ChatBase.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/user/user_binding.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/channel/webhook.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v2/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/credential.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/role.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/user/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/user/user_channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/channel/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/channel/message.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/channel/invite.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v1/service/channel/member.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v3/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/twilio/rest/chat/v3/channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/algorithms.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/api_jws.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/help.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/api_jwk.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/warnings.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/jwk_set_cache.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/api_jwt.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/jwks_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/jwt/types.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/flask_cors/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/flask_cors/extension.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/flask_cors/decorator.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/flask_cors/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/flask_cors/core.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/multidict/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/multidict/_abc.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/multidict/_multidict_py.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/multidict/_compat.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/model.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/version.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/_helpers.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/_auth.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/errors.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/mimeparse.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/schema.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/discovery.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/channel.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/http.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/sample_tools.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/discovery_cache/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/discovery_cache/base.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/discovery_cache/file_cache.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/googleapiclient/discovery_cache/appengine_memcache.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/exceptions.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/spreadsheet.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/urls.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/http_client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/cell.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/auth.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/gspread/worksheet.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohappyeyeballs/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohappyeyeballs/impl.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohappyeyeballs/utils.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohappyeyeballs/_staggered.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohappyeyeballs/types.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp_retry/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp_retry/client.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp_retry/retry_options.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/aiohttp_retry/types.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/__init__.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_quoters.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_quoting_py.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_quoting.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_path.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_parse.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_query.py — **High Confidence: Unused**
+- /home/rafa1215/.local/lib/python3.13/site-packages/yarl/_url.py — **High Confidence: Unused**

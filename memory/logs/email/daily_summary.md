@@ -1,468 +1,468 @@
 
 
-## Gmail Summary – 2025-10-19 07:30:41
-- **Unlock profile views and private messages, Rafael**
+## Gmail Summary – 2025-10-20 07:30:39
+- **🔔 Reminder: 1 new message from Classmates.com**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
+  Date: 2025-10-20 01:15
+  Snippet: Rafael, don&#39;t miss your new message❗ Image placeholder 1 new message awaits from Classmates ® View message » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy
 
-- **BMI and pool log alert policy**
+- **Google Calendar reconnection needed for tracking**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
+  Date: 2025-10-20 05:08
+  Snippet: Authentication issue: Calendar cannot be checked because Google Calendar access isn&#39;t currently authenticated. Alert system paused: Without authentication, BMI and pool lap logs, along with workout
 
-- **Rafael, you have 3 profile visits**
+- **Ordered: "WITHLOC No Hook Shower..." and 2 more items**
+  From: "Amazon.com" <auto-confirm@amazon.com>
+  Date: 2025-10-20 04:47
+  Snippet: Ordered: &quot;WITHLOC No Hook Shower...&quot; and 2 more items͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
+  Date: 2025-10-19 22:38
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
 
-- **2 Results for 'For Sale in Pittsburg'**
-  From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
-
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: Do you need a ride from Gilbert tomorrow morning? @ Sun Oct 19, 2025 9pm - 10pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-20 03:50
+  Snippet: Do you need a ride from Gilbert tomorrow morning? You have been invited by Rafael Lopez to attend an event named Do you need a ride from Gilbert tomorrow morning? on Sunday Oct 19, 2025 ⋅ 9pm – 10pm (
 
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+- **Notification: Vacuum the dryer @ Sun Oct 19, 2025 8pm - 9pm (PDT) (Rafael Lopez)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 02:49
+  Snippet: Vacuum the dryer Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Vacuum the dryer on Sunday Oct 19, 2025 ⋅ 8pm – 9pm (Pacific Time - Los Angeles). You have an
 
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
-  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
-  Date: 2025-10-18 23:58
-  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **🦾 AI Robot Phone Is Coming**
+- **🦾 FACERIP: 7 Areas AI Will Redefine**
   From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-18 23:45
-  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-20 02:45
+  Snippet: The takeover of AI, vibe working, transcription glasses, job impact, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **You have  3 items unclaimed.**
-  From: Temu <email@news.temuemail.com>
-  Date: 2025-10-18 22:03
-  Snippet: We offer gift(s) after purchases. Action Required&gt; ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
-
-
-## Gmail Summary – 2025-10-19 08:30:45
-- **[Task Update] Tomorrow's prediction summary ready**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
-
-- **Unlock profile views and private messages, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
-
-- **BMI and pool log alert policy**
-  From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
-
-- **Rafael, you have 3 profile visits**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
-
-- **2 Results for 'For Sale in Pittsburg'**
+- **1 Result for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+  Date: 2025-10-20 02:39
+  Snippet: Daily result straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: water the lawn @ Sun Oct 19, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-20 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Sunday Oct 19, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+- **You have profile visits**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-19 19:16
+  Snippet: 👀 📋 Your latest stats are in…here&#39;s what happened. Rafael is hard to forget! You&#39;ve been remembered by 1 people since joining. Go » Return the favor! Visit people you went to school with. Go »
 
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
-  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
-  Date: 2025-10-18 23:58
-  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+## Gmail Summary – 2025-10-20 08:30:51
+- **[Task Update] Tomorrow's predictions ready to review**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-20 07:46
+  Snippet: Task update from ChatGPT Tomorrow&#39;s predictions ready to review View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
 
-- **🦾 AI Robot Phone Is Coming**
+- **🔔 Reminder: 1 new message from Classmates.com**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-20 01:15
+  Snippet: Rafael, don&#39;t miss your new message❗ Image placeholder 1 new message awaits from Classmates ® View message » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy
+
+- **Google Calendar reconnection needed for tracking**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-20 05:08
+  Snippet: Authentication issue: Calendar cannot be checked because Google Calendar access isn&#39;t currently authenticated. Alert system paused: Without authentication, BMI and pool lap logs, along with workout
+
+- **Ordered: "WITHLOC No Hook Shower..." and 2 more items**
+  From: "Amazon.com" <auto-confirm@amazon.com>
+  Date: 2025-10-20 04:47
+  Snippet: Ordered: &quot;WITHLOC No Hook Shower...&quot; and 2 more items͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-19 22:38
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **Notification: Do you need a ride from Gilbert tomorrow morning? @ Sun Oct 19, 2025 9pm - 10pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 03:50
+  Snippet: Do you need a ride from Gilbert tomorrow morning? You have been invited by Rafael Lopez to attend an event named Do you need a ride from Gilbert tomorrow morning? on Sunday Oct 19, 2025 ⋅ 9pm – 10pm (
+
+- **Notification: Vacuum the dryer @ Sun Oct 19, 2025 8pm - 9pm (PDT) (Rafael Lopez)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 02:49
+  Snippet: Vacuum the dryer Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Vacuum the dryer on Sunday Oct 19, 2025 ⋅ 8pm – 9pm (Pacific Time - Los Angeles). You have an
+
+- **🦾 FACERIP: 7 Areas AI Will Redefine**
   From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-18 23:45
-  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-20 02:45
+  Snippet: The takeover of AI, vibe working, transcription glasses, job impact, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-
-## Gmail Summary – 2025-10-19 09:30:53
-- **[Task Update] Tomorrow's prediction summary ready**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
-
-- **Unlock profile views and private messages, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
-
-- **BMI and pool log alert policy**
-  From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
-
-- **Rafael, you have 3 profile visits**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
-
-- **2 Results for 'For Sale in Pittsburg'**
+- **1 Result for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+  Date: 2025-10-20 02:39
+  Snippet: Daily result straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: water the lawn @ Sun Oct 19, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
+  Date: 2025-10-20 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Sunday Oct 19, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+## Gmail Summary – 2025-10-20 09:30:43
+- **[Task Update] Tomorrow's predictions ready to review**
+  From: OpenAI <noreply@tm.openai.com>
+  Date: 2025-10-20 07:46
+  Snippet: Task update from ChatGPT Tomorrow&#39;s predictions ready to review View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
 
-- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
-  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
-  Date: 2025-10-18 23:58
-  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+- **🔔 Reminder: 1 new message from Classmates.com**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-20 01:15
+  Snippet: Rafael, don&#39;t miss your new message❗ Image placeholder 1 new message awaits from Classmates ® View message » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy
 
-- **🦾 AI Robot Phone Is Coming**
+- **Google Calendar reconnection needed for tracking**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-20 05:08
+  Snippet: Authentication issue: Calendar cannot be checked because Google Calendar access isn&#39;t currently authenticated. Alert system paused: Without authentication, BMI and pool lap logs, along with workout
+
+- **Ordered: "WITHLOC No Hook Shower..." and 2 more items**
+  From: "Amazon.com" <auto-confirm@amazon.com>
+  Date: 2025-10-20 04:47
+  Snippet: Ordered: &quot;WITHLOC No Hook Shower...&quot; and 2 more items͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
+  From: "Classmates.com" <emailreplies@messages.classmates.com>
+  Date: 2025-10-19 22:38
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
+
+- **Notification: Do you need a ride from Gilbert tomorrow morning? @ Sun Oct 19, 2025 9pm - 10pm (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 03:50
+  Snippet: Do you need a ride from Gilbert tomorrow morning? You have been invited by Rafael Lopez to attend an event named Do you need a ride from Gilbert tomorrow morning? on Sunday Oct 19, 2025 ⋅ 9pm – 10pm (
+
+- **Notification: Vacuum the dryer @ Sun Oct 19, 2025 8pm - 9pm (PDT) (Rafael Lopez)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 02:49
+  Snippet: Vacuum the dryer Join with Google Meet – You have been invited by Rafael Lopez to attend an event named Vacuum the dryer on Sunday Oct 19, 2025 ⋅ 8pm – 9pm (Pacific Time - Los Angeles). You have an
+
+- **🦾 FACERIP: 7 Areas AI Will Redefine**
   From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-18 23:45
-  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-20 02:45
+  Snippet: The takeover of AI, vibe working, transcription glasses, job impact, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-
-## Gmail Summary – 2025-10-19 10:30:46
-- **[Task Update] Tomorrow's prediction summary ready**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
-
-- **Unlock profile views and private messages, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
-
-- **BMI and pool log alert policy**
-  From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
-
-- **Rafael, you have 3 profile visits**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
-
-- **2 Results for 'For Sale in Pittsburg'**
+- **1 Result for 'For Sale in Pittsburg'**
   From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+  Date: 2025-10-20 02:39
+  Snippet: Daily result straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
 
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: water the lawn @ Sun Oct 19, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
-
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
-  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
-  Date: 2025-10-18 23:58
-  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **🦾 AI Robot Phone Is Coming**
-  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-18 23:45
-  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-20 01:50
+  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Sunday Oct 19, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
 
 
-## Gmail Summary – 2025-10-19 11:30:43
-- **[Task Update] Tomorrow's prediction summary ready**
+## Gmail Summary – 2025-10-20 10:30:38
+- **OpenAI vs Hollywood 🎬, Hyperliquid's ascent 📈, sequencing your DNA 🧬**
+  From: TLDR <dan@tldrnewsletter.com>
+  Date: 2025-10-20 10:24
+  Snippet: OpenAI made a series of calculated moves when it released Sora. The app initially had an opt-out clause for people&#39;s likenesses to be used in clips ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **🤖 Karpathy's AI agent reality check**
+  From: The Rundown AI <news@daily.therundown.ai>
+  Date: 2025-10-20 10:08
+  Snippet: PLUS: Reverse-engineer winning ads to create high-quality AI videos ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Since the AWS is Down globally... You should read this now**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-20 09:36
+  Snippet: October 20, 2025 | Read Online Since the AWS is Down globally... You should read this now In partnership with The Tech newsletter for Engineers who want to stay ahead Tech moves fast, but you&#39;re
+
+- **How to build anything with AI**
+  From: Nofil Khan <avicennaglobal@mail.beehiiv.com>
+  Date: 2025-10-20 09:36
+  Snippet: October 20, 2025 | Read Online How to build anything with AI AI models have come a long way. From the release of the original ChatGPT in November 2022, AI models have exponentially gotten better,
+
+- **[Task Update] Tomorrow's predictions ready to review**
   From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
+  Date: 2025-10-20 07:46
+  Snippet: Task update from ChatGPT Tomorrow&#39;s predictions ready to review View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
 
-- **Unlock profile views and private messages, Rafael**
+- **🔔 Reminder: 1 new message from Classmates.com**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
+  Date: 2025-10-20 01:15
+  Snippet: Rafael, don&#39;t miss your new message❗ Image placeholder 1 new message awaits from Classmates ® View message » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy
 
-- **BMI and pool log alert policy**
+- **Google Calendar reconnection needed for tracking**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
+  Date: 2025-10-20 05:08
+  Snippet: Authentication issue: Calendar cannot be checked because Google Calendar access isn&#39;t currently authenticated. Alert system paused: Without authentication, BMI and pool lap logs, along with workout
 
-- **Rafael, you have 3 profile visits**
+- **Ordered: "WITHLOC No Hook Shower..." and 2 more items**
+  From: "Amazon.com" <auto-confirm@amazon.com>
+  Date: 2025-10-20 04:47
+  Snippet: Ordered: &quot;WITHLOC No Hook Shower...&quot; and 2 more items͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+
+- **Rafael, we just shared a post from Classmates Staff! 👀**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
+  Date: 2025-10-19 22:38
+  Snippet: New post » Classmates ® Staff just shared a new post. View post » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy Policy | Unsubscribe | Email Preferences |
 
-- **2 Results for 'For Sale in Pittsburg'**
-  From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
-
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
+- **Notification: Do you need a ride from Gilbert tomorrow morning? @ Sun Oct 19, 2025 9pm - 10pm (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
-
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
-  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
-  Date: 2025-10-18 23:58
-  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **🦾 AI Robot Phone Is Coming**
-  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-18 23:45
-  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+  Date: 2025-10-20 03:50
+  Snippet: Do you need a ride from Gilbert tomorrow morning? You have been invited by Rafael Lopez to attend an event named Do you need a ride from Gilbert tomorrow morning? on Sunday Oct 19, 2025 ⋅ 9pm – 10pm (
 
 
-## Gmail Summary – 2025-10-19 12:30:39
-- **[Task Update] Tomorrow's prediction summary ready**
+## Gmail Summary – 2025-10-20 11:30:39
+- **The Kinside Scoop 👀 #16**
+  From: KIN AI <mykin@substack.com>
+  Date: 2025-10-20 11:23
+  Snippet: Kin&#39;s biggest update yet ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+
+- **Monday's Meal Specials at South San Francisco**
+  From: "Today's Café Specials" <no-reply@cafebonappetit.com>
+  Date: 2025-10-20 11:13
+  Snippet: MONDAY, ​OCT ​20 TODAY&#39;S MENU Autumn&#39;s Culinary Treasures Crisp apples, sweet persimmons, and earthy mushrooms (to name a few) bring cozy comfort to your plate, but also a bounty of fiber,
+
+- **OpenAI vs Hollywood 🎬, Hyperliquid's ascent 📈, sequencing your DNA 🧬**
+  From: TLDR <dan@tldrnewsletter.com>
+  Date: 2025-10-20 10:24
+  Snippet: OpenAI made a series of calculated moves when it released Sora. The app initially had an opt-out clause for people&#39;s likenesses to be used in clips ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **🤖 Karpathy's AI agent reality check**
+  From: The Rundown AI <news@daily.therundown.ai>
+  Date: 2025-10-20 10:08
+  Snippet: PLUS: Reverse-engineer winning ads to create high-quality AI videos ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Since the AWS is Down globally... You should read this now**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-20 09:36
+  Snippet: October 20, 2025 | Read Online Since the AWS is Down globally... You should read this now In partnership with The Tech newsletter for Engineers who want to stay ahead Tech moves fast, but you&#39;re
+
+- **How to build anything with AI**
+  From: Nofil Khan <avicennaglobal@mail.beehiiv.com>
+  Date: 2025-10-20 09:36
+  Snippet: October 20, 2025 | Read Online How to build anything with AI AI models have come a long way. From the release of the original ChatGPT in November 2022, AI models have exponentially gotten better,
+
+- **[Task Update] Tomorrow's predictions ready to review**
   From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
+  Date: 2025-10-20 07:46
+  Snippet: Task update from ChatGPT Tomorrow&#39;s predictions ready to review View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
 
-- **Unlock profile views and private messages, Rafael**
+- **🔔 Reminder: 1 new message from Classmates.com**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
+  Date: 2025-10-20 01:15
+  Snippet: Rafael, don&#39;t miss your new message❗ Image placeholder 1 new message awaits from Classmates ® View message » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy
 
-- **BMI and pool log alert policy**
+- **Google Calendar reconnection needed for tracking**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
+  Date: 2025-10-20 05:08
+  Snippet: Authentication issue: Calendar cannot be checked because Google Calendar access isn&#39;t currently authenticated. Alert system paused: Without authentication, BMI and pool lap logs, along with workout
 
-- **Rafael, you have 3 profile visits**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
-
-- **2 Results for 'For Sale in Pittsburg'**
-  From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
-
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
-
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
-
-- **Top post: URGENT !! Please watch out for this vehicle !!  4 kids driving...**
-  From: Your Atherton Ave neighbors <no-reply@is.email.nextdoor.com>
-  Date: 2025-10-18 23:58
-  Snippet: Please watch out for this vehicle !! 4 kids driving this car tailgating us on the hill of Ygnacio Valley Rd Walnut Creek side. ...͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
-
-- **🦾 AI Robot Phone Is Coming**
-  From: "TAAFT - There's An AI For That" <hi@mail.theresanaiforthat.com>
-  Date: 2025-10-18 23:45
-  Snippet: Smartphones reimagined, OpenAI vid pause, cancer AI, history of AI, and more... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+- **Ordered: "WITHLOC No Hook Shower..." and 2 more items**
+  From: "Amazon.com" <auto-confirm@amazon.com>
+  Date: 2025-10-20 04:47
+  Snippet: Ordered: &quot;WITHLOC No Hook Shower...&quot; and 2 more items͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
 
 
-## Gmail Summary – 2025-10-19 13:30:44
-- **Welcome**
-  From: Calicraft Brewing - Walnut Creek Taproom - 2700 Mitchell Dr <no-reply+56191e38@toast-restaurants.com>
-  Date: 2025-10-19 13:18
-  Snippet: We are happy to meet you! View online version Welcome! We know you have a ton of choices when it comes to eating out, and we&#39;re so happy you picked us. Your friends at Calicraft Brewing - Walnut
+## Gmail Summary – 2025-10-20 12:30:40
+- **🍂 Curious About Your Dad’s Side? Save Up to $50 on Y-DNA**
+  From: FamilyTreeDNA <familytreedna@familytreedna.com>
+  Date: 2025-10-20 11:50
+  Snippet: Trace your father&#39;s line through generations — from Y-37 to Big Y-700, now with exclusive kit savings. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
 
-- **Bay Area weekly news roundup: extraction summary**
-  From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 13:01
-  Snippet: Contra Costa News coverage: Multiple local stories including an Antioch arrest, Pittsburg&#39;s self-sufficiency pilot, and Walnut Creek park upgrades were summarized and linked, all published within
+- **The Kinside Scoop 👀 #16**
+  From: KIN AI <mykin@substack.com>
+  Date: 2025-10-20 11:23
+  Snippet: Kin&#39;s biggest update yet ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
 
-- **[Task Update] Tomorrow's prediction summary ready**
+- **Monday's Meal Specials at South San Francisco**
+  From: "Today's Café Specials" <no-reply@cafebonappetit.com>
+  Date: 2025-10-20 11:13
+  Snippet: MONDAY, ​OCT ​20 TODAY&#39;S MENU Autumn&#39;s Culinary Treasures Crisp apples, sweet persimmons, and earthy mushrooms (to name a few) bring cozy comfort to your plate, but also a bounty of fiber,
+
+- **OpenAI vs Hollywood 🎬, Hyperliquid's ascent 📈, sequencing your DNA 🧬**
+  From: TLDR <dan@tldrnewsletter.com>
+  Date: 2025-10-20 10:24
+  Snippet: OpenAI made a series of calculated moves when it released Sora. The app initially had an opt-out clause for people&#39;s likenesses to be used in clips ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **🤖 Karpathy's AI agent reality check**
+  From: The Rundown AI <news@daily.therundown.ai>
+  Date: 2025-10-20 10:08
+  Snippet: PLUS: Reverse-engineer winning ads to create high-quality AI videos ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Since the AWS is Down globally... You should read this now**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-20 09:36
+  Snippet: October 20, 2025 | Read Online Since the AWS is Down globally... You should read this now In partnership with The Tech newsletter for Engineers who want to stay ahead Tech moves fast, but you&#39;re
+
+- **How to build anything with AI**
+  From: Nofil Khan <avicennaglobal@mail.beehiiv.com>
+  Date: 2025-10-20 09:36
+  Snippet: October 20, 2025 | Read Online How to build anything with AI AI models have come a long way. From the release of the original ChatGPT in November 2022, AI models have exponentially gotten better,
+
+- **[Task Update] Tomorrow's predictions ready to review**
   From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
+  Date: 2025-10-20 07:46
+  Snippet: Task update from ChatGPT Tomorrow&#39;s predictions ready to review View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
 
-- **Unlock profile views and private messages, Rafael**
+- **🔔 Reminder: 1 new message from Classmates.com**
   From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
+  Date: 2025-10-20 01:15
+  Snippet: Rafael, don&#39;t miss your new message❗ Image placeholder 1 new message awaits from Classmates ® View message » Grad Class | Inbox | Visitors | Yearbook | Profile Facebook X Instagram LinkedIn Privacy
 
-- **BMI and pool log alert policy**
+- **Google Calendar reconnection needed for tracking**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
+  Date: 2025-10-20 05:08
+  Snippet: Authentication issue: Calendar cannot be checked because Google Calendar access isn&#39;t currently authenticated. Alert system paused: Without authentication, BMI and pool lap logs, along with workout
 
-- **Rafael, you have 3 profile visits**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
 
-- **2 Results for 'For Sale in Pittsburg'**
-  From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
+## Gmail Summary – 2025-10-20 13:30:50
+- **Google Maps Gemini API 🗺️, Karpathy on AGI 🤖, Siri concerns 📱**
+  From: TLDR AI <dan@tldrnewsletter.com>
+  Date: 2025-10-20 13:29
+  Snippet: Google Maps integration is now available in the Gemini API, enabling developers to incorporate Maps data into geospatial-aware AI applications ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **Notification: water the lawn @ Sat Oct 18, 2025 7pm - 8pm (PDT) (rafa8525@gmail.com)**
-  From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 01:50
-  Snippet: water the lawn You have been invited by Rafael Lopez to attend an event named water the lawn on Saturday Oct 18, 2025 ⋅ 7pm – 8pm (Pacific Time - Los Angeles). You have an upcoming event water the lawn
-
-- **Open House: 183 W Leland Rd, Pittsburg, CA 94565**
+- **Revisiting your saved home: 183 W Leland Rd.**
   From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 01:27
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+  Date: 2025-10-20 13:14
+  Snippet: Are the homes you love still available?͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
 
-- **Open House: 333 Atherton Ave, Pittsburg, CA 94565**
-  From: Zillow <my-saved-home@mail.zillow.com>
-  Date: 2025-10-19 00:55
-  Snippet: More details inside͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+- **Contra Costa news: week’s key stories &amp; update issues**
+  From: Perplexity Tasks <team@mail.perplexity.ai>
+  Date: 2025-10-20 13:08
+  Snippet: Local stories spotlight: Recent honors, public safety updates, and West Nile Virus findings featured from Contra Costa News and regional outlets, with clickable summaries and source links included
 
+- **Google's Gemini 3.0 Confirmed**
+  From: AI Breakfast <aibreakfast@mail.beehiiv.com>
+  Date: 2025-10-20 13:07
+  Snippet: October 20, 2025 | Read Online Google&#39;s Gemini 3.0 Confirmed Good morning. It&#39;s Monday, October 20th. On this day in tech history: In 1971, the Stanford &quot;Hand–Eye&quot; project quietly
 
-## Gmail Summary – 2025-10-19 14:30:42
-- **Your Native American report is available**
-  From: Genomelink <hello@genomelink.io>
-  Date: 2025-10-19 10:20
-  Snippet: Your Indigenous Peoples&#39; Day special offer expires tonight. Find your hidden Indigenous American DNA at the chromosome-level breakdown. Offer Expires Tonight Your Native American report is
-
-- **Find deals to make the most of your Sunday🎊**
-  From: "Lowe’s Home Improvement" <lowes@e.lowes.com>
-  Date: 2025-10-19 07:53
-  Snippet: Shop now and get up to 45% OFF select outdoor power equipment and more. View email as a webpage. Lowe&#39;s MyLowe&#39;s Login TOOLS BATHROOM DAILY DEALS APPLIANCES Sunday Deals Kickstart your week
-
-- **Notification: Pack your lunch @ Sun Oct 19, 2025 6:45am - 7:45am (PDT) (rafa8525@gmail.com)**
+- **Notification: Daily Morning Routine @ Mon Oct 20, 2025 6:15am - 7:15am (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 13:35
-  Snippet: Pack your lunch You have been invited by Rafael Lopez to attend an event named Pack your lunch on Sunday Oct 19, 2025 ⋅ 6:45am – 7:45am (Pacific Time - Los Angeles). You have an upcoming event Pack
+  Date: 2025-10-20 13:05
+  Snippet: Daily Morning Routine Commute Time Calculation:Google Maps:Use Google Maps to determine your commute time.Enter your starting point (14 San Carlos Court, Pittsburg, CA) and your destination (300
 
-- **Welcome**
-  From: Calicraft Brewing - Walnut Creek Taproom - 2700 Mitchell Dr <no-reply+56191e38@toast-restaurants.com>
-  Date: 2025-10-19 13:18
-  Snippet: We are happy to meet you! View online version Welcome! We know you have a ton of choices when it comes to eating out, and we&#39;re so happy you picked us. Your friends at Calicraft Brewing - Walnut
+- **Notification: Daily Morning Routine @ Mon Oct 20, 2025 6:15am - 7:15am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 13:05
+  Snippet: Daily Morning Routine Commute Time: Freeway: [Time] Surface Streets (via Bailey Road): [Time] News Summary: ktvu.com: [Story 1], [Story 2], [Story 3] kron4.com: [Story 1], [Story 2], [Story 3] abc7news
 
-- **Bay Area weekly news roundup: extraction summary**
-  From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 13:01
-  Snippet: Contra Costa News coverage: Multiple local stories including an Antioch arrest, Pittsburg&#39;s self-sufficiency pilot, and Walnut Creek park upgrades were summarized and linked, all published within
+- **Karpathy pours cold water on agents**
+  From: "Superhuman – Zain Kahn" <superhuman@mail.joinsuperhuman.ai>
+  Date: 2025-10-20 13:03
+  Snippet: ALSO: How to turn ideas into motion graphics ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **[Task Update] Tomorrow's prediction summary ready**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
-
-- **Unlock profile views and private messages, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
-
-- **BMI and pool log alert policy**
-  From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
-
-- **Rafael, you have 3 profile visits**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 20:58
-  Snippet: Someone&#39;s been looking 👀 – see who it was. See who visited. Classmates.com We&#39;ve unlocked 3 of your profile visits! Click each item below to see your visitors. See first visitor See first
-
-- **2 Results for 'For Sale in Pittsburg'**
-  From: Zillow <instant-updates@mail.zillow.com>
-  Date: 2025-10-19 02:39
-  Snippet: Daily results straight to your inbox.͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿
-
-
-## Gmail Summary – 2025-10-19 15:30:37
-- **Watch the Tyler Perry's Finding Joy Official Trailer - November 5 on Prime Video**
-  From: Gofobo Screenings <no-reply@gofobo.com>
-  Date: 2025-10-19 15:07
-  Snippet: CHECK OUT THE OFFICIAL TRAILER FOR &#39;TYLER PERRY&#39;S FINDING JOY&#39; Trailer Image WATCH NOW TYLER PERRY&#39;S FINDING JOY Release Date: November 05, 2025 Synopsis: Joy, a successful designer,
-
-- **Your New Weekly Ad is here.**
+- **Your new Weekly Ad is here.**
   From: Target <targetnews@em.target.com>
-  Date: 2025-10-19 09:06
-  Snippet: Hey Rafael! Save during your next Target run. Target Weekly Ad Deals New Arrivals New week, new reasons to shop Explore deals &amp; more can&#39;t-miss-picks from the Weekly Ad. Weekly Ad New week, new
+  Date: 2025-10-20 06:54
+  Snippet: Plus, check out this week&#39;s top deals from top categories. Target Weekly Ad Deals New Arrivals New week, new reasons to shop Explore deals &amp; more can&#39;t-miss-picks from the Weekly Ad. Weekly
 
-- **Your Native American report is available**
-  From: Genomelink <hello@genomelink.io>
-  Date: 2025-10-19 10:20
-  Snippet: Your Indigenous Peoples&#39; Day special offer expires tonight. Find your hidden Indigenous American DNA at the chromosome-level breakdown. Offer Expires Tonight Your Native American report is
+- **October Global Newsletter 🎃**
+  From: Team Pinecone <community@pinecone.io>
+  Date: 2025-10-20 08:41
+  Snippet: Pinecone The Pinecone Newsletter October Edition Phew! What a whirlwind over the last month. We hosted several events at #SFTechWeek &amp; #LATechWeek, including a &quot;Grappling with Vectors&quot;
 
-- **Find deals to make the most of your Sunday🎊**
-  From: "Lowe’s Home Improvement" <lowes@e.lowes.com>
-  Date: 2025-10-19 07:53
-  Snippet: Shop now and get up to 45% OFF select outdoor power equipment and more. View email as a webpage. Lowe&#39;s MyLowe&#39;s Login TOOLS BATHROOM DAILY DEALS APPLIANCES Sunday Deals Kickstart your week
+- **🍂 Curious About Your Dad’s Side? Save Up to $50 on Y-DNA**
+  From: FamilyTreeDNA <familytreedna@familytreedna.com>
+  Date: 2025-10-20 11:50
+  Snippet: Trace your father&#39;s line through generations — from Y-37 to Big Y-700, now with exclusive kit savings. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
 
-- **Notification: Pack your lunch @ Sun Oct 19, 2025 6:45am - 7:45am (PDT) (rafa8525@gmail.com)**
+
+## Gmail Summary – 2025-10-20 14:30:44
+- **Small Action, Big Impact. Here’s What’s New at Objective Zero**
+  From: Objective Zero Foundation <contactus@objectivezero.org>
+  Date: 2025-10-20 10:06
+  Snippet: Join us for Buddy Check Week and more exciting events. A Note from the Objective Zero Team The “ber” (brrrrr!) months are upon us! September, October, November, and December....the cooler, cozier
+
+- **Rafael, your cravings called. We answered.**
+  From: "SUBWAY® MVP Rewards" <news@subs.subway.com>
+  Date: 2025-10-20 15:04
+  Snippet: Fresh-made subs ✅ speedy checkout. ✅ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Deepseek Just Released a New Model and It's Shockingly Good!**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-20 13:37
+  Snippet: October 20, 2025 | Read Online Deepseek Just Released a New Model and It&#39;s Shockingly Good! In partnership with Welcome to the AGI Newsletter — your focused briefing on the breakthroughs reshaping
+
+- **Notification: Pack your lunch @ Mon Oct 20, 2025 6:45am - 7:45am (PDT) (rafa8525@gmail.com)**
   From: Google Calendar <calendar-notification@google.com>
-  Date: 2025-10-19 13:35
-  Snippet: Pack your lunch You have been invited by Rafael Lopez to attend an event named Pack your lunch on Sunday Oct 19, 2025 ⋅ 6:45am – 7:45am (Pacific Time - Los Angeles). You have an upcoming event Pack
+  Date: 2025-10-20 13:35
+  Snippet: Pack your lunch You have been invited by Rafael Lopez to attend an event named Pack your lunch on Monday Oct 20, 2025 ⋅ 6:45am – 7:45am (Pacific Time - Los Angeles). You have an upcoming event Pack
 
-- **Welcome**
-  From: Calicraft Brewing - Walnut Creek Taproom - 2700 Mitchell Dr <no-reply+56191e38@toast-restaurants.com>
-  Date: 2025-10-19 13:18
-  Snippet: We are happy to meet you! View online version Welcome! We know you have a ton of choices when it comes to eating out, and we&#39;re so happy you picked us. Your friends at Calicraft Brewing - Walnut
+- **Google Maps Gemini API 🗺️, Karpathy on AGI 🤖, Siri concerns 📱**
+  From: TLDR AI <dan@tldrnewsletter.com>
+  Date: 2025-10-20 13:29
+  Snippet: Google Maps integration is now available in the Gemini API, enabling developers to incorporate Maps data into geospatial-aware AI applications ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
 
-- **Bay Area weekly news roundup: extraction summary**
+- **Revisiting your saved home: 183 W Leland Rd.**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-20 13:14
+  Snippet: Are the homes you love still available?͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Contra Costa news: week’s key stories &amp; update issues**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 13:01
-  Snippet: Contra Costa News coverage: Multiple local stories including an Antioch arrest, Pittsburg&#39;s self-sufficiency pilot, and Walnut Creek park upgrades were summarized and linked, all published within
+  Date: 2025-10-20 13:08
+  Snippet: Local stories spotlight: Recent honors, public safety updates, and West Nile Virus findings featured from Contra Costa News and regional outlets, with clickable summaries and source links included
 
-- **[Task Update] Tomorrow's prediction summary ready**
-  From: OpenAI <noreply@tm.openai.com>
-  Date: 2025-10-19 07:45
-  Snippet: Task update from ChatGPT Tomorrow&#39;s prediction summary ready View message You can unsubscribe from task emails in settings. OpenAI, 1455 3rd Street, San Francisco, CA 94158, USA Help center ·
+- **Google's Gemini 3.0 Confirmed**
+  From: AI Breakfast <aibreakfast@mail.beehiiv.com>
+  Date: 2025-10-20 13:07
+  Snippet: October 20, 2025 | Read Online Google&#39;s Gemini 3.0 Confirmed Good morning. It&#39;s Monday, October 20th. On this day in tech history: In 1971, the Stanford &quot;Hand–Eye&quot; project quietly
 
-- **Unlock profile views and private messages, Rafael**
-  From: "Classmates.com" <emailreplies@messages.classmates.com>
-  Date: 2025-10-18 23:48
-  Snippet: Unlock EVERYTHING in your profile Unlock EVERYTHING in your profile » Classmates.com Hi Rafael, Get 50% off on what CM+ has to offer! Get full access » Upgrade to... Read all private messages See
+- **Notification: Daily Morning Routine @ Mon Oct 20, 2025 6:15am - 7:15am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 13:05
+  Snippet: Daily Morning Routine Commute Time Calculation:Google Maps:Use Google Maps to determine your commute time.Enter your starting point (14 San Carlos Court, Pittsburg, CA) and your destination (300
 
-- **BMI and pool log alert policy**
+- **Notification: Daily Morning Routine @ Mon Oct 20, 2025 6:15am - 7:15am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 13:05
+  Snippet: Daily Morning Routine Commute Time: Freeway: [Time] Surface Streets (via Bailey Road): [Time] News Summary: ktvu.com: [Story 1], [Story 2], [Story 3] kron4.com: [Story 1], [Story 2], [Story 3] abc7news
+
+
+## Gmail Summary – 2025-10-20 15:30:36
+- **Small Action, Big Impact. Here’s What’s New at Objective Zero**
+  From: Objective Zero Foundation <contactus@objectivezero.org>
+  Date: 2025-10-20 10:06
+  Snippet: Join us for Buddy Check Week and more exciting events. A Note from the Objective Zero Team The “ber” (brrrrr!) months are upon us! September, October, November, and December....the cooler, cozier
+
+- **Rafael, your cravings called. We answered.**
+  From: "SUBWAY® MVP Rewards" <news@subs.subway.com>
+  Date: 2025-10-20 15:04
+  Snippet: Fresh-made subs ✅ speedy checkout. ✅ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Deepseek Just Released a New Model and It's Shockingly Good!**
+  From: the AGI News <aginow@mail.beehiiv.com>
+  Date: 2025-10-20 13:37
+  Snippet: October 20, 2025 | Read Online Deepseek Just Released a New Model and It&#39;s Shockingly Good! In partnership with Welcome to the AGI Newsletter — your focused briefing on the breakthroughs reshaping
+
+- **Notification: Pack your lunch @ Mon Oct 20, 2025 6:45am - 7:45am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 13:35
+  Snippet: Pack your lunch You have been invited by Rafael Lopez to attend an event named Pack your lunch on Monday Oct 20, 2025 ⋅ 6:45am – 7:45am (Pacific Time - Los Angeles). You have an upcoming event Pack
+
+- **Google Maps Gemini API 🗺️, Karpathy on AGI 🤖, Siri concerns 📱**
+  From: TLDR AI <dan@tldrnewsletter.com>
+  Date: 2025-10-20 13:29
+  Snippet: Google Maps integration is now available in the Gemini API, enabling developers to incorporate Maps data into geospatial-aware AI applications ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+- **Revisiting your saved home: 183 W Leland Rd.**
+  From: Zillow <my-saved-home@mail.zillow.com>
+  Date: 2025-10-20 13:14
+  Snippet: Are the homes you love still available?͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌ ﻿͏‌
+
+- **Contra Costa news: week’s key stories &amp; update issues**
   From: Perplexity Tasks <team@mail.perplexity.ai>
-  Date: 2025-10-19 05:02
-  Snippet: Reminder noted: your BMI and pool lap logs should be recorded regularly. If 2 consecutive logs are missed or 3 workouts are skipped, a gentle alert will be automatically generated according to your
+  Date: 2025-10-20 13:08
+  Snippet: Local stories spotlight: Recent honors, public safety updates, and West Nile Virus findings featured from Contra Costa News and regional outlets, with clickable summaries and source links included
+
+- **Google's Gemini 3.0 Confirmed**
+  From: AI Breakfast <aibreakfast@mail.beehiiv.com>
+  Date: 2025-10-20 13:07
+  Snippet: October 20, 2025 | Read Online Google&#39;s Gemini 3.0 Confirmed Good morning. It&#39;s Monday, October 20th. On this day in tech history: In 1971, the Stanford &quot;Hand–Eye&quot; project quietly
+
+- **Notification: Daily Morning Routine @ Mon Oct 20, 2025 6:15am - 7:15am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 13:05
+  Snippet: Daily Morning Routine Commute Time Calculation:Google Maps:Use Google Maps to determine your commute time.Enter your starting point (14 San Carlos Court, Pittsburg, CA) and your destination (300
+
+- **Notification: Daily Morning Routine @ Mon Oct 20, 2025 6:15am - 7:15am (PDT) (rafa8525@gmail.com)**
+  From: Google Calendar <calendar-notification@google.com>
+  Date: 2025-10-20 13:05
+  Snippet: Daily Morning Routine Commute Time: Freeway: [Time] Surface Streets (via Bailey Road): [Time] News Summary: ktvu.com: [Story 1], [Story 2], [Story 3] kron4.com: [Story 1], [Story 2], [Story 3] abc7news
