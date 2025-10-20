@@ -1,3 +1,3 @@
-# Next Actions 2025-10-19
-- No urgent actions today. ✅
+# Next Actions 2025-10-20
+- [Medium] Address health warnings in daily report
 
