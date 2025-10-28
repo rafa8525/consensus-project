@@ -1,23 +1,54 @@
 #!/usr/bin/env python3
-from pathlib import Path
+"""
+Security Audit Runner
+---------------------
+Performs monthly security checks for the AI Consensus System.
+"""
+
+import os
 from datetime import datetime
-import shutil, os
 
-OUT = Path("/home/rafa1215/consensus-project/memory/logs/security/audit_log.md")
+BASE = "/home/rafa1215/consensus-project"
+LOG_DIR = f"{BASE}/memory/logs/system"
+AUDIT_LOG = f"{LOG_DIR}/security_audit.log"
+SCHEDULE_FILE = f"{BASE}/memory/security_audit_schedule.txt"
 
-def main():
-    total, used, free = shutil.disk_usage("/")
-    env_ok = "PATH" in os.environ
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-# Mutation_feb1fb
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(
-        f"# Security Audit — {ts}\n"
-        f"- Disk usage (GB): total={total/1e9:.2f}, used={used/1e9:.2f}, free={free/1e9:.2f}\n"
-        f"- Basic env present: {env_ok}\n"
-        f"- Notes: Add specific checks over time (permissions, secrets layout, scheduled tasks).\n"
-    )
-    print("✅ Wrote", OUT)
+def log(msg):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{timestamp}] {msg}"
+    print(line)
+    os.makedirs(LOG_DIR, exist_ok=True)
+    with open(AUDIT_LOG, "a") as f:
+        f.write(line + "\n")
+
+def run_audit():
+    log("---- Starting Monthly Security Audit ----")
+    checks = {
+        "VPN logs present": os.path.exists(f"{LOG_DIR}/vpn_test.log"),
+        "Cron file exists": os.path.exists(f"{BASE}/memory/logs/system/vpn_cron.log"),
+        "Simulation flag valid": os.path.exists(f"{LOG_DIR}/vpn_simulated_active.flag"),
+    }
+
+    passed = [k for k, v in checks.items() if v]
+    failed = [k for k, v in checks.items() if not v]
+
+    for k in passed:
+        log(f"✅ PASS: {k}")
+    for k in failed:
+        log(f"❌ FAIL: {k}")
+
+    if not failed:
+        log("✅ All audit checks passed.")
+    else:
+        log("⚠️ Some audit checks failed. Review immediately.")
+
+    log("---- Audit Complete ----\n")
+
+def update_schedule():
+    next_date = datetime.now().replace(day=1).strftime("%Y-%m-%d")
+    with open(SCHEDULE_FILE, "w") as f:
+        f.write(f"Next Audit Date: {next_date}\n")
 
 if __name__ == "__main__":
-    main()
+    run_audit()
+    update_schedule()

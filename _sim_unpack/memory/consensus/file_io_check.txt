@@ -1,3 +1,0 @@
-test_read_write 
-
-Confirmed write access.
