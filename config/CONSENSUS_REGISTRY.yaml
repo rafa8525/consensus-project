@@ -1,1 +1,221 @@
-/home/rafa1215/consensus-project/config/CONSENSUS_REGISTRY.v2.yaml
+agents:
+- id: Agent_1
+  name: Agent_1
+  role: Unspecified
+  description: No description
+- id: Agent_2
+  name: Agent_2
+  role: Unspecified
+  description: No description
+- id: Agent_3
+  name: Agent_3
+  role: Unspecified
+  description: No description
+- id: Agent_4
+  name: Agent_4
+  role: Unspecified
+  description: No description
+- id: Agent_5
+  name: Agent_5
+  role: Unspecified
+  description: No description
+- id: Agent_6
+  name: Agent_6
+  role: Unspecified
+  description: No description
+- id: Agent_7
+  name: Agent_7
+  role: Unspecified
+  description: No description
+- id: Agent_8
+  name: Agent_8
+  role: Unspecified
+  description: No description
+- id: Agent_9
+  name: Agent_9
+  role: Unspecified
+  description: No description
+- id: Agent_10
+  name: Agent_10
+  role: Unspecified
+  description: No description
+- id: Agent_11
+  name: Agent_11
+  role: Unspecified
+  description: No description
+- id: Agent_12
+  name: Agent_12
+  role: Unspecified
+  description: No description
+- id: Agent_13
+  name: Agent_13
+  role: Unspecified
+  description: No description
+- id: Agent_14
+  name: Agent_14
+  role: Unspecified
+  description: No description
+- id: Agent_15
+  name: Agent_15
+  role: Unspecified
+  description: No description
+- id: Agent_16
+  name: Agent_16
+  role: Unspecified
+  description: No description
+- id: Agent_17
+  name: Agent_17
+  role: Unspecified
+  description: No description
+- id: Agent_18
+  name: Agent_18
+  role: Unspecified
+  description: No description
+- id: Agent_19
+  name: Agent_19
+  role: Unspecified
+  description: No description
+- id: Agent_20
+  name: Agent_20
+  role: Unspecified
+  description: No description
+- id: Agent_21
+  name: Agent_21
+  role: Unspecified
+  description: No description
+- id: Agent_22
+  name: Agent_22
+  role: Unspecified
+  description: No description
+- id: Agent_23
+  name: Agent_23
+  role: Unspecified
+  description: No description
+- id: Agent_24
+  name: Agent_24
+  role: Unspecified
+  description: No description
+- id: Agent_25
+  name: Agent_25
+  role: Unspecified
+  description: No description
+- id: Agent_26
+  name: Agent_26
+  role: Unspecified
+  description: No description
+- id: Agent_27
+  name: Agent_27
+  role: Unspecified
+  description: No description
+- id: Agent_28
+  name: Agent_28
+  role: Unspecified
+  description: No description
+- id: Agent_29
+  name: Agent_29
+  role: Unspecified
+  description: No description
+- id: Agent_30
+  name: Agent_30
+  role: Unspecified
+  description: No description
+- id: Agent_31
+  name: Agent_31
+  role: Unspecified
+  description: No description
+- id: Agent_32
+  name: Agent_32
+  role: Unspecified
+  description: No description
+- id: Agent_33
+  name: Agent_33
+  role: Unspecified
+  description: No description
+- id: Agent_34
+  name: Agent_34
+  role: Unspecified
+  description: No description
+- id: Agent_35
+  name: Agent_35
+  role: Unspecified
+  description: No description
+- id: Agent_36
+  name: Agent_36
+  role: Unspecified
+  description: No description
+- id: Agent_37
+  name: Agent_37
+  role: Unspecified
+  description: No description
+- id: Agent_38
+  name: Agent_38
+  role: Unspecified
+  description: No description
+- id: Agent_39
+  name: Agent_39
+  role: Unspecified
+  description: No description
+- id: Agent_40
+  name: Agent_40
+  role: Unspecified
+  description: No description
+- id: Agent_41
+  name: Agent_41
+  role: Unspecified
+  description: No description
+- id: Agent_42
+  name: Agent_42
+  role: Unspecified
+  description: No description
+- id: Agent_43
+  name: Agent_43
+  role: Unspecified
+  description: No description
+- id: Agent_44
+  name: Agent_44
+  role: Unspecified
+  description: No description
+- id: Agent_45
+  name: Agent_45
+  role: Unspecified
+  description: No description
+- id: Agent_46
+  name: Agent_46
+  role: Unspecified
+  description: No description
+- id: Agent_47
+  name: Agent_47
+  role: Unspecified
+  description: No description
+- id: Agent_48
+  name: Agent_48
+  role: Unspecified
+  description: No description
+- id: Agent_49
+  name: Agent_49
+  role: Unspecified
+  description: No description
+- id: Agent_50
+  name: Agent_50
+  role: Unspecified
+  description: No description
+- id: Agent_51
+  name: Agent_51
+  role: Unspecified
+  description: No description
+- id: Agent_52
+  name: Agent_52
+  role: Unspecified
+  description: No description
+- id: Agent_53
+  name: Agent_53
+  role: Unspecified
+  description: No description
+- id: Agent_54
+  name: Agent_54
+  role: Unspecified
+  description: No description
+- id: Agent_55
+  name: Agent_55
+  role: Unspecified
+  description: No description

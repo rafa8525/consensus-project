@@ -1,1 +1,0 @@
-/home/rafa1215/consensus-project/tools/absorb_and_sync.sh

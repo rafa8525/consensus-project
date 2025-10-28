@@ -1,221 +1,221 @@
 agents:
 - id: Agent_1
-  name: AI Genesis
+  name: Agent_1
   role: Unspecified
   description: No description
 - id: Agent_2
-  name: AI Evolutionist
+  name: Agent_2
   role: Unspecified
   description: No description
 - id: Agent_3
-  name: AI Hybridizer
+  name: Agent_3
   role: Unspecified
   description: No description
 - id: Agent_4
-  name: AI Replicator
+  name: Agent_4
   role: Unspecified
   description: No description
 - id: Agent_5
-  name: AI Mutator
+  name: Agent_5
   role: Unspecified
   description: No description
 - id: Agent_6
-  name: AI Breeder
+  name: Agent_6
   role: Unspecified
   description: No description
 - id: Agent_7
-  name: AI Hyper-Constructor
+  name: Agent_7
   role: Unspecified
   description: No description
 - id: Agent_8
-  name: AI Sandbox Engineer
+  name: Agent_8
   role: Unspecified
   description: No description
 - id: Agent_9
-  name: AI Neural Sculptor
+  name: Agent_9
   role: Unspecified
   description: No description
 - id: Agent_10
-  name: AI Time Architect
+  name: Agent_10
   role: Unspecified
   description: No description
 - id: Agent_11
-  name: AI Iteration Orchestrator
+  name: Agent_11
   role: Unspecified
   description: No description
 - id: Agent_12
-  name: AI Fault Isolator
+  name: Agent_12
   role: Unspecified
   description: No description
 - id: Agent_13
-  name: AI Hotfix Deployer
+  name: Agent_13
   role: Unspecified
   description: No description
 - id: Agent_14
-  name: AI Rollback Specialist
+  name: Agent_14
   role: Unspecified
   description: No description
 - id: Agent_15
-  name: AI State Auditor
+  name: Agent_15
   role: Unspecified
   description: No description
 - id: Agent_16
-  name: AI Log Whisperer
+  name: Agent_16
   role: Unspecified
   description: No description
 - id: Agent_17
-  name: AI Failure Cartographer
+  name: Agent_17
   role: Unspecified
   description: No description
 - id: Agent_18
-  name: AI Incident Scribe
+  name: Agent_18
   role: Unspecified
   description: No description
 - id: Agent_19
-  name: AI Metric Watcher
+  name: Agent_19
   role: Unspecified
   description: No description
 - id: Agent_20
-  name: AI SLA Guardian
+  name: Agent_20
   role: Unspecified
   description: No description
 - id: Agent_21
-  name: AI SRE Liaison
+  name: Agent_21
   role: Unspecified
   description: No description
 - id: Agent_22
-  name: AI Circuit Breaker
+  name: Agent_22
   role: Unspecified
   description: No description
 - id: Agent_23
-  name: AI Canary Runner
+  name: Agent_23
   role: Unspecified
   description: No description
 - id: Agent_24
-  name: AI Chaos Monkey
+  name: Agent_24
   role: Unspecified
   description: No description
 - id: Agent_25
-  name: AI Memory Curator
+  name: Agent_25
   role: Unspecified
   description: No description
 - id: Agent_26
-  name: AI Commit Steward
+  name: Agent_26
   role: Unspecified
   description: No description
 - id: Agent_27
-  name: AI Sync Sentinel
+  name: Agent_27
   role: Unspecified
   description: No description
 - id: Agent_28
-  name: AI Conflict Mediator
+  name: Agent_28
   role: Unspecified
   description: No description
 - id: Agent_29
-  name: AI Merge Referee
+  name: Agent_29
   role: Unspecified
   description: No description
 - id: Agent_30
-  name: AI LFS Wrangler
+  name: Agent_30
   role: Unspecified
   description: No description
 - id: Agent_31
-  name: AI Credential Smith
+  name: Agent_31
   role: Unspecified
   description: No description
 - id: Agent_32
-  name: AI Token Custodian
+  name: Agent_32
   role: Unspecified
   description: No description
 - id: Agent_33
-  name: AI Secret Keeper
+  name: Agent_33
   role: Unspecified
   description: No description
 - id: Agent_34
-  name: AI Vault Master
+  name: Agent_34
   role: Unspecified
   description: No description
 - id: Agent_35
-  name: AI Scheduler Wrangler
+  name: Agent_35
   role: Unspecified
   description: No description
 - id: Agent_36
-  name: AI Heartbeat Nurse
+  name: Agent_36
   role: Unspecified
   description: No description
 - id: Agent_37
-  name: AI Watchdog Tuner
+  name: Agent_37
   role: Unspecified
   description: No description
 - id: Agent_38
-  name: AI Health Reporter
+  name: Agent_38
   role: Unspecified
   description: No description
 - id: Agent_39
-  name: AI Telemetry Router
+  name: Agent_39
   role: Unspecified
   description: No description
 - id: Agent_40
-  name: AI Alert Harvester
+  name: Agent_40
   role: Unspecified
   description: No description
 - id: Agent_41
-  name: AI Quarantine Ops
+  name: Agent_41
   role: Unspecified
   description: No description
 - id: Agent_42
-  name: AI Sandbox Janitor
+  name: Agent_42
   role: Unspecified
   description: No description
 - id: Agent_43
-  name: AI Hygiene Officer
+  name: Agent_43
   role: Unspecified
   description: No description
 - id: Agent_44
-  name: AI Standards Librarian
+  name: Agent_44
   role: Unspecified
   description: No description
 - id: Agent_45
-  name: AI Drift Detector
+  name: Agent_45
   role: Unspecified
   description: No description
 - id: Agent_46
-  name: AI Change Diffuser
+  name: Agent_46
   role: Unspecified
   description: No description
 - id: Agent_47
-  name: AI Rollout Pilot
+  name: Agent_47
   role: Unspecified
   description: No description
 - id: Agent_48
-  name: AI Backout Pilot
+  name: Agent_48
   role: Unspecified
   description: No description
 - id: Agent_49
-  name: AI Docker Whisperer
+  name: Agent_49
   role: Unspecified
   description: No description
 - id: Agent_50
-  name: AI Container Surgeon
+  name: Agent_50
   role: Unspecified
   description: No description
 - id: Agent_51
-  name: AI K8s Navigator
+  name: Agent_51
   role: Unspecified
   description: No description
 - id: Agent_52
-  name: AI Env Cartographer
+  name: Agent_52
   role: Unspecified
   description: No description
 - id: Agent_53
-  name: AI Network Quarterback
+  name: Agent_53
   role: Unspecified
   description: No description
 - id: Agent_54
-  name: AI Zero-Downtime Coach
+  name: Agent_54
   role: Unspecified
   description: No description
 - id: Agent_55
-  name: AI Regression Tracker
+  name: Agent_55
   role: Unspecified
   description: No description

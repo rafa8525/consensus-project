@@ -1,0 +1,17 @@
+[
+  {
+    "agent": "daily_sms_and_push.log",
+    "score": 98.48,
+    "target_improvement": 6.38
+  },
+  {
+    "agent": "memory_absorb_stub.log",
+    "score": 98.48,
+    "target_improvement": 9.53
+  },
+  {
+    "agent": "agent_sweep_cron.log",
+    "score": 85.41,
+    "target_improvement": 6.73
+  }
+]

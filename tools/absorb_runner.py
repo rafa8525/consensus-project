@@ -1,62 +1,39 @@
 #!/usr/bin/env python3
-import json, os, sys, subprocess, time
-from pathlib import Path
-from datetime import datetime, timezone
+# absorb_runner.py — runs real absorber (absorb_memory.py)
 
-LOG_DIR = Path("memory/logs/absorb")
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-LOG_FILE = LOG_DIR / "absorb_log.jsonl"
+import subprocess
+import sys
+from datetime import datetime
 
-ABSORB_CMD = os.environ.get("ABSORB_CMD", "").strip()
-if not ABSORB_CMD:
-    # Fallback: point to your real absorb command/script
-    # Example: export ABSORB_CMD="/home/rafa1215/consensus-project/tools/absorb_and_sync.sh"
-    print("ERROR: ABSORB_CMD not set", file=sys.stderr)
-    sys.exit(2)
+LOG_FILE = "/home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log"
+ABSORB_SCRIPT = "/home/rafa1215/consensus-project/tools/absorb_memory.py"
 
+def log(msg):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(LOG_FILE, "a") as logf:
+        logf.write(f"[{timestamp}] {msg}\n")
+    print(f"[{timestamp}] {msg}")
 
-def log(event: dict):
-    event["ts_utc"] = datetime.now(timezone.utc).isoformat()
-    with LOG_FILE.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(event, ensure_ascii=False) + "\n")
-
-
-def main():
-    mode = os.environ.get("RUN_MODE", "scheduled")  # "scheduled" or "catchup"
-    target = os.environ.get("TARGET_WINDOW", "am")  # "am" or "pm"
-    started = time.time()
+def run_absorb():
     try:
-        r = subprocess.run(
-            ABSORB_CMD, shell=True, capture_output=True, text=True, timeout=60 * 30
+        log(f"🔁 Starting {ABSORB_SCRIPT}...")
+
+        result = subprocess.run(
+            ["/usr/bin/python3", ABSORB_SCRIPT],
+            check=True,
+            capture_output=True,
+            text=True
         )
-        ok = r.returncode == 0
-        log(
-            {
-                "event": "absorb",
-                "mode": mode,
-                "target_window": target,
-                "status": "ok" if ok else "fail",
-                "rc": r.returncode,
-# Mutation_8b42c9
-                "stdout": r.stdout[-4000:],  # tail
-                "stderr": r.stderr[-4000:],
-                "duration_s": round(time.time() - started, 3),
-            }
-        )
-        sys.exit(0 if ok else 1)
-    except Exception as e:
-        log(
-            {
-                "event": "absorb",
-                "mode": mode,
-                "target_window": target,
-                "status": "error",
-                "error": repr(e),
-                "duration_s": round(time.time() - started, 3),
-            }
-        )
+
+        log("✅ absorb_memory.py completed successfully.")
+        if result.stdout:
+            log(result.stdout)
+
+    except subprocess.CalledProcessError as e:
+        log("❌ absorb_memory.py FAILED.")
+        if e.stderr:
+            log(e.stderr)
         sys.exit(1)
 
-
 if __name__ == "__main__":
-    main()
+    run_absorb()

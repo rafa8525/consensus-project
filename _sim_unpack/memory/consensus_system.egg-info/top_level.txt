@@ -1,5 +1,0 @@
-agents
-consensus
-core
-memory
-prompts

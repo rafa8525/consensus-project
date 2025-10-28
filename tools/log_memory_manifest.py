@@ -1,16 +1,16 @@
-cat > ~/consensus-project/tools/log_memory_manifest.py <<'PY'
 #!/usr/bin/env python3
-from pathlib import Path
-import hashlib, datetime, json
-root = Path.home()/ "consensus-project"/"memory"
-manifest = {}
-for p in root.rglob("*"):
-    if p.is_file():
-        manifest[str(p.relative_to(root))] = hashlib.sha256(p.read_bytes()).hexdigest()
-out = root/"logs"/"system"/f"manifest_{datetime.date.today()}.json"
-out.parent.mkdir(parents=True, exist_ok=True)
-out.write_text(json.dumps(manifest, indent=2))
-# Mutation_eae34d
-print("✅ Memory manifest logged", out)
-PY
-chmod +x ~/consensus-project/tools/log_memory_manifest.py
+import os, json
+from datetime import datetime, timezone
+
+def run():
+    """Write a simple daily manifest file for verification."""
+    timestamp = datetime.now(timezone.utc).isoformat()
+    outdir = "/home/rafa1215/consensus-project/memory/logs/system"
+    os.makedirs(outdir, exist_ok=True)
+    outfile = os.path.join(outdir, f"integration_manifest_{datetime.now().strftime('%Y-%m-%d')}.json")
+    with open(outfile, "w") as f:
+        json.dump({"timestamp": timestamp, "source": "log_memory_manifest"}, f)
+    print(f"[log_memory_manifest] Wrote manifest: {outfile}")
+
+if __name__ == "__main__":
+    run()
