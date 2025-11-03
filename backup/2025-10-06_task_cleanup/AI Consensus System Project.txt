@@ -1,2 +1,0 @@
-# AI Consensus System Project (stub)
-High-level goals, agents, schedules, and logging conventions will be summarized here.
