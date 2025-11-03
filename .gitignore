@@ -1,15 +1,16 @@
 # --- Secrets (never track) ---
 memory/core/secrets/
 
+# --- Environment files ---
+.env
+
 # --- Logs: ignore all by default, keep curated rollups ---
 memory/logs/**
-
 # Un-ignore parents so exceptions are seen
 !memory/logs/
 !memory/logs/system/
 !memory/logs/reports/
 !memory/logs/status/
-
 # Keep curated rollups + contents
 !memory/logs/system/agent_summaries/
 !memory/logs/system/agent_summaries/**
@@ -18,7 +19,25 @@ memory/logs/**
 !memory/logs/status/
 !memory/logs/status/**
 
-# Python / OS
+# --- Typos / duplicate trees accidentally created by tools ---
+memory/memory/**
+
+# --- Backups, archives, misc dumps ---
+archive/**/*
+backups/**/*
+backup/**/*
+*.bak
+*.bak_*
+*.bak-*
+*.tgz
+*.tar
+*.tar.gz
+*.zip
+agent_logs_*.tar*
+reports/*_snapshot_*.zip
+logs/**
+
+# --- Python / OS ---
 __pycache__/
 *.pyc
 .DS_Store
