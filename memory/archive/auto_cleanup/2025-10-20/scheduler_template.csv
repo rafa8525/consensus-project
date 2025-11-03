@@ -1,8 +1,0 @@
-Task Name,Command,Time (PST),Notes
-Security_Audit_Scheduler,/usr/bin/python3 /home/rafa1215/consensus-project/tools/security_audit_scheduler.py,03:45 AM,Monthly security audit
-VPN_Test_Suite,/usr/bin/python3 /home/rafa1215/consensus-project/tools/vpn_test_suite.py,03:45 AM,VPN reliability + failover testing
-Fitness_Tracking_System,/usr/bin/python3 /home/rafa1215/consensus-project/tools/fitness_tracking_system.py,06:00 AM,Fitness and wearable data integration
-Daily_Summary_Generator,/usr/bin/python3 /home/rafa1215/consensus-project/tools/daily_summary_generator.py,09:00 PM,Generate nightly fitness + sleep summary
-Memory_Absorption_Cycle,/usr/bin/python3 /home/rafa1215/consensus-project/tools/log_memory_manifest.py,10:00 AM & 04:00 PM,Absorbs all memory files and logs manifest
-Daily_Agent_Manifest,/usr/bin/python3 /home/rafa1215/consensus-project/tools/generate_daily_agent_manifest.py,10:00 AM & 04:00 PM,Regenerates daily_agent_task_manifest.md to include all active agents
-Daily_Agent_Progress,/usr/bin/python3 /home/rafa1215/consensus-project/tools/daily_agent_progress_logger.py,11:59 PM,Creates rolling daily_agent_progress_<date>.md for all agents
