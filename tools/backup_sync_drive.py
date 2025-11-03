@@ -18,7 +18,7 @@ LATEST_LINK = "memory_logs_backup_latest.zip"
 # Google Drive settings
 # You’ll need credentials for Drive API
 # Option: Use a service account with access or OAuth client credentials
-SERVICE_ACCOUNT_FILE = os.path.join(BASE_DIR, "google_credentials.json")  
+SERVICE_ACCOUNT_FILE = os.path.join(BASE_DIR, "/home/rafa1215/.secrets/google/service_account.json")  
 # Or credentials.json for OAuth
 SCOPES = ["https://www.googleapis.com/auth/drive.file"]
 DRIVE_FOLDER_ID = "1XVGRHof7eHhZdPI-Jvz5vvzfFn4FXEJ2"  # Your Google Drive folder ID from URL

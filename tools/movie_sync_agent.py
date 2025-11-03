@@ -27,7 +27,7 @@ MEDIA_DIR.mkdir(parents=True, exist_ok=True)
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 LOCAL_CACHE = MEDIA_DIR / "movies_backup.json"
-CREDENTIALS_PATH = BASE_DIR / "secrets/google_credentials.json"
+CREDENTIALS_PATH = BASE_DIR / "/home/rafa1215/.secrets/google/credentials.json"
 TOKEN_PATH = BASE_DIR / "secrets/google_token.json"
 MOVIE_SHEET_ID = os.getenv("MOVIE_SHEET_ID")
 MOVIE_SHEET_RANGE = os.getenv("MOVIE_SHEET_RANGE", "Movies!A2:B")  # default fallback
