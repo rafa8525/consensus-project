@@ -1,2 +1,0 @@
-# Unified Prompt (stub)
-Master instructions governing agents, logging, and schedules. Replace with the real file when ready.

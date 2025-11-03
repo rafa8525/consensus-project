@@ -1,4 +1,0 @@
-# Progress Evaluation Plan (stub)
-- Define KPIs for weekly status, VPN tests, guards, security audits.
-- Mark schedules verified in PythonAnywhere UI.
-- Expand sources list as real docs are added.
