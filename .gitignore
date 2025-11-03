@@ -212,3 +212,18 @@ memory/archive/auto_cleanup/2025-10-20/client_secrets_222647.json
 memory/archive/auto_cleanup/2025-10-20/credentials.json
 memory/archive/auto_cleanup/2025-10-20/credentials_222647.json
 memory/core/secrets/
+
+# --- runtime logs (ignore all) ---
+memory/logs/**
+
+# --- allowlist curated summaries we DO want in git ---
+!memory/logs/reports/**
+!memory/logs/status/**
+!memory/logs/system/agent_summaries/**
+# Quiet the repo
+memory/logs/**
+
+# Keep human-readable rollups
+!memory/logs/system/agent_summaries/**
+!memory/logs/reports/**
+!memory/logs/status/**
