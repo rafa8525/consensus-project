@@ -29,7 +29,7 @@ SCOPES = [
 ]
 
 CREDENTIALS_FILE = os.path.expanduser(
-    "~/consensus-project/memory/core/secrets/gmail_credentials.json"
+    "/home/rafa1215/.secrets/google/credentials.json"
 )
 TOKEN_FILE = os.path.expanduser(
     "~/consensus-project/memory/core/secrets/token_gmail.json"

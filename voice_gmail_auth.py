@@ -20,7 +20,7 @@ from googleapiclient.discovery import build
 
 # === PATHS ===
 BASE = Path("/home/rafa1215/consensus-project")
-CREDENTIALS_FILE = BASE / "credentials.json"
+CREDENTIALS_FILE = BASE / "/home/rafa1215/.secrets/google/credentials.json"
 TOKEN_FILE = BASE / "token.json"
 
 # === SCOPES ===
