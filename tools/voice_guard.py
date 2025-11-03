@@ -7,7 +7,8 @@ VLOG   = BASE / "voice_health.log"
 GUARD  = BASE / "voice_guard.log"
 BASE.mkdir(parents=True, exist_ok=True)
 
-now = datetime.utcnow()
+from datetime import timezone
+now = datetime.now(timezone.utc)
 ok = False
 if VLOG.exists():
     # consider healthy if we saw an entry in last 24h
