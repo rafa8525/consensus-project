@@ -19,7 +19,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive.file",
 ]
 TOKEN_FILE = os.path.expanduser(
-    "~/consensus-project/memory/core/secrets/token_gmail.json"
+    "/home/rafa1215/.secrets/google/token_gmail.json"
 )
 OUTPUT_LOG = os.path.expanduser(
     "~/consensus-project/memory/logs/email/misc_sorted_by_sender.md"

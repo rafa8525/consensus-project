@@ -21,7 +21,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive",
     "https://www.googleapis.com/auth/drive.file",
 ]
-TOKEN_FILE = os.path.expanduser("~/consensus-project/memory/core/secrets/token_gmail.json")
+TOKEN_FILE = os.path.expanduser("/home/rafa1215/.secrets/google/token_gmail.json")
 LOG_DIR = os.path.expanduser("~/consensus-project/memory/logs/email/")
 TARGET_LABEL = "Misc"
 BATCH_SIZE = 1000      # messages per page
