@@ -5,7 +5,7 @@ Headless Gmail OAuth setup for PythonAnywhere (manual copy-paste flow).
 
 - Works in environments without a local web browser.
 - Accepts Gmail + Drive scopes to prevent "scope changed" warnings.
-- Saves token for reuse in ~/consensus-project/memory/core/secrets/token_gmail.json
+- Saves token for reuse in /home/rafa1215/.secrets/google/token_gmail.json
 """
 
 import os
@@ -32,7 +32,7 @@ CREDENTIALS_FILE = os.path.expanduser(
     "/home/rafa1215/.secrets/google/credentials.json"
 )
 TOKEN_FILE = os.path.expanduser(
-    "~/consensus-project/memory/core/secrets/token_gmail.json"
+    "/home/rafa1215/.secrets/google/token_gmail.json"
 )
 
 
