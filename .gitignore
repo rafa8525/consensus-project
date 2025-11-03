@@ -197,3 +197,11 @@ _sim_unpack/**
 
 # --- Archives (avoid repo bloat) ---
 #memory/logs/archive/*.tar.gz
+# secrets (never commit)
+memory/system/service_account.json
+secrets/google_token.json
+credentials.json
+client_secret*.json
+service_account*.json
+token.json
+*.oauth.json
