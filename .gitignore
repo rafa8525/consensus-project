@@ -205,3 +205,9 @@ client_secret*.json
 service_account*.json
 token.json
 *.oauth.json
+# more google secrets
+credentials.json
+memory/archive/auto_cleanup/2025-10-20/client_secrets.json
+memory/archive/auto_cleanup/2025-10-20/client_secrets_222647.json
+memory/archive/auto_cleanup/2025-10-20/credentials.json
+memory/archive/auto_cleanup/2025-10-20/credentials_222647.json
