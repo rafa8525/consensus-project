@@ -5,7 +5,7 @@ import pathlib
 LOG = pathlib.Path.home() / "consensus-project" / "memory" / "logs" / "system" / "voice_health.log"
 LOG.parent.mkdir(parents=True, exist_ok=True)
 
-ts = datetime.utcnow().isoformat() + "Z"
+ts = datetime.now(__import__("datetime").timezone.utc).isoformat()
 msg = f"{ts} | daily_voice_reminder | OK (stub) — no SMS sent\n"
 LOG.write_text((LOG.read_text() if LOG.exists() else "") + msg)
 print("daily_voice_reminder: logged OK")
