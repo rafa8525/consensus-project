@@ -1,0 +1,6 @@
+00:00  python3 /home/rafa1215/consensus-project/tools/run_absorption.py
+18:00  python3 /home/rafa1215/consensus-project/tools/run_absorption.py
+Sun 03:00  python3 /home/rafa1215/consensus-project/tools/weekly_agent_email.py
+Tue & Fri 19:00  python3 /home/rafa1215/consensus-project/tools/ride_deals_scan.py
+Hourly  python3 /home/rafa1215/consensus-project/tools/mcl_guard.py
+1st 17:00  python3 /home/rafa1215/consensus-project/tools/security_suite.py
