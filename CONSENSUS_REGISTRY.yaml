@@ -1,36 +1,1315 @@
-version: "1.0"
-tasks:
-  - feature_id: absorb-and-sync
-    title: GitHub Memory Absorb & Sync
-    owner_agents: [AI Genesis, AI Time Architect]
-    window: am
-    healthcheck: logs/absorb/absorb_guard.log
-    command: bash -lc 'if [ -f config/absorb_cmd.txt ]; then sh -c "$(cat config/absorb_cmd.txt)"; else echo "No absorb_cmd.txt"; fi'
-
-  - feature_id: vpn-test
-    title: VPN Testing Suite (placeholder)
-    owner_agents: [AI Sandbox Engineer, AI Reverse Engineer of Thought]
-    window: pm
-    healthcheck: logs/security/vpn_tests/latest.log
-    command: bash -lc 'echo Run VPN tests; true'
-
-  - feature_id: status-report
-    title: Status Report Synthesis (placeholder)
-    owner_agents: [AI Thought Distiller]
-    window: pm
-    healthcheck: logs/reports/status.log
-    command: bash -lc 'echo Build status report; true'
-
-  - feature_id: weekly-reminder
-    title: Weekly Update Reminder (placeholder)
-    owner_agents: [AI Feedback Looper]
-    window: weekly
-    healthcheck: logs/reports/update_reminder.log
-    command: bash -lc 'echo Weekly reminder; true'
-
-  - feature_id: monthly-audit
-    title: Monthly Security Audit (placeholder)
-    owner_agents: [AI Consensus Democracy, AI Post‑Singularity Engineer]
-    window: monthly
-    healthcheck: logs/security/audit.log
-    command: bash -lc 'echo Security audit; true'
+agents:
+  absorb_guard_011:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/absorb_guard.py
+  absorb_guard_166:
+    critical: false
+    owner: auto
+    path: tools/absorb_guard.py
+  absorb_hourly_012:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/absorb_hourly.py
+  absorb_hourly_167:
+    critical: false
+    owner: auto
+    path: tools/absorb_hourly.py
+  absorb_memory_013:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/absorb_memory.py
+  absorb_memory_168:
+    critical: false
+    owner: auto
+    path: tools/absorb_memory.py
+  absorb_runner_014:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/absorb_runner.py
+  absorb_runner_169:
+    critical: false
+    owner: auto
+    path: tools/absorb_runner.py
+  absorb_status_report_015:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/absorb_status_report.py
+  absorb_status_report_170:
+    critical: false
+    owner: auto
+    path: tools/absorb_status_report.py
+  agent_dispatch_api_157:
+    critical: false
+    owner: auto
+    path: modules/agent_dispatcher/agent_dispatch_api.py
+  agent_dispatcher_158:
+    critical: false
+    owner: auto
+    path: modules/agent_dispatcher/agent_dispatcher.py
+  agent_dispatcher_api_159:
+    critical: false
+    owner: auto
+    path: modules/agent_dispatcher/agent_dispatcher_api.py
+  agent_evolution_cycle_016:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agent_evolution_cycle.py
+  agent_evolution_cycle_171:
+    critical: false
+    owner: auto
+    path: tools/agent_evolution_cycle.py
+  agent_log_parser_017:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agent_log_parser.py
+  agent_log_parser_172:
+    critical: false
+    owner: auto
+    path: tools/agent_log_parser.py
+  agent_self_repair_loop_018:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agent_self_repair_loop.py
+  agent_self_repair_loop_173:
+    critical: false
+    owner: auto
+    path: tools/agent_self_repair_loop.py
+  agent_team_demo_160:
+    critical: false
+    owner: auto
+    path: modules/agent_dispatcher/agent_team_demo.py
+  agents_daily_improvement_019:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agents_daily_improvement.py
+  agents_daily_improvement_176:
+    critical: false
+    owner: auto
+    path: tools/agents_daily_improvement.py
+  agents_loop_020:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agents_loop.py
+  agents_loop_177:
+    critical: false
+    owner: auto
+    path: tools/agents_loop.py
+  agents_notify_021:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agents_notify.py
+  agents_notify_178:
+    critical: false
+    owner: auto
+    path: tools/agents_notify.py
+  agents_orchestrator_022:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agents_orchestrator.py
+  agents_orchestrator_179:
+    critical: false
+    owner: auto
+    path: tools/agents_orchestrator.py
+  agi_simulation_023:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/agi_simulation.py
+  agi_simulation_180:
+    critical: false
+    owner: auto
+    path: tools/agi_simulation.py
+  ai_evolution_cycle_181:
+    critical: false
+    owner: auto
+    path: tools/ai_evolution_cycle.py
+  ai_evolutionist_024:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/ai_evolutionist.py
+  ai_evolutionist_182:
+    critical: false
+    owner: auto
+    path: tools/ai_evolutionist.py
+  alert_triage_025:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/alert_triage.py
+  alert_triage_183:
+    critical: false
+    owner: auto
+    path: tools/alert_triage.py
+  anticipation_research_agent_026:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/anticipation_research_agent.py
+  anticipation_research_agent_184:
+    critical: false
+    owner: auto
+    path: tools/anticipation_research_agent.py
+  apple_health_import_237:
+    critical: false
+    owner: auto
+    path: tools/importers/apple_health_import.py
+  ask_memory_027:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/ask_memory.py
+  ask_memory_185:
+    critical: false
+    owner: auto
+    path: tools/ask_memory.py
+  audit_geofencing_028:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/audit_geofencing.py
+  audit_geofencing_186:
+    critical: false
+    owner: auto
+    path: tools/audit_geofencing.py
+  auto_documentation_029:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/auto_documentation.py
+  auto_documentation_187:
+    critical: false
+    owner: auto
+    path: tools/auto_documentation.py
+  backup_sync_drive_030:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/backup_sync_drive.py
+  backup_sync_drive_188:
+    critical: false
+    owner: auto
+    path: tools/backup_sync_drive.py
+  barcode_cache_031:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/barcode_cache.py
+  barcode_cache_189:
+    critical: false
+    owner: auto
+    path: tools/barcode_cache.py
+  barcode_postfilter_032:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/barcode_postfilter.py
+  barcode_postfilter_190:
+    critical: false
+    owner: auto
+    path: tools/barcode_postfilter.py
+  barcode_sync_033:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/barcode_sync.py
+  barcode_sync_191:
+    critical: false
+    owner: auto
+    path: tools/barcode_sync.py
+  build_final_agent_report_034:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/build_final_agent_report.py
+  build_final_agent_report_192:
+    critical: false
+    owner: auto
+    path: tools/build_final_agent_report.py
+  calendar_event_creator_035:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/calendar_event_creator.py
+  calendar_event_creator_193:
+    critical: false
+    owner: auto
+    path: tools/calendar_event_creator.py
+  calendar_parser_036:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/calendar_parser.py
+  calendar_parser_194:
+    critical: false
+    owner: auto
+    path: tools/calendar_parser.py
+  calendar_sync_guard_037:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/calendar_sync_guard.py
+  calendar_sync_guard_195:
+    critical: false
+    owner: auto
+    path: tools/calendar_sync_guard.py
+  calendar_sync_guard_v3_038:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/calendar_sync_guard_v3.py
+  calendar_sync_guard_v3_196:
+    critical: false
+    owner: auto
+    path: tools/calendar_sync_guard_v3.py
+  catchup_guard_039:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/catchup_guard.py
+  catchup_guard_197:
+    critical: false
+    owner: auto
+    path: tools/catchup_guard.py
+  consensus_auto_repair_suite_040:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/consensus_auto_repair_suite.py
+  consensus_auto_repair_suite_198:
+    critical: false
+    owner: auto
+    path: tools/consensus_auto_repair_suite.py
+  consensus_dispatcher_041:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/consensus_dispatcher.py
+  consensus_dispatcher_199:
+    critical: false
+    owner: auto
+    path: tools/consensus_dispatcher.py
+  consensus_doctor_153:
+    critical: false
+    owner: auto
+    path: consensus_doctor.py
+  consensus_fixpack_154:
+    critical: false
+    owner: auto
+    path: consensus_fixpack.py
+  convert_csv_to_yaml_042:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/convert_csv_to_yaml.py
+  convert_csv_to_yaml_200:
+    critical: false
+    owner: auto
+    path: tools/convert_csv_to_yaml.py
+  core_sanity_suite_043:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/core_sanity_suite.py
+  core_sanity_suite_201:
+    critical: false
+    owner: auto
+    path: tools/core_sanity_suite.py
+  corrective_action_executor_044:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/corrective_action_executor.py
+  corrective_action_executor_202:
+    critical: false
+    owner: auto
+    path: tools/corrective_action_executor.py
+  depth_audit_203:
+    critical: false
+    owner: auto
+    path: tools/depth_audit.py
+  emotion_state_tracker_045:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/emotion_state_tracker.py
+  emotion_state_tracker_204:
+    critical: false
+    owner: auto
+    path: tools/emotion_state_tracker.py
+  evolutionary_agi_046:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/evolutionary_agi.py
+  evolutionary_agi_205:
+    critical: false
+    owner: auto
+    path: tools/evolutionary_agi.py
+  filename_guard_047:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/filename_guard.py
+  filename_guard_206:
+    critical: false
+    owner: auto
+    path: tools/filename_guard.py
+  finance_audit_048:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/finance_audit.py
+  finance_audit_207:
+    critical: false
+    owner: auto
+    path: tools/finance_audit.py
+  finance_media_049:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/finance_media.py
+  finance_media_208:
+    critical: false
+    owner: auto
+    path: tools/finance_media.py
+  fitbit_import_238:
+    critical: false
+    owner: auto
+    path: tools/importers/fitbit_import.py
+  fitbit_ingestor_050:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitbit_ingestor.py
+  fitbit_ingestor_209:
+    critical: false
+    owner: auto
+    path: tools/fitbit_ingestor.py
+  fitness_audit_210:
+    critical: false
+    owner: auto
+    path: tools/fitness_audit.py
+  fitness_expansion_051:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_expansion.py
+  fitness_expansion_211:
+    critical: false
+    owner: auto
+    path: tools/fitness_expansion.py
+  fitness_ingest_052:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_ingest.py
+  fitness_ingest_212:
+    critical: false
+    owner: auto
+    path: tools/fitness_ingest.py
+  fitness_integration_053:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_integration.py
+  fitness_integration_213:
+    critical: false
+    owner: auto
+    path: tools/fitness_integration.py
+  fitness_integration_live_054:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_integration_live.py
+  fitness_integration_live_214:
+    critical: false
+    owner: auto
+    path: tools/fitness_integration_live.py
+  fitness_normalize_055:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_normalize.py
+  fitness_normalize_215:
+    critical: false
+    owner: auto
+    path: tools/fitness_normalize.py
+  fitness_progress_master_056:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_progress_master.py
+  fitness_progress_master_216:
+    critical: false
+    owner: auto
+    path: tools/fitness_progress_master.py
+  fitness_tracker_057:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_tracker.py
+  fitness_tracker_217:
+    critical: false
+    owner: auto
+    path: tools/fitness_tracker.py
+  fitness_tracker_sync_058:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_tracker_sync.py
+  fitness_tracker_sync_218:
+    critical: false
+    owner: auto
+    path: tools/fitness_tracker_sync.py
+  fitness_tracking_verifier_059:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fitness_tracking_verifier.py
+  fitness_tracking_verifier_219:
+    critical: false
+    owner: auto
+    path: tools/fitness_tracking_verifier.py
+  fix_remaining_twilio_calls_060:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/fix_remaining_twilio_calls.py
+  fix_remaining_twilio_calls_220:
+    critical: false
+    owner: auto
+    path: tools/fix_remaining_twilio_calls.py
+  flag_digest_logger_061:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/flag_digest_logger.py
+  flag_digest_logger_221:
+    critical: false
+    owner: auto
+    path: tools/flag_digest_logger.py
+  generate_agent_prompts_155:
+    critical: false
+    owner: auto
+    path: hivemind/generate_agent_prompts.py
+  generate_daily_state_062:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/generate_daily_state.py
+  generate_daily_state_222:
+    critical: false
+    owner: auto
+    path: tools/generate_daily_state.py
+  generate_digest_000:
+    critical: false
+    owner: auto
+    path: agents/generate_digest.py
+  generate_index_md_163:
+    critical: false
+    owner: auto
+    path: seed/generate_index_md.py
+  generate_status_report_063:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/generate_status_report.py
+  generate_status_report_223:
+    critical: false
+    owner: auto
+    path: tools/generate_status_report.py
+  generate_weekly_report_064:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/generate_weekly_report.py
+  generate_weekly_report_224:
+    critical: false
+    owner: auto
+    path: tools/generate_weekly_report.py
+  generate_weekly_status_065:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/generate_weekly_status.py
+  generate_weekly_status_225:
+    critical: false
+    owner: auto
+    path: tools/generate_weekly_status.py
+  geofence_engine_066:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/geofence_engine.py
+  geofence_engine_226:
+    critical: false
+    owner: auto
+    path: tools/geofence_engine.py
+  geofence_nudger_227:
+    critical: false
+    owner: auto
+    path: tools/geofence_nudger.py
+  git_auto_commit_067:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/git_auto_commit.py
+  git_auto_commit_228:
+    critical: false
+    owner: auto
+    path: tools/git_auto_commit.py
+  github_push_verifier_068:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/github_push_verifier.py
+  github_push_verifier_229:
+    critical: false
+    owner: auto
+    path: tools/github_push_verifier.py
+  gmail_agent_001:
+    critical: false
+    owner: auto
+    path: agents/gmail_agent.py
+  gmail_alert_agent_002:
+    critical: false
+    owner: auto
+    path: agents/gmail_alert_agent.py
+  gmail_auth_setup_069:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/gmail_auth_setup.py
+  gmail_auth_setup_230:
+    critical: false
+    owner: auto
+    path: tools/gmail_auth_setup.py
+  gmail_misc_merge_batches_003:
+    critical: false
+    owner: auto
+    path: agents/gmail_misc_merge_batches.py
+  gmail_misc_sorter_004:
+    critical: false
+    owner: auto
+    path: agents/gmail_misc_sorter.py
+  gmail_misc_sorter_by_name_005:
+    critical: false
+    owner: auto
+    path: agents/gmail_misc_sorter_by_name.py
+  gmail_misc_split_by_sender_006:
+    critical: false
+    owner: auto
+    path: agents/gmail_misc_split_by_sender.py
+  gmail_parser_070:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/gmail_parser.py
+  gmail_refresh_guard_071:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/gmail_refresh_guard.py
+  gmail_refresh_guard_231:
+    critical: false
+    owner: auto
+    path: tools/gmail_refresh_guard.py
+  gmail_refresh_guard_v3_072:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/gmail_refresh_guard_v3.py
+  gmail_refresh_guard_v3_232:
+    critical: false
+    owner: auto
+    path: tools/gmail_refresh_guard_v3.py
+  gmail_voice_reader_007:
+    critical: false
+    owner: auto
+    path: agents/gmail_voice_reader.py
+  google_fit_import_239:
+    critical: false
+    owner: auto
+    path: tools/importers/google_fit_import.py
+  health_check_loop_073:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/health_check_loop.py
+  health_check_loop_233:
+    critical: false
+    owner: auto
+    path: tools/health_check_loop.py
+  health_master_074:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/health_master.py
+  health_master_234:
+    critical: false
+    owner: auto
+    path: tools/health_master.py
+  heartbeat_monitor_075:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/heartbeat_monitor.py
+  heartbeat_monitor_235:
+    critical: false
+    owner: auto
+    path: tools/heartbeat_monitor.py
+  import_fitness_dispatch_076:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/import_fitness_dispatch.py
+  import_fitness_dispatch_236:
+    critical: false
+    owner: auto
+    path: tools/import_fitness_dispatch.py
+  kb_ingest_077:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/kb_ingest.py
+  kb_ingest_242:
+    critical: false
+    owner: auto
+    path: tools/kb_ingest.py
+  knowledge_graph_078:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/knowledge_graph.py
+  knowledge_graph_243:
+    critical: false
+    owner: auto
+    path: tools/knowledge_graph.py
+  knowledge_master_079:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/knowledge_master.py
+  knowledge_master_244:
+    critical: false
+    owner: auto
+    path: tools/knowledge_master.py
+  knowledge_sharing_080:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/knowledge_sharing.py
+  knowledge_sharing_245:
+    critical: false
+    owner: auto
+    path: tools/knowledge_sharing.py
+  knowledge_sharing_validator_081:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/knowledge_sharing_validator.py
+  knowledge_sharing_validator_246:
+    critical: false
+    owner: auto
+    path: tools/knowledge_sharing_validator.py
+  log_memory_manifest_082:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/log_memory_manifest.py
+  log_memory_manifest_247:
+    critical: false
+    owner: auto
+    path: tools/log_memory_manifest.py
+  log_repair_guard_083:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/log_repair_guard.py
+  log_repair_guard_248:
+    critical: false
+    owner: auto
+    path: tools/log_repair_guard.py
+  log_rotate_084:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/log_rotate.py
+  log_rotate_249:
+    critical: false
+    owner: auto
+    path: tools/log_rotate.py
+  main_150:
+    critical: false
+    owner: auto
+    path: consensus/main.py
+  master_control_loop_085:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/master_control_loop.py
+  master_control_loop_250:
+    critical: false
+    owner: auto
+    path: tools/master_control_loop.py
+  master_guard_integrator_086:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/master_guard_integrator.py
+  master_guard_integrator_251:
+    critical: false
+    owner: auto
+    path: tools/master_guard_integrator.py
+  mcl_guard_087:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/mcl_guard.py
+  mcl_guard_156:
+    critical: false
+    owner: auto
+    path: mcl_guard.py
+  mcl_guard_252:
+    critical: false
+    owner: auto
+    path: tools/mcl_guard.py
+  memory_agent_174:
+    critical: false
+    owner: auto
+    path: tools/agents/memory_agent.py
+  memory_compressor_088:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/memory_compressor.py
+  memory_compressor_253:
+    critical: false
+    owner: auto
+    path: tools/memory_compressor.py
+  menu_151:
+    critical: false
+    owner: auto
+    path: consensus/menu.py
+  meta_evaluator_175:
+    critical: false
+    owner: auto
+    path: tools/agents/meta_evaluator.py
+  meta_learning_core_089:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/meta_learning_core.py
+  meta_learning_core_254:
+    critical: false
+    owner: auto
+    path: tools/meta_learning_core.py
+  morning_master_255:
+    critical: false
+    owner: auto
+    path: tools/morning_master.py
+  movie_recommender_090:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/movie_recommender.py
+  movie_recommender_256:
+    critical: false
+    owner: auto
+    path: tools/movie_recommender.py
+  movie_sync_agent_091:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/movie_sync_agent.py
+  movie_sync_agent_257:
+    critical: false
+    owner: auto
+    path: tools/movie_sync_agent.py
+  movies_monitor_092:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/movies_monitor.py
+  movies_monitor_258:
+    critical: false
+    owner: auto
+    path: tools/movies_monitor.py
+  notify_layer_093:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/notify_layer.py
+  notify_layer_259:
+    critical: false
+    owner: auto
+    path: tools/notify_layer.py
+  nutrition_normalize_094:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/nutrition_normalize.py
+  nutrition_normalize_260:
+    critical: false
+    owner: auto
+    path: tools/nutrition_normalize.py
+  pa_tasks_audit_095:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/pa_tasks_audit.py
+  pa_tasks_audit_261:
+    critical: false
+    owner: auto
+    path: tools/pa_tasks_audit.py
+  predictive_simulation_agent_096:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/predictive_simulation_agent.py
+  predictive_simulation_agent_262:
+    critical: false
+    owner: auto
+    path: tools/predictive_simulation_agent.py
+  predictive_task_flow_097:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/predictive_task_flow.py
+  predictive_task_flow_263:
+    critical: false
+    owner: auto
+    path: tools/predictive_task_flow.py
+  progress_evaluation_runner_098:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/progress_evaluation_runner.py
+  progress_evaluation_runner_264:
+    critical: false
+    owner: auto
+    path: tools/progress_evaluation_runner.py
+  progress_evaluator_099:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/progress_evaluator.py
+  progress_evaluator_265:
+    critical: false
+    owner: auto
+    path: tools/progress_evaluator.py
+  project_delta_report_100:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/project_delta_report.py
+  project_delta_report_266:
+    critical: false
+    owner: auto
+    path: tools/project_delta_report.py
+  recursive_evolution_manager_101:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/recursive_evolution_manager.py
+  recursive_evolution_manager_267:
+    critical: false
+    owner: auto
+    path: tools/recursive_evolution_manager.py
+  recursive_self_improvement_102:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/recursive_self_improvement.py
+  recursive_self_improvement_268:
+    critical: false
+    owner: auto
+    path: tools/recursive_self_improvement.py
+  recursive_self_improvement_old_103:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/recursive_self_improvement_old.py
+  recursive_self_improvement_old_269:
+    critical: false
+    owner: auto
+    path: tools/recursive_self_improvement_old.py
+  registry_parity_270:
+    critical: false
+    owner: auto
+    path: tools/registry_parity.py
+  remind_104:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/remind.py
+  remind_271:
+    critical: false
+    owner: auto
+    path: tools/remind.py
+  reminder_agent_162:
+    critical: false
+    owner: auto
+    path: reminder agent/reminder_agent.py
+  reminder_runner_105:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/reminder_runner.py
+  reminder_runner_272:
+    critical: false
+    owner: auto
+    path: tools/reminder_runner.py
+  report_master_106:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/report_master.py
+  report_master_273:
+    critical: false
+    owner: auto
+    path: tools/report_master.py
+  ride_deals_scan_274:
+    critical: false
+    owner: auto
+    path: tools/ride_deals_scan.py
+  rotate_logs_107:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/rotate_logs.py
+  run_absorption_275:
+    critical: false
+    owner: auto
+    path: tools/run_absorption.py
+  samsung_health_import_240:
+    critical: false
+    owner: auto
+    path: tools/importers/samsung_health_import.py
+  scenario_simulation_suite_108:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/scenario_simulation_suite.py
+  scenario_simulation_suite_276:
+    critical: false
+    owner: auto
+    path: tools/scenario_simulation_suite.py
+  scheduler_109:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/scheduler.py
+  scheduler_152:
+    critical: false
+    owner: auto
+    path: consensus/scheduler.py
+  scheduler_277:
+    critical: false
+    owner: auto
+    path: tools/scheduler.py
+  security_audit_110:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/security_audit.py
+  security_audit_278:
+    critical: false
+    owner: auto
+    path: tools/security_audit.py
+  security_audit_runner_111:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/security_audit_runner.py
+  security_audit_runner_279:
+    critical: false
+    owner: auto
+    path: tools/security_audit_runner.py
+  security_audit_scheduler_112:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/security_audit_scheduler.py
+  security_audit_scheduler_280:
+    critical: false
+    owner: auto
+    path: tools/security_audit_scheduler.py
+  security_reliability_113:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/security_reliability.py
+  security_reliability_281:
+    critical: false
+    owner: auto
+    path: tools/security_reliability.py
+  security_suite_282:
+    critical: false
+    owner: auto
+    path: tools/security_suite.py
+  self_improver_008:
+    critical: false
+    owner: auto
+    path: agents/self_improver.py
+  send_digest_009:
+    critical: false
+    owner: auto
+    path: agents/send_digest.py
+  shared_intelligence_loop_114:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/shared_intelligence_loop.py
+  shared_intelligence_loop_283:
+    critical: false
+    owner: auto
+    path: tools/shared_intelligence_loop.py
+  simulate_and_prepare_115:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/simulate_and_prepare.py
+  simulate_and_prepare_284:
+    critical: false
+    owner: auto
+    path: tools/simulate_and_prepare.py
+  simulate_geofence_116:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/simulate_geofence.py
+  simulate_geofence_285:
+    critical: false
+    owner: auto
+    path: tools/simulate_geofence.py
+  sms_fallback_queue_117:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/sms_fallback_queue.py
+  sms_fallback_queue_286:
+    critical: false
+    owner: auto
+    path: tools/sms_fallback_queue.py
+  sms_persistence_daemon_118:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/sms_persistence_daemon.py
+  sms_persistence_daemon_287:
+    critical: false
+    owner: auto
+    path: tools/sms_persistence_daemon.py
+  sms_sandbox_monitor_164:
+    critical: false
+    owner: auto
+    path: sms_sandbox_monitor.py
+  sms_service_guard_119:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/sms_service_guard.py
+  sms_service_guard_288:
+    critical: false
+    owner: auto
+    path: tools/sms_service_guard.py
+  state_tracker_120:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/state_tracker.py
+  status_postprocess_289:
+    critical: false
+    owner: auto
+    path: tools/status_postprocess.py
+  storage_cleanup_121:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/storage_cleanup.py
+  storage_cleanup_290:
+    critical: false
+    owner: auto
+    path: tools/storage_cleanup.py
+  strava_import_241:
+    critical: false
+    owner: auto
+    path: tools/importers/strava_import.py
+  summarize_agent_logs_122:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/summarize_agent_logs.py
+  summarize_agent_logs_291:
+    critical: false
+    owner: auto
+    path: tools/summarize_agent_logs.py
+  summary_generator_123:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/summary_generator.py
+  summary_generator_292:
+    critical: false
+    owner: auto
+    path: tools/summary_generator.py
+  summary_guard_124:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/summary_guard.py
+  summary_guard_293:
+    critical: false
+    owner: auto
+    path: tools/summary_guard.py
+  support_sites_router_125:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/support_sites_router.py
+  support_sites_router_294:
+    critical: false
+    owner: auto
+    path: tools/support_sites_router.py
+  swim_weather_nudge_126:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/swim_weather_nudge.py
+  swim_weather_nudge_295:
+    critical: false
+    owner: auto
+    path: tools/swim_weather_nudge.py
+  symbolic_reasoning_127:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/symbolic_reasoning.py
+  symbolic_reasoning_296:
+    critical: false
+    owner: auto
+    path: tools/symbolic_reasoning.py
+  system_file_auditor_128:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/system_file_auditor.py
+  system_file_auditor_297:
+    critical: false
+    owner: auto
+    path: tools/system_file_auditor.py
+  system_maintenance_298:
+    critical: false
+    owner: auto
+    path: tools/system_maintenance.py
+  test_agent_dispatcher_161:
+    critical: false
+    owner: auto
+    path: modules/agent_dispatcher/test_agent_dispatcher.py
+  test_sms_165:
+    critical: false
+    owner: auto
+    path: test_sms.py
+  top10_selfcheck_129:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/top10_selfcheck.py
+  top10_selfcheck_299:
+    critical: false
+    owner: auto
+    path: tools/top10_selfcheck.py
+  twilio_guard_321:
+    critical: false
+    owner: auto
+    path: twilio_guard.py
+  unpack_inbox_130:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/unpack_inbox.py
+  unpack_inbox_300:
+    critical: false
+    owner: auto
+    path: tools/unpack_inbox.py
+  verify_knowledge_base_131:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/verify_knowledge_base.py
+  verify_knowledge_base_301:
+    critical: false
+    owner: auto
+    path: tools/verify_knowledge_base.py
+  verify_logs_tree_132:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/verify_logs_tree.py
+  verify_logs_tree_302:
+    critical: false
+    owner: auto
+    path: tools/verify_logs_tree.py
+  voice_access_movie_summary_133:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_access_movie_summary.py
+  voice_access_movie_summary_303:
+    critical: false
+    owner: auto
+    path: tools/voice_access_movie_summary.py
+  voice_calendar_handler_323:
+    critical: false
+    owner: auto
+    path: voice_calendar_handler.py
+  voice_connector_chatgpt_134:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_connector_chatgpt.py
+  voice_connector_chatgpt_304:
+    critical: false
+    owner: auto
+    path: tools/voice_connector_chatgpt.py
+  voice_connector_integration_135:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_connector_integration.py
+  voice_connector_integration_305:
+    critical: false
+    owner: auto
+    path: tools/voice_connector_integration.py
+  voice_context_loader_136:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_context_loader.py
+  voice_context_loader_306:
+    critical: false
+    owner: auto
+    path: tools/voice_context_loader.py
+  voice_geo_status_137:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_geo_status.py
+  voice_geo_status_307:
+    critical: false
+    owner: auto
+    path: tools/voice_geo_status.py
+  voice_gmail_auth_324:
+    critical: false
+    owner: auto
+    path: voice_gmail_auth.py
+  voice_gmail_handler_138:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_gmail_handler.py
+  voice_gmail_handler_308:
+    critical: false
+    owner: auto
+    path: tools/voice_gmail_handler.py
+  voice_gmail_handler_325:
+    critical: false
+    owner: auto
+    path: voice_gmail_handler.py
+  voice_memory_lookup_309:
+    critical: false
+    owner: auto
+    path: tools/voice_memory_lookup.py
+  voice_schedule_event_139:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_schedule_event.py
+  voice_schedule_event_310:
+    critical: false
+    owner: auto
+    path: tools/voice_schedule_event.py
+  voice_status_140:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/voice_status.py
+  voice_status_311:
+    critical: false
+    owner: auto
+    path: tools/voice_status.py
+  vpn_activation_detector_141:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/vpn_activation_detector.py
+  vpn_activation_detector_312:
+    critical: false
+    owner: auto
+    path: tools/vpn_activation_detector.py
+  vpn_activation_test_142:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/vpn_activation_test.py
+  vpn_activation_test_313:
+    critical: false
+    owner: auto
+    path: tools/vpn_activation_test.py
+  vpn_auto_detect_activate_143:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/vpn_auto_detect_activate.py
+  vpn_auto_detect_activate_314:
+    critical: false
+    owner: auto
+    path: tools/vpn_auto_detect_activate.py
+  vpn_autoconnect_144:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/vpn_autoconnect.py
+  vpn_autoconnect_315:
+    critical: false
+    owner: auto
+    path: tools/vpn_autoconnect.py
+  vpn_test_runner_316:
+    critical: false
+    owner: auto
+    path: tools/vpn_test_runner.py
+  watch_voice_trigger_145:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/watch_voice_trigger.py
+  watchdog_heartbeat_146:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/watchdog_heartbeat.py
+  watchdog_heartbeat_317:
+    critical: false
+    owner: auto
+    path: tools/watchdog_heartbeat.py
+  watchdog_memory_absorb_147:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/watchdog_memory_absorb.py
+  watchdog_memory_absorb_318:
+    critical: false
+    owner: auto
+    path: tools/watchdog_memory_absorb.py
+  watcher_322:
+    critical: false
+    owner: auto
+    path: upload_sync/auto_push/watcher.py
+  weekly_backup_010:
+    critical: false
+    owner: auto
+    path: agents/weekly_backup.py
+  weekly_optimizations_generator_148:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/weekly_optimizations_generator.py
+  weekly_optimizations_generator_319:
+    critical: false
+    owner: auto
+    path: tools/weekly_optimizations_generator.py
+  weekly_status_report_149:
+    critical: false
+    owner: auto
+    path: backup/tasks_backup/weekly_status_report.py
+  weekly_status_report_320:
+    critical: false
+    owner: auto
+    path: tools/weekly_status_report.py
+  auto_coverage_refresh:
+    path: tools/coverage_refresh.py
+    name: Coverage Refresh
+    owner: auto
+    critical: false
+    enabled: true
+    tags:
+    - auto-registered
+generated: 2025-11-06 01:17:06 UTC
+note: Auto-seeded from entry-like files; edit owners/critical as needed.
