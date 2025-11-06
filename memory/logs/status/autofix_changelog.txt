@@ -1,0 +1,17 @@
+
+--- registry autofix 2025-11-06 01:46:52 UTC ---
++ tools/coverage_refresh.py
+
+--- schedule autofix 2025-11-06 01:46:52 UTC ---
++ 20 10 * * *  python3 agents/generate_digest.py
++ 21 10 * * *  python3 agents/gmail_agent.py
++ 22 10 * * *  python3 agents/gmail_alert_agent.py
++ 23 10 * * *  python3 agents/gmail_misc_merge_batches.py
++ 24 10 * * *  python3 agents/gmail_misc_sorter.py
++ 25 10 * * *  python3 agents/gmail_misc_sorter_by_name.py
++ 26 10 * * *  python3 agents/gmail_misc_split_by_sender.py
++ 27 10 * * *  python3 agents/gmail_voice_reader.py
++ 28 10 * * *  python3 agents/self_improver.py
++ 29 10 * * *  python3 agents/send_digest.py
++ 30 10 * * *  python3 agents/weekly_backup.py
++ 31 10 * * *  python3 tools/coverage_refresh.py

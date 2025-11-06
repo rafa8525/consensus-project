@@ -1,9 +1,9 @@
 # GitHub Coverage Report (Whitelist)
-Generated: 2025-11-06 01:42:47 UTC
+Generated: 2025-11-06 01:46:52 UTC
 
 Dirs: tools, agents, core, services, scripts
-Total .py: **245** | Entry-like: **166**
-On schedule: **155** | In registry: **166**
+Total .py: **246** | Entry-like: **167**
+On schedule: **167** | In registry: **167**
 | File | Entry | Scheduled | In Registry |
 |---|---:|---:|---:|
 | `agents/core/agent_base.py` | no | no | no |
@@ -12,22 +12,22 @@ On schedule: **155** | In registry: **166**
 | `agents/core/store.py` | no | no | no |
 | `agents/evaluator.py` | no | no | no |
 | `agents/executor.py` | no | no | no |
-| `agents/generate_digest.py` | YES | no | YES |
-| `agents/gmail_agent.py` | YES | no | YES |
-| `agents/gmail_alert_agent.py` | YES | no | YES |
-| `agents/gmail_misc_merge_batches.py` | YES | no | YES |
-| `agents/gmail_misc_sorter.py` | YES | no | YES |
-| `agents/gmail_misc_sorter_by_name.py` | YES | no | YES |
-| `agents/gmail_misc_split_by_sender.py` | YES | no | YES |
-| `agents/gmail_voice_reader.py` | YES | no | YES |
+| `agents/generate_digest.py` | YES | YES | YES |
+| `agents/gmail_agent.py` | YES | YES | YES |
+| `agents/gmail_alert_agent.py` | YES | YES | YES |
+| `agents/gmail_misc_merge_batches.py` | YES | YES | YES |
+| `agents/gmail_misc_sorter.py` | YES | YES | YES |
+| `agents/gmail_misc_sorter_by_name.py` | YES | YES | YES |
+| `agents/gmail_misc_split_by_sender.py` | YES | YES | YES |
+| `agents/gmail_voice_reader.py` | YES | YES | YES |
 | `agents/log_insights.py` | no | no | no |
 | `agents/memory_manager.py` | no | no | no |
 | `agents/planner.py` | no | no | no |
 | `agents/researcher.py` | no | no | no |
-| `agents/self_improver.py` | YES | no | YES |
-| `agents/send_digest.py` | YES | no | YES |
+| `agents/self_improver.py` | YES | YES | YES |
+| `agents/send_digest.py` | YES | YES | YES |
 | `agents/supervisor.py` | no | no | no |
-| `agents/weekly_backup.py` | YES | no | YES |
+| `agents/weekly_backup.py` | YES | YES | YES |
 | `scripts/auto_git_sync.py` | no | no | no |
 | `scripts/auto_memory_sync.py` | no | no | no |
 | `tools/absorb_guard.py` | YES | YES | YES |
@@ -85,6 +85,7 @@ On schedule: **155** | In registry: **166**
 | `tools/convert_csv_to_yaml.py` | YES | YES | YES |
 | `tools/core_sanity_suite.py` | YES | YES | YES |
 | `tools/corrective_action_executor.py` | YES | YES | YES |
+| `tools/coverage_refresh.py` | YES | YES | YES |
 | `tools/cross_agent_fitness.py` | no | no | no |
 | `tools/daily_voice_reminder.py` | no | no | no |
 | `tools/decision_support.py` | no | no | no |
