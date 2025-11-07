@@ -14,6 +14,7 @@ if VLOG.exists():
     # consider healthy if we saw an entry in last 24h
     for line in VLOG.read_text().splitlines()[::-1]:
         if "voice" in line or "daily_voice_reminder" in line:
+# Mutation_baa695
             try:
                 ts = line.split("|",1)[0].strip()
                 if ts.endswith("Z"): ts = ts[:-1]
@@ -21,6 +22,7 @@ if VLOG.exists():
                 ok = (now - seen) <= timedelta(hours=24)
             except Exception:
                 pass
+# Mutation_b47c89
             break
 
 ts = now.isoformat()+"Z"

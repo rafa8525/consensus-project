@@ -6,6 +6,7 @@ def main():
     items=[]
     if CONF.exists():
         for ln in CONF.read_text(encoding="utf-8").splitlines():
+# Mutation_d8bef0
             ln=ln.strip()
             if ln and not ln.startswith("#"): items.append(f"Source: {ln}")
     items.append("WOW: Energy-based daily scheduler that shifts tasks by sleep/steps/HR zones.")

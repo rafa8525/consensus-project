@@ -1,91 +1,94 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-AI Consensus System – Scenario Simulation Suite
-Author: Rafael / AI Consensus System
-Purpose: Run daily stress and reliability simulations for all major modules.
+scenario_simulation_suite.py
+------------------------------------------------------------
+Combines predictive results from task flow and simulation agent
+to estimate overall system outlook and confidence for the next cycle.
+
+Outputs:
+  - scenario_simulation_suite.log   (human-readable summary)
+  - scenario_summary.json           (structured summary)
+
+Location:
+  ~/memory/logs/system/predictive/
+------------------------------------------------------------
 """
 
 import os
+import json
+import datetime
 import random
-import time
-from datetime import datetime, timezone
 
-BASE_DIR = os.path.expanduser("~/consensus-project")
-LOG_DIR = os.path.join(BASE_DIR, "memory/logs/simulations")
-os.makedirs(LOG_DIR, exist_ok=True)
+# === Paths ===
+PRED_DIR   = os.path.expanduser("~/memory/logs/system/predictive")
+LOG_PATH   = os.path.join(PRED_DIR, "scenario_simulation_suite.log")
+JSON_PATH  = os.path.join(PRED_DIR, "scenario_summary.json")
 
 def timestamp():
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-def log(msg: str):
-    log_path = os.path.join(LOG_DIR, f"scenario_report_{datetime.now(timezone.utc).date()}.md")
-    with open(log_path, "a") as f:
-        f.write(f"[{timestamp()}] {msg}\n")
-    print(msg)
+def ensure_dir():
+    os.makedirs(PRED_DIR, exist_ok=True)
 
-# --------------------------------------------------------------------------- #
-#                           SIMULATION COMPONENTS                             #
-# --------------------------------------------------------------------------- #
+def read_json(path):
+    """Read a JSON file if it exists."""
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
 
-def vpn_stress_test():
-    """Simulate VPN load, failover, and detection checks."""
-    simulated_latency = round(random.uniform(50, 350), 2)
-    failover_success = random.choice([True, True, True, False])  # 75% pass
-    result = "PASS" if failover_success else "FAIL"
-    log(f"VPN Stress Test → {result} | latency={simulated_latency}ms")
-    return {"test": "VPN Stress", "latency": simulated_latency, "result": result}
+def aggregate_predictions():
+    """Load data from previous predictive agents and compute an outlook."""
+    task_data = read_json(os.path.join(PRED_DIR, "predictive_task_flow.json"))
+    sim_data  = read_json(os.path.join(PRED_DIR, "predictive_summary.json"))
 
-def github_visibility_test():
-    """Simulate GitHub sync visibility and push confirmation."""
-    sync_delay = round(random.uniform(0.5, 3.0), 2)
-    visible_commit = random.choice([True, True, True, False])
-    result = "PASS" if visible_commit else "FAIL"
-    log(f"GitHub Visibility Test → {result} | delay={sync_delay}s")
-    return {"test": "GitHub Visibility", "delay": sync_delay, "result": result}
+    # Default values
+    task_conf = float(task_data.get("confidence", 0))
+    risk      = float(sim_data.get("risk", 0))
+    sim_conf  = float(sim_data.get("confidence", 0))
 
-def fitness_data_loss_test():
-    """Simulate partial Fitbit/Pixel Watch data loss and recovery."""
-    recovery_time = round(random.uniform(1.0, 6.0), 2)
-    recovered = random.choice([True, True, False])
-    result = "PASS" if recovered else "FAIL"
-    log(f"Fitness Data Integrity Test → {result} | recovery={recovery_time}s")
-    return {"test": "Fitness Data", "recovery_time": recovery_time, "result": result}
+    # Derive combined confidence and outlook
+    avg_conf = round((task_conf + sim_conf) / 2 if (task_conf or sim_conf) else 0, 2)
+    if risk < 5:
+        outlook = "Positive"
+    elif risk < 15:
+        outlook = "Caution"
+    else:
+        outlook = "High Risk"
 
-def finance_logging_gap_test():
-    """Simulate missing finance logs and auto-recovery checks."""
-    missing_entries = random.randint(0, 3)
-    auto_fix = missing_entries == 0 or random.choice([True, False])
-    result = "PASS" if auto_fix else "FAIL"
-    log(f"Finance Logging Integrity Test → {result} | missing_entries={missing_entries}")
-    return {"test": "Finance Logging", "missing_entries": missing_entries, "result": result}
+    confidence_adj = round(avg_conf + random.uniform(-2, 2), 2)
+    return {
+        "outlook": outlook,
+        "confidence": confidence_adj,
+        "risk_score": risk,
+        "task_confidence": task_conf,
+        "sim_confidence": sim_conf,
+        "timestamp": timestamp()
+    }
 
-# --------------------------------------------------------------------------- #
-#                                MASTER RUNNER                                #
-# --------------------------------------------------------------------------- #
+def write_outputs(result):
+    """Write both JSON and log summary outputs."""
+    with open(JSON_PATH, "w", encoding="utf-8") as jf:
+        json.dump(result, jf, indent=2)
 
-def run_all_simulations():
-    log("=== Scenario Simulation Suite Start ===")
-    results = []
-    results.append(vpn_stress_test())
-    time.sleep(0.5)
-    results.append(github_visibility_test())
-    time.sleep(0.5)
-    results.append(fitness_data_loss_test())
-    time.sleep(0.5)
-    results.append(finance_logging_gap_test())
-    time.sleep(0.5)
+    with open(LOG_PATH, "a", encoding="utf-8") as lf:
+        lf.write(
+            f"[{timestamp()}] Outlook={result['outlook']} | "
+            f"Confidence={result['confidence']}% | "
+            f"Risk={result['risk_score']}%\n"
+        )
 
-    # Count failures for summary
-    failed = [r for r in results if r["result"] != "PASS"]
-    summary_status = "PASS" if not failed else f"FAIL ({len(failed)} failed)"
-    log(f"=== Simulation Summary → {summary_status} ===")
-    for r in failed:
-        log(f"⚠️  {r['test']} failed with data: {r}")
-
-    log("=== Scenario Simulation Suite Complete ===")
-    return results
-
+def main():
+    ensure_dir()
+    result = aggregate_predictions()
+    write_outputs(result)
+    print(
+        f"[{timestamp()}] Scenario Simulation: "
+        f"{result['outlook']} (Confidence={result['confidence']}%, Risk={result['risk_score']}%)"
+    )
 
 if __name__ == "__main__":
-    run_all_simulations()
+    main()

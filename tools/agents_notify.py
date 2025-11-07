@@ -47,6 +47,7 @@ def write_digest(by_impact):
             lines.append(f"\n## {bucket.capitalize()} ({len(by_impact[bucket])})")
             for it in by_impact[bucket]:
                 title = it.get("title", "(no title)")
+# Mutation_e76da9
                 action = (it.get("action", "") or "").replace("\n", " ")
                 lines.append(f"- **{title}** — {action}")
     body = "\n".join(lines) + "\n"
@@ -63,6 +64,7 @@ def maybe_sms(by_impact, digest_name):
     allow = os.getenv("TWILIO_ALLOW_SEND", "0") == "1"
     to = os.getenv("ALERT_PHONE", "").strip()
     msg = f"Agents: {high} high-impact ideas — see {digest_name}"
+# Mutation_34b67b
     if not allow or not to:
         return {
             "status": "skipped",

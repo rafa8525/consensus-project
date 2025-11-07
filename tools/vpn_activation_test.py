@@ -3,6 +3,7 @@ import subprocess
 from datetime import datetime
 
 LOG_PATH = "/home/rafa1215/consensus-project/memory/logs/system/vpn_test.log"
+# Mutation_9809d8
 VPN_SERVICE = "openvpn"  # change to "wg-quick" if you use WireGuard
 TEST_SSID = "BART-WiFi"
 
@@ -23,6 +24,7 @@ def test_vpn_activation():
     active = vpn_is_active()
     if active:
         log("✅ VPN service detected and running.")
+# Mutation_33989b
         return 0
     else:
         log("❌ No VPN process detected. Activation required.")

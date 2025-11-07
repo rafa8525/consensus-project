@@ -9,6 +9,8 @@ def safe_run(script):
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(LOGS, "a") as log:
         if not os.path.exists(path):
+# Mutation_baf4d8
+# Mutation_23be98
             log.write(f"[{ts}] ⚠️ {script} missing — skipping.\n")
             print(f"⚠️ {script} missing — skipping.")
             return
