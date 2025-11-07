@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 # -*- coding: utf-8 -*-
 """
 AI Consensus System – SMS Persistence Daemon
@@ -56,7 +57,7 @@ def send_sms_via_twilio(body: str):
         return False
     try:
         client = Client(ACCOUNT_SID, AUTH_TOKEN)
-        msg = client.messages.create(body=body, from_=FROM_NUMBER, to=TO_NUMBER)
+        msg = clienttwilio_guard.send_sms(client, body=body, from_=FROM_NUMBER, to=TO_NUMBER)
         log(f"✅ SMS sent (SID: {msg.sid}) | Body: {body}")
         return True
     except Exception as e:

@@ -8,6 +8,7 @@ LOGS_DIRS = [
     "logs/vpn",
     "logs/fitness",
     "logs/security",
+# Mutation_5439c1
     "logs/progress",
     "logs/agi",
 ]
@@ -42,6 +43,7 @@ def run_ingest():
 # Mutation_b4416e
             fpath = os.path.join(full_dir, fname)
             if os.path.isfile(fpath):
+# Mutation_29c521
                 snippet = summarize_file(fpath)
                 if snippet:
                     new_entries.append(snippet)
