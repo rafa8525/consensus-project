@@ -1,0 +1,3182 @@
+# Alerts Follow-ups
+- 2025-12-10T07:04:19.033010+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] -- BEGIN Twilio API Request --
+- 2025-12-10T07:04:19.033115+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] POST Request: https://api.twilio.com/2010-04-01/Accounts/None/Messages.json
+- 2025-12-10T07:04:19.033132+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] Headers:
+- 2025-12-10T07:04:19.033143+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] Content-Type : application/x-www-form-urlencoded
+- 2025-12-10T07:04:19.033156+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] Accept : application/json
+- 2025-12-10T07:04:19.033172+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+- 2025-12-10T07:04:19.033185+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] X-Twilio-Client : python-9.6.3
+- 2025-12-10T07:04:19.033193+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] Accept-Charset : utf-8
+- 2025-12-10T07:04:19.033200+00:00 — failure_log.txt: [2025-08-12 17:54:36,638] -- END Twilio API Request --
+- 2025-12-10T07:04:19.033207+00:00 — failure_log.txt: [2025-08-12 17:54:36,666] Response Status Code: 401
+- 2025-12-10T07:04:19.033249+00:00 — failure_log.txt: [2025-08-12 17:54:36,666] Response Headers: {'Content-Type': 'application/json', 'Content-Length': '141', 'Connection': 'keep-alive', 'Date': 'Tue, 12 Aug 2025 17:54:36 GMT', 'X-API-Domain': 'api.twilio.com', 'X-Verification-Disclosure': 'Message Accepted. Pending content verification for US/Canada destination numbers:', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQf1b06b4618b2c018e85343a22a213f91', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 9cd85e528eb96b937681f7f81aea46c8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': '_T5Xscoa-KEiA6mQo-kWsGK1ObZAeDeg8AICHPj9yU8yNxF145Eqmg=='}
+- 2025-12-10T07:04:19.033272+00:00 — failure_log.txt: [2025-08-12 17:54:36,666] [SMS FAILED] HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+- 2025-12-10T07:04:19.033282+00:00 — failure_log.txt: [2025-08-12 17:59:54,418] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033289+00:00 — failure_log.txt: [2025-08-12 18:05:21,822] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033297+00:00 — failure_log.txt: [2025-08-12 18:10:34,701] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033304+00:00 — failure_log.txt: [2025-08-12 18:15:50,373] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033311+00:00 — failure_log.txt: [2025-08-12 18:21:01,504] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033318+00:00 — failure_log.txt: [2025-08-12 18:26:22,519] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033325+00:00 — failure_log.txt: [2025-08-12 18:31:44,608] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033335+00:00 — failure_log.txt: [2025-08-12 18:37:00,806] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033348+00:00 — failure_log.txt: [2025-08-12 18:42:22,931] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033362+00:00 — failure_log.txt: [2025-08-12 18:47:38,829] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033375+00:00 — failure_log.txt: [2025-08-12 18:52:57,669] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033382+00:00 — failure_log.txt: [2025-08-12 18:58:09,472] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033389+00:00 — failure_log.txt: [2025-08-12 19:03:21,847] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033397+00:00 — failure_log.txt: [2025-08-12 19:11:14,282] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033404+00:00 — failure_log.txt: [2025-08-12 19:11:25,877] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033411+00:00 — failure_log.txt: [2025-08-12 19:11:53,202] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033421+00:00 — failure_log.txt: [2025-08-12 19:12:29,010] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033434+00:00 — failure_log.txt: [2025-08-12 19:13:20,956] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033447+00:00 — failure_log.txt: [2025-08-12 19:14:53,014] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033459+00:00 — failure_log.txt: [2025-08-12 19:17:51,150] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033466+00:00 — failure_log.txt: [2025-08-12 19:23:16,932] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033473+00:00 — failure_log.txt: [2025-08-12 19:28:38,034] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033480+00:00 — failure_log.txt: [2025-08-12 19:33:54,035] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033487+00:00 — failure_log.txt: [2025-08-12 19:39:06,194] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033494+00:00 — failure_log.txt: [2025-08-12 19:44:21,204] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033501+00:00 — failure_log.txt: [2025-08-12 19:49:44,026] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033507+00:00 — failure_log.txt: [2025-08-12 19:55:07,167] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033517+00:00 — failure_log.txt: [2025-08-12 20:00:32,154] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033530+00:00 — failure_log.txt: [2025-08-12 20:05:55,045] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033568+00:00 — failure_log.txt: [2025-08-12 20:11:13,769] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033576+00:00 — failure_log.txt: [2025-08-12 20:17:23,521] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033583+00:00 — failure_log.txt: [2025-08-12 20:17:33,509] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033590+00:00 — failure_log.txt: [2025-08-12 20:17:55,396] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033597+00:00 — failure_log.txt: [2025-08-12 20:18:31,796] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033604+00:00 — failure_log.txt: [2025-08-12 20:19:30,728] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033614+00:00 — failure_log.txt: [2025-08-12 20:21:10,788] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033622+00:00 — failure_log.txt: [2025-08-12 20:24:01,662] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033634+00:00 — failure_log.txt: [2025-08-12 20:29:20,639] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033647+00:00 — failure_log.txt: [2025-08-12 20:34:32,627] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033660+00:00 — failure_log.txt: [2025-08-12 20:39:49,638] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033668+00:00 — failure_log.txt: [2025-08-12 20:45:03,264] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033675+00:00 — failure_log.txt: [2025-08-12 20:50:15,228] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033682+00:00 — failure_log.txt: [2025-08-12 20:53:27,631] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033689+00:00 — failure_log.txt: [2025-08-12 20:53:37,209] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033696+00:00 — failure_log.txt: [2025-08-12 20:53:59,497] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033703+00:00 — failure_log.txt: [2025-08-12 20:54:36,586] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033710+00:00 — failure_log.txt: [2025-08-12 20:55:39,732] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033720+00:00 — failure_log.txt: [2025-08-12 20:57:12,587] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033733+00:00 — failure_log.txt: [2025-08-12 21:00:13,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033750+00:00 — failure_log.txt: [2025-08-12 21:05:30,046] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033759+00:00 — failure_log.txt: [2025-08-12 21:09:41,792] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033765+00:00 — failure_log.txt: [2025-08-12 21:09:52,785] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033772+00:00 — failure_log.txt: [2025-08-12 21:10:18,067] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033779+00:00 — failure_log.txt: [2025-08-12 21:10:55,535] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033786+00:00 — failure_log.txt: [2025-08-12 21:11:46,614] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033793+00:00 — failure_log.txt: [2025-08-12 21:13:27,036] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033800+00:00 — failure_log.txt: [2025-08-12 21:16:24,698] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033809+00:00 — failure_log.txt: [2025-08-12 21:21:36,344] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033822+00:00 — failure_log.txt: [2025-08-12 21:25:10,633] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033835+00:00 — failure_log.txt: [2025-08-12 21:25:25,040] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033846+00:00 — failure_log.txt: [2025-08-12 21:25:47,831] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033857+00:00 — failure_log.txt: [2025-08-12 21:26:27,619] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033864+00:00 — failure_log.txt: [2025-08-12 21:27:18,646] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033871+00:00 — failure_log.txt: [2025-08-12 21:28:56,884] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033878+00:00 — failure_log.txt: [2025-08-12 21:34:17,684] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033885+00:00 — failure_log.txt: [2025-08-12 21:34:28,566] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033892+00:00 — failure_log.txt: [2025-08-12 21:34:50,603] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033902+00:00 — failure_log.txt: [2025-08-12 21:35:25,616] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033915+00:00 — failure_log.txt: [2025-08-12 21:36:18,595] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033929+00:00 — failure_log.txt: [2025-08-12 21:37:58,536] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033938+00:00 — failure_log.txt: [2025-08-12 21:40:55,060] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033945+00:00 — failure_log.txt: [2025-08-12 21:44:14,009] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033952+00:00 — failure_log.txt: [2025-08-12 21:44:25,596] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033959+00:00 — failure_log.txt: [2025-08-12 21:44:49,248] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033966+00:00 — failure_log.txt: [2025-08-12 21:45:22,722] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033973+00:00 — failure_log.txt: [2025-08-12 21:46:14,964] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033980+00:00 — failure_log.txt: [2025-08-12 21:50:38,963] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.033988+00:00 — failure_log.txt: [2025-08-12 21:50:50,620] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034001+00:00 — failure_log.txt: [2025-08-12 21:51:18,122] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034014+00:00 — failure_log.txt: [2025-08-12 21:51:55,399] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034025+00:00 — failure_log.txt: [2025-08-12 21:52:47,584] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034033+00:00 — failure_log.txt: [2025-08-12 21:54:28,576] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034039+00:00 — failure_log.txt: [2025-08-12 21:57:30,577] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034046+00:00 — failure_log.txt: [2025-08-12 22:02:57,526] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034053+00:00 — failure_log.txt: [2025-08-12 22:10:50,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034060+00:00 — failure_log.txt: [2025-08-12 22:11:01,205] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034070+00:00 — failure_log.txt: [2025-08-12 22:11:27,019] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034077+00:00 — failure_log.txt: [2025-08-12 22:12:02,303] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034088+00:00 — failure_log.txt: [2025-08-12 22:13:01,690] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034101+00:00 — failure_log.txt: [2025-08-12 22:14:36,613] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034114+00:00 — failure_log.txt: [2025-08-12 22:17:36,139] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034126+00:00 — failure_log.txt: [2025-08-12 22:22:58,163] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034139+00:00 — failure_log.txt: [2025-08-12 22:28:21,279] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034150+00:00 — failure_log.txt: [2025-08-12 22:33:41,279] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034162+00:00 — failure_log.txt: [2025-08-12 22:38:55,972] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034173+00:00 — failure_log.txt: [2025-08-12 22:44:16,060] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034184+00:00 — failure_log.txt: [2025-08-12 22:49:39,674] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034196+00:00 — failure_log.txt: [2025-08-12 22:54:54,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034209+00:00 — failure_log.txt: [2025-08-12 22:58:28,406] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034221+00:00 — failure_log.txt: [2025-08-12 22:58:46,810] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034232+00:00 — failure_log.txt: [2025-08-12 22:59:28,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034244+00:00 — failure_log.txt: [2025-08-12 23:00:10,571] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034255+00:00 — failure_log.txt: [2025-08-12 23:01:17,665] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034268+00:00 — failure_log.txt: [2025-08-12 23:04:21,169] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034281+00:00 — failure_log.txt: [2025-08-12 23:04:32,636] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034294+00:00 — failure_log.txt: [2025-08-12 23:04:56,736] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034305+00:00 — failure_log.txt: [2025-08-12 23:05:30,054] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034318+00:00 — failure_log.txt: [2025-08-12 23:06:20,062] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034329+00:00 — failure_log.txt: [2025-08-12 23:07:55,766] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034342+00:00 — failure_log.txt: [2025-08-12 23:10:48,021] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034355+00:00 — failure_log.txt: [2025-08-12 23:16:06,656] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034366+00:00 — failure_log.txt: [2025-08-12 23:21:27,187] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034382+00:00 — failure_log.txt: [2025-08-12 23:26:48,209] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034394+00:00 — failure_log.txt: [2025-08-12 23:32:11,011] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034407+00:00 — failure_log.txt: [2025-08-12 23:37:31,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034419+00:00 — failure_log.txt: [2025-08-12 23:42:49,218] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034432+00:00 — failure_log.txt: [2025-08-12 23:48:14,310] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034443+00:00 — failure_log.txt: [2025-08-12 23:53:38,391] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034456+00:00 — failure_log.txt: [2025-08-12 23:58:54,502] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034469+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] -- BEGIN Twilio API Request --
+- 2025-12-10T07:04:19.034820+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] POST Request: https://api.twilio.com/2010-04-01/Accounts/None/Messages.json
+- 2025-12-10T07:04:19.034846+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] Headers:
+- 2025-12-10T07:04:19.034857+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] Content-Type : application/x-www-form-urlencoded
+- 2025-12-10T07:04:19.034864+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] Accept : application/json
+- 2025-12-10T07:04:19.034872+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+- 2025-12-10T07:04:19.034880+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] X-Twilio-Client : python-9.6.3
+- 2025-12-10T07:04:19.034886+00:00 — failure_log.txt: [2025-08-13 00:04:13,433] Accept-Charset : utf-8
+- 2025-12-10T07:04:19.034894+00:00 — failure_log.txt: [2025-08-13 00:04:13,434] -- END Twilio API Request --
+- 2025-12-10T07:04:19.034900+00:00 — failure_log.txt: [2025-08-13 00:04:13,458] Response Status Code: 401
+- 2025-12-10T07:04:19.034957+00:00 — failure_log.txt: [2025-08-13 00:04:13,458] Response Headers: {'Content-Type': 'application/json', 'Content-Length': '141', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 00:04:13 GMT', 'X-API-Domain': 'api.twilio.com', 'X-Verification-Disclosure': 'Message Accepted. Pending content verification for US/Canada destination numbers:', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQf9518453dc3e28b60c5df89b6865856e', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 6d870aa61a7a4eaf26f3551a493146c2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'ZldepL_RvPeok8k3iwgSuTtqjYJVOv_gEzVEWnFm4vyGzswLuuOyqQ=='}
+- 2025-12-10T07:04:19.034972+00:00 — failure_log.txt: [2025-08-13 00:04:13,458] [SMS FAILED] HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+- 2025-12-10T07:04:19.034980+00:00 — failure_log.txt: [2025-08-13 00:09:29,981] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034987+00:00 — failure_log.txt: [2025-08-13 00:14:45,060] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.034994+00:00 — failure_log.txt: [2025-08-13 00:20:00,149] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035006+00:00 — failure_log.txt: [2025-08-13 00:25:22,173] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035014+00:00 — failure_log.txt: [2025-08-13 00:30:44,061] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035025+00:00 — failure_log.txt: [2025-08-13 00:35:53,958] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035042+00:00 — failure_log.txt: [2025-08-13 00:41:06,765] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035056+00:00 — failure_log.txt: [2025-08-13 00:46:22,494] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035066+00:00 — failure_log.txt: [2025-08-13 00:51:40,285] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035073+00:00 — failure_log.txt: [2025-08-13 00:56:58,869] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035080+00:00 — failure_log.txt: [2025-08-13 01:02:20,755] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035087+00:00 — failure_log.txt: [2025-08-13 01:07:41,201] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035094+00:00 — failure_log.txt: [2025-08-13 01:12:51,782] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035101+00:00 — failure_log.txt: [2025-08-13 01:18:09,891] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035108+00:00 — failure_log.txt: [2025-08-13 01:23:24,912] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035115+00:00 — failure_log.txt: [2025-08-13 01:28:39,014] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035128+00:00 — failure_log.txt: [2025-08-13 01:33:48,896] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035141+00:00 — failure_log.txt: [2025-08-13 01:39:08,320] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035153+00:00 — failure_log.txt: [2025-08-13 01:44:21,263] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035160+00:00 — failure_log.txt: [2025-08-13 01:49:37,887] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035167+00:00 — failure_log.txt: [2025-08-13 01:54:56,835] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035174+00:00 — failure_log.txt: [2025-08-13 02:00:16,747] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035181+00:00 — failure_log.txt: [2025-08-13 02:05:29,024] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035188+00:00 — failure_log.txt: [2025-08-13 02:10:45,988] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035195+00:00 — failure_log.txt: [2025-08-13 02:16:05,369] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035201+00:00 — failure_log.txt: [2025-08-13 02:21:17,426] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035211+00:00 — failure_log.txt: [2025-08-13 02:26:35,985] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035224+00:00 — failure_log.txt: [2025-08-13 02:31:50,912] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035238+00:00 — failure_log.txt: [2025-08-13 02:37:01,133] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035247+00:00 — failure_log.txt: [2025-08-13 02:42:14,712] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035254+00:00 — failure_log.txt: [2025-08-13 02:47:31,920] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035261+00:00 — failure_log.txt: [2025-08-13 02:52:50,177] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035274+00:00 — failure_log.txt: [2025-08-13 02:58:10,801] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035281+00:00 — failure_log.txt: [2025-08-13 03:03:26,407] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035288+00:00 — failure_log.txt: [2025-08-13 03:08:41,123] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035295+00:00 — failure_log.txt: [2025-08-13 03:13:56,885] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035308+00:00 — failure_log.txt: [2025-08-13 03:19:18,135] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035321+00:00 — failure_log.txt: [2025-08-13 03:24:31,040] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035333+00:00 — failure_log.txt: [2025-08-13 03:29:49,948] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035340+00:00 — failure_log.txt: [2025-08-13 03:35:14,155] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035347+00:00 — failure_log.txt: [2025-08-13 03:40:29,863] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035354+00:00 — failure_log.txt: [2025-08-13 03:45:41,138] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035361+00:00 — failure_log.txt: [2025-08-13 03:50:59,220] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035368+00:00 — failure_log.txt: [2025-08-13 03:56:14,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035374+00:00 — failure_log.txt: [2025-08-13 04:01:35,076] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035384+00:00 — failure_log.txt: [2025-08-13 04:06:47,380] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035395+00:00 — failure_log.txt: [2025-08-13 04:12:03,128] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035408+00:00 — failure_log.txt: [2025-08-13 04:17:21,678] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035421+00:00 — failure_log.txt: [2025-08-13 04:22:31,836] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035429+00:00 — failure_log.txt: [2025-08-13 04:27:43,037] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035436+00:00 — failure_log.txt: [2025-08-13 04:32:53,997] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035443+00:00 — failure_log.txt: [2025-08-13 04:38:10,240] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035450+00:00 — failure_log.txt: [2025-08-13 04:43:22,050] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035456+00:00 — failure_log.txt: [2025-08-13 04:48:41,189] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035463+00:00 — failure_log.txt: [2025-08-13 04:53:51,850] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035470+00:00 — failure_log.txt: [2025-08-13 04:59:14,841] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035478+00:00 — failure_log.txt: [2025-08-13 05:04:29,423] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035494+00:00 — failure_log.txt: [2025-08-13 05:09:46,248] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035508+00:00 — failure_log.txt: [2025-08-13 05:14:59,837] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035518+00:00 — failure_log.txt: [2025-08-13 05:20:12,801] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035525+00:00 — failure_log.txt: [2025-08-13 05:25:29,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035532+00:00 — failure_log.txt: [2025-08-13 05:30:45,962] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035559+00:00 — failure_log.txt: [2025-08-13 05:36:03,404] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035567+00:00 — failure_log.txt: [2025-08-13 05:41:19,541] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035574+00:00 — failure_log.txt: [2025-08-13 05:46:41,063] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035581+00:00 — failure_log.txt: [2025-08-13 05:51:56,009] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035588+00:00 — failure_log.txt: [2025-08-13 05:57:17,474] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035601+00:00 — failure_log.txt: [2025-08-13 06:02:40,166] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035614+00:00 — failure_log.txt: [2025-08-13 06:07:55,042] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035627+00:00 — failure_log.txt: [2025-08-13 06:13:16,068] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035634+00:00 — failure_log.txt: [2025-08-13 06:18:34,900] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035641+00:00 — failure_log.txt: [2025-08-13 06:23:55,178] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035648+00:00 — failure_log.txt: [2025-08-13 06:29:14,699] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035655+00:00 — failure_log.txt: [2025-08-13 06:34:31,037] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035662+00:00 — failure_log.txt: [2025-08-13 06:39:47,921] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035669+00:00 — failure_log.txt: [2025-08-13 06:45:13,537] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035676+00:00 — failure_log.txt: [2025-08-13 06:50:23,848] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035684+00:00 — failure_log.txt: [2025-08-13 06:55:33,964] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035697+00:00 — failure_log.txt: [2025-08-13 07:00:56,874] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035710+00:00 — failure_log.txt: [2025-08-13 07:06:09,647] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035721+00:00 — failure_log.txt: [2025-08-13 07:11:28,886] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035728+00:00 — failure_log.txt: [2025-08-13 07:16:43,749] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035735+00:00 — failure_log.txt: [2025-08-13 07:21:56,849] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035746+00:00 — failure_log.txt: [2025-08-13 07:27:22,624] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035753+00:00 — failure_log.txt: [2025-08-13 07:32:34,599] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035760+00:00 — failure_log.txt: [2025-08-13 07:37:55,937] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035767+00:00 — failure_log.txt: [2025-08-13 07:43:17,802] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035774+00:00 — failure_log.txt: [2025-08-13 07:48:34,929] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035790+00:00 — failure_log.txt: [2025-08-13 07:53:58,593] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035803+00:00 — failure_log.txt: [2025-08-13 07:59:15,917] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035814+00:00 — failure_log.txt: [2025-08-13 08:04:38,043] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035822+00:00 — failure_log.txt: [2025-08-13 08:09:47,914] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035828+00:00 — failure_log.txt: [2025-08-13 08:15:02,977] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035835+00:00 — failure_log.txt: [2025-08-13 08:20:23,254] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035842+00:00 — failure_log.txt: [2025-08-13 08:25:35,945] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035849+00:00 — failure_log.txt: [2025-08-13 08:30:48,964] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035856+00:00 — failure_log.txt: [2025-08-13 08:36:03,751] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035863+00:00 — failure_log.txt: [2025-08-13 08:41:22,568] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035874+00:00 — failure_log.txt: [2025-08-13 08:46:37,891] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035887+00:00 — failure_log.txt: [2025-08-13 08:51:53,605] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035900+00:00 — failure_log.txt: [2025-08-13 08:57:15,538] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035908+00:00 — failure_log.txt: [2025-08-13 09:02:34,174] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035915+00:00 — failure_log.txt: [2025-08-13 09:07:45,183] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035922+00:00 — failure_log.txt: [2025-08-13 09:13:10,738] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035929+00:00 — failure_log.txt: [2025-08-13 09:18:26,059] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035937+00:00 — failure_log.txt: [2025-08-13 09:23:43,027] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035944+00:00 — failure_log.txt: [2025-08-13 09:28:57,025] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035951+00:00 — failure_log.txt: [2025-08-13 09:34:09,391] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035963+00:00 — failure_log.txt: [2025-08-13 09:39:21,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035976+00:00 — failure_log.txt: [2025-08-13 09:44:37,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035990+00:00 — failure_log.txt: [2025-08-13 09:49:50,962] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.035999+00:00 — failure_log.txt: [2025-08-13 09:55:10,937] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036006+00:00 — failure_log.txt: [2025-08-13 10:00:26,911] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036012+00:00 — failure_log.txt: [2025-08-13 10:05:41,835] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036019+00:00 — failure_log.txt: [2025-08-13 10:10:59,085] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036026+00:00 — failure_log.txt: [2025-08-13 10:16:23,603] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036033+00:00 — failure_log.txt: [2025-08-13 10:21:45,858] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036040+00:00 — failure_log.txt: [2025-08-13 10:26:55,958] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036048+00:00 — failure_log.txt: [2025-08-13 10:32:15,765] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036060+00:00 — failure_log.txt: [2025-08-13 10:37:32,899] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036074+00:00 — failure_log.txt: [2025-08-13 10:42:56,238] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036085+00:00 — failure_log.txt: [2025-08-13 10:48:18,514] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036092+00:00 — failure_log.txt: [2025-08-13 10:53:35,916] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036099+00:00 — failure_log.txt: [2025-08-13 10:58:51,858] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036106+00:00 — failure_log.txt: [2025-08-13 11:04:19,093] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036113+00:00 — failure_log.txt: [2025-08-13 11:09:33,412] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036120+00:00 — failure_log.txt: [2025-08-13 11:14:44,152] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036126+00:00 — failure_log.txt: [2025-08-13 11:19:56,264] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036133+00:00 — failure_log.txt: [2025-08-13 11:25:13,583] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036145+00:00 — failure_log.txt: [2025-08-13 11:30:32,021] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036158+00:00 — failure_log.txt: [2025-08-13 11:35:50,114] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036173+00:00 — failure_log.txt: [2025-08-13 11:41:04,879] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036181+00:00 — failure_log.txt: [2025-08-13 11:46:26,362] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036188+00:00 — failure_log.txt: [2025-08-13 11:51:42,835] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036197+00:00 — failure_log.txt: [2025-08-13 11:56:54,796] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036212+00:00 — failure_log.txt: [2025-08-13 12:02:14,701] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036219+00:00 — failure_log.txt: [2025-08-13 12:07:34,059] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036226+00:00 — failure_log.txt: [2025-08-13 12:12:55,207] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036234+00:00 — failure_log.txt: [2025-08-13 12:18:19,725] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036247+00:00 — failure_log.txt: [2025-08-13 12:23:35,920] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036260+00:00 — failure_log.txt: [2025-08-13 12:28:51,888] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036272+00:00 — failure_log.txt: [2025-08-13 12:34:16,739] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036279+00:00 — failure_log.txt: [2025-08-13 12:39:36,794] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036286+00:00 — failure_log.txt: [2025-08-13 12:44:58,034] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036293+00:00 — failure_log.txt: [2025-08-13 12:50:11,750] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036300+00:00 — failure_log.txt: [2025-08-13 12:55:27,999] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036307+00:00 — failure_log.txt: [2025-08-13 13:00:38,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036314+00:00 — failure_log.txt: [2025-08-13 13:05:49,057] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036321+00:00 — failure_log.txt: [2025-08-13 13:11:04,335] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036329+00:00 — failure_log.txt: [2025-08-13 13:16:20,146] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036342+00:00 — failure_log.txt: [2025-08-13 13:21:37,685] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036355+00:00 — failure_log.txt: [2025-08-13 13:26:58,171] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036366+00:00 — failure_log.txt: [2025-08-13 13:32:17,599] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036373+00:00 — failure_log.txt: [2025-08-13 13:37:35,873] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036380+00:00 — failure_log.txt: [2025-08-13 13:42:57,698] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036387+00:00 — failure_log.txt: [2025-08-13 13:48:17,585] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036393+00:00 — failure_log.txt: [2025-08-13 13:53:36,917] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036400+00:00 — failure_log.txt: [2025-08-13 13:58:59,838] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036407+00:00 — failure_log.txt: [2025-08-13 14:04:16,072] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036417+00:00 — failure_log.txt: [2025-08-13 14:09:26,504] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036430+00:00 — failure_log.txt: [2025-08-13 14:14:36,990] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036444+00:00 — failure_log.txt: [2025-08-13 14:19:58,097] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036455+00:00 — failure_log.txt: [2025-08-13 14:25:15,789] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036462+00:00 — failure_log.txt: [2025-08-13 14:30:32,905] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036469+00:00 — failure_log.txt: [2025-08-13 14:35:42,946] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036476+00:00 — failure_log.txt: [2025-08-13 14:41:08,918] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036483+00:00 — failure_log.txt: [2025-08-13 14:46:25,425] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036490+00:00 — failure_log.txt: [2025-08-13 14:51:47,321] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036497+00:00 — failure_log.txt: [2025-08-13 14:57:04,685] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036504+00:00 — failure_log.txt: [2025-08-13 15:02:19,664] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036514+00:00 — failure_log.txt: [2025-08-13 15:07:31,980] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036527+00:00 — failure_log.txt: [2025-08-13 15:12:43,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036555+00:00 — failure_log.txt: [2025-08-13 15:17:59,826] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036572+00:00 — failure_log.txt: [2025-08-13 15:23:16,261] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036580+00:00 — failure_log.txt: [2025-08-13 15:28:39,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036587+00:00 — failure_log.txt: [2025-08-13 15:33:58,633] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036594+00:00 — failure_log.txt: [2025-08-13 15:39:21,336] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036601+00:00 — failure_log.txt: [2025-08-13 15:44:38,161] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036608+00:00 — failure_log.txt: [2025-08-13 15:49:50,323] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036615+00:00 — failure_log.txt: [2025-08-13 15:55:02,992] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036622+00:00 — failure_log.txt: [2025-08-13 16:00:18,697] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036629+00:00 — failure_log.txt: [2025-08-13 16:05:38,760] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036641+00:00 — failure_log.txt: [2025-08-13 16:10:57,084] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036651+00:00 — failure_log.txt: [2025-08-13 16:16:18,668] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036663+00:00 — failure_log.txt: [2025-08-13 16:21:33,205] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036677+00:00 — failure_log.txt: [2025-08-13 16:26:58,203] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036684+00:00 — failure_log.txt: [2025-08-13 16:32:19,808] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036691+00:00 — failure_log.txt: [2025-08-13 16:37:30,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036703+00:00 — failure_log.txt: [2025-08-13 16:42:47,152] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036715+00:00 — failure_log.txt: [2025-08-13 16:47:58,104] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036728+00:00 — failure_log.txt: [2025-08-13 16:53:13,347] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036737+00:00 — failure_log.txt: [2025-08-13 16:58:30,263] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036744+00:00 — failure_log.txt: [2025-08-13 17:03:53,094] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036751+00:00 — failure_log.txt: [2025-08-13 17:09:06,470] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036757+00:00 — failure_log.txt: [2025-08-13 17:14:26,451] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036767+00:00 — failure_log.txt: [2025-08-13 17:19:40,055] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036779+00:00 — failure_log.txt: [2025-08-13 17:25:01,065] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036791+00:00 — failure_log.txt: [2025-08-13 17:30:16,087] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036799+00:00 — failure_log.txt: [2025-08-13 17:35:36,935] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036809+00:00 — failure_log.txt: [2025-08-13 17:40:48,039] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036822+00:00 — failure_log.txt: [2025-08-13 17:46:04,708] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036834+00:00 — failure_log.txt: [2025-08-13 17:51:23,158] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036842+00:00 — failure_log.txt: [2025-08-13 17:56:37,174] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036848+00:00 — failure_log.txt: [2025-08-13 18:01:57,912] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036855+00:00 — failure_log.txt: [2025-08-13 18:07:19,500] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036863+00:00 — failure_log.txt: [2025-08-13 18:12:34,663] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036875+00:00 — failure_log.txt: [2025-08-13 18:17:57,000] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036888+00:00 — failure_log.txt: [2025-08-13 18:23:10,829] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036896+00:00 — failure_log.txt: [2025-08-13 18:28:31,073] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036906+00:00 — failure_log.txt: [2025-08-13 18:33:52,008] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036923+00:00 — failure_log.txt: [2025-08-13 18:39:03,892] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036935+00:00 — failure_log.txt: [2025-08-13 18:44:25,001] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036942+00:00 — failure_log.txt: [2025-08-13 18:49:37,691] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036949+00:00 — failure_log.txt: [2025-08-13 18:54:47,990] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036956+00:00 — failure_log.txt: [2025-08-13 19:00:05,621] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036970+00:00 — failure_log.txt: [2025-08-13 19:05:19,608] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036984+00:00 — failure_log.txt: [2025-08-13 19:10:35,101] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.036992+00:00 — failure_log.txt: [2025-08-13 19:15:55,262] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037002+00:00 — failure_log.txt: [2025-08-13 19:21:17,671] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037014+00:00 — failure_log.txt: [2025-08-13 19:26:39,464] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037027+00:00 — failure_log.txt: [2025-08-13 19:31:50,675] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037035+00:00 — failure_log.txt: [2025-08-13 19:37:14,277] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037042+00:00 — failure_log.txt: [2025-08-13 19:42:31,600] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037049+00:00 — failure_log.txt: [2025-08-13 19:47:52,937] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037056+00:00 — failure_log.txt: [2025-08-13 19:53:13,314] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037069+00:00 — failure_log.txt: [2025-08-13 19:58:28,508] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037081+00:00 — failure_log.txt: [2025-08-13 20:03:41,438] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037089+00:00 — failure_log.txt: [2025-08-13 20:09:02,606] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037099+00:00 — failure_log.txt: [2025-08-13 20:14:21,164] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037113+00:00 — failure_log.txt: [2025-08-13 20:19:41,141] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037124+00:00 — failure_log.txt: [2025-08-13 20:25:02,427] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037131+00:00 — failure_log.txt: [2025-08-13 20:30:19,402] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037138+00:00 — failure_log.txt: [2025-08-13 20:35:30,497] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037145+00:00 — failure_log.txt: [2025-08-13 20:40:19,701] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037155+00:00 — failure_log.txt: [2025-08-13 20:40:30,441] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037168+00:00 — failure_log.txt: [2025-08-13 20:40:53,076] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037182+00:00 — failure_log.txt: [2025-08-13 20:41:33,158] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037193+00:00 — failure_log.txt: [2025-08-13 20:42:27,248] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037206+00:00 — failure_log.txt: [2025-08-13 20:44:07,938] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037217+00:00 — failure_log.txt: [2025-08-13 20:47:15,271] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037225+00:00 — failure_log.txt: [2025-08-13 20:52:29,955] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037231+00:00 — failure_log.txt: [2025-08-13 20:57:42,486] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037238+00:00 — failure_log.txt: [2025-08-13 21:02:53,100] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037248+00:00 — failure_log.txt: [2025-08-13 21:08:16,921] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037261+00:00 — failure_log.txt: [2025-08-13 21:13:40,922] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037272+00:00 — failure_log.txt: [2025-08-13 21:19:04,520] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037279+00:00 — failure_log.txt: [2025-08-13 21:24:20,095] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037291+00:00 — failure_log.txt: [2025-08-13 21:29:39,313] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037305+00:00 — failure_log.txt: [2025-08-13 21:35:02,630] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037315+00:00 — failure_log.txt: [2025-08-13 21:40:29,008] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037322+00:00 — failure_log.txt: [2025-08-13 21:40:41,010] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037329+00:00 — failure_log.txt: [2025-08-13 21:41:02,505] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037336+00:00 — failure_log.txt: [2025-08-13 21:41:41,876] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037347+00:00 — failure_log.txt: [2025-08-13 21:42:40,732] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037360+00:00 — failure_log.txt: [2025-08-13 21:44:17,400] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037369+00:00 — failure_log.txt: [2025-08-13 21:47:09,505] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037379+00:00 — failure_log.txt: [2025-08-13 21:52:23,230] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037391+00:00 — failure_log.txt: [2025-08-13 21:57:42,865] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037408+00:00 — failure_log.txt: [2025-08-13 22:02:58,173] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037415+00:00 — failure_log.txt: [2025-08-13 22:08:15,549] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037422+00:00 — failure_log.txt: [2025-08-13 22:13:37,990] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037434+00:00 — failure_log.txt: [2025-08-13 22:18:51,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037446+00:00 — failure_log.txt: [2025-08-13 22:24:17,216] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037459+00:00 — failure_log.txt: [2025-08-13 22:29:39,905] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037467+00:00 — failure_log.txt: [2025-08-13 22:34:52,960] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037478+00:00 — failure_log.txt: [2025-08-13 22:40:17,292] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037491+00:00 — failure_log.txt: [2025-08-13 22:45:49,890] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037502+00:00 — failure_log.txt: [2025-08-13 22:51:22,368] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037509+00:00 — failure_log.txt: [2025-08-13 22:56:43,402] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037516+00:00 — failure_log.txt: [2025-08-13 23:02:06,416] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037523+00:00 — failure_log.txt: [2025-08-13 23:07:25,992] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037548+00:00 — failure_log.txt: [2025-08-13 23:13:13,795] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037563+00:00 — failure_log.txt: [2025-08-13 23:13:27,041] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037573+00:00 — failure_log.txt: [2025-08-13 23:13:51,993] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037581+00:00 — failure_log.txt: [2025-08-13 23:14:31,392] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037593+00:00 — failure_log.txt: [2025-08-13 23:15:24,436] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037606+00:00 — failure_log.txt: [2025-08-13 23:16:57,691] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037617+00:00 — failure_log.txt: [2025-08-13 23:19:54,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037624+00:00 — failure_log.txt: [2025-08-13 23:25:11,979] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037631+00:00 — failure_log.txt: [2025-08-13 23:30:24,119] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037638+00:00 — failure_log.txt: [2025-08-13 23:35:44,747] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037647+00:00 — failure_log.txt: [2025-08-13 23:41:03,407] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037660+00:00 — failure_log.txt: [2025-08-13 23:46:20,253] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037671+00:00 — failure_log.txt: [2025-08-13 23:51:42,111] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037679+00:00 — failure_log.txt: [2025-08-13 23:56:54,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037690+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] -- BEGIN Twilio API Request --
+- 2025-12-10T07:04:19.037706+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] POST Request: https://api.twilio.com/2010-04-01/Accounts/None/Messages.json
+- 2025-12-10T07:04:19.037719+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] Headers:
+- 2025-12-10T07:04:19.037726+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] Content-Type : application/x-www-form-urlencoded
+- 2025-12-10T07:04:19.037733+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] Accept : application/json
+- 2025-12-10T07:04:19.037745+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+- 2025-12-10T07:04:19.037757+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] X-Twilio-Client : python-9.6.3
+- 2025-12-10T07:04:19.037768+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] Accept-Charset : utf-8
+- 2025-12-10T07:04:19.037775+00:00 — failure_log.txt: [2025-08-14 00:02:17,743] -- END Twilio API Request --
+- 2025-12-10T07:04:19.037787+00:00 — failure_log.txt: [2025-08-14 00:02:17,784] Response Status Code: 401
+- 2025-12-10T07:04:19.037831+00:00 — failure_log.txt: [2025-08-14 00:02:17,784] Response Headers: {'Content-Type': 'application/json', 'Content-Length': '141', 'Connection': 'keep-alive', 'Date': 'Thu, 14 Aug 2025 00:02:17 GMT', 'X-API-Domain': 'api.twilio.com', 'X-Verification-Disclosure': 'Message Accepted. Pending content verification for US/Canada destination numbers:', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQ16da465d6e49978088bb8d6541472c06', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 b61a4be0aa9880eabf6cbea18ec105b2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'T2XfiMre9ZSYEt2qyykHrvrXfpUrlKkuHpSURdcebjmGx7N7EXwgGg=='}
+- 2025-12-10T07:04:19.037852+00:00 — failure_log.txt: [2025-08-14 00:02:17,787] [SMS FAILED] HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+- 2025-12-10T07:04:19.037864+00:00 — failure_log.txt: [2025-08-14 00:07:33,574] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037874+00:00 — failure_log.txt: [2025-08-14 00:12:48,684] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037887+00:00 — failure_log.txt: [2025-08-14 00:18:13,255] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037900+00:00 — failure_log.txt: [2025-08-14 00:23:30,679] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037911+00:00 — failure_log.txt: [2025-08-14 00:28:47,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037918+00:00 — failure_log.txt: [2025-08-14 00:34:05,395] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037925+00:00 — failure_log.txt: [2025-08-14 00:39:20,907] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037937+00:00 — failure_log.txt: [2025-08-14 00:44:36,036] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037950+00:00 — failure_log.txt: [2025-08-14 00:49:55,500] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037959+00:00 — failure_log.txt: [2025-08-14 00:55:05,717] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037969+00:00 — failure_log.txt: [2025-08-14 01:00:24,867] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037981+00:00 — failure_log.txt: [2025-08-14 01:05:36,473] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.037994+00:00 — failure_log.txt: [2025-08-14 01:10:52,515] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038002+00:00 — failure_log.txt: [2025-08-14 01:16:14,296] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038009+00:00 — failure_log.txt: [2025-08-14 01:21:30,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038018+00:00 — failure_log.txt: [2025-08-14 01:26:54,634] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038029+00:00 — failure_log.txt: [2025-08-14 01:32:15,401] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038043+00:00 — failure_log.txt: [2025-08-14 01:37:31,269] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038052+00:00 — failure_log.txt: [2025-08-14 01:42:49,791] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038062+00:00 — failure_log.txt: [2025-08-14 01:48:14,681] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038074+00:00 — failure_log.txt: [2025-08-14 01:53:37,566] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038088+00:00 — failure_log.txt: [2025-08-14 01:58:51,456] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038095+00:00 — failure_log.txt: [2025-08-14 02:04:08,174] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038102+00:00 — failure_log.txt: [2025-08-14 02:09:25,551] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038109+00:00 — failure_log.txt: [2025-08-14 02:14:41,966] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038116+00:00 — failure_log.txt: [2025-08-14 02:19:58,641] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038123+00:00 — failure_log.txt: [2025-08-14 02:25:18,977] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038133+00:00 — failure_log.txt: [2025-08-14 02:30:39,975] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038145+00:00 — failure_log.txt: [2025-08-14 02:35:57,408] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038157+00:00 — failure_log.txt: [2025-08-14 02:41:19,093] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038164+00:00 — failure_log.txt: [2025-08-14 02:46:39,436] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038176+00:00 — failure_log.txt: [2025-08-14 02:52:01,011] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038190+00:00 — failure_log.txt: [2025-08-14 02:57:18,707] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038199+00:00 — failure_log.txt: [2025-08-14 03:02:40,932] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038206+00:00 — failure_log.txt: [2025-08-14 03:07:51,475] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038213+00:00 — failure_log.txt: [2025-08-14 03:13:13,039] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038220+00:00 — failure_log.txt: [2025-08-14 03:18:29,542] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038232+00:00 — failure_log.txt: [2025-08-14 03:23:51,649] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038246+00:00 — failure_log.txt: [2025-08-14 03:29:16,104] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038254+00:00 — failure_log.txt: [2025-08-14 03:34:34,703] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038264+00:00 — failure_log.txt: [2025-08-14 03:39:50,506] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038281+00:00 — failure_log.txt: [2025-08-14 03:45:13,007] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038292+00:00 — failure_log.txt: [2025-08-14 03:50:25,665] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038299+00:00 — failure_log.txt: [2025-08-14 03:55:35,681] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038306+00:00 — failure_log.txt: [2025-08-14 04:00:53,763] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038313+00:00 — failure_log.txt: [2025-08-14 04:06:05,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038328+00:00 — failure_log.txt: [2025-08-14 04:11:26,473] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038341+00:00 — failure_log.txt: [2025-08-14 04:16:41,593] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038349+00:00 — failure_log.txt: [2025-08-14 04:21:52,475] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038360+00:00 — failure_log.txt: [2025-08-14 04:27:06,079] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038373+00:00 — failure_log.txt: [2025-08-14 04:32:23,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038385+00:00 — failure_log.txt: [2025-08-14 04:37:46,306] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038392+00:00 — failure_log.txt: [2025-08-14 04:43:04,342] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038398+00:00 — failure_log.txt: [2025-08-14 04:48:26,488] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038405+00:00 — failure_log.txt: [2025-08-14 04:53:46,535] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038416+00:00 — failure_log.txt: [2025-08-14 04:58:59,619] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038429+00:00 — failure_log.txt: [2025-08-14 05:04:21,209] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038439+00:00 — failure_log.txt: [2025-08-14 05:09:43,502] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038448+00:00 — failure_log.txt: [2025-08-14 05:14:59,620] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038460+00:00 — failure_log.txt: [2025-08-14 05:20:13,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038474+00:00 — failure_log.txt: [2025-08-14 05:25:25,473] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038481+00:00 — failure_log.txt: [2025-08-14 05:30:36,489] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038489+00:00 — failure_log.txt: [2025-08-14 05:35:49,621] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038496+00:00 — failure_log.txt: [2025-08-14 05:41:01,603] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038504+00:00 — failure_log.txt: [2025-08-14 05:46:24,553] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038516+00:00 — failure_log.txt: [2025-08-14 05:51:38,751] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038531+00:00 — failure_log.txt: [2025-08-14 05:56:52,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038559+00:00 — failure_log.txt: [2025-08-14 06:02:04,138] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038573+00:00 — failure_log.txt: [2025-08-14 06:07:21,003] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038585+00:00 — failure_log.txt: [2025-08-14 06:12:32,785] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038593+00:00 — failure_log.txt: [2025-08-14 06:17:48,704] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038600+00:00 — failure_log.txt: [2025-08-14 06:23:01,607] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038607+00:00 — failure_log.txt: [2025-08-14 06:28:22,793] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038614+00:00 — failure_log.txt: [2025-08-14 06:33:45,721] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038626+00:00 — failure_log.txt: [2025-08-14 06:39:07,652] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038640+00:00 — failure_log.txt: [2025-08-14 06:44:24,749] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038648+00:00 — failure_log.txt: [2025-08-14 06:49:38,516] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038657+00:00 — failure_log.txt: [2025-08-14 06:54:54,828] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038669+00:00 — failure_log.txt: [2025-08-14 07:00:13,784] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038683+00:00 — failure_log.txt: [2025-08-14 07:05:30,978] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038692+00:00 — failure_log.txt: [2025-08-14 07:10:49,650] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038699+00:00 — failure_log.txt: [2025-08-14 07:16:07,520] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038706+00:00 — failure_log.txt: [2025-08-14 07:21:25,885] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038712+00:00 — failure_log.txt: [2025-08-14 07:26:46,798] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038724+00:00 — failure_log.txt: [2025-08-14 07:32:01,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038737+00:00 — failure_log.txt: [2025-08-14 07:37:17,591] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038746+00:00 — failure_log.txt: [2025-08-14 07:42:34,800] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038756+00:00 — failure_log.txt: [2025-08-14 07:47:51,547] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038773+00:00 — failure_log.txt: [2025-08-14 07:53:07,338] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038784+00:00 — failure_log.txt: [2025-08-14 07:58:23,819] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038791+00:00 — failure_log.txt: [2025-08-14 08:03:48,672] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038798+00:00 — failure_log.txt: [2025-08-14 08:09:07,424] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038808+00:00 — failure_log.txt: [2025-08-14 08:14:26,157] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038820+00:00 — failure_log.txt: [2025-08-14 08:19:38,474] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038834+00:00 — failure_log.txt: [2025-08-14 08:24:53,634] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038842+00:00 — failure_log.txt: [2025-08-14 08:30:13,023] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038852+00:00 — failure_log.txt: [2025-08-14 08:35:29,668] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038865+00:00 — failure_log.txt: [2025-08-14 08:40:53,482] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038877+00:00 — failure_log.txt: [2025-08-14 08:46:07,827] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038884+00:00 — failure_log.txt: [2025-08-14 08:51:32,425] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038891+00:00 — failure_log.txt: [2025-08-14 08:56:42,714] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038898+00:00 — failure_log.txt: [2025-08-14 09:01:59,782] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038906+00:00 — failure_log.txt: [2025-08-14 09:07:17,182] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038919+00:00 — failure_log.txt: [2025-08-14 09:12:30,008] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038931+00:00 — failure_log.txt: [2025-08-14 09:17:48,942] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038939+00:00 — failure_log.txt: [2025-08-14 09:23:13,244] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038950+00:00 — failure_log.txt: [2025-08-14 09:28:25,865] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038963+00:00 — failure_log.txt: [2025-08-14 09:33:42,009] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038974+00:00 — failure_log.txt: [2025-08-14 09:39:00,954] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038981+00:00 — failure_log.txt: [2025-08-14 09:44:15,623] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038988+00:00 — failure_log.txt: [2025-08-14 09:49:34,825] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.038995+00:00 — failure_log.txt: [2025-08-14 09:54:45,685] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039005+00:00 — failure_log.txt: [2025-08-14 10:00:00,752] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039018+00:00 — failure_log.txt: [2025-08-14 10:05:22,883] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039029+00:00 — failure_log.txt: [2025-08-14 10:10:40,788] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039036+00:00 — failure_log.txt: [2025-08-14 10:15:51,705] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039049+00:00 — failure_log.txt: [2025-08-14 10:21:12,264] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039066+00:00 — failure_log.txt: [2025-08-14 10:26:23,117] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039074+00:00 — failure_log.txt: [2025-08-14 10:31:41,778] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039081+00:00 — failure_log.txt: [2025-08-14 10:36:57,557] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039088+00:00 — failure_log.txt: [2025-08-14 10:42:16,308] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039097+00:00 — failure_log.txt: [2025-08-14 10:47:33,638] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039109+00:00 — failure_log.txt: [2025-08-14 10:52:52,639] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039121+00:00 — failure_log.txt: [2025-08-14 10:58:08,257] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039129+00:00 — failure_log.txt: [2025-08-14 11:03:22,974] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039140+00:00 — failure_log.txt: [2025-08-14 11:08:34,690] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039153+00:00 — failure_log.txt: [2025-08-14 11:13:45,946] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039164+00:00 — failure_log.txt: [2025-08-14 11:19:05,344] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039172+00:00 — failure_log.txt: [2025-08-14 11:24:21,474] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039178+00:00 — failure_log.txt: [2025-08-14 11:29:42,679] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039185+00:00 — failure_log.txt: [2025-08-14 11:34:57,914] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039199+00:00 — failure_log.txt: [2025-08-14 11:40:21,698] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039213+00:00 — failure_log.txt: [2025-08-14 11:45:31,602] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039222+00:00 — failure_log.txt: [2025-08-14 11:50:47,368] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039231+00:00 — failure_log.txt: [2025-08-14 11:56:06,438] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039244+00:00 — failure_log.txt: [2025-08-14 12:01:24,410] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039257+00:00 — failure_log.txt: [2025-08-14 12:06:45,627] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039265+00:00 — failure_log.txt: [2025-08-14 12:12:07,613] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039271+00:00 — failure_log.txt: [2025-08-14 12:17:25,817] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039278+00:00 — failure_log.txt: [2025-08-14 12:22:43,098] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039288+00:00 — failure_log.txt: [2025-08-14 12:28:01,838] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039301+00:00 — failure_log.txt: [2025-08-14 12:33:24,076] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039312+00:00 — failure_log.txt: [2025-08-14 12:38:40,276] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039326+00:00 — failure_log.txt: [2025-08-14 12:43:59,641] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039339+00:00 — failure_log.txt: [2025-08-14 12:49:21,682] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039351+00:00 — failure_log.txt: [2025-08-14 12:54:44,659] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039359+00:00 — failure_log.txt: [2025-08-14 13:00:00,997] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039366+00:00 — failure_log.txt: [2025-08-14 13:05:18,516] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039373+00:00 — failure_log.txt: [2025-08-14 13:10:38,896] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039381+00:00 — failure_log.txt: [2025-08-14 13:15:55,162] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039393+00:00 — failure_log.txt: [2025-08-14 13:21:15,285] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039406+00:00 — failure_log.txt: [2025-08-14 13:26:32,058] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039413+00:00 — failure_log.txt: [2025-08-14 13:31:48,117] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039424+00:00 — failure_log.txt: [2025-08-14 13:36:59,227] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039437+00:00 — failure_log.txt: [2025-08-14 13:42:20,399] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039449+00:00 — failure_log.txt: [2025-08-14 13:47:37,615] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039456+00:00 — failure_log.txt: [2025-08-14 13:52:55,754] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039463+00:00 — failure_log.txt: [2025-08-14 13:58:18,172] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039469+00:00 — failure_log.txt: [2025-08-14 14:03:36,766] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039480+00:00 — failure_log.txt: [2025-08-14 14:08:50,291] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039493+00:00 — failure_log.txt: [2025-08-14 14:14:05,733] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039503+00:00 — failure_log.txt: [2025-08-14 14:19:24,836] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039511+00:00 — failure_log.txt: [2025-08-14 14:24:36,725] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039524+00:00 — failure_log.txt: [2025-08-14 14:29:51,727] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039550+00:00 — failure_log.txt: [2025-08-14 14:35:18,875] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039559+00:00 — failure_log.txt: [2025-08-14 14:40:33,922] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039566+00:00 — failure_log.txt: [2025-08-14 14:45:55,724] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039573+00:00 — failure_log.txt: [2025-08-14 14:51:17,846] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039586+00:00 — failure_log.txt: [2025-08-14 14:56:42,022] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039598+00:00 — failure_log.txt: [2025-08-14 15:02:00,799] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039611+00:00 — failure_log.txt: [2025-08-14 15:07:22,151] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039618+00:00 — failure_log.txt: [2025-08-14 15:12:33,173] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039628+00:00 — failure_log.txt: [2025-08-14 15:17:44,782] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039641+00:00 — failure_log.txt: [2025-08-14 15:22:58,838] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039656+00:00 — failure_log.txt: [2025-08-14 15:28:22,257] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039664+00:00 — failure_log.txt: [2025-08-14 15:33:36,827] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039671+00:00 — failure_log.txt: [2025-08-14 15:38:58,111] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039678+00:00 — failure_log.txt: [2025-08-14 15:44:22,837] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039688+00:00 — failure_log.txt: [2025-08-14 15:49:48,874] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039701+00:00 — failure_log.txt: [2025-08-14 15:55:07,623] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039712+00:00 — failure_log.txt: [2025-08-14 16:00:23,156] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039719+00:00 — failure_log.txt: [2025-08-14 16:05:39,012] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039732+00:00 — failure_log.txt: [2025-08-14 16:10:52,885] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039745+00:00 — failure_log.txt: [2025-08-14 16:16:18,470] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039755+00:00 — failure_log.txt: [2025-08-14 16:21:30,910] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039762+00:00 — failure_log.txt: [2025-08-14 16:26:48,601] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039769+00:00 — failure_log.txt: [2025-08-14 16:32:00,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039775+00:00 — failure_log.txt: [2025-08-14 16:37:19,462] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039786+00:00 — failure_log.txt: [2025-08-14 16:42:37,390] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039800+00:00 — failure_log.txt: [2025-08-14 16:47:57,511] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039809+00:00 — failure_log.txt: [2025-08-14 16:53:22,092] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039817+00:00 — failure_log.txt: [2025-08-14 16:58:47,505] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039830+00:00 — failure_log.txt: [2025-08-14 17:04:04,525] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039843+00:00 — failure_log.txt: [2025-08-14 17:09:14,448] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039854+00:00 — failure_log.txt: [2025-08-14 17:14:20,485] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039861+00:00 — failure_log.txt: [2025-08-14 17:19:32,525] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039868+00:00 — failure_log.txt: [2025-08-14 17:24:41,674] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039879+00:00 — failure_log.txt: [2025-08-14 17:29:54,481] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039892+00:00 — failure_log.txt: [2025-08-14 17:35:13,758] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039902+00:00 — failure_log.txt: [2025-08-14 17:40:22,694] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039910+00:00 — failure_log.txt: [2025-08-14 17:45:30,824] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039923+00:00 — failure_log.txt: [2025-08-14 17:50:47,608] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039936+00:00 — failure_log.txt: [2025-08-14 17:55:59,427] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039944+00:00 — failure_log.txt: [2025-08-14 18:01:18,965] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039951+00:00 — failure_log.txt: [2025-08-14 18:03:41,387] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039958+00:00 — failure_log.txt: [2025-08-14 18:03:50,210] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039965+00:00 — failure_log.txt: [2025-08-14 18:04:13,205] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039978+00:00 — failure_log.txt: [2025-08-14 18:04:46,079] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039991+00:00 — failure_log.txt: [2025-08-14 18:05:31,214] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.039998+00:00 — failure_log.txt: [2025-08-14 18:08:20,968] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040009+00:00 — failure_log.txt: [2025-08-14 18:08:25,471] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040022+00:00 — failure_log.txt: [2025-08-14 18:08:42,984] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040033+00:00 — failure_log.txt: [2025-08-14 18:09:15,438] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040040+00:00 — failure_log.txt: [2025-08-14 18:10:00,671] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040047+00:00 — failure_log.txt: [2025-08-14 18:11:24,762] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040054+00:00 — failure_log.txt: [2025-08-14 18:15:41,493] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040071+00:00 — failure_log.txt: [2025-08-14 18:15:46,830] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040084+00:00 — failure_log.txt: [2025-08-14 18:16:09,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040092+00:00 — failure_log.txt: [2025-08-14 18:16:39,666] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040106+00:00 — failure_log.txt: [2025-08-14 18:17:32,007] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040119+00:00 — failure_log.txt: [2025-08-14 18:19:12,678] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040130+00:00 — failure_log.txt: [2025-08-14 18:22:10,251] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040137+00:00 — failure_log.txt: [2025-08-14 18:27:22,505] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040144+00:00 — failure_log.txt: [2025-08-14 18:35:15,295] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040151+00:00 — failure_log.txt: [2025-08-14 18:35:22,946] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040162+00:00 — failure_log.txt: [2025-08-14 18:35:40,439] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040175+00:00 — failure_log.txt: [2025-08-14 18:36:13,456] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040184+00:00 — failure_log.txt: [2025-08-14 18:37:12,242] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040194+00:00 — failure_log.txt: [2025-08-14 18:38:39,310] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040213+00:00 — failure_log.txt: [2025-08-14 18:41:24,652] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040226+00:00 — failure_log.txt: [2025-08-14 18:46:46,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040234+00:00 — failure_log.txt: [2025-08-14 18:54:19,897] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040241+00:00 — failure_log.txt: [2025-08-14 18:54:24,172] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040248+00:00 — failure_log.txt: [2025-08-14 18:54:39,496] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040255+00:00 — failure_log.txt: [2025-08-14 18:55:15,345] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040268+00:00 — failure_log.txt: [2025-08-14 18:56:11,925] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040282+00:00 — failure_log.txt: [2025-08-14 18:57:37,517] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040290+00:00 — failure_log.txt: [2025-08-14 19:00:21,684] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040300+00:00 — failure_log.txt: [2025-08-14 19:05:06,381] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040312+00:00 — failure_log.txt: [2025-08-14 19:05:17,590] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040325+00:00 — failure_log.txt: [2025-08-14 19:05:36,272] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040332+00:00 — failure_log.txt: [2025-08-14 19:06:14,176] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040339+00:00 — failure_log.txt: [2025-08-14 19:06:59,300] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040346+00:00 — failure_log.txt: [2025-08-14 19:08:35,291] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040354+00:00 — failure_log.txt: [2025-08-14 19:11:33,250] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040370+00:00 — failure_log.txt: [2025-08-14 19:16:49,406] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040382+00:00 — failure_log.txt: [2025-08-14 19:21:58,399] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040390+00:00 — failure_log.txt: [2025-08-14 19:24:47,023] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040402+00:00 — failure_log.txt: [2025-08-14 19:24:51,021] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040415+00:00 — failure_log.txt: [2025-08-14 19:25:08,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040425+00:00 — failure_log.txt: [2025-08-14 19:25:38,546] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040432+00:00 — failure_log.txt: [2025-08-14 19:26:22,566] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040439+00:00 — failure_log.txt: [2025-08-14 19:27:47,482] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040446+00:00 — failure_log.txt: [2025-08-14 19:30:37,436] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040457+00:00 — failure_log.txt: [2025-08-14 19:35:44,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040470+00:00 — failure_log.txt: [2025-08-14 19:40:48,628] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040479+00:00 — failure_log.txt: [2025-08-14 19:46:02,847] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040488+00:00 — failure_log.txt: [2025-08-14 19:51:15,108] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040503+00:00 — failure_log.txt: [2025-08-14 19:56:22,015] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040516+00:00 — failure_log.txt: [2025-08-14 20:01:32,783] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040524+00:00 — failure_log.txt: [2025-08-14 20:07:28,261] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040531+00:00 — failure_log.txt: [2025-08-14 20:09:24,793] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040554+00:00 — failure_log.txt: [2025-08-14 20:09:29,713] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040565+00:00 — failure_log.txt: [2025-08-14 20:09:47,121] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040578+00:00 — failure_log.txt: [2025-08-14 20:10:19,116] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040589+00:00 — failure_log.txt: [2025-08-14 20:11:21,046] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040596+00:00 — failure_log.txt: [2025-08-14 20:12:57,952] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040607+00:00 — failure_log.txt: [2025-08-14 20:15:50,278] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040620+00:00 — failure_log.txt: [2025-08-14 20:21:00,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040632+00:00 — failure_log.txt: [2025-08-14 20:26:17,210] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040642+00:00 — failure_log.txt: [2025-08-14 20:31:27,247] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040649+00:00 — failure_log.txt: [2025-08-14 20:36:32,090] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040656+00:00 — failure_log.txt: [2025-08-14 20:41:40,260] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040666+00:00 — failure_log.txt: [2025-08-14 20:46:56,157] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040678+00:00 — failure_log.txt: [2025-08-14 20:52:14,043] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040690+00:00 — failure_log.txt: [2025-08-14 20:57:25,044] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040697+00:00 — failure_log.txt: [2025-08-14 21:02:38,797] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040709+00:00 — failure_log.txt: [2025-08-14 21:07:56,868] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040722+00:00 — failure_log.txt: [2025-08-14 21:13:09,824] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040732+00:00 — failure_log.txt: [2025-08-14 21:18:20,232] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040739+00:00 — failure_log.txt: [2025-08-14 21:23:28,106] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040746+00:00 — failure_log.txt: [2025-08-14 21:28:32,196] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040753+00:00 — failure_log.txt: [2025-08-14 21:33:41,479] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040764+00:00 — failure_log.txt: [2025-08-14 21:38:53,188] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040776+00:00 — failure_log.txt: [2025-08-14 21:44:00,405] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040787+00:00 — failure_log.txt: [2025-08-14 21:49:14,277] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040795+00:00 — failure_log.txt: [2025-08-14 21:54:22,659] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040807+00:00 — failure_log.txt: [2025-08-14 22:00:57,646] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040821+00:00 — failure_log.txt: [2025-08-14 22:01:03,201] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040830+00:00 — failure_log.txt: [2025-08-14 22:01:20,162] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040837+00:00 — failure_log.txt: [2025-08-14 22:01:53,180] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040844+00:00 — failure_log.txt: [2025-08-14 22:02:50,228] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040851+00:00 — failure_log.txt: [2025-08-14 22:04:23,435] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040863+00:00 — failure_log.txt: [2025-08-14 22:07:12,042] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040876+00:00 — failure_log.txt: [2025-08-14 22:12:23,263] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040884+00:00 — failure_log.txt: [2025-08-14 22:17:33,180] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040899+00:00 — failure_log.txt: [2025-08-14 22:19:58,573] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040913+00:00 — failure_log.txt: [2025-08-14 22:20:05,473] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040922+00:00 — failure_log.txt: [2025-08-14 22:20:25,207] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040929+00:00 — failure_log.txt: [2025-08-14 22:20:52,164] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040936+00:00 — failure_log.txt: [2025-08-14 22:21:48,211] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040947+00:00 — failure_log.txt: [2025-08-14 22:23:21,679] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040960+00:00 — failure_log.txt: [2025-08-14 22:26:11,305] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040972+00:00 — failure_log.txt: [2025-08-14 22:31:20,138] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040979+00:00 — failure_log.txt: [2025-08-14 22:36:30,203] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.040990+00:00 — failure_log.txt: [2025-08-14 22:41:43,029] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041003+00:00 — failure_log.txt: [2025-08-14 22:46:52,135] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041014+00:00 — failure_log.txt: [2025-08-14 22:52:09,606] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041022+00:00 — failure_log.txt: [2025-08-14 22:58:44,297] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041028+00:00 — failure_log.txt: [2025-08-14 22:58:48,757] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041035+00:00 — failure_log.txt: [2025-08-14 22:59:08,609] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041046+00:00 — failure_log.txt: [2025-08-14 22:59:42,570] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041059+00:00 — failure_log.txt: [2025-08-14 23:00:27,602] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041069+00:00 — failure_log.txt: [2025-08-14 23:01:51,518] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041076+00:00 — failure_log.txt: [2025-08-14 23:05:52,640] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041089+00:00 — failure_log.txt: [2025-08-14 23:05:57,374] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041103+00:00 — failure_log.txt: [2025-08-14 23:06:27,082] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041111+00:00 — failure_log.txt: [2025-08-14 23:07:00,700] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041118+00:00 — failure_log.txt: [2025-08-14 23:07:52,324] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041125+00:00 — failure_log.txt: [2025-08-14 23:09:17,464] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041132+00:00 — failure_log.txt: [2025-08-14 23:12:17,662] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041148+00:00 — failure_log.txt: [2025-08-14 23:17:26,272] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041160+00:00 — failure_log.txt: [2025-08-14 23:22:39,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041167+00:00 — failure_log.txt: [2025-08-14 23:27:51,680] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041179+00:00 — failure_log.txt: [2025-08-14 23:33:08,194] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041192+00:00 — failure_log.txt: [2025-08-14 23:38:27,341] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041202+00:00 — failure_log.txt: [2025-08-14 23:43:32,118] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041209+00:00 — failure_log.txt: [2025-08-14 23:48:47,316] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041216+00:00 — failure_log.txt: [2025-08-14 23:53:52,265] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041223+00:00 — failure_log.txt: [2025-08-14 23:59:11,163] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041231+00:00 — failure_log.txt: [2025-08-15 00:04:27,298] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.041239+00:00 — failure_log.txt: [2025-08-15 00:09:42,386] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041251+00:00 — failure_log.txt: [2025-08-15 00:15:05,847] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041265+00:00 — failure_log.txt: [2025-08-15 00:20:18,444] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041272+00:00 — failure_log.txt: [2025-08-15 00:25:31,340] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041282+00:00 — failure_log.txt: [2025-08-15 00:30:43,306] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041295+00:00 — failure_log.txt: [2025-08-15 00:35:52,323] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041307+00:00 — failure_log.txt: [2025-08-15 00:41:07,225] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041315+00:00 — failure_log.txt: [2025-08-15 00:46:17,555] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041322+00:00 — failure_log.txt: [2025-08-15 00:51:35,351] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041329+00:00 — failure_log.txt: [2025-08-15 00:56:40,353] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041338+00:00 — failure_log.txt: [2025-08-15 01:01:45,326] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041351+00:00 — failure_log.txt: [2025-08-15 01:06:50,755] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041362+00:00 — failure_log.txt: [2025-08-15 01:12:08,852] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041375+00:00 — failure_log.txt: [2025-08-15 01:17:27,287] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041388+00:00 — failure_log.txt: [2025-08-15 01:22:34,370] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041401+00:00 — failure_log.txt: [2025-08-15 01:27:42,360] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041411+00:00 — failure_log.txt: [2025-08-15 01:32:49,303] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041418+00:00 — failure_log.txt: [2025-08-15 01:37:53,316] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041425+00:00 — failure_log.txt: [2025-08-15 01:43:11,319] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041435+00:00 — failure_log.txt: [2025-08-15 01:48:20,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041448+00:00 — failure_log.txt: [2025-08-15 01:53:32,250] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041458+00:00 — failure_log.txt: [2025-08-15 01:58:45,294] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041466+00:00 — failure_log.txt: [2025-08-15 02:03:54,348] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041479+00:00 — failure_log.txt: [2025-08-15 02:08:59,353] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041492+00:00 — failure_log.txt: [2025-08-15 02:14:13,315] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041501+00:00 — failure_log.txt: [2025-08-15 02:19:26,480] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041508+00:00 — failure_log.txt: [2025-08-15 02:24:42,897] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041515+00:00 — failure_log.txt: [2025-08-15 02:29:56,548] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041521+00:00 — failure_log.txt: [2025-08-15 02:35:07,202] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041533+00:00 — failure_log.txt: [2025-08-15 02:40:24,079] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041561+00:00 — failure_log.txt: [2025-08-15 02:45:42,076] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041570+00:00 — failure_log.txt: [2025-08-15 02:50:58,825] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041579+00:00 — failure_log.txt: [2025-08-15 02:56:12,432] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041592+00:00 — failure_log.txt: [2025-08-15 03:01:23,468] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041604+00:00 — failure_log.txt: [2025-08-15 03:06:42,372] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041612+00:00 — failure_log.txt: [2025-08-15 03:11:51,491] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041619+00:00 — failure_log.txt: [2025-08-15 03:17:10,163] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041626+00:00 — failure_log.txt: [2025-08-15 03:22:18,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041633+00:00 — failure_log.txt: [2025-08-15 03:27:33,679] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041644+00:00 — failure_log.txt: [2025-08-15 03:32:50,458] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041657+00:00 — failure_log.txt: [2025-08-15 03:38:08,960] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041669+00:00 — failure_log.txt: [2025-08-15 03:43:17,666] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041681+00:00 — failure_log.txt: [2025-08-15 03:48:29,380] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041694+00:00 — failure_log.txt: [2025-08-15 03:53:44,413] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041705+00:00 — failure_log.txt: [2025-08-15 03:58:54,286] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041712+00:00 — failure_log.txt: [2025-08-15 04:03:58,404] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041718+00:00 — failure_log.txt: [2025-08-15 04:09:06,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041725+00:00 — failure_log.txt: [2025-08-15 04:14:17,427] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041735+00:00 — failure_log.txt: [2025-08-15 04:19:23,319] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041747+00:00 — failure_log.txt: [2025-08-15 04:24:34,297] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041759+00:00 — failure_log.txt: [2025-08-15 04:29:41,382] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041766+00:00 — failure_log.txt: [2025-08-15 04:34:45,241] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041778+00:00 — failure_log.txt: [2025-08-15 04:39:52,351] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041791+00:00 — failure_log.txt: [2025-08-15 04:45:08,128] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041801+00:00 — failure_log.txt: [2025-08-15 04:50:15,729] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041811+00:00 — failure_log.txt: [2025-08-15 04:55:19,600] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041818+00:00 — failure_log.txt: [2025-08-15 05:00:28,339] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041826+00:00 — failure_log.txt: [2025-08-15 05:05:35,392] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041839+00:00 — failure_log.txt: [2025-08-15 05:10:49,325] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041851+00:00 — failure_log.txt: [2025-08-15 05:15:56,135] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041859+00:00 — failure_log.txt: [2025-08-15 05:21:09,855] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041869+00:00 — failure_log.txt: [2025-08-15 05:26:20,319] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041883+00:00 — failure_log.txt: [2025-08-15 05:31:26,339] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041894+00:00 — failure_log.txt: [2025-08-15 05:36:32,436] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041901+00:00 — failure_log.txt: [2025-08-15 05:41:44,340] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041908+00:00 — failure_log.txt: [2025-08-15 05:46:52,527] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041915+00:00 — failure_log.txt: [2025-08-15 05:52:00,368] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041930+00:00 — failure_log.txt: [2025-08-15 05:57:07,554] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041943+00:00 — failure_log.txt: [2025-08-15 06:02:22,749] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041952+00:00 — failure_log.txt: [2025-08-15 06:07:34,283] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041961+00:00 — failure_log.txt: [2025-08-15 06:12:52,356] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041974+00:00 — failure_log.txt: [2025-08-15 06:18:06,202] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041987+00:00 — failure_log.txt: [2025-08-15 06:23:16,455] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.041995+00:00 — failure_log.txt: [2025-08-15 06:28:31,565] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042001+00:00 — failure_log.txt: [2025-08-15 06:33:39,874] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042008+00:00 — failure_log.txt: [2025-08-15 06:38:46,256] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042016+00:00 — failure_log.txt: [2025-08-15 06:44:00,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042028+00:00 — failure_log.txt: [2025-08-15 06:49:17,316] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042041+00:00 — failure_log.txt: [2025-08-15 06:54:22,643] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042049+00:00 — failure_log.txt: [2025-08-15 06:59:34,604] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042059+00:00 — failure_log.txt: [2025-08-15 07:04:38,362] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042072+00:00 — failure_log.txt: [2025-08-15 07:09:53,474] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042084+00:00 — failure_log.txt: [2025-08-15 07:15:00,342] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042091+00:00 — failure_log.txt: [2025-08-15 07:20:15,552] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042098+00:00 — failure_log.txt: [2025-08-15 07:25:28,211] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042105+00:00 — failure_log.txt: [2025-08-15 07:30:32,556] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042114+00:00 — failure_log.txt: [2025-08-15 07:35:47,573] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042127+00:00 — failure_log.txt: [2025-08-15 07:40:54,350] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042138+00:00 — failure_log.txt: [2025-08-15 07:46:08,398] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042145+00:00 — failure_log.txt: [2025-08-15 07:51:20,390] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042158+00:00 — failure_log.txt: [2025-08-15 07:56:26,299] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042172+00:00 — failure_log.txt: [2025-08-15 08:01:30,613] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042184+00:00 — failure_log.txt: [2025-08-15 08:06:39,469] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042191+00:00 — failure_log.txt: [2025-08-15 08:11:53,296] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042198+00:00 — failure_log.txt: [2025-08-15 08:16:58,421] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042207+00:00 — failure_log.txt: [2025-08-15 08:22:12,058] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042220+00:00 — failure_log.txt: [2025-08-15 08:27:27,113] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042234+00:00 — failure_log.txt: [2025-08-15 08:32:45,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042243+00:00 — failure_log.txt: [2025-08-15 08:37:54,307] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042256+00:00 — failure_log.txt: [2025-08-15 08:43:12,752] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042269+00:00 — failure_log.txt: [2025-08-15 08:48:19,330] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042277+00:00 — failure_log.txt: [2025-08-15 08:53:26,817] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042284+00:00 — failure_log.txt: [2025-08-15 08:58:38,435] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042291+00:00 — failure_log.txt: [2025-08-15 09:03:43,532] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042299+00:00 — failure_log.txt: [2025-08-15 09:08:47,249] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042312+00:00 — failure_log.txt: [2025-08-15 09:13:54,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042324+00:00 — failure_log.txt: [2025-08-15 09:18:59,398] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042331+00:00 — failure_log.txt: [2025-08-15 09:24:08,828] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042343+00:00 — failure_log.txt: [2025-08-15 09:29:13,590] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042356+00:00 — failure_log.txt: [2025-08-15 09:34:19,767] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042367+00:00 — failure_log.txt: [2025-08-15 09:39:30,915] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042374+00:00 — failure_log.txt: [2025-08-15 09:44:43,320] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042381+00:00 — failure_log.txt: [2025-08-15 09:49:47,385] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042388+00:00 — failure_log.txt: [2025-08-15 09:55:01,612] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042397+00:00 — failure_log.txt: [2025-08-15 10:00:20,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042410+00:00 — failure_log.txt: [2025-08-15 10:05:31,635] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042421+00:00 — failure_log.txt: [2025-08-15 10:10:43,403] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042428+00:00 — failure_log.txt: [2025-08-15 10:15:47,650] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042447+00:00 — failure_log.txt: [2025-08-15 10:21:07,989] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042461+00:00 — failure_log.txt: [2025-08-15 10:26:25,943] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042468+00:00 — failure_log.txt: [2025-08-15 10:31:36,413] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042475+00:00 — failure_log.txt: [2025-08-15 10:36:43,335] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042482+00:00 — failure_log.txt: [2025-08-15 10:41:48,291] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042490+00:00 — failure_log.txt: [2025-08-15 10:46:57,515] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042502+00:00 — failure_log.txt: [2025-08-15 10:52:12,469] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042514+00:00 — failure_log.txt: [2025-08-15 10:57:24,357] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042522+00:00 — failure_log.txt: [2025-08-15 11:02:36,774] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042546+00:00 — failure_log.txt: [2025-08-15 11:07:42,450] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042561+00:00 — failure_log.txt: [2025-08-15 11:12:46,291] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042575+00:00 — failure_log.txt: [2025-08-15 11:17:54,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042583+00:00 — failure_log.txt: [2025-08-15 11:23:05,112] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042590+00:00 — failure_log.txt: [2025-08-15 11:28:24,408] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042596+00:00 — failure_log.txt: [2025-08-15 11:33:32,428] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042603+00:00 — failure_log.txt: [2025-08-15 11:38:39,243] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042613+00:00 — failure_log.txt: [2025-08-15 11:43:44,935] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042625+00:00 — failure_log.txt: [2025-08-15 11:49:03,626] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042637+00:00 — failure_log.txt: [2025-08-15 11:54:19,427] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042644+00:00 — failure_log.txt: [2025-08-15 11:59:29,333] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042654+00:00 — failure_log.txt: [2025-08-15 12:04:35,320] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042668+00:00 — failure_log.txt: [2025-08-15 12:09:39,403] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042683+00:00 — failure_log.txt: [2025-08-15 12:14:48,254] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042690+00:00 — failure_log.txt: [2025-08-15 12:20:01,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042697+00:00 — failure_log.txt: [2025-08-15 12:25:13,308] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042707+00:00 — failure_log.txt: [2025-08-15 12:30:22,395] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042722+00:00 — failure_log.txt: [2025-08-15 12:35:35,264] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042735+00:00 — failure_log.txt: [2025-08-15 12:40:49,491] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042742+00:00 — failure_log.txt: [2025-08-15 12:45:53,405] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042753+00:00 — failure_log.txt: [2025-08-15 12:51:10,628] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042766+00:00 — failure_log.txt: [2025-08-15 12:56:17,132] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042777+00:00 — failure_log.txt: [2025-08-15 13:01:30,256] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042784+00:00 — failure_log.txt: [2025-08-15 13:06:36,733] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042791+00:00 — failure_log.txt: [2025-08-15 13:11:44,324] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042798+00:00 — failure_log.txt: [2025-08-15 13:16:51,352] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042808+00:00 — failure_log.txt: [2025-08-15 13:22:04,467] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042820+00:00 — failure_log.txt: [2025-08-15 13:27:16,121] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042832+00:00 — failure_log.txt: [2025-08-15 13:32:30,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042839+00:00 — failure_log.txt: [2025-08-15 13:37:42,674] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042850+00:00 — failure_log.txt: [2025-08-15 13:42:55,538] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042863+00:00 — failure_log.txt: [2025-08-15 13:48:13,681] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042874+00:00 — failure_log.txt: [2025-08-15 13:53:26,551] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042881+00:00 — failure_log.txt: [2025-08-15 13:58:32,338] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042888+00:00 — failure_log.txt: [2025-08-15 14:03:43,347] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042895+00:00 — failure_log.txt: [2025-08-15 14:08:48,357] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042906+00:00 — failure_log.txt: [2025-08-15 14:13:55,491] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042918+00:00 — failure_log.txt: [2025-08-15 14:19:01,354] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042929+00:00 — failure_log.txt: [2025-08-15 14:24:17,274] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042937+00:00 — failure_log.txt: [2025-08-15 14:29:23,928] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042950+00:00 — failure_log.txt: [2025-08-15 14:34:35,831] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042963+00:00 — failure_log.txt: [2025-08-15 14:39:41,540] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042975+00:00 — failure_log.txt: [2025-08-15 14:44:56,326] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042982+00:00 — failure_log.txt: [2025-08-15 14:50:11,234] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042989+00:00 — failure_log.txt: [2025-08-15 14:55:21,671] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.042999+00:00 — failure_log.txt: [2025-08-15 15:00:27,408] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043011+00:00 — failure_log.txt: [2025-08-15 15:05:35,392] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043023+00:00 — failure_log.txt: [2025-08-15 15:10:46,324] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043030+00:00 — failure_log.txt: [2025-08-15 15:16:00,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043043+00:00 — failure_log.txt: [2025-08-15 15:21:15,942] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043057+00:00 — failure_log.txt: [2025-08-15 15:26:30,446] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043066+00:00 — failure_log.txt: [2025-08-15 15:31:41,253] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043072+00:00 — failure_log.txt: [2025-08-15 15:36:45,290] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043079+00:00 — failure_log.txt: [2025-08-15 15:41:55,440] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043086+00:00 — failure_log.txt: [2025-08-15 15:47:08,481] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043098+00:00 — failure_log.txt: [2025-08-15 15:52:22,426] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043114+00:00 — failure_log.txt: [2025-08-15 15:57:33,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043122+00:00 — failure_log.txt: [2025-08-15 16:02:42,553] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043133+00:00 — failure_log.txt: [2025-08-15 16:07:55,498] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043146+00:00 — failure_log.txt: [2025-08-15 16:13:06,485] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043157+00:00 — failure_log.txt: [2025-08-15 16:18:20,699] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043165+00:00 — failure_log.txt: [2025-08-15 16:23:37,456] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043172+00:00 — failure_log.txt: [2025-08-15 16:28:46,312] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043178+00:00 — failure_log.txt: [2025-08-15 16:33:54,278] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043188+00:00 — failure_log.txt: [2025-08-15 16:39:00,419] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043201+00:00 — failure_log.txt: [2025-08-15 16:44:12,469] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043212+00:00 — failure_log.txt: [2025-08-15 16:50:15,122] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043223+00:00 — failure_log.txt: [2025-08-15 16:50:19,762] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043236+00:00 — failure_log.txt: [2025-08-15 16:50:39,897] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043250+00:00 — failure_log.txt: [2025-08-15 16:51:12,161] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043257+00:00 — failure_log.txt: [2025-08-15 16:52:09,635] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043264+00:00 — failure_log.txt: [2025-08-15 16:53:41,280] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043271+00:00 — failure_log.txt: [2025-08-15 16:56:34,023] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043279+00:00 — failure_log.txt: [2025-08-15 17:01:48,875] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043291+00:00 — failure_log.txt: [2025-08-15 17:07:01,100] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043304+00:00 — failure_log.txt: [2025-08-15 17:12:09,872] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043312+00:00 — failure_log.txt: [2025-08-15 17:17:23,346] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043322+00:00 — failure_log.txt: [2025-08-15 17:22:29,113] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043336+00:00 — failure_log.txt: [2025-08-15 17:27:33,844] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043347+00:00 — failure_log.txt: [2025-08-15 17:32:45,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043354+00:00 — failure_log.txt: [2025-08-15 17:37:59,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043361+00:00 — failure_log.txt: [2025-08-15 17:43:10,312] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043368+00:00 — failure_log.txt: [2025-08-15 17:48:17,793] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043378+00:00 — failure_log.txt: [2025-08-15 17:53:22,016] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043390+00:00 — failure_log.txt: [2025-08-15 17:58:30,845] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043402+00:00 — failure_log.txt: [2025-08-15 18:04:26,520] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043409+00:00 — failure_log.txt: [2025-08-15 18:07:58,591] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043422+00:00 — failure_log.txt: [2025-08-15 18:08:13,871] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043435+00:00 — failure_log.txt: [2025-08-15 18:08:34,638] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043444+00:00 — failure_log.txt: [2025-08-15 18:09:07,779] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043451+00:00 — failure_log.txt: [2025-08-15 18:10:15,361] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043458+00:00 — failure_log.txt: [2025-08-15 18:11:52,993] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043465+00:00 — failure_log.txt: [2025-08-15 18:14:41,191] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043480+00:00 — failure_log.txt: [2025-08-15 18:19:58,857] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043494+00:00 — failure_log.txt: [2025-08-15 18:25:21,010] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043501+00:00 — failure_log.txt: [2025-08-15 18:30:40,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043512+00:00 — failure_log.txt: [2025-08-15 18:36:10,443] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043525+00:00 — failure_log.txt: [2025-08-15 18:41:31,704] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043554+00:00 — failure_log.txt: [2025-08-15 18:46:45,317] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043563+00:00 — failure_log.txt: [2025-08-15 18:52:09,744] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043570+00:00 — failure_log.txt: [2025-08-15 18:57:21,432] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043580+00:00 — failure_log.txt: [2025-08-15 19:02:32,965] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043592+00:00 — failure_log.txt: [2025-08-15 19:07:41,955] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043604+00:00 — failure_log.txt: [2025-08-15 19:12:57,824] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043612+00:00 — failure_log.txt: [2025-08-15 19:22:37,945] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043622+00:00 — failure_log.txt: [2025-08-15 19:22:45,305] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043635+00:00 — failure_log.txt: [2025-08-15 19:23:07,613] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043647+00:00 — failure_log.txt: [2025-08-15 19:23:48,582] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043654+00:00 — failure_log.txt: [2025-08-15 19:24:40,073] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043661+00:00 — failure_log.txt: [2025-08-15 19:26:22,037] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043668+00:00 — failure_log.txt: [2025-08-15 19:29:18,005] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043678+00:00 — failure_log.txt: [2025-08-15 19:34:30,045] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043690+00:00 — failure_log.txt: [2025-08-15 19:39:40,012] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043702+00:00 — failure_log.txt: [2025-08-15 19:44:54,631] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043709+00:00 — failure_log.txt: [2025-08-15 19:50:06,630] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043722+00:00 — failure_log.txt: [2025-08-15 19:55:28,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043736+00:00 — failure_log.txt: [2025-08-15 20:00:47,411] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043745+00:00 — failure_log.txt: [2025-08-15 20:06:12,062] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043755+00:00 — failure_log.txt: [2025-08-15 20:11:35,582] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043762+00:00 — failure_log.txt: [2025-08-15 20:16:58,153] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043772+00:00 — failure_log.txt: [2025-08-15 20:22:16,424] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043784+00:00 — failure_log.txt: [2025-08-15 20:27:37,109] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043796+00:00 — failure_log.txt: [2025-08-15 20:32:54,342] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043803+00:00 — failure_log.txt: [2025-08-15 20:38:10,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043816+00:00 — failure_log.txt: [2025-08-15 20:43:33,219] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043829+00:00 — failure_log.txt: [2025-08-15 20:48:51,017] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043839+00:00 — failure_log.txt: [2025-08-15 20:54:04,116] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043846+00:00 — failure_log.txt: [2025-08-15 20:59:25,587] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043853+00:00 — failure_log.txt: [2025-08-15 21:04:46,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043860+00:00 — failure_log.txt: [2025-08-15 21:09:57,856] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043872+00:00 — failure_log.txt: [2025-08-15 21:15:13,483] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043886+00:00 — failure_log.txt: [2025-08-15 21:20:32,303] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043894+00:00 — failure_log.txt: [2025-08-15 21:25:47,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043904+00:00 — failure_log.txt: [2025-08-15 21:31:00,653] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043917+00:00 — failure_log.txt: [2025-08-15 21:36:19,283] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043929+00:00 — failure_log.txt: [2025-08-15 21:41:34,175] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043936+00:00 — failure_log.txt: [2025-08-15 21:46:43,798] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043943+00:00 — failure_log.txt: [2025-08-15 21:51:59,607] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043950+00:00 — failure_log.txt: [2025-08-15 21:57:16,331] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043960+00:00 — failure_log.txt: [2025-08-15 22:02:40,719] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043976+00:00 — failure_log.txt: [2025-08-15 22:07:49,979] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043986+00:00 — failure_log.txt: [2025-08-15 22:13:11,184] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.043995+00:00 — failure_log.txt: [2025-08-15 22:18:31,977] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044008+00:00 — failure_log.txt: [2025-08-15 22:23:46,591] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044024+00:00 — failure_log.txt: [2025-08-15 22:29:05,589] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044031+00:00 — failure_log.txt: [2025-08-15 22:34:21,432] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044038+00:00 — failure_log.txt: [2025-08-15 22:39:33,151] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044045+00:00 — failure_log.txt: [2025-08-15 22:44:45,852] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044055+00:00 — failure_log.txt: [2025-08-15 22:50:00,005] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044067+00:00 — failure_log.txt: [2025-08-15 22:55:22,460] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044079+00:00 — failure_log.txt: [2025-08-15 23:01:43,129] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044086+00:00 — failure_log.txt: [2025-08-15 23:01:50,313] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044098+00:00 — failure_log.txt: [2025-08-15 23:02:15,914] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044111+00:00 — failure_log.txt: [2025-08-15 23:02:50,110] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044121+00:00 — failure_log.txt: [2025-08-15 23:03:47,962] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044128+00:00 — failure_log.txt: [2025-08-15 23:05:24,960] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044135+00:00 — failure_log.txt: [2025-08-15 23:08:20,170] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044142+00:00 — failure_log.txt: [2025-08-15 23:13:32,276] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044154+00:00 — failure_log.txt: [2025-08-15 23:18:41,340] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044168+00:00 — failure_log.txt: [2025-08-15 23:23:54,625] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044176+00:00 — failure_log.txt: [2025-08-15 23:29:14,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044186+00:00 — failure_log.txt: [2025-08-15 23:34:33,949] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044199+00:00 — failure_log.txt: [2025-08-15 23:39:44,586] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044217+00:00 — failure_log.txt: [2025-08-15 23:45:08,702] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044224+00:00 — failure_log.txt: [2025-08-15 23:50:34,791] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044231+00:00 — failure_log.txt: [2025-08-15 23:55:51,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044239+00:00 — failure_log.txt: [2025-08-16 00:01:07,602] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.044251+00:00 — failure_log.txt: [2025-08-16 00:06:26,801] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044264+00:00 — failure_log.txt: [2025-08-16 00:11:48,440] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044276+00:00 — failure_log.txt: [2025-08-16 00:16:59,193] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044287+00:00 — failure_log.txt: [2025-08-16 00:22:14,293] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044299+00:00 — failure_log.txt: [2025-08-16 00:27:24,229] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044312+00:00 — failure_log.txt: [2025-08-16 00:32:40,744] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044319+00:00 — failure_log.txt: [2025-08-16 00:37:50,166] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044326+00:00 — failure_log.txt: [2025-08-16 00:43:09,552] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044333+00:00 — failure_log.txt: [2025-08-16 00:48:22,818] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044340+00:00 — failure_log.txt: [2025-08-16 00:53:42,632] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044347+00:00 — failure_log.txt: [2025-08-16 00:58:54,978] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044357+00:00 — failure_log.txt: [2025-08-16 01:04:05,936] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044369+00:00 — failure_log.txt: [2025-08-16 01:09:22,493] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044381+00:00 — failure_log.txt: [2025-08-16 01:14:33,764] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044388+00:00 — failure_log.txt: [2025-08-16 01:19:41,975] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044401+00:00 — failure_log.txt: [2025-08-16 01:25:00,728] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044417+00:00 — failure_log.txt: [2025-08-16 01:30:18,976] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044426+00:00 — failure_log.txt: [2025-08-16 01:35:32,860] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044433+00:00 — failure_log.txt: [2025-08-16 01:40:43,981] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044440+00:00 — failure_log.txt: [2025-08-16 01:45:54,094] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044449+00:00 — failure_log.txt: [2025-08-16 01:51:06,278] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044462+00:00 — failure_log.txt: [2025-08-16 01:56:20,433] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044474+00:00 — failure_log.txt: [2025-08-16 02:01:31,191] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044481+00:00 — failure_log.txt: [2025-08-16 02:06:51,115] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044492+00:00 — failure_log.txt: [2025-08-16 02:12:07,773] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044505+00:00 — failure_log.txt: [2025-08-16 02:17:26,129] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044516+00:00 — failure_log.txt: [2025-08-16 02:22:38,198] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044523+00:00 — failure_log.txt: [2025-08-16 02:27:55,886] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044533+00:00 — failure_log.txt: [2025-08-16 02:33:19,354] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044559+00:00 — failure_log.txt: [2025-08-16 02:38:32,816] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044572+00:00 — failure_log.txt: [2025-08-16 02:43:44,114] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044583+00:00 — failure_log.txt: [2025-08-16 02:49:06,126] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044590+00:00 — failure_log.txt: [2025-08-16 02:54:21,856] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044602+00:00 — failure_log.txt: [2025-08-16 02:59:40,463] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044615+00:00 — failure_log.txt: [2025-08-16 03:04:55,083] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044626+00:00 — failure_log.txt: [2025-08-16 03:10:15,605] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044633+00:00 — failure_log.txt: [2025-08-16 03:15:36,471] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044640+00:00 — failure_log.txt: [2025-08-16 03:20:42,724] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044647+00:00 — failure_log.txt: [2025-08-16 03:26:01,475] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044657+00:00 — failure_log.txt: [2025-08-16 03:31:21,243] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044669+00:00 — failure_log.txt: [2025-08-16 03:36:38,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044681+00:00 — failure_log.txt: [2025-08-16 03:41:46,617] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044688+00:00 — failure_log.txt: [2025-08-16 03:47:00,094] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044701+00:00 — failure_log.txt: [2025-08-16 03:52:14,087] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044715+00:00 — failure_log.txt: [2025-08-16 03:57:28,913] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044723+00:00 — failure_log.txt: [2025-08-16 04:02:36,731] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044730+00:00 — failure_log.txt: [2025-08-16 04:07:52,164] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044737+00:00 — failure_log.txt: [2025-08-16 04:13:01,493] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044745+00:00 — failure_log.txt: [2025-08-16 04:18:24,675] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044757+00:00 — failure_log.txt: [2025-08-16 04:23:36,119] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044770+00:00 — failure_log.txt: [2025-08-16 04:28:50,697] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044777+00:00 — failure_log.txt: [2025-08-16 04:34:01,969] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044788+00:00 — failure_log.txt: [2025-08-16 04:39:20,272] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044804+00:00 — failure_log.txt: [2025-08-16 04:44:31,742] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044815+00:00 — failure_log.txt: [2025-08-16 04:49:48,519] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044822+00:00 — failure_log.txt: [2025-08-16 04:54:56,757] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044829+00:00 — failure_log.txt: [2025-08-16 05:00:21,281] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044836+00:00 — failure_log.txt: [2025-08-16 05:05:40,084] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044849+00:00 — failure_log.txt: [2025-08-16 05:10:55,311] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044866+00:00 — failure_log.txt: [2025-08-16 05:16:16,200] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044875+00:00 — failure_log.txt: [2025-08-16 05:21:34,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044887+00:00 — failure_log.txt: [2025-08-16 05:26:43,474] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044901+00:00 — failure_log.txt: [2025-08-16 05:31:54,776] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044910+00:00 — failure_log.txt: [2025-08-16 05:37:18,893] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044917+00:00 — failure_log.txt: [2025-08-16 05:42:34,888] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044924+00:00 — failure_log.txt: [2025-08-16 05:47:44,588] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044931+00:00 — failure_log.txt: [2025-08-16 05:52:59,498] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044943+00:00 — failure_log.txt: [2025-08-16 05:58:19,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044956+00:00 — failure_log.txt: [2025-08-16 06:03:41,330] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044965+00:00 — failure_log.txt: [2025-08-16 06:08:59,507] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044975+00:00 — failure_log.txt: [2025-08-16 06:14:25,413] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044988+00:00 — failure_log.txt: [2025-08-16 06:19:38,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.044999+00:00 — failure_log.txt: [2025-08-16 06:24:58,529] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045007+00:00 — failure_log.txt: [2025-08-16 06:30:18,034] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045014+00:00 — failure_log.txt: [2025-08-16 06:35:31,934] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045020+00:00 — failure_log.txt: [2025-08-16 06:40:50,107] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045030+00:00 — failure_log.txt: [2025-08-16 06:45:58,626] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045042+00:00 — failure_log.txt: [2025-08-16 06:51:21,192] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045054+00:00 — failure_log.txt: [2025-08-16 06:56:42,719] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045066+00:00 — failure_log.txt: [2025-08-16 07:01:57,514] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045079+00:00 — failure_log.txt: [2025-08-16 07:07:12,896] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045093+00:00 — failure_log.txt: [2025-08-16 07:12:28,700] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045100+00:00 — failure_log.txt: [2025-08-16 07:17:46,638] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045107+00:00 — failure_log.txt: [2025-08-16 07:23:00,642] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045114+00:00 — failure_log.txt: [2025-08-16 07:28:14,370] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045122+00:00 — failure_log.txt: [2025-08-16 07:33:26,545] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045134+00:00 — failure_log.txt: [2025-08-16 07:38:42,686] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045147+00:00 — failure_log.txt: [2025-08-16 07:43:51,591] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045155+00:00 — failure_log.txt: [2025-08-16 07:48:58,698] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045165+00:00 — failure_log.txt: [2025-08-16 07:54:16,410] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045178+00:00 — failure_log.txt: [2025-08-16 07:59:32,956] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045190+00:00 — failure_log.txt: [2025-08-16 08:04:42,720] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045197+00:00 — failure_log.txt: [2025-08-16 08:10:03,503] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045204+00:00 — failure_log.txt: [2025-08-16 08:15:18,630] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045211+00:00 — failure_log.txt: [2025-08-16 08:20:28,579] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045221+00:00 — failure_log.txt: [2025-08-16 08:25:44,519] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045233+00:00 — failure_log.txt: [2025-08-16 08:31:00,763] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045244+00:00 — failure_log.txt: [2025-08-16 08:36:18,081] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045251+00:00 — failure_log.txt: [2025-08-16 08:41:34,776] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045264+00:00 — failure_log.txt: [2025-08-16 08:46:52,014] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045277+00:00 — failure_log.txt: [2025-08-16 08:52:01,104] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045289+00:00 — failure_log.txt: [2025-08-16 08:57:25,296] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045296+00:00 — failure_log.txt: [2025-08-16 09:02:41,428] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045303+00:00 — failure_log.txt: [2025-08-16 09:07:51,989] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045315+00:00 — failure_log.txt: [2025-08-16 09:13:16,978] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045329+00:00 — failure_log.txt: [2025-08-16 09:18:32,945] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045339+00:00 — failure_log.txt: [2025-08-16 09:23:42,783] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045347+00:00 — failure_log.txt: [2025-08-16 09:28:55,260] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045359+00:00 — failure_log.txt: [2025-08-16 09:34:17,816] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045373+00:00 — failure_log.txt: [2025-08-16 09:39:36,188] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045381+00:00 — failure_log.txt: [2025-08-16 09:44:55,530] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045388+00:00 — failure_log.txt: [2025-08-16 09:50:16,501] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045395+00:00 — failure_log.txt: [2025-08-16 09:55:40,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045402+00:00 — failure_log.txt: [2025-08-16 10:00:58,927] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045414+00:00 — failure_log.txt: [2025-08-16 10:06:13,174] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045428+00:00 — failure_log.txt: [2025-08-16 10:11:27,836] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045435+00:00 — failure_log.txt: [2025-08-16 10:16:36,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045446+00:00 — failure_log.txt: [2025-08-16 10:21:52,545] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045459+00:00 — failure_log.txt: [2025-08-16 10:27:10,981] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045470+00:00 — failure_log.txt: [2025-08-16 10:32:24,132] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045477+00:00 — failure_log.txt: [2025-08-16 10:37:42,106] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045484+00:00 — failure_log.txt: [2025-08-16 10:42:55,225] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045491+00:00 — failure_log.txt: [2025-08-16 10:48:08,841] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045501+00:00 — failure_log.txt: [2025-08-16 10:53:23,944] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045514+00:00 — failure_log.txt: [2025-08-16 10:58:42,265] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045525+00:00 — failure_log.txt: [2025-08-16 11:03:52,485] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045532+00:00 — failure_log.txt: [2025-08-16 11:09:06,086] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045560+00:00 — failure_log.txt: [2025-08-16 11:14:20,764] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045574+00:00 — failure_log.txt: [2025-08-16 11:19:38,119] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045582+00:00 — failure_log.txt: [2025-08-16 11:24:46,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045592+00:00 — failure_log.txt: [2025-08-16 11:29:58,952] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045599+00:00 — failure_log.txt: [2025-08-16 11:35:18,679] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045609+00:00 — failure_log.txt: [2025-08-16 11:40:34,728] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045621+00:00 — failure_log.txt: [2025-08-16 11:45:42,766] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045633+00:00 — failure_log.txt: [2025-08-16 11:50:50,501] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045640+00:00 — failure_log.txt: [2025-08-16 11:56:16,357] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045651+00:00 — failure_log.txt: [2025-08-16 12:01:34,682] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045664+00:00 — failure_log.txt: [2025-08-16 12:06:50,630] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045675+00:00 — failure_log.txt: [2025-08-16 12:12:12,369] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045682+00:00 — failure_log.txt: [2025-08-16 12:17:33,200] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045689+00:00 — failure_log.txt: [2025-08-16 12:22:48,781] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045696+00:00 — failure_log.txt: [2025-08-16 12:28:07,566] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045704+00:00 — failure_log.txt: [2025-08-16 12:33:27,058] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045720+00:00 — failure_log.txt: [2025-08-16 12:38:40,025] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045732+00:00 — failure_log.txt: [2025-08-16 12:44:03,464] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045739+00:00 — failure_log.txt: [2025-08-16 12:49:20,249] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045751+00:00 — failure_log.txt: [2025-08-16 12:54:30,685] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045765+00:00 — failure_log.txt: [2025-08-16 12:59:43,785] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045774+00:00 — failure_log.txt: [2025-08-16 13:05:00,083] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045781+00:00 — failure_log.txt: [2025-08-16 13:10:20,035] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045788+00:00 — failure_log.txt: [2025-08-16 13:15:36,223] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045795+00:00 — failure_log.txt: [2025-08-16 13:20:52,926] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045805+00:00 — failure_log.txt: [2025-08-16 13:26:02,336] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045818+00:00 — failure_log.txt: [2025-08-16 13:31:16,668] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045828+00:00 — failure_log.txt: [2025-08-16 13:36:31,775] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045840+00:00 — failure_log.txt: [2025-08-16 13:41:46,927] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045853+00:00 — failure_log.txt: [2025-08-16 13:47:09,202] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045866+00:00 — failure_log.txt: [2025-08-16 13:52:28,826] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045873+00:00 — failure_log.txt: [2025-08-16 13:57:43,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045880+00:00 — failure_log.txt: [2025-08-16 14:02:55,166] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045887+00:00 — failure_log.txt: [2025-08-16 14:08:13,833] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045896+00:00 — failure_log.txt: [2025-08-16 14:13:24,736] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045908+00:00 — failure_log.txt: [2025-08-16 14:18:30,614] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045920+00:00 — failure_log.txt: [2025-08-16 14:23:45,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045928+00:00 — failure_log.txt: [2025-08-16 14:28:57,881] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045939+00:00 — failure_log.txt: [2025-08-16 14:34:11,250] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045952+00:00 — failure_log.txt: [2025-08-16 14:39:24,755] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045963+00:00 — failure_log.txt: [2025-08-16 14:44:42,868] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045970+00:00 — failure_log.txt: [2025-08-16 14:49:54,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045977+00:00 — failure_log.txt: [2025-08-16 14:55:14,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045984+00:00 — failure_log.txt: [2025-08-16 15:00:33,153] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.045994+00:00 — failure_log.txt: [2025-08-16 15:05:45,967] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046006+00:00 — failure_log.txt: [2025-08-16 15:10:56,794] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046017+00:00 — failure_log.txt: [2025-08-16 15:16:06,373] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046025+00:00 — failure_log.txt: [2025-08-16 15:21:28,073] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046037+00:00 — failure_log.txt: [2025-08-16 15:26:40,465] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046051+00:00 — failure_log.txt: [2025-08-16 15:31:48,657] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046060+00:00 — failure_log.txt: [2025-08-16 15:36:56,627] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046067+00:00 — failure_log.txt: [2025-08-16 15:42:11,862] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046073+00:00 — failure_log.txt: [2025-08-16 15:47:25,317] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046081+00:00 — failure_log.txt: [2025-08-16 15:52:45,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046097+00:00 — failure_log.txt: [2025-08-16 15:58:00,936] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046109+00:00 — failure_log.txt: [2025-08-16 16:03:21,357] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046116+00:00 — failure_log.txt: [2025-08-16 16:08:38,018] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046128+00:00 — failure_log.txt: [2025-08-16 16:13:44,881] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046141+00:00 — failure_log.txt: [2025-08-16 16:19:01,436] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046154+00:00 — failure_log.txt: [2025-08-16 16:24:30,595] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046161+00:00 — failure_log.txt: [2025-08-16 16:29:43,554] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046168+00:00 — failure_log.txt: [2025-08-16 16:35:03,190] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046176+00:00 — failure_log.txt: [2025-08-16 16:40:22,424] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046188+00:00 — failure_log.txt: [2025-08-16 16:45:44,953] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046201+00:00 — failure_log.txt: [2025-08-16 16:51:02,797] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046208+00:00 — failure_log.txt: [2025-08-16 16:56:24,927] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046220+00:00 — failure_log.txt: [2025-08-16 17:01:35,297] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046233+00:00 — failure_log.txt: [2025-08-16 17:06:55,517] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046244+00:00 — failure_log.txt: [2025-08-16 17:12:13,192] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046251+00:00 — failure_log.txt: [2025-08-16 17:17:31,475] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046258+00:00 — failure_log.txt: [2025-08-16 17:22:50,696] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046265+00:00 — failure_log.txt: [2025-08-16 17:28:00,534] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046275+00:00 — failure_log.txt: [2025-08-16 17:33:16,636] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046288+00:00 — failure_log.txt: [2025-08-16 17:38:36,463] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046298+00:00 — failure_log.txt: [2025-08-16 17:43:44,167] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046306+00:00 — failure_log.txt: [2025-08-16 17:49:12,093] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046318+00:00 — failure_log.txt: [2025-08-16 17:54:29,639] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046332+00:00 — failure_log.txt: [2025-08-16 17:59:44,311] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046341+00:00 — failure_log.txt: [2025-08-16 18:05:09,264] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046351+00:00 — failure_log.txt: [2025-08-16 18:10:23,877] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046358+00:00 — failure_log.txt: [2025-08-16 18:15:38,526] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046368+00:00 — failure_log.txt: [2025-08-16 18:20:50,015] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046381+00:00 — failure_log.txt: [2025-08-16 18:26:12,528] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046392+00:00 — failure_log.txt: [2025-08-16 18:31:30,529] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046399+00:00 — failure_log.txt: [2025-08-16 18:36:44,513] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046412+00:00 — failure_log.txt: [2025-08-16 18:41:59,140] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046425+00:00 — failure_log.txt: [2025-08-16 18:47:20,547] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046435+00:00 — failure_log.txt: [2025-08-16 18:52:44,091] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046441+00:00 — failure_log.txt: [2025-08-16 18:58:03,480] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046448+00:00 — failure_log.txt: [2025-08-16 19:03:19,924] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046455+00:00 — failure_log.txt: [2025-08-16 19:08:42,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046466+00:00 — failure_log.txt: [2025-08-16 19:13:53,707] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046479+00:00 — failure_log.txt: [2025-08-16 19:18:59,836] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046489+00:00 — failure_log.txt: [2025-08-16 19:24:13,763] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046497+00:00 — failure_log.txt: [2025-08-16 19:29:25,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046510+00:00 — failure_log.txt: [2025-08-16 19:34:42,545] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046523+00:00 — failure_log.txt: [2025-08-16 19:39:56,444] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046531+00:00 — failure_log.txt: [2025-08-16 19:45:14,964] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046554+00:00 — failure_log.txt: [2025-08-16 19:50:24,971] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046562+00:00 — failure_log.txt: [2025-08-16 19:55:39,790] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046570+00:00 — failure_log.txt: [2025-08-16 20:00:57,114] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046582+00:00 — failure_log.txt: [2025-08-16 20:06:20,854] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046598+00:00 — failure_log.txt: [2025-08-16 20:11:35,165] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046606+00:00 — failure_log.txt: [2025-08-16 20:16:44,633] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046616+00:00 — failure_log.txt: [2025-08-16 20:21:59,074] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046632+00:00 — failure_log.txt: [2025-08-16 20:27:23,838] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046644+00:00 — failure_log.txt: [2025-08-16 20:32:42,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046651+00:00 — failure_log.txt: [2025-08-16 20:37:51,517] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046657+00:00 — failure_log.txt: [2025-08-16 20:43:09,956] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046664+00:00 — failure_log.txt: [2025-08-16 20:48:22,283] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046674+00:00 — failure_log.txt: [2025-08-16 20:53:37,436] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046687+00:00 — failure_log.txt: [2025-08-16 20:59:00,902] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046698+00:00 — failure_log.txt: [2025-08-16 21:04:24,518] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046706+00:00 — failure_log.txt: [2025-08-16 21:09:44,017] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046717+00:00 — failure_log.txt: [2025-08-16 21:15:00,059] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046730+00:00 — failure_log.txt: [2025-08-16 21:20:21,503] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046741+00:00 — failure_log.txt: [2025-08-16 21:25:40,836] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046748+00:00 — failure_log.txt: [2025-08-16 21:31:03,297] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046755+00:00 — failure_log.txt: [2025-08-16 21:36:24,789] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046762+00:00 — failure_log.txt: [2025-08-16 21:41:35,510] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046772+00:00 — failure_log.txt: [2025-08-16 21:46:48,571] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046784+00:00 — failure_log.txt: [2025-08-16 21:51:59,511] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046795+00:00 — failure_log.txt: [2025-08-16 21:57:21,268] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046803+00:00 — failure_log.txt: [2025-08-16 22:02:37,311] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046815+00:00 — failure_log.txt: [2025-08-16 22:07:53,054] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046829+00:00 — failure_log.txt: [2025-08-16 22:13:05,473] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046838+00:00 — failure_log.txt: [2025-08-16 22:18:18,890] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046845+00:00 — failure_log.txt: [2025-08-16 22:23:27,125] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046852+00:00 — failure_log.txt: [2025-08-16 22:28:34,771] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046859+00:00 — failure_log.txt: [2025-08-16 22:33:41,112] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046874+00:00 — failure_log.txt: [2025-08-16 22:38:52,721] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046887+00:00 — failure_log.txt: [2025-08-16 22:44:19,724] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046894+00:00 — failure_log.txt: [2025-08-16 22:49:39,309] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046905+00:00 — failure_log.txt: [2025-08-16 22:54:59,629] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046918+00:00 — failure_log.txt: [2025-08-16 23:00:21,120] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046929+00:00 — failure_log.txt: [2025-08-16 23:05:34,392] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046936+00:00 — failure_log.txt: [2025-08-16 23:10:45,926] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046943+00:00 — failure_log.txt: [2025-08-16 23:15:54,344] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046950+00:00 — failure_log.txt: [2025-08-16 23:21:15,738] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046960+00:00 — failure_log.txt: [2025-08-16 23:26:29,526] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046972+00:00 — failure_log.txt: [2025-08-16 23:31:37,019] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046984+00:00 — failure_log.txt: [2025-08-16 23:36:50,921] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.046991+00:00 — failure_log.txt: [2025-08-16 23:42:15,045] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047003+00:00 — failure_log.txt: [2025-08-16 23:47:25,356] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047020+00:00 — failure_log.txt: [2025-08-16 23:52:43,948] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047029+00:00 — failure_log.txt: [2025-08-16 23:58:03,314] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047037+00:00 — failure_log.txt: [2025-08-17 00:03:31,364] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.047044+00:00 — failure_log.txt: [2025-08-17 00:08:46,425] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047055+00:00 — failure_log.txt: [2025-08-17 00:13:59,356] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047067+00:00 — failure_log.txt: [2025-08-17 00:19:24,032] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047078+00:00 — failure_log.txt: [2025-08-17 00:24:45,232] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047086+00:00 — failure_log.txt: [2025-08-17 00:29:57,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047098+00:00 — failure_log.txt: [2025-08-17 00:35:22,305] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047112+00:00 — failure_log.txt: [2025-08-17 00:40:44,021] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047120+00:00 — failure_log.txt: [2025-08-17 00:45:56,159] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047127+00:00 — failure_log.txt: [2025-08-17 00:51:19,825] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047137+00:00 — failure_log.txt: [2025-08-17 00:56:45,541] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047147+00:00 — failure_log.txt: [2025-08-17 01:01:56,716] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047159+00:00 — failure_log.txt: [2025-08-17 01:07:17,566] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047170+00:00 — failure_log.txt: [2025-08-17 01:12:36,293] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047178+00:00 — failure_log.txt: [2025-08-17 01:17:50,395] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047190+00:00 — failure_log.txt: [2025-08-17 01:23:14,426] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047204+00:00 — failure_log.txt: [2025-08-17 01:28:29,394] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047213+00:00 — failure_log.txt: [2025-08-17 01:33:47,998] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047220+00:00 — failure_log.txt: [2025-08-17 01:38:56,487] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047227+00:00 — failure_log.txt: [2025-08-17 01:44:21,519] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047234+00:00 — failure_log.txt: [2025-08-17 01:49:38,899] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047246+00:00 — failure_log.txt: [2025-08-17 01:54:46,654] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047260+00:00 — failure_log.txt: [2025-08-17 01:59:57,319] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047268+00:00 — failure_log.txt: [2025-08-17 02:05:12,090] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047277+00:00 — failure_log.txt: [2025-08-17 02:10:24,435] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047290+00:00 — failure_log.txt: [2025-08-17 02:15:39,749] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047302+00:00 — failure_log.txt: [2025-08-17 02:20:48,896] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047310+00:00 — failure_log.txt: [2025-08-17 02:26:13,941] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047317+00:00 — failure_log.txt: [2025-08-17 02:31:28,653] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047323+00:00 — failure_log.txt: [2025-08-17 02:36:41,387] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047333+00:00 — failure_log.txt: [2025-08-17 02:41:57,142] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047346+00:00 — failure_log.txt: [2025-08-17 02:47:20,348] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047357+00:00 — failure_log.txt: [2025-08-17 02:52:37,966] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047364+00:00 — failure_log.txt: [2025-08-17 02:57:46,657] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047377+00:00 — failure_log.txt: [2025-08-17 03:03:07,761] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047395+00:00 — failure_log.txt: [2025-08-17 03:08:28,718] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047404+00:00 — failure_log.txt: [2025-08-17 03:13:48,434] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047411+00:00 — failure_log.txt: [2025-08-17 03:19:14,943] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047417+00:00 — failure_log.txt: [2025-08-17 03:24:28,618] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047424+00:00 — failure_log.txt: [2025-08-17 03:29:44,690] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047433+00:00 — failure_log.txt: [2025-08-17 03:35:06,566] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047445+00:00 — failure_log.txt: [2025-08-17 03:40:23,565] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047458+00:00 — failure_log.txt: [2025-08-17 03:45:37,442] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047467+00:00 — failure_log.txt: [2025-08-17 03:50:48,056] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047477+00:00 — failure_log.txt: [2025-08-17 03:55:54,984] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047490+00:00 — failure_log.txt: [2025-08-17 04:01:02,359] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047502+00:00 — failure_log.txt: [2025-08-17 04:06:19,667] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047510+00:00 — failure_log.txt: [2025-08-17 04:11:37,980] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047517+00:00 — failure_log.txt: [2025-08-17 04:16:46,705] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047524+00:00 — failure_log.txt: [2025-08-17 04:21:58,983] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047531+00:00 — failure_log.txt: [2025-08-17 04:27:11,444] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047558+00:00 — failure_log.txt: [2025-08-17 04:32:24,865] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047572+00:00 — failure_log.txt: [2025-08-17 04:37:41,250] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047580+00:00 — failure_log.txt: [2025-08-17 04:42:58,559] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047590+00:00 — failure_log.txt: [2025-08-17 04:48:12,441] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047603+00:00 — failure_log.txt: [2025-08-17 04:53:30,950] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047615+00:00 — failure_log.txt: [2025-08-17 04:58:50,580] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047623+00:00 — failure_log.txt: [2025-08-17 05:04:01,765] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047629+00:00 — failure_log.txt: [2025-08-17 05:09:28,842] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047636+00:00 — failure_log.txt: [2025-08-17 05:14:41,780] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047644+00:00 — failure_log.txt: [2025-08-17 05:19:50,589] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047660+00:00 — failure_log.txt: [2025-08-17 05:25:12,688] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047672+00:00 — failure_log.txt: [2025-08-17 05:30:27,892] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047680+00:00 — failure_log.txt: [2025-08-17 05:35:38,980] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047692+00:00 — failure_log.txt: [2025-08-17 05:40:57,382] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047706+00:00 — failure_log.txt: [2025-08-17 05:46:13,909] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047715+00:00 — failure_log.txt: [2025-08-17 05:51:29,963] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047722+00:00 — failure_log.txt: [2025-08-17 05:56:47,820] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047729+00:00 — failure_log.txt: [2025-08-17 06:02:12,482] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047736+00:00 — failure_log.txt: [2025-08-17 06:07:32,057] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047748+00:00 — failure_log.txt: [2025-08-17 06:12:40,098] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047762+00:00 — failure_log.txt: [2025-08-17 06:17:47,117] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047770+00:00 — failure_log.txt: [2025-08-17 06:23:02,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047780+00:00 — failure_log.txt: [2025-08-17 06:28:16,440] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047793+00:00 — failure_log.txt: [2025-08-17 06:33:27,139] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047805+00:00 — failure_log.txt: [2025-08-17 06:38:46,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047812+00:00 — failure_log.txt: [2025-08-17 06:43:55,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047819+00:00 — failure_log.txt: [2025-08-17 06:49:15,603] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047826+00:00 — failure_log.txt: [2025-08-17 06:54:36,182] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047835+00:00 — failure_log.txt: [2025-08-17 06:59:52,232] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047847+00:00 — failure_log.txt: [2025-08-17 07:05:06,226] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047859+00:00 — failure_log.txt: [2025-08-17 07:10:22,492] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047867+00:00 — failure_log.txt: [2025-08-17 07:15:31,236] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047881+00:00 — failure_log.txt: [2025-08-17 07:20:43,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047895+00:00 — failure_log.txt: [2025-08-17 07:25:51,318] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047904+00:00 — failure_log.txt: [2025-08-17 07:31:16,435] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047913+00:00 — failure_log.txt: [2025-08-17 07:36:32,649] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047921+00:00 — failure_log.txt: [2025-08-17 07:41:45,991] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047929+00:00 — failure_log.txt: [2025-08-17 07:46:59,396] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047941+00:00 — failure_log.txt: [2025-08-17 07:52:18,328] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047954+00:00 — failure_log.txt: [2025-08-17 07:57:35,313] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047961+00:00 — failure_log.txt: [2025-08-17 08:02:46,079] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047972+00:00 — failure_log.txt: [2025-08-17 08:08:06,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047985+00:00 — failure_log.txt: [2025-08-17 08:13:21,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.047996+00:00 — failure_log.txt: [2025-08-17 08:18:36,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048003+00:00 — failure_log.txt: [2025-08-17 08:23:56,635] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048010+00:00 — failure_log.txt: [2025-08-17 08:29:07,441] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048017+00:00 — failure_log.txt: [2025-08-17 08:34:28,816] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048028+00:00 — failure_log.txt: [2025-08-17 08:39:49,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048041+00:00 — failure_log.txt: [2025-08-17 08:44:55,786] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048051+00:00 — failure_log.txt: [2025-08-17 08:50:16,737] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048058+00:00 — failure_log.txt: [2025-08-17 08:55:36,701] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048071+00:00 — failure_log.txt: [2025-08-17 09:00:54,233] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048084+00:00 — failure_log.txt: [2025-08-17 09:06:10,977] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048093+00:00 — failure_log.txt: [2025-08-17 09:11:28,300] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048100+00:00 — failure_log.txt: [2025-08-17 09:16:40,841] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048107+00:00 — failure_log.txt: [2025-08-17 09:21:47,969] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048114+00:00 — failure_log.txt: [2025-08-17 09:26:57,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048126+00:00 — failure_log.txt: [2025-08-17 09:32:14,844] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048140+00:00 — failure_log.txt: [2025-08-17 09:37:36,749] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048148+00:00 — failure_log.txt: [2025-08-17 09:42:55,053] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048158+00:00 — failure_log.txt: [2025-08-17 09:48:06,396] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048175+00:00 — failure_log.txt: [2025-08-17 09:53:19,565] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048186+00:00 — failure_log.txt: [2025-08-17 09:58:40,352] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048193+00:00 — failure_log.txt: [2025-08-17 10:03:56,052] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048205+00:00 — failure_log.txt: [2025-08-17 10:09:10,536] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048214+00:00 — failure_log.txt: [2025-08-17 10:14:33,879] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048226+00:00 — failure_log.txt: [2025-08-17 10:19:43,136] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048239+00:00 — failure_log.txt: [2025-08-17 10:25:07,252] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048248+00:00 — failure_log.txt: [2025-08-17 10:30:25,970] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048257+00:00 — failure_log.txt: [2025-08-17 10:35:42,239] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048269+00:00 — failure_log.txt: [2025-08-17 10:40:52,079] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048282+00:00 — failure_log.txt: [2025-08-17 10:46:10,488] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048291+00:00 — failure_log.txt: [2025-08-17 10:51:31,610] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048298+00:00 — failure_log.txt: [2025-08-17 10:56:52,753] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048305+00:00 — failure_log.txt: [2025-08-17 11:02:16,015] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048315+00:00 — failure_log.txt: [2025-08-17 11:07:30,563] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048327+00:00 — failure_log.txt: [2025-08-17 11:12:48,590] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048340+00:00 — failure_log.txt: [2025-08-17 11:18:13,909] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048348+00:00 — failure_log.txt: [2025-08-17 11:23:31,141] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048358+00:00 — failure_log.txt: [2025-08-17 11:28:47,382] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048371+00:00 — failure_log.txt: [2025-08-17 11:33:59,243] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048383+00:00 — failure_log.txt: [2025-08-17 11:39:19,024] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048390+00:00 — failure_log.txt: [2025-08-17 11:44:44,130] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048397+00:00 — failure_log.txt: [2025-08-17 11:49:58,502] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048404+00:00 — failure_log.txt: [2025-08-17 11:55:15,667] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048414+00:00 — failure_log.txt: [2025-08-17 12:00:26,200] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048429+00:00 — failure_log.txt: [2025-08-17 12:05:40,710] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048440+00:00 — failure_log.txt: [2025-08-17 12:10:52,177] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048449+00:00 — failure_log.txt: [2025-08-17 12:16:06,967] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048461+00:00 — failure_log.txt: [2025-08-17 12:21:24,881] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048475+00:00 — failure_log.txt: [2025-08-17 12:26:41,769] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048483+00:00 — failure_log.txt: [2025-08-17 12:32:00,291] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048490+00:00 — failure_log.txt: [2025-08-17 12:37:16,270] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048497+00:00 — failure_log.txt: [2025-08-17 12:42:31,335] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048504+00:00 — failure_log.txt: [2025-08-17 12:47:42,523] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048516+00:00 — failure_log.txt: [2025-08-17 12:52:57,055] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048529+00:00 — failure_log.txt: [2025-08-17 12:58:13,487] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048552+00:00 — failure_log.txt: [2025-08-17 13:03:31,443] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048565+00:00 — failure_log.txt: [2025-08-17 13:08:47,372] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048578+00:00 — failure_log.txt: [2025-08-17 13:14:16,265] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048589+00:00 — failure_log.txt: [2025-08-17 13:19:30,798] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048596+00:00 — failure_log.txt: [2025-08-17 13:24:39,881] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048603+00:00 — failure_log.txt: [2025-08-17 13:29:50,061] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048610+00:00 — failure_log.txt: [2025-08-17 13:35:08,432] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048618+00:00 — failure_log.txt: [2025-08-17 13:40:22,839] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048630+00:00 — failure_log.txt: [2025-08-17 13:45:34,991] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048643+00:00 — failure_log.txt: [2025-08-17 13:50:51,017] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048651+00:00 — failure_log.txt: [2025-08-17 13:56:21,928] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048661+00:00 — failure_log.txt: [2025-08-17 14:01:41,131] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048674+00:00 — failure_log.txt: [2025-08-17 14:06:55,178] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048686+00:00 — failure_log.txt: [2025-08-17 14:12:17,913] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048694+00:00 — failure_log.txt: [2025-08-17 14:17:36,413] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048704+00:00 — failure_log.txt: [2025-08-17 14:22:51,866] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048711+00:00 — failure_log.txt: [2025-08-17 14:28:09,468] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048723+00:00 — failure_log.txt: [2025-08-17 14:33:26,019] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048737+00:00 — failure_log.txt: [2025-08-17 14:38:41,242] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048745+00:00 — failure_log.txt: [2025-08-17 14:43:56,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048758+00:00 — failure_log.txt: [2025-08-17 14:49:09,446] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048771+00:00 — failure_log.txt: [2025-08-17 14:54:22,545] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048783+00:00 — failure_log.txt: [2025-08-17 14:59:32,909] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048790+00:00 — failure_log.txt: [2025-08-17 15:04:43,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048797+00:00 — failure_log.txt: [2025-08-17 15:10:02,669] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048804+00:00 — failure_log.txt: [2025-08-17 15:15:26,357] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048814+00:00 — failure_log.txt: [2025-08-17 15:20:45,141] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048827+00:00 — failure_log.txt: [2025-08-17 15:26:05,894] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048837+00:00 — failure_log.txt: [2025-08-17 15:31:32,366] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048845+00:00 — failure_log.txt: [2025-08-17 15:36:44,553] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048857+00:00 — failure_log.txt: [2025-08-17 15:42:11,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048871+00:00 — failure_log.txt: [2025-08-17 15:47:33,556] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048880+00:00 — failure_log.txt: [2025-08-17 15:52:53,279] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048887+00:00 — failure_log.txt: [2025-08-17 15:58:19,582] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048894+00:00 — failure_log.txt: [2025-08-17 16:03:34,629] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048901+00:00 — failure_log.txt: [2025-08-17 16:08:55,685] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048913+00:00 — failure_log.txt: [2025-08-17 16:14:16,297] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048926+00:00 — failure_log.txt: [2025-08-17 16:19:29,926] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048934+00:00 — failure_log.txt: [2025-08-17 16:24:53,145] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048944+00:00 — failure_log.txt: [2025-08-17 16:30:24,308] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048961+00:00 — failure_log.txt: [2025-08-17 16:35:43,125] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048972+00:00 — failure_log.txt: [2025-08-17 16:41:01,417] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048979+00:00 — failure_log.txt: [2025-08-17 16:46:25,009] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048986+00:00 — failure_log.txt: [2025-08-17 16:51:40,171] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.048993+00:00 — failure_log.txt: [2025-08-17 16:57:01,402] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049005+00:00 — failure_log.txt: [2025-08-17 17:02:23,568] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049018+00:00 — failure_log.txt: [2025-08-17 17:07:43,043] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049027+00:00 — failure_log.txt: [2025-08-17 17:12:57,125] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049037+00:00 — failure_log.txt: [2025-08-17 17:18:14,073] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049050+00:00 — failure_log.txt: [2025-08-17 17:23:28,521] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049063+00:00 — failure_log.txt: [2025-08-17 17:28:45,155] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049070+00:00 — failure_log.txt: [2025-08-17 17:34:15,692] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049077+00:00 — failure_log.txt: [2025-08-17 17:39:32,120] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049084+00:00 — failure_log.txt: [2025-08-17 17:44:47,536] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049093+00:00 — failure_log.txt: [2025-08-17 17:50:18,815] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049106+00:00 — failure_log.txt: [2025-08-17 17:55:32,655] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049117+00:00 — failure_log.txt: [2025-08-17 18:00:56,634] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049125+00:00 — failure_log.txt: [2025-08-17 18:06:12,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049136+00:00 — failure_log.txt: [2025-08-17 18:11:32,295] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049149+00:00 — failure_log.txt: [2025-08-17 18:16:43,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049160+00:00 — failure_log.txt: [2025-08-17 18:22:05,544] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049167+00:00 — failure_log.txt: [2025-08-17 18:27:25,249] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049177+00:00 — failure_log.txt: [2025-08-17 18:32:36,635] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049185+00:00 — failure_log.txt: [2025-08-17 18:37:46,608] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049197+00:00 — failure_log.txt: [2025-08-17 18:43:06,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049210+00:00 — failure_log.txt: [2025-08-17 18:48:28,803] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049221+00:00 — failure_log.txt: [2025-08-17 18:53:45,557] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049233+00:00 — failure_log.txt: [2025-08-17 18:59:03,382] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049247+00:00 — failure_log.txt: [2025-08-17 19:04:26,623] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049256+00:00 — failure_log.txt: [2025-08-17 19:09:43,143] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049263+00:00 — failure_log.txt: [2025-08-17 19:14:53,841] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049270+00:00 — failure_log.txt: [2025-08-17 19:20:18,039] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049277+00:00 — failure_log.txt: [2025-08-17 19:25:40,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049289+00:00 — failure_log.txt: [2025-08-17 19:30:58,078] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049303+00:00 — failure_log.txt: [2025-08-17 19:36:23,770] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049311+00:00 — failure_log.txt: [2025-08-17 19:41:38,104] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049320+00:00 — failure_log.txt: [2025-08-17 19:46:54,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049334+00:00 — failure_log.txt: [2025-08-17 19:52:08,997] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049345+00:00 — failure_log.txt: [2025-08-17 19:57:36,217] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049353+00:00 — failure_log.txt: [2025-08-17 20:02:58,119] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049360+00:00 — failure_log.txt: [2025-08-17 20:08:13,804] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049367+00:00 — failure_log.txt: [2025-08-17 20:13:33,003] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049376+00:00 — failure_log.txt: [2025-08-17 20:18:44,570] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049389+00:00 — failure_log.txt: [2025-08-17 20:24:10,886] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049400+00:00 — failure_log.txt: [2025-08-17 20:29:40,128] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049407+00:00 — failure_log.txt: [2025-08-17 20:34:54,964] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049419+00:00 — failure_log.txt: [2025-08-17 20:40:20,728] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049433+00:00 — failure_log.txt: [2025-08-17 20:45:40,355] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049443+00:00 — failure_log.txt: [2025-08-17 20:51:00,262] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049450+00:00 — failure_log.txt: [2025-08-17 20:56:24,273] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049456+00:00 — failure_log.txt: [2025-08-17 21:01:46,038] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049468+00:00 — failure_log.txt: [2025-08-17 21:06:57,513] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049480+00:00 — failure_log.txt: [2025-08-17 21:12:17,627] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049492+00:00 — failure_log.txt: [2025-08-17 21:17:32,948] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049500+00:00 — failure_log.txt: [2025-08-17 21:22:48,087] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049511+00:00 — failure_log.txt: [2025-08-17 21:28:00,810] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049524+00:00 — failure_log.txt: [2025-08-17 21:33:23,875] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049549+00:00 — failure_log.txt: [2025-08-17 21:38:38,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049558+00:00 — failure_log.txt: [2025-08-17 21:43:46,691] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049565+00:00 — failure_log.txt: [2025-08-17 21:48:57,979] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049575+00:00 — failure_log.txt: [2025-08-17 21:54:16,533] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049587+00:00 — failure_log.txt: [2025-08-17 21:59:39,451] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049599+00:00 — failure_log.txt: [2025-08-17 22:04:54,852] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049607+00:00 — failure_log.txt: [2025-08-17 22:10:08,974] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049617+00:00 — failure_log.txt: [2025-08-17 22:15:25,159] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049634+00:00 — failure_log.txt: [2025-08-17 22:20:45,222] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049645+00:00 — failure_log.txt: [2025-08-17 22:26:06,257] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049652+00:00 — failure_log.txt: [2025-08-17 22:31:30,960] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049659+00:00 — failure_log.txt: [2025-08-17 22:36:55,650] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049665+00:00 — failure_log.txt: [2025-08-17 22:42:16,334] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049676+00:00 — failure_log.txt: [2025-08-17 22:47:37,648] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049690+00:00 — failure_log.txt: [2025-08-17 22:52:51,688] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049699+00:00 — failure_log.txt: [2025-08-17 22:58:05,941] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049707+00:00 — failure_log.txt: [2025-08-17 23:03:23,791] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049720+00:00 — failure_log.txt: [2025-08-17 23:08:36,128] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049734+00:00 — failure_log.txt: [2025-08-17 23:13:46,143] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049742+00:00 — failure_log.txt: [2025-08-17 23:18:58,844] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049753+00:00 — failure_log.txt: [2025-08-17 23:24:15,899] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049761+00:00 — failure_log.txt: [2025-08-17 23:29:32,149] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049771+00:00 — failure_log.txt: [2025-08-17 23:34:43,047] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049783+00:00 — failure_log.txt: [2025-08-17 23:39:55,169] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049794+00:00 — failure_log.txt: [2025-08-17 23:45:16,717] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049802+00:00 — failure_log.txt: [2025-08-17 23:50:38,077] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049814+00:00 — failure_log.txt: [2025-08-17 23:56:00,447] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049830+00:00 — failure_log.txt: [2025-08-18 00:01:19,835] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.049838+00:00 — failure_log.txt: [2025-08-18 00:06:36,268] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049845+00:00 — failure_log.txt: [2025-08-18 00:11:55,221] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049852+00:00 — failure_log.txt: [2025-08-18 00:17:08,587] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049859+00:00 — failure_log.txt: [2025-08-18 00:22:21,614] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049870+00:00 — failure_log.txt: [2025-08-18 00:27:33,193] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049883+00:00 — failure_log.txt: [2025-08-18 00:32:48,137] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049892+00:00 — failure_log.txt: [2025-08-18 00:37:57,023] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049902+00:00 — failure_log.txt: [2025-08-18 00:43:21,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049915+00:00 — failure_log.txt: [2025-08-18 00:48:35,609] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049928+00:00 — failure_log.txt: [2025-08-18 00:53:55,162] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049935+00:00 — failure_log.txt: [2025-08-18 00:59:03,369] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049942+00:00 — failure_log.txt: [2025-08-18 01:04:23,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049949+00:00 — failure_log.txt: [2025-08-18 01:09:38,393] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049958+00:00 — failure_log.txt: [2025-08-18 01:14:58,610] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049971+00:00 — failure_log.txt: [2025-08-18 01:20:27,936] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049982+00:00 — failure_log.txt: [2025-08-18 01:25:44,395] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.049990+00:00 — failure_log.txt: [2025-08-18 01:31:06,636] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050005+00:00 — failure_log.txt: [2025-08-18 01:36:25,958] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050020+00:00 — failure_log.txt: [2025-08-18 01:41:42,610] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050028+00:00 — failure_log.txt: [2025-08-18 01:47:00,024] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050034+00:00 — failure_log.txt: [2025-08-18 01:52:16,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050041+00:00 — failure_log.txt: [2025-08-18 01:57:29,793] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050049+00:00 — failure_log.txt: [2025-08-18 02:02:43,414] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050064+00:00 — failure_log.txt: [2025-08-18 02:07:58,819] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050076+00:00 — failure_log.txt: [2025-08-18 02:13:28,486] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050084+00:00 — failure_log.txt: [2025-08-18 02:18:43,412] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050095+00:00 — failure_log.txt: [2025-08-18 02:24:00,730] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050108+00:00 — failure_log.txt: [2025-08-18 02:29:22,790] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050119+00:00 — failure_log.txt: [2025-08-18 02:34:44,333] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050126+00:00 — failure_log.txt: [2025-08-18 02:40:04,073] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050133+00:00 — failure_log.txt: [2025-08-18 02:45:26,270] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050140+00:00 — failure_log.txt: [2025-08-18 02:50:38,298] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050150+00:00 — failure_log.txt: [2025-08-18 02:55:45,199] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050163+00:00 — failure_log.txt: [2025-08-18 03:01:07,056] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050173+00:00 — failure_log.txt: [2025-08-18 03:06:27,109] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050181+00:00 — failure_log.txt: [2025-08-18 03:11:44,609] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050194+00:00 — failure_log.txt: [2025-08-18 03:16:56,231] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050208+00:00 — failure_log.txt: [2025-08-18 03:22:18,996] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050216+00:00 — failure_log.txt: [2025-08-18 03:27:28,883] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050223+00:00 — failure_log.txt: [2025-08-18 03:32:44,294] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050229+00:00 — failure_log.txt: [2025-08-18 03:38:01,841] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050237+00:00 — failure_log.txt: [2025-08-18 03:43:27,544] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050249+00:00 — failure_log.txt: [2025-08-18 03:48:36,426] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050265+00:00 — failure_log.txt: [2025-08-18 03:53:44,947] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050273+00:00 — failure_log.txt: [2025-08-18 03:59:01,892] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050285+00:00 — failure_log.txt: [2025-08-18 04:04:22,842] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050299+00:00 — failure_log.txt: [2025-08-18 04:09:42,757] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050308+00:00 — failure_log.txt: [2025-08-18 04:14:58,533] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050315+00:00 — failure_log.txt: [2025-08-18 04:20:13,165] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050322+00:00 — failure_log.txt: [2025-08-18 04:25:24,908] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050329+00:00 — failure_log.txt: [2025-08-18 04:30:42,211] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050339+00:00 — failure_log.txt: [2025-08-18 04:35:55,225] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050353+00:00 — failure_log.txt: [2025-08-18 04:41:11,894] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050362+00:00 — failure_log.txt: [2025-08-18 04:46:29,976] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050371+00:00 — failure_log.txt: [2025-08-18 04:51:41,743] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050384+00:00 — failure_log.txt: [2025-08-18 04:56:48,514] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050397+00:00 — failure_log.txt: [2025-08-18 05:02:05,736] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050405+00:00 — failure_log.txt: [2025-08-18 05:07:23,017] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050411+00:00 — failure_log.txt: [2025-08-18 05:12:31,795] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050418+00:00 — failure_log.txt: [2025-08-18 05:17:47,576] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050426+00:00 — failure_log.txt: [2025-08-18 05:23:10,033] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050439+00:00 — failure_log.txt: [2025-08-18 05:28:26,654] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050451+00:00 — failure_log.txt: [2025-08-18 05:33:41,216] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050459+00:00 — failure_log.txt: [2025-08-18 05:38:51,770] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050470+00:00 — failure_log.txt: [2025-08-18 05:44:05,482] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050487+00:00 — failure_log.txt: [2025-08-18 05:49:22,983] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050497+00:00 — failure_log.txt: [2025-08-18 05:54:40,779] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050504+00:00 — failure_log.txt: [2025-08-18 05:59:52,629] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050513+00:00 — failure_log.txt: [2025-08-18 06:05:02,317] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050520+00:00 — failure_log.txt: [2025-08-18 06:10:21,081] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050527+00:00 — failure_log.txt: [2025-08-18 06:15:30,565] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050550+00:00 — failure_log.txt: [2025-08-18 06:20:51,148] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050565+00:00 — failure_log.txt: [2025-08-18 06:26:15,296] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050575+00:00 — failure_log.txt: [2025-08-18 06:31:33,327] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050583+00:00 — failure_log.txt: [2025-08-18 06:36:42,347] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050595+00:00 — failure_log.txt: [2025-08-18 06:41:56,108] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050608+00:00 — failure_log.txt: [2025-08-18 06:47:07,722] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050618+00:00 — failure_log.txt: [2025-08-18 06:52:26,384] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050625+00:00 — failure_log.txt: [2025-08-18 06:57:36,057] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050631+00:00 — failure_log.txt: [2025-08-18 07:02:48,028] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050638+00:00 — failure_log.txt: [2025-08-18 07:08:12,292] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050649+00:00 — failure_log.txt: [2025-08-18 07:13:27,133] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050662+00:00 — failure_log.txt: [2025-08-18 07:18:42,075] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050672+00:00 — failure_log.txt: [2025-08-18 07:23:52,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050680+00:00 — failure_log.txt: [2025-08-18 07:28:58,978] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050693+00:00 — failure_log.txt: [2025-08-18 07:34:18,485] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050706+00:00 — failure_log.txt: [2025-08-18 07:39:40,301] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050714+00:00 — failure_log.txt: [2025-08-18 07:44:55,720] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050721+00:00 — failure_log.txt: [2025-08-18 07:50:16,757] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050728+00:00 — failure_log.txt: [2025-08-18 07:55:36,086] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050736+00:00 — failure_log.txt: [2025-08-18 08:00:53,277] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050748+00:00 — failure_log.txt: [2025-08-18 08:06:13,997] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050760+00:00 — failure_log.txt: [2025-08-18 08:11:29,973] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050768+00:00 — failure_log.txt: [2025-08-18 08:16:43,388] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050782+00:00 — failure_log.txt: [2025-08-18 08:21:54,981] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050796+00:00 — failure_log.txt: [2025-08-18 08:27:15,951] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050806+00:00 — failure_log.txt: [2025-08-18 08:32:28,058] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050813+00:00 — failure_log.txt: [2025-08-18 08:37:38,118] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050820+00:00 — failure_log.txt: [2025-08-18 08:42:45,705] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050827+00:00 — failure_log.txt: [2025-08-18 08:48:00,527] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050839+00:00 — failure_log.txt: [2025-08-18 08:53:22,273] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050853+00:00 — failure_log.txt: [2025-08-18 08:58:32,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050861+00:00 — failure_log.txt: [2025-08-18 09:03:54,285] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050870+00:00 — failure_log.txt: [2025-08-18 09:09:20,742] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050883+00:00 — failure_log.txt: [2025-08-18 09:14:38,773] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050895+00:00 — failure_log.txt: [2025-08-18 09:19:56,768] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050903+00:00 — failure_log.txt: [2025-08-18 09:25:18,333] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050912+00:00 — failure_log.txt: [2025-08-18 09:30:39,593] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050919+00:00 — failure_log.txt: [2025-08-18 09:35:57,580] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050930+00:00 — failure_log.txt: [2025-08-18 09:41:07,390] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050943+00:00 — failure_log.txt: [2025-08-18 09:46:35,413] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050953+00:00 — failure_log.txt: [2025-08-18 09:51:46,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050961+00:00 — failure_log.txt: [2025-08-18 09:56:54,754] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050974+00:00 — failure_log.txt: [2025-08-18 10:02:21,625] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050987+00:00 — failure_log.txt: [2025-08-18 10:07:44,273] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.050995+00:00 — failure_log.txt: [2025-08-18 10:12:58,614] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051002+00:00 — failure_log.txt: [2025-08-18 10:18:08,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051009+00:00 — failure_log.txt: [2025-08-18 10:23:23,348] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051017+00:00 — failure_log.txt: [2025-08-18 10:28:40,684] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051033+00:00 — failure_log.txt: [2025-08-18 10:33:56,181] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051044+00:00 — failure_log.txt: [2025-08-18 10:39:17,315] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051052+00:00 — failure_log.txt: [2025-08-18 10:44:34,769] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051064+00:00 — failure_log.txt: [2025-08-18 10:49:48,469] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051078+00:00 — failure_log.txt: [2025-08-18 10:55:11,446] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051087+00:00 — failure_log.txt: [2025-08-18 11:00:24,846] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051094+00:00 — failure_log.txt: [2025-08-18 11:05:37,808] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051101+00:00 — failure_log.txt: [2025-08-18 11:10:45,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051108+00:00 — failure_log.txt: [2025-08-18 11:15:54,378] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051120+00:00 — failure_log.txt: [2025-08-18 11:21:18,196] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051133+00:00 — failure_log.txt: [2025-08-18 11:26:34,755] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051141+00:00 — failure_log.txt: [2025-08-18 11:31:48,877] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051151+00:00 — failure_log.txt: [2025-08-18 11:36:56,005] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051164+00:00 — failure_log.txt: [2025-08-18 11:42:05,328] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051176+00:00 — failure_log.txt: [2025-08-18 11:47:20,848] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051184+00:00 — failure_log.txt: [2025-08-18 11:52:35,390] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051191+00:00 — failure_log.txt: [2025-08-18 11:57:48,695] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051197+00:00 — failure_log.txt: [2025-08-18 12:02:56,877] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051207+00:00 — failure_log.txt: [2025-08-18 12:08:19,386] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051220+00:00 — failure_log.txt: [2025-08-18 12:13:40,191] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051231+00:00 — failure_log.txt: [2025-08-18 12:18:54,315] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051238+00:00 — failure_log.txt: [2025-08-18 12:24:14,173] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051250+00:00 — failure_log.txt: [2025-08-18 12:29:24,747] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051262+00:00 — failure_log.txt: [2025-08-18 12:34:43,368] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051273+00:00 — failure_log.txt: [2025-08-18 12:39:51,799] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051280+00:00 — failure_log.txt: [2025-08-18 12:44:59,917] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051290+00:00 — failure_log.txt: [2025-08-18 12:50:12,761] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051298+00:00 — failure_log.txt: [2025-08-18 12:55:25,511] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051310+00:00 — failure_log.txt: [2025-08-18 13:00:42,775] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051323+00:00 — failure_log.txt: [2025-08-18 13:05:51,731] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051331+00:00 — failure_log.txt: [2025-08-18 13:11:10,974] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051345+00:00 — failure_log.txt: [2025-08-18 13:16:22,593] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051358+00:00 — failure_log.txt: [2025-08-18 13:21:30,359] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051369+00:00 — failure_log.txt: [2025-08-18 13:26:48,805] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051376+00:00 — failure_log.txt: [2025-08-18 13:31:57,703] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051383+00:00 — failure_log.txt: [2025-08-18 13:37:20,251] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051390+00:00 — failure_log.txt: [2025-08-18 13:42:29,980] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051401+00:00 — failure_log.txt: [2025-08-18 13:47:48,682] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051414+00:00 — failure_log.txt: [2025-08-18 13:52:55,844] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051423+00:00 — failure_log.txt: [2025-08-18 13:58:10,376] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051431+00:00 — failure_log.txt: [2025-08-18 14:03:25,941] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051444+00:00 — failure_log.txt: [2025-08-18 14:08:38,513] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051458+00:00 — failure_log.txt: [2025-08-18 14:14:00,105] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051466+00:00 — failure_log.txt: [2025-08-18 14:19:20,604] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051473+00:00 — failure_log.txt: [2025-08-18 14:24:32,849] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051479+00:00 — failure_log.txt: [2025-08-18 14:29:44,509] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051487+00:00 — failure_log.txt: [2025-08-18 14:34:53,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051499+00:00 — failure_log.txt: [2025-08-18 14:40:08,925] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051512+00:00 — failure_log.txt: [2025-08-18 14:45:31,453] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051520+00:00 — failure_log.txt: [2025-08-18 14:50:40,943] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051530+00:00 — failure_log.txt: [2025-08-18 14:55:55,150] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051600+00:00 — failure_log.txt: [2025-08-18 15:01:15,869] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051622+00:00 — failure_log.txt: [2025-08-18 15:06:33,024] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051632+00:00 — failure_log.txt: [2025-08-18 15:11:49,136] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051640+00:00 — failure_log.txt: [2025-08-18 15:16:58,847] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051647+00:00 — failure_log.txt: [2025-08-18 15:22:16,324] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051654+00:00 — failure_log.txt: [2025-08-18 15:27:35,505] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051661+00:00 — failure_log.txt: [2025-08-18 15:32:56,761] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051668+00:00 — failure_log.txt: [2025-08-18 15:38:20,248] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051676+00:00 — failure_log.txt: [2025-08-18 15:43:41,607] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051683+00:00 — failure_log.txt: [2025-08-18 15:48:55,022] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051690+00:00 — failure_log.txt: [2025-08-18 15:54:03,300] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051697+00:00 — failure_log.txt: [2025-08-18 15:59:24,202] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051704+00:00 — failure_log.txt: [2025-08-18 16:04:37,090] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051711+00:00 — failure_log.txt: [2025-08-18 16:09:44,687] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051718+00:00 — failure_log.txt: [2025-08-18 16:14:54,958] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051725+00:00 — failure_log.txt: [2025-08-18 16:20:13,184] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051732+00:00 — failure_log.txt: [2025-08-18 16:25:34,164] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051739+00:00 — failure_log.txt: [2025-08-18 16:30:55,511] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051746+00:00 — failure_log.txt: [2025-08-18 16:36:15,518] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051753+00:00 — failure_log.txt: [2025-08-18 16:41:37,501] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051760+00:00 — failure_log.txt: [2025-08-18 16:46:55,261] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051767+00:00 — failure_log.txt: [2025-08-18 16:52:19,046] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051774+00:00 — failure_log.txt: [2025-08-18 16:57:33,824] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051784+00:00 — failure_log.txt: [2025-08-18 17:02:52,999] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051792+00:00 — failure_log.txt: [2025-08-18 17:08:07,640] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051799+00:00 — failure_log.txt: [2025-08-18 17:13:27,276] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051809+00:00 — failure_log.txt: [2025-08-18 17:18:45,033] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051816+00:00 — failure_log.txt: [2025-08-18 17:23:58,641] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051823+00:00 — failure_log.txt: [2025-08-18 17:29:18,573] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051830+00:00 — failure_log.txt: [2025-08-18 17:34:38,786] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051837+00:00 — failure_log.txt: [2025-08-18 17:39:51,850] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051844+00:00 — failure_log.txt: [2025-08-18 17:45:00,067] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051851+00:00 — failure_log.txt: [2025-08-18 17:50:18,524] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051858+00:00 — failure_log.txt: [2025-08-18 17:55:42,811] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051865+00:00 — failure_log.txt: [2025-08-18 18:00:52,085] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051872+00:00 — failure_log.txt: [2025-08-18 18:06:01,027] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051879+00:00 — failure_log.txt: [2025-08-18 18:11:22,100] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051886+00:00 — failure_log.txt: [2025-08-18 18:16:37,985] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051893+00:00 — failure_log.txt: [2025-08-18 18:21:57,634] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051900+00:00 — failure_log.txt: [2025-08-18 18:27:16,101] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051907+00:00 — failure_log.txt: [2025-08-18 18:32:30,321] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051914+00:00 — failure_log.txt: [2025-08-18 18:37:47,808] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051921+00:00 — failure_log.txt: [2025-08-18 18:43:00,848] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051928+00:00 — failure_log.txt: [2025-08-18 18:48:19,394] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051935+00:00 — failure_log.txt: [2025-08-18 18:53:44,385] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051941+00:00 — failure_log.txt: [2025-08-18 18:59:11,074] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051948+00:00 — failure_log.txt: [2025-08-18 19:04:32,188] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051955+00:00 — failure_log.txt: [2025-08-18 19:09:54,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051962+00:00 — failure_log.txt: [2025-08-18 19:15:08,790] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051969+00:00 — failure_log.txt: [2025-08-18 19:20:24,124] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051976+00:00 — failure_log.txt: [2025-08-18 19:25:39,145] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051986+00:00 — failure_log.txt: [2025-08-18 19:30:47,561] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.051993+00:00 — failure_log.txt: [2025-08-18 19:35:58,040] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052000+00:00 — failure_log.txt: [2025-08-18 19:41:23,428] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052007+00:00 — failure_log.txt: [2025-08-18 19:46:41,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052014+00:00 — failure_log.txt: [2025-08-18 19:51:55,768] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052021+00:00 — failure_log.txt: [2025-08-18 19:57:11,698] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052028+00:00 — failure_log.txt: [2025-08-18 20:02:26,856] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052035+00:00 — failure_log.txt: [2025-08-18 20:07:46,193] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052042+00:00 — failure_log.txt: [2025-08-18 20:12:53,831] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052049+00:00 — failure_log.txt: [2025-08-18 20:17:59,722] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052055+00:00 — failure_log.txt: [2025-08-18 20:23:13,822] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052062+00:00 — failure_log.txt: [2025-08-18 20:28:38,089] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052069+00:00 — failure_log.txt: [2025-08-18 20:33:45,279] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052076+00:00 — failure_log.txt: [2025-08-18 20:39:08,798] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052086+00:00 — failure_log.txt: [2025-08-18 20:44:25,148] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052093+00:00 — failure_log.txt: [2025-08-18 20:49:32,401] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052100+00:00 — failure_log.txt: [2025-08-18 20:54:49,161] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052107+00:00 — failure_log.txt: [2025-08-18 21:00:01,204] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052114+00:00 — failure_log.txt: [2025-08-18 21:05:21,936] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052121+00:00 — failure_log.txt: [2025-08-18 21:10:34,072] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052128+00:00 — failure_log.txt: [2025-08-18 21:15:50,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052135+00:00 — failure_log.txt: [2025-08-18 21:20:59,871] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052141+00:00 — failure_log.txt: [2025-08-18 21:26:19,828] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052148+00:00 — failure_log.txt: [2025-08-18 21:31:36,481] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052155+00:00 — failure_log.txt: [2025-08-18 21:36:52,767] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052162+00:00 — failure_log.txt: [2025-08-18 21:42:12,208] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052172+00:00 — failure_log.txt: [2025-08-18 21:47:27,011] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052179+00:00 — failure_log.txt: [2025-08-18 21:52:35,860] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052186+00:00 — failure_log.txt: [2025-08-18 21:57:54,227] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052193+00:00 — failure_log.txt: [2025-08-18 22:03:18,206] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052206+00:00 — failure_log.txt: [2025-08-18 22:08:28,609] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052214+00:00 — failure_log.txt: [2025-08-18 22:13:41,861] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052221+00:00 — failure_log.txt: [2025-08-18 22:18:56,687] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052228+00:00 — failure_log.txt: [2025-08-18 22:24:20,244] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052235+00:00 — failure_log.txt: [2025-08-18 22:29:35,770] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052242+00:00 — failure_log.txt: [2025-08-18 22:34:43,842] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052249+00:00 — failure_log.txt: [2025-08-18 22:39:54,549] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052256+00:00 — failure_log.txt: [2025-08-18 22:45:13,876] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052263+00:00 — failure_log.txt: [2025-08-18 22:50:27,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052270+00:00 — failure_log.txt: [2025-08-18 22:55:41,089] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052277+00:00 — failure_log.txt: [2025-08-18 23:00:56,821] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052284+00:00 — failure_log.txt: [2025-08-18 23:06:14,572] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052291+00:00 — failure_log.txt: [2025-08-18 23:11:28,454] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052298+00:00 — failure_log.txt: [2025-08-18 23:16:41,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052304+00:00 — failure_log.txt: [2025-08-18 23:22:05,537] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052311+00:00 — failure_log.txt: [2025-08-18 23:27:22,340] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052318+00:00 — failure_log.txt: [2025-08-18 23:32:38,988] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052325+00:00 — failure_log.txt: [2025-08-18 23:37:58,142] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052332+00:00 — failure_log.txt: [2025-08-18 23:43:20,364] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052339+00:00 — failure_log.txt: [2025-08-18 23:48:26,862] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052346+00:00 — failure_log.txt: [2025-08-18 23:53:35,983] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052358+00:00 — failure_log.txt: [2025-08-18 23:58:45,805] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052367+00:00 — failure_log.txt: [2025-08-19 00:04:05,374] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.052374+00:00 — failure_log.txt: [2025-08-19 00:09:23,565] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052381+00:00 — failure_log.txt: [2025-08-19 00:14:39,139] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052388+00:00 — failure_log.txt: [2025-08-19 00:19:50,885] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052397+00:00 — failure_log.txt: [2025-08-19 00:25:00,873] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052404+00:00 — failure_log.txt: [2025-08-19 00:30:22,690] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052411+00:00 — failure_log.txt: [2025-08-19 00:35:44,157] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052418+00:00 — failure_log.txt: [2025-08-19 00:40:56,102] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052425+00:00 — failure_log.txt: [2025-08-19 00:46:22,212] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052432+00:00 — failure_log.txt: [2025-08-19 00:51:34,405] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052439+00:00 — failure_log.txt: [2025-08-19 00:56:52,533] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052446+00:00 — failure_log.txt: [2025-08-19 01:02:07,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052453+00:00 — failure_log.txt: [2025-08-19 01:07:21,873] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052459+00:00 — failure_log.txt: [2025-08-19 01:12:35,139] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052466+00:00 — failure_log.txt: [2025-08-19 01:17:54,532] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052473+00:00 — failure_log.txt: [2025-08-19 01:23:14,557] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052480+00:00 — failure_log.txt: [2025-08-19 01:28:26,694] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052487+00:00 — failure_log.txt: [2025-08-19 01:33:45,935] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052494+00:00 — failure_log.txt: [2025-08-19 01:38:56,734] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052501+00:00 — failure_log.txt: [2025-08-19 01:44:06,909] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052508+00:00 — failure_log.txt: [2025-08-19 01:49:24,912] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052515+00:00 — failure_log.txt: [2025-08-19 01:54:33,191] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052522+00:00 — failure_log.txt: [2025-08-19 01:59:45,874] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052528+00:00 — failure_log.txt: [2025-08-19 02:04:52,848] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052550+00:00 — failure_log.txt: [2025-08-19 02:10:06,272] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052563+00:00 — failure_log.txt: [2025-08-19 02:15:28,252] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052575+00:00 — failure_log.txt: [2025-08-19 02:20:40,228] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052586+00:00 — failure_log.txt: [2025-08-19 02:25:58,617] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052598+00:00 — failure_log.txt: [2025-08-19 02:31:20,809] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052609+00:00 — failure_log.txt: [2025-08-19 02:36:37,811] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052621+00:00 — failure_log.txt: [2025-08-19 02:41:51,385] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052633+00:00 — failure_log.txt: [2025-08-19 02:47:14,888] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052645+00:00 — failure_log.txt: [2025-08-19 02:52:28,167] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052656+00:00 — failure_log.txt: [2025-08-19 02:57:45,125] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052663+00:00 — failure_log.txt: [2025-08-19 03:03:06,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052670+00:00 — failure_log.txt: [2025-08-19 03:08:27,306] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052677+00:00 — failure_log.txt: [2025-08-19 03:13:37,123] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052684+00:00 — failure_log.txt: [2025-08-19 03:18:49,129] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052690+00:00 — failure_log.txt: [2025-08-19 03:23:58,580] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052697+00:00 — failure_log.txt: [2025-08-19 03:29:24,665] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052704+00:00 — failure_log.txt: [2025-08-19 03:34:41,091] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052711+00:00 — failure_log.txt: [2025-08-19 03:39:54,050] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052720+00:00 — failure_log.txt: [2025-08-19 03:45:18,963] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052733+00:00 — failure_log.txt: [2025-08-19 03:50:28,963] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052745+00:00 — failure_log.txt: [2025-08-19 03:55:43,973] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052758+00:00 — failure_log.txt: [2025-08-19 04:00:53,955] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052770+00:00 — failure_log.txt: [2025-08-19 04:06:12,405] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052786+00:00 — failure_log.txt: [2025-08-19 04:11:29,541] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052794+00:00 — failure_log.txt: [2025-08-19 04:16:44,005] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052801+00:00 — failure_log.txt: [2025-08-19 04:21:54,125] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052811+00:00 — failure_log.txt: [2025-08-19 04:27:05,969] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052818+00:00 — failure_log.txt: [2025-08-19 04:32:20,980] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052825+00:00 — failure_log.txt: [2025-08-19 04:37:30,280] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052834+00:00 — failure_log.txt: [2025-08-19 04:42:45,658] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052846+00:00 — failure_log.txt: [2025-08-19 04:48:14,235] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052859+00:00 — failure_log.txt: [2025-08-19 04:53:30,737] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052872+00:00 — failure_log.txt: [2025-08-19 04:58:41,270] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052885+00:00 — failure_log.txt: [2025-08-19 05:03:52,203] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052896+00:00 — failure_log.txt: [2025-08-19 05:09:10,806] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052903+00:00 — failure_log.txt: [2025-08-19 05:14:25,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052910+00:00 — failure_log.txt: [2025-08-19 05:19:43,128] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052917+00:00 — failure_log.txt: [2025-08-19 05:24:58,989] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052924+00:00 — failure_log.txt: [2025-08-19 05:30:23,452] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052930+00:00 — failure_log.txt: [2025-08-19 05:35:31,284] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052937+00:00 — failure_log.txt: [2025-08-19 05:40:48,195] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052948+00:00 — failure_log.txt: [2025-08-19 05:46:00,741] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052961+00:00 — failure_log.txt: [2025-08-19 05:51:24,241] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052973+00:00 — failure_log.txt: [2025-08-19 05:56:36,803] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052986+00:00 — failure_log.txt: [2025-08-19 06:01:46,757] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.052999+00:00 — failure_log.txt: [2025-08-19 06:06:56,588] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053008+00:00 — failure_log.txt: [2025-08-19 06:12:13,111] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053015+00:00 — failure_log.txt: [2025-08-19 06:17:36,184] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053022+00:00 — failure_log.txt: [2025-08-19 06:22:51,598] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053029+00:00 — failure_log.txt: [2025-08-19 06:28:05,325] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053036+00:00 — failure_log.txt: [2025-08-19 06:33:23,610] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053043+00:00 — failure_log.txt: [2025-08-19 06:38:34,391] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053059+00:00 — failure_log.txt: [2025-08-19 06:43:50,722] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053072+00:00 — failure_log.txt: [2025-08-19 06:49:07,049] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053085+00:00 — failure_log.txt: [2025-08-19 06:54:23,783] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053098+00:00 — failure_log.txt: [2025-08-19 06:59:40,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053111+00:00 — failure_log.txt: [2025-08-19 07:04:56,861] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053119+00:00 — failure_log.txt: [2025-08-19 07:10:13,101] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053126+00:00 — failure_log.txt: [2025-08-19 07:15:31,098] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053132+00:00 — failure_log.txt: [2025-08-19 07:20:42,155] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053139+00:00 — failure_log.txt: [2025-08-19 07:25:52,433] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053146+00:00 — failure_log.txt: [2025-08-19 07:31:10,974] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053153+00:00 — failure_log.txt: [2025-08-19 07:36:23,852] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053164+00:00 — failure_log.txt: [2025-08-19 07:41:42,346] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053177+00:00 — failure_log.txt: [2025-08-19 07:46:55,684] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053189+00:00 — failure_log.txt: [2025-08-19 07:52:20,455] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053207+00:00 — failure_log.txt: [2025-08-19 07:57:36,092] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053218+00:00 — failure_log.txt: [2025-08-19 08:02:56,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053226+00:00 — failure_log.txt: [2025-08-19 08:08:11,873] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053232+00:00 — failure_log.txt: [2025-08-19 08:13:24,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053239+00:00 — failure_log.txt: [2025-08-19 08:18:43,172] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053246+00:00 — failure_log.txt: [2025-08-19 08:23:55,078] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053253+00:00 — failure_log.txt: [2025-08-19 08:29:15,037] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053260+00:00 — failure_log.txt: [2025-08-19 08:34:26,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053272+00:00 — failure_log.txt: [2025-08-19 08:39:48,105] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053284+00:00 — failure_log.txt: [2025-08-19 08:45:02,465] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053298+00:00 — failure_log.txt: [2025-08-19 08:50:18,867] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053315+00:00 — failure_log.txt: [2025-08-19 08:55:29,750] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053324+00:00 — failure_log.txt: [2025-08-19 09:00:43,525] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053331+00:00 — failure_log.txt: [2025-08-19 09:05:53,559] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053338+00:00 — failure_log.txt: [2025-08-19 09:11:13,359] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053345+00:00 — failure_log.txt: [2025-08-19 09:16:32,349] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053352+00:00 — failure_log.txt: [2025-08-19 09:21:41,712] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053358+00:00 — failure_log.txt: [2025-08-19 09:26:49,797] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053369+00:00 — failure_log.txt: [2025-08-19 09:31:58,496] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053382+00:00 — failure_log.txt: [2025-08-19 09:37:18,885] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053395+00:00 — failure_log.txt: [2025-08-19 09:42:42,469] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053408+00:00 — failure_log.txt: [2025-08-19 09:47:57,219] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053419+00:00 — failure_log.txt: [2025-08-19 09:53:17,277] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053426+00:00 — failure_log.txt: [2025-08-19 09:58:38,360] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053433+00:00 — failure_log.txt: [2025-08-19 10:03:45,862] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053440+00:00 — failure_log.txt: [2025-08-19 10:08:54,220] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053447+00:00 — failure_log.txt: [2025-08-19 10:14:16,196] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053453+00:00 — failure_log.txt: [2025-08-19 10:19:40,564] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053461+00:00 — failure_log.txt: [2025-08-19 10:24:53,891] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053474+00:00 — failure_log.txt: [2025-08-19 10:30:12,902] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053486+00:00 — failure_log.txt: [2025-08-19 10:35:27,903] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053500+00:00 — failure_log.txt: [2025-08-19 10:40:47,077] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053513+00:00 — failure_log.txt: [2025-08-19 10:45:54,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053521+00:00 — failure_log.txt: [2025-08-19 10:51:15,023] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053528+00:00 — failure_log.txt: [2025-08-19 10:56:31,116] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053550+00:00 — failure_log.txt: [2025-08-19 11:01:44,504] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053559+00:00 — failure_log.txt: [2025-08-19 11:07:06,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053570+00:00 — failure_log.txt: [2025-08-19 11:12:19,141] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053582+00:00 — failure_log.txt: [2025-08-19 11:17:34,738] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053594+00:00 — failure_log.txt: [2025-08-19 11:22:44,796] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053607+00:00 — failure_log.txt: [2025-08-19 11:27:50,773] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053620+00:00 — failure_log.txt: [2025-08-19 11:33:16,397] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053635+00:00 — failure_log.txt: [2025-08-19 11:38:32,519] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053643+00:00 — failure_log.txt: [2025-08-19 11:43:47,152] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053650+00:00 — failure_log.txt: [2025-08-19 11:49:05,816] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053657+00:00 — failure_log.txt: [2025-08-19 11:54:22,713] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053664+00:00 — failure_log.txt: [2025-08-19 11:59:40,068] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053671+00:00 — failure_log.txt: [2025-08-19 12:04:48,072] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053682+00:00 — failure_log.txt: [2025-08-19 12:09:59,145] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053694+00:00 — failure_log.txt: [2025-08-19 12:15:14,962] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053707+00:00 — failure_log.txt: [2025-08-19 12:20:38,036] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053720+00:00 — failure_log.txt: [2025-08-19 12:25:54,653] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053732+00:00 — failure_log.txt: [2025-08-19 12:31:13,363] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053739+00:00 — failure_log.txt: [2025-08-19 12:36:25,918] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053746+00:00 — failure_log.txt: [2025-08-19 12:41:33,608] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053753+00:00 — failure_log.txt: [2025-08-19 12:46:40,793] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053760+00:00 — failure_log.txt: [2025-08-19 12:51:54,893] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053767+00:00 — failure_log.txt: [2025-08-19 12:57:14,022] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053775+00:00 — failure_log.txt: [2025-08-19 13:02:32,618] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053787+00:00 — failure_log.txt: [2025-08-19 13:07:47,724] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053799+00:00 — failure_log.txt: [2025-08-19 13:13:02,465] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053813+00:00 — failure_log.txt: [2025-08-19 13:18:22,131] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053829+00:00 — failure_log.txt: [2025-08-19 13:23:37,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053838+00:00 — failure_log.txt: [2025-08-19 13:28:46,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053845+00:00 — failure_log.txt: [2025-08-19 13:34:08,379] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053852+00:00 — failure_log.txt: [2025-08-19 13:39:30,839] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053859+00:00 — failure_log.txt: [2025-08-19 13:44:40,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053866+00:00 — failure_log.txt: [2025-08-19 13:49:57,991] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053874+00:00 — failure_log.txt: [2025-08-19 13:55:19,902] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053886+00:00 — failure_log.txt: [2025-08-19 14:00:37,648] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053899+00:00 — failure_log.txt: [2025-08-19 14:05:46,443] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053913+00:00 — failure_log.txt: [2025-08-19 14:10:59,205] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053925+00:00 — failure_log.txt: [2025-08-19 14:16:13,483] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053933+00:00 — failure_log.txt: [2025-08-19 14:21:36,285] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053940+00:00 — failure_log.txt: [2025-08-19 14:26:55,586] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053947+00:00 — failure_log.txt: [2025-08-19 14:32:16,300] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053954+00:00 — failure_log.txt: [2025-08-19 14:37:28,209] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053961+00:00 — failure_log.txt: [2025-08-19 14:42:37,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053968+00:00 — failure_log.txt: [2025-08-19 14:47:46,329] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053979+00:00 — failure_log.txt: [2025-08-19 14:52:56,942] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.053992+00:00 — failure_log.txt: [2025-08-19 14:58:15,313] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054004+00:00 — failure_log.txt: [2025-08-19 15:03:33,529] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054018+00:00 — failure_log.txt: [2025-08-19 15:08:53,896] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054029+00:00 — failure_log.txt: [2025-08-19 15:14:08,376] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054040+00:00 — failure_log.txt: [2025-08-19 15:19:28,253] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054047+00:00 — failure_log.txt: [2025-08-19 15:24:46,597] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054053+00:00 — failure_log.txt: [2025-08-19 15:30:10,112] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054060+00:00 — failure_log.txt: [2025-08-19 15:35:22,506] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054070+00:00 — failure_log.txt: [2025-08-19 15:40:39,944] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054081+00:00 — failure_log.txt: [2025-08-19 15:45:57,169] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054094+00:00 — failure_log.txt: [2025-08-19 15:51:03,569] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054107+00:00 — failure_log.txt: [2025-08-19 15:56:23,110] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054120+00:00 — failure_log.txt: [2025-08-19 16:01:37,282] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054131+00:00 — failure_log.txt: [2025-08-19 16:06:44,498] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054138+00:00 — failure_log.txt: [2025-08-19 16:12:07,797] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054145+00:00 — failure_log.txt: [2025-08-19 16:17:21,985] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054152+00:00 — failure_log.txt: [2025-08-19 16:22:32,769] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054159+00:00 — failure_log.txt: [2025-08-19 16:27:47,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054166+00:00 — failure_log.txt: [2025-08-19 16:32:57,946] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054175+00:00 — failure_log.txt: [2025-08-19 16:38:16,603] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054188+00:00 — failure_log.txt: [2025-08-19 16:43:40,700] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054200+00:00 — failure_log.txt: [2025-08-19 16:48:55,894] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054214+00:00 — failure_log.txt: [2025-08-19 16:54:10,212] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054226+00:00 — failure_log.txt: [2025-08-19 16:59:32,231] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054233+00:00 — failure_log.txt: [2025-08-19 17:04:48,821] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054240+00:00 — failure_log.txt: [2025-08-19 17:10:08,674] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054247+00:00 — failure_log.txt: [2025-08-19 17:15:21,373] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054254+00:00 — failure_log.txt: [2025-08-19 17:20:29,455] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054261+00:00 — failure_log.txt: [2025-08-19 17:25:40,756] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054268+00:00 — failure_log.txt: [2025-08-19 17:30:50,752] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054279+00:00 — failure_log.txt: [2025-08-19 17:36:13,221] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054291+00:00 — failure_log.txt: [2025-08-19 17:41:25,897] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054304+00:00 — failure_log.txt: [2025-08-19 17:46:48,020] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054321+00:00 — failure_log.txt: [2025-08-19 17:51:55,991] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054331+00:00 — failure_log.txt: [2025-08-19 17:57:17,470] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054338+00:00 — failure_log.txt: [2025-08-19 18:02:32,214] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054345+00:00 — failure_log.txt: [2025-08-19 18:07:40,572] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054352+00:00 — failure_log.txt: [2025-08-19 18:12:51,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054358+00:00 — failure_log.txt: [2025-08-19 18:18:14,337] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054365+00:00 — failure_log.txt: [2025-08-19 18:23:25,907] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054376+00:00 — failure_log.txt: [2025-08-19 18:28:37,130] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054389+00:00 — failure_log.txt: [2025-08-19 18:33:44,927] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054402+00:00 — failure_log.txt: [2025-08-19 18:38:56,367] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054415+00:00 — failure_log.txt: [2025-08-19 18:44:18,644] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054426+00:00 — failure_log.txt: [2025-08-19 18:49:39,468] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054433+00:00 — failure_log.txt: [2025-08-19 18:54:58,099] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054440+00:00 — failure_log.txt: [2025-08-19 19:00:20,450] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054450+00:00 — failure_log.txt: [2025-08-19 19:05:35,218] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054457+00:00 — failure_log.txt: [2025-08-19 19:10:52,015] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054464+00:00 — failure_log.txt: [2025-08-19 19:16:00,037] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054475+00:00 — failure_log.txt: [2025-08-19 19:21:20,348] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054487+00:00 — failure_log.txt: [2025-08-19 19:26:41,017] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054501+00:00 — failure_log.txt: [2025-08-19 19:32:01,092] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054514+00:00 — failure_log.txt: [2025-08-19 19:37:22,776] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054524+00:00 — failure_log.txt: [2025-08-19 19:42:33,721] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054531+00:00 — failure_log.txt: [2025-08-19 19:47:48,061] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054555+00:00 — failure_log.txt: [2025-08-19 19:53:13,422] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054563+00:00 — failure_log.txt: [2025-08-19 19:58:34,216] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054570+00:00 — failure_log.txt: [2025-08-19 20:03:51,545] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054585+00:00 — failure_log.txt: [2025-08-19 20:09:09,538] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054599+00:00 — failure_log.txt: [2025-08-19 20:14:27,847] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054611+00:00 — failure_log.txt: [2025-08-19 20:19:40,889] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054624+00:00 — failure_log.txt: [2025-08-19 20:24:52,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054637+00:00 — failure_log.txt: [2025-08-19 20:30:16,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054644+00:00 — failure_log.txt: [2025-08-19 20:35:28,708] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054651+00:00 — failure_log.txt: [2025-08-19 20:40:40,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054658+00:00 — failure_log.txt: [2025-08-19 20:45:55,073] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054665+00:00 — failure_log.txt: [2025-08-19 20:51:16,544] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054672+00:00 — failure_log.txt: [2025-08-19 20:56:26,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054678+00:00 — failure_log.txt: [2025-08-19 21:01:33,367] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054689+00:00 — failure_log.txt: [2025-08-19 21:06:47,370] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054702+00:00 — failure_log.txt: [2025-08-19 21:12:08,707] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054715+00:00 — failure_log.txt: [2025-08-19 21:17:33,299] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054728+00:00 — failure_log.txt: [2025-08-19 21:22:50,232] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054738+00:00 — failure_log.txt: [2025-08-19 21:28:05,472] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054745+00:00 — failure_log.txt: [2025-08-19 21:33:31,820] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054752+00:00 — failure_log.txt: [2025-08-19 21:38:43,606] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054759+00:00 — failure_log.txt: [2025-08-19 21:43:54,150] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054766+00:00 — failure_log.txt: [2025-08-19 21:49:16,152] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054896+00:00 — failure_log.txt: [2025-08-19 21:54:33,848] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054916+00:00 — failure_log.txt: [2025-08-19 21:59:40,882] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054928+00:00 — failure_log.txt: [2025-08-19 22:04:52,877] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054940+00:00 — failure_log.txt: [2025-08-19 22:10:13,360] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054953+00:00 — failure_log.txt: [2025-08-19 22:15:34,824] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054969+00:00 — failure_log.txt: [2025-08-19 22:20:51,883] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054977+00:00 — failure_log.txt: [2025-08-19 22:26:10,033] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054984+00:00 — failure_log.txt: [2025-08-19 22:31:35,529] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054991+00:00 — failure_log.txt: [2025-08-19 22:36:46,518] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.054997+00:00 — failure_log.txt: [2025-08-19 22:41:56,724] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055004+00:00 — failure_log.txt: [2025-08-19 22:47:14,953] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055017+00:00 — failure_log.txt: [2025-08-19 22:52:28,806] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055030+00:00 — failure_log.txt: [2025-08-19 22:57:49,924] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055042+00:00 — failure_log.txt: [2025-08-19 23:03:15,361] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055055+00:00 — failure_log.txt: [2025-08-19 23:08:32,723] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055067+00:00 — failure_log.txt: [2025-08-19 23:13:47,788] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055074+00:00 — failure_log.txt: [2025-08-19 23:19:00,438] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055081+00:00 — failure_log.txt: [2025-08-19 23:24:15,127] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055088+00:00 — failure_log.txt: [2025-08-19 23:29:30,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055094+00:00 — failure_log.txt: [2025-08-19 23:34:46,634] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055101+00:00 — failure_log.txt: [2025-08-19 23:40:03,032] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055108+00:00 — failure_log.txt: [2025-08-19 23:45:14,901] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055119+00:00 — failure_log.txt: [2025-08-19 23:50:28,242] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055132+00:00 — failure_log.txt: [2025-08-19 23:55:42,784] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055148+00:00 — failure_log.txt: [2025-08-20 00:01:01,141] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.055161+00:00 — failure_log.txt: [2025-08-20 00:06:17,817] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055169+00:00 — failure_log.txt: [2025-08-20 00:11:30,448] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055176+00:00 — failure_log.txt: [2025-08-20 00:16:42,240] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055183+00:00 — failure_log.txt: [2025-08-20 00:21:49,883] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055190+00:00 — failure_log.txt: [2025-08-20 00:26:58,743] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055197+00:00 — failure_log.txt: [2025-08-20 00:32:11,039] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055208+00:00 — failure_log.txt: [2025-08-20 00:37:28,883] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055220+00:00 — failure_log.txt: [2025-08-20 00:42:40,711] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055232+00:00 — failure_log.txt: [2025-08-20 00:47:47,822] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055246+00:00 — failure_log.txt: [2025-08-20 00:53:10,209] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055259+00:00 — failure_log.txt: [2025-08-20 00:58:32,668] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055267+00:00 — failure_log.txt: [2025-08-20 01:03:44,841] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055274+00:00 — failure_log.txt: [2025-08-20 01:08:53,515] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055281+00:00 — failure_log.txt: [2025-08-20 01:14:02,211] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055288+00:00 — failure_log.txt: [2025-08-20 01:19:25,320] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055295+00:00 — failure_log.txt: [2025-08-20 01:24:37,598] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055302+00:00 — failure_log.txt: [2025-08-20 01:29:50,152] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055312+00:00 — failure_log.txt: [2025-08-20 01:35:08,264] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055325+00:00 — failure_log.txt: [2025-08-20 01:40:21,172] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055338+00:00 — failure_log.txt: [2025-08-20 01:45:40,141] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055351+00:00 — failure_log.txt: [2025-08-20 01:50:51,905] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055362+00:00 — failure_log.txt: [2025-08-20 01:56:04,720] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055369+00:00 — failure_log.txt: [2025-08-20 02:01:23,543] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055376+00:00 — failure_log.txt: [2025-08-20 02:06:36,708] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055383+00:00 — failure_log.txt: [2025-08-20 02:11:42,452] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055390+00:00 — failure_log.txt: [2025-08-20 02:17:01,776] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055396+00:00 — failure_log.txt: [2025-08-20 02:22:18,086] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055405+00:00 — failure_log.txt: [2025-08-20 02:27:29,931] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055422+00:00 — failure_log.txt: [2025-08-20 02:32:43,205] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055435+00:00 — failure_log.txt: [2025-08-20 02:37:59,650] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055448+00:00 — failure_log.txt: [2025-08-20 02:43:17,336] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055462+00:00 — failure_log.txt: [2025-08-20 02:48:36,864] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055470+00:00 — failure_log.txt: [2025-08-20 02:53:51,932] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055477+00:00 — failure_log.txt: [2025-08-20 02:59:01,656] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055484+00:00 — failure_log.txt: [2025-08-20 03:04:16,515] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055490+00:00 — failure_log.txt: [2025-08-20 03:09:30,129] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055497+00:00 — failure_log.txt: [2025-08-20 03:14:40,903] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055508+00:00 — failure_log.txt: [2025-08-20 03:19:46,552] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055521+00:00 — failure_log.txt: [2025-08-20 03:24:57,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055533+00:00 — failure_log.txt: [2025-08-20 03:30:19,220] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055566+00:00 — failure_log.txt: [2025-08-20 03:35:34,341] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055576+00:00 — failure_log.txt: [2025-08-20 03:40:48,501] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055583+00:00 — failure_log.txt: [2025-08-20 03:45:56,158] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055590+00:00 — failure_log.txt: [2025-08-20 03:51:17,170] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055597+00:00 — failure_log.txt: [2025-08-20 03:56:32,689] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055604+00:00 — failure_log.txt: [2025-08-20 04:01:38,893] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055611+00:00 — failure_log.txt: [2025-08-20 04:06:55,961] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055621+00:00 — failure_log.txt: [2025-08-20 04:12:05,757] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055633+00:00 — failure_log.txt: [2025-08-20 04:17:22,949] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055645+00:00 — failure_log.txt: [2025-08-20 04:22:30,984] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055659+00:00 — failure_log.txt: [2025-08-20 04:27:41,716] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055671+00:00 — failure_log.txt: [2025-08-20 04:32:59,886] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055680+00:00 — failure_log.txt: [2025-08-20 04:38:13,527] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055686+00:00 — failure_log.txt: [2025-08-20 04:43:31,040] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055693+00:00 — failure_log.txt: [2025-08-20 04:48:46,937] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055700+00:00 — failure_log.txt: [2025-08-20 04:53:53,764] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055707+00:00 — failure_log.txt: [2025-08-20 04:59:08,417] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055719+00:00 — failure_log.txt: [2025-08-20 05:04:28,161] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055732+00:00 — failure_log.txt: [2025-08-20 05:09:42,075] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055744+00:00 — failure_log.txt: [2025-08-20 05:14:56,454] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055758+00:00 — failure_log.txt: [2025-08-20 05:20:18,261] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055771+00:00 — failure_log.txt: [2025-08-20 05:25:36,235] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055779+00:00 — failure_log.txt: [2025-08-20 05:30:51,890] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055785+00:00 — failure_log.txt: [2025-08-20 05:36:11,342] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055792+00:00 — failure_log.txt: [2025-08-20 05:41:37,122] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055799+00:00 — failure_log.txt: [2025-08-20 05:46:59,442] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055806+00:00 — failure_log.txt: [2025-08-20 05:52:19,520] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055813+00:00 — failure_log.txt: [2025-08-20 05:57:38,426] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055824+00:00 — failure_log.txt: [2025-08-20 06:02:54,973] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055836+00:00 — failure_log.txt: [2025-08-20 06:08:18,869] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055854+00:00 — failure_log.txt: [2025-08-20 06:13:31,260] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055867+00:00 — failure_log.txt: [2025-08-20 06:18:40,704] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055876+00:00 — failure_log.txt: [2025-08-20 06:23:58,027] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055883+00:00 — failure_log.txt: [2025-08-20 06:29:20,789] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055890+00:00 — failure_log.txt: [2025-08-20 06:34:29,919] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055897+00:00 — failure_log.txt: [2025-08-20 06:39:48,673] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055904+00:00 — failure_log.txt: [2025-08-20 06:44:58,187] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055911+00:00 — failure_log.txt: [2025-08-20 06:50:11,168] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055921+00:00 — failure_log.txt: [2025-08-20 06:55:28,528] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055934+00:00 — failure_log.txt: [2025-08-20 07:00:40,908] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055946+00:00 — failure_log.txt: [2025-08-20 07:05:58,629] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055959+00:00 — failure_log.txt: [2025-08-20 07:11:19,324] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055973+00:00 — failure_log.txt: [2025-08-20 07:16:30,751] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055981+00:00 — failure_log.txt: [2025-08-20 07:21:45,876] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055988+00:00 — failure_log.txt: [2025-08-20 07:26:52,897] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.055994+00:00 — failure_log.txt: [2025-08-20 07:32:03,370] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056001+00:00 — failure_log.txt: [2025-08-20 07:37:18,647] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056008+00:00 — failure_log.txt: [2025-08-20 07:42:37,504] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056018+00:00 — failure_log.txt: [2025-08-20 07:47:52,740] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056031+00:00 — failure_log.txt: [2025-08-20 07:53:00,797] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056044+00:00 — failure_log.txt: [2025-08-20 07:58:16,280] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056057+00:00 — failure_log.txt: [2025-08-20 08:03:25,911] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056068+00:00 — failure_log.txt: [2025-08-20 08:08:38,894] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056075+00:00 — failure_log.txt: [2025-08-20 08:13:53,521] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056082+00:00 — failure_log.txt: [2025-08-20 08:19:18,934] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056089+00:00 — failure_log.txt: [2025-08-20 08:24:32,900] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056096+00:00 — failure_log.txt: [2025-08-20 08:29:47,716] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056103+00:00 — failure_log.txt: [2025-08-20 08:35:04,746] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056110+00:00 — failure_log.txt: [2025-08-20 08:40:20,354] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056123+00:00 — failure_log.txt: [2025-08-20 08:45:38,009] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056135+00:00 — failure_log.txt: [2025-08-20 08:50:50,864] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056149+00:00 — failure_log.txt: [2025-08-20 08:56:00,473] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056162+00:00 — failure_log.txt: [2025-08-20 09:01:22,581] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056170+00:00 — failure_log.txt: [2025-08-20 09:06:36,781] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056177+00:00 — failure_log.txt: [2025-08-20 09:11:55,778] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056184+00:00 — failure_log.txt: [2025-08-20 09:17:15,611] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056191+00:00 — failure_log.txt: [2025-08-20 09:22:36,825] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056198+00:00 — failure_log.txt: [2025-08-20 09:27:49,806] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056223+00:00 — failure_log.txt: [2025-08-20 09:33:11,449] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056236+00:00 — failure_log.txt: [2025-08-20 09:38:35,465] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056248+00:00 — failure_log.txt: [2025-08-20 09:43:56,565] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056261+00:00 — failure_log.txt: [2025-08-20 09:49:20,309] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056274+00:00 — failure_log.txt: [2025-08-20 09:54:41,737] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056288+00:00 — failure_log.txt: [2025-08-20 09:59:53,744] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056295+00:00 — failure_log.txt: [2025-08-20 10:05:14,414] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056303+00:00 — failure_log.txt: [2025-08-20 10:10:25,648] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056309+00:00 — failure_log.txt: [2025-08-20 10:15:49,837] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056316+00:00 — failure_log.txt: [2025-08-20 10:21:12,417] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056323+00:00 — failure_log.txt: [2025-08-20 10:26:37,085] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056334+00:00 — failure_log.txt: [2025-08-20 10:31:58,472] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056347+00:00 — failure_log.txt: [2025-08-20 10:37:22,654] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056360+00:00 — failure_log.txt: [2025-08-20 10:42:33,042] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056373+00:00 — failure_log.txt: [2025-08-20 10:47:51,268] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056384+00:00 — failure_log.txt: [2025-08-20 10:52:58,894] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056391+00:00 — failure_log.txt: [2025-08-20 10:58:15,725] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056397+00:00 — failure_log.txt: [2025-08-20 11:03:31,353] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056404+00:00 — failure_log.txt: [2025-08-20 11:08:44,478] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056411+00:00 — failure_log.txt: [2025-08-20 11:13:58,648] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056418+00:00 — failure_log.txt: [2025-08-20 11:19:18,333] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056426+00:00 — failure_log.txt: [2025-08-20 11:24:32,089] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056439+00:00 — failure_log.txt: [2025-08-20 11:29:44,664] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056451+00:00 — failure_log.txt: [2025-08-20 11:35:10,113] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056465+00:00 — failure_log.txt: [2025-08-20 11:40:29,015] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056480+00:00 — failure_log.txt: [2025-08-20 11:45:48,657] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056488+00:00 — failure_log.txt: [2025-08-20 11:51:03,246] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056495+00:00 — failure_log.txt: [2025-08-20 11:56:27,779] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056502+00:00 — failure_log.txt: [2025-08-20 12:01:48,169] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056508+00:00 — failure_log.txt: [2025-08-20 12:07:13,025] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056515+00:00 — failure_log.txt: [2025-08-20 12:12:30,555] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056523+00:00 — failure_log.txt: [2025-08-20 12:17:53,232] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056548+00:00 — failure_log.txt: [2025-08-20 12:23:17,880] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056562+00:00 — failure_log.txt: [2025-08-20 12:28:30,378] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056576+00:00 — failure_log.txt: [2025-08-20 12:33:44,398] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056588+00:00 — failure_log.txt: [2025-08-20 12:38:58,755] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056598+00:00 — failure_log.txt: [2025-08-20 12:44:13,120] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056605+00:00 — failure_log.txt: [2025-08-20 12:49:27,484] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056612+00:00 — failure_log.txt: [2025-08-20 12:54:44,777] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056619+00:00 — failure_log.txt: [2025-08-20 13:00:09,137] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056626+00:00 — failure_log.txt: [2025-08-20 13:05:31,807] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056633+00:00 — failure_log.txt: [2025-08-20 13:10:48,501] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056642+00:00 — failure_log.txt: [2025-08-20 13:16:07,519] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056654+00:00 — failure_log.txt: [2025-08-20 13:21:26,517] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056666+00:00 — failure_log.txt: [2025-08-20 13:26:41,062] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056680+00:00 — failure_log.txt: [2025-08-20 13:31:59,065] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056693+00:00 — failure_log.txt: [2025-08-20 13:37:25,509] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056702+00:00 — failure_log.txt: [2025-08-20 13:42:36,974] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056713+00:00 — failure_log.txt: [2025-08-20 13:47:51,237] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056720+00:00 — failure_log.txt: [2025-08-20 13:53:09,335] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056727+00:00 — failure_log.txt: [2025-08-20 13:58:32,846] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056736+00:00 — failure_log.txt: [2025-08-20 14:03:49,680] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056747+00:00 — failure_log.txt: [2025-08-20 14:09:15,309] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056760+00:00 — failure_log.txt: [2025-08-20 14:14:34,967] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056773+00:00 — failure_log.txt: [2025-08-20 14:19:48,217] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056786+00:00 — failure_log.txt: [2025-08-20 14:25:04,373] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056797+00:00 — failure_log.txt: [2025-08-20 14:30:24,759] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056804+00:00 — failure_log.txt: [2025-08-20 14:35:45,395] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056811+00:00 — failure_log.txt: [2025-08-20 14:41:07,221] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056818+00:00 — failure_log.txt: [2025-08-20 14:46:28,728] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056825+00:00 — failure_log.txt: [2025-08-20 14:51:48,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056832+00:00 — failure_log.txt: [2025-08-20 14:57:14,592] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056839+00:00 — failure_log.txt: [2025-08-20 15:02:31,195] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056852+00:00 — failure_log.txt: [2025-08-20 15:07:49,146] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056864+00:00 — failure_log.txt: [2025-08-20 15:13:20,537] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056878+00:00 — failure_log.txt: [2025-08-20 15:18:31,296] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056891+00:00 — failure_log.txt: [2025-08-20 15:23:44,649] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056899+00:00 — failure_log.txt: [2025-08-20 15:29:10,104] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056906+00:00 — failure_log.txt: [2025-08-20 15:34:32,117] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056913+00:00 — failure_log.txt: [2025-08-20 15:39:40,358] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056919+00:00 — failure_log.txt: [2025-08-20 15:44:49,640] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056926+00:00 — failure_log.txt: [2025-08-20 15:50:02,719] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056933+00:00 — failure_log.txt: [2025-08-20 15:55:18,411] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056944+00:00 — failure_log.txt: [2025-08-20 16:00:39,140] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056956+00:00 — failure_log.txt: [2025-08-20 16:06:01,128] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056970+00:00 — failure_log.txt: [2025-08-20 16:11:21,992] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056987+00:00 — failure_log.txt: [2025-08-20 16:16:44,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.056997+00:00 — failure_log.txt: [2025-08-20 16:22:04,960] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057003+00:00 — failure_log.txt: [2025-08-20 16:27:26,317] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057010+00:00 — failure_log.txt: [2025-08-20 16:32:42,403] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057017+00:00 — failure_log.txt: [2025-08-20 16:37:51,221] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057024+00:00 — failure_log.txt: [2025-08-20 16:43:14,116] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057031+00:00 — failure_log.txt: [2025-08-20 16:48:30,535] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057041+00:00 — failure_log.txt: [2025-08-20 16:54:31,874] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057054+00:00 — failure_log.txt: [2025-08-20 16:54:36,887] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057067+00:00 — failure_log.txt: [2025-08-20 16:54:53,783] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057079+00:00 — failure_log.txt: [2025-08-20 16:55:27,680] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057090+00:00 — failure_log.txt: [2025-08-20 16:56:15,267] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057097+00:00 — failure_log.txt: [2025-08-20 16:57:53,322] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057104+00:00 — failure_log.txt: [2025-08-20 17:00:41,703] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057117+00:00 — failure_log.txt: [2025-08-20 17:05:54,673] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057124+00:00 — failure_log.txt: [2025-08-20 17:11:09,192] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057131+00:00 — failure_log.txt: [2025-08-20 17:16:17,735] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057143+00:00 — failure_log.txt: [2025-08-20 17:21:34,765] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057155+00:00 — failure_log.txt: [2025-08-20 17:26:43,463] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057169+00:00 — failure_log.txt: [2025-08-20 17:32:01,797] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057181+00:00 — failure_log.txt: [2025-08-20 17:37:09,889] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057192+00:00 — failure_log.txt: [2025-08-20 17:42:26,191] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057198+00:00 — failure_log.txt: [2025-08-20 17:47:39,665] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057205+00:00 — failure_log.txt: [2025-08-20 17:52:46,483] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057212+00:00 — failure_log.txt: [2025-08-20 17:57:55,011] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057219+00:00 — failure_log.txt: [2025-08-20 18:03:05,461] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057229+00:00 — failure_log.txt: [2025-08-20 18:08:17,499] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057240+00:00 — failure_log.txt: [2025-08-20 18:13:29,612] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057253+00:00 — failure_log.txt: [2025-08-20 18:18:42,578] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057266+00:00 — failure_log.txt: [2025-08-20 18:23:52,491] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057279+00:00 — failure_log.txt: [2025-08-20 18:28:58,924] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057290+00:00 — failure_log.txt: [2025-08-20 18:34:14,736] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057296+00:00 — failure_log.txt: [2025-08-20 18:39:25,137] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057303+00:00 — failure_log.txt: [2025-08-20 18:44:35,620] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057310+00:00 — failure_log.txt: [2025-08-20 18:49:44,630] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057317+00:00 — failure_log.txt: [2025-08-20 18:54:58,579] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057324+00:00 — failure_log.txt: [2025-08-20 19:00:05,778] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057332+00:00 — failure_log.txt: [2025-08-20 19:05:14,882] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057344+00:00 — failure_log.txt: [2025-08-20 19:10:28,343] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057357+00:00 — failure_log.txt: [2025-08-20 19:15:38,787] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057371+00:00 — failure_log.txt: [2025-08-20 19:20:52,786] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057383+00:00 — failure_log.txt: [2025-08-20 19:26:07,594] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057391+00:00 — failure_log.txt: [2025-08-20 19:31:26,911] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057398+00:00 — failure_log.txt: [2025-08-20 19:36:32,499] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057405+00:00 — failure_log.txt: [2025-08-20 19:41:38,095] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057411+00:00 — failure_log.txt: [2025-08-20 19:46:45,134] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057418+00:00 — failure_log.txt: [2025-08-20 19:51:54,359] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057425+00:00 — failure_log.txt: [2025-08-20 19:57:02,709] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057436+00:00 — failure_log.txt: [2025-08-20 20:02:14,653] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057448+00:00 — failure_log.txt: [2025-08-20 20:07:20,916] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057462+00:00 — failure_log.txt: [2025-08-20 20:12:28,406] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057479+00:00 — failure_log.txt: [2025-08-20 20:17:40,467] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057488+00:00 — failure_log.txt: [2025-08-20 20:22:47,609] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057495+00:00 — failure_log.txt: [2025-08-20 20:28:04,625] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057502+00:00 — failure_log.txt: [2025-08-20 20:33:17,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057509+00:00 — failure_log.txt: [2025-08-20 20:38:35,614] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057518+00:00 — failure_log.txt: [2025-08-20 20:43:43,864] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057526+00:00 — failure_log.txt: [2025-08-20 20:48:55,507] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057551+00:00 — failure_log.txt: [2025-08-20 20:54:11,525] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057565+00:00 — failure_log.txt: [2025-08-20 20:59:27,527] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057578+00:00 — failure_log.txt: [2025-08-20 21:04:31,530] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057590+00:00 — failure_log.txt: [2025-08-20 21:09:44,532] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057601+00:00 — failure_log.txt: [2025-08-20 21:14:49,543] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057607+00:00 — failure_log.txt: [2025-08-20 21:19:55,508] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057614+00:00 — failure_log.txt: [2025-08-20 21:27:44,472] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057621+00:00 — failure_log.txt: [2025-08-20 21:27:51,715] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057628+00:00 — failure_log.txt: [2025-08-20 21:28:12,739] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057635+00:00 — failure_log.txt: [2025-08-20 21:28:44,495] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057643+00:00 — failure_log.txt: [2025-08-20 21:29:29,605] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057656+00:00 — failure_log.txt: [2025-08-20 21:31:10,253] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057667+00:00 — failure_log.txt: [2025-08-20 21:34:04,954] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057681+00:00 — failure_log.txt: [2025-08-20 21:39:20,791] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057694+00:00 — failure_log.txt: [2025-08-20 21:44:31,483] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057702+00:00 — failure_log.txt: [2025-08-20 21:49:40,558] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057709+00:00 — failure_log.txt: [2025-08-20 21:54:53,160] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057716+00:00 — failure_log.txt: [2025-08-20 21:54:58,428] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057722+00:00 — failure_log.txt: [2025-08-20 21:55:17,961] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057733+00:00 — failure_log.txt: [2025-08-20 21:55:43,471] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057742+00:00 — failure_log.txt: [2025-08-20 21:56:39,672] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057755+00:00 — failure_log.txt: [2025-08-20 21:58:16,474] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057767+00:00 — failure_log.txt: [2025-08-20 22:01:07,372] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057781+00:00 — failure_log.txt: [2025-08-20 22:06:19,890] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057793+00:00 — failure_log.txt: [2025-08-20 22:11:33,553] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057801+00:00 — failure_log.txt: [2025-08-20 22:16:44,710] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057808+00:00 — failure_log.txt: [2025-08-20 22:21:48,557] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057814+00:00 — failure_log.txt: [2025-08-20 22:27:03,969] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057821+00:00 — failure_log.txt: [2025-08-20 22:32:11,668] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057828+00:00 — failure_log.txt: [2025-08-20 22:37:19,165] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057835+00:00 — failure_log.txt: [2025-08-20 22:42:26,594] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057845+00:00 — failure_log.txt: [2025-08-20 22:47:32,643] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057858+00:00 — failure_log.txt: [2025-08-20 22:52:38,697] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057871+00:00 — failure_log.txt: [2025-08-20 22:57:48,651] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057884+00:00 — failure_log.txt: [2025-08-20 23:02:55,593] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057895+00:00 — failure_log.txt: [2025-08-20 23:08:10,733] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057902+00:00 — failure_log.txt: [2025-08-20 23:13:15,925] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057908+00:00 — failure_log.txt: [2025-08-20 23:18:26,648] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057915+00:00 — failure_log.txt: [2025-08-20 23:23:42,632] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057922+00:00 — failure_log.txt: [2025-08-20 23:28:46,675] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057929+00:00 — failure_log.txt: [2025-08-20 23:34:03,632] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057942+00:00 — failure_log.txt: [2025-08-20 23:39:16,468] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057955+00:00 — failure_log.txt: [2025-08-20 23:44:27,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057968+00:00 — failure_log.txt: [2025-08-20 23:49:32,576] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057984+00:00 — failure_log.txt: [2025-08-20 23:54:47,683] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.057995+00:00 — failure_log.txt: [2025-08-20 23:59:54,307] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058003+00:00 — failure_log.txt: [2025-08-21 00:05:15,240] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.058010+00:00 — failure_log.txt: [2025-08-21 00:10:23,611] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058017+00:00 — failure_log.txt: [2025-08-21 00:15:33,722] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058024+00:00 — failure_log.txt: [2025-08-21 00:20:49,701] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058031+00:00 — failure_log.txt: [2025-08-21 00:26:00,630] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058042+00:00 — failure_log.txt: [2025-08-21 00:31:08,402] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058054+00:00 — failure_log.txt: [2025-08-21 00:36:19,635] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058068+00:00 — failure_log.txt: [2025-08-21 00:41:30,605] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058081+00:00 — failure_log.txt: [2025-08-21 00:46:43,702] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058095+00:00 — failure_log.txt: [2025-08-21 00:51:47,648] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058107+00:00 — failure_log.txt: [2025-08-21 00:56:51,656] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058114+00:00 — failure_log.txt: [2025-08-21 01:01:57,587] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058121+00:00 — failure_log.txt: [2025-08-21 01:07:03,536] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058128+00:00 — failure_log.txt: [2025-08-21 01:12:16,147] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058135+00:00 — failure_log.txt: [2025-08-21 01:17:29,782] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058141+00:00 — failure_log.txt: [2025-08-21 01:22:39,651] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058148+00:00 — failure_log.txt: [2025-08-21 01:27:54,424] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058159+00:00 — failure_log.txt: [2025-08-21 01:33:11,976] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058171+00:00 — failure_log.txt: [2025-08-21 01:38:27,768] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058184+00:00 — failure_log.txt: [2025-08-21 01:43:37,503] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058197+00:00 — failure_log.txt: [2025-08-21 01:48:42,400] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058208+00:00 — failure_log.txt: [2025-08-21 01:53:56,232] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058215+00:00 — failure_log.txt: [2025-08-21 01:59:15,707] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058222+00:00 — failure_log.txt: [2025-08-21 02:04:28,480] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058232+00:00 — failure_log.txt: [2025-08-21 02:09:33,481] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058239+00:00 — failure_log.txt: [2025-08-21 02:14:47,749] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058245+00:00 — failure_log.txt: [2025-08-21 02:19:58,595] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058256+00:00 — failure_log.txt: [2025-08-21 02:25:11,320] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058268+00:00 — failure_log.txt: [2025-08-21 02:30:28,536] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058281+00:00 — failure_log.txt: [2025-08-21 02:35:45,665] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058294+00:00 — failure_log.txt: [2025-08-21 02:40:53,932] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058305+00:00 — failure_log.txt: [2025-08-21 02:46:00,043] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058312+00:00 — failure_log.txt: [2025-08-21 02:51:16,434] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058319+00:00 — failure_log.txt: [2025-08-21 02:56:32,518] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058326+00:00 — failure_log.txt: [2025-08-21 03:01:48,483] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058333+00:00 — failure_log.txt: [2025-08-21 03:07:01,263] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058339+00:00 — failure_log.txt: [2025-08-21 03:12:17,856] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058346+00:00 — failure_log.txt: [2025-08-21 03:17:24,747] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058363+00:00 — failure_log.txt: [2025-08-21 03:22:38,725] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058376+00:00 — failure_log.txt: [2025-08-21 03:27:44,064] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058390+00:00 — failure_log.txt: [2025-08-21 03:32:54,224] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058401+00:00 — failure_log.txt: [2025-08-21 03:38:00,284] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058409+00:00 — failure_log.txt: [2025-08-21 03:43:16,155] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058416+00:00 — failure_log.txt: [2025-08-21 03:48:31,651] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058422+00:00 — failure_log.txt: [2025-08-21 03:53:42,748] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058429+00:00 — failure_log.txt: [2025-08-21 03:58:48,510] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058436+00:00 — failure_log.txt: [2025-08-21 04:04:02,901] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058443+00:00 — failure_log.txt: [2025-08-21 04:09:16,228] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058454+00:00 — failure_log.txt: [2025-08-21 04:14:21,667] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058470+00:00 — failure_log.txt: [2025-08-21 04:19:28,744] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058484+00:00 — failure_log.txt: [2025-08-21 04:24:35,541] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058497+00:00 — failure_log.txt: [2025-08-21 04:29:40,084] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058505+00:00 — failure_log.txt: [2025-08-21 04:34:48,444] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058512+00:00 — failure_log.txt: [2025-08-21 04:40:09,428] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058519+00:00 — failure_log.txt: [2025-08-21 04:45:22,627] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058526+00:00 — failure_log.txt: [2025-08-21 04:50:32,042] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058533+00:00 — failure_log.txt: [2025-08-21 04:55:51,294] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058561+00:00 — failure_log.txt: [2025-08-21 05:01:10,227] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058574+00:00 — failure_log.txt: [2025-08-21 05:06:20,552] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058586+00:00 — failure_log.txt: [2025-08-21 05:11:34,619] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058600+00:00 — failure_log.txt: [2025-08-21 05:16:38,845] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058612+00:00 — failure_log.txt: [2025-08-21 05:21:43,709] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058619+00:00 — failure_log.txt: [2025-08-21 05:26:50,629] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058626+00:00 — failure_log.txt: [2025-08-21 05:31:59,738] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058633+00:00 — failure_log.txt: [2025-08-21 05:37:16,542] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058640+00:00 — failure_log.txt: [2025-08-21 05:42:25,755] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058647+00:00 — failure_log.txt: [2025-08-21 05:47:34,711] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058654+00:00 — failure_log.txt: [2025-08-21 05:52:44,562] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058664+00:00 — failure_log.txt: [2025-08-21 05:57:57,666] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058677+00:00 — failure_log.txt: [2025-08-21 06:03:09,595] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058690+00:00 — failure_log.txt: [2025-08-21 06:08:26,760] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058703+00:00 — failure_log.txt: [2025-08-21 06:13:41,573] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058713+00:00 — failure_log.txt: [2025-08-21 06:18:56,281] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058720+00:00 — failure_log.txt: [2025-08-21 06:24:13,977] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058727+00:00 — failure_log.txt: [2025-08-21 06:29:27,850] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058738+00:00 — failure_log.txt: [2025-08-21 06:34:43,138] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058745+00:00 — failure_log.txt: [2025-08-21 06:39:57,839] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058752+00:00 — failure_log.txt: [2025-08-21 06:45:16,763] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058763+00:00 — failure_log.txt: [2025-08-21 06:50:34,427] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058775+00:00 — failure_log.txt: [2025-08-21 06:55:46,011] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058793+00:00 — failure_log.txt: [2025-08-21 07:00:56,118] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058806+00:00 — failure_log.txt: [2025-08-21 07:06:00,660] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058815+00:00 — failure_log.txt: [2025-08-21 07:11:08,167] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058822+00:00 — failure_log.txt: [2025-08-21 07:16:27,584] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058829+00:00 — failure_log.txt: [2025-08-21 07:21:46,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058835+00:00 — failure_log.txt: [2025-08-21 07:26:57,721] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058842+00:00 — failure_log.txt: [2025-08-21 07:32:12,119] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058849+00:00 — failure_log.txt: [2025-08-21 07:37:19,777] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058860+00:00 — failure_log.txt: [2025-08-21 07:42:28,657] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058872+00:00 — failure_log.txt: [2025-08-21 07:47:35,533] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058885+00:00 — failure_log.txt: [2025-08-21 07:52:45,921] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058898+00:00 — failure_log.txt: [2025-08-21 07:57:54,539] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058909+00:00 — failure_log.txt: [2025-08-21 08:03:09,140] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058916+00:00 — failure_log.txt: [2025-08-21 08:08:20,813] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058923+00:00 — failure_log.txt: [2025-08-21 08:13:25,676] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058930+00:00 — failure_log.txt: [2025-08-21 08:18:36,759] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058937+00:00 — failure_log.txt: [2025-08-21 08:23:40,778] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058944+00:00 — failure_log.txt: [2025-08-21 08:28:51,005] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058952+00:00 — failure_log.txt: [2025-08-21 08:33:55,510] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058964+00:00 — failure_log.txt: [2025-08-21 08:39:12,133] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058981+00:00 — failure_log.txt: [2025-08-21 08:44:25,521] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.058995+00:00 — failure_log.txt: [2025-08-21 08:49:39,661] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059006+00:00 — failure_log.txt: [2025-08-21 08:54:55,698] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059013+00:00 — failure_log.txt: [2025-08-21 09:00:00,741] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059020+00:00 — failure_log.txt: [2025-08-21 09:05:13,600] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059027+00:00 — failure_log.txt: [2025-08-21 09:10:27,784] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059034+00:00 — failure_log.txt: [2025-08-21 09:15:36,214] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059041+00:00 — failure_log.txt: [2025-08-21 09:20:45,208] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059048+00:00 — failure_log.txt: [2025-08-21 09:26:03,127] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059061+00:00 — failure_log.txt: [2025-08-21 09:31:14,606] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059073+00:00 — failure_log.txt: [2025-08-21 09:36:33,812] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059087+00:00 — failure_log.txt: [2025-08-21 09:41:49,670] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059099+00:00 — failure_log.txt: [2025-08-21 09:47:09,679] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059108+00:00 — failure_log.txt: [2025-08-21 09:52:25,156] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059115+00:00 — failure_log.txt: [2025-08-21 09:57:32,611] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059122+00:00 — failure_log.txt: [2025-08-21 10:02:44,784] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059129+00:00 — failure_log.txt: [2025-08-21 10:07:50,248] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059136+00:00 — failure_log.txt: [2025-08-21 10:13:09,365] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059143+00:00 — failure_log.txt: [2025-08-21 10:18:17,645] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059153+00:00 — failure_log.txt: [2025-08-21 10:23:29,853] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059166+00:00 — failure_log.txt: [2025-08-21 10:28:45,777] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059179+00:00 — failure_log.txt: [2025-08-21 10:33:54,674] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059196+00:00 — failure_log.txt: [2025-08-21 10:39:14,607] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059206+00:00 — failure_log.txt: [2025-08-21 10:44:19,127] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059213+00:00 — failure_log.txt: [2025-08-21 10:49:30,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059220+00:00 — failure_log.txt: [2025-08-21 10:54:45,650] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059229+00:00 — failure_log.txt: [2025-08-21 10:59:49,703] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059236+00:00 — failure_log.txt: [2025-08-21 11:04:57,514] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059243+00:00 — failure_log.txt: [2025-08-21 11:10:10,233] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059255+00:00 — failure_log.txt: [2025-08-21 11:15:18,903] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059268+00:00 — failure_log.txt: [2025-08-21 11:20:29,643] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059281+00:00 — failure_log.txt: [2025-08-21 11:25:42,597] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059294+00:00 — failure_log.txt: [2025-08-21 11:30:49,691] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059304+00:00 — failure_log.txt: [2025-08-21 11:36:03,876] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059310+00:00 — failure_log.txt: [2025-08-21 11:41:11,692] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059317+00:00 — failure_log.txt: [2025-08-21 11:46:19,602] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059324+00:00 — failure_log.txt: [2025-08-21 11:51:31,700] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059331+00:00 — failure_log.txt: [2025-08-21 11:56:41,668] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059338+00:00 — failure_log.txt: [2025-08-21 12:01:46,585] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059347+00:00 — failure_log.txt: [2025-08-21 12:06:54,450] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059360+00:00 — failure_log.txt: [2025-08-21 12:11:59,726] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059372+00:00 — failure_log.txt: [2025-08-21 12:17:12,286] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059386+00:00 — failure_log.txt: [2025-08-21 12:22:19,929] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059398+00:00 — failure_log.txt: [2025-08-21 12:27:29,131] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059406+00:00 — failure_log.txt: [2025-08-21 12:32:40,962] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059413+00:00 — failure_log.txt: [2025-08-21 12:37:56,382] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059419+00:00 — failure_log.txt: [2025-08-21 12:43:10,933] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059426+00:00 — failure_log.txt: [2025-08-21 12:48:21,893] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059433+00:00 — failure_log.txt: [2025-08-21 12:53:33,724] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059440+00:00 — failure_log.txt: [2025-08-21 12:58:39,982] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059451+00:00 — failure_log.txt: [2025-08-21 13:03:45,621] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059470+00:00 — failure_log.txt: [2025-08-21 13:08:56,712] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059485+00:00 — failure_log.txt: [2025-08-21 13:14:15,975] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059497+00:00 — failure_log.txt: [2025-08-21 13:19:23,570] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059505+00:00 — failure_log.txt: [2025-08-21 13:24:36,411] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059512+00:00 — failure_log.txt: [2025-08-21 13:29:45,608] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059519+00:00 — failure_log.txt: [2025-08-21 13:34:55,673] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059526+00:00 — failure_log.txt: [2025-08-21 13:40:12,549] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059533+00:00 — failure_log.txt: [2025-08-21 13:45:26,554] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059557+00:00 — failure_log.txt: [2025-08-21 13:50:41,478] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059570+00:00 — failure_log.txt: [2025-08-21 13:55:56,831] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059582+00:00 — failure_log.txt: [2025-08-21 14:01:14,879] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059596+00:00 — failure_log.txt: [2025-08-21 14:06:30,006] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059608+00:00 — failure_log.txt: [2025-08-21 14:11:48,509] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059617+00:00 — failure_log.txt: [2025-08-21 14:17:02,885] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059628+00:00 — failure_log.txt: [2025-08-21 14:22:15,406] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059635+00:00 — failure_log.txt: [2025-08-21 14:27:32,421] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059642+00:00 — failure_log.txt: [2025-08-21 14:32:43,639] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059648+00:00 — failure_log.txt: [2025-08-21 14:37:49,179] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059656+00:00 — failure_log.txt: [2025-08-21 14:42:54,531] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059668+00:00 — failure_log.txt: [2025-08-21 14:48:02,694] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059680+00:00 — failure_log.txt: [2025-08-21 14:53:17,968] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059694+00:00 — failure_log.txt: [2025-08-21 14:58:30,656] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059706+00:00 — failure_log.txt: [2025-08-21 15:03:45,571] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059716+00:00 — failure_log.txt: [2025-08-21 15:08:52,665] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059723+00:00 — failure_log.txt: [2025-08-21 15:13:58,693] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059730+00:00 — failure_log.txt: [2025-08-21 15:19:09,959] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059740+00:00 — failure_log.txt: [2025-08-21 15:24:19,086] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059747+00:00 — failure_log.txt: [2025-08-21 15:29:29,555] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059755+00:00 — failure_log.txt: [2025-08-21 15:34:43,627] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059767+00:00 — failure_log.txt: [2025-08-21 15:39:49,614] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059779+00:00 — failure_log.txt: [2025-08-21 15:44:57,811] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059793+00:00 — failure_log.txt: [2025-08-21 15:50:12,489] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059806+00:00 — failure_log.txt: [2025-08-21 15:55:22,411] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059815+00:00 — failure_log.txt: [2025-08-21 16:00:27,529] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059822+00:00 — failure_log.txt: [2025-08-21 16:05:35,591] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059828+00:00 — failure_log.txt: [2025-08-21 16:10:40,494] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059835+00:00 — failure_log.txt: [2025-08-21 16:15:53,978] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059842+00:00 — failure_log.txt: [2025-08-21 16:21:05,281] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059849+00:00 — failure_log.txt: [2025-08-21 16:26:17,511] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059860+00:00 — failure_log.txt: [2025-08-21 16:31:46,010] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059872+00:00 — failure_log.txt: [2025-08-21 16:31:52,825] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059885+00:00 — failure_log.txt: [2025-08-21 16:32:14,267] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059898+00:00 — failure_log.txt: [2025-08-21 16:32:48,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059909+00:00 — failure_log.txt: [2025-08-21 16:33:46,099] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059916+00:00 — failure_log.txt: [2025-08-21 16:35:20,300] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059923+00:00 — failure_log.txt: [2025-08-21 16:38:12,171] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059930+00:00 — failure_log.txt: [2025-08-21 16:43:24,729] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059937+00:00 — failure_log.txt: [2025-08-21 16:49:51,214] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059943+00:00 — failure_log.txt: [2025-08-21 16:49:57,911] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059951+00:00 — failure_log.txt: [2025-08-21 16:50:17,998] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059963+00:00 — failure_log.txt: [2025-08-21 16:50:47,230] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059980+00:00 — failure_log.txt: [2025-08-21 16:51:45,332] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.059994+00:00 — failure_log.txt: [2025-08-21 16:53:11,312] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060006+00:00 — failure_log.txt: [2025-08-21 16:56:05,011] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060013+00:00 — failure_log.txt: [2025-08-21 17:00:14,649] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060020+00:00 — failure_log.txt: [2025-08-21 17:00:21,904] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060027+00:00 — failure_log.txt: [2025-08-21 17:00:36,715] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060037+00:00 — failure_log.txt: [2025-08-21 17:01:13,983] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060044+00:00 — failure_log.txt: [2025-08-21 17:02:18,776] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060054+00:00 — failure_log.txt: [2025-08-21 17:03:56,338] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060067+00:00 — failure_log.txt: [2025-08-21 17:07:48,700] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060079+00:00 — failure_log.txt: [2025-08-21 17:07:54,412] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060092+00:00 — failure_log.txt: [2025-08-21 17:08:15,186] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060104+00:00 — failure_log.txt: [2025-08-21 17:08:46,977] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060112+00:00 — failure_log.txt: [2025-08-21 17:09:41,285] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060119+00:00 — failure_log.txt: [2025-08-21 17:11:11,997] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060125+00:00 — failure_log.txt: [2025-08-21 17:13:58,013] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060132+00:00 — failure_log.txt: [2025-08-21 17:20:38,233] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060139+00:00 — failure_log.txt: [2025-08-21 17:20:42,577] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060146+00:00 — failure_log.txt: [2025-08-21 17:21:01,311] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060159+00:00 — failure_log.txt: [2025-08-21 17:21:34,501] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060171+00:00 — failure_log.txt: [2025-08-21 17:22:18,497] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060185+00:00 — failure_log.txt: [2025-08-21 17:23:55,532] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060198+00:00 — failure_log.txt: [2025-08-21 17:28:45,257] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060216+00:00 — failure_log.txt: [2025-08-21 17:32:13,367] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060223+00:00 — failure_log.txt: [2025-08-21 17:32:26,929] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060229+00:00 — failure_log.txt: [2025-08-21 17:32:46,163] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060240+00:00 — failure_log.txt: [2025-08-21 17:33:19,516] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060247+00:00 — failure_log.txt: [2025-08-21 17:34:08,041] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060254+00:00 — failure_log.txt: [2025-08-21 17:35:45,260] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060267+00:00 — failure_log.txt: [2025-08-21 17:38:38,886] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060279+00:00 — failure_log.txt: [2025-08-21 17:42:45,693] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060292+00:00 — failure_log.txt: [2025-08-21 17:42:49,426] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060305+00:00 — failure_log.txt: [2025-08-21 17:43:08,001] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060315+00:00 — failure_log.txt: [2025-08-21 17:43:37,162] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060322+00:00 — failure_log.txt: [2025-08-21 17:44:31,263] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060329+00:00 — failure_log.txt: [2025-08-21 17:46:03,403] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060335+00:00 — failure_log.txt: [2025-08-21 17:48:50,122] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060342+00:00 — failure_log.txt: [2025-08-21 17:54:04,686] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060349+00:00 — failure_log.txt: [2025-08-21 17:59:15,408] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060359+00:00 — failure_log.txt: [2025-08-21 18:04:24,526] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060371+00:00 — failure_log.txt: [2025-08-21 18:09:28,189] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060383+00:00 — failure_log.txt: [2025-08-21 18:14:39,160] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060397+00:00 — failure_log.txt: [2025-08-21 18:19:47,251] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060409+00:00 — failure_log.txt: [2025-08-21 18:25:00,134] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060416+00:00 — failure_log.txt: [2025-08-21 18:30:09,286] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060423+00:00 — failure_log.txt: [2025-08-21 18:35:18,385] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060430+00:00 — failure_log.txt: [2025-08-21 18:40:22,709] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060436+00:00 — failure_log.txt: [2025-08-21 18:45:27,640] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060447+00:00 — failure_log.txt: [2025-08-21 18:50:39,570] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060457+00:00 — failure_log.txt: [2025-08-21 18:55:49,231] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060469+00:00 — failure_log.txt: [2025-08-21 19:01:08,538] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060485+00:00 — failure_log.txt: [2025-08-21 19:06:14,371] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060499+00:00 — failure_log.txt: [2025-08-21 19:11:23,093] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060510+00:00 — failure_log.txt: [2025-08-21 19:16:36,281] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060517+00:00 — failure_log.txt: [2025-08-21 19:21:42,162] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060524+00:00 — failure_log.txt: [2025-08-21 19:26:55,256] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060531+00:00 — failure_log.txt: [2025-08-21 19:32:09,271] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060553+00:00 — failure_log.txt: [2025-08-21 19:37:16,544] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060560+00:00 — failure_log.txt: [2025-08-21 19:42:28,044] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060571+00:00 — failure_log.txt: [2025-08-21 19:47:42,343] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060584+00:00 — failure_log.txt: [2025-08-21 19:52:53,151] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060595+00:00 — failure_log.txt: [2025-08-21 19:58:09,231] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060609+00:00 — failure_log.txt: [2025-08-21 20:03:22,140] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060621+00:00 — failure_log.txt: [2025-08-21 20:08:31,212] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060629+00:00 — failure_log.txt: [2025-08-21 20:13:35,844] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060636+00:00 — failure_log.txt: [2025-08-21 20:18:46,168] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060643+00:00 — failure_log.txt: [2025-08-21 20:22:22,427] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060650+00:00 — failure_log.txt: [2025-08-21 20:22:26,994] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060657+00:00 — failure_log.txt: [2025-08-21 20:22:43,114] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060663+00:00 — failure_log.txt: [2025-08-21 20:23:12,334] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060674+00:00 — failure_log.txt: [2025-08-21 20:23:57,183] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060687+00:00 — failure_log.txt: [2025-08-21 20:25:28,180] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060700+00:00 — failure_log.txt: [2025-08-21 20:28:22,237] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060713+00:00 — failure_log.txt: [2025-08-21 20:33:35,134] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060724+00:00 — failure_log.txt: [2025-08-21 20:40:42,687] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060731+00:00 — failure_log.txt: [2025-08-21 20:44:17,753] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060737+00:00 — failure_log.txt: [2025-08-21 20:44:21,601] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060748+00:00 — failure_log.txt: [2025-08-21 20:44:42,491] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060755+00:00 — failure_log.txt: [2025-08-21 20:45:25,836] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060762+00:00 — failure_log.txt: [2025-08-21 20:46:33,312] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060773+00:00 — failure_log.txt: [2025-08-21 20:48:12,326] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060786+00:00 — failure_log.txt: [2025-08-21 20:51:16,168] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060799+00:00 — failure_log.txt: [2025-08-21 20:56:41,107] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060812+00:00 — failure_log.txt: [2025-08-21 21:01:51,109] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060823+00:00 — failure_log.txt: [2025-08-21 21:07:16,606] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060829+00:00 — failure_log.txt: [2025-08-21 21:12:32,513] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060836+00:00 — failure_log.txt: [2025-08-21 21:17:37,528] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060843+00:00 — failure_log.txt: [2025-08-21 21:22:44,216] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060850+00:00 — failure_log.txt: [2025-08-21 21:27:48,598] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060857+00:00 — failure_log.txt: [2025-08-21 21:32:56,720] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060870+00:00 — failure_log.txt: [2025-08-21 21:36:23,094] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060883+00:00 — failure_log.txt: [2025-08-21 21:36:30,093] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060895+00:00 — failure_log.txt: [2025-08-21 21:36:49,143] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060908+00:00 — failure_log.txt: [2025-08-21 21:37:21,016] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060920+00:00 — failure_log.txt: [2025-08-21 21:38:19,829] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060927+00:00 — failure_log.txt: [2025-08-21 21:40:20,998] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060934+00:00 — failure_log.txt: [2025-08-21 21:43:18,492] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060941+00:00 — failure_log.txt: [2025-08-21 21:43:24,245] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060947+00:00 — failure_log.txt: [2025-08-21 21:43:39,511] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060954+00:00 — failure_log.txt: [2025-08-21 21:44:14,339] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060961+00:00 — failure_log.txt: [2025-08-21 21:45:17,432] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060974+00:00 — failure_log.txt: [2025-08-21 21:46:49,552] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.060990+00:00 — failure_log.txt: [2025-08-21 21:49:38,769] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061004+00:00 — failure_log.txt: [2025-08-21 21:51:55,916] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061016+00:00 — failure_log.txt: [2025-08-21 21:52:00,112] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061024+00:00 — failure_log.txt: [2025-08-21 21:52:18,017] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061031+00:00 — failure_log.txt: [2025-08-21 21:52:48,543] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061038+00:00 — failure_log.txt: [2025-08-21 21:53:37,016] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061045+00:00 — failure_log.txt: [2025-08-21 21:55:08,998] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061052+00:00 — failure_log.txt: [2025-08-21 21:57:55,907] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061061+00:00 — failure_log.txt: [2025-08-21 22:02:33,535] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061072+00:00 — failure_log.txt: [2025-08-21 22:21:11,148] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061083+00:00 — failure_log.txt: [2025-08-21 22:25:42,078] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061094+00:00 — failure_log.txt: [2025-08-21 22:29:49,021] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061108+00:00 — failure_log.txt: [2025-08-22 23:12:39,314] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.061132+00:00 — failure_log.txt: [2025-08-26 18:46:38,751] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.061145+00:00 — failure_log.txt: [2025-08-27 17:57:49.772334] Task succeeded: Watchdog Log Checker
+- 2025-12-10T07:04:19.061158+00:00 — failure_log.txt: [2025-08-28 17:29:26.779561] Task succeeded: Watchdog Log Checker
+- 2025-12-10T07:04:19.061172+00:00 — failure_log.txt: [2025-08-28 20:44:54,681] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.061190+00:00 — failure_log.txt: [2025-08-28 20:44:54.786506] Task succeeded: Watchdog Log Checker
+- 2025-12-10T07:04:19.061205+00:00 — failure_log.txt: [2025-08-28 21:02:38,592] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061217+00:00 — failure_log.txt: [2025-08-28 21:02:40.074957] Task succeeded: Watchdog Log Checker
+- 2025-12-10T07:04:19.061233+00:00 — failure_log.txt: [2025-08-29 16:23:19,111] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- 2025-12-10T07:04:19.061241+00:00 — failure_log.txt: [2025-08-29 16:23:19.158331] Task succeeded: Watchdog Log Checker
+- 2025-12-10T07:04:19.061248+00:00 — failure_log.txt: [2025-08-29 16:24:32,472] Alert already sent today. Skipping SMS.
+- 2025-12-10T07:04:19.061255+00:00 — failure_log.txt: [2025-08-29 16:24:34.204914] Task succeeded: Watchdog Log Checker
+- 2025-08-12T17:50:31+00:00 — weekly_alert_log.txt: [2025-08-12T17:50:31Z] [WARN] absorption log missing
+- 2025-08-12T18:50:29+00:00 — weekly_alert_log.txt: [2025-08-12T18:50:29Z] [WARN] absorption log missing
+- 2025-08-12T19:49:14+00:00 — weekly_alert_log.txt: [2025-08-12T19:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-12T19:50:29+00:00 — weekly_alert_log.txt: [2025-08-12T19:50:29Z] [WARN] absorption log missing
+- 2025-08-12T20:49:12+00:00 — weekly_alert_log.txt: [2025-08-12T20:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-12T20:50:26+00:00 — weekly_alert_log.txt: [2025-08-12T20:50:26Z] [WARN] absorption log missing
+- 2025-08-12T21:49:13+00:00 — weekly_alert_log.txt: [2025-08-12T21:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-12T21:50:27+00:00 — weekly_alert_log.txt: [2025-08-12T21:50:27Z] [WARN] absorption log missing
+- 2025-08-12T22:49:10+00:00 — weekly_alert_log.txt: [2025-08-12T22:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-12T22:50:26+00:00 — weekly_alert_log.txt: [2025-08-12T22:50:26Z] [WARN] absorption log missing
+- 2025-08-12T23:49:12+00:00 — weekly_alert_log.txt: [2025-08-12T23:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-12T23:50:27+00:00 — weekly_alert_log.txt: [2025-08-12T23:50:27Z] [WARN] absorption log missing
+- 2025-08-13T00:49:11+00:00 — weekly_alert_log.txt: [2025-08-13T00:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T00:50:28+00:00 — weekly_alert_log.txt: [2025-08-13T00:50:28Z] [WARN] absorption log missing
+- 2025-08-13T01:49:13+00:00 — weekly_alert_log.txt: [2025-08-13T01:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T01:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T01:50:27Z] [WARN] absorption log missing
+- 2025-08-13T02:49:13+00:00 — weekly_alert_log.txt: [2025-08-13T02:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T02:50:25+00:00 — weekly_alert_log.txt: [2025-08-13T02:50:25Z] [WARN] absorption log missing
+- 2025-08-13T03:49:11+00:00 — weekly_alert_log.txt: [2025-08-13T03:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T03:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T03:50:27Z] [WARN] absorption log missing
+- 2025-08-13T04:49:14+00:00 — weekly_alert_log.txt: [2025-08-13T04:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T04:50:29+00:00 — weekly_alert_log.txt: [2025-08-13T04:50:29Z] [WARN] absorption log missing
+- 2025-08-13T05:49:11+00:00 — weekly_alert_log.txt: [2025-08-13T05:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T05:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T05:50:27Z] [WARN] absorption log missing
+- 2025-08-13T06:49:15+00:00 — weekly_alert_log.txt: [2025-08-13T06:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T06:50:31+00:00 — weekly_alert_log.txt: [2025-08-13T06:50:31Z] [WARN] absorption log missing
+- 2025-08-13T07:49:13+00:00 — weekly_alert_log.txt: [2025-08-13T07:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T07:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T07:50:27Z] [WARN] absorption log missing
+- 2025-08-13T08:49:15+00:00 — weekly_alert_log.txt: [2025-08-13T08:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T08:50:30+00:00 — weekly_alert_log.txt: [2025-08-13T08:50:30Z] [WARN] absorption log missing
+- 2025-08-13T09:49:15+00:00 — weekly_alert_log.txt: [2025-08-13T09:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T09:50:32+00:00 — weekly_alert_log.txt: [2025-08-13T09:50:32Z] [WARN] absorption log missing
+- 2025-08-13T10:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T10:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T10:50:30+00:00 — weekly_alert_log.txt: [2025-08-13T10:50:30Z] [WARN] absorption log missing
+- 2025-08-13T11:49:13+00:00 — weekly_alert_log.txt: [2025-08-13T11:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T11:50:28+00:00 — weekly_alert_log.txt: [2025-08-13T11:50:28Z] [WARN] absorption log missing
+- 2025-08-13T12:49:15+00:00 — weekly_alert_log.txt: [2025-08-13T12:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T12:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T12:50:27Z] [WARN] absorption log missing
+- 2025-08-13T13:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T13:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T13:50:30+00:00 — weekly_alert_log.txt: [2025-08-13T13:50:30Z] [WARN] absorption log missing
+- 2025-08-13T14:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T14:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T14:50:25+00:00 — weekly_alert_log.txt: [2025-08-13T14:50:25Z] [WARN] absorption log missing
+- 2025-08-13T15:49:10+00:00 — weekly_alert_log.txt: [2025-08-13T15:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T15:50:23+00:00 — weekly_alert_log.txt: [2025-08-13T15:50:23Z] [WARN] absorption log missing
+- 2025-08-13T16:49:09+00:00 — weekly_alert_log.txt: [2025-08-13T16:49:09Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T16:50:24+00:00 — weekly_alert_log.txt: [2025-08-13T16:50:24Z] [WARN] absorption log missing
+- 2025-08-13T17:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T17:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T17:50:29+00:00 — weekly_alert_log.txt: [2025-08-13T17:50:29Z] [WARN] absorption log missing
+- 2025-08-13T18:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T18:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T18:50:25+00:00 — weekly_alert_log.txt: [2025-08-13T18:50:25Z] [WARN] absorption log missing
+- 2025-08-13T19:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T19:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T19:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T19:50:27Z] [WARN] absorption log missing
+- 2025-08-13T20:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T20:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T20:50:26+00:00 — weekly_alert_log.txt: [2025-08-13T20:50:26Z] [WARN] absorption log missing
+- 2025-08-13T21:49:11+00:00 — weekly_alert_log.txt: [2025-08-13T21:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T21:50:25+00:00 — weekly_alert_log.txt: [2025-08-13T21:50:25Z] [WARN] absorption log missing
+- 2025-08-13T22:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T22:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T22:50:29+00:00 — weekly_alert_log.txt: [2025-08-13T22:50:29Z] [WARN] absorption log missing
+- 2025-08-13T23:49:12+00:00 — weekly_alert_log.txt: [2025-08-13T23:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-13T23:50:27+00:00 — weekly_alert_log.txt: [2025-08-13T23:50:27Z] [WARN] absorption log missing
+- 2025-08-14T00:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T00:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T00:50:26+00:00 — weekly_alert_log.txt: [2025-08-14T00:50:26Z] [WARN] absorption log missing
+- 2025-08-14T01:49:11+00:00 — weekly_alert_log.txt: [2025-08-14T01:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T01:50:25+00:00 — weekly_alert_log.txt: [2025-08-14T01:50:25Z] [WARN] absorption log missing
+- 2025-08-14T02:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T02:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T02:50:27+00:00 — weekly_alert_log.txt: [2025-08-14T02:50:27Z] [WARN] absorption log missing
+- 2025-08-14T03:24:15+00:00 — weekly_alert_log.txt: [2025-08-14T03:24:15Z] [WARN] heartbeat missing/unparsable
+- 2025-08-14T03:24:15+00:00 — weekly_alert_log.txt: [2025-08-14T03:24:15Z] [WARN] index missing
+- 2025-08-14T03:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T03:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T03:50:28+00:00 — weekly_alert_log.txt: [2025-08-14T03:50:28Z] [WARN] absorption log missing
+- 2025-08-14T04:49:13+00:00 — weekly_alert_log.txt: [2025-08-14T04:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T04:50:30+00:00 — weekly_alert_log.txt: [2025-08-14T04:50:30Z] [WARN] absorption log missing
+- 2025-08-14T05:49:13+00:00 — weekly_alert_log.txt: [2025-08-14T05:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T05:50:28+00:00 — weekly_alert_log.txt: [2025-08-14T05:50:28Z] [WARN] absorption log missing
+- 2025-08-14T06:49:14+00:00 — weekly_alert_log.txt: [2025-08-14T06:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T06:50:30+00:00 — weekly_alert_log.txt: [2025-08-14T06:50:30Z] [WARN] absorption log missing
+- 2025-08-14T07:49:14+00:00 — weekly_alert_log.txt: [2025-08-14T07:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T07:50:28+00:00 — weekly_alert_log.txt: [2025-08-14T07:50:28Z] [WARN] absorption log missing
+- 2025-08-14T08:49:14+00:00 — weekly_alert_log.txt: [2025-08-14T08:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T08:50:33+00:00 — weekly_alert_log.txt: [2025-08-14T08:50:33Z] [WARN] absorption log missing
+- 2025-08-14T09:49:15+00:00 — weekly_alert_log.txt: [2025-08-14T09:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T09:50:30+00:00 — weekly_alert_log.txt: [2025-08-14T09:50:30Z] [WARN] absorption log missing
+- 2025-08-14T10:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T10:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T10:50:27+00:00 — weekly_alert_log.txt: [2025-08-14T10:50:27Z] [WARN] absorption log missing
+- 2025-08-14T11:49:11+00:00 — weekly_alert_log.txt: [2025-08-14T11:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T11:50:28+00:00 — weekly_alert_log.txt: [2025-08-14T11:50:28Z] [WARN] absorption log missing
+- 2025-08-14T12:49:13+00:00 — weekly_alert_log.txt: [2025-08-14T12:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T12:50:26+00:00 — weekly_alert_log.txt: [2025-08-14T12:50:26Z] [WARN] absorption log missing
+- 2025-08-14T13:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T13:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T13:50:30+00:00 — weekly_alert_log.txt: [2025-08-14T13:50:30Z] [WARN] absorption log missing
+- 2025-08-14T14:49:10+00:00 — weekly_alert_log.txt: [2025-08-14T14:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T14:50:22+00:00 — weekly_alert_log.txt: [2025-08-14T14:50:22Z] [WARN] absorption log missing
+- 2025-08-14T15:49:09+00:00 — weekly_alert_log.txt: [2025-08-14T15:49:09Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T15:50:23+00:00 — weekly_alert_log.txt: [2025-08-14T15:50:23Z] [WARN] absorption log missing
+- 2025-08-14T16:49:11+00:00 — weekly_alert_log.txt: [2025-08-14T16:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T16:50:25+00:00 — weekly_alert_log.txt: [2025-08-14T16:50:25Z] [WARN] absorption log missing
+- 2025-08-14T17:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T17:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T17:50:29+00:00 — weekly_alert_log.txt: [2025-08-14T17:50:29Z] [WARN] absorption log missing
+- 2025-08-14T18:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T18:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T18:50:25+00:00 — weekly_alert_log.txt: [2025-08-14T18:50:25Z] [WARN] absorption log missing
+- 2025-08-14T19:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T19:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T19:50:28+00:00 — weekly_alert_log.txt: [2025-08-14T19:50:28Z] [WARN] absorption log missing
+- 2025-08-14T20:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T20:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T20:50:29+00:00 — weekly_alert_log.txt: [2025-08-14T20:50:29Z] [WARN] absorption log missing
+- 2025-08-14T21:49:11+00:00 — weekly_alert_log.txt: [2025-08-14T21:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T21:50:26+00:00 — weekly_alert_log.txt: [2025-08-14T21:50:26Z] [WARN] absorption log missing
+- 2025-08-14T22:49:11+00:00 — weekly_alert_log.txt: [2025-08-14T22:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T22:50:27+00:00 — weekly_alert_log.txt: [2025-08-14T22:50:27Z] [WARN] absorption log missing
+- 2025-08-14T23:49:12+00:00 — weekly_alert_log.txt: [2025-08-14T23:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-14T23:50:27+00:00 — weekly_alert_log.txt: [2025-08-14T23:50:27Z] [WARN] absorption log missing
+- 2025-08-15T00:49:14+00:00 — weekly_alert_log.txt: [2025-08-15T00:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T00:50:27+00:00 — weekly_alert_log.txt: [2025-08-15T00:50:27Z] [WARN] absorption log missing
+- 2025-08-15T01:49:11+00:00 — weekly_alert_log.txt: [2025-08-15T01:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T01:50:26+00:00 — weekly_alert_log.txt: [2025-08-15T01:50:26Z] [WARN] absorption log missing
+- 2025-08-15T02:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T02:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T02:50:25+00:00 — weekly_alert_log.txt: [2025-08-15T02:50:25Z] [WARN] absorption log missing
+- 2025-08-15T03:24:16+00:00 — weekly_alert_log.txt: [2025-08-15T03:24:16Z] [WARN] heartbeat missing/unparsable
+- 2025-08-15T03:24:16+00:00 — weekly_alert_log.txt: [2025-08-15T03:24:16Z] [WARN] index missing
+- 2025-08-15T03:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T03:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T03:50:28+00:00 — weekly_alert_log.txt: [2025-08-15T03:50:28Z] [WARN] absorption log missing
+- 2025-08-15T04:49:15+00:00 — weekly_alert_log.txt: [2025-08-15T04:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T04:50:31+00:00 — weekly_alert_log.txt: [2025-08-15T04:50:31Z] [WARN] absorption log missing
+- 2025-08-15T05:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T05:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T05:50:27+00:00 — weekly_alert_log.txt: [2025-08-15T05:50:27Z] [WARN] absorption log missing
+- 2025-08-15T06:49:15+00:00 — weekly_alert_log.txt: [2025-08-15T06:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T06:50:31+00:00 — weekly_alert_log.txt: [2025-08-15T06:50:31Z] [WARN] absorption log missing
+- 2025-08-15T07:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T07:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T07:50:30+00:00 — weekly_alert_log.txt: [2025-08-15T07:50:30Z] [WARN] absorption log missing
+- 2025-08-15T08:49:15+00:00 — weekly_alert_log.txt: [2025-08-15T08:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T08:50:29+00:00 — weekly_alert_log.txt: [2025-08-15T08:50:29Z] [WARN] absorption log missing
+- 2025-08-15T09:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T09:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T09:50:29+00:00 — weekly_alert_log.txt: [2025-08-15T09:50:29Z] [WARN] absorption log missing
+- 2025-08-15T10:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T10:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T10:50:28+00:00 — weekly_alert_log.txt: [2025-08-15T10:50:28Z] [WARN] absorption log missing
+- 2025-08-15T11:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T11:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T11:50:29+00:00 — weekly_alert_log.txt: [2025-08-15T11:50:29Z] [WARN] absorption log missing
+- 2025-08-15T12:49:15+00:00 — weekly_alert_log.txt: [2025-08-15T12:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T12:50:27+00:00 — weekly_alert_log.txt: [2025-08-15T12:50:27Z] [WARN] absorption log missing
+- 2025-08-15T13:49:14+00:00 — weekly_alert_log.txt: [2025-08-15T13:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T13:50:31+00:00 — weekly_alert_log.txt: [2025-08-15T13:50:31Z] [WARN] absorption log missing
+- 2025-08-15T14:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T14:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T14:50:26+00:00 — weekly_alert_log.txt: [2025-08-15T14:50:26Z] [WARN] absorption log missing
+- 2025-08-15T15:49:11+00:00 — weekly_alert_log.txt: [2025-08-15T15:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T15:50:24+00:00 — weekly_alert_log.txt: [2025-08-15T15:50:24Z] [WARN] absorption log missing
+- 2025-08-15T16:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T16:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T16:50:26+00:00 — weekly_alert_log.txt: [2025-08-15T16:50:26Z] [WARN] absorption log missing
+- 2025-08-15T17:49:11+00:00 — weekly_alert_log.txt: [2025-08-15T17:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T17:50:26+00:00 — weekly_alert_log.txt: [2025-08-15T17:50:26Z] [WARN] absorption log missing
+- 2025-08-15T18:49:13+00:00 — weekly_alert_log.txt: [2025-08-15T18:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T18:50:34+00:00 — weekly_alert_log.txt: [2025-08-15T18:50:34Z] [WARN] absorption log missing
+- 2025-08-15T19:49:12+00:00 — weekly_alert_log.txt: [2025-08-15T19:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T19:50:33+00:00 — weekly_alert_log.txt: [2025-08-15T19:50:33Z] [WARN] absorption log missing
+- 2025-08-15T20:49:10+00:00 — weekly_alert_log.txt: [2025-08-15T20:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T20:50:28+00:00 — weekly_alert_log.txt: [2025-08-15T20:50:28Z] [WARN] absorption log missing
+- 2025-08-15T21:49:11+00:00 — weekly_alert_log.txt: [2025-08-15T21:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T21:50:30+00:00 — weekly_alert_log.txt: [2025-08-15T21:50:30Z] [WARN] absorption log missing
+- 2025-08-15T22:49:11+00:00 — weekly_alert_log.txt: [2025-08-15T22:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T22:50:33+00:00 — weekly_alert_log.txt: [2025-08-15T22:50:33Z] [WARN] absorption log missing
+- 2025-08-15T23:49:12+00:00 — weekly_alert_log.txt: [2025-08-15T23:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-15T23:50:32+00:00 — weekly_alert_log.txt: [2025-08-15T23:50:32Z] [WARN] absorption log missing
+- 2025-08-16T00:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T00:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T00:50:33+00:00 — weekly_alert_log.txt: [2025-08-16T00:50:33Z] [WARN] absorption log missing
+- 2025-08-16T01:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T01:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T01:50:31+00:00 — weekly_alert_log.txt: [2025-08-16T01:50:31Z] [WARN] absorption log missing
+- 2025-08-16T02:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T02:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T02:50:29+00:00 — weekly_alert_log.txt: [2025-08-16T02:50:29Z] [WARN] absorption log missing
+- 2025-08-16T03:24:13+00:00 — weekly_alert_log.txt: [2025-08-16T03:24:13Z] [WARN] heartbeat missing/unparsable
+- 2025-08-16T03:24:13+00:00 — weekly_alert_log.txt: [2025-08-16T03:24:13Z] [WARN] index missing
+- 2025-08-16T03:49:13+00:00 — weekly_alert_log.txt: [2025-08-16T03:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T03:50:34+00:00 — weekly_alert_log.txt: [2025-08-16T03:50:34Z] [WARN] absorption log missing
+- 2025-08-16T04:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T04:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T04:50:33+00:00 — weekly_alert_log.txt: [2025-08-16T04:50:33Z] [WARN] absorption log missing
+- 2025-08-16T05:49:14+00:00 — weekly_alert_log.txt: [2025-08-16T05:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T05:50:33+00:00 — weekly_alert_log.txt: [2025-08-16T05:50:33Z] [WARN] absorption log missing
+- 2025-08-16T06:49:14+00:00 — weekly_alert_log.txt: [2025-08-16T06:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T06:50:38+00:00 — weekly_alert_log.txt: [2025-08-16T06:50:38Z] [WARN] absorption log missing
+- 2025-08-16T07:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T07:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T07:50:33+00:00 — weekly_alert_log.txt: [2025-08-16T07:50:33Z] [WARN] absorption log missing
+- 2025-08-16T08:49:13+00:00 — weekly_alert_log.txt: [2025-08-16T08:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T08:50:31+00:00 — weekly_alert_log.txt: [2025-08-16T08:50:31Z] [WARN] absorption log missing
+- 2025-08-16T09:49:16+00:00 — weekly_alert_log.txt: [2025-08-16T09:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T09:50:40+00:00 — weekly_alert_log.txt: [2025-08-16T09:50:40Z] [WARN] absorption log missing
+- 2025-08-16T10:49:11+00:00 — weekly_alert_log.txt: [2025-08-16T10:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T10:50:30+00:00 — weekly_alert_log.txt: [2025-08-16T10:50:30Z] [WARN] absorption log missing
+- 2025-08-16T11:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T11:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T11:50:29+00:00 — weekly_alert_log.txt: [2025-08-16T11:50:29Z] [WARN] absorption log missing
+- 2025-08-16T12:49:14+00:00 — weekly_alert_log.txt: [2025-08-16T12:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T12:50:31+00:00 — weekly_alert_log.txt: [2025-08-16T12:50:31Z] [WARN] absorption log missing
+- 2025-08-16T13:49:15+00:00 — weekly_alert_log.txt: [2025-08-16T13:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T13:50:31+00:00 — weekly_alert_log.txt: [2025-08-16T13:50:31Z] [WARN] absorption log missing
+- 2025-08-16T14:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T14:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T14:50:29+00:00 — weekly_alert_log.txt: [2025-08-16T14:50:29Z] [WARN] absorption log missing
+- 2025-08-16T15:49:11+00:00 — weekly_alert_log.txt: [2025-08-16T15:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T15:50:27+00:00 — weekly_alert_log.txt: [2025-08-16T15:50:27Z] [WARN] absorption log missing
+- 2025-08-16T16:49:13+00:00 — weekly_alert_log.txt: [2025-08-16T16:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T16:50:29+00:00 — weekly_alert_log.txt: [2025-08-16T16:50:29Z] [WARN] absorption log missing
+- 2025-08-16T17:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T17:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T17:50:32+00:00 — weekly_alert_log.txt: [2025-08-16T17:50:32Z] [WARN] absorption log missing
+- 2025-08-16T18:49:15+00:00 — weekly_alert_log.txt: [2025-08-16T18:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T18:50:36+00:00 — weekly_alert_log.txt: [2025-08-16T18:50:36Z] [WARN] absorption log missing
+- 2025-08-16T19:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T19:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T19:50:30+00:00 — weekly_alert_log.txt: [2025-08-16T19:50:30Z] [WARN] absorption log missing
+- 2025-08-16T20:49:10+00:00 — weekly_alert_log.txt: [2025-08-16T20:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T20:50:26+00:00 — weekly_alert_log.txt: [2025-08-16T20:50:26Z] [WARN] absorption log missing
+- 2025-08-16T21:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T21:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T21:50:27+00:00 — weekly_alert_log.txt: [2025-08-16T21:50:27Z] [WARN] absorption log missing
+- 2025-08-16T22:49:11+00:00 — weekly_alert_log.txt: [2025-08-16T22:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T22:50:33+00:00 — weekly_alert_log.txt: [2025-08-16T22:50:33Z] [WARN] absorption log missing
+- 2025-08-16T23:49:12+00:00 — weekly_alert_log.txt: [2025-08-16T23:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-16T23:50:31+00:00 — weekly_alert_log.txt: [2025-08-16T23:50:31Z] [WARN] absorption log missing
+- 2025-08-17T00:49:12+00:00 — weekly_alert_log.txt: [2025-08-17T00:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T00:50:29+00:00 — weekly_alert_log.txt: [2025-08-17T00:50:29Z] [WARN] absorption log missing
+- 2025-08-17T01:49:12+00:00 — weekly_alert_log.txt: [2025-08-17T01:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T01:50:31+00:00 — weekly_alert_log.txt: [2025-08-17T01:50:31Z] [WARN] absorption log missing
+- 2025-08-17T02:49:12+00:00 — weekly_alert_log.txt: [2025-08-17T02:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T02:50:28+00:00 — weekly_alert_log.txt: [2025-08-17T02:50:28Z] [WARN] absorption log missing
+- 2025-08-17T03:24:13+00:00 — weekly_alert_log.txt: [2025-08-17T03:24:13Z] [WARN] heartbeat missing/unparsable
+- 2025-08-17T03:24:13+00:00 — weekly_alert_log.txt: [2025-08-17T03:24:13Z] [WARN] index missing
+- 2025-08-17T03:49:10+00:00 — weekly_alert_log.txt: [2025-08-17T03:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T03:50:30+00:00 — weekly_alert_log.txt: [2025-08-17T03:50:30Z] [WARN] absorption log missing
+- 2025-08-17T04:49:13+00:00 — weekly_alert_log.txt: [2025-08-17T04:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T04:50:37+00:00 — weekly_alert_log.txt: [2025-08-17T04:50:37Z] [WARN] absorption log missing
+- 2025-08-17T05:49:12+00:00 — weekly_alert_log.txt: [2025-08-17T05:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T05:50:35+00:00 — weekly_alert_log.txt: [2025-08-17T05:50:35Z] [WARN] absorption log missing
+- 2025-08-17T06:49:17+00:00 — weekly_alert_log.txt: [2025-08-17T06:49:17Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T06:50:36+00:00 — weekly_alert_log.txt: [2025-08-17T06:50:36Z] [WARN] absorption log missing
+- 2025-08-17T07:49:13+00:00 — weekly_alert_log.txt: [2025-08-17T07:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T07:50:33+00:00 — weekly_alert_log.txt: [2025-08-17T07:50:33Z] [WARN] absorption log missing
+- 2025-08-17T08:49:16+00:00 — weekly_alert_log.txt: [2025-08-17T08:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T08:50:38+00:00 — weekly_alert_log.txt: [2025-08-17T08:50:38Z] [WARN] absorption log missing
+- 2025-08-17T09:49:16+00:00 — weekly_alert_log.txt: [2025-08-17T09:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T09:50:39+00:00 — weekly_alert_log.txt: [2025-08-17T09:50:39Z] [WARN] absorption log missing
+- 2025-08-17T10:49:16+00:00 — weekly_alert_log.txt: [2025-08-17T10:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T10:50:35+00:00 — weekly_alert_log.txt: [2025-08-17T10:50:35Z] [WARN] absorption log missing
+- 2025-08-17T11:49:15+00:00 — weekly_alert_log.txt: [2025-08-17T11:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T11:50:34+00:00 — weekly_alert_log.txt: [2025-08-17T11:50:34Z] [WARN] absorption log missing
+- 2025-08-17T12:49:15+00:00 — weekly_alert_log.txt: [2025-08-17T12:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T12:50:38+00:00 — weekly_alert_log.txt: [2025-08-17T12:50:38Z] [WARN] absorption log missing
+- 2025-08-17T13:49:14+00:00 — weekly_alert_log.txt: [2025-08-17T13:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T13:50:35+00:00 — weekly_alert_log.txt: [2025-08-17T13:50:35Z] [WARN] absorption log missing
+- 2025-08-17T14:49:11+00:00 — weekly_alert_log.txt: [2025-08-17T14:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T14:50:27+00:00 — weekly_alert_log.txt: [2025-08-17T14:50:27Z] [WARN] absorption log missing
+- 2025-08-17T15:49:11+00:00 — weekly_alert_log.txt: [2025-08-17T15:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T15:50:26+00:00 — weekly_alert_log.txt: [2025-08-17T15:50:26Z] [WARN] absorption log missing
+- 2025-08-17T16:49:10+00:00 — weekly_alert_log.txt: [2025-08-17T16:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T16:50:25+00:00 — weekly_alert_log.txt: [2025-08-17T16:50:25Z] [WARN] absorption log missing
+- 2025-08-17T17:49:10+00:00 — weekly_alert_log.txt: [2025-08-17T17:49:10Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T17:50:29+00:00 — weekly_alert_log.txt: [2025-08-17T17:50:29Z] [WARN] absorption log missing
+- 2025-08-17T18:49:11+00:00 — weekly_alert_log.txt: [2025-08-17T18:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T18:50:28+00:00 — weekly_alert_log.txt: [2025-08-17T18:50:28Z] [WARN] absorption log missing
+- 2025-08-17T19:49:11+00:00 — weekly_alert_log.txt: [2025-08-17T19:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T19:50:32+00:00 — weekly_alert_log.txt: [2025-08-17T19:50:32Z] [WARN] absorption log missing
+- 2025-08-17T20:49:11+00:00 — weekly_alert_log.txt: [2025-08-17T20:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T20:50:28+00:00 — weekly_alert_log.txt: [2025-08-17T20:50:28Z] [WARN] absorption log missing
+- 2025-08-17T21:49:11+00:00 — weekly_alert_log.txt: [2025-08-17T21:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T21:50:29+00:00 — weekly_alert_log.txt: [2025-08-17T21:50:29Z] [WARN] absorption log missing
+- 2025-08-17T22:49:12+00:00 — weekly_alert_log.txt: [2025-08-17T22:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T22:50:31+00:00 — weekly_alert_log.txt: [2025-08-17T22:50:31Z] [WARN] absorption log missing
+- 2025-08-17T23:49:12+00:00 — weekly_alert_log.txt: [2025-08-17T23:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-17T23:50:29+00:00 — weekly_alert_log.txt: [2025-08-17T23:50:29Z] [WARN] absorption log missing
+- 2025-08-18T00:49:12+00:00 — weekly_alert_log.txt: [2025-08-18T00:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T00:50:31+00:00 — weekly_alert_log.txt: [2025-08-18T00:50:31Z] [WARN] absorption log missing
+- 2025-08-18T01:49:12+00:00 — weekly_alert_log.txt: [2025-08-18T01:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T01:50:31+00:00 — weekly_alert_log.txt: [2025-08-18T01:50:31Z] [WARN] absorption log missing
+- 2025-08-18T02:49:13+00:00 — weekly_alert_log.txt: [2025-08-18T02:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T02:50:30+00:00 — weekly_alert_log.txt: [2025-08-18T02:50:30Z] [WARN] absorption log missing
+- 2025-08-18T03:24:10+00:00 — weekly_alert_log.txt: [2025-08-18T03:24:10Z] [WARN] heartbeat missing/unparsable
+- 2025-08-18T03:24:10+00:00 — weekly_alert_log.txt: [2025-08-18T03:24:10Z] [WARN] index missing
+- 2025-08-18T03:49:16+00:00 — weekly_alert_log.txt: [2025-08-18T03:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T03:50:31+00:00 — weekly_alert_log.txt: [2025-08-18T03:50:31Z] [WARN] absorption log missing
+- 2025-08-18T04:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T04:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T04:50:32+00:00 — weekly_alert_log.txt: [2025-08-18T04:50:32Z] [WARN] absorption log missing
+- 2025-08-18T05:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T05:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T05:50:33+00:00 — weekly_alert_log.txt: [2025-08-18T05:50:33Z] [WARN] absorption log missing
+- 2025-08-18T06:49:17+00:00 — weekly_alert_log.txt: [2025-08-18T06:49:17Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T06:50:37+00:00 — weekly_alert_log.txt: [2025-08-18T06:50:37Z] [WARN] absorption log missing
+- 2025-08-18T07:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T07:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T07:50:33+00:00 — weekly_alert_log.txt: [2025-08-18T07:50:33Z] [WARN] absorption log missing
+- 2025-08-18T08:49:15+00:00 — weekly_alert_log.txt: [2025-08-18T08:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T08:50:35+00:00 — weekly_alert_log.txt: [2025-08-18T08:50:35Z] [WARN] absorption log missing
+- 2025-08-18T09:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T09:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T09:50:33+00:00 — weekly_alert_log.txt: [2025-08-18T09:50:33Z] [WARN] absorption log missing
+- 2025-08-18T10:49:13+00:00 — weekly_alert_log.txt: [2025-08-18T10:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T10:50:34+00:00 — weekly_alert_log.txt: [2025-08-18T10:50:34Z] [WARN] absorption log missing
+- 2025-08-18T11:49:15+00:00 — weekly_alert_log.txt: [2025-08-18T11:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T11:50:32+00:00 — weekly_alert_log.txt: [2025-08-18T11:50:32Z] [WARN] absorption log missing
+- 2025-08-18T12:49:15+00:00 — weekly_alert_log.txt: [2025-08-18T12:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T12:50:32+00:00 — weekly_alert_log.txt: [2025-08-18T12:50:32Z] [WARN] absorption log missing
+- 2025-08-18T13:49:17+00:00 — weekly_alert_log.txt: [2025-08-18T13:49:17Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T13:50:36+00:00 — weekly_alert_log.txt: [2025-08-18T13:50:36Z] [WARN] absorption log missing
+- 2025-08-18T14:49:13+00:00 — weekly_alert_log.txt: [2025-08-18T14:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T14:50:33+00:00 — weekly_alert_log.txt: [2025-08-18T14:50:33Z] [WARN] absorption log missing
+- 2025-08-18T15:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T15:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T15:50:29+00:00 — weekly_alert_log.txt: [2025-08-18T15:50:29Z] [WARN] absorption log missing
+- 2025-08-18T16:49:11+00:00 — weekly_alert_log.txt: [2025-08-18T16:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T16:50:31+00:00 — weekly_alert_log.txt: [2025-08-18T16:50:31Z] [WARN] absorption log missing
+- 2025-08-18T17:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T17:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T17:50:32+00:00 — weekly_alert_log.txt: [2025-08-18T17:50:32Z] [WARN] absorption log missing
+- 2025-08-18T18:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T18:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T18:50:36+00:00 — weekly_alert_log.txt: [2025-08-18T18:50:36Z] [WARN] absorption log missing
+- 2025-08-18T19:49:16+00:00 — weekly_alert_log.txt: [2025-08-18T19:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T19:50:36+00:00 — weekly_alert_log.txt: [2025-08-18T19:50:36Z] [WARN] absorption log missing
+- 2025-08-18T20:49:13+00:00 — weekly_alert_log.txt: [2025-08-18T20:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T20:50:30+00:00 — weekly_alert_log.txt: [2025-08-18T20:50:30Z] [WARN] absorption log missing
+- 2025-08-18T21:49:12+00:00 — weekly_alert_log.txt: [2025-08-18T21:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T21:50:30+00:00 — weekly_alert_log.txt: [2025-08-18T21:50:30Z] [WARN] absorption log missing
+- 2025-08-18T22:49:13+00:00 — weekly_alert_log.txt: [2025-08-18T22:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T22:50:33+00:00 — weekly_alert_log.txt: [2025-08-18T22:50:33Z] [WARN] absorption log missing
+- 2025-08-18T23:49:14+00:00 — weekly_alert_log.txt: [2025-08-18T23:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-18T23:50:30+00:00 — weekly_alert_log.txt: [2025-08-18T23:50:30Z] [WARN] absorption log missing
+- 2025-08-19T00:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T00:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T00:50:33+00:00 — weekly_alert_log.txt: [2025-08-19T00:50:33Z] [WARN] absorption log missing
+- 2025-08-19T01:49:15+00:00 — weekly_alert_log.txt: [2025-08-19T01:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T01:50:32+00:00 — weekly_alert_log.txt: [2025-08-19T01:50:32Z] [WARN] absorption log missing
+- 2025-08-19T02:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T02:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T02:50:31+00:00 — weekly_alert_log.txt: [2025-08-19T02:50:31Z] [WARN] absorption log missing
+- 2025-08-19T03:24:12+00:00 — weekly_alert_log.txt: [2025-08-19T03:24:12Z] [WARN] heartbeat missing/unparsable
+- 2025-08-19T03:24:12+00:00 — weekly_alert_log.txt: [2025-08-19T03:24:12Z] [WARN] index missing
+- 2025-08-19T03:49:13+00:00 — weekly_alert_log.txt: [2025-08-19T03:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T03:50:35+00:00 — weekly_alert_log.txt: [2025-08-19T03:50:35Z] [WARN] absorption log missing
+- 2025-08-19T04:49:13+00:00 — weekly_alert_log.txt: [2025-08-19T04:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T04:50:36+00:00 — weekly_alert_log.txt: [2025-08-19T04:50:36Z] [WARN] absorption log missing
+- 2025-08-19T05:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T05:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T05:50:35+00:00 — weekly_alert_log.txt: [2025-08-19T05:50:35Z] [WARN] absorption log missing
+- 2025-08-19T06:49:17+00:00 — weekly_alert_log.txt: [2025-08-19T06:49:17Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T06:50:38+00:00 — weekly_alert_log.txt: [2025-08-19T06:50:38Z] [WARN] absorption log missing
+- 2025-08-19T07:49:15+00:00 — weekly_alert_log.txt: [2025-08-19T07:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T07:50:35+00:00 — weekly_alert_log.txt: [2025-08-19T07:50:35Z] [WARN] absorption log missing
+- 2025-08-19T08:49:16+00:00 — weekly_alert_log.txt: [2025-08-19T08:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T08:50:37+00:00 — weekly_alert_log.txt: [2025-08-19T08:50:37Z] [WARN] absorption log missing
+- 2025-08-19T09:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T09:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T09:50:36+00:00 — weekly_alert_log.txt: [2025-08-19T09:50:36Z] [WARN] absorption log missing
+- 2025-08-19T10:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T10:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T10:50:34+00:00 — weekly_alert_log.txt: [2025-08-19T10:50:34Z] [WARN] absorption log missing
+- 2025-08-19T11:49:13+00:00 — weekly_alert_log.txt: [2025-08-19T11:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T11:50:33+00:00 — weekly_alert_log.txt: [2025-08-19T11:50:33Z] [WARN] absorption log missing
+- 2025-08-19T12:49:16+00:00 — weekly_alert_log.txt: [2025-08-19T12:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T12:50:32+00:00 — weekly_alert_log.txt: [2025-08-19T12:50:32Z] [WARN] absorption log missing
+- 2025-08-19T13:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T13:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T13:50:31+00:00 — weekly_alert_log.txt: [2025-08-19T13:50:31Z] [WARN] absorption log missing
+- 2025-08-19T14:49:12+00:00 — weekly_alert_log.txt: [2025-08-19T14:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T14:50:28+00:00 — weekly_alert_log.txt: [2025-08-19T14:50:28Z] [WARN] absorption log missing
+- 2025-08-19T15:49:12+00:00 — weekly_alert_log.txt: [2025-08-19T15:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T15:50:27+00:00 — weekly_alert_log.txt: [2025-08-19T15:50:27Z] [WARN] absorption log missing
+- 2025-08-19T16:49:13+00:00 — weekly_alert_log.txt: [2025-08-19T16:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T16:50:29+00:00 — weekly_alert_log.txt: [2025-08-19T16:50:29Z] [WARN] absorption log missing
+- 2025-08-19T17:49:12+00:00 — weekly_alert_log.txt: [2025-08-19T17:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T17:50:33+00:00 — weekly_alert_log.txt: [2025-08-19T17:50:33Z] [WARN] absorption log missing
+- 2025-08-19T18:49:16+00:00 — weekly_alert_log.txt: [2025-08-19T18:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T18:50:36+00:00 — weekly_alert_log.txt: [2025-08-19T18:50:36Z] [WARN] absorption log missing
+- 2025-08-19T19:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T19:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T19:50:35+00:00 — weekly_alert_log.txt: [2025-08-19T19:50:35Z] [WARN] absorption log missing
+- 2025-08-19T20:49:15+00:00 — weekly_alert_log.txt: [2025-08-19T20:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T20:50:32+00:00 — weekly_alert_log.txt: [2025-08-19T20:50:32Z] [WARN] absorption log missing
+- 2025-08-19T21:49:12+00:00 — weekly_alert_log.txt: [2025-08-19T21:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T21:50:30+00:00 — weekly_alert_log.txt: [2025-08-19T21:50:30Z] [WARN] absorption log missing
+- 2025-08-19T22:49:14+00:00 — weekly_alert_log.txt: [2025-08-19T22:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T22:50:35+00:00 — weekly_alert_log.txt: [2025-08-19T22:50:35Z] [WARN] absorption log missing
+- 2025-08-19T23:49:13+00:00 — weekly_alert_log.txt: [2025-08-19T23:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-19T23:50:32+00:00 — weekly_alert_log.txt: [2025-08-19T23:50:32Z] [WARN] absorption log missing
+- 2025-08-20T00:49:14+00:00 — weekly_alert_log.txt: [2025-08-20T00:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T00:50:32+00:00 — weekly_alert_log.txt: [2025-08-20T00:50:32Z] [WARN] absorption log missing
+- 2025-08-20T01:49:13+00:00 — weekly_alert_log.txt: [2025-08-20T01:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T01:50:30+00:00 — weekly_alert_log.txt: [2025-08-20T01:50:30Z] [WARN] absorption log missing
+- 2025-08-20T02:49:12+00:00 — weekly_alert_log.txt: [2025-08-20T02:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T02:50:31+00:00 — weekly_alert_log.txt: [2025-08-20T02:50:31Z] [WARN] absorption log missing
+- 2025-08-20T03:24:14+00:00 — weekly_alert_log.txt: [2025-08-20T03:24:14Z] [WARN] heartbeat missing/unparsable
+- 2025-08-20T03:24:14+00:00 — weekly_alert_log.txt: [2025-08-20T03:24:14Z] [WARN] index missing
+- 2025-08-20T03:49:12+00:00 — weekly_alert_log.txt: [2025-08-20T03:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T03:50:34+00:00 — weekly_alert_log.txt: [2025-08-20T03:50:34Z] [WARN] absorption log missing
+- 2025-08-20T04:49:13+00:00 — weekly_alert_log.txt: [2025-08-20T04:49:13Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T04:50:34+00:00 — weekly_alert_log.txt: [2025-08-20T04:50:34Z] [WARN] absorption log missing
+- 2025-08-20T05:49:14+00:00 — weekly_alert_log.txt: [2025-08-20T05:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T05:50:35+00:00 — weekly_alert_log.txt: [2025-08-20T05:50:35Z] [WARN] absorption log missing
+- 2025-08-20T06:49:18+00:00 — weekly_alert_log.txt: [2025-08-20T06:49:18Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T06:50:39+00:00 — weekly_alert_log.txt: [2025-08-20T06:50:39Z] [WARN] absorption log missing
+- 2025-08-20T07:49:15+00:00 — weekly_alert_log.txt: [2025-08-20T07:49:15Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T07:50:37+00:00 — weekly_alert_log.txt: [2025-08-20T07:50:37Z] [WARN] absorption log missing
+- 2025-08-20T08:49:16+00:00 — weekly_alert_log.txt: [2025-08-20T08:49:16Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T08:50:36+00:00 — weekly_alert_log.txt: [2025-08-20T08:50:36Z] [WARN] absorption log missing
+- 2025-08-20T09:49:19+00:00 — weekly_alert_log.txt: [2025-08-20T09:49:19Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T09:50:39+00:00 — weekly_alert_log.txt: [2025-08-20T09:50:39Z] [WARN] absorption log missing
+- 2025-08-20T10:49:14+00:00 — weekly_alert_log.txt: [2025-08-20T10:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T10:50:32+00:00 — weekly_alert_log.txt: [2025-08-20T10:50:32Z] [WARN] absorption log missing
+- 2025-08-20T11:49:14+00:00 — weekly_alert_log.txt: [2025-08-20T11:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T11:50:31+00:00 — weekly_alert_log.txt: [2025-08-20T11:50:31Z] [WARN] absorption log missing
+- 2025-08-20T12:49:14+00:00 — weekly_alert_log.txt: [2025-08-20T12:49:14Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T12:50:32+00:00 — weekly_alert_log.txt: [2025-08-20T12:50:32Z] [WARN] absorption log missing
+- 2025-08-20T13:49:12+00:00 — weekly_alert_log.txt: [2025-08-20T13:49:12Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T13:50:32+00:00 — weekly_alert_log.txt: [2025-08-20T13:50:32Z] [WARN] absorption log missing
+- 2025-08-20T14:49:11+00:00 — weekly_alert_log.txt: [2025-08-20T14:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T14:50:28+00:00 — weekly_alert_log.txt: [2025-08-20T14:50:28Z] [WARN] absorption log missing
+- 2025-08-20T15:49:11+00:00 — weekly_alert_log.txt: [2025-08-20T15:49:11Z] [WARN] geofencing heartbeat missing
+- 2025-08-20T15:50:25+00:00 — weekly_alert_log.txt: [2025-08-20T15:50:25Z] [WARN] absorption log missing
+- 2025-12-10T07:04:19.112866+00:00 — weekly_alert_log.txt: [2025-08-27 17:57:50.294644] Task failed (code 2): Weekly Watchdog Alert
+- 2025-12-10T07:04:19.112875+00:00 — weekly_alert_log.txt: [2025-08-28 17:29:26.957195] Task failed (code 2): Weekly Watchdog Alert
+- 2025-12-10T07:04:19.112884+00:00 — weekly_alert_log.txt: [2025-08-28 20:44:54.939712] Task failed (code 2): Weekly Watchdog Alert
+- 2025-12-10T07:04:19.112891+00:00 — weekly_alert_log.txt: [2025-08-28 21:02:41.874935] Task failed (code 2): Weekly Watchdog Alert
+- 2025-12-10T07:04:19.112900+00:00 — weekly_alert_log.txt: [2025-08-29 16:23:19.273250] Task failed (code 2): Weekly Watchdog Alert
+- 2025-12-10T07:04:19.112913+00:00 — weekly_alert_log.txt: [2025-08-29 16:24:39.597670] Task failed (code 2): Weekly Watchdog Alert
+- 2025-12-10T07:04:19.113409+00:00 — next_audit.txt: 2025-12-03
+- 2025-12-10T07:04:19.113650+00:00 — security_audit_log.txt: [2025-08-27 17:57:49.967666] Task failed (code 2): Security Audit
+- 2025-12-10T07:04:19.113683+00:00 — security_audit_log.txt: [2025-08-28 17:29:26.867645] Task failed (code 2): Security Audit
+- 2025-12-10T07:04:19.113692+00:00 — security_audit_log.txt: [2025-08-28 20:44:54.879707] Task failed (code 2): Security Audit
+- 2025-12-10T07:04:19.113700+00:00 — security_audit_log.txt: [2025-08-28 21:02:41.282630] Task failed (code 2): Security Audit
+- 2025-12-10T07:04:19.113708+00:00 — security_audit_log.txt: [2025-08-29 16:23:19.214260] Task failed (code 2): Security Audit
+- 2025-12-10T07:04:19.113720+00:00 — security_audit_log.txt: [2025-08-29 16:24:36.695952] Task failed (code 2): Security Audit

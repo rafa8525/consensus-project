@@ -1,0 +1,18 @@
+[
+  {
+    "id": "shadow_of_the_fallen",
+    "title": "Shadow of the Fallen",
+    "platform": "Netflix",
+    "release_date": "2025-12-12",
+    "genres": ["dark fantasy", "action", "adventure"],
+    "keywords": ["supernatural", "gothic", "brooding"]
+  },
+  {
+    "id": "random_romcom",
+    "title": "Holiday Hearts",
+    "platform": "Netflix",
+    "release_date": "2025-12-10",
+    "genres": ["romantic comedy"],
+    "keywords": ["light", "feel-good"]
+  }
+]

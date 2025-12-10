@@ -1,0 +1,3182 @@
+# Alerts Summary — 2025-12-03
+- [alert] 2025-12-03T07:04:57.693538+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] -- BEGIN Twilio API Request --
+- [alert] 2025-12-03T07:04:57.693684+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] POST Request: https://api.twilio.com/2010-04-01/Accounts/None/Messages.json
+- [alert] 2025-12-03T07:04:57.693712+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] Headers:
+- [alert] 2025-12-03T07:04:57.693729+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] Content-Type : application/x-www-form-urlencoded
+- [alert] 2025-12-03T07:04:57.693741+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] Accept : application/json
+- [alert] 2025-12-03T07:04:57.693755+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+- [alert] 2025-12-03T07:04:57.693769+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] X-Twilio-Client : python-9.6.3
+- [alert] 2025-12-03T07:04:57.693781+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] Accept-Charset : utf-8
+- [alert] 2025-12-03T07:04:57.693794+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,638] -- END Twilio API Request --
+- [alert] 2025-12-03T07:04:57.693806+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,666] Response Status Code: 401
+- [alert] 2025-12-03T07:04:57.693869+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,666] Response Headers: {'Content-Type': 'application/json', 'Content-Length': '141', 'Connection': 'keep-alive', 'Date': 'Tue, 12 Aug 2025 17:54:36 GMT', 'X-API-Domain': 'api.twilio.com', 'X-Verification-Disclosure': 'Message Accepted. Pending content verification for US/Canada destination numbers:', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQf1b06b4618b2c018e85343a22a213f91', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 9cd85e528eb96b937681f7f81aea46c8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD61-P2', 'X-Amz-Cf-Id': '_T5Xscoa-KEiA6mQo-kWsGK1ObZAeDeg8AICHPj9yU8yNxF145Eqmg=='}
+- [alert] 2025-12-03T07:04:57.693890+00:00 — watchdog — failure_log.txt: [2025-08-12 17:54:36,666] [SMS FAILED] HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+- [alert] 2025-12-03T07:04:57.693898+00:00 — watchdog — failure_log.txt: [2025-08-12 17:59:54,418] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693906+00:00 — watchdog — failure_log.txt: [2025-08-12 18:05:21,822] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693913+00:00 — watchdog — failure_log.txt: [2025-08-12 18:10:34,701] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693920+00:00 — watchdog — failure_log.txt: [2025-08-12 18:15:50,373] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693929+00:00 — watchdog — failure_log.txt: [2025-08-12 18:21:01,504] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693939+00:00 — watchdog — failure_log.txt: [2025-08-12 18:26:22,519] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693946+00:00 — watchdog — failure_log.txt: [2025-08-12 18:31:44,608] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693953+00:00 — watchdog — failure_log.txt: [2025-08-12 18:37:00,806] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693960+00:00 — watchdog — failure_log.txt: [2025-08-12 18:42:22,931] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693967+00:00 — watchdog — failure_log.txt: [2025-08-12 18:47:38,829] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693974+00:00 — watchdog — failure_log.txt: [2025-08-12 18:52:57,669] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.693986+00:00 — watchdog — failure_log.txt: [2025-08-12 18:58:09,472] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694004+00:00 — watchdog — failure_log.txt: [2025-08-12 19:03:21,847] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694020+00:00 — watchdog — failure_log.txt: [2025-08-12 19:11:14,282] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694033+00:00 — watchdog — failure_log.txt: [2025-08-12 19:11:25,877] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694046+00:00 — watchdog — failure_log.txt: [2025-08-12 19:11:53,202] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694057+00:00 — watchdog — failure_log.txt: [2025-08-12 19:12:29,010] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694069+00:00 — watchdog — failure_log.txt: [2025-08-12 19:13:20,956] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694081+00:00 — watchdog — failure_log.txt: [2025-08-12 19:14:53,014] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694093+00:00 — watchdog — failure_log.txt: [2025-08-12 19:17:51,150] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694105+00:00 — watchdog — failure_log.txt: [2025-08-12 19:23:16,932] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694118+00:00 — watchdog — failure_log.txt: [2025-08-12 19:28:38,034] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694130+00:00 — watchdog — failure_log.txt: [2025-08-12 19:33:54,035] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694142+00:00 — watchdog — failure_log.txt: [2025-08-12 19:39:06,194] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694153+00:00 — watchdog — failure_log.txt: [2025-08-12 19:44:21,204] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694165+00:00 — watchdog — failure_log.txt: [2025-08-12 19:49:44,026] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694177+00:00 — watchdog — failure_log.txt: [2025-08-12 19:55:07,167] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694188+00:00 — watchdog — failure_log.txt: [2025-08-12 20:00:32,154] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694199+00:00 — watchdog — failure_log.txt: [2025-08-12 20:05:55,045] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694211+00:00 — watchdog — failure_log.txt: [2025-08-12 20:11:13,769] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694223+00:00 — watchdog — failure_log.txt: [2025-08-12 20:17:23,521] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694235+00:00 — watchdog — failure_log.txt: [2025-08-12 20:17:33,509] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694247+00:00 — watchdog — failure_log.txt: [2025-08-12 20:17:55,396] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694260+00:00 — watchdog — failure_log.txt: [2025-08-12 20:18:31,796] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694272+00:00 — watchdog — failure_log.txt: [2025-08-12 20:19:30,728] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694284+00:00 — watchdog — failure_log.txt: [2025-08-12 20:21:10,788] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694297+00:00 — watchdog — failure_log.txt: [2025-08-12 20:24:01,662] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694309+00:00 — watchdog — failure_log.txt: [2025-08-12 20:29:20,639] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694328+00:00 — watchdog — failure_log.txt: [2025-08-12 20:34:32,627] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694340+00:00 — watchdog — failure_log.txt: [2025-08-12 20:39:49,638] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694351+00:00 — watchdog — failure_log.txt: [2025-08-12 20:45:03,264] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694365+00:00 — watchdog — failure_log.txt: [2025-08-12 20:50:15,228] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694377+00:00 — watchdog — failure_log.txt: [2025-08-12 20:53:27,631] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694389+00:00 — watchdog — failure_log.txt: [2025-08-12 20:53:37,209] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694400+00:00 — watchdog — failure_log.txt: [2025-08-12 20:53:59,497] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694413+00:00 — watchdog — failure_log.txt: [2025-08-12 20:54:36,586] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694453+00:00 — watchdog — failure_log.txt: [2025-08-12 20:55:39,732] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694468+00:00 — watchdog — failure_log.txt: [2025-08-12 20:57:12,587] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694475+00:00 — watchdog — failure_log.txt: [2025-08-12 21:00:13,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694484+00:00 — watchdog — failure_log.txt: [2025-08-12 21:05:30,046] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694496+00:00 — watchdog — failure_log.txt: [2025-08-12 21:09:41,792] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694508+00:00 — watchdog — failure_log.txt: [2025-08-12 21:09:52,785] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694519+00:00 — watchdog — failure_log.txt: [2025-08-12 21:10:18,067] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694531+00:00 — watchdog — failure_log.txt: [2025-08-12 21:10:55,535] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694543+00:00 — watchdog — failure_log.txt: [2025-08-12 21:11:46,614] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694556+00:00 — watchdog — failure_log.txt: [2025-08-12 21:13:27,036] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694567+00:00 — watchdog — failure_log.txt: [2025-08-12 21:16:24,698] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694580+00:00 — watchdog — failure_log.txt: [2025-08-12 21:21:36,344] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694592+00:00 — watchdog — failure_log.txt: [2025-08-12 21:25:10,633] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694604+00:00 — watchdog — failure_log.txt: [2025-08-12 21:25:25,040] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694616+00:00 — watchdog — failure_log.txt: [2025-08-12 21:25:47,831] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694629+00:00 — watchdog — failure_log.txt: [2025-08-12 21:26:27,619] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694640+00:00 — watchdog — failure_log.txt: [2025-08-12 21:27:18,646] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694651+00:00 — watchdog — failure_log.txt: [2025-08-12 21:28:56,884] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694671+00:00 — watchdog — failure_log.txt: [2025-08-12 21:34:17,684] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694684+00:00 — watchdog — failure_log.txt: [2025-08-12 21:34:28,566] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694696+00:00 — watchdog — failure_log.txt: [2025-08-12 21:34:50,603] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694708+00:00 — watchdog — failure_log.txt: [2025-08-12 21:35:25,616] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694719+00:00 — watchdog — failure_log.txt: [2025-08-12 21:36:18,595] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694732+00:00 — watchdog — failure_log.txt: [2025-08-12 21:37:58,536] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694743+00:00 — watchdog — failure_log.txt: [2025-08-12 21:40:55,060] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694755+00:00 — watchdog — failure_log.txt: [2025-08-12 21:44:14,009] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694767+00:00 — watchdog — failure_log.txt: [2025-08-12 21:44:25,596] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694779+00:00 — watchdog — failure_log.txt: [2025-08-12 21:44:49,248] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694791+00:00 — watchdog — failure_log.txt: [2025-08-12 21:45:22,722] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694804+00:00 — watchdog — failure_log.txt: [2025-08-12 21:46:14,964] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694816+00:00 — watchdog — failure_log.txt: [2025-08-12 21:50:38,963] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694829+00:00 — watchdog — failure_log.txt: [2025-08-12 21:50:50,620] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694841+00:00 — watchdog — failure_log.txt: [2025-08-12 21:51:18,122] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694853+00:00 — watchdog — failure_log.txt: [2025-08-12 21:51:55,399] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694865+00:00 — watchdog — failure_log.txt: [2025-08-12 21:52:47,584] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694876+00:00 — watchdog — failure_log.txt: [2025-08-12 21:54:28,576] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694889+00:00 — watchdog — failure_log.txt: [2025-08-12 21:57:30,577] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694901+00:00 — watchdog — failure_log.txt: [2025-08-12 22:02:57,526] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694913+00:00 — watchdog — failure_log.txt: [2025-08-12 22:10:50,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694925+00:00 — watchdog — failure_log.txt: [2025-08-12 22:11:01,205] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694938+00:00 — watchdog — failure_log.txt: [2025-08-12 22:11:27,019] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694948+00:00 — watchdog — failure_log.txt: [2025-08-12 22:12:02,303] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694956+00:00 — watchdog — failure_log.txt: [2025-08-12 22:13:01,690] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694971+00:00 — watchdog — failure_log.txt: [2025-08-12 22:14:36,613] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694978+00:00 — watchdog — failure_log.txt: [2025-08-12 22:17:36,139] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694985+00:00 — watchdog — failure_log.txt: [2025-08-12 22:22:58,163] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.694993+00:00 — watchdog — failure_log.txt: [2025-08-12 22:28:21,279] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695005+00:00 — watchdog — failure_log.txt: [2025-08-12 22:33:41,279] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695012+00:00 — watchdog — failure_log.txt: [2025-08-12 22:38:55,972] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695019+00:00 — watchdog — failure_log.txt: [2025-08-12 22:44:16,060] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695026+00:00 — watchdog — failure_log.txt: [2025-08-12 22:49:39,674] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695034+00:00 — watchdog — failure_log.txt: [2025-08-12 22:54:54,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695041+00:00 — watchdog — failure_log.txt: [2025-08-12 22:58:28,406] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695048+00:00 — watchdog — failure_log.txt: [2025-08-12 22:58:46,810] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695055+00:00 — watchdog — failure_log.txt: [2025-08-12 22:59:28,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695062+00:00 — watchdog — failure_log.txt: [2025-08-12 23:00:10,571] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695069+00:00 — watchdog — failure_log.txt: [2025-08-12 23:01:17,665] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695076+00:00 — watchdog — failure_log.txt: [2025-08-12 23:04:21,169] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695083+00:00 — watchdog — failure_log.txt: [2025-08-12 23:04:32,636] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695090+00:00 — watchdog — failure_log.txt: [2025-08-12 23:04:56,736] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695100+00:00 — watchdog — failure_log.txt: [2025-08-12 23:05:30,054] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695108+00:00 — watchdog — failure_log.txt: [2025-08-12 23:06:20,062] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695116+00:00 — watchdog — failure_log.txt: [2025-08-12 23:07:55,766] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695123+00:00 — watchdog — failure_log.txt: [2025-08-12 23:10:48,021] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695130+00:00 — watchdog — failure_log.txt: [2025-08-12 23:16:06,656] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695137+00:00 — watchdog — failure_log.txt: [2025-08-12 23:21:27,187] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695144+00:00 — watchdog — failure_log.txt: [2025-08-12 23:26:48,209] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695151+00:00 — watchdog — failure_log.txt: [2025-08-12 23:32:11,011] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695160+00:00 — watchdog — failure_log.txt: [2025-08-12 23:37:31,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695168+00:00 — watchdog — failure_log.txt: [2025-08-12 23:42:49,218] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695175+00:00 — watchdog — failure_log.txt: [2025-08-12 23:48:14,310] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695182+00:00 — watchdog — failure_log.txt: [2025-08-12 23:53:38,391] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695189+00:00 — watchdog — failure_log.txt: [2025-08-12 23:58:54,502] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695197+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] -- BEGIN Twilio API Request --
+- [alert] 2025-12-03T07:04:57.695637+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] POST Request: https://api.twilio.com/2010-04-01/Accounts/None/Messages.json
+- [alert] 2025-12-03T07:04:57.695665+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] Headers:
+- [alert] 2025-12-03T07:04:57.695681+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] Content-Type : application/x-www-form-urlencoded
+- [alert] 2025-12-03T07:04:57.695694+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] Accept : application/json
+- [alert] 2025-12-03T07:04:57.695709+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+- [alert] 2025-12-03T07:04:57.695721+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] X-Twilio-Client : python-9.6.3
+- [alert] 2025-12-03T07:04:57.695734+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,433] Accept-Charset : utf-8
+- [alert] 2025-12-03T07:04:57.695747+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,434] -- END Twilio API Request --
+- [alert] 2025-12-03T07:04:57.695761+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,458] Response Status Code: 401
+- [alert] 2025-12-03T07:04:57.695826+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,458] Response Headers: {'Content-Type': 'application/json', 'Content-Length': '141', 'Connection': 'keep-alive', 'Date': 'Wed, 13 Aug 2025 00:04:13 GMT', 'X-API-Domain': 'api.twilio.com', 'X-Verification-Disclosure': 'Message Accepted. Pending content verification for US/Canada destination numbers:', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQf9518453dc3e28b60c5df89b6865856e', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 6d870aa61a7a4eaf26f3551a493146c2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'ZldepL_RvPeok8k3iwgSuTtqjYJVOv_gEzVEWnFm4vyGzswLuuOyqQ=='}
+- [alert] 2025-12-03T07:04:57.695847+00:00 — watchdog — failure_log.txt: [2025-08-13 00:04:13,458] [SMS FAILED] HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+- [alert] 2025-12-03T07:04:57.695865+00:00 — watchdog — failure_log.txt: [2025-08-13 00:09:29,981] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695878+00:00 — watchdog — failure_log.txt: [2025-08-13 00:14:45,060] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695891+00:00 — watchdog — failure_log.txt: [2025-08-13 00:20:00,149] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695903+00:00 — watchdog — failure_log.txt: [2025-08-13 00:25:22,173] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695915+00:00 — watchdog — failure_log.txt: [2025-08-13 00:30:44,061] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695927+00:00 — watchdog — failure_log.txt: [2025-08-13 00:35:53,958] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695940+00:00 — watchdog — failure_log.txt: [2025-08-13 00:41:06,765] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695952+00:00 — watchdog — failure_log.txt: [2025-08-13 00:46:22,494] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695965+00:00 — watchdog — failure_log.txt: [2025-08-13 00:51:40,285] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695982+00:00 — watchdog — failure_log.txt: [2025-08-13 00:56:58,869] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.695994+00:00 — watchdog — failure_log.txt: [2025-08-13 01:02:20,755] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696006+00:00 — watchdog — failure_log.txt: [2025-08-13 01:07:41,201] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696018+00:00 — watchdog — failure_log.txt: [2025-08-13 01:12:51,782] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696030+00:00 — watchdog — failure_log.txt: [2025-08-13 01:18:09,891] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696042+00:00 — watchdog — failure_log.txt: [2025-08-13 01:23:24,912] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696054+00:00 — watchdog — failure_log.txt: [2025-08-13 01:28:39,014] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696067+00:00 — watchdog — failure_log.txt: [2025-08-13 01:33:48,896] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696080+00:00 — watchdog — failure_log.txt: [2025-08-13 01:39:08,320] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696092+00:00 — watchdog — failure_log.txt: [2025-08-13 01:44:21,263] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696105+00:00 — watchdog — failure_log.txt: [2025-08-13 01:49:37,887] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696118+00:00 — watchdog — failure_log.txt: [2025-08-13 01:54:56,835] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696130+00:00 — watchdog — failure_log.txt: [2025-08-13 02:00:16,747] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696143+00:00 — watchdog — failure_log.txt: [2025-08-13 02:05:29,024] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696156+00:00 — watchdog — failure_log.txt: [2025-08-13 02:10:45,988] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696169+00:00 — watchdog — failure_log.txt: [2025-08-13 02:16:05,369] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696181+00:00 — watchdog — failure_log.txt: [2025-08-13 02:21:17,426] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696194+00:00 — watchdog — failure_log.txt: [2025-08-13 02:26:35,985] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696206+00:00 — watchdog — failure_log.txt: [2025-08-13 02:31:50,912] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696217+00:00 — watchdog — failure_log.txt: [2025-08-13 02:37:01,133] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696228+00:00 — watchdog — failure_log.txt: [2025-08-13 02:42:14,712] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696240+00:00 — watchdog — failure_log.txt: [2025-08-13 02:47:31,920] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696250+00:00 — watchdog — failure_log.txt: [2025-08-13 02:52:50,177] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696262+00:00 — watchdog — failure_log.txt: [2025-08-13 02:58:10,801] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696273+00:00 — watchdog — failure_log.txt: [2025-08-13 03:03:26,407] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696285+00:00 — watchdog — failure_log.txt: [2025-08-13 03:08:41,123] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696304+00:00 — watchdog — failure_log.txt: [2025-08-13 03:13:56,885] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696316+00:00 — watchdog — failure_log.txt: [2025-08-13 03:19:18,135] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696328+00:00 — watchdog — failure_log.txt: [2025-08-13 03:24:31,040] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696339+00:00 — watchdog — failure_log.txt: [2025-08-13 03:29:49,948] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696350+00:00 — watchdog — failure_log.txt: [2025-08-13 03:35:14,155] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696362+00:00 — watchdog — failure_log.txt: [2025-08-13 03:40:29,863] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696373+00:00 — watchdog — failure_log.txt: [2025-08-13 03:45:41,138] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696389+00:00 — watchdog — failure_log.txt: [2025-08-13 03:50:59,220] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696402+00:00 — watchdog — failure_log.txt: [2025-08-13 03:56:14,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696413+00:00 — watchdog — failure_log.txt: [2025-08-13 04:01:35,076] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696456+00:00 — watchdog — failure_log.txt: [2025-08-13 04:06:47,380] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696472+00:00 — watchdog — failure_log.txt: [2025-08-13 04:12:03,128] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696483+00:00 — watchdog — failure_log.txt: [2025-08-13 04:17:21,678] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696495+00:00 — watchdog — failure_log.txt: [2025-08-13 04:22:31,836] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696514+00:00 — watchdog — failure_log.txt: [2025-08-13 04:27:43,037] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696527+00:00 — watchdog — failure_log.txt: [2025-08-13 04:32:53,997] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696539+00:00 — watchdog — failure_log.txt: [2025-08-13 04:38:10,240] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696550+00:00 — watchdog — failure_log.txt: [2025-08-13 04:43:22,050] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696561+00:00 — watchdog — failure_log.txt: [2025-08-13 04:48:41,189] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696573+00:00 — watchdog — failure_log.txt: [2025-08-13 04:53:51,850] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696586+00:00 — watchdog — failure_log.txt: [2025-08-13 04:59:14,841] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696598+00:00 — watchdog — failure_log.txt: [2025-08-13 05:04:29,423] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696610+00:00 — watchdog — failure_log.txt: [2025-08-13 05:09:46,248] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696621+00:00 — watchdog — failure_log.txt: [2025-08-13 05:14:59,837] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696633+00:00 — watchdog — failure_log.txt: [2025-08-13 05:20:12,801] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696652+00:00 — watchdog — failure_log.txt: [2025-08-13 05:25:29,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696664+00:00 — watchdog — failure_log.txt: [2025-08-13 05:30:45,962] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696676+00:00 — watchdog — failure_log.txt: [2025-08-13 05:36:03,404] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696688+00:00 — watchdog — failure_log.txt: [2025-08-13 05:41:19,541] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696701+00:00 — watchdog — failure_log.txt: [2025-08-13 05:46:41,063] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696714+00:00 — watchdog — failure_log.txt: [2025-08-13 05:51:56,009] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696727+00:00 — watchdog — failure_log.txt: [2025-08-13 05:57:17,474] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696739+00:00 — watchdog — failure_log.txt: [2025-08-13 06:02:40,166] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696751+00:00 — watchdog — failure_log.txt: [2025-08-13 06:07:55,042] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696764+00:00 — watchdog — failure_log.txt: [2025-08-13 06:13:16,068] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696776+00:00 — watchdog — failure_log.txt: [2025-08-13 06:18:34,900] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696788+00:00 — watchdog — failure_log.txt: [2025-08-13 06:23:55,178] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696799+00:00 — watchdog — failure_log.txt: [2025-08-13 06:29:14,699] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696812+00:00 — watchdog — failure_log.txt: [2025-08-13 06:34:31,037] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696824+00:00 — watchdog — failure_log.txt: [2025-08-13 06:39:47,921] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696837+00:00 — watchdog — failure_log.txt: [2025-08-13 06:45:13,537] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696850+00:00 — watchdog — failure_log.txt: [2025-08-13 06:50:23,848] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696862+00:00 — watchdog — failure_log.txt: [2025-08-13 06:55:33,964] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696873+00:00 — watchdog — failure_log.txt: [2025-08-13 07:00:56,874] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696883+00:00 — watchdog — failure_log.txt: [2025-08-13 07:06:09,647] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696893+00:00 — watchdog — failure_log.txt: [2025-08-13 07:11:28,886] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696903+00:00 — watchdog — failure_log.txt: [2025-08-13 07:16:43,749] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696915+00:00 — watchdog — failure_log.txt: [2025-08-13 07:21:56,849] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696927+00:00 — watchdog — failure_log.txt: [2025-08-13 07:27:22,624] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696937+00:00 — watchdog — failure_log.txt: [2025-08-13 07:32:34,599] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696956+00:00 — watchdog — failure_log.txt: [2025-08-13 07:37:55,937] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696967+00:00 — watchdog — failure_log.txt: [2025-08-13 07:43:17,802] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696979+00:00 — watchdog — failure_log.txt: [2025-08-13 07:48:34,929] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.696992+00:00 — watchdog — failure_log.txt: [2025-08-13 07:53:58,593] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697004+00:00 — watchdog — failure_log.txt: [2025-08-13 07:59:15,917] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697018+00:00 — watchdog — failure_log.txt: [2025-08-13 08:04:38,043] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697030+00:00 — watchdog — failure_log.txt: [2025-08-13 08:09:47,914] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697040+00:00 — watchdog — failure_log.txt: [2025-08-13 08:15:02,977] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697051+00:00 — watchdog — failure_log.txt: [2025-08-13 08:20:23,254] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697062+00:00 — watchdog — failure_log.txt: [2025-08-13 08:25:35,945] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697073+00:00 — watchdog — failure_log.txt: [2025-08-13 08:30:48,964] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697084+00:00 — watchdog — failure_log.txt: [2025-08-13 08:36:03,751] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697097+00:00 — watchdog — failure_log.txt: [2025-08-13 08:41:22,568] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697110+00:00 — watchdog — failure_log.txt: [2025-08-13 08:46:37,891] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697122+00:00 — watchdog — failure_log.txt: [2025-08-13 08:51:53,605] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697134+00:00 — watchdog — failure_log.txt: [2025-08-13 08:57:15,538] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697146+00:00 — watchdog — failure_log.txt: [2025-08-13 09:02:34,174] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697158+00:00 — watchdog — failure_log.txt: [2025-08-13 09:07:45,183] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697169+00:00 — watchdog — failure_log.txt: [2025-08-13 09:13:10,738] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697182+00:00 — watchdog — failure_log.txt: [2025-08-13 09:18:26,059] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697195+00:00 — watchdog — failure_log.txt: [2025-08-13 09:23:43,027] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697207+00:00 — watchdog — failure_log.txt: [2025-08-13 09:28:57,025] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697219+00:00 — watchdog — failure_log.txt: [2025-08-13 09:34:09,391] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697231+00:00 — watchdog — failure_log.txt: [2025-08-13 09:39:21,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697242+00:00 — watchdog — failure_log.txt: [2025-08-13 09:44:37,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697254+00:00 — watchdog — failure_log.txt: [2025-08-13 09:49:50,962] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697269+00:00 — watchdog — failure_log.txt: [2025-08-13 09:55:10,937] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697282+00:00 — watchdog — failure_log.txt: [2025-08-13 10:00:26,911] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697294+00:00 — watchdog — failure_log.txt: [2025-08-13 10:05:41,835] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697306+00:00 — watchdog — failure_log.txt: [2025-08-13 10:10:59,085] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697318+00:00 — watchdog — failure_log.txt: [2025-08-13 10:16:23,603] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697329+00:00 — watchdog — failure_log.txt: [2025-08-13 10:21:45,858] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697342+00:00 — watchdog — failure_log.txt: [2025-08-13 10:26:55,958] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697353+00:00 — watchdog — failure_log.txt: [2025-08-13 10:32:15,765] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697366+00:00 — watchdog — failure_log.txt: [2025-08-13 10:37:32,899] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697378+00:00 — watchdog — failure_log.txt: [2025-08-13 10:42:56,238] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697390+00:00 — watchdog — failure_log.txt: [2025-08-13 10:48:18,514] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697402+00:00 — watchdog — failure_log.txt: [2025-08-13 10:53:35,916] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697414+00:00 — watchdog — failure_log.txt: [2025-08-13 10:58:51,858] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697443+00:00 — watchdog — failure_log.txt: [2025-08-13 11:04:19,093] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697457+00:00 — watchdog — failure_log.txt: [2025-08-13 11:09:33,412] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697469+00:00 — watchdog — failure_log.txt: [2025-08-13 11:14:44,152] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697482+00:00 — watchdog — failure_log.txt: [2025-08-13 11:19:56,264] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697499+00:00 — watchdog — failure_log.txt: [2025-08-13 11:25:13,583] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697512+00:00 — watchdog — failure_log.txt: [2025-08-13 11:30:32,021] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697525+00:00 — watchdog — failure_log.txt: [2025-08-13 11:35:50,114] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697535+00:00 — watchdog — failure_log.txt: [2025-08-13 11:41:04,879] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697548+00:00 — watchdog — failure_log.txt: [2025-08-13 11:46:26,362] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697560+00:00 — watchdog — failure_log.txt: [2025-08-13 11:51:42,835] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697572+00:00 — watchdog — failure_log.txt: [2025-08-13 11:56:54,796] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697584+00:00 — watchdog — failure_log.txt: [2025-08-13 12:02:14,701] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697597+00:00 — watchdog — failure_log.txt: [2025-08-13 12:07:34,059] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697616+00:00 — watchdog — failure_log.txt: [2025-08-13 12:12:55,207] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697628+00:00 — watchdog — failure_log.txt: [2025-08-13 12:18:19,725] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697640+00:00 — watchdog — failure_log.txt: [2025-08-13 12:23:35,920] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697651+00:00 — watchdog — failure_log.txt: [2025-08-13 12:28:51,888] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697663+00:00 — watchdog — failure_log.txt: [2025-08-13 12:34:16,739] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697675+00:00 — watchdog — failure_log.txt: [2025-08-13 12:39:36,794] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697686+00:00 — watchdog — failure_log.txt: [2025-08-13 12:44:58,034] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697698+00:00 — watchdog — failure_log.txt: [2025-08-13 12:50:11,750] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697710+00:00 — watchdog — failure_log.txt: [2025-08-13 12:55:27,999] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697722+00:00 — watchdog — failure_log.txt: [2025-08-13 13:00:38,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697733+00:00 — watchdog — failure_log.txt: [2025-08-13 13:05:49,057] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697745+00:00 — watchdog — failure_log.txt: [2025-08-13 13:11:04,335] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697757+00:00 — watchdog — failure_log.txt: [2025-08-13 13:16:20,146] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697769+00:00 — watchdog — failure_log.txt: [2025-08-13 13:21:37,685] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697781+00:00 — watchdog — failure_log.txt: [2025-08-13 13:26:58,171] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697793+00:00 — watchdog — failure_log.txt: [2025-08-13 13:32:17,599] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697806+00:00 — watchdog — failure_log.txt: [2025-08-13 13:37:35,873] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697818+00:00 — watchdog — failure_log.txt: [2025-08-13 13:42:57,698] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697830+00:00 — watchdog — failure_log.txt: [2025-08-13 13:48:17,585] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697841+00:00 — watchdog — failure_log.txt: [2025-08-13 13:53:36,917] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697853+00:00 — watchdog — failure_log.txt: [2025-08-13 13:58:59,838] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697865+00:00 — watchdog — failure_log.txt: [2025-08-13 14:04:16,072] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697878+00:00 — watchdog — failure_log.txt: [2025-08-13 14:09:26,504] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697890+00:00 — watchdog — failure_log.txt: [2025-08-13 14:14:36,990] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697902+00:00 — watchdog — failure_log.txt: [2025-08-13 14:19:58,097] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697919+00:00 — watchdog — failure_log.txt: [2025-08-13 14:25:15,789] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697931+00:00 — watchdog — failure_log.txt: [2025-08-13 14:30:32,905] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697944+00:00 — watchdog — failure_log.txt: [2025-08-13 14:35:42,946] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697956+00:00 — watchdog — failure_log.txt: [2025-08-13 14:41:08,918] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697969+00:00 — watchdog — failure_log.txt: [2025-08-13 14:46:25,425] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697981+00:00 — watchdog — failure_log.txt: [2025-08-13 14:51:47,321] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.697993+00:00 — watchdog — failure_log.txt: [2025-08-13 14:57:04,685] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698005+00:00 — watchdog — failure_log.txt: [2025-08-13 15:02:19,664] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698022+00:00 — watchdog — failure_log.txt: [2025-08-13 15:07:31,980] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698036+00:00 — watchdog — failure_log.txt: [2025-08-13 15:12:43,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698059+00:00 — watchdog — failure_log.txt: [2025-08-13 15:17:59,826] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698072+00:00 — watchdog — failure_log.txt: [2025-08-13 15:23:16,261] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698085+00:00 — watchdog — failure_log.txt: [2025-08-13 15:28:39,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698097+00:00 — watchdog — failure_log.txt: [2025-08-13 15:33:58,633] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698110+00:00 — watchdog — failure_log.txt: [2025-08-13 15:39:21,336] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698122+00:00 — watchdog — failure_log.txt: [2025-08-13 15:44:38,161] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698135+00:00 — watchdog — failure_log.txt: [2025-08-13 15:49:50,323] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698148+00:00 — watchdog — failure_log.txt: [2025-08-13 15:55:02,992] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698160+00:00 — watchdog — failure_log.txt: [2025-08-13 16:00:18,697] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698172+00:00 — watchdog — failure_log.txt: [2025-08-13 16:05:38,760] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698183+00:00 — watchdog — failure_log.txt: [2025-08-13 16:10:57,084] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698195+00:00 — watchdog — failure_log.txt: [2025-08-13 16:16:18,668] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698207+00:00 — watchdog — failure_log.txt: [2025-08-13 16:21:33,205] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698219+00:00 — watchdog — failure_log.txt: [2025-08-13 16:26:58,203] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698231+00:00 — watchdog — failure_log.txt: [2025-08-13 16:32:19,808] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698248+00:00 — watchdog — failure_log.txt: [2025-08-13 16:37:30,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698262+00:00 — watchdog — failure_log.txt: [2025-08-13 16:42:47,152] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698274+00:00 — watchdog — failure_log.txt: [2025-08-13 16:47:58,104] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698286+00:00 — watchdog — failure_log.txt: [2025-08-13 16:53:13,347] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698297+00:00 — watchdog — failure_log.txt: [2025-08-13 16:58:30,263] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698309+00:00 — watchdog — failure_log.txt: [2025-08-13 17:03:53,094] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698321+00:00 — watchdog — failure_log.txt: [2025-08-13 17:09:06,470] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698333+00:00 — watchdog — failure_log.txt: [2025-08-13 17:14:26,451] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698346+00:00 — watchdog — failure_log.txt: [2025-08-13 17:19:40,055] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698358+00:00 — watchdog — failure_log.txt: [2025-08-13 17:25:01,065] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698370+00:00 — watchdog — failure_log.txt: [2025-08-13 17:30:16,087] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698382+00:00 — watchdog — failure_log.txt: [2025-08-13 17:35:36,935] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698394+00:00 — watchdog — failure_log.txt: [2025-08-13 17:40:48,039] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698406+00:00 — watchdog — failure_log.txt: [2025-08-13 17:46:04,708] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698500+00:00 — watchdog — failure_log.txt: [2025-08-13 17:51:23,158] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698572+00:00 — watchdog — failure_log.txt: [2025-08-13 17:56:37,174] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698586+00:00 — watchdog — failure_log.txt: [2025-08-13 18:01:57,912] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698598+00:00 — watchdog — failure_log.txt: [2025-08-13 18:07:19,500] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698611+00:00 — watchdog — failure_log.txt: [2025-08-13 18:12:34,663] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698623+00:00 — watchdog — failure_log.txt: [2025-08-13 18:17:57,000] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698635+00:00 — watchdog — failure_log.txt: [2025-08-13 18:23:10,829] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698647+00:00 — watchdog — failure_log.txt: [2025-08-13 18:28:31,073] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698660+00:00 — watchdog — failure_log.txt: [2025-08-13 18:33:52,008] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698674+00:00 — watchdog — failure_log.txt: [2025-08-13 18:39:03,892] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698685+00:00 — watchdog — failure_log.txt: [2025-08-13 18:44:25,001] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698703+00:00 — watchdog — failure_log.txt: [2025-08-13 18:49:37,691] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698720+00:00 — watchdog — failure_log.txt: [2025-08-13 18:54:47,990] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698732+00:00 — watchdog — failure_log.txt: [2025-08-13 19:00:05,621] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698744+00:00 — watchdog — failure_log.txt: [2025-08-13 19:05:19,608] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698755+00:00 — watchdog — failure_log.txt: [2025-08-13 19:10:35,101] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698767+00:00 — watchdog — failure_log.txt: [2025-08-13 19:15:55,262] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698780+00:00 — watchdog — failure_log.txt: [2025-08-13 19:21:17,671] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698792+00:00 — watchdog — failure_log.txt: [2025-08-13 19:26:39,464] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698803+00:00 — watchdog — failure_log.txt: [2025-08-13 19:31:50,675] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698815+00:00 — watchdog — failure_log.txt: [2025-08-13 19:37:14,277] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698827+00:00 — watchdog — failure_log.txt: [2025-08-13 19:42:31,600] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698838+00:00 — watchdog — failure_log.txt: [2025-08-13 19:47:52,937] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698850+00:00 — watchdog — failure_log.txt: [2025-08-13 19:53:13,314] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698862+00:00 — watchdog — failure_log.txt: [2025-08-13 19:58:28,508] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698874+00:00 — watchdog — failure_log.txt: [2025-08-13 20:03:41,438] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698886+00:00 — watchdog — failure_log.txt: [2025-08-13 20:09:02,606] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698898+00:00 — watchdog — failure_log.txt: [2025-08-13 20:14:21,164] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698911+00:00 — watchdog — failure_log.txt: [2025-08-13 20:19:41,141] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698923+00:00 — watchdog — failure_log.txt: [2025-08-13 20:25:02,427] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698935+00:00 — watchdog — failure_log.txt: [2025-08-13 20:30:19,402] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698948+00:00 — watchdog — failure_log.txt: [2025-08-13 20:35:30,497] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698960+00:00 — watchdog — failure_log.txt: [2025-08-13 20:40:19,701] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698971+00:00 — watchdog — failure_log.txt: [2025-08-13 20:40:30,441] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698983+00:00 — watchdog — failure_log.txt: [2025-08-13 20:40:53,076] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.698994+00:00 — watchdog — failure_log.txt: [2025-08-13 20:41:33,158] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699006+00:00 — watchdog — failure_log.txt: [2025-08-13 20:42:27,248] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699018+00:00 — watchdog — failure_log.txt: [2025-08-13 20:44:07,938] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699037+00:00 — watchdog — failure_log.txt: [2025-08-13 20:47:15,271] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699050+00:00 — watchdog — failure_log.txt: [2025-08-13 20:52:29,955] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699064+00:00 — watchdog — failure_log.txt: [2025-08-13 20:57:42,486] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699076+00:00 — watchdog — failure_log.txt: [2025-08-13 21:02:53,100] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699088+00:00 — watchdog — failure_log.txt: [2025-08-13 21:08:16,921] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699100+00:00 — watchdog — failure_log.txt: [2025-08-13 21:13:40,922] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699113+00:00 — watchdog — failure_log.txt: [2025-08-13 21:19:04,520] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699126+00:00 — watchdog — failure_log.txt: [2025-08-13 21:24:20,095] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699139+00:00 — watchdog — failure_log.txt: [2025-08-13 21:29:39,313] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699151+00:00 — watchdog — failure_log.txt: [2025-08-13 21:35:02,630] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699164+00:00 — watchdog — failure_log.txt: [2025-08-13 21:40:29,008] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699177+00:00 — watchdog — failure_log.txt: [2025-08-13 21:40:41,010] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699189+00:00 — watchdog — failure_log.txt: [2025-08-13 21:41:02,505] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699202+00:00 — watchdog — failure_log.txt: [2025-08-13 21:41:41,876] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699215+00:00 — watchdog — failure_log.txt: [2025-08-13 21:42:40,732] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699228+00:00 — watchdog — failure_log.txt: [2025-08-13 21:44:17,400] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699246+00:00 — watchdog — failure_log.txt: [2025-08-13 21:47:09,505] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699259+00:00 — watchdog — failure_log.txt: [2025-08-13 21:52:23,230] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699272+00:00 — watchdog — failure_log.txt: [2025-08-13 21:57:42,865] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699286+00:00 — watchdog — failure_log.txt: [2025-08-13 22:02:58,173] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699298+00:00 — watchdog — failure_log.txt: [2025-08-13 22:08:15,549] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699311+00:00 — watchdog — failure_log.txt: [2025-08-13 22:13:37,990] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699322+00:00 — watchdog — failure_log.txt: [2025-08-13 22:18:51,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699335+00:00 — watchdog — failure_log.txt: [2025-08-13 22:24:17,216] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699348+00:00 — watchdog — failure_log.txt: [2025-08-13 22:29:39,905] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699366+00:00 — watchdog — failure_log.txt: [2025-08-13 22:34:52,960] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699380+00:00 — watchdog — failure_log.txt: [2025-08-13 22:40:17,292] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699393+00:00 — watchdog — failure_log.txt: [2025-08-13 22:45:49,890] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699405+00:00 — watchdog — failure_log.txt: [2025-08-13 22:51:22,368] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699418+00:00 — watchdog — failure_log.txt: [2025-08-13 22:56:43,402] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699448+00:00 — watchdog — failure_log.txt: [2025-08-13 23:02:06,416] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699461+00:00 — watchdog — failure_log.txt: [2025-08-13 23:07:25,992] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699473+00:00 — watchdog — failure_log.txt: [2025-08-13 23:13:13,795] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699487+00:00 — watchdog — failure_log.txt: [2025-08-13 23:13:27,041] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699500+00:00 — watchdog — failure_log.txt: [2025-08-13 23:13:51,993] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699512+00:00 — watchdog — failure_log.txt: [2025-08-13 23:14:31,392] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699525+00:00 — watchdog — failure_log.txt: [2025-08-13 23:15:24,436] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699537+00:00 — watchdog — failure_log.txt: [2025-08-13 23:16:57,691] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699550+00:00 — watchdog — failure_log.txt: [2025-08-13 23:19:54,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699562+00:00 — watchdog — failure_log.txt: [2025-08-13 23:25:11,979] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699575+00:00 — watchdog — failure_log.txt: [2025-08-13 23:30:24,119] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699587+00:00 — watchdog — failure_log.txt: [2025-08-13 23:35:44,747] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699600+00:00 — watchdog — failure_log.txt: [2025-08-13 23:41:03,407] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699613+00:00 — watchdog — failure_log.txt: [2025-08-13 23:46:20,253] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699625+00:00 — watchdog — failure_log.txt: [2025-08-13 23:51:42,111] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699638+00:00 — watchdog — failure_log.txt: [2025-08-13 23:56:54,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699650+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] -- BEGIN Twilio API Request --
+- [alert] 2025-12-03T07:04:57.699666+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] POST Request: https://api.twilio.com/2010-04-01/Accounts/None/Messages.json
+- [alert] 2025-12-03T07:04:57.699677+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] Headers:
+- [alert] 2025-12-03T07:04:57.699691+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] Content-Type : application/x-www-form-urlencoded
+- [alert] 2025-12-03T07:04:57.699706+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] Accept : application/json
+- [alert] 2025-12-03T07:04:57.699721+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] User-Agent : twilio-python/9.6.3 (Linux x86_64) Python/3.13.1
+- [alert] 2025-12-03T07:04:57.699733+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] X-Twilio-Client : python-9.6.3
+- [alert] 2025-12-03T07:04:57.699745+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] Accept-Charset : utf-8
+- [alert] 2025-12-03T07:04:57.699757+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,743] -- END Twilio API Request --
+- [alert] 2025-12-03T07:04:57.699769+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,784] Response Status Code: 401
+- [alert] 2025-12-03T07:04:57.699838+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,784] Response Headers: {'Content-Type': 'application/json', 'Content-Length': '141', 'Connection': 'keep-alive', 'Date': 'Thu, 14 Aug 2025 00:02:17 GMT', 'X-API-Domain': 'api.twilio.com', 'X-Verification-Disclosure': 'Message Accepted. Pending content verification for US/Canada destination numbers:', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQ16da465d6e49978088bb8d6541472c06', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 b61a4be0aa9880eabf6cbea18ec105b2.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'IAD55-P7', 'X-Amz-Cf-Id': 'T2XfiMre9ZSYEt2qyykHrvrXfpUrlKkuHpSURdcebjmGx7N7EXwgGg=='}
+- [alert] 2025-12-03T07:04:57.699858+00:00 — watchdog — failure_log.txt: [2025-08-14 00:02:17,787] [SMS FAILED] HTTP 401 error: Unable to create record: Authentication Error - No credentials provided
+- [alert] 2025-12-03T07:04:57.699872+00:00 — watchdog — failure_log.txt: [2025-08-14 00:07:33,574] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699888+00:00 — watchdog — failure_log.txt: [2025-08-14 00:12:48,684] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699900+00:00 — watchdog — failure_log.txt: [2025-08-14 00:18:13,255] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699913+00:00 — watchdog — failure_log.txt: [2025-08-14 00:23:30,679] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699925+00:00 — watchdog — failure_log.txt: [2025-08-14 00:28:47,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699938+00:00 — watchdog — failure_log.txt: [2025-08-14 00:34:05,395] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699951+00:00 — watchdog — failure_log.txt: [2025-08-14 00:39:20,907] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699963+00:00 — watchdog — failure_log.txt: [2025-08-14 00:44:36,036] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699976+00:00 — watchdog — failure_log.txt: [2025-08-14 00:49:55,500] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.699988+00:00 — watchdog — failure_log.txt: [2025-08-14 00:55:05,717] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700000+00:00 — watchdog — failure_log.txt: [2025-08-14 01:00:24,867] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700013+00:00 — watchdog — failure_log.txt: [2025-08-14 01:05:36,473] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700026+00:00 — watchdog — failure_log.txt: [2025-08-14 01:10:52,515] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700038+00:00 — watchdog — failure_log.txt: [2025-08-14 01:16:14,296] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700051+00:00 — watchdog — failure_log.txt: [2025-08-14 01:21:30,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700064+00:00 — watchdog — failure_log.txt: [2025-08-14 01:26:54,634] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700077+00:00 — watchdog — failure_log.txt: [2025-08-14 01:32:15,401] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700090+00:00 — watchdog — failure_log.txt: [2025-08-14 01:37:31,269] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700106+00:00 — watchdog — failure_log.txt: [2025-08-14 01:42:49,791] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700118+00:00 — watchdog — failure_log.txt: [2025-08-14 01:48:14,681] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700131+00:00 — watchdog — failure_log.txt: [2025-08-14 01:53:37,566] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700143+00:00 — watchdog — failure_log.txt: [2025-08-14 01:58:51,456] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700156+00:00 — watchdog — failure_log.txt: [2025-08-14 02:04:08,174] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700168+00:00 — watchdog — failure_log.txt: [2025-08-14 02:09:25,551] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700181+00:00 — watchdog — failure_log.txt: [2025-08-14 02:14:41,966] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700193+00:00 — watchdog — failure_log.txt: [2025-08-14 02:19:58,641] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700206+00:00 — watchdog — failure_log.txt: [2025-08-14 02:25:18,977] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700218+00:00 — watchdog — failure_log.txt: [2025-08-14 02:30:39,975] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700231+00:00 — watchdog — failure_log.txt: [2025-08-14 02:35:57,408] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700243+00:00 — watchdog — failure_log.txt: [2025-08-14 02:41:19,093] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700256+00:00 — watchdog — failure_log.txt: [2025-08-14 02:46:39,436] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700268+00:00 — watchdog — failure_log.txt: [2025-08-14 02:52:01,011] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700281+00:00 — watchdog — failure_log.txt: [2025-08-14 02:57:18,707] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700293+00:00 — watchdog — failure_log.txt: [2025-08-14 03:02:40,932] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700306+00:00 — watchdog — failure_log.txt: [2025-08-14 03:07:51,475] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700318+00:00 — watchdog — failure_log.txt: [2025-08-14 03:13:13,039] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700331+00:00 — watchdog — failure_log.txt: [2025-08-14 03:18:29,542] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700343+00:00 — watchdog — failure_log.txt: [2025-08-14 03:23:51,649] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700356+00:00 — watchdog — failure_log.txt: [2025-08-14 03:29:16,104] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700368+00:00 — watchdog — failure_log.txt: [2025-08-14 03:34:34,703] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700380+00:00 — watchdog — failure_log.txt: [2025-08-14 03:39:50,506] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700393+00:00 — watchdog — failure_log.txt: [2025-08-14 03:45:13,007] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700406+00:00 — watchdog — failure_log.txt: [2025-08-14 03:50:25,665] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700436+00:00 — watchdog — failure_log.txt: [2025-08-14 03:55:35,681] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700455+00:00 — watchdog — failure_log.txt: [2025-08-14 04:00:53,763] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700468+00:00 — watchdog — failure_log.txt: [2025-08-14 04:06:05,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700480+00:00 — watchdog — failure_log.txt: [2025-08-14 04:11:26,473] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700493+00:00 — watchdog — failure_log.txt: [2025-08-14 04:16:41,593] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700512+00:00 — watchdog — failure_log.txt: [2025-08-14 04:21:52,475] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700525+00:00 — watchdog — failure_log.txt: [2025-08-14 04:27:06,079] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700537+00:00 — watchdog — failure_log.txt: [2025-08-14 04:32:23,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700550+00:00 — watchdog — failure_log.txt: [2025-08-14 04:37:46,306] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700562+00:00 — watchdog — failure_log.txt: [2025-08-14 04:43:04,342] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700575+00:00 — watchdog — failure_log.txt: [2025-08-14 04:48:26,488] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700588+00:00 — watchdog — failure_log.txt: [2025-08-14 04:53:46,535] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700600+00:00 — watchdog — failure_log.txt: [2025-08-14 04:58:59,619] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700613+00:00 — watchdog — failure_log.txt: [2025-08-14 05:04:21,209] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700625+00:00 — watchdog — failure_log.txt: [2025-08-14 05:09:43,502] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700638+00:00 — watchdog — failure_log.txt: [2025-08-14 05:14:59,620] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700650+00:00 — watchdog — failure_log.txt: [2025-08-14 05:20:13,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700663+00:00 — watchdog — failure_log.txt: [2025-08-14 05:25:25,473] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700676+00:00 — watchdog — failure_log.txt: [2025-08-14 05:30:36,489] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700689+00:00 — watchdog — failure_log.txt: [2025-08-14 05:35:49,621] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700702+00:00 — watchdog — failure_log.txt: [2025-08-14 05:41:01,603] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700715+00:00 — watchdog — failure_log.txt: [2025-08-14 05:46:24,553] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700727+00:00 — watchdog — failure_log.txt: [2025-08-14 05:51:38,751] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700740+00:00 — watchdog — failure_log.txt: [2025-08-14 05:56:52,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700752+00:00 — watchdog — failure_log.txt: [2025-08-14 06:02:04,138] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700764+00:00 — watchdog — failure_log.txt: [2025-08-14 06:07:21,003] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700782+00:00 — watchdog — failure_log.txt: [2025-08-14 06:12:32,785] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700794+00:00 — watchdog — failure_log.txt: [2025-08-14 06:17:48,704] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700808+00:00 — watchdog — failure_log.txt: [2025-08-14 06:23:01,607] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700821+00:00 — watchdog — failure_log.txt: [2025-08-14 06:28:22,793] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700833+00:00 — watchdog — failure_log.txt: [2025-08-14 06:33:45,721] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700846+00:00 — watchdog — failure_log.txt: [2025-08-14 06:39:07,652] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700858+00:00 — watchdog — failure_log.txt: [2025-08-14 06:44:24,749] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700871+00:00 — watchdog — failure_log.txt: [2025-08-14 06:49:38,516] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700883+00:00 — watchdog — failure_log.txt: [2025-08-14 06:54:54,828] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700896+00:00 — watchdog — failure_log.txt: [2025-08-14 07:00:13,784] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700909+00:00 — watchdog — failure_log.txt: [2025-08-14 07:05:30,978] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700921+00:00 — watchdog — failure_log.txt: [2025-08-14 07:10:49,650] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700934+00:00 — watchdog — failure_log.txt: [2025-08-14 07:16:07,520] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700946+00:00 — watchdog — failure_log.txt: [2025-08-14 07:21:25,885] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700959+00:00 — watchdog — failure_log.txt: [2025-08-14 07:26:46,798] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700971+00:00 — watchdog — failure_log.txt: [2025-08-14 07:32:01,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.700987+00:00 — watchdog — failure_log.txt: [2025-08-14 07:37:17,591] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701000+00:00 — watchdog — failure_log.txt: [2025-08-14 07:42:34,800] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701012+00:00 — watchdog — failure_log.txt: [2025-08-14 07:47:51,547] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701025+00:00 — watchdog — failure_log.txt: [2025-08-14 07:53:07,338] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701037+00:00 — watchdog — failure_log.txt: [2025-08-14 07:58:23,819] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701050+00:00 — watchdog — failure_log.txt: [2025-08-14 08:03:48,672] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701061+00:00 — watchdog — failure_log.txt: [2025-08-14 08:09:07,424] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701073+00:00 — watchdog — failure_log.txt: [2025-08-14 08:14:26,157] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701085+00:00 — watchdog — failure_log.txt: [2025-08-14 08:19:38,474] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701102+00:00 — watchdog — failure_log.txt: [2025-08-14 08:24:53,634] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701116+00:00 — watchdog — failure_log.txt: [2025-08-14 08:30:13,023] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701130+00:00 — watchdog — failure_log.txt: [2025-08-14 08:35:29,668] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701143+00:00 — watchdog — failure_log.txt: [2025-08-14 08:40:53,482] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701156+00:00 — watchdog — failure_log.txt: [2025-08-14 08:46:07,827] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701169+00:00 — watchdog — failure_log.txt: [2025-08-14 08:51:32,425] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701182+00:00 — watchdog — failure_log.txt: [2025-08-14 08:56:42,714] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701194+00:00 — watchdog — failure_log.txt: [2025-08-14 09:01:59,782] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701208+00:00 — watchdog — failure_log.txt: [2025-08-14 09:07:17,182] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701221+00:00 — watchdog — failure_log.txt: [2025-08-14 09:12:30,008] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701234+00:00 — watchdog — failure_log.txt: [2025-08-14 09:17:48,942] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701247+00:00 — watchdog — failure_log.txt: [2025-08-14 09:23:13,244] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701260+00:00 — watchdog — failure_log.txt: [2025-08-14 09:28:25,865] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701272+00:00 — watchdog — failure_log.txt: [2025-08-14 09:33:42,009] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701285+00:00 — watchdog — failure_log.txt: [2025-08-14 09:39:00,954] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701298+00:00 — watchdog — failure_log.txt: [2025-08-14 09:44:15,623] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701310+00:00 — watchdog — failure_log.txt: [2025-08-14 09:49:34,825] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701322+00:00 — watchdog — failure_log.txt: [2025-08-14 09:54:45,685] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701333+00:00 — watchdog — failure_log.txt: [2025-08-14 10:00:00,752] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701344+00:00 — watchdog — failure_log.txt: [2025-08-14 10:05:22,883] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701356+00:00 — watchdog — failure_log.txt: [2025-08-14 10:10:40,788] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701367+00:00 — watchdog — failure_log.txt: [2025-08-14 10:15:51,705] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701381+00:00 — watchdog — failure_log.txt: [2025-08-14 10:21:12,264] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701395+00:00 — watchdog — failure_log.txt: [2025-08-14 10:26:23,117] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701408+00:00 — watchdog — failure_log.txt: [2025-08-14 10:31:41,778] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701420+00:00 — watchdog — failure_log.txt: [2025-08-14 10:36:57,557] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701455+00:00 — watchdog — failure_log.txt: [2025-08-14 10:42:16,308] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701466+00:00 — watchdog — failure_log.txt: [2025-08-14 10:47:33,638] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701479+00:00 — watchdog — failure_log.txt: [2025-08-14 10:52:52,639] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701492+00:00 — watchdog — failure_log.txt: [2025-08-14 10:58:08,257] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701504+00:00 — watchdog — failure_log.txt: [2025-08-14 11:03:22,974] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701517+00:00 — watchdog — failure_log.txt: [2025-08-14 11:08:34,690] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701531+00:00 — watchdog — failure_log.txt: [2025-08-14 11:13:45,946] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701543+00:00 — watchdog — failure_log.txt: [2025-08-14 11:19:05,344] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701560+00:00 — watchdog — failure_log.txt: [2025-08-14 11:24:21,474] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701573+00:00 — watchdog — failure_log.txt: [2025-08-14 11:29:42,679] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701585+00:00 — watchdog — failure_log.txt: [2025-08-14 11:34:57,914] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701599+00:00 — watchdog — failure_log.txt: [2025-08-14 11:40:21,698] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701612+00:00 — watchdog — failure_log.txt: [2025-08-14 11:45:31,602] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701625+00:00 — watchdog — failure_log.txt: [2025-08-14 11:50:47,368] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701637+00:00 — watchdog — failure_log.txt: [2025-08-14 11:56:06,438] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701650+00:00 — watchdog — failure_log.txt: [2025-08-14 12:01:24,410] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701662+00:00 — watchdog — failure_log.txt: [2025-08-14 12:06:45,627] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701675+00:00 — watchdog — failure_log.txt: [2025-08-14 12:12:07,613] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701687+00:00 — watchdog — failure_log.txt: [2025-08-14 12:17:25,817] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701700+00:00 — watchdog — failure_log.txt: [2025-08-14 12:22:43,098] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701712+00:00 — watchdog — failure_log.txt: [2025-08-14 12:28:01,838] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701725+00:00 — watchdog — failure_log.txt: [2025-08-14 12:33:24,076] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701737+00:00 — watchdog — failure_log.txt: [2025-08-14 12:38:40,276] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701750+00:00 — watchdog — failure_log.txt: [2025-08-14 12:43:59,641] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701762+00:00 — watchdog — failure_log.txt: [2025-08-14 12:49:21,682] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701775+00:00 — watchdog — failure_log.txt: [2025-08-14 12:54:44,659] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701791+00:00 — watchdog — failure_log.txt: [2025-08-14 13:00:00,997] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701803+00:00 — watchdog — failure_log.txt: [2025-08-14 13:05:18,516] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701816+00:00 — watchdog — failure_log.txt: [2025-08-14 13:10:38,896] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701827+00:00 — watchdog — failure_log.txt: [2025-08-14 13:15:55,162] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701840+00:00 — watchdog — failure_log.txt: [2025-08-14 13:21:15,285] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701853+00:00 — watchdog — failure_log.txt: [2025-08-14 13:26:32,058] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701866+00:00 — watchdog — failure_log.txt: [2025-08-14 13:31:48,117] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701879+00:00 — watchdog — failure_log.txt: [2025-08-14 13:36:59,227] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701890+00:00 — watchdog — failure_log.txt: [2025-08-14 13:42:20,399] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701903+00:00 — watchdog — failure_log.txt: [2025-08-14 13:47:37,615] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701917+00:00 — watchdog — failure_log.txt: [2025-08-14 13:52:55,754] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701929+00:00 — watchdog — failure_log.txt: [2025-08-14 13:58:18,172] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701942+00:00 — watchdog — failure_log.txt: [2025-08-14 14:03:36,766] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701955+00:00 — watchdog — failure_log.txt: [2025-08-14 14:08:50,291] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701968+00:00 — watchdog — failure_log.txt: [2025-08-14 14:14:05,733] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701980+00:00 — watchdog — failure_log.txt: [2025-08-14 14:19:24,836] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.701993+00:00 — watchdog — failure_log.txt: [2025-08-14 14:24:36,725] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702005+00:00 — watchdog — failure_log.txt: [2025-08-14 14:29:51,727] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702018+00:00 — watchdog — failure_log.txt: [2025-08-14 14:35:18,875] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702029+00:00 — watchdog — failure_log.txt: [2025-08-14 14:40:33,922] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702041+00:00 — watchdog — failure_log.txt: [2025-08-14 14:45:55,724] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702053+00:00 — watchdog — failure_log.txt: [2025-08-14 14:51:17,846] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702065+00:00 — watchdog — failure_log.txt: [2025-08-14 14:56:42,022] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702077+00:00 — watchdog — failure_log.txt: [2025-08-14 15:02:00,799] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702089+00:00 — watchdog — failure_log.txt: [2025-08-14 15:07:22,151] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702109+00:00 — watchdog — failure_log.txt: [2025-08-14 15:12:33,173] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702122+00:00 — watchdog — failure_log.txt: [2025-08-14 15:17:44,782] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702134+00:00 — watchdog — failure_log.txt: [2025-08-14 15:22:58,838] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702146+00:00 — watchdog — failure_log.txt: [2025-08-14 15:28:22,257] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702159+00:00 — watchdog — failure_log.txt: [2025-08-14 15:33:36,827] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702171+00:00 — watchdog — failure_log.txt: [2025-08-14 15:38:58,111] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702183+00:00 — watchdog — failure_log.txt: [2025-08-14 15:44:22,837] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702196+00:00 — watchdog — failure_log.txt: [2025-08-14 15:49:48,874] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702208+00:00 — watchdog — failure_log.txt: [2025-08-14 15:55:07,623] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702220+00:00 — watchdog — failure_log.txt: [2025-08-14 16:00:23,156] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702233+00:00 — watchdog — failure_log.txt: [2025-08-14 16:05:39,012] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702245+00:00 — watchdog — failure_log.txt: [2025-08-14 16:10:52,885] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702258+00:00 — watchdog — failure_log.txt: [2025-08-14 16:16:18,470] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702270+00:00 — watchdog — failure_log.txt: [2025-08-14 16:21:30,910] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702283+00:00 — watchdog — failure_log.txt: [2025-08-14 16:26:48,601] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702295+00:00 — watchdog — failure_log.txt: [2025-08-14 16:32:00,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702308+00:00 — watchdog — failure_log.txt: [2025-08-14 16:37:19,462] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702320+00:00 — watchdog — failure_log.txt: [2025-08-14 16:42:37,390] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702333+00:00 — watchdog — failure_log.txt: [2025-08-14 16:47:57,511] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702345+00:00 — watchdog — failure_log.txt: [2025-08-14 16:53:22,092] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702357+00:00 — watchdog — failure_log.txt: [2025-08-14 16:58:47,505] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702370+00:00 — watchdog — failure_log.txt: [2025-08-14 17:04:04,525] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702382+00:00 — watchdog — failure_log.txt: [2025-08-14 17:09:14,448] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702394+00:00 — watchdog — failure_log.txt: [2025-08-14 17:14:20,485] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702407+00:00 — watchdog — failure_log.txt: [2025-08-14 17:19:32,525] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702439+00:00 — watchdog — failure_log.txt: [2025-08-14 17:24:41,674] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702455+00:00 — watchdog — failure_log.txt: [2025-08-14 17:29:54,481] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702467+00:00 — watchdog — failure_log.txt: [2025-08-14 17:35:13,758] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702480+00:00 — watchdog — failure_log.txt: [2025-08-14 17:40:22,694] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702492+00:00 — watchdog — failure_log.txt: [2025-08-14 17:45:30,824] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702505+00:00 — watchdog — failure_log.txt: [2025-08-14 17:50:47,608] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702518+00:00 — watchdog — failure_log.txt: [2025-08-14 17:55:59,427] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702530+00:00 — watchdog — failure_log.txt: [2025-08-14 18:01:18,965] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702543+00:00 — watchdog — failure_log.txt: [2025-08-14 18:03:41,387] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702555+00:00 — watchdog — failure_log.txt: [2025-08-14 18:03:50,210] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702568+00:00 — watchdog — failure_log.txt: [2025-08-14 18:04:13,205] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702581+00:00 — watchdog — failure_log.txt: [2025-08-14 18:04:46,079] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702594+00:00 — watchdog — failure_log.txt: [2025-08-14 18:05:31,214] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702607+00:00 — watchdog — failure_log.txt: [2025-08-14 18:08:20,968] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702619+00:00 — watchdog — failure_log.txt: [2025-08-14 18:08:25,471] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702632+00:00 — watchdog — failure_log.txt: [2025-08-14 18:08:42,984] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702645+00:00 — watchdog — failure_log.txt: [2025-08-14 18:09:15,438] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702664+00:00 — watchdog — failure_log.txt: [2025-08-14 18:10:00,671] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702677+00:00 — watchdog — failure_log.txt: [2025-08-14 18:11:24,762] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702689+00:00 — watchdog — failure_log.txt: [2025-08-14 18:15:41,493] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702701+00:00 — watchdog — failure_log.txt: [2025-08-14 18:15:46,830] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702714+00:00 — watchdog — failure_log.txt: [2025-08-14 18:16:09,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702728+00:00 — watchdog — failure_log.txt: [2025-08-14 18:16:39,666] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702742+00:00 — watchdog — failure_log.txt: [2025-08-14 18:17:32,007] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702756+00:00 — watchdog — failure_log.txt: [2025-08-14 18:19:12,678] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702770+00:00 — watchdog — failure_log.txt: [2025-08-14 18:22:10,251] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702789+00:00 — watchdog — failure_log.txt: [2025-08-14 18:27:22,505] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702803+00:00 — watchdog — failure_log.txt: [2025-08-14 18:35:15,295] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702817+00:00 — watchdog — failure_log.txt: [2025-08-14 18:35:22,946] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702831+00:00 — watchdog — failure_log.txt: [2025-08-14 18:35:40,439] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702845+00:00 — watchdog — failure_log.txt: [2025-08-14 18:36:13,456] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702859+00:00 — watchdog — failure_log.txt: [2025-08-14 18:37:12,242] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702873+00:00 — watchdog — failure_log.txt: [2025-08-14 18:38:39,310] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702887+00:00 — watchdog — failure_log.txt: [2025-08-14 18:41:24,652] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702901+00:00 — watchdog — failure_log.txt: [2025-08-14 18:46:46,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702915+00:00 — watchdog — failure_log.txt: [2025-08-14 18:54:19,897] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702928+00:00 — watchdog — failure_log.txt: [2025-08-14 18:54:24,172] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702941+00:00 — watchdog — failure_log.txt: [2025-08-14 18:54:39,496] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702955+00:00 — watchdog — failure_log.txt: [2025-08-14 18:55:15,345] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702968+00:00 — watchdog — failure_log.txt: [2025-08-14 18:56:11,925] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702980+00:00 — watchdog — failure_log.txt: [2025-08-14 18:57:37,517] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.702993+00:00 — watchdog — failure_log.txt: [2025-08-14 19:00:21,684] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703005+00:00 — watchdog — failure_log.txt: [2025-08-14 19:05:06,381] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703018+00:00 — watchdog — failure_log.txt: [2025-08-14 19:05:17,590] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703029+00:00 — watchdog — failure_log.txt: [2025-08-14 19:05:36,272] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703040+00:00 — watchdog — failure_log.txt: [2025-08-14 19:06:14,176] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703052+00:00 — watchdog — failure_log.txt: [2025-08-14 19:06:59,300] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703063+00:00 — watchdog — failure_log.txt: [2025-08-14 19:08:35,291] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703074+00:00 — watchdog — failure_log.txt: [2025-08-14 19:11:33,250] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703084+00:00 — watchdog — failure_log.txt: [2025-08-14 19:16:49,406] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703095+00:00 — watchdog — failure_log.txt: [2025-08-14 19:21:58,399] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703108+00:00 — watchdog — failure_log.txt: [2025-08-14 19:24:47,023] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703125+00:00 — watchdog — failure_log.txt: [2025-08-14 19:24:51,021] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703138+00:00 — watchdog — failure_log.txt: [2025-08-14 19:25:08,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703149+00:00 — watchdog — failure_log.txt: [2025-08-14 19:25:38,546] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703161+00:00 — watchdog — failure_log.txt: [2025-08-14 19:26:22,566] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703175+00:00 — watchdog — failure_log.txt: [2025-08-14 19:27:47,482] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703186+00:00 — watchdog — failure_log.txt: [2025-08-14 19:30:37,436] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703199+00:00 — watchdog — failure_log.txt: [2025-08-14 19:35:44,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703216+00:00 — watchdog — failure_log.txt: [2025-08-14 19:40:48,628] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703229+00:00 — watchdog — failure_log.txt: [2025-08-14 19:46:02,847] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703241+00:00 — watchdog — failure_log.txt: [2025-08-14 19:51:15,108] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703254+00:00 — watchdog — failure_log.txt: [2025-08-14 19:56:22,015] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703265+00:00 — watchdog — failure_log.txt: [2025-08-14 20:01:32,783] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703277+00:00 — watchdog — failure_log.txt: [2025-08-14 20:07:28,261] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703290+00:00 — watchdog — failure_log.txt: [2025-08-14 20:09:24,793] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703302+00:00 — watchdog — failure_log.txt: [2025-08-14 20:09:29,713] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703315+00:00 — watchdog — failure_log.txt: [2025-08-14 20:09:47,121] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703327+00:00 — watchdog — failure_log.txt: [2025-08-14 20:10:19,116] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703338+00:00 — watchdog — failure_log.txt: [2025-08-14 20:11:21,046] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703350+00:00 — watchdog — failure_log.txt: [2025-08-14 20:12:57,952] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703361+00:00 — watchdog — failure_log.txt: [2025-08-14 20:15:50,278] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703375+00:00 — watchdog — failure_log.txt: [2025-08-14 20:21:00,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703388+00:00 — watchdog — failure_log.txt: [2025-08-14 20:26:17,210] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703401+00:00 — watchdog — failure_log.txt: [2025-08-14 20:31:27,247] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703413+00:00 — watchdog — failure_log.txt: [2025-08-14 20:36:32,090] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703443+00:00 — watchdog — failure_log.txt: [2025-08-14 20:41:40,260] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703462+00:00 — watchdog — failure_log.txt: [2025-08-14 20:46:56,157] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703475+00:00 — watchdog — failure_log.txt: [2025-08-14 20:52:14,043] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703489+00:00 — watchdog — failure_log.txt: [2025-08-14 20:57:25,044] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703501+00:00 — watchdog — failure_log.txt: [2025-08-14 21:02:38,797] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703515+00:00 — watchdog — failure_log.txt: [2025-08-14 21:07:56,868] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703527+00:00 — watchdog — failure_log.txt: [2025-08-14 21:13:09,824] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703540+00:00 — watchdog — failure_log.txt: [2025-08-14 21:18:20,232] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703554+00:00 — watchdog — failure_log.txt: [2025-08-14 21:23:28,106] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703566+00:00 — watchdog — failure_log.txt: [2025-08-14 21:28:32,196] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703578+00:00 — watchdog — failure_log.txt: [2025-08-14 21:33:41,479] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703591+00:00 — watchdog — failure_log.txt: [2025-08-14 21:38:53,188] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703603+00:00 — watchdog — failure_log.txt: [2025-08-14 21:44:00,405] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703616+00:00 — watchdog — failure_log.txt: [2025-08-14 21:49:14,277] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703628+00:00 — watchdog — failure_log.txt: [2025-08-14 21:54:22,659] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703640+00:00 — watchdog — failure_log.txt: [2025-08-14 22:00:57,646] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703653+00:00 — watchdog — failure_log.txt: [2025-08-14 22:01:03,201] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703664+00:00 — watchdog — failure_log.txt: [2025-08-14 22:01:20,162] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703675+00:00 — watchdog — failure_log.txt: [2025-08-14 22:01:53,180] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703688+00:00 — watchdog — failure_log.txt: [2025-08-14 22:02:50,228] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703701+00:00 — watchdog — failure_log.txt: [2025-08-14 22:04:23,435] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703713+00:00 — watchdog — failure_log.txt: [2025-08-14 22:07:12,042] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703725+00:00 — watchdog — failure_log.txt: [2025-08-14 22:12:23,263] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703738+00:00 — watchdog — failure_log.txt: [2025-08-14 22:17:33,180] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703751+00:00 — watchdog — failure_log.txt: [2025-08-14 22:19:58,573] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703764+00:00 — watchdog — failure_log.txt: [2025-08-14 22:20:05,473] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703782+00:00 — watchdog — failure_log.txt: [2025-08-14 22:20:25,207] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703794+00:00 — watchdog — failure_log.txt: [2025-08-14 22:20:52,164] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703805+00:00 — watchdog — failure_log.txt: [2025-08-14 22:21:48,211] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703817+00:00 — watchdog — failure_log.txt: [2025-08-14 22:23:21,679] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703829+00:00 — watchdog — failure_log.txt: [2025-08-14 22:26:11,305] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703842+00:00 — watchdog — failure_log.txt: [2025-08-14 22:31:20,138] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703854+00:00 — watchdog — failure_log.txt: [2025-08-14 22:36:30,203] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703865+00:00 — watchdog — failure_log.txt: [2025-08-14 22:41:43,029] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703879+00:00 — watchdog — failure_log.txt: [2025-08-14 22:46:52,135] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703891+00:00 — watchdog — failure_log.txt: [2025-08-14 22:52:09,606] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703903+00:00 — watchdog — failure_log.txt: [2025-08-14 22:58:44,297] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703915+00:00 — watchdog — failure_log.txt: [2025-08-14 22:58:48,757] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703927+00:00 — watchdog — failure_log.txt: [2025-08-14 22:59:08,609] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703940+00:00 — watchdog — failure_log.txt: [2025-08-14 22:59:42,570] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703951+00:00 — watchdog — failure_log.txt: [2025-08-14 23:00:27,602] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703962+00:00 — watchdog — failure_log.txt: [2025-08-14 23:01:51,518] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703975+00:00 — watchdog — failure_log.txt: [2025-08-14 23:05:52,640] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703987+00:00 — watchdog — failure_log.txt: [2025-08-14 23:05:57,374] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.703998+00:00 — watchdog — failure_log.txt: [2025-08-14 23:06:27,082] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704010+00:00 — watchdog — failure_log.txt: [2025-08-14 23:07:00,700] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704020+00:00 — watchdog — failure_log.txt: [2025-08-14 23:07:52,324] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704032+00:00 — watchdog — failure_log.txt: [2025-08-14 23:09:17,464] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704044+00:00 — watchdog — failure_log.txt: [2025-08-14 23:12:17,662] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704058+00:00 — watchdog — failure_log.txt: [2025-08-14 23:17:26,272] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704071+00:00 — watchdog — failure_log.txt: [2025-08-14 23:22:39,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704083+00:00 — watchdog — failure_log.txt: [2025-08-14 23:27:51,680] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704100+00:00 — watchdog — failure_log.txt: [2025-08-14 23:33:08,194] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704111+00:00 — watchdog — failure_log.txt: [2025-08-14 23:38:27,341] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704123+00:00 — watchdog — failure_log.txt: [2025-08-14 23:43:32,118] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704134+00:00 — watchdog — failure_log.txt: [2025-08-14 23:48:47,316] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704146+00:00 — watchdog — failure_log.txt: [2025-08-14 23:53:52,265] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704159+00:00 — watchdog — failure_log.txt: [2025-08-14 23:59:11,163] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704172+00:00 — watchdog — failure_log.txt: [2025-08-15 00:04:27,298] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.704183+00:00 — watchdog — failure_log.txt: [2025-08-15 00:09:42,386] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704194+00:00 — watchdog — failure_log.txt: [2025-08-15 00:15:05,847] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704205+00:00 — watchdog — failure_log.txt: [2025-08-15 00:20:18,444] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704216+00:00 — watchdog — failure_log.txt: [2025-08-15 00:25:31,340] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704229+00:00 — watchdog — failure_log.txt: [2025-08-15 00:30:43,306] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704243+00:00 — watchdog — failure_log.txt: [2025-08-15 00:35:52,323] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704255+00:00 — watchdog — failure_log.txt: [2025-08-15 00:41:07,225] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704269+00:00 — watchdog — failure_log.txt: [2025-08-15 00:46:17,555] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704282+00:00 — watchdog — failure_log.txt: [2025-08-15 00:51:35,351] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704296+00:00 — watchdog — failure_log.txt: [2025-08-15 00:56:40,353] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704314+00:00 — watchdog — failure_log.txt: [2025-08-15 01:01:45,326] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704327+00:00 — watchdog — failure_log.txt: [2025-08-15 01:06:50,755] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704338+00:00 — watchdog — failure_log.txt: [2025-08-15 01:12:08,852] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704350+00:00 — watchdog — failure_log.txt: [2025-08-15 01:17:27,287] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704361+00:00 — watchdog — failure_log.txt: [2025-08-15 01:22:34,370] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704373+00:00 — watchdog — failure_log.txt: [2025-08-15 01:27:42,360] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704384+00:00 — watchdog — failure_log.txt: [2025-08-15 01:32:49,303] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704394+00:00 — watchdog — failure_log.txt: [2025-08-15 01:37:53,316] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704406+00:00 — watchdog — failure_log.txt: [2025-08-15 01:43:11,319] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704438+00:00 — watchdog — failure_log.txt: [2025-08-15 01:48:20,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704452+00:00 — watchdog — failure_log.txt: [2025-08-15 01:53:32,250] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704464+00:00 — watchdog — failure_log.txt: [2025-08-15 01:58:45,294] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704476+00:00 — watchdog — failure_log.txt: [2025-08-15 02:03:54,348] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704488+00:00 — watchdog — failure_log.txt: [2025-08-15 02:08:59,353] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704506+00:00 — watchdog — failure_log.txt: [2025-08-15 02:14:13,315] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704520+00:00 — watchdog — failure_log.txt: [2025-08-15 02:19:26,480] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704531+00:00 — watchdog — failure_log.txt: [2025-08-15 02:24:42,897] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704543+00:00 — watchdog — failure_log.txt: [2025-08-15 02:29:56,548] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704555+00:00 — watchdog — failure_log.txt: [2025-08-15 02:35:07,202] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704567+00:00 — watchdog — failure_log.txt: [2025-08-15 02:40:24,079] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704580+00:00 — watchdog — failure_log.txt: [2025-08-15 02:45:42,076] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704591+00:00 — watchdog — failure_log.txt: [2025-08-15 02:50:58,825] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704603+00:00 — watchdog — failure_log.txt: [2025-08-15 02:56:12,432] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704615+00:00 — watchdog — failure_log.txt: [2025-08-15 03:01:23,468] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704627+00:00 — watchdog — failure_log.txt: [2025-08-15 03:06:42,372] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704639+00:00 — watchdog — failure_log.txt: [2025-08-15 03:11:51,491] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704650+00:00 — watchdog — failure_log.txt: [2025-08-15 03:17:10,163] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704662+00:00 — watchdog — failure_log.txt: [2025-08-15 03:22:18,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704674+00:00 — watchdog — failure_log.txt: [2025-08-15 03:27:33,679] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704685+00:00 — watchdog — failure_log.txt: [2025-08-15 03:32:50,458] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704696+00:00 — watchdog — failure_log.txt: [2025-08-15 03:38:08,960] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704709+00:00 — watchdog — failure_log.txt: [2025-08-15 03:43:17,666] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704722+00:00 — watchdog — failure_log.txt: [2025-08-15 03:48:29,380] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704734+00:00 — watchdog — failure_log.txt: [2025-08-15 03:53:44,413] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704752+00:00 — watchdog — failure_log.txt: [2025-08-15 03:58:54,286] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704764+00:00 — watchdog — failure_log.txt: [2025-08-15 04:03:58,404] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704776+00:00 — watchdog — failure_log.txt: [2025-08-15 04:09:06,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704789+00:00 — watchdog — failure_log.txt: [2025-08-15 04:14:17,427] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704801+00:00 — watchdog — failure_log.txt: [2025-08-15 04:19:23,319] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704814+00:00 — watchdog — failure_log.txt: [2025-08-15 04:24:34,297] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704826+00:00 — watchdog — failure_log.txt: [2025-08-15 04:29:41,382] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704838+00:00 — watchdog — failure_log.txt: [2025-08-15 04:34:45,241] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704854+00:00 — watchdog — failure_log.txt: [2025-08-15 04:39:52,351] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704866+00:00 — watchdog — failure_log.txt: [2025-08-15 04:45:08,128] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704879+00:00 — watchdog — failure_log.txt: [2025-08-15 04:50:15,729] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704890+00:00 — watchdog — failure_log.txt: [2025-08-15 04:55:19,600] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704903+00:00 — watchdog — failure_log.txt: [2025-08-15 05:00:28,339] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704916+00:00 — watchdog — failure_log.txt: [2025-08-15 05:05:35,392] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704928+00:00 — watchdog — failure_log.txt: [2025-08-15 05:10:49,325] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704940+00:00 — watchdog — failure_log.txt: [2025-08-15 05:15:56,135] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704953+00:00 — watchdog — failure_log.txt: [2025-08-15 05:21:09,855] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704966+00:00 — watchdog — failure_log.txt: [2025-08-15 05:26:20,319] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704978+00:00 — watchdog — failure_log.txt: [2025-08-15 05:31:26,339] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.704989+00:00 — watchdog — failure_log.txt: [2025-08-15 05:36:32,436] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705000+00:00 — watchdog — failure_log.txt: [2025-08-15 05:41:44,340] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705013+00:00 — watchdog — failure_log.txt: [2025-08-15 05:46:52,527] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705025+00:00 — watchdog — failure_log.txt: [2025-08-15 05:52:00,368] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705037+00:00 — watchdog — failure_log.txt: [2025-08-15 05:57:07,554] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705049+00:00 — watchdog — failure_log.txt: [2025-08-15 06:02:22,749] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705065+00:00 — watchdog — failure_log.txt: [2025-08-15 06:07:34,283] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705079+00:00 — watchdog — failure_log.txt: [2025-08-15 06:12:52,356] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705092+00:00 — watchdog — failure_log.txt: [2025-08-15 06:18:06,202] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705104+00:00 — watchdog — failure_log.txt: [2025-08-15 06:23:16,455] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705117+00:00 — watchdog — failure_log.txt: [2025-08-15 06:28:31,565] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705130+00:00 — watchdog — failure_log.txt: [2025-08-15 06:33:39,874] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705144+00:00 — watchdog — failure_log.txt: [2025-08-15 06:38:46,256] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705156+00:00 — watchdog — failure_log.txt: [2025-08-15 06:44:00,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705168+00:00 — watchdog — failure_log.txt: [2025-08-15 06:49:17,316] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705179+00:00 — watchdog — failure_log.txt: [2025-08-15 06:54:22,643] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705191+00:00 — watchdog — failure_log.txt: [2025-08-15 06:59:34,604] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705203+00:00 — watchdog — failure_log.txt: [2025-08-15 07:04:38,362] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705216+00:00 — watchdog — failure_log.txt: [2025-08-15 07:09:53,474] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705228+00:00 — watchdog — failure_log.txt: [2025-08-15 07:15:00,342] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705239+00:00 — watchdog — failure_log.txt: [2025-08-15 07:20:15,552] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705250+00:00 — watchdog — failure_log.txt: [2025-08-15 07:25:28,211] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705261+00:00 — watchdog — failure_log.txt: [2025-08-15 07:30:32,556] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705272+00:00 — watchdog — failure_log.txt: [2025-08-15 07:35:47,573] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705285+00:00 — watchdog — failure_log.txt: [2025-08-15 07:40:54,350] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705297+00:00 — watchdog — failure_log.txt: [2025-08-15 07:46:08,398] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705308+00:00 — watchdog — failure_log.txt: [2025-08-15 07:51:20,390] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705321+00:00 — watchdog — failure_log.txt: [2025-08-15 07:56:26,299] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705334+00:00 — watchdog — failure_log.txt: [2025-08-15 08:01:30,613] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705345+00:00 — watchdog — failure_log.txt: [2025-08-15 08:06:39,469] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705357+00:00 — watchdog — failure_log.txt: [2025-08-15 08:11:53,296] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705373+00:00 — watchdog — failure_log.txt: [2025-08-15 08:16:58,421] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705388+00:00 — watchdog — failure_log.txt: [2025-08-15 08:22:12,058] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705400+00:00 — watchdog — failure_log.txt: [2025-08-15 08:27:27,113] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705411+00:00 — watchdog — failure_log.txt: [2025-08-15 08:32:45,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705441+00:00 — watchdog — failure_log.txt: [2025-08-15 08:37:54,307] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705454+00:00 — watchdog — failure_log.txt: [2025-08-15 08:43:12,752] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705466+00:00 — watchdog — failure_log.txt: [2025-08-15 08:48:19,330] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705478+00:00 — watchdog — failure_log.txt: [2025-08-15 08:53:26,817] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705489+00:00 — watchdog — failure_log.txt: [2025-08-15 08:58:38,435] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705500+00:00 — watchdog — failure_log.txt: [2025-08-15 09:03:43,532] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705512+00:00 — watchdog — failure_log.txt: [2025-08-15 09:08:47,249] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705523+00:00 — watchdog — failure_log.txt: [2025-08-15 09:13:54,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705535+00:00 — watchdog — failure_log.txt: [2025-08-15 09:18:59,398] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705546+00:00 — watchdog — failure_log.txt: [2025-08-15 09:24:08,828] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705557+00:00 — watchdog — failure_log.txt: [2025-08-15 09:29:13,590] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705567+00:00 — watchdog — failure_log.txt: [2025-08-15 09:34:19,767] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705579+00:00 — watchdog — failure_log.txt: [2025-08-15 09:39:30,915] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705590+00:00 — watchdog — failure_log.txt: [2025-08-15 09:44:43,320] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705602+00:00 — watchdog — failure_log.txt: [2025-08-15 09:49:47,385] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705613+00:00 — watchdog — failure_log.txt: [2025-08-15 09:55:01,612] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705625+00:00 — watchdog — failure_log.txt: [2025-08-15 10:00:20,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705636+00:00 — watchdog — failure_log.txt: [2025-08-15 10:05:31,635] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705647+00:00 — watchdog — failure_log.txt: [2025-08-15 10:10:43,403] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705659+00:00 — watchdog — failure_log.txt: [2025-08-15 10:15:47,650] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705670+00:00 — watchdog — failure_log.txt: [2025-08-15 10:21:07,989] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705681+00:00 — watchdog — failure_log.txt: [2025-08-15 10:26:25,943] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705692+00:00 — watchdog — failure_log.txt: [2025-08-15 10:31:36,413] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705712+00:00 — watchdog — failure_log.txt: [2025-08-15 10:36:43,335] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705723+00:00 — watchdog — failure_log.txt: [2025-08-15 10:41:48,291] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705734+00:00 — watchdog — failure_log.txt: [2025-08-15 10:46:57,515] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705745+00:00 — watchdog — failure_log.txt: [2025-08-15 10:52:12,469] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705755+00:00 — watchdog — failure_log.txt: [2025-08-15 10:57:24,357] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705766+00:00 — watchdog — failure_log.txt: [2025-08-15 11:02:36,774] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705777+00:00 — watchdog — failure_log.txt: [2025-08-15 11:07:42,450] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705789+00:00 — watchdog — failure_log.txt: [2025-08-15 11:12:46,291] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705800+00:00 — watchdog — failure_log.txt: [2025-08-15 11:17:54,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705812+00:00 — watchdog — failure_log.txt: [2025-08-15 11:23:05,112] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705823+00:00 — watchdog — failure_log.txt: [2025-08-15 11:28:24,408] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705834+00:00 — watchdog — failure_log.txt: [2025-08-15 11:33:32,428] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705846+00:00 — watchdog — failure_log.txt: [2025-08-15 11:38:39,243] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705858+00:00 — watchdog — failure_log.txt: [2025-08-15 11:43:44,935] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705869+00:00 — watchdog — failure_log.txt: [2025-08-15 11:49:03,626] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705881+00:00 — watchdog — failure_log.txt: [2025-08-15 11:54:19,427] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705896+00:00 — watchdog — failure_log.txt: [2025-08-15 11:59:29,333] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705907+00:00 — watchdog — failure_log.txt: [2025-08-15 12:04:35,320] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705918+00:00 — watchdog — failure_log.txt: [2025-08-15 12:09:39,403] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705929+00:00 — watchdog — failure_log.txt: [2025-08-15 12:14:48,254] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705941+00:00 — watchdog — failure_log.txt: [2025-08-15 12:20:01,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705952+00:00 — watchdog — failure_log.txt: [2025-08-15 12:25:13,308] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705964+00:00 — watchdog — failure_log.txt: [2025-08-15 12:30:22,395] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705975+00:00 — watchdog — failure_log.txt: [2025-08-15 12:35:35,264] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.705986+00:00 — watchdog — failure_log.txt: [2025-08-15 12:40:49,491] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706002+00:00 — watchdog — failure_log.txt: [2025-08-15 12:45:53,405] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706013+00:00 — watchdog — failure_log.txt: [2025-08-15 12:51:10,628] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706025+00:00 — watchdog — failure_log.txt: [2025-08-15 12:56:17,132] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706036+00:00 — watchdog — failure_log.txt: [2025-08-15 13:01:30,256] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706048+00:00 — watchdog — failure_log.txt: [2025-08-15 13:06:36,733] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706059+00:00 — watchdog — failure_log.txt: [2025-08-15 13:11:44,324] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706071+00:00 — watchdog — failure_log.txt: [2025-08-15 13:16:51,352] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706082+00:00 — watchdog — failure_log.txt: [2025-08-15 13:22:04,467] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706094+00:00 — watchdog — failure_log.txt: [2025-08-15 13:27:16,121] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706105+00:00 — watchdog — failure_log.txt: [2025-08-15 13:32:30,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706116+00:00 — watchdog — failure_log.txt: [2025-08-15 13:37:42,674] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706127+00:00 — watchdog — failure_log.txt: [2025-08-15 13:42:55,538] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706139+00:00 — watchdog — failure_log.txt: [2025-08-15 13:48:13,681] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706152+00:00 — watchdog — failure_log.txt: [2025-08-15 13:53:26,551] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706164+00:00 — watchdog — failure_log.txt: [2025-08-15 13:58:32,338] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706177+00:00 — watchdog — failure_log.txt: [2025-08-15 14:03:43,347] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706196+00:00 — watchdog — failure_log.txt: [2025-08-15 14:08:48,357] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706208+00:00 — watchdog — failure_log.txt: [2025-08-15 14:13:55,491] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706219+00:00 — watchdog — failure_log.txt: [2025-08-15 14:19:01,354] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706230+00:00 — watchdog — failure_log.txt: [2025-08-15 14:24:17,274] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706240+00:00 — watchdog — failure_log.txt: [2025-08-15 14:29:23,928] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706251+00:00 — watchdog — failure_log.txt: [2025-08-15 14:34:35,831] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706263+00:00 — watchdog — failure_log.txt: [2025-08-15 14:39:41,540] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706274+00:00 — watchdog — failure_log.txt: [2025-08-15 14:44:56,326] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706285+00:00 — watchdog — failure_log.txt: [2025-08-15 14:50:11,234] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706300+00:00 — watchdog — failure_log.txt: [2025-08-15 14:55:21,671] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706312+00:00 — watchdog — failure_log.txt: [2025-08-15 15:00:27,408] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706323+00:00 — watchdog — failure_log.txt: [2025-08-15 15:05:35,392] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706334+00:00 — watchdog — failure_log.txt: [2025-08-15 15:10:46,324] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706345+00:00 — watchdog — failure_log.txt: [2025-08-15 15:16:00,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706356+00:00 — watchdog — failure_log.txt: [2025-08-15 15:21:15,942] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706367+00:00 — watchdog — failure_log.txt: [2025-08-15 15:26:30,446] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706378+00:00 — watchdog — failure_log.txt: [2025-08-15 15:31:41,253] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706389+00:00 — watchdog — failure_log.txt: [2025-08-15 15:36:45,290] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706403+00:00 — watchdog — failure_log.txt: [2025-08-15 15:41:55,440] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706415+00:00 — watchdog — failure_log.txt: [2025-08-15 15:47:08,481] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706450+00:00 — watchdog — failure_log.txt: [2025-08-15 15:52:22,426] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706463+00:00 — watchdog — failure_log.txt: [2025-08-15 15:57:33,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706475+00:00 — watchdog — failure_log.txt: [2025-08-15 16:02:42,553] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706486+00:00 — watchdog — failure_log.txt: [2025-08-15 16:07:55,498] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706498+00:00 — watchdog — failure_log.txt: [2025-08-15 16:13:06,485] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706510+00:00 — watchdog — failure_log.txt: [2025-08-15 16:18:20,699] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706521+00:00 — watchdog — failure_log.txt: [2025-08-15 16:23:37,456] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706533+00:00 — watchdog — failure_log.txt: [2025-08-15 16:28:46,312] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706545+00:00 — watchdog — failure_log.txt: [2025-08-15 16:33:54,278] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706556+00:00 — watchdog — failure_log.txt: [2025-08-15 16:39:00,419] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706568+00:00 — watchdog — failure_log.txt: [2025-08-15 16:44:12,469] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706580+00:00 — watchdog — failure_log.txt: [2025-08-15 16:50:15,122] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706592+00:00 — watchdog — failure_log.txt: [2025-08-15 16:50:19,762] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706603+00:00 — watchdog — failure_log.txt: [2025-08-15 16:50:39,897] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706615+00:00 — watchdog — failure_log.txt: [2025-08-15 16:51:12,161] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706629+00:00 — watchdog — failure_log.txt: [2025-08-15 16:52:09,635] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706639+00:00 — watchdog — failure_log.txt: [2025-08-15 16:53:41,280] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706650+00:00 — watchdog — failure_log.txt: [2025-08-15 16:56:34,023] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706660+00:00 — watchdog — failure_log.txt: [2025-08-15 17:01:48,875] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706671+00:00 — watchdog — failure_log.txt: [2025-08-15 17:07:01,100] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706682+00:00 — watchdog — failure_log.txt: [2025-08-15 17:12:09,872] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706694+00:00 — watchdog — failure_log.txt: [2025-08-15 17:17:23,346] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706706+00:00 — watchdog — failure_log.txt: [2025-08-15 17:22:29,113] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706717+00:00 — watchdog — failure_log.txt: [2025-08-15 17:27:33,844] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706729+00:00 — watchdog — failure_log.txt: [2025-08-15 17:32:45,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706740+00:00 — watchdog — failure_log.txt: [2025-08-15 17:37:59,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706750+00:00 — watchdog — failure_log.txt: [2025-08-15 17:43:10,312] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706762+00:00 — watchdog — failure_log.txt: [2025-08-15 17:48:17,793] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706775+00:00 — watchdog — failure_log.txt: [2025-08-15 17:53:22,016] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706787+00:00 — watchdog — failure_log.txt: [2025-08-15 17:58:30,845] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706799+00:00 — watchdog — failure_log.txt: [2025-08-15 18:04:26,520] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706809+00:00 — watchdog — failure_log.txt: [2025-08-15 18:07:58,591] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706821+00:00 — watchdog — failure_log.txt: [2025-08-15 18:08:13,871] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706832+00:00 — watchdog — failure_log.txt: [2025-08-15 18:08:34,638] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706844+00:00 — watchdog — failure_log.txt: [2025-08-15 18:09:07,779] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706856+00:00 — watchdog — failure_log.txt: [2025-08-15 18:10:15,361] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706866+00:00 — watchdog — failure_log.txt: [2025-08-15 18:11:52,993] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706876+00:00 — watchdog — failure_log.txt: [2025-08-15 18:14:41,191] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706887+00:00 — watchdog — failure_log.txt: [2025-08-15 18:19:58,857] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706899+00:00 — watchdog — failure_log.txt: [2025-08-15 18:25:21,010] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706915+00:00 — watchdog — failure_log.txt: [2025-08-15 18:30:40,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706931+00:00 — watchdog — failure_log.txt: [2025-08-15 18:36:10,443] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706942+00:00 — watchdog — failure_log.txt: [2025-08-15 18:41:31,704] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706953+00:00 — watchdog — failure_log.txt: [2025-08-15 18:46:45,317] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706964+00:00 — watchdog — failure_log.txt: [2025-08-15 18:52:09,744] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706976+00:00 — watchdog — failure_log.txt: [2025-08-15 18:57:21,432] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706986+00:00 — watchdog — failure_log.txt: [2025-08-15 19:02:32,965] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.706998+00:00 — watchdog — failure_log.txt: [2025-08-15 19:07:41,955] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707009+00:00 — watchdog — failure_log.txt: [2025-08-15 19:12:57,824] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707020+00:00 — watchdog — failure_log.txt: [2025-08-15 19:22:37,945] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707032+00:00 — watchdog — failure_log.txt: [2025-08-15 19:22:45,305] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707044+00:00 — watchdog — failure_log.txt: [2025-08-15 19:23:07,613] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707056+00:00 — watchdog — failure_log.txt: [2025-08-15 19:23:48,582] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707067+00:00 — watchdog — failure_log.txt: [2025-08-15 19:24:40,073] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707079+00:00 — watchdog — failure_log.txt: [2025-08-15 19:26:22,037] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707090+00:00 — watchdog — failure_log.txt: [2025-08-15 19:29:18,005] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707101+00:00 — watchdog — failure_log.txt: [2025-08-15 19:34:30,045] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707112+00:00 — watchdog — failure_log.txt: [2025-08-15 19:39:40,012] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707125+00:00 — watchdog — failure_log.txt: [2025-08-15 19:44:54,631] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707136+00:00 — watchdog — failure_log.txt: [2025-08-15 19:50:06,630] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707147+00:00 — watchdog — failure_log.txt: [2025-08-15 19:55:28,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707158+00:00 — watchdog — failure_log.txt: [2025-08-15 20:00:47,411] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707170+00:00 — watchdog — failure_log.txt: [2025-08-15 20:06:12,062] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707181+00:00 — watchdog — failure_log.txt: [2025-08-15 20:11:35,582] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707192+00:00 — watchdog — failure_log.txt: [2025-08-15 20:16:58,153] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707203+00:00 — watchdog — failure_log.txt: [2025-08-15 20:22:16,424] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707219+00:00 — watchdog — failure_log.txt: [2025-08-15 20:27:37,109] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707230+00:00 — watchdog — failure_log.txt: [2025-08-15 20:32:54,342] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707241+00:00 — watchdog — failure_log.txt: [2025-08-15 20:38:10,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707253+00:00 — watchdog — failure_log.txt: [2025-08-15 20:43:33,219] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707264+00:00 — watchdog — failure_log.txt: [2025-08-15 20:48:51,017] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707275+00:00 — watchdog — failure_log.txt: [2025-08-15 20:54:04,116] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707287+00:00 — watchdog — failure_log.txt: [2025-08-15 20:59:25,587] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707299+00:00 — watchdog — failure_log.txt: [2025-08-15 21:04:46,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707310+00:00 — watchdog — failure_log.txt: [2025-08-15 21:09:57,856] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707323+00:00 — watchdog — failure_log.txt: [2025-08-15 21:15:13,483] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707334+00:00 — watchdog — failure_log.txt: [2025-08-15 21:20:32,303] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707345+00:00 — watchdog — failure_log.txt: [2025-08-15 21:25:47,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707356+00:00 — watchdog — failure_log.txt: [2025-08-15 21:31:00,653] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707367+00:00 — watchdog — failure_log.txt: [2025-08-15 21:36:19,283] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707379+00:00 — watchdog — failure_log.txt: [2025-08-15 21:41:34,175] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707389+00:00 — watchdog — failure_log.txt: [2025-08-15 21:46:43,798] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707403+00:00 — watchdog — failure_log.txt: [2025-08-15 21:51:59,607] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707415+00:00 — watchdog — failure_log.txt: [2025-08-15 21:57:16,331] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707443+00:00 — watchdog — failure_log.txt: [2025-08-15 22:02:40,719] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707456+00:00 — watchdog — failure_log.txt: [2025-08-15 22:07:49,979] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707466+00:00 — watchdog — failure_log.txt: [2025-08-15 22:13:11,184] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707476+00:00 — watchdog — failure_log.txt: [2025-08-15 22:18:31,977] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707488+00:00 — watchdog — failure_log.txt: [2025-08-15 22:23:46,591] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707501+00:00 — watchdog — failure_log.txt: [2025-08-15 22:29:05,589] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707513+00:00 — watchdog — failure_log.txt: [2025-08-15 22:34:21,432] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707529+00:00 — watchdog — failure_log.txt: [2025-08-15 22:39:33,151] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707540+00:00 — watchdog — failure_log.txt: [2025-08-15 22:44:45,852] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707552+00:00 — watchdog — failure_log.txt: [2025-08-15 22:50:00,005] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707563+00:00 — watchdog — failure_log.txt: [2025-08-15 22:55:22,460] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707575+00:00 — watchdog — failure_log.txt: [2025-08-15 23:01:43,129] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707587+00:00 — watchdog — failure_log.txt: [2025-08-15 23:01:50,313] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707598+00:00 — watchdog — failure_log.txt: [2025-08-15 23:02:15,914] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707610+00:00 — watchdog — failure_log.txt: [2025-08-15 23:02:50,110] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707621+00:00 — watchdog — failure_log.txt: [2025-08-15 23:03:47,962] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707633+00:00 — watchdog — failure_log.txt: [2025-08-15 23:05:24,960] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707645+00:00 — watchdog — failure_log.txt: [2025-08-15 23:08:20,170] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707656+00:00 — watchdog — failure_log.txt: [2025-08-15 23:13:32,276] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707668+00:00 — watchdog — failure_log.txt: [2025-08-15 23:18:41,340] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707679+00:00 — watchdog — failure_log.txt: [2025-08-15 23:23:54,625] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707691+00:00 — watchdog — failure_log.txt: [2025-08-15 23:29:14,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707702+00:00 — watchdog — failure_log.txt: [2025-08-15 23:34:33,949] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707714+00:00 — watchdog — failure_log.txt: [2025-08-15 23:39:44,586] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707726+00:00 — watchdog — failure_log.txt: [2025-08-15 23:45:08,702] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707737+00:00 — watchdog — failure_log.txt: [2025-08-15 23:50:34,791] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707748+00:00 — watchdog — failure_log.txt: [2025-08-15 23:55:51,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707762+00:00 — watchdog — failure_log.txt: [2025-08-16 00:01:07,602] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.707774+00:00 — watchdog — failure_log.txt: [2025-08-16 00:06:26,801] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707786+00:00 — watchdog — failure_log.txt: [2025-08-16 00:11:48,440] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707797+00:00 — watchdog — failure_log.txt: [2025-08-16 00:16:59,193] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707809+00:00 — watchdog — failure_log.txt: [2025-08-16 00:22:14,293] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707820+00:00 — watchdog — failure_log.txt: [2025-08-16 00:27:24,229] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707836+00:00 — watchdog — failure_log.txt: [2025-08-16 00:32:40,744] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707849+00:00 — watchdog — failure_log.txt: [2025-08-16 00:37:50,166] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707860+00:00 — watchdog — failure_log.txt: [2025-08-16 00:43:09,552] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707872+00:00 — watchdog — failure_log.txt: [2025-08-16 00:48:22,818] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707884+00:00 — watchdog — failure_log.txt: [2025-08-16 00:53:42,632] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707896+00:00 — watchdog — failure_log.txt: [2025-08-16 00:58:54,978] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707907+00:00 — watchdog — failure_log.txt: [2025-08-16 01:04:05,936] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707919+00:00 — watchdog — failure_log.txt: [2025-08-16 01:09:22,493] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707935+00:00 — watchdog — failure_log.txt: [2025-08-16 01:14:33,764] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707947+00:00 — watchdog — failure_log.txt: [2025-08-16 01:19:41,975] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707958+00:00 — watchdog — failure_log.txt: [2025-08-16 01:25:00,728] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707970+00:00 — watchdog — failure_log.txt: [2025-08-16 01:30:18,976] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707982+00:00 — watchdog — failure_log.txt: [2025-08-16 01:35:32,860] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.707994+00:00 — watchdog — failure_log.txt: [2025-08-16 01:40:43,981] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708005+00:00 — watchdog — failure_log.txt: [2025-08-16 01:45:54,094] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708017+00:00 — watchdog — failure_log.txt: [2025-08-16 01:51:06,278] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708029+00:00 — watchdog — failure_log.txt: [2025-08-16 01:56:20,433] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708041+00:00 — watchdog — failure_log.txt: [2025-08-16 02:01:31,191] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708052+00:00 — watchdog — failure_log.txt: [2025-08-16 02:06:51,115] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708064+00:00 — watchdog — failure_log.txt: [2025-08-16 02:12:07,773] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708076+00:00 — watchdog — failure_log.txt: [2025-08-16 02:17:26,129] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708088+00:00 — watchdog — failure_log.txt: [2025-08-16 02:22:38,198] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708100+00:00 — watchdog — failure_log.txt: [2025-08-16 02:27:55,886] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708113+00:00 — watchdog — failure_log.txt: [2025-08-16 02:33:19,354] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708124+00:00 — watchdog — failure_log.txt: [2025-08-16 02:38:32,816] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708137+00:00 — watchdog — failure_log.txt: [2025-08-16 02:43:44,114] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708155+00:00 — watchdog — failure_log.txt: [2025-08-16 02:49:06,126] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708168+00:00 — watchdog — failure_log.txt: [2025-08-16 02:54:21,856] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708181+00:00 — watchdog — failure_log.txt: [2025-08-16 02:59:40,463] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708194+00:00 — watchdog — failure_log.txt: [2025-08-16 03:04:55,083] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708207+00:00 — watchdog — failure_log.txt: [2025-08-16 03:10:15,605] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708220+00:00 — watchdog — failure_log.txt: [2025-08-16 03:15:36,471] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708233+00:00 — watchdog — failure_log.txt: [2025-08-16 03:20:42,724] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708247+00:00 — watchdog — failure_log.txt: [2025-08-16 03:26:01,475] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708259+00:00 — watchdog — failure_log.txt: [2025-08-16 03:31:21,243] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708273+00:00 — watchdog — failure_log.txt: [2025-08-16 03:36:38,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708286+00:00 — watchdog — failure_log.txt: [2025-08-16 03:41:46,617] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708299+00:00 — watchdog — failure_log.txt: [2025-08-16 03:47:00,094] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708312+00:00 — watchdog — failure_log.txt: [2025-08-16 03:52:14,087] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708325+00:00 — watchdog — failure_log.txt: [2025-08-16 03:57:28,913] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708338+00:00 — watchdog — failure_log.txt: [2025-08-16 04:02:36,731] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708350+00:00 — watchdog — failure_log.txt: [2025-08-16 04:07:52,164] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708363+00:00 — watchdog — failure_log.txt: [2025-08-16 04:13:01,493] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708376+00:00 — watchdog — failure_log.txt: [2025-08-16 04:18:24,675] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708389+00:00 — watchdog — failure_log.txt: [2025-08-16 04:23:36,119] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708402+00:00 — watchdog — failure_log.txt: [2025-08-16 04:28:50,697] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708415+00:00 — watchdog — failure_log.txt: [2025-08-16 04:34:01,969] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708447+00:00 — watchdog — failure_log.txt: [2025-08-16 04:39:20,272] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708461+00:00 — watchdog — failure_log.txt: [2025-08-16 04:44:31,742] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708474+00:00 — watchdog — failure_log.txt: [2025-08-16 04:49:48,519] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708487+00:00 — watchdog — failure_log.txt: [2025-08-16 04:54:56,757] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708516+00:00 — watchdog — failure_log.txt: [2025-08-16 05:00:21,281] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708530+00:00 — watchdog — failure_log.txt: [2025-08-16 05:05:40,084] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708543+00:00 — watchdog — failure_log.txt: [2025-08-16 05:10:55,311] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708556+00:00 — watchdog — failure_log.txt: [2025-08-16 05:16:16,200] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708569+00:00 — watchdog — failure_log.txt: [2025-08-16 05:21:34,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708582+00:00 — watchdog — failure_log.txt: [2025-08-16 05:26:43,474] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708595+00:00 — watchdog — failure_log.txt: [2025-08-16 05:31:54,776] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708608+00:00 — watchdog — failure_log.txt: [2025-08-16 05:37:18,893] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708620+00:00 — watchdog — failure_log.txt: [2025-08-16 05:42:34,888] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708633+00:00 — watchdog — failure_log.txt: [2025-08-16 05:47:44,588] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708646+00:00 — watchdog — failure_log.txt: [2025-08-16 05:52:59,498] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708659+00:00 — watchdog — failure_log.txt: [2025-08-16 05:58:19,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708672+00:00 — watchdog — failure_log.txt: [2025-08-16 06:03:41,330] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708685+00:00 — watchdog — failure_log.txt: [2025-08-16 06:08:59,507] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708698+00:00 — watchdog — failure_log.txt: [2025-08-16 06:14:25,413] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708711+00:00 — watchdog — failure_log.txt: [2025-08-16 06:19:38,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708724+00:00 — watchdog — failure_log.txt: [2025-08-16 06:24:58,529] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708737+00:00 — watchdog — failure_log.txt: [2025-08-16 06:30:18,034] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708750+00:00 — watchdog — failure_log.txt: [2025-08-16 06:35:31,934] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708762+00:00 — watchdog — failure_log.txt: [2025-08-16 06:40:50,107] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708775+00:00 — watchdog — failure_log.txt: [2025-08-16 06:45:58,626] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708788+00:00 — watchdog — failure_log.txt: [2025-08-16 06:51:21,192] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708801+00:00 — watchdog — failure_log.txt: [2025-08-16 06:56:42,719] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708814+00:00 — watchdog — failure_log.txt: [2025-08-16 07:01:57,514] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708827+00:00 — watchdog — failure_log.txt: [2025-08-16 07:07:12,896] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708844+00:00 — watchdog — failure_log.txt: [2025-08-16 07:12:28,700] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708857+00:00 — watchdog — failure_log.txt: [2025-08-16 07:17:46,638] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708870+00:00 — watchdog — failure_log.txt: [2025-08-16 07:23:00,642] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708883+00:00 — watchdog — failure_log.txt: [2025-08-16 07:28:14,370] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708896+00:00 — watchdog — failure_log.txt: [2025-08-16 07:33:26,545] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708909+00:00 — watchdog — failure_log.txt: [2025-08-16 07:38:42,686] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708922+00:00 — watchdog — failure_log.txt: [2025-08-16 07:43:51,591] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708935+00:00 — watchdog — failure_log.txt: [2025-08-16 07:48:58,698] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708948+00:00 — watchdog — failure_log.txt: [2025-08-16 07:54:16,410] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708962+00:00 — watchdog — failure_log.txt: [2025-08-16 07:59:32,956] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708975+00:00 — watchdog — failure_log.txt: [2025-08-16 08:04:42,720] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.708988+00:00 — watchdog — failure_log.txt: [2025-08-16 08:10:03,503] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709001+00:00 — watchdog — failure_log.txt: [2025-08-16 08:15:18,630] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709014+00:00 — watchdog — failure_log.txt: [2025-08-16 08:20:28,579] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709027+00:00 — watchdog — failure_log.txt: [2025-08-16 08:25:44,519] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709040+00:00 — watchdog — failure_log.txt: [2025-08-16 08:31:00,763] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709052+00:00 — watchdog — failure_log.txt: [2025-08-16 08:36:18,081] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709069+00:00 — watchdog — failure_log.txt: [2025-08-16 08:41:34,776] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709081+00:00 — watchdog — failure_log.txt: [2025-08-16 08:46:52,014] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709092+00:00 — watchdog — failure_log.txt: [2025-08-16 08:52:01,104] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709104+00:00 — watchdog — failure_log.txt: [2025-08-16 08:57:25,296] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709115+00:00 — watchdog — failure_log.txt: [2025-08-16 09:02:41,428] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709126+00:00 — watchdog — failure_log.txt: [2025-08-16 09:07:51,989] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709137+00:00 — watchdog — failure_log.txt: [2025-08-16 09:13:16,978] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709149+00:00 — watchdog — failure_log.txt: [2025-08-16 09:18:32,945] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709162+00:00 — watchdog — failure_log.txt: [2025-08-16 09:23:42,783] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709178+00:00 — watchdog — failure_log.txt: [2025-08-16 09:28:55,260] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709190+00:00 — watchdog — failure_log.txt: [2025-08-16 09:34:17,816] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709203+00:00 — watchdog — failure_log.txt: [2025-08-16 09:39:36,188] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709216+00:00 — watchdog — failure_log.txt: [2025-08-16 09:44:55,530] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709229+00:00 — watchdog — failure_log.txt: [2025-08-16 09:50:16,501] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709242+00:00 — watchdog — failure_log.txt: [2025-08-16 09:55:40,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709255+00:00 — watchdog — failure_log.txt: [2025-08-16 10:00:58,927] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709268+00:00 — watchdog — failure_log.txt: [2025-08-16 10:06:13,174] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709281+00:00 — watchdog — failure_log.txt: [2025-08-16 10:11:27,836] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709292+00:00 — watchdog — failure_log.txt: [2025-08-16 10:16:36,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709304+00:00 — watchdog — failure_log.txt: [2025-08-16 10:21:52,545] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709316+00:00 — watchdog — failure_log.txt: [2025-08-16 10:27:10,981] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709327+00:00 — watchdog — failure_log.txt: [2025-08-16 10:32:24,132] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709340+00:00 — watchdog — failure_log.txt: [2025-08-16 10:37:42,106] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709351+00:00 — watchdog — failure_log.txt: [2025-08-16 10:42:55,225] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709362+00:00 — watchdog — failure_log.txt: [2025-08-16 10:48:08,841] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709373+00:00 — watchdog — failure_log.txt: [2025-08-16 10:53:23,944] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709385+00:00 — watchdog — failure_log.txt: [2025-08-16 10:58:42,265] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709397+00:00 — watchdog — failure_log.txt: [2025-08-16 11:03:52,485] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709408+00:00 — watchdog — failure_log.txt: [2025-08-16 11:09:06,086] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709421+00:00 — watchdog — failure_log.txt: [2025-08-16 11:14:20,764] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709451+00:00 — watchdog — failure_log.txt: [2025-08-16 11:19:38,119] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709465+00:00 — watchdog — failure_log.txt: [2025-08-16 11:24:46,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709478+00:00 — watchdog — failure_log.txt: [2025-08-16 11:29:58,952] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709492+00:00 — watchdog — failure_log.txt: [2025-08-16 11:35:18,679] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709506+00:00 — watchdog — failure_log.txt: [2025-08-16 11:40:34,728] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709525+00:00 — watchdog — failure_log.txt: [2025-08-16 11:45:42,766] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709538+00:00 — watchdog — failure_log.txt: [2025-08-16 11:50:50,501] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709551+00:00 — watchdog — failure_log.txt: [2025-08-16 11:56:16,357] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709564+00:00 — watchdog — failure_log.txt: [2025-08-16 12:01:34,682] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709578+00:00 — watchdog — failure_log.txt: [2025-08-16 12:06:50,630] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709590+00:00 — watchdog — failure_log.txt: [2025-08-16 12:12:12,369] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709601+00:00 — watchdog — failure_log.txt: [2025-08-16 12:17:33,200] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709615+00:00 — watchdog — failure_log.txt: [2025-08-16 12:22:48,781] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709625+00:00 — watchdog — failure_log.txt: [2025-08-16 12:28:07,566] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709636+00:00 — watchdog — failure_log.txt: [2025-08-16 12:33:27,058] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709647+00:00 — watchdog — failure_log.txt: [2025-08-16 12:38:40,025] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709657+00:00 — watchdog — failure_log.txt: [2025-08-16 12:44:03,464] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709668+00:00 — watchdog — failure_log.txt: [2025-08-16 12:49:20,249] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709680+00:00 — watchdog — failure_log.txt: [2025-08-16 12:54:30,685] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709693+00:00 — watchdog — failure_log.txt: [2025-08-16 12:59:43,785] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709707+00:00 — watchdog — failure_log.txt: [2025-08-16 13:05:00,083] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709720+00:00 — watchdog — failure_log.txt: [2025-08-16 13:10:20,035] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709734+00:00 — watchdog — failure_log.txt: [2025-08-16 13:15:36,223] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709747+00:00 — watchdog — failure_log.txt: [2025-08-16 13:20:52,926] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709760+00:00 — watchdog — failure_log.txt: [2025-08-16 13:26:02,336] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709772+00:00 — watchdog — failure_log.txt: [2025-08-16 13:31:16,668] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709785+00:00 — watchdog — failure_log.txt: [2025-08-16 13:36:31,775] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709798+00:00 — watchdog — failure_log.txt: [2025-08-16 13:41:46,927] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709812+00:00 — watchdog — failure_log.txt: [2025-08-16 13:47:09,202] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709826+00:00 — watchdog — failure_log.txt: [2025-08-16 13:52:28,826] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709845+00:00 — watchdog — failure_log.txt: [2025-08-16 13:57:43,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709858+00:00 — watchdog — failure_log.txt: [2025-08-16 14:02:55,166] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709871+00:00 — watchdog — failure_log.txt: [2025-08-16 14:08:13,833] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709883+00:00 — watchdog — failure_log.txt: [2025-08-16 14:13:24,736] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709896+00:00 — watchdog — failure_log.txt: [2025-08-16 14:18:30,614] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709909+00:00 — watchdog — failure_log.txt: [2025-08-16 14:23:45,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709923+00:00 — watchdog — failure_log.txt: [2025-08-16 14:28:57,881] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709936+00:00 — watchdog — failure_log.txt: [2025-08-16 14:34:11,250] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709950+00:00 — watchdog — failure_log.txt: [2025-08-16 14:39:24,755] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709963+00:00 — watchdog — failure_log.txt: [2025-08-16 14:44:42,868] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709977+00:00 — watchdog — failure_log.txt: [2025-08-16 14:49:54,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.709990+00:00 — watchdog — failure_log.txt: [2025-08-16 14:55:14,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710003+00:00 — watchdog — failure_log.txt: [2025-08-16 15:00:33,153] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710016+00:00 — watchdog — failure_log.txt: [2025-08-16 15:05:45,967] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710029+00:00 — watchdog — failure_log.txt: [2025-08-16 15:10:56,794] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710043+00:00 — watchdog — failure_log.txt: [2025-08-16 15:16:06,373] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710057+00:00 — watchdog — failure_log.txt: [2025-08-16 15:21:28,073] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710071+00:00 — watchdog — failure_log.txt: [2025-08-16 15:26:40,465] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710085+00:00 — watchdog — failure_log.txt: [2025-08-16 15:31:48,657] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710099+00:00 — watchdog — failure_log.txt: [2025-08-16 15:36:56,627] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710113+00:00 — watchdog — failure_log.txt: [2025-08-16 15:42:11,862] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710126+00:00 — watchdog — failure_log.txt: [2025-08-16 15:47:25,317] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710140+00:00 — watchdog — failure_log.txt: [2025-08-16 15:52:45,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710153+00:00 — watchdog — failure_log.txt: [2025-08-16 15:58:00,936] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710167+00:00 — watchdog — failure_log.txt: [2025-08-16 16:03:21,357] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710187+00:00 — watchdog — failure_log.txt: [2025-08-16 16:08:38,018] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710201+00:00 — watchdog — failure_log.txt: [2025-08-16 16:13:44,881] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710215+00:00 — watchdog — failure_log.txt: [2025-08-16 16:19:01,436] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710228+00:00 — watchdog — failure_log.txt: [2025-08-16 16:24:30,595] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710241+00:00 — watchdog — failure_log.txt: [2025-08-16 16:29:43,554] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710255+00:00 — watchdog — failure_log.txt: [2025-08-16 16:35:03,190] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710268+00:00 — watchdog — failure_log.txt: [2025-08-16 16:40:22,424] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710283+00:00 — watchdog — failure_log.txt: [2025-08-16 16:45:44,953] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710297+00:00 — watchdog — failure_log.txt: [2025-08-16 16:51:02,797] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710311+00:00 — watchdog — failure_log.txt: [2025-08-16 16:56:24,927] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710325+00:00 — watchdog — failure_log.txt: [2025-08-16 17:01:35,297] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710339+00:00 — watchdog — failure_log.txt: [2025-08-16 17:06:55,517] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710352+00:00 — watchdog — failure_log.txt: [2025-08-16 17:12:13,192] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710365+00:00 — watchdog — failure_log.txt: [2025-08-16 17:17:31,475] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710378+00:00 — watchdog — failure_log.txt: [2025-08-16 17:22:50,696] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710392+00:00 — watchdog — failure_log.txt: [2025-08-16 17:28:00,534] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710405+00:00 — watchdog — failure_log.txt: [2025-08-16 17:33:16,636] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710419+00:00 — watchdog — failure_log.txt: [2025-08-16 17:38:36,463] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710451+00:00 — watchdog — failure_log.txt: [2025-08-16 17:43:44,167] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710465+00:00 — watchdog — failure_log.txt: [2025-08-16 17:49:12,093] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710478+00:00 — watchdog — failure_log.txt: [2025-08-16 17:54:29,639] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710492+00:00 — watchdog — failure_log.txt: [2025-08-16 17:59:44,311] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710505+00:00 — watchdog — failure_log.txt: [2025-08-16 18:05:09,264] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710518+00:00 — watchdog — failure_log.txt: [2025-08-16 18:10:23,877] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710533+00:00 — watchdog — failure_log.txt: [2025-08-16 18:15:38,526] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710547+00:00 — watchdog — failure_log.txt: [2025-08-16 18:20:50,015] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710565+00:00 — watchdog — failure_log.txt: [2025-08-16 18:26:12,528] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710579+00:00 — watchdog — failure_log.txt: [2025-08-16 18:31:30,529] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710593+00:00 — watchdog — failure_log.txt: [2025-08-16 18:36:44,513] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710606+00:00 — watchdog — failure_log.txt: [2025-08-16 18:41:59,140] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710619+00:00 — watchdog — failure_log.txt: [2025-08-16 18:47:20,547] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710633+00:00 — watchdog — failure_log.txt: [2025-08-16 18:52:44,091] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710646+00:00 — watchdog — failure_log.txt: [2025-08-16 18:58:03,480] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710660+00:00 — watchdog — failure_log.txt: [2025-08-16 19:03:19,924] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710673+00:00 — watchdog — failure_log.txt: [2025-08-16 19:08:42,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710687+00:00 — watchdog — failure_log.txt: [2025-08-16 19:13:53,707] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710700+00:00 — watchdog — failure_log.txt: [2025-08-16 19:18:59,836] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710714+00:00 — watchdog — failure_log.txt: [2025-08-16 19:24:13,763] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710727+00:00 — watchdog — failure_log.txt: [2025-08-16 19:29:25,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710741+00:00 — watchdog — failure_log.txt: [2025-08-16 19:34:42,545] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710754+00:00 — watchdog — failure_log.txt: [2025-08-16 19:39:56,444] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710768+00:00 — watchdog — failure_log.txt: [2025-08-16 19:45:14,964] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710783+00:00 — watchdog — failure_log.txt: [2025-08-16 19:50:24,971] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710801+00:00 — watchdog — failure_log.txt: [2025-08-16 19:55:39,790] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710815+00:00 — watchdog — failure_log.txt: [2025-08-16 20:00:57,114] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710829+00:00 — watchdog — failure_log.txt: [2025-08-16 20:06:20,854] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710842+00:00 — watchdog — failure_log.txt: [2025-08-16 20:11:35,165] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710855+00:00 — watchdog — failure_log.txt: [2025-08-16 20:16:44,633] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710868+00:00 — watchdog — failure_log.txt: [2025-08-16 20:21:59,074] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710882+00:00 — watchdog — failure_log.txt: [2025-08-16 20:27:23,838] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710895+00:00 — watchdog — failure_log.txt: [2025-08-16 20:32:42,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710909+00:00 — watchdog — failure_log.txt: [2025-08-16 20:37:51,517] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710926+00:00 — watchdog — failure_log.txt: [2025-08-16 20:43:09,956] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710940+00:00 — watchdog — failure_log.txt: [2025-08-16 20:48:22,283] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710953+00:00 — watchdog — failure_log.txt: [2025-08-16 20:53:37,436] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710967+00:00 — watchdog — failure_log.txt: [2025-08-16 20:59:00,902] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710980+00:00 — watchdog — failure_log.txt: [2025-08-16 21:04:24,518] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.710995+00:00 — watchdog — failure_log.txt: [2025-08-16 21:09:44,017] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711009+00:00 — watchdog — failure_log.txt: [2025-08-16 21:15:00,059] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711023+00:00 — watchdog — failure_log.txt: [2025-08-16 21:20:21,503] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711037+00:00 — watchdog — failure_log.txt: [2025-08-16 21:25:40,836] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711051+00:00 — watchdog — failure_log.txt: [2025-08-16 21:31:03,297] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711064+00:00 — watchdog — failure_log.txt: [2025-08-16 21:36:24,789] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711077+00:00 — watchdog — failure_log.txt: [2025-08-16 21:41:35,510] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711091+00:00 — watchdog — failure_log.txt: [2025-08-16 21:46:48,571] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711104+00:00 — watchdog — failure_log.txt: [2025-08-16 21:51:59,511] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711118+00:00 — watchdog — failure_log.txt: [2025-08-16 21:57:21,268] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711131+00:00 — watchdog — failure_log.txt: [2025-08-16 22:02:37,311] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711145+00:00 — watchdog — failure_log.txt: [2025-08-16 22:07:53,054] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711158+00:00 — watchdog — failure_log.txt: [2025-08-16 22:13:05,473] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711172+00:00 — watchdog — failure_log.txt: [2025-08-16 22:18:18,890] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711185+00:00 — watchdog — failure_log.txt: [2025-08-16 22:23:27,125] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711199+00:00 — watchdog — failure_log.txt: [2025-08-16 22:28:34,771] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711212+00:00 — watchdog — failure_log.txt: [2025-08-16 22:33:41,112] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711227+00:00 — watchdog — failure_log.txt: [2025-08-16 22:38:52,721] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711241+00:00 — watchdog — failure_log.txt: [2025-08-16 22:44:19,724] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711255+00:00 — watchdog — failure_log.txt: [2025-08-16 22:49:39,309] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711273+00:00 — watchdog — failure_log.txt: [2025-08-16 22:54:59,629] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711285+00:00 — watchdog — failure_log.txt: [2025-08-16 23:00:21,120] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711298+00:00 — watchdog — failure_log.txt: [2025-08-16 23:05:34,392] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711311+00:00 — watchdog — failure_log.txt: [2025-08-16 23:10:45,926] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711325+00:00 — watchdog — failure_log.txt: [2025-08-16 23:15:54,344] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711338+00:00 — watchdog — failure_log.txt: [2025-08-16 23:21:15,738] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711352+00:00 — watchdog — failure_log.txt: [2025-08-16 23:26:29,526] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711365+00:00 — watchdog — failure_log.txt: [2025-08-16 23:31:37,019] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711382+00:00 — watchdog — failure_log.txt: [2025-08-16 23:36:50,921] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711396+00:00 — watchdog — failure_log.txt: [2025-08-16 23:42:15,045] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711409+00:00 — watchdog — failure_log.txt: [2025-08-16 23:47:25,356] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711438+00:00 — watchdog — failure_log.txt: [2025-08-16 23:52:43,948] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711454+00:00 — watchdog — failure_log.txt: [2025-08-16 23:58:03,314] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711470+00:00 — watchdog — failure_log.txt: [2025-08-17 00:03:31,364] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.711485+00:00 — watchdog — failure_log.txt: [2025-08-17 00:08:46,425] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711499+00:00 — watchdog — failure_log.txt: [2025-08-17 00:13:59,356] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711513+00:00 — watchdog — failure_log.txt: [2025-08-17 00:19:24,032] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711526+00:00 — watchdog — failure_log.txt: [2025-08-17 00:24:45,232] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711539+00:00 — watchdog — failure_log.txt: [2025-08-17 00:29:57,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711552+00:00 — watchdog — failure_log.txt: [2025-08-17 00:35:22,305] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711566+00:00 — watchdog — failure_log.txt: [2025-08-17 00:40:44,021] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711580+00:00 — watchdog — failure_log.txt: [2025-08-17 00:45:56,159] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711593+00:00 — watchdog — failure_log.txt: [2025-08-17 00:51:19,825] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711607+00:00 — watchdog — failure_log.txt: [2025-08-17 00:56:45,541] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711620+00:00 — watchdog — failure_log.txt: [2025-08-17 01:01:56,716] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711638+00:00 — watchdog — failure_log.txt: [2025-08-17 01:07:17,566] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711652+00:00 — watchdog — failure_log.txt: [2025-08-17 01:12:36,293] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711665+00:00 — watchdog — failure_log.txt: [2025-08-17 01:17:50,395] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711679+00:00 — watchdog — failure_log.txt: [2025-08-17 01:23:14,426] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711693+00:00 — watchdog — failure_log.txt: [2025-08-17 01:28:29,394] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711707+00:00 — watchdog — failure_log.txt: [2025-08-17 01:33:47,998] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711721+00:00 — watchdog — failure_log.txt: [2025-08-17 01:38:56,487] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711735+00:00 — watchdog — failure_log.txt: [2025-08-17 01:44:21,519] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711749+00:00 — watchdog — failure_log.txt: [2025-08-17 01:49:38,899] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711762+00:00 — watchdog — failure_log.txt: [2025-08-17 01:54:46,654] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711775+00:00 — watchdog — failure_log.txt: [2025-08-17 01:59:57,319] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711788+00:00 — watchdog — failure_log.txt: [2025-08-17 02:05:12,090] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711802+00:00 — watchdog — failure_log.txt: [2025-08-17 02:10:24,435] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711815+00:00 — watchdog — failure_log.txt: [2025-08-17 02:15:39,749] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711829+00:00 — watchdog — failure_log.txt: [2025-08-17 02:20:48,896] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711842+00:00 — watchdog — failure_log.txt: [2025-08-17 02:26:13,941] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711856+00:00 — watchdog — failure_log.txt: [2025-08-17 02:31:28,653] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711869+00:00 — watchdog — failure_log.txt: [2025-08-17 02:36:41,387] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711882+00:00 — watchdog — failure_log.txt: [2025-08-17 02:41:57,142] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711896+00:00 — watchdog — failure_log.txt: [2025-08-17 02:47:20,348] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711909+00:00 — watchdog — failure_log.txt: [2025-08-17 02:52:37,966] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711923+00:00 — watchdog — failure_log.txt: [2025-08-17 02:57:46,657] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711937+00:00 — watchdog — failure_log.txt: [2025-08-17 03:03:07,761] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711952+00:00 — watchdog — failure_log.txt: [2025-08-17 03:08:28,718] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711966+00:00 — watchdog — failure_log.txt: [2025-08-17 03:13:48,434] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.711986+00:00 — watchdog — failure_log.txt: [2025-08-17 03:19:14,943] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712003+00:00 — watchdog — failure_log.txt: [2025-08-17 03:24:28,618] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712016+00:00 — watchdog — failure_log.txt: [2025-08-17 03:29:44,690] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712030+00:00 — watchdog — failure_log.txt: [2025-08-17 03:35:06,566] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712043+00:00 — watchdog — failure_log.txt: [2025-08-17 03:40:23,565] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712057+00:00 — watchdog — failure_log.txt: [2025-08-17 03:45:37,442] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712070+00:00 — watchdog — failure_log.txt: [2025-08-17 03:50:48,056] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712083+00:00 — watchdog — failure_log.txt: [2025-08-17 03:55:54,984] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712094+00:00 — watchdog — failure_log.txt: [2025-08-17 04:01:02,359] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712105+00:00 — watchdog — failure_log.txt: [2025-08-17 04:06:19,667] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712115+00:00 — watchdog — failure_log.txt: [2025-08-17 04:11:37,980] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712128+00:00 — watchdog — failure_log.txt: [2025-08-17 04:16:46,705] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712139+00:00 — watchdog — failure_log.txt: [2025-08-17 04:21:58,983] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712150+00:00 — watchdog — failure_log.txt: [2025-08-17 04:27:11,444] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712161+00:00 — watchdog — failure_log.txt: [2025-08-17 04:32:24,865] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712172+00:00 — watchdog — failure_log.txt: [2025-08-17 04:37:41,250] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712183+00:00 — watchdog — failure_log.txt: [2025-08-17 04:42:58,559] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712195+00:00 — watchdog — failure_log.txt: [2025-08-17 04:48:12,441] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712207+00:00 — watchdog — failure_log.txt: [2025-08-17 04:53:30,950] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712219+00:00 — watchdog — failure_log.txt: [2025-08-17 04:58:50,580] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712230+00:00 — watchdog — failure_log.txt: [2025-08-17 05:04:01,765] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712242+00:00 — watchdog — failure_log.txt: [2025-08-17 05:09:28,842] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712254+00:00 — watchdog — failure_log.txt: [2025-08-17 05:14:41,780] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712267+00:00 — watchdog — failure_log.txt: [2025-08-17 05:19:50,589] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712281+00:00 — watchdog — failure_log.txt: [2025-08-17 05:25:12,688] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712294+00:00 — watchdog — failure_log.txt: [2025-08-17 05:30:27,892] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712306+00:00 — watchdog — failure_log.txt: [2025-08-17 05:35:38,980] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712324+00:00 — watchdog — failure_log.txt: [2025-08-17 05:40:57,382] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712336+00:00 — watchdog — failure_log.txt: [2025-08-17 05:46:13,909] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712348+00:00 — watchdog — failure_log.txt: [2025-08-17 05:51:29,963] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712361+00:00 — watchdog — failure_log.txt: [2025-08-17 05:56:47,820] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712373+00:00 — watchdog — failure_log.txt: [2025-08-17 06:02:12,482] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712386+00:00 — watchdog — failure_log.txt: [2025-08-17 06:07:32,057] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712398+00:00 — watchdog — failure_log.txt: [2025-08-17 06:12:40,098] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712411+00:00 — watchdog — failure_log.txt: [2025-08-17 06:17:47,117] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712445+00:00 — watchdog — failure_log.txt: [2025-08-17 06:23:02,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712460+00:00 — watchdog — failure_log.txt: [2025-08-17 06:28:16,440] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712473+00:00 — watchdog — failure_log.txt: [2025-08-17 06:33:27,139] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712486+00:00 — watchdog — failure_log.txt: [2025-08-17 06:38:46,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712498+00:00 — watchdog — failure_log.txt: [2025-08-17 06:43:55,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712517+00:00 — watchdog — failure_log.txt: [2025-08-17 06:49:15,603] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712529+00:00 — watchdog — failure_log.txt: [2025-08-17 06:54:36,182] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712542+00:00 — watchdog — failure_log.txt: [2025-08-17 06:59:52,232] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712559+00:00 — watchdog — failure_log.txt: [2025-08-17 07:05:06,226] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712572+00:00 — watchdog — failure_log.txt: [2025-08-17 07:10:22,492] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712584+00:00 — watchdog — failure_log.txt: [2025-08-17 07:15:31,236] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712596+00:00 — watchdog — failure_log.txt: [2025-08-17 07:20:43,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712608+00:00 — watchdog — failure_log.txt: [2025-08-17 07:25:51,318] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712620+00:00 — watchdog — failure_log.txt: [2025-08-17 07:31:16,435] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712631+00:00 — watchdog — failure_log.txt: [2025-08-17 07:36:32,649] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712642+00:00 — watchdog — failure_log.txt: [2025-08-17 07:41:45,991] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712654+00:00 — watchdog — failure_log.txt: [2025-08-17 07:46:59,396] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712671+00:00 — watchdog — failure_log.txt: [2025-08-17 07:52:18,328] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712682+00:00 — watchdog — failure_log.txt: [2025-08-17 07:57:35,313] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712695+00:00 — watchdog — failure_log.txt: [2025-08-17 08:02:46,079] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712706+00:00 — watchdog — failure_log.txt: [2025-08-17 08:08:06,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712717+00:00 — watchdog — failure_log.txt: [2025-08-17 08:13:21,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712729+00:00 — watchdog — failure_log.txt: [2025-08-17 08:18:36,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712740+00:00 — watchdog — failure_log.txt: [2025-08-17 08:23:56,635] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712751+00:00 — watchdog — failure_log.txt: [2025-08-17 08:29:07,441] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712763+00:00 — watchdog — failure_log.txt: [2025-08-17 08:34:28,816] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712775+00:00 — watchdog — failure_log.txt: [2025-08-17 08:39:49,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712787+00:00 — watchdog — failure_log.txt: [2025-08-17 08:44:55,786] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712800+00:00 — watchdog — failure_log.txt: [2025-08-17 08:50:16,737] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712812+00:00 — watchdog — failure_log.txt: [2025-08-17 08:55:36,701] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712824+00:00 — watchdog — failure_log.txt: [2025-08-17 09:00:54,233] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712836+00:00 — watchdog — failure_log.txt: [2025-08-17 09:06:10,977] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712848+00:00 — watchdog — failure_log.txt: [2025-08-17 09:11:28,300] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712860+00:00 — watchdog — failure_log.txt: [2025-08-17 09:16:40,841] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712873+00:00 — watchdog — failure_log.txt: [2025-08-17 09:21:47,969] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712885+00:00 — watchdog — failure_log.txt: [2025-08-17 09:26:57,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712898+00:00 — watchdog — failure_log.txt: [2025-08-17 09:32:14,844] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712911+00:00 — watchdog — failure_log.txt: [2025-08-17 09:37:36,749] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712924+00:00 — watchdog — failure_log.txt: [2025-08-17 09:42:55,053] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712937+00:00 — watchdog — failure_log.txt: [2025-08-17 09:48:06,396] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712951+00:00 — watchdog — failure_log.txt: [2025-08-17 09:53:19,565] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712964+00:00 — watchdog — failure_log.txt: [2025-08-17 09:58:40,352] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712980+00:00 — watchdog — failure_log.txt: [2025-08-17 10:03:56,052] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.712992+00:00 — watchdog — failure_log.txt: [2025-08-17 10:09:10,536] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713004+00:00 — watchdog — failure_log.txt: [2025-08-17 10:14:33,879] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713014+00:00 — watchdog — failure_log.txt: [2025-08-17 10:19:43,136] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713025+00:00 — watchdog — failure_log.txt: [2025-08-17 10:25:07,252] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713037+00:00 — watchdog — failure_log.txt: [2025-08-17 10:30:25,970] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713049+00:00 — watchdog — failure_log.txt: [2025-08-17 10:35:42,239] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713061+00:00 — watchdog — failure_log.txt: [2025-08-17 10:40:52,079] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713073+00:00 — watchdog — failure_log.txt: [2025-08-17 10:46:10,488] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713090+00:00 — watchdog — failure_log.txt: [2025-08-17 10:51:31,610] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713104+00:00 — watchdog — failure_log.txt: [2025-08-17 10:56:52,753] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713116+00:00 — watchdog — failure_log.txt: [2025-08-17 11:02:16,015] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713128+00:00 — watchdog — failure_log.txt: [2025-08-17 11:07:30,563] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713140+00:00 — watchdog — failure_log.txt: [2025-08-17 11:12:48,590] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713152+00:00 — watchdog — failure_log.txt: [2025-08-17 11:18:13,909] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713164+00:00 — watchdog — failure_log.txt: [2025-08-17 11:23:31,141] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713176+00:00 — watchdog — failure_log.txt: [2025-08-17 11:28:47,382] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713187+00:00 — watchdog — failure_log.txt: [2025-08-17 11:33:59,243] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713197+00:00 — watchdog — failure_log.txt: [2025-08-17 11:39:19,024] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713208+00:00 — watchdog — failure_log.txt: [2025-08-17 11:44:44,130] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713219+00:00 — watchdog — failure_log.txt: [2025-08-17 11:49:58,502] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713230+00:00 — watchdog — failure_log.txt: [2025-08-17 11:55:15,667] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713240+00:00 — watchdog — failure_log.txt: [2025-08-17 12:00:26,200] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713252+00:00 — watchdog — failure_log.txt: [2025-08-17 12:05:40,710] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713264+00:00 — watchdog — failure_log.txt: [2025-08-17 12:10:52,177] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713275+00:00 — watchdog — failure_log.txt: [2025-08-17 12:16:06,967] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713291+00:00 — watchdog — failure_log.txt: [2025-08-17 12:21:24,881] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713304+00:00 — watchdog — failure_log.txt: [2025-08-17 12:26:41,769] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713316+00:00 — watchdog — failure_log.txt: [2025-08-17 12:32:00,291] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713327+00:00 — watchdog — failure_log.txt: [2025-08-17 12:37:16,270] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713340+00:00 — watchdog — failure_log.txt: [2025-08-17 12:42:31,335] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713351+00:00 — watchdog — failure_log.txt: [2025-08-17 12:47:42,523] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713363+00:00 — watchdog — failure_log.txt: [2025-08-17 12:52:57,055] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713375+00:00 — watchdog — failure_log.txt: [2025-08-17 12:58:13,487] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713387+00:00 — watchdog — failure_log.txt: [2025-08-17 13:03:31,443] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713399+00:00 — watchdog — failure_log.txt: [2025-08-17 13:08:47,372] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713411+00:00 — watchdog — failure_log.txt: [2025-08-17 13:14:16,265] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713440+00:00 — watchdog — failure_log.txt: [2025-08-17 13:19:30,798] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713455+00:00 — watchdog — failure_log.txt: [2025-08-17 13:24:39,881] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713468+00:00 — watchdog — failure_log.txt: [2025-08-17 13:29:50,061] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713481+00:00 — watchdog — failure_log.txt: [2025-08-17 13:35:08,432] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713493+00:00 — watchdog — failure_log.txt: [2025-08-17 13:40:22,839] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713506+00:00 — watchdog — failure_log.txt: [2025-08-17 13:45:34,991] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713518+00:00 — watchdog — failure_log.txt: [2025-08-17 13:50:51,017] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713529+00:00 — watchdog — failure_log.txt: [2025-08-17 13:56:21,928] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713540+00:00 — watchdog — failure_log.txt: [2025-08-17 14:01:41,131] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713551+00:00 — watchdog — failure_log.txt: [2025-08-17 14:06:55,178] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713562+00:00 — watchdog — failure_log.txt: [2025-08-17 14:12:17,913] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713572+00:00 — watchdog — failure_log.txt: [2025-08-17 14:17:36,413] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713582+00:00 — watchdog — failure_log.txt: [2025-08-17 14:22:51,866] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713592+00:00 — watchdog — failure_log.txt: [2025-08-17 14:28:09,468] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713606+00:00 — watchdog — failure_log.txt: [2025-08-17 14:33:26,019] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713620+00:00 — watchdog — failure_log.txt: [2025-08-17 14:38:41,242] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713630+00:00 — watchdog — failure_log.txt: [2025-08-17 14:43:56,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713640+00:00 — watchdog — failure_log.txt: [2025-08-17 14:49:09,446] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713649+00:00 — watchdog — failure_log.txt: [2025-08-17 14:54:22,545] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713659+00:00 — watchdog — failure_log.txt: [2025-08-17 14:59:32,909] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713669+00:00 — watchdog — failure_log.txt: [2025-08-17 15:04:43,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713679+00:00 — watchdog — failure_log.txt: [2025-08-17 15:10:02,669] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713689+00:00 — watchdog — failure_log.txt: [2025-08-17 15:15:26,357] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713699+00:00 — watchdog — failure_log.txt: [2025-08-17 15:20:45,141] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713710+00:00 — watchdog — failure_log.txt: [2025-08-17 15:26:05,894] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713720+00:00 — watchdog — failure_log.txt: [2025-08-17 15:31:32,366] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713730+00:00 — watchdog — failure_log.txt: [2025-08-17 15:36:44,553] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713740+00:00 — watchdog — failure_log.txt: [2025-08-17 15:42:11,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713750+00:00 — watchdog — failure_log.txt: [2025-08-17 15:47:33,556] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713761+00:00 — watchdog — failure_log.txt: [2025-08-17 15:52:53,279] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713771+00:00 — watchdog — failure_log.txt: [2025-08-17 15:58:19,582] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713781+00:00 — watchdog — failure_log.txt: [2025-08-17 16:03:34,629] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713791+00:00 — watchdog — failure_log.txt: [2025-08-17 16:08:55,685] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713802+00:00 — watchdog — failure_log.txt: [2025-08-17 16:14:16,297] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713812+00:00 — watchdog — failure_log.txt: [2025-08-17 16:19:29,926] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713821+00:00 — watchdog — failure_log.txt: [2025-08-17 16:24:53,145] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713832+00:00 — watchdog — failure_log.txt: [2025-08-17 16:30:24,308] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713842+00:00 — watchdog — failure_log.txt: [2025-08-17 16:35:43,125] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713852+00:00 — watchdog — failure_log.txt: [2025-08-17 16:41:01,417] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713863+00:00 — watchdog — failure_log.txt: [2025-08-17 16:46:25,009] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713877+00:00 — watchdog — failure_log.txt: [2025-08-17 16:51:40,171] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713887+00:00 — watchdog — failure_log.txt: [2025-08-17 16:57:01,402] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713898+00:00 — watchdog — failure_log.txt: [2025-08-17 17:02:23,568] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713908+00:00 — watchdog — failure_log.txt: [2025-08-17 17:07:43,043] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713918+00:00 — watchdog — failure_log.txt: [2025-08-17 17:12:57,125] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713929+00:00 — watchdog — failure_log.txt: [2025-08-17 17:18:14,073] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713939+00:00 — watchdog — failure_log.txt: [2025-08-17 17:23:28,521] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713949+00:00 — watchdog — failure_log.txt: [2025-08-17 17:28:45,155] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713959+00:00 — watchdog — failure_log.txt: [2025-08-17 17:34:15,692] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713969+00:00 — watchdog — failure_log.txt: [2025-08-17 17:39:32,120] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713979+00:00 — watchdog — failure_log.txt: [2025-08-17 17:44:47,536] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713989+00:00 — watchdog — failure_log.txt: [2025-08-17 17:50:18,815] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.713999+00:00 — watchdog — failure_log.txt: [2025-08-17 17:55:32,655] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714009+00:00 — watchdog — failure_log.txt: [2025-08-17 18:00:56,634] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714020+00:00 — watchdog — failure_log.txt: [2025-08-17 18:06:12,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714030+00:00 — watchdog — failure_log.txt: [2025-08-17 18:11:32,295] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714043+00:00 — watchdog — failure_log.txt: [2025-08-17 18:16:43,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714053+00:00 — watchdog — failure_log.txt: [2025-08-17 18:22:05,544] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714064+00:00 — watchdog — failure_log.txt: [2025-08-17 18:27:25,249] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714074+00:00 — watchdog — failure_log.txt: [2025-08-17 18:32:36,635] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714084+00:00 — watchdog — failure_log.txt: [2025-08-17 18:37:46,608] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714094+00:00 — watchdog — failure_log.txt: [2025-08-17 18:43:06,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714104+00:00 — watchdog — failure_log.txt: [2025-08-17 18:48:28,803] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714114+00:00 — watchdog — failure_log.txt: [2025-08-17 18:53:45,557] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714124+00:00 — watchdog — failure_log.txt: [2025-08-17 18:59:03,382] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714137+00:00 — watchdog — failure_log.txt: [2025-08-17 19:04:26,623] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714148+00:00 — watchdog — failure_log.txt: [2025-08-17 19:09:43,143] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714158+00:00 — watchdog — failure_log.txt: [2025-08-17 19:14:53,841] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714169+00:00 — watchdog — failure_log.txt: [2025-08-17 19:20:18,039] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714179+00:00 — watchdog — failure_log.txt: [2025-08-17 19:25:40,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714189+00:00 — watchdog — failure_log.txt: [2025-08-17 19:30:58,078] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714199+00:00 — watchdog — failure_log.txt: [2025-08-17 19:36:23,770] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714209+00:00 — watchdog — failure_log.txt: [2025-08-17 19:41:38,104] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714220+00:00 — watchdog — failure_log.txt: [2025-08-17 19:46:54,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714230+00:00 — watchdog — failure_log.txt: [2025-08-17 19:52:08,997] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714240+00:00 — watchdog — failure_log.txt: [2025-08-17 19:57:36,217] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714250+00:00 — watchdog — failure_log.txt: [2025-08-17 20:02:58,119] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714260+00:00 — watchdog — failure_log.txt: [2025-08-17 20:08:13,804] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714270+00:00 — watchdog — failure_log.txt: [2025-08-17 20:13:33,003] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714280+00:00 — watchdog — failure_log.txt: [2025-08-17 20:18:44,570] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714290+00:00 — watchdog — failure_log.txt: [2025-08-17 20:24:10,886] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714300+00:00 — watchdog — failure_log.txt: [2025-08-17 20:29:40,128] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714310+00:00 — watchdog — failure_log.txt: [2025-08-17 20:34:54,964] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714320+00:00 — watchdog — failure_log.txt: [2025-08-17 20:40:20,728] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714330+00:00 — watchdog — failure_log.txt: [2025-08-17 20:45:40,355] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714340+00:00 — watchdog — failure_log.txt: [2025-08-17 20:51:00,262] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714350+00:00 — watchdog — failure_log.txt: [2025-08-17 20:56:24,273] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714360+00:00 — watchdog — failure_log.txt: [2025-08-17 21:01:46,038] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714370+00:00 — watchdog — failure_log.txt: [2025-08-17 21:06:57,513] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714380+00:00 — watchdog — failure_log.txt: [2025-08-17 21:12:17,627] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714390+00:00 — watchdog — failure_log.txt: [2025-08-17 21:17:32,948] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714404+00:00 — watchdog — failure_log.txt: [2025-08-17 21:22:48,087] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714414+00:00 — watchdog — failure_log.txt: [2025-08-17 21:28:00,810] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714441+00:00 — watchdog — failure_log.txt: [2025-08-17 21:33:23,875] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714454+00:00 — watchdog — failure_log.txt: [2025-08-17 21:38:38,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714464+00:00 — watchdog — failure_log.txt: [2025-08-17 21:43:46,691] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714474+00:00 — watchdog — failure_log.txt: [2025-08-17 21:48:57,979] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714484+00:00 — watchdog — failure_log.txt: [2025-08-17 21:54:16,533] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714495+00:00 — watchdog — failure_log.txt: [2025-08-17 21:59:39,451] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714508+00:00 — watchdog — failure_log.txt: [2025-08-17 22:04:54,852] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714519+00:00 — watchdog — failure_log.txt: [2025-08-17 22:10:08,974] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714529+00:00 — watchdog — failure_log.txt: [2025-08-17 22:15:25,159] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714539+00:00 — watchdog — failure_log.txt: [2025-08-17 22:20:45,222] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714549+00:00 — watchdog — failure_log.txt: [2025-08-17 22:26:06,257] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714559+00:00 — watchdog — failure_log.txt: [2025-08-17 22:31:30,960] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714570+00:00 — watchdog — failure_log.txt: [2025-08-17 22:36:55,650] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714580+00:00 — watchdog — failure_log.txt: [2025-08-17 22:42:16,334] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714590+00:00 — watchdog — failure_log.txt: [2025-08-17 22:47:37,648] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714601+00:00 — watchdog — failure_log.txt: [2025-08-17 22:52:51,688] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714611+00:00 — watchdog — failure_log.txt: [2025-08-17 22:58:05,941] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714621+00:00 — watchdog — failure_log.txt: [2025-08-17 23:03:23,791] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714631+00:00 — watchdog — failure_log.txt: [2025-08-17 23:08:36,128] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714642+00:00 — watchdog — failure_log.txt: [2025-08-17 23:13:46,143] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714653+00:00 — watchdog — failure_log.txt: [2025-08-17 23:18:58,844] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714664+00:00 — watchdog — failure_log.txt: [2025-08-17 23:24:15,899] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714675+00:00 — watchdog — failure_log.txt: [2025-08-17 23:29:32,149] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714685+00:00 — watchdog — failure_log.txt: [2025-08-17 23:34:43,047] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714702+00:00 — watchdog — failure_log.txt: [2025-08-17 23:39:55,169] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714712+00:00 — watchdog — failure_log.txt: [2025-08-17 23:45:16,717] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714723+00:00 — watchdog — failure_log.txt: [2025-08-17 23:50:38,077] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714734+00:00 — watchdog — failure_log.txt: [2025-08-17 23:56:00,447] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714746+00:00 — watchdog — failure_log.txt: [2025-08-18 00:01:19,835] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.714756+00:00 — watchdog — failure_log.txt: [2025-08-18 00:06:36,268] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714766+00:00 — watchdog — failure_log.txt: [2025-08-18 00:11:55,221] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714776+00:00 — watchdog — failure_log.txt: [2025-08-18 00:17:08,587] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714786+00:00 — watchdog — failure_log.txt: [2025-08-18 00:22:21,614] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714796+00:00 — watchdog — failure_log.txt: [2025-08-18 00:27:33,193] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714806+00:00 — watchdog — failure_log.txt: [2025-08-18 00:32:48,137] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714816+00:00 — watchdog — failure_log.txt: [2025-08-18 00:37:57,023] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714827+00:00 — watchdog — failure_log.txt: [2025-08-18 00:43:21,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714837+00:00 — watchdog — failure_log.txt: [2025-08-18 00:48:35,609] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714846+00:00 — watchdog — failure_log.txt: [2025-08-18 00:53:55,162] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714856+00:00 — watchdog — failure_log.txt: [2025-08-18 00:59:03,369] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714867+00:00 — watchdog — failure_log.txt: [2025-08-18 01:04:23,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714877+00:00 — watchdog — failure_log.txt: [2025-08-18 01:09:38,393] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714887+00:00 — watchdog — failure_log.txt: [2025-08-18 01:14:58,610] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714897+00:00 — watchdog — failure_log.txt: [2025-08-18 01:20:27,936] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714907+00:00 — watchdog — failure_log.txt: [2025-08-18 01:25:44,395] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714917+00:00 — watchdog — failure_log.txt: [2025-08-18 01:31:06,636] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714927+00:00 — watchdog — failure_log.txt: [2025-08-18 01:36:25,958] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714938+00:00 — watchdog — failure_log.txt: [2025-08-18 01:41:42,610] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714948+00:00 — watchdog — failure_log.txt: [2025-08-18 01:47:00,024] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714964+00:00 — watchdog — failure_log.txt: [2025-08-18 01:52:16,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714974+00:00 — watchdog — failure_log.txt: [2025-08-18 01:57:29,793] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714984+00:00 — watchdog — failure_log.txt: [2025-08-18 02:02:43,414] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.714994+00:00 — watchdog — failure_log.txt: [2025-08-18 02:07:58,819] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715004+00:00 — watchdog — failure_log.txt: [2025-08-18 02:13:28,486] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715015+00:00 — watchdog — failure_log.txt: [2025-08-18 02:18:43,412] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715025+00:00 — watchdog — failure_log.txt: [2025-08-18 02:24:00,730] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715035+00:00 — watchdog — failure_log.txt: [2025-08-18 02:29:22,790] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715045+00:00 — watchdog — failure_log.txt: [2025-08-18 02:34:44,333] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715055+00:00 — watchdog — failure_log.txt: [2025-08-18 02:40:04,073] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715065+00:00 — watchdog — failure_log.txt: [2025-08-18 02:45:26,270] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715075+00:00 — watchdog — failure_log.txt: [2025-08-18 02:50:38,298] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715086+00:00 — watchdog — failure_log.txt: [2025-08-18 02:55:45,199] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715098+00:00 — watchdog — failure_log.txt: [2025-08-18 03:01:07,056] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715110+00:00 — watchdog — failure_log.txt: [2025-08-18 03:06:27,109] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715119+00:00 — watchdog — failure_log.txt: [2025-08-18 03:11:44,609] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715131+00:00 — watchdog — failure_log.txt: [2025-08-18 03:16:56,231] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715142+00:00 — watchdog — failure_log.txt: [2025-08-18 03:22:18,996] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715152+00:00 — watchdog — failure_log.txt: [2025-08-18 03:27:28,883] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715164+00:00 — watchdog — failure_log.txt: [2025-08-18 03:32:44,294] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715174+00:00 — watchdog — failure_log.txt: [2025-08-18 03:38:01,841] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715185+00:00 — watchdog — failure_log.txt: [2025-08-18 03:43:27,544] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715196+00:00 — watchdog — failure_log.txt: [2025-08-18 03:48:36,426] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715208+00:00 — watchdog — failure_log.txt: [2025-08-18 03:53:44,947] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715218+00:00 — watchdog — failure_log.txt: [2025-08-18 03:59:01,892] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715232+00:00 — watchdog — failure_log.txt: [2025-08-18 04:04:22,842] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715243+00:00 — watchdog — failure_log.txt: [2025-08-18 04:09:42,757] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715254+00:00 — watchdog — failure_log.txt: [2025-08-18 04:14:58,533] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715264+00:00 — watchdog — failure_log.txt: [2025-08-18 04:20:13,165] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715275+00:00 — watchdog — failure_log.txt: [2025-08-18 04:25:24,908] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715287+00:00 — watchdog — failure_log.txt: [2025-08-18 04:30:42,211] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715297+00:00 — watchdog — failure_log.txt: [2025-08-18 04:35:55,225] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715309+00:00 — watchdog — failure_log.txt: [2025-08-18 04:41:11,894] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715320+00:00 — watchdog — failure_log.txt: [2025-08-18 04:46:29,976] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715332+00:00 — watchdog — failure_log.txt: [2025-08-18 04:51:41,743] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715343+00:00 — watchdog — failure_log.txt: [2025-08-18 04:56:48,514] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715355+00:00 — watchdog — failure_log.txt: [2025-08-18 05:02:05,736] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715366+00:00 — watchdog — failure_log.txt: [2025-08-18 05:07:23,017] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715379+00:00 — watchdog — failure_log.txt: [2025-08-18 05:12:31,795] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715390+00:00 — watchdog — failure_log.txt: [2025-08-18 05:17:47,576] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715403+00:00 — watchdog — failure_log.txt: [2025-08-18 05:23:10,033] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715414+00:00 — watchdog — failure_log.txt: [2025-08-18 05:28:26,654] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715446+00:00 — watchdog — failure_log.txt: [2025-08-18 05:33:41,216] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715461+00:00 — watchdog — failure_log.txt: [2025-08-18 05:38:51,770] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715472+00:00 — watchdog — failure_log.txt: [2025-08-18 05:44:05,482] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715482+00:00 — watchdog — failure_log.txt: [2025-08-18 05:49:22,983] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715492+00:00 — watchdog — failure_log.txt: [2025-08-18 05:54:40,779] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715502+00:00 — watchdog — failure_log.txt: [2025-08-18 05:59:52,629] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715513+00:00 — watchdog — failure_log.txt: [2025-08-18 06:05:02,317] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715523+00:00 — watchdog — failure_log.txt: [2025-08-18 06:10:21,081] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715534+00:00 — watchdog — failure_log.txt: [2025-08-18 06:15:30,565] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715550+00:00 — watchdog — failure_log.txt: [2025-08-18 06:20:51,148] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715561+00:00 — watchdog — failure_log.txt: [2025-08-18 06:26:15,296] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715573+00:00 — watchdog — failure_log.txt: [2025-08-18 06:31:33,327] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715584+00:00 — watchdog — failure_log.txt: [2025-08-18 06:36:42,347] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715595+00:00 — watchdog — failure_log.txt: [2025-08-18 06:41:56,108] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715606+00:00 — watchdog — failure_log.txt: [2025-08-18 06:47:07,722] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715618+00:00 — watchdog — failure_log.txt: [2025-08-18 06:52:26,384] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715630+00:00 — watchdog — failure_log.txt: [2025-08-18 06:57:36,057] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715642+00:00 — watchdog — failure_log.txt: [2025-08-18 07:02:48,028] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715653+00:00 — watchdog — failure_log.txt: [2025-08-18 07:08:12,292] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715664+00:00 — watchdog — failure_log.txt: [2025-08-18 07:13:27,133] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715677+00:00 — watchdog — failure_log.txt: [2025-08-18 07:18:42,075] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715689+00:00 — watchdog — failure_log.txt: [2025-08-18 07:23:52,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715701+00:00 — watchdog — failure_log.txt: [2025-08-18 07:28:58,978] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715713+00:00 — watchdog — failure_log.txt: [2025-08-18 07:34:18,485] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715725+00:00 — watchdog — failure_log.txt: [2025-08-18 07:39:40,301] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715737+00:00 — watchdog — failure_log.txt: [2025-08-18 07:44:55,720] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715749+00:00 — watchdog — failure_log.txt: [2025-08-18 07:50:16,757] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715761+00:00 — watchdog — failure_log.txt: [2025-08-18 07:55:36,086] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715774+00:00 — watchdog — failure_log.txt: [2025-08-18 08:00:53,277] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715786+00:00 — watchdog — failure_log.txt: [2025-08-18 08:06:13,997] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715799+00:00 — watchdog — failure_log.txt: [2025-08-18 08:11:29,973] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715811+00:00 — watchdog — failure_log.txt: [2025-08-18 08:16:43,388] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715822+00:00 — watchdog — failure_log.txt: [2025-08-18 08:21:54,981] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715835+00:00 — watchdog — failure_log.txt: [2025-08-18 08:27:15,951] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715848+00:00 — watchdog — failure_log.txt: [2025-08-18 08:32:28,058] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715864+00:00 — watchdog — failure_log.txt: [2025-08-18 08:37:38,118] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715875+00:00 — watchdog — failure_log.txt: [2025-08-18 08:42:45,705] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715887+00:00 — watchdog — failure_log.txt: [2025-08-18 08:48:00,527] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715897+00:00 — watchdog — failure_log.txt: [2025-08-18 08:53:22,273] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715907+00:00 — watchdog — failure_log.txt: [2025-08-18 08:58:32,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715917+00:00 — watchdog — failure_log.txt: [2025-08-18 09:03:54,285] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715927+00:00 — watchdog — failure_log.txt: [2025-08-18 09:09:20,742] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715940+00:00 — watchdog — failure_log.txt: [2025-08-18 09:14:38,773] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715950+00:00 — watchdog — failure_log.txt: [2025-08-18 09:19:56,768] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715960+00:00 — watchdog — failure_log.txt: [2025-08-18 09:25:18,333] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715970+00:00 — watchdog — failure_log.txt: [2025-08-18 09:30:39,593] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715980+00:00 — watchdog — failure_log.txt: [2025-08-18 09:35:57,580] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.715990+00:00 — watchdog — failure_log.txt: [2025-08-18 09:41:07,390] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716000+00:00 — watchdog — failure_log.txt: [2025-08-18 09:46:35,413] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716009+00:00 — watchdog — failure_log.txt: [2025-08-18 09:51:46,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716019+00:00 — watchdog — failure_log.txt: [2025-08-18 09:56:54,754] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716030+00:00 — watchdog — failure_log.txt: [2025-08-18 10:02:21,625] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716041+00:00 — watchdog — failure_log.txt: [2025-08-18 10:07:44,273] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716051+00:00 — watchdog — failure_log.txt: [2025-08-18 10:12:58,614] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716062+00:00 — watchdog — failure_log.txt: [2025-08-18 10:18:08,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716072+00:00 — watchdog — failure_log.txt: [2025-08-18 10:23:23,348] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716083+00:00 — watchdog — failure_log.txt: [2025-08-18 10:28:40,684] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716094+00:00 — watchdog — failure_log.txt: [2025-08-18 10:33:56,181] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716105+00:00 — watchdog — failure_log.txt: [2025-08-18 10:39:17,315] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716115+00:00 — watchdog — failure_log.txt: [2025-08-18 10:44:34,769] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716129+00:00 — watchdog — failure_log.txt: [2025-08-18 10:49:48,469] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716139+00:00 — watchdog — failure_log.txt: [2025-08-18 10:55:11,446] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716150+00:00 — watchdog — failure_log.txt: [2025-08-18 11:00:24,846] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716161+00:00 — watchdog — failure_log.txt: [2025-08-18 11:05:37,808] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716172+00:00 — watchdog — failure_log.txt: [2025-08-18 11:10:45,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716183+00:00 — watchdog — failure_log.txt: [2025-08-18 11:15:54,378] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716194+00:00 — watchdog — failure_log.txt: [2025-08-18 11:21:18,196] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716205+00:00 — watchdog — failure_log.txt: [2025-08-18 11:26:34,755] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716216+00:00 — watchdog — failure_log.txt: [2025-08-18 11:31:48,877] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716226+00:00 — watchdog — failure_log.txt: [2025-08-18 11:36:56,005] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716237+00:00 — watchdog — failure_log.txt: [2025-08-18 11:42:05,328] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716247+00:00 — watchdog — failure_log.txt: [2025-08-18 11:47:20,848] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716258+00:00 — watchdog — failure_log.txt: [2025-08-18 11:52:35,390] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716269+00:00 — watchdog — failure_log.txt: [2025-08-18 11:57:48,695] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716280+00:00 — watchdog — failure_log.txt: [2025-08-18 12:02:56,877] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716291+00:00 — watchdog — failure_log.txt: [2025-08-18 12:08:19,386] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716302+00:00 — watchdog — failure_log.txt: [2025-08-18 12:13:40,191] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716313+00:00 — watchdog — failure_log.txt: [2025-08-18 12:18:54,315] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716323+00:00 — watchdog — failure_log.txt: [2025-08-18 12:24:14,173] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716334+00:00 — watchdog — failure_log.txt: [2025-08-18 12:29:24,747] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716345+00:00 — watchdog — failure_log.txt: [2025-08-18 12:34:43,368] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716356+00:00 — watchdog — failure_log.txt: [2025-08-18 12:39:51,799] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716367+00:00 — watchdog — failure_log.txt: [2025-08-18 12:44:59,917] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716378+00:00 — watchdog — failure_log.txt: [2025-08-18 12:50:12,761] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716388+00:00 — watchdog — failure_log.txt: [2025-08-18 12:55:25,511] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716405+00:00 — watchdog — failure_log.txt: [2025-08-18 13:00:42,775] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716416+00:00 — watchdog — failure_log.txt: [2025-08-18 13:05:51,731] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716445+00:00 — watchdog — failure_log.txt: [2025-08-18 13:11:10,974] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716457+00:00 — watchdog — failure_log.txt: [2025-08-18 13:16:22,593] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716468+00:00 — watchdog — failure_log.txt: [2025-08-18 13:21:30,359] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716480+00:00 — watchdog — failure_log.txt: [2025-08-18 13:26:48,805] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716491+00:00 — watchdog — failure_log.txt: [2025-08-18 13:31:57,703] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716507+00:00 — watchdog — failure_log.txt: [2025-08-18 13:37:20,251] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716519+00:00 — watchdog — failure_log.txt: [2025-08-18 13:42:29,980] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716530+00:00 — watchdog — failure_log.txt: [2025-08-18 13:47:48,682] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716541+00:00 — watchdog — failure_log.txt: [2025-08-18 13:52:55,844] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716553+00:00 — watchdog — failure_log.txt: [2025-08-18 13:58:10,376] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716564+00:00 — watchdog — failure_log.txt: [2025-08-18 14:03:25,941] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716575+00:00 — watchdog — failure_log.txt: [2025-08-18 14:08:38,513] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716586+00:00 — watchdog — failure_log.txt: [2025-08-18 14:14:00,105] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716598+00:00 — watchdog — failure_log.txt: [2025-08-18 14:19:20,604] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716609+00:00 — watchdog — failure_log.txt: [2025-08-18 14:24:32,849] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716621+00:00 — watchdog — failure_log.txt: [2025-08-18 14:29:44,509] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716632+00:00 — watchdog — failure_log.txt: [2025-08-18 14:34:53,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716644+00:00 — watchdog — failure_log.txt: [2025-08-18 14:40:08,925] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716655+00:00 — watchdog — failure_log.txt: [2025-08-18 14:45:31,453] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716667+00:00 — watchdog — failure_log.txt: [2025-08-18 14:50:40,943] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716679+00:00 — watchdog — failure_log.txt: [2025-08-18 14:55:55,150] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716690+00:00 — watchdog — failure_log.txt: [2025-08-18 15:01:15,869] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716701+00:00 — watchdog — failure_log.txt: [2025-08-18 15:06:33,024] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716712+00:00 — watchdog — failure_log.txt: [2025-08-18 15:11:49,136] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716727+00:00 — watchdog — failure_log.txt: [2025-08-18 15:16:58,847] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716738+00:00 — watchdog — failure_log.txt: [2025-08-18 15:22:16,324] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716749+00:00 — watchdog — failure_log.txt: [2025-08-18 15:27:35,505] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716760+00:00 — watchdog — failure_log.txt: [2025-08-18 15:32:56,761] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716771+00:00 — watchdog — failure_log.txt: [2025-08-18 15:38:20,248] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716783+00:00 — watchdog — failure_log.txt: [2025-08-18 15:43:41,607] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716794+00:00 — watchdog — failure_log.txt: [2025-08-18 15:48:55,022] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716806+00:00 — watchdog — failure_log.txt: [2025-08-18 15:54:03,300] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716818+00:00 — watchdog — failure_log.txt: [2025-08-18 15:59:24,202] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716830+00:00 — watchdog — failure_log.txt: [2025-08-18 16:04:37,090] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716841+00:00 — watchdog — failure_log.txt: [2025-08-18 16:09:44,687] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716853+00:00 — watchdog — failure_log.txt: [2025-08-18 16:14:54,958] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716864+00:00 — watchdog — failure_log.txt: [2025-08-18 16:20:13,184] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716877+00:00 — watchdog — failure_log.txt: [2025-08-18 16:25:34,164] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716889+00:00 — watchdog — failure_log.txt: [2025-08-18 16:30:55,511] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716900+00:00 — watchdog — failure_log.txt: [2025-08-18 16:36:15,518] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716912+00:00 — watchdog — failure_log.txt: [2025-08-18 16:41:37,501] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716926+00:00 — watchdog — failure_log.txt: [2025-08-18 16:46:55,261] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716938+00:00 — watchdog — failure_log.txt: [2025-08-18 16:52:19,046] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716948+00:00 — watchdog — failure_log.txt: [2025-08-18 16:57:33,824] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716959+00:00 — watchdog — failure_log.txt: [2025-08-18 17:02:52,999] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716971+00:00 — watchdog — failure_log.txt: [2025-08-18 17:08:07,640] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716981+00:00 — watchdog — failure_log.txt: [2025-08-18 17:13:27,276] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.716993+00:00 — watchdog — failure_log.txt: [2025-08-18 17:18:45,033] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717004+00:00 — watchdog — failure_log.txt: [2025-08-18 17:23:58,641] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717015+00:00 — watchdog — failure_log.txt: [2025-08-18 17:29:18,573] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717030+00:00 — watchdog — failure_log.txt: [2025-08-18 17:34:38,786] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717041+00:00 — watchdog — failure_log.txt: [2025-08-18 17:39:51,850] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717052+00:00 — watchdog — failure_log.txt: [2025-08-18 17:45:00,067] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717064+00:00 — watchdog — failure_log.txt: [2025-08-18 17:50:18,524] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717075+00:00 — watchdog — failure_log.txt: [2025-08-18 17:55:42,811] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717086+00:00 — watchdog — failure_log.txt: [2025-08-18 18:00:52,085] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717099+00:00 — watchdog — failure_log.txt: [2025-08-18 18:06:01,027] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717111+00:00 — watchdog — failure_log.txt: [2025-08-18 18:11:22,100] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717123+00:00 — watchdog — failure_log.txt: [2025-08-18 18:16:37,985] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717135+00:00 — watchdog — failure_log.txt: [2025-08-18 18:21:57,634] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717148+00:00 — watchdog — failure_log.txt: [2025-08-18 18:27:16,101] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717160+00:00 — watchdog — failure_log.txt: [2025-08-18 18:32:30,321] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717172+00:00 — watchdog — failure_log.txt: [2025-08-18 18:37:47,808] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717185+00:00 — watchdog — failure_log.txt: [2025-08-18 18:43:00,848] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717197+00:00 — watchdog — failure_log.txt: [2025-08-18 18:48:19,394] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717209+00:00 — watchdog — failure_log.txt: [2025-08-18 18:53:44,385] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717221+00:00 — watchdog — failure_log.txt: [2025-08-18 18:59:11,074] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717233+00:00 — watchdog — failure_log.txt: [2025-08-18 19:04:32,188] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717245+00:00 — watchdog — failure_log.txt: [2025-08-18 19:09:54,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717258+00:00 — watchdog — failure_log.txt: [2025-08-18 19:15:08,790] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717270+00:00 — watchdog — failure_log.txt: [2025-08-18 19:20:24,124] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717282+00:00 — watchdog — failure_log.txt: [2025-08-18 19:25:39,145] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717295+00:00 — watchdog — failure_log.txt: [2025-08-18 19:30:47,561] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717307+00:00 — watchdog — failure_log.txt: [2025-08-18 19:35:58,040] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717318+00:00 — watchdog — failure_log.txt: [2025-08-18 19:41:23,428] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717332+00:00 — watchdog — failure_log.txt: [2025-08-18 19:46:41,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717342+00:00 — watchdog — failure_log.txt: [2025-08-18 19:51:55,768] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717352+00:00 — watchdog — failure_log.txt: [2025-08-18 19:57:11,698] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717362+00:00 — watchdog — failure_log.txt: [2025-08-18 20:02:26,856] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717372+00:00 — watchdog — failure_log.txt: [2025-08-18 20:07:46,193] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717382+00:00 — watchdog — failure_log.txt: [2025-08-18 20:12:53,831] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717392+00:00 — watchdog — failure_log.txt: [2025-08-18 20:17:59,722] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717402+00:00 — watchdog — failure_log.txt: [2025-08-18 20:23:13,822] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717418+00:00 — watchdog — failure_log.txt: [2025-08-18 20:28:38,089] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717445+00:00 — watchdog — failure_log.txt: [2025-08-18 20:33:45,279] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717456+00:00 — watchdog — failure_log.txt: [2025-08-18 20:39:08,798] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717466+00:00 — watchdog — failure_log.txt: [2025-08-18 20:44:25,148] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717476+00:00 — watchdog — failure_log.txt: [2025-08-18 20:49:32,401] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717486+00:00 — watchdog — failure_log.txt: [2025-08-18 20:54:49,161] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717496+00:00 — watchdog — failure_log.txt: [2025-08-18 21:00:01,204] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717506+00:00 — watchdog — failure_log.txt: [2025-08-18 21:05:21,936] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717516+00:00 — watchdog — failure_log.txt: [2025-08-18 21:10:34,072] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717526+00:00 — watchdog — failure_log.txt: [2025-08-18 21:15:50,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717536+00:00 — watchdog — failure_log.txt: [2025-08-18 21:20:59,871] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717546+00:00 — watchdog — failure_log.txt: [2025-08-18 21:26:19,828] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717556+00:00 — watchdog — failure_log.txt: [2025-08-18 21:31:36,481] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717566+00:00 — watchdog — failure_log.txt: [2025-08-18 21:36:52,767] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717577+00:00 — watchdog — failure_log.txt: [2025-08-18 21:42:12,208] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717588+00:00 — watchdog — failure_log.txt: [2025-08-18 21:47:27,011] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717598+00:00 — watchdog — failure_log.txt: [2025-08-18 21:52:35,860] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717613+00:00 — watchdog — failure_log.txt: [2025-08-18 21:57:54,227] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717625+00:00 — watchdog — failure_log.txt: [2025-08-18 22:03:18,206] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717636+00:00 — watchdog — failure_log.txt: [2025-08-18 22:08:28,609] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717648+00:00 — watchdog — failure_log.txt: [2025-08-18 22:13:41,861] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717659+00:00 — watchdog — failure_log.txt: [2025-08-18 22:18:56,687] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717671+00:00 — watchdog — failure_log.txt: [2025-08-18 22:24:20,244] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717683+00:00 — watchdog — failure_log.txt: [2025-08-18 22:29:35,770] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717696+00:00 — watchdog — failure_log.txt: [2025-08-18 22:34:43,842] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717708+00:00 — watchdog — failure_log.txt: [2025-08-18 22:39:54,549] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717721+00:00 — watchdog — failure_log.txt: [2025-08-18 22:45:13,876] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717734+00:00 — watchdog — failure_log.txt: [2025-08-18 22:50:27,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717746+00:00 — watchdog — failure_log.txt: [2025-08-18 22:55:41,089] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717757+00:00 — watchdog — failure_log.txt: [2025-08-18 23:00:56,821] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717769+00:00 — watchdog — failure_log.txt: [2025-08-18 23:06:14,572] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717780+00:00 — watchdog — failure_log.txt: [2025-08-18 23:11:28,454] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717792+00:00 — watchdog — failure_log.txt: [2025-08-18 23:16:41,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717804+00:00 — watchdog — failure_log.txt: [2025-08-18 23:22:05,537] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717815+00:00 — watchdog — failure_log.txt: [2025-08-18 23:27:22,340] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717828+00:00 — watchdog — failure_log.txt: [2025-08-18 23:32:38,988] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717840+00:00 — watchdog — failure_log.txt: [2025-08-18 23:37:58,142] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717853+00:00 — watchdog — failure_log.txt: [2025-08-18 23:43:20,364] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717864+00:00 — watchdog — failure_log.txt: [2025-08-18 23:48:26,862] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717876+00:00 — watchdog — failure_log.txt: [2025-08-18 23:53:35,983] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717888+00:00 — watchdog — failure_log.txt: [2025-08-18 23:58:45,805] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717901+00:00 — watchdog — failure_log.txt: [2025-08-19 00:04:05,374] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.717919+00:00 — watchdog — failure_log.txt: [2025-08-19 00:09:23,565] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717936+00:00 — watchdog — failure_log.txt: [2025-08-19 00:14:39,139] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717948+00:00 — watchdog — failure_log.txt: [2025-08-19 00:19:50,885] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717959+00:00 — watchdog — failure_log.txt: [2025-08-19 00:25:00,873] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717971+00:00 — watchdog — failure_log.txt: [2025-08-19 00:30:22,690] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717984+00:00 — watchdog — failure_log.txt: [2025-08-19 00:35:44,157] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.717997+00:00 — watchdog — failure_log.txt: [2025-08-19 00:40:56,102] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718008+00:00 — watchdog — failure_log.txt: [2025-08-19 00:46:22,212] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718022+00:00 — watchdog — failure_log.txt: [2025-08-19 00:51:34,405] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718033+00:00 — watchdog — failure_log.txt: [2025-08-19 00:56:52,533] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718046+00:00 — watchdog — failure_log.txt: [2025-08-19 01:02:07,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718058+00:00 — watchdog — failure_log.txt: [2025-08-19 01:07:21,873] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718070+00:00 — watchdog — failure_log.txt: [2025-08-19 01:12:35,139] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718084+00:00 — watchdog — failure_log.txt: [2025-08-19 01:17:54,532] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718095+00:00 — watchdog — failure_log.txt: [2025-08-19 01:23:14,557] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718106+00:00 — watchdog — failure_log.txt: [2025-08-19 01:28:26,694] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718119+00:00 — watchdog — failure_log.txt: [2025-08-19 01:33:45,935] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718130+00:00 — watchdog — failure_log.txt: [2025-08-19 01:38:56,734] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718140+00:00 — watchdog — failure_log.txt: [2025-08-19 01:44:06,909] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718150+00:00 — watchdog — failure_log.txt: [2025-08-19 01:49:24,912] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718161+00:00 — watchdog — failure_log.txt: [2025-08-19 01:54:33,191] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718171+00:00 — watchdog — failure_log.txt: [2025-08-19 01:59:45,874] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718181+00:00 — watchdog — failure_log.txt: [2025-08-19 02:04:52,848] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718191+00:00 — watchdog — failure_log.txt: [2025-08-19 02:10:06,272] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718202+00:00 — watchdog — failure_log.txt: [2025-08-19 02:15:28,252] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718212+00:00 — watchdog — failure_log.txt: [2025-08-19 02:20:40,228] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718222+00:00 — watchdog — failure_log.txt: [2025-08-19 02:25:58,617] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718238+00:00 — watchdog — failure_log.txt: [2025-08-19 02:31:20,809] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718248+00:00 — watchdog — failure_log.txt: [2025-08-19 02:36:37,811] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718259+00:00 — watchdog — failure_log.txt: [2025-08-19 02:41:51,385] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718269+00:00 — watchdog — failure_log.txt: [2025-08-19 02:47:14,888] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718279+00:00 — watchdog — failure_log.txt: [2025-08-19 02:52:28,167] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718290+00:00 — watchdog — failure_log.txt: [2025-08-19 02:57:45,125] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718301+00:00 — watchdog — failure_log.txt: [2025-08-19 03:03:06,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718311+00:00 — watchdog — failure_log.txt: [2025-08-19 03:08:27,306] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718322+00:00 — watchdog — failure_log.txt: [2025-08-19 03:13:37,123] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718332+00:00 — watchdog — failure_log.txt: [2025-08-19 03:18:49,129] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718342+00:00 — watchdog — failure_log.txt: [2025-08-19 03:23:58,580] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718352+00:00 — watchdog — failure_log.txt: [2025-08-19 03:29:24,665] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718363+00:00 — watchdog — failure_log.txt: [2025-08-19 03:34:41,091] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718373+00:00 — watchdog — failure_log.txt: [2025-08-19 03:39:54,050] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718384+00:00 — watchdog — failure_log.txt: [2025-08-19 03:45:18,963] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718394+00:00 — watchdog — failure_log.txt: [2025-08-19 03:50:28,963] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718407+00:00 — watchdog — failure_log.txt: [2025-08-19 03:55:43,973] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718417+00:00 — watchdog — failure_log.txt: [2025-08-19 04:00:53,955] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718445+00:00 — watchdog — failure_log.txt: [2025-08-19 04:06:12,405] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718456+00:00 — watchdog — failure_log.txt: [2025-08-19 04:11:29,541] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718468+00:00 — watchdog — failure_log.txt: [2025-08-19 04:16:44,005] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718479+00:00 — watchdog — failure_log.txt: [2025-08-19 04:21:54,125] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718491+00:00 — watchdog — failure_log.txt: [2025-08-19 04:27:05,969] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718505+00:00 — watchdog — failure_log.txt: [2025-08-19 04:32:20,980] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718519+00:00 — watchdog — failure_log.txt: [2025-08-19 04:37:30,280] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718537+00:00 — watchdog — failure_log.txt: [2025-08-19 04:42:45,658] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718552+00:00 — watchdog — failure_log.txt: [2025-08-19 04:48:14,235] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718566+00:00 — watchdog — failure_log.txt: [2025-08-19 04:53:30,737] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718580+00:00 — watchdog — failure_log.txt: [2025-08-19 04:58:41,270] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718593+00:00 — watchdog — failure_log.txt: [2025-08-19 05:03:52,203] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718607+00:00 — watchdog — failure_log.txt: [2025-08-19 05:09:10,806] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718620+00:00 — watchdog — failure_log.txt: [2025-08-19 05:14:25,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718634+00:00 — watchdog — failure_log.txt: [2025-08-19 05:19:43,128] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718648+00:00 — watchdog — failure_log.txt: [2025-08-19 05:24:58,989] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718661+00:00 — watchdog — failure_log.txt: [2025-08-19 05:30:23,452] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718675+00:00 — watchdog — failure_log.txt: [2025-08-19 05:35:31,284] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718689+00:00 — watchdog — failure_log.txt: [2025-08-19 05:40:48,195] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718703+00:00 — watchdog — failure_log.txt: [2025-08-19 05:46:00,741] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718717+00:00 — watchdog — failure_log.txt: [2025-08-19 05:51:24,241] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718728+00:00 — watchdog — failure_log.txt: [2025-08-19 05:56:36,803] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718740+00:00 — watchdog — failure_log.txt: [2025-08-19 06:01:46,757] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718751+00:00 — watchdog — failure_log.txt: [2025-08-19 06:06:56,588] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718763+00:00 — watchdog — failure_log.txt: [2025-08-19 06:12:13,111] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718774+00:00 — watchdog — failure_log.txt: [2025-08-19 06:17:36,184] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718784+00:00 — watchdog — failure_log.txt: [2025-08-19 06:22:51,598] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718794+00:00 — watchdog — failure_log.txt: [2025-08-19 06:28:05,325] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718806+00:00 — watchdog — failure_log.txt: [2025-08-19 06:33:23,610] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718819+00:00 — watchdog — failure_log.txt: [2025-08-19 06:38:34,391] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718830+00:00 — watchdog — failure_log.txt: [2025-08-19 06:43:50,722] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718843+00:00 — watchdog — failure_log.txt: [2025-08-19 06:49:07,049] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718860+00:00 — watchdog — failure_log.txt: [2025-08-19 06:54:23,783] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718873+00:00 — watchdog — failure_log.txt: [2025-08-19 06:59:40,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718885+00:00 — watchdog — failure_log.txt: [2025-08-19 07:04:56,861] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718895+00:00 — watchdog — failure_log.txt: [2025-08-19 07:10:13,101] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718906+00:00 — watchdog — failure_log.txt: [2025-08-19 07:15:31,098] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718917+00:00 — watchdog — failure_log.txt: [2025-08-19 07:20:42,155] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718928+00:00 — watchdog — failure_log.txt: [2025-08-19 07:25:52,433] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718939+00:00 — watchdog — failure_log.txt: [2025-08-19 07:31:10,974] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718950+00:00 — watchdog — failure_log.txt: [2025-08-19 07:36:23,852] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718964+00:00 — watchdog — failure_log.txt: [2025-08-19 07:41:42,346] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718974+00:00 — watchdog — failure_log.txt: [2025-08-19 07:46:55,684] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718984+00:00 — watchdog — failure_log.txt: [2025-08-19 07:52:20,455] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.718994+00:00 — watchdog — failure_log.txt: [2025-08-19 07:57:36,092] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719004+00:00 — watchdog — failure_log.txt: [2025-08-19 08:02:56,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719015+00:00 — watchdog — failure_log.txt: [2025-08-19 08:08:11,873] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719025+00:00 — watchdog — failure_log.txt: [2025-08-19 08:13:24,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719035+00:00 — watchdog — failure_log.txt: [2025-08-19 08:18:43,172] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719045+00:00 — watchdog — failure_log.txt: [2025-08-19 08:23:55,078] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719055+00:00 — watchdog — failure_log.txt: [2025-08-19 08:29:15,037] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719066+00:00 — watchdog — failure_log.txt: [2025-08-19 08:34:26,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719077+00:00 — watchdog — failure_log.txt: [2025-08-19 08:39:48,105] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719087+00:00 — watchdog — failure_log.txt: [2025-08-19 08:45:02,465] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719098+00:00 — watchdog — failure_log.txt: [2025-08-19 08:50:18,867] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719109+00:00 — watchdog — failure_log.txt: [2025-08-19 08:55:29,750] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719120+00:00 — watchdog — failure_log.txt: [2025-08-19 09:00:43,525] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719131+00:00 — watchdog — failure_log.txt: [2025-08-19 09:05:53,559] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719145+00:00 — watchdog — failure_log.txt: [2025-08-19 09:11:13,359] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719155+00:00 — watchdog — failure_log.txt: [2025-08-19 09:16:32,349] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719165+00:00 — watchdog — failure_log.txt: [2025-08-19 09:21:41,712] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719177+00:00 — watchdog — failure_log.txt: [2025-08-19 09:26:49,797] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719189+00:00 — watchdog — failure_log.txt: [2025-08-19 09:31:58,496] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719200+00:00 — watchdog — failure_log.txt: [2025-08-19 09:37:18,885] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719211+00:00 — watchdog — failure_log.txt: [2025-08-19 09:42:42,469] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719221+00:00 — watchdog — failure_log.txt: [2025-08-19 09:47:57,219] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719231+00:00 — watchdog — failure_log.txt: [2025-08-19 09:53:17,277] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719241+00:00 — watchdog — failure_log.txt: [2025-08-19 09:58:38,360] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719252+00:00 — watchdog — failure_log.txt: [2025-08-19 10:03:45,862] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719262+00:00 — watchdog — failure_log.txt: [2025-08-19 10:08:54,220] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719272+00:00 — watchdog — failure_log.txt: [2025-08-19 10:14:16,196] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719284+00:00 — watchdog — failure_log.txt: [2025-08-19 10:19:40,564] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719295+00:00 — watchdog — failure_log.txt: [2025-08-19 10:24:53,891] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719305+00:00 — watchdog — failure_log.txt: [2025-08-19 10:30:12,902] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719315+00:00 — watchdog — failure_log.txt: [2025-08-19 10:35:27,903] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719325+00:00 — watchdog — failure_log.txt: [2025-08-19 10:40:47,077] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719336+00:00 — watchdog — failure_log.txt: [2025-08-19 10:45:54,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719346+00:00 — watchdog — failure_log.txt: [2025-08-19 10:51:15,023] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719357+00:00 — watchdog — failure_log.txt: [2025-08-19 10:56:31,116] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719367+00:00 — watchdog — failure_log.txt: [2025-08-19 11:01:44,504] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719378+00:00 — watchdog — failure_log.txt: [2025-08-19 11:07:06,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719389+00:00 — watchdog — failure_log.txt: [2025-08-19 11:12:19,141] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719401+00:00 — watchdog — failure_log.txt: [2025-08-19 11:17:34,738] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719414+00:00 — watchdog — failure_log.txt: [2025-08-19 11:22:44,796] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719445+00:00 — watchdog — failure_log.txt: [2025-08-19 11:27:50,773] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719457+00:00 — watchdog — failure_log.txt: [2025-08-19 11:33:16,397] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719468+00:00 — watchdog — failure_log.txt: [2025-08-19 11:38:32,519] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719480+00:00 — watchdog — failure_log.txt: [2025-08-19 11:43:47,152] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719491+00:00 — watchdog — failure_log.txt: [2025-08-19 11:49:05,816] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719501+00:00 — watchdog — failure_log.txt: [2025-08-19 11:54:22,713] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719511+00:00 — watchdog — failure_log.txt: [2025-08-19 11:59:40,068] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719522+00:00 — watchdog — failure_log.txt: [2025-08-19 12:04:48,072] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719533+00:00 — watchdog — failure_log.txt: [2025-08-19 12:09:59,145] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719544+00:00 — watchdog — failure_log.txt: [2025-08-19 12:15:14,962] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719553+00:00 — watchdog — failure_log.txt: [2025-08-19 12:20:38,036] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719563+00:00 — watchdog — failure_log.txt: [2025-08-19 12:25:54,653] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719574+00:00 — watchdog — failure_log.txt: [2025-08-19 12:31:13,363] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719586+00:00 — watchdog — failure_log.txt: [2025-08-19 12:36:25,918] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719597+00:00 — watchdog — failure_log.txt: [2025-08-19 12:41:33,608] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719607+00:00 — watchdog — failure_log.txt: [2025-08-19 12:46:40,793] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719617+00:00 — watchdog — failure_log.txt: [2025-08-19 12:51:54,893] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719628+00:00 — watchdog — failure_log.txt: [2025-08-19 12:57:14,022] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719640+00:00 — watchdog — failure_log.txt: [2025-08-19 13:02:32,618] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719651+00:00 — watchdog — failure_log.txt: [2025-08-19 13:07:47,724] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719662+00:00 — watchdog — failure_log.txt: [2025-08-19 13:13:02,465] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719673+00:00 — watchdog — failure_log.txt: [2025-08-19 13:18:22,131] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719685+00:00 — watchdog — failure_log.txt: [2025-08-19 13:23:37,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719696+00:00 — watchdog — failure_log.txt: [2025-08-19 13:28:46,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719707+00:00 — watchdog — failure_log.txt: [2025-08-19 13:34:08,379] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719721+00:00 — watchdog — failure_log.txt: [2025-08-19 13:39:30,839] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719732+00:00 — watchdog — failure_log.txt: [2025-08-19 13:44:40,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719742+00:00 — watchdog — failure_log.txt: [2025-08-19 13:49:57,991] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719752+00:00 — watchdog — failure_log.txt: [2025-08-19 13:55:19,902] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719762+00:00 — watchdog — failure_log.txt: [2025-08-19 14:00:37,648] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719772+00:00 — watchdog — failure_log.txt: [2025-08-19 14:05:46,443] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719782+00:00 — watchdog — failure_log.txt: [2025-08-19 14:10:59,205] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719793+00:00 — watchdog — failure_log.txt: [2025-08-19 14:16:13,483] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719803+00:00 — watchdog — failure_log.txt: [2025-08-19 14:21:36,285] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719813+00:00 — watchdog — failure_log.txt: [2025-08-19 14:26:55,586] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719823+00:00 — watchdog — failure_log.txt: [2025-08-19 14:32:16,300] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719833+00:00 — watchdog — failure_log.txt: [2025-08-19 14:37:28,209] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719843+00:00 — watchdog — failure_log.txt: [2025-08-19 14:42:37,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719854+00:00 — watchdog — failure_log.txt: [2025-08-19 14:47:46,329] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719864+00:00 — watchdog — failure_log.txt: [2025-08-19 14:52:56,942] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719874+00:00 — watchdog — failure_log.txt: [2025-08-19 14:58:15,313] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719888+00:00 — watchdog — failure_log.txt: [2025-08-19 15:03:33,529] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719898+00:00 — watchdog — failure_log.txt: [2025-08-19 15:08:53,896] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719908+00:00 — watchdog — failure_log.txt: [2025-08-19 15:14:08,376] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719920+00:00 — watchdog — failure_log.txt: [2025-08-19 15:19:28,253] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719930+00:00 — watchdog — failure_log.txt: [2025-08-19 15:24:46,597] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719941+00:00 — watchdog — failure_log.txt: [2025-08-19 15:30:10,112] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719951+00:00 — watchdog — failure_log.txt: [2025-08-19 15:35:22,506] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719961+00:00 — watchdog — failure_log.txt: [2025-08-19 15:40:39,944] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719972+00:00 — watchdog — failure_log.txt: [2025-08-19 15:45:57,169] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719986+00:00 — watchdog — failure_log.txt: [2025-08-19 15:51:03,569] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.719996+00:00 — watchdog — failure_log.txt: [2025-08-19 15:56:23,110] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720008+00:00 — watchdog — failure_log.txt: [2025-08-19 16:01:37,282] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720018+00:00 — watchdog — failure_log.txt: [2025-08-19 16:06:44,498] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720029+00:00 — watchdog — failure_log.txt: [2025-08-19 16:12:07,797] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720041+00:00 — watchdog — failure_log.txt: [2025-08-19 16:17:21,985] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720053+00:00 — watchdog — failure_log.txt: [2025-08-19 16:22:32,769] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720064+00:00 — watchdog — failure_log.txt: [2025-08-19 16:27:47,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720075+00:00 — watchdog — failure_log.txt: [2025-08-19 16:32:57,946] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720087+00:00 — watchdog — failure_log.txt: [2025-08-19 16:38:16,603] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720099+00:00 — watchdog — failure_log.txt: [2025-08-19 16:43:40,700] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720110+00:00 — watchdog — failure_log.txt: [2025-08-19 16:48:55,894] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720121+00:00 — watchdog — failure_log.txt: [2025-08-19 16:54:10,212] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720133+00:00 — watchdog — failure_log.txt: [2025-08-19 16:59:32,231] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720145+00:00 — watchdog — failure_log.txt: [2025-08-19 17:04:48,821] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720157+00:00 — watchdog — failure_log.txt: [2025-08-19 17:10:08,674] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720167+00:00 — watchdog — failure_log.txt: [2025-08-19 17:15:21,373] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720179+00:00 — watchdog — failure_log.txt: [2025-08-19 17:20:29,455] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720191+00:00 — watchdog — failure_log.txt: [2025-08-19 17:25:40,756] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720201+00:00 — watchdog — failure_log.txt: [2025-08-19 17:30:50,752] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720212+00:00 — watchdog — failure_log.txt: [2025-08-19 17:36:13,221] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720223+00:00 — watchdog — failure_log.txt: [2025-08-19 17:41:25,897] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720234+00:00 — watchdog — failure_log.txt: [2025-08-19 17:46:48,020] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720244+00:00 — watchdog — failure_log.txt: [2025-08-19 17:51:55,991] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720255+00:00 — watchdog — failure_log.txt: [2025-08-19 17:57:17,470] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720265+00:00 — watchdog — failure_log.txt: [2025-08-19 18:02:32,214] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720284+00:00 — watchdog — failure_log.txt: [2025-08-19 18:07:40,572] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720295+00:00 — watchdog — failure_log.txt: [2025-08-19 18:12:51,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720307+00:00 — watchdog — failure_log.txt: [2025-08-19 18:18:14,337] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720319+00:00 — watchdog — failure_log.txt: [2025-08-19 18:23:25,907] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720332+00:00 — watchdog — failure_log.txt: [2025-08-19 18:28:37,130] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720344+00:00 — watchdog — failure_log.txt: [2025-08-19 18:33:44,927] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720355+00:00 — watchdog — failure_log.txt: [2025-08-19 18:38:56,367] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720367+00:00 — watchdog — failure_log.txt: [2025-08-19 18:44:18,644] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720382+00:00 — watchdog — failure_log.txt: [2025-08-19 18:49:39,468] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720395+00:00 — watchdog — failure_log.txt: [2025-08-19 18:54:58,099] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720407+00:00 — watchdog — failure_log.txt: [2025-08-19 19:00:20,450] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720419+00:00 — watchdog — failure_log.txt: [2025-08-19 19:05:35,218] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720447+00:00 — watchdog — failure_log.txt: [2025-08-19 19:10:52,015] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720459+00:00 — watchdog — failure_log.txt: [2025-08-19 19:16:00,037] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720470+00:00 — watchdog — failure_log.txt: [2025-08-19 19:21:20,348] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720482+00:00 — watchdog — failure_log.txt: [2025-08-19 19:26:41,017] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720493+00:00 — watchdog — failure_log.txt: [2025-08-19 19:32:01,092] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720511+00:00 — watchdog — failure_log.txt: [2025-08-19 19:37:22,776] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720523+00:00 — watchdog — failure_log.txt: [2025-08-19 19:42:33,721] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720535+00:00 — watchdog — failure_log.txt: [2025-08-19 19:47:48,061] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720548+00:00 — watchdog — failure_log.txt: [2025-08-19 19:53:13,422] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720560+00:00 — watchdog — failure_log.txt: [2025-08-19 19:58:34,216] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720573+00:00 — watchdog — failure_log.txt: [2025-08-19 20:03:51,545] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720584+00:00 — watchdog — failure_log.txt: [2025-08-19 20:09:09,538] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720597+00:00 — watchdog — failure_log.txt: [2025-08-19 20:14:27,847] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720609+00:00 — watchdog — failure_log.txt: [2025-08-19 20:19:40,889] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720628+00:00 — watchdog — failure_log.txt: [2025-08-19 20:24:52,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720641+00:00 — watchdog — failure_log.txt: [2025-08-19 20:30:16,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720653+00:00 — watchdog — failure_log.txt: [2025-08-19 20:35:28,708] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720666+00:00 — watchdog — failure_log.txt: [2025-08-19 20:40:40,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720678+00:00 — watchdog — failure_log.txt: [2025-08-19 20:45:55,073] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720691+00:00 — watchdog — failure_log.txt: [2025-08-19 20:51:16,544] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720703+00:00 — watchdog — failure_log.txt: [2025-08-19 20:56:26,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720714+00:00 — watchdog — failure_log.txt: [2025-08-19 21:01:33,367] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720727+00:00 — watchdog — failure_log.txt: [2025-08-19 21:06:47,370] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720740+00:00 — watchdog — failure_log.txt: [2025-08-19 21:12:08,707] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720752+00:00 — watchdog — failure_log.txt: [2025-08-19 21:17:33,299] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720764+00:00 — watchdog — failure_log.txt: [2025-08-19 21:22:50,232] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720775+00:00 — watchdog — failure_log.txt: [2025-08-19 21:28:05,472] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720786+00:00 — watchdog — failure_log.txt: [2025-08-19 21:33:31,820] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720798+00:00 — watchdog — failure_log.txt: [2025-08-19 21:38:43,606] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720810+00:00 — watchdog — failure_log.txt: [2025-08-19 21:43:54,150] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720822+00:00 — watchdog — failure_log.txt: [2025-08-19 21:49:16,152] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.720988+00:00 — watchdog — failure_log.txt: [2025-08-19 21:54:33,848] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721011+00:00 — watchdog — failure_log.txt: [2025-08-19 21:59:40,882] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721024+00:00 — watchdog — failure_log.txt: [2025-08-19 22:04:52,877] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721037+00:00 — watchdog — failure_log.txt: [2025-08-19 22:10:13,360] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721050+00:00 — watchdog — failure_log.txt: [2025-08-19 22:15:34,824] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721060+00:00 — watchdog — failure_log.txt: [2025-08-19 22:20:51,883] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721071+00:00 — watchdog — failure_log.txt: [2025-08-19 22:26:10,033] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721082+00:00 — watchdog — failure_log.txt: [2025-08-19 22:31:35,529] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721102+00:00 — watchdog — failure_log.txt: [2025-08-19 22:36:46,518] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721114+00:00 — watchdog — failure_log.txt: [2025-08-19 22:41:56,724] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721124+00:00 — watchdog — failure_log.txt: [2025-08-19 22:47:14,953] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721135+00:00 — watchdog — failure_log.txt: [2025-08-19 22:52:28,806] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721146+00:00 — watchdog — failure_log.txt: [2025-08-19 22:57:49,924] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721156+00:00 — watchdog — failure_log.txt: [2025-08-19 23:03:15,361] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721167+00:00 — watchdog — failure_log.txt: [2025-08-19 23:08:32,723] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721178+00:00 — watchdog — failure_log.txt: [2025-08-19 23:13:47,788] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721190+00:00 — watchdog — failure_log.txt: [2025-08-19 23:19:00,438] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721202+00:00 — watchdog — failure_log.txt: [2025-08-19 23:24:15,127] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721213+00:00 — watchdog — failure_log.txt: [2025-08-19 23:29:30,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721225+00:00 — watchdog — failure_log.txt: [2025-08-19 23:34:46,634] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721237+00:00 — watchdog — failure_log.txt: [2025-08-19 23:40:03,032] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721248+00:00 — watchdog — failure_log.txt: [2025-08-19 23:45:14,901] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721260+00:00 — watchdog — failure_log.txt: [2025-08-19 23:50:28,242] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721271+00:00 — watchdog — failure_log.txt: [2025-08-19 23:55:42,784] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721285+00:00 — watchdog — failure_log.txt: [2025-08-20 00:01:01,141] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.721296+00:00 — watchdog — failure_log.txt: [2025-08-20 00:06:17,817] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721307+00:00 — watchdog — failure_log.txt: [2025-08-20 00:11:30,448] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721317+00:00 — watchdog — failure_log.txt: [2025-08-20 00:16:42,240] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721328+00:00 — watchdog — failure_log.txt: [2025-08-20 00:21:49,883] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721338+00:00 — watchdog — failure_log.txt: [2025-08-20 00:26:58,743] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721348+00:00 — watchdog — failure_log.txt: [2025-08-20 00:32:11,039] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721359+00:00 — watchdog — failure_log.txt: [2025-08-20 00:37:28,883] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721370+00:00 — watchdog — failure_log.txt: [2025-08-20 00:42:40,711] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721385+00:00 — watchdog — failure_log.txt: [2025-08-20 00:47:47,822] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721397+00:00 — watchdog — failure_log.txt: [2025-08-20 00:53:10,209] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721407+00:00 — watchdog — failure_log.txt: [2025-08-20 00:58:32,668] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721419+00:00 — watchdog — failure_log.txt: [2025-08-20 01:03:44,841] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721451+00:00 — watchdog — failure_log.txt: [2025-08-20 01:08:53,515] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721464+00:00 — watchdog — failure_log.txt: [2025-08-20 01:14:02,211] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721474+00:00 — watchdog — failure_log.txt: [2025-08-20 01:19:25,320] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721484+00:00 — watchdog — failure_log.txt: [2025-08-20 01:24:37,598] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721494+00:00 — watchdog — failure_log.txt: [2025-08-20 01:29:50,152] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721505+00:00 — watchdog — failure_log.txt: [2025-08-20 01:35:08,264] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721515+00:00 — watchdog — failure_log.txt: [2025-08-20 01:40:21,172] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721526+00:00 — watchdog — failure_log.txt: [2025-08-20 01:45:40,141] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721538+00:00 — watchdog — failure_log.txt: [2025-08-20 01:50:51,905] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721550+00:00 — watchdog — failure_log.txt: [2025-08-20 01:56:04,720] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721561+00:00 — watchdog — failure_log.txt: [2025-08-20 02:01:23,543] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721573+00:00 — watchdog — failure_log.txt: [2025-08-20 02:06:36,708] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721585+00:00 — watchdog — failure_log.txt: [2025-08-20 02:11:42,452] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721601+00:00 — watchdog — failure_log.txt: [2025-08-20 02:17:01,776] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721613+00:00 — watchdog — failure_log.txt: [2025-08-20 02:22:18,086] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721625+00:00 — watchdog — failure_log.txt: [2025-08-20 02:27:29,931] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721636+00:00 — watchdog — failure_log.txt: [2025-08-20 02:32:43,205] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721648+00:00 — watchdog — failure_log.txt: [2025-08-20 02:37:59,650] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721658+00:00 — watchdog — failure_log.txt: [2025-08-20 02:43:17,336] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721669+00:00 — watchdog — failure_log.txt: [2025-08-20 02:48:36,864] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721681+00:00 — watchdog — failure_log.txt: [2025-08-20 02:53:51,932] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721692+00:00 — watchdog — failure_log.txt: [2025-08-20 02:59:01,656] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721707+00:00 — watchdog — failure_log.txt: [2025-08-20 03:04:16,515] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721718+00:00 — watchdog — failure_log.txt: [2025-08-20 03:09:30,129] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721728+00:00 — watchdog — failure_log.txt: [2025-08-20 03:14:40,903] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721740+00:00 — watchdog — failure_log.txt: [2025-08-20 03:19:46,552] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721752+00:00 — watchdog — failure_log.txt: [2025-08-20 03:24:57,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721766+00:00 — watchdog — failure_log.txt: [2025-08-20 03:30:19,220] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721778+00:00 — watchdog — failure_log.txt: [2025-08-20 03:35:34,341] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721790+00:00 — watchdog — failure_log.txt: [2025-08-20 03:40:48,501] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721801+00:00 — watchdog — failure_log.txt: [2025-08-20 03:45:56,158] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721811+00:00 — watchdog — failure_log.txt: [2025-08-20 03:51:17,170] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721822+00:00 — watchdog — failure_log.txt: [2025-08-20 03:56:32,689] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721832+00:00 — watchdog — failure_log.txt: [2025-08-20 04:01:38,893] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721842+00:00 — watchdog — failure_log.txt: [2025-08-20 04:06:55,961] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721852+00:00 — watchdog — failure_log.txt: [2025-08-20 04:12:05,757] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721863+00:00 — watchdog — failure_log.txt: [2025-08-20 04:17:22,949] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721874+00:00 — watchdog — failure_log.txt: [2025-08-20 04:22:30,984] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721884+00:00 — watchdog — failure_log.txt: [2025-08-20 04:27:41,716] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721894+00:00 — watchdog — failure_log.txt: [2025-08-20 04:32:59,886] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721905+00:00 — watchdog — failure_log.txt: [2025-08-20 04:38:13,527] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721915+00:00 — watchdog — failure_log.txt: [2025-08-20 04:43:31,040] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721925+00:00 — watchdog — failure_log.txt: [2025-08-20 04:48:46,937] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721935+00:00 — watchdog — failure_log.txt: [2025-08-20 04:53:53,764] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721945+00:00 — watchdog — failure_log.txt: [2025-08-20 04:59:08,417] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721955+00:00 — watchdog — failure_log.txt: [2025-08-20 05:04:28,161] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721965+00:00 — watchdog — failure_log.txt: [2025-08-20 05:09:42,075] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721976+00:00 — watchdog — failure_log.txt: [2025-08-20 05:14:56,454] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.721991+00:00 — watchdog — failure_log.txt: [2025-08-20 05:20:18,261] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722001+00:00 — watchdog — failure_log.txt: [2025-08-20 05:25:36,235] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722012+00:00 — watchdog — failure_log.txt: [2025-08-20 05:30:51,890] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722022+00:00 — watchdog — failure_log.txt: [2025-08-20 05:36:11,342] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722034+00:00 — watchdog — failure_log.txt: [2025-08-20 05:41:37,122] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722045+00:00 — watchdog — failure_log.txt: [2025-08-20 05:46:59,442] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722058+00:00 — watchdog — failure_log.txt: [2025-08-20 05:52:19,520] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722074+00:00 — watchdog — failure_log.txt: [2025-08-20 05:57:38,426] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722086+00:00 — watchdog — failure_log.txt: [2025-08-20 06:02:54,973] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722097+00:00 — watchdog — failure_log.txt: [2025-08-20 06:08:18,869] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722108+00:00 — watchdog — failure_log.txt: [2025-08-20 06:13:31,260] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722121+00:00 — watchdog — failure_log.txt: [2025-08-20 06:18:40,704] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722132+00:00 — watchdog — failure_log.txt: [2025-08-20 06:23:58,027] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722144+00:00 — watchdog — failure_log.txt: [2025-08-20 06:29:20,789] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722156+00:00 — watchdog — failure_log.txt: [2025-08-20 06:34:29,919] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722167+00:00 — watchdog — failure_log.txt: [2025-08-20 06:39:48,673] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722177+00:00 — watchdog — failure_log.txt: [2025-08-20 06:44:58,187] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722187+00:00 — watchdog — failure_log.txt: [2025-08-20 06:50:11,168] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722197+00:00 — watchdog — failure_log.txt: [2025-08-20 06:55:28,528] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722207+00:00 — watchdog — failure_log.txt: [2025-08-20 07:00:40,908] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722217+00:00 — watchdog — failure_log.txt: [2025-08-20 07:05:58,629] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722228+00:00 — watchdog — failure_log.txt: [2025-08-20 07:11:19,324] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722239+00:00 — watchdog — failure_log.txt: [2025-08-20 07:16:30,751] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722249+00:00 — watchdog — failure_log.txt: [2025-08-20 07:21:45,876] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722259+00:00 — watchdog — failure_log.txt: [2025-08-20 07:26:52,897] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722274+00:00 — watchdog — failure_log.txt: [2025-08-20 07:32:03,370] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722284+00:00 — watchdog — failure_log.txt: [2025-08-20 07:37:18,647] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722294+00:00 — watchdog — failure_log.txt: [2025-08-20 07:42:37,504] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722304+00:00 — watchdog — failure_log.txt: [2025-08-20 07:47:52,740] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722316+00:00 — watchdog — failure_log.txt: [2025-08-20 07:53:00,797] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722326+00:00 — watchdog — failure_log.txt: [2025-08-20 07:58:16,280] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722336+00:00 — watchdog — failure_log.txt: [2025-08-20 08:03:25,911] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722346+00:00 — watchdog — failure_log.txt: [2025-08-20 08:08:38,894] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722357+00:00 — watchdog — failure_log.txt: [2025-08-20 08:13:53,521] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722368+00:00 — watchdog — failure_log.txt: [2025-08-20 08:19:18,934] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722379+00:00 — watchdog — failure_log.txt: [2025-08-20 08:24:32,900] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722390+00:00 — watchdog — failure_log.txt: [2025-08-20 08:29:47,716] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722402+00:00 — watchdog — failure_log.txt: [2025-08-20 08:35:04,746] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722412+00:00 — watchdog — failure_log.txt: [2025-08-20 08:40:20,354] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722440+00:00 — watchdog — failure_log.txt: [2025-08-20 08:45:38,009] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722455+00:00 — watchdog — failure_log.txt: [2025-08-20 08:50:50,864] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722465+00:00 — watchdog — failure_log.txt: [2025-08-20 08:56:00,473] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722477+00:00 — watchdog — failure_log.txt: [2025-08-20 09:01:22,581] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722488+00:00 — watchdog — failure_log.txt: [2025-08-20 09:06:36,781] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722499+00:00 — watchdog — failure_log.txt: [2025-08-20 09:11:55,778] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722509+00:00 — watchdog — failure_log.txt: [2025-08-20 09:17:15,611] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722519+00:00 — watchdog — failure_log.txt: [2025-08-20 09:22:36,825] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722529+00:00 — watchdog — failure_log.txt: [2025-08-20 09:27:49,806] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722540+00:00 — watchdog — failure_log.txt: [2025-08-20 09:33:11,449] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722552+00:00 — watchdog — failure_log.txt: [2025-08-20 09:38:35,465] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722569+00:00 — watchdog — failure_log.txt: [2025-08-20 09:43:56,565] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722579+00:00 — watchdog — failure_log.txt: [2025-08-20 09:49:20,309] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722589+00:00 — watchdog — failure_log.txt: [2025-08-20 09:54:41,737] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722600+00:00 — watchdog — failure_log.txt: [2025-08-20 09:59:53,744] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722610+00:00 — watchdog — failure_log.txt: [2025-08-20 10:05:14,414] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722620+00:00 — watchdog — failure_log.txt: [2025-08-20 10:10:25,648] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722631+00:00 — watchdog — failure_log.txt: [2025-08-20 10:15:49,837] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722641+00:00 — watchdog — failure_log.txt: [2025-08-20 10:21:12,417] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722651+00:00 — watchdog — failure_log.txt: [2025-08-20 10:26:37,085] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722661+00:00 — watchdog — failure_log.txt: [2025-08-20 10:31:58,472] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722671+00:00 — watchdog — failure_log.txt: [2025-08-20 10:37:22,654] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722681+00:00 — watchdog — failure_log.txt: [2025-08-20 10:42:33,042] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722691+00:00 — watchdog — failure_log.txt: [2025-08-20 10:47:51,268] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722702+00:00 — watchdog — failure_log.txt: [2025-08-20 10:52:58,894] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722714+00:00 — watchdog — failure_log.txt: [2025-08-20 10:58:15,725] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722726+00:00 — watchdog — failure_log.txt: [2025-08-20 11:03:31,353] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722737+00:00 — watchdog — failure_log.txt: [2025-08-20 11:08:44,478] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722748+00:00 — watchdog — failure_log.txt: [2025-08-20 11:13:58,648] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722759+00:00 — watchdog — failure_log.txt: [2025-08-20 11:19:18,333] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722769+00:00 — watchdog — failure_log.txt: [2025-08-20 11:24:32,089] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722779+00:00 — watchdog — failure_log.txt: [2025-08-20 11:29:44,664] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722791+00:00 — watchdog — failure_log.txt: [2025-08-20 11:35:10,113] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722802+00:00 — watchdog — failure_log.txt: [2025-08-20 11:40:29,015] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722812+00:00 — watchdog — failure_log.txt: [2025-08-20 11:45:48,657] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722823+00:00 — watchdog — failure_log.txt: [2025-08-20 11:51:03,246] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722834+00:00 — watchdog — failure_log.txt: [2025-08-20 11:56:27,779] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722847+00:00 — watchdog — failure_log.txt: [2025-08-20 12:01:48,169] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722858+00:00 — watchdog — failure_log.txt: [2025-08-20 12:07:13,025] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722869+00:00 — watchdog — failure_log.txt: [2025-08-20 12:12:30,555] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722880+00:00 — watchdog — failure_log.txt: [2025-08-20 12:17:53,232] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722891+00:00 — watchdog — failure_log.txt: [2025-08-20 12:23:17,880] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722901+00:00 — watchdog — failure_log.txt: [2025-08-20 12:28:30,378] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722912+00:00 — watchdog — failure_log.txt: [2025-08-20 12:33:44,398] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722923+00:00 — watchdog — failure_log.txt: [2025-08-20 12:38:58,755] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722933+00:00 — watchdog — failure_log.txt: [2025-08-20 12:44:13,120] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722944+00:00 — watchdog — failure_log.txt: [2025-08-20 12:49:27,484] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722955+00:00 — watchdog — failure_log.txt: [2025-08-20 12:54:44,777] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722965+00:00 — watchdog — failure_log.txt: [2025-08-20 13:00:09,137] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722975+00:00 — watchdog — failure_log.txt: [2025-08-20 13:05:31,807] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722985+00:00 — watchdog — failure_log.txt: [2025-08-20 13:10:48,501] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.722997+00:00 — watchdog — failure_log.txt: [2025-08-20 13:16:07,519] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723008+00:00 — watchdog — failure_log.txt: [2025-08-20 13:21:26,517] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723018+00:00 — watchdog — failure_log.txt: [2025-08-20 13:26:41,062] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723032+00:00 — watchdog — failure_log.txt: [2025-08-20 13:31:59,065] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723043+00:00 — watchdog — failure_log.txt: [2025-08-20 13:37:25,509] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723054+00:00 — watchdog — failure_log.txt: [2025-08-20 13:42:36,974] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723064+00:00 — watchdog — failure_log.txt: [2025-08-20 13:47:51,237] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723074+00:00 — watchdog — failure_log.txt: [2025-08-20 13:53:09,335] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723085+00:00 — watchdog — failure_log.txt: [2025-08-20 13:58:32,846] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723096+00:00 — watchdog — failure_log.txt: [2025-08-20 14:03:49,680] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723107+00:00 — watchdog — failure_log.txt: [2025-08-20 14:09:15,309] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723117+00:00 — watchdog — failure_log.txt: [2025-08-20 14:14:34,967] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723135+00:00 — watchdog — failure_log.txt: [2025-08-20 14:19:48,217] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723147+00:00 — watchdog — failure_log.txt: [2025-08-20 14:25:04,373] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723158+00:00 — watchdog — failure_log.txt: [2025-08-20 14:30:24,759] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723168+00:00 — watchdog — failure_log.txt: [2025-08-20 14:35:45,395] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723178+00:00 — watchdog — failure_log.txt: [2025-08-20 14:41:07,221] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723189+00:00 — watchdog — failure_log.txt: [2025-08-20 14:46:28,728] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723199+00:00 — watchdog — failure_log.txt: [2025-08-20 14:51:48,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723209+00:00 — watchdog — failure_log.txt: [2025-08-20 14:57:14,592] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723220+00:00 — watchdog — failure_log.txt: [2025-08-20 15:02:31,195] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723230+00:00 — watchdog — failure_log.txt: [2025-08-20 15:07:49,146] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723241+00:00 — watchdog — failure_log.txt: [2025-08-20 15:13:20,537] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723252+00:00 — watchdog — failure_log.txt: [2025-08-20 15:18:31,296] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723263+00:00 — watchdog — failure_log.txt: [2025-08-20 15:23:44,649] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723274+00:00 — watchdog — failure_log.txt: [2025-08-20 15:29:10,104] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723284+00:00 — watchdog — failure_log.txt: [2025-08-20 15:34:32,117] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723295+00:00 — watchdog — failure_log.txt: [2025-08-20 15:39:40,358] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723305+00:00 — watchdog — failure_log.txt: [2025-08-20 15:44:49,640] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723317+00:00 — watchdog — failure_log.txt: [2025-08-20 15:50:02,719] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723327+00:00 — watchdog — failure_log.txt: [2025-08-20 15:55:18,411] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723337+00:00 — watchdog — failure_log.txt: [2025-08-20 16:00:39,140] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723347+00:00 — watchdog — failure_log.txt: [2025-08-20 16:06:01,128] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723357+00:00 — watchdog — failure_log.txt: [2025-08-20 16:11:21,992] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723366+00:00 — watchdog — failure_log.txt: [2025-08-20 16:16:44,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723377+00:00 — watchdog — failure_log.txt: [2025-08-20 16:22:04,960] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723387+00:00 — watchdog — failure_log.txt: [2025-08-20 16:27:26,317] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723401+00:00 — watchdog — failure_log.txt: [2025-08-20 16:32:42,403] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723411+00:00 — watchdog — failure_log.txt: [2025-08-20 16:37:51,221] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723438+00:00 — watchdog — failure_log.txt: [2025-08-20 16:43:14,116] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723451+00:00 — watchdog — failure_log.txt: [2025-08-20 16:48:30,535] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723461+00:00 — watchdog — failure_log.txt: [2025-08-20 16:54:31,874] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723471+00:00 — watchdog — failure_log.txt: [2025-08-20 16:54:36,887] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723481+00:00 — watchdog — failure_log.txt: [2025-08-20 16:54:53,783] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723492+00:00 — watchdog — failure_log.txt: [2025-08-20 16:55:27,680] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723506+00:00 — watchdog — failure_log.txt: [2025-08-20 16:56:15,267] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723517+00:00 — watchdog — failure_log.txt: [2025-08-20 16:57:53,322] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723528+00:00 — watchdog — failure_log.txt: [2025-08-20 17:00:41,703] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723538+00:00 — watchdog — failure_log.txt: [2025-08-20 17:05:54,673] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723548+00:00 — watchdog — failure_log.txt: [2025-08-20 17:11:09,192] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723559+00:00 — watchdog — failure_log.txt: [2025-08-20 17:16:17,735] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723570+00:00 — watchdog — failure_log.txt: [2025-08-20 17:21:34,765] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723581+00:00 — watchdog — failure_log.txt: [2025-08-20 17:26:43,463] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723592+00:00 — watchdog — failure_log.txt: [2025-08-20 17:32:01,797] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723604+00:00 — watchdog — failure_log.txt: [2025-08-20 17:37:09,889] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723615+00:00 — watchdog — failure_log.txt: [2025-08-20 17:42:26,191] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723627+00:00 — watchdog — failure_log.txt: [2025-08-20 17:47:39,665] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723639+00:00 — watchdog — failure_log.txt: [2025-08-20 17:52:46,483] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723651+00:00 — watchdog — failure_log.txt: [2025-08-20 17:57:55,011] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723662+00:00 — watchdog — failure_log.txt: [2025-08-20 18:03:05,461] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723673+00:00 — watchdog — failure_log.txt: [2025-08-20 18:08:17,499] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723684+00:00 — watchdog — failure_log.txt: [2025-08-20 18:13:29,612] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723698+00:00 — watchdog — failure_log.txt: [2025-08-20 18:18:42,578] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723711+00:00 — watchdog — failure_log.txt: [2025-08-20 18:23:52,491] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723723+00:00 — watchdog — failure_log.txt: [2025-08-20 18:28:58,924] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723734+00:00 — watchdog — failure_log.txt: [2025-08-20 18:34:14,736] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723747+00:00 — watchdog — failure_log.txt: [2025-08-20 18:39:25,137] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723758+00:00 — watchdog — failure_log.txt: [2025-08-20 18:44:35,620] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723769+00:00 — watchdog — failure_log.txt: [2025-08-20 18:49:44,630] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723781+00:00 — watchdog — failure_log.txt: [2025-08-20 18:54:58,579] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723794+00:00 — watchdog — failure_log.txt: [2025-08-20 19:00:05,778] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723805+00:00 — watchdog — failure_log.txt: [2025-08-20 19:05:14,882] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723817+00:00 — watchdog — failure_log.txt: [2025-08-20 19:10:28,343] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723827+00:00 — watchdog — failure_log.txt: [2025-08-20 19:15:38,787] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723838+00:00 — watchdog — failure_log.txt: [2025-08-20 19:20:52,786] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723849+00:00 — watchdog — failure_log.txt: [2025-08-20 19:26:07,594] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723860+00:00 — watchdog — failure_log.txt: [2025-08-20 19:31:26,911] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723871+00:00 — watchdog — failure_log.txt: [2025-08-20 19:36:32,499] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723882+00:00 — watchdog — failure_log.txt: [2025-08-20 19:41:38,095] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723893+00:00 — watchdog — failure_log.txt: [2025-08-20 19:46:45,134] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723903+00:00 — watchdog — failure_log.txt: [2025-08-20 19:51:54,359] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723914+00:00 — watchdog — failure_log.txt: [2025-08-20 19:57:02,709] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723924+00:00 — watchdog — failure_log.txt: [2025-08-20 20:02:14,653] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723935+00:00 — watchdog — failure_log.txt: [2025-08-20 20:07:20,916] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723946+00:00 — watchdog — failure_log.txt: [2025-08-20 20:12:28,406] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723956+00:00 — watchdog — failure_log.txt: [2025-08-20 20:17:40,467] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723966+00:00 — watchdog — failure_log.txt: [2025-08-20 20:22:47,609] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723980+00:00 — watchdog — failure_log.txt: [2025-08-20 20:28:04,625] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.723994+00:00 — watchdog — failure_log.txt: [2025-08-20 20:33:17,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724004+00:00 — watchdog — failure_log.txt: [2025-08-20 20:38:35,614] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724015+00:00 — watchdog — failure_log.txt: [2025-08-20 20:43:43,864] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724025+00:00 — watchdog — failure_log.txt: [2025-08-20 20:48:55,507] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724036+00:00 — watchdog — failure_log.txt: [2025-08-20 20:54:11,525] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724047+00:00 — watchdog — failure_log.txt: [2025-08-20 20:59:27,527] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724059+00:00 — watchdog — failure_log.txt: [2025-08-20 21:04:31,530] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724072+00:00 — watchdog — failure_log.txt: [2025-08-20 21:09:44,532] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724084+00:00 — watchdog — failure_log.txt: [2025-08-20 21:14:49,543] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724097+00:00 — watchdog — failure_log.txt: [2025-08-20 21:19:55,508] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724109+00:00 — watchdog — failure_log.txt: [2025-08-20 21:27:44,472] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724122+00:00 — watchdog — failure_log.txt: [2025-08-20 21:27:51,715] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724134+00:00 — watchdog — failure_log.txt: [2025-08-20 21:28:12,739] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724145+00:00 — watchdog — failure_log.txt: [2025-08-20 21:28:44,495] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724156+00:00 — watchdog — failure_log.txt: [2025-08-20 21:29:29,605] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724167+00:00 — watchdog — failure_log.txt: [2025-08-20 21:31:10,253] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724178+00:00 — watchdog — failure_log.txt: [2025-08-20 21:34:04,954] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724188+00:00 — watchdog — failure_log.txt: [2025-08-20 21:39:20,791] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724199+00:00 — watchdog — failure_log.txt: [2025-08-20 21:44:31,483] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724209+00:00 — watchdog — failure_log.txt: [2025-08-20 21:49:40,558] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724220+00:00 — watchdog — failure_log.txt: [2025-08-20 21:54:53,160] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724231+00:00 — watchdog — failure_log.txt: [2025-08-20 21:54:58,428] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724241+00:00 — watchdog — failure_log.txt: [2025-08-20 21:55:17,961] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724252+00:00 — watchdog — failure_log.txt: [2025-08-20 21:55:43,471] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724263+00:00 — watchdog — failure_log.txt: [2025-08-20 21:56:39,672] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724274+00:00 — watchdog — failure_log.txt: [2025-08-20 21:58:16,474] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724288+00:00 — watchdog — failure_log.txt: [2025-08-20 22:01:07,372] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724299+00:00 — watchdog — failure_log.txt: [2025-08-20 22:06:19,890] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724309+00:00 — watchdog — failure_log.txt: [2025-08-20 22:11:33,553] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724320+00:00 — watchdog — failure_log.txt: [2025-08-20 22:16:44,710] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724330+00:00 — watchdog — failure_log.txt: [2025-08-20 22:21:48,557] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724341+00:00 — watchdog — failure_log.txt: [2025-08-20 22:27:03,969] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724351+00:00 — watchdog — failure_log.txt: [2025-08-20 22:32:11,668] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724362+00:00 — watchdog — failure_log.txt: [2025-08-20 22:37:19,165] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724372+00:00 — watchdog — failure_log.txt: [2025-08-20 22:42:26,594] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724383+00:00 — watchdog — failure_log.txt: [2025-08-20 22:47:32,643] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724393+00:00 — watchdog — failure_log.txt: [2025-08-20 22:52:38,697] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724403+00:00 — watchdog — failure_log.txt: [2025-08-20 22:57:48,651] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724414+00:00 — watchdog — failure_log.txt: [2025-08-20 23:02:55,593] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724440+00:00 — watchdog — failure_log.txt: [2025-08-20 23:08:10,733] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724452+00:00 — watchdog — failure_log.txt: [2025-08-20 23:13:15,925] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724463+00:00 — watchdog — failure_log.txt: [2025-08-20 23:18:26,648] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724477+00:00 — watchdog — failure_log.txt: [2025-08-20 23:23:42,632] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724487+00:00 — watchdog — failure_log.txt: [2025-08-20 23:28:46,675] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724497+00:00 — watchdog — failure_log.txt: [2025-08-20 23:34:03,632] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724514+00:00 — watchdog — failure_log.txt: [2025-08-20 23:39:16,468] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724525+00:00 — watchdog — failure_log.txt: [2025-08-20 23:44:27,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724535+00:00 — watchdog — failure_log.txt: [2025-08-20 23:49:32,576] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724545+00:00 — watchdog — failure_log.txt: [2025-08-20 23:54:47,683] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724557+00:00 — watchdog — failure_log.txt: [2025-08-20 23:59:54,307] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724570+00:00 — watchdog — failure_log.txt: [2025-08-21 00:05:15,240] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.724586+00:00 — watchdog — failure_log.txt: [2025-08-21 00:10:23,611] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724597+00:00 — watchdog — failure_log.txt: [2025-08-21 00:15:33,722] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724608+00:00 — watchdog — failure_log.txt: [2025-08-21 00:20:49,701] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724619+00:00 — watchdog — failure_log.txt: [2025-08-21 00:26:00,630] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724631+00:00 — watchdog — failure_log.txt: [2025-08-21 00:31:08,402] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724642+00:00 — watchdog — failure_log.txt: [2025-08-21 00:36:19,635] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724653+00:00 — watchdog — failure_log.txt: [2025-08-21 00:41:30,605] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724665+00:00 — watchdog — failure_log.txt: [2025-08-21 00:46:43,702] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724676+00:00 — watchdog — failure_log.txt: [2025-08-21 00:51:47,648] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724687+00:00 — watchdog — failure_log.txt: [2025-08-21 00:56:51,656] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724699+00:00 — watchdog — failure_log.txt: [2025-08-21 01:01:57,587] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724710+00:00 — watchdog — failure_log.txt: [2025-08-21 01:07:03,536] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724721+00:00 — watchdog — failure_log.txt: [2025-08-21 01:12:16,147] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724732+00:00 — watchdog — failure_log.txt: [2025-08-21 01:17:29,782] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724744+00:00 — watchdog — failure_log.txt: [2025-08-21 01:22:39,651] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724756+00:00 — watchdog — failure_log.txt: [2025-08-21 01:27:54,424] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724767+00:00 — watchdog — failure_log.txt: [2025-08-21 01:33:11,976] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724779+00:00 — watchdog — failure_log.txt: [2025-08-21 01:38:27,768] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724791+00:00 — watchdog — failure_log.txt: [2025-08-21 01:43:37,503] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724803+00:00 — watchdog — failure_log.txt: [2025-08-21 01:48:42,400] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724816+00:00 — watchdog — failure_log.txt: [2025-08-21 01:53:56,232] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724827+00:00 — watchdog — failure_log.txt: [2025-08-21 01:59:15,707] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724839+00:00 — watchdog — failure_log.txt: [2025-08-21 02:04:28,480] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724850+00:00 — watchdog — failure_log.txt: [2025-08-21 02:09:33,481] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724861+00:00 — watchdog — failure_log.txt: [2025-08-21 02:14:47,749] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724877+00:00 — watchdog — failure_log.txt: [2025-08-21 02:19:58,595] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724889+00:00 — watchdog — failure_log.txt: [2025-08-21 02:25:11,320] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724901+00:00 — watchdog — failure_log.txt: [2025-08-21 02:30:28,536] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724913+00:00 — watchdog — failure_log.txt: [2025-08-21 02:35:45,665] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724925+00:00 — watchdog — failure_log.txt: [2025-08-21 02:40:53,932] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724937+00:00 — watchdog — failure_log.txt: [2025-08-21 02:46:00,043] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724949+00:00 — watchdog — failure_log.txt: [2025-08-21 02:51:16,434] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724962+00:00 — watchdog — failure_log.txt: [2025-08-21 02:56:32,518] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724974+00:00 — watchdog — failure_log.txt: [2025-08-21 03:01:48,483] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.724991+00:00 — watchdog — failure_log.txt: [2025-08-21 03:07:01,263] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725003+00:00 — watchdog — failure_log.txt: [2025-08-21 03:12:17,856] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725015+00:00 — watchdog — failure_log.txt: [2025-08-21 03:17:24,747] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725026+00:00 — watchdog — failure_log.txt: [2025-08-21 03:22:38,725] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725037+00:00 — watchdog — failure_log.txt: [2025-08-21 03:27:44,064] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725049+00:00 — watchdog — failure_log.txt: [2025-08-21 03:32:54,224] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725060+00:00 — watchdog — failure_log.txt: [2025-08-21 03:38:00,284] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725072+00:00 — watchdog — failure_log.txt: [2025-08-21 03:43:16,155] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725084+00:00 — watchdog — failure_log.txt: [2025-08-21 03:48:31,651] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725096+00:00 — watchdog — failure_log.txt: [2025-08-21 03:53:42,748] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725108+00:00 — watchdog — failure_log.txt: [2025-08-21 03:58:48,510] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725121+00:00 — watchdog — failure_log.txt: [2025-08-21 04:04:02,901] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725133+00:00 — watchdog — failure_log.txt: [2025-08-21 04:09:16,228] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725144+00:00 — watchdog — failure_log.txt: [2025-08-21 04:14:21,667] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725155+00:00 — watchdog — failure_log.txt: [2025-08-21 04:19:28,744] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725165+00:00 — watchdog — failure_log.txt: [2025-08-21 04:24:35,541] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725176+00:00 — watchdog — failure_log.txt: [2025-08-21 04:29:40,084] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725191+00:00 — watchdog — failure_log.txt: [2025-08-21 04:34:48,444] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725202+00:00 — watchdog — failure_log.txt: [2025-08-21 04:40:09,428] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725212+00:00 — watchdog — failure_log.txt: [2025-08-21 04:45:22,627] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725223+00:00 — watchdog — failure_log.txt: [2025-08-21 04:50:32,042] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725233+00:00 — watchdog — failure_log.txt: [2025-08-21 04:55:51,294] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725244+00:00 — watchdog — failure_log.txt: [2025-08-21 05:01:10,227] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725255+00:00 — watchdog — failure_log.txt: [2025-08-21 05:06:20,552] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725266+00:00 — watchdog — failure_log.txt: [2025-08-21 05:11:34,619] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725276+00:00 — watchdog — failure_log.txt: [2025-08-21 05:16:38,845] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725286+00:00 — watchdog — failure_log.txt: [2025-08-21 05:21:43,709] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725297+00:00 — watchdog — failure_log.txt: [2025-08-21 05:26:50,629] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725307+00:00 — watchdog — failure_log.txt: [2025-08-21 05:31:59,738] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725318+00:00 — watchdog — failure_log.txt: [2025-08-21 05:37:16,542] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725329+00:00 — watchdog — failure_log.txt: [2025-08-21 05:42:25,755] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725339+00:00 — watchdog — failure_log.txt: [2025-08-21 05:47:34,711] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725350+00:00 — watchdog — failure_log.txt: [2025-08-21 05:52:44,562] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725360+00:00 — watchdog — failure_log.txt: [2025-08-21 05:57:57,666] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725371+00:00 — watchdog — failure_log.txt: [2025-08-21 06:03:09,595] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725381+00:00 — watchdog — failure_log.txt: [2025-08-21 06:08:26,760] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725391+00:00 — watchdog — failure_log.txt: [2025-08-21 06:13:41,573] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725402+00:00 — watchdog — failure_log.txt: [2025-08-21 06:18:56,281] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725412+00:00 — watchdog — failure_log.txt: [2025-08-21 06:24:13,977] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725447+00:00 — watchdog — failure_log.txt: [2025-08-21 06:29:27,850] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725461+00:00 — watchdog — failure_log.txt: [2025-08-21 06:34:43,138] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725473+00:00 — watchdog — failure_log.txt: [2025-08-21 06:39:57,839] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725490+00:00 — watchdog — failure_log.txt: [2025-08-21 06:45:16,763] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725505+00:00 — watchdog — failure_log.txt: [2025-08-21 06:50:34,427] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725517+00:00 — watchdog — failure_log.txt: [2025-08-21 06:55:46,011] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725529+00:00 — watchdog — failure_log.txt: [2025-08-21 07:00:56,118] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725541+00:00 — watchdog — failure_log.txt: [2025-08-21 07:06:00,660] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725552+00:00 — watchdog — failure_log.txt: [2025-08-21 07:11:08,167] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725564+00:00 — watchdog — failure_log.txt: [2025-08-21 07:16:27,584] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725575+00:00 — watchdog — failure_log.txt: [2025-08-21 07:21:46,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725587+00:00 — watchdog — failure_log.txt: [2025-08-21 07:26:57,721] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725600+00:00 — watchdog — failure_log.txt: [2025-08-21 07:32:12,119] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725611+00:00 — watchdog — failure_log.txt: [2025-08-21 07:37:19,777] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725624+00:00 — watchdog — failure_log.txt: [2025-08-21 07:42:28,657] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725635+00:00 — watchdog — failure_log.txt: [2025-08-21 07:47:35,533] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725646+00:00 — watchdog — failure_log.txt: [2025-08-21 07:52:45,921] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725658+00:00 — watchdog — failure_log.txt: [2025-08-21 07:57:54,539] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725669+00:00 — watchdog — failure_log.txt: [2025-08-21 08:03:09,140] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725679+00:00 — watchdog — failure_log.txt: [2025-08-21 08:08:20,813] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725691+00:00 — watchdog — failure_log.txt: [2025-08-21 08:13:25,676] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725703+00:00 — watchdog — failure_log.txt: [2025-08-21 08:18:36,759] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725715+00:00 — watchdog — failure_log.txt: [2025-08-21 08:23:40,778] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725726+00:00 — watchdog — failure_log.txt: [2025-08-21 08:28:51,005] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725739+00:00 — watchdog — failure_log.txt: [2025-08-21 08:33:55,510] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725752+00:00 — watchdog — failure_log.txt: [2025-08-21 08:39:12,133] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725763+00:00 — watchdog — failure_log.txt: [2025-08-21 08:44:25,521] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725776+00:00 — watchdog — failure_log.txt: [2025-08-21 08:49:39,661] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725789+00:00 — watchdog — failure_log.txt: [2025-08-21 08:54:55,698] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725807+00:00 — watchdog — failure_log.txt: [2025-08-21 09:00:00,741] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725819+00:00 — watchdog — failure_log.txt: [2025-08-21 09:05:13,600] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725831+00:00 — watchdog — failure_log.txt: [2025-08-21 09:10:27,784] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725842+00:00 — watchdog — failure_log.txt: [2025-08-21 09:15:36,214] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725854+00:00 — watchdog — failure_log.txt: [2025-08-21 09:20:45,208] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725867+00:00 — watchdog — failure_log.txt: [2025-08-21 09:26:03,127] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725878+00:00 — watchdog — failure_log.txt: [2025-08-21 09:31:14,606] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725891+00:00 — watchdog — failure_log.txt: [2025-08-21 09:36:33,812] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725903+00:00 — watchdog — failure_log.txt: [2025-08-21 09:41:49,670] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725914+00:00 — watchdog — failure_log.txt: [2025-08-21 09:47:09,679] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725927+00:00 — watchdog — failure_log.txt: [2025-08-21 09:52:25,156] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725938+00:00 — watchdog — failure_log.txt: [2025-08-21 09:57:32,611] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725949+00:00 — watchdog — failure_log.txt: [2025-08-21 10:02:44,784] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725960+00:00 — watchdog — failure_log.txt: [2025-08-21 10:07:50,248] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725971+00:00 — watchdog — failure_log.txt: [2025-08-21 10:13:09,365] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.725981+00:00 — watchdog — failure_log.txt: [2025-08-21 10:18:17,645] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726001+00:00 — watchdog — failure_log.txt: [2025-08-21 10:23:29,853] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726014+00:00 — watchdog — failure_log.txt: [2025-08-21 10:28:45,777] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726025+00:00 — watchdog — failure_log.txt: [2025-08-21 10:33:54,674] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726037+00:00 — watchdog — failure_log.txt: [2025-08-21 10:39:14,607] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726049+00:00 — watchdog — failure_log.txt: [2025-08-21 10:44:19,127] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726060+00:00 — watchdog — failure_log.txt: [2025-08-21 10:49:30,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726072+00:00 — watchdog — failure_log.txt: [2025-08-21 10:54:45,650] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726083+00:00 — watchdog — failure_log.txt: [2025-08-21 10:59:49,703] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726096+00:00 — watchdog — failure_log.txt: [2025-08-21 11:04:57,514] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726113+00:00 — watchdog — failure_log.txt: [2025-08-21 11:10:10,233] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726126+00:00 — watchdog — failure_log.txt: [2025-08-21 11:15:18,903] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726137+00:00 — watchdog — failure_log.txt: [2025-08-21 11:20:29,643] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726149+00:00 — watchdog — failure_log.txt: [2025-08-21 11:25:42,597] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726160+00:00 — watchdog — failure_log.txt: [2025-08-21 11:30:49,691] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726171+00:00 — watchdog — failure_log.txt: [2025-08-21 11:36:03,876] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726183+00:00 — watchdog — failure_log.txt: [2025-08-21 11:41:11,692] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726195+00:00 — watchdog — failure_log.txt: [2025-08-21 11:46:19,602] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726207+00:00 — watchdog — failure_log.txt: [2025-08-21 11:51:31,700] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726220+00:00 — watchdog — failure_log.txt: [2025-08-21 11:56:41,668] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726232+00:00 — watchdog — failure_log.txt: [2025-08-21 12:01:46,585] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726244+00:00 — watchdog — failure_log.txt: [2025-08-21 12:06:54,450] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726256+00:00 — watchdog — failure_log.txt: [2025-08-21 12:11:59,726] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726268+00:00 — watchdog — failure_log.txt: [2025-08-21 12:17:12,286] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726281+00:00 — watchdog — failure_log.txt: [2025-08-21 12:22:19,929] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726292+00:00 — watchdog — failure_log.txt: [2025-08-21 12:27:29,131] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726304+00:00 — watchdog — failure_log.txt: [2025-08-21 12:32:40,962] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726315+00:00 — watchdog — failure_log.txt: [2025-08-21 12:37:56,382] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726327+00:00 — watchdog — failure_log.txt: [2025-08-21 12:43:10,933] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726339+00:00 — watchdog — failure_log.txt: [2025-08-21 12:48:21,893] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726350+00:00 — watchdog — failure_log.txt: [2025-08-21 12:53:33,724] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726362+00:00 — watchdog — failure_log.txt: [2025-08-21 12:58:39,982] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726373+00:00 — watchdog — failure_log.txt: [2025-08-21 13:03:45,621] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726386+00:00 — watchdog — failure_log.txt: [2025-08-21 13:08:56,712] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726399+00:00 — watchdog — failure_log.txt: [2025-08-21 13:14:15,975] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726411+00:00 — watchdog — failure_log.txt: [2025-08-21 13:19:23,570] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726447+00:00 — watchdog — failure_log.txt: [2025-08-21 13:24:36,411] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726459+00:00 — watchdog — failure_log.txt: [2025-08-21 13:29:45,608] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726471+00:00 — watchdog — failure_log.txt: [2025-08-21 13:34:55,673] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726483+00:00 — watchdog — failure_log.txt: [2025-08-21 13:40:12,549] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726494+00:00 — watchdog — failure_log.txt: [2025-08-21 13:45:26,554] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726505+00:00 — watchdog — failure_log.txt: [2025-08-21 13:50:41,478] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726515+00:00 — watchdog — failure_log.txt: [2025-08-21 13:55:56,831] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726526+00:00 — watchdog — failure_log.txt: [2025-08-21 14:01:14,879] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726541+00:00 — watchdog — failure_log.txt: [2025-08-21 14:06:30,006] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726552+00:00 — watchdog — failure_log.txt: [2025-08-21 14:11:48,509] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726562+00:00 — watchdog — failure_log.txt: [2025-08-21 14:17:02,885] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726573+00:00 — watchdog — failure_log.txt: [2025-08-21 14:22:15,406] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726584+00:00 — watchdog — failure_log.txt: [2025-08-21 14:27:32,421] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726595+00:00 — watchdog — failure_log.txt: [2025-08-21 14:32:43,639] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726605+00:00 — watchdog — failure_log.txt: [2025-08-21 14:37:49,179] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726616+00:00 — watchdog — failure_log.txt: [2025-08-21 14:42:54,531] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726626+00:00 — watchdog — failure_log.txt: [2025-08-21 14:48:02,694] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726637+00:00 — watchdog — failure_log.txt: [2025-08-21 14:53:17,968] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726647+00:00 — watchdog — failure_log.txt: [2025-08-21 14:58:30,656] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726658+00:00 — watchdog — failure_log.txt: [2025-08-21 15:03:45,571] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726669+00:00 — watchdog — failure_log.txt: [2025-08-21 15:08:52,665] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726679+00:00 — watchdog — failure_log.txt: [2025-08-21 15:13:58,693] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726690+00:00 — watchdog — failure_log.txt: [2025-08-21 15:19:09,959] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726701+00:00 — watchdog — failure_log.txt: [2025-08-21 15:24:19,086] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726711+00:00 — watchdog — failure_log.txt: [2025-08-21 15:29:29,555] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726722+00:00 — watchdog — failure_log.txt: [2025-08-21 15:34:43,627] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726737+00:00 — watchdog — failure_log.txt: [2025-08-21 15:39:49,614] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726748+00:00 — watchdog — failure_log.txt: [2025-08-21 15:44:57,811] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726758+00:00 — watchdog — failure_log.txt: [2025-08-21 15:50:12,489] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726768+00:00 — watchdog — failure_log.txt: [2025-08-21 15:55:22,411] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726779+00:00 — watchdog — failure_log.txt: [2025-08-21 16:00:27,529] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726789+00:00 — watchdog — failure_log.txt: [2025-08-21 16:05:35,591] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726800+00:00 — watchdog — failure_log.txt: [2025-08-21 16:10:40,494] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726810+00:00 — watchdog — failure_log.txt: [2025-08-21 16:15:53,978] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726821+00:00 — watchdog — failure_log.txt: [2025-08-21 16:21:05,281] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726831+00:00 — watchdog — failure_log.txt: [2025-08-21 16:26:17,511] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726842+00:00 — watchdog — failure_log.txt: [2025-08-21 16:31:46,010] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726853+00:00 — watchdog — failure_log.txt: [2025-08-21 16:31:52,825] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726863+00:00 — watchdog — failure_log.txt: [2025-08-21 16:32:14,267] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726873+00:00 — watchdog — failure_log.txt: [2025-08-21 16:32:48,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726884+00:00 — watchdog — failure_log.txt: [2025-08-21 16:33:46,099] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726894+00:00 — watchdog — failure_log.txt: [2025-08-21 16:35:20,300] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726904+00:00 — watchdog — failure_log.txt: [2025-08-21 16:38:12,171] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726915+00:00 — watchdog — failure_log.txt: [2025-08-21 16:43:24,729] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726926+00:00 — watchdog — failure_log.txt: [2025-08-21 16:49:51,214] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726936+00:00 — watchdog — failure_log.txt: [2025-08-21 16:49:57,911] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726947+00:00 — watchdog — failure_log.txt: [2025-08-21 16:50:17,998] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726957+00:00 — watchdog — failure_log.txt: [2025-08-21 16:50:47,230] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726968+00:00 — watchdog — failure_log.txt: [2025-08-21 16:51:45,332] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726979+00:00 — watchdog — failure_log.txt: [2025-08-21 16:53:11,312] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.726989+00:00 — watchdog — failure_log.txt: [2025-08-21 16:56:05,011] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727007+00:00 — watchdog — failure_log.txt: [2025-08-21 17:00:14,649] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727018+00:00 — watchdog — failure_log.txt: [2025-08-21 17:00:21,904] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727028+00:00 — watchdog — failure_log.txt: [2025-08-21 17:00:36,715] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727039+00:00 — watchdog — failure_log.txt: [2025-08-21 17:01:13,983] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727050+00:00 — watchdog — failure_log.txt: [2025-08-21 17:02:18,776] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727060+00:00 — watchdog — failure_log.txt: [2025-08-21 17:03:56,338] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727070+00:00 — watchdog — failure_log.txt: [2025-08-21 17:07:48,700] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727080+00:00 — watchdog — failure_log.txt: [2025-08-21 17:07:54,412] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727091+00:00 — watchdog — failure_log.txt: [2025-08-21 17:08:15,186] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727102+00:00 — watchdog — failure_log.txt: [2025-08-21 17:08:46,977] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727112+00:00 — watchdog — failure_log.txt: [2025-08-21 17:09:41,285] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727122+00:00 — watchdog — failure_log.txt: [2025-08-21 17:11:11,997] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727133+00:00 — watchdog — failure_log.txt: [2025-08-21 17:13:58,013] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727144+00:00 — watchdog — failure_log.txt: [2025-08-21 17:20:38,233] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727155+00:00 — watchdog — failure_log.txt: [2025-08-21 17:20:42,577] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727165+00:00 — watchdog — failure_log.txt: [2025-08-21 17:21:01,311] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727175+00:00 — watchdog — failure_log.txt: [2025-08-21 17:21:34,501] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727186+00:00 — watchdog — failure_log.txt: [2025-08-21 17:22:18,497] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727196+00:00 — watchdog — failure_log.txt: [2025-08-21 17:23:55,532] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727207+00:00 — watchdog — failure_log.txt: [2025-08-21 17:28:45,257] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727217+00:00 — watchdog — failure_log.txt: [2025-08-21 17:32:13,367] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727228+00:00 — watchdog — failure_log.txt: [2025-08-21 17:32:26,929] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727238+00:00 — watchdog — failure_log.txt: [2025-08-21 17:32:46,163] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727249+00:00 — watchdog — failure_log.txt: [2025-08-21 17:33:19,516] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727260+00:00 — watchdog — failure_log.txt: [2025-08-21 17:34:08,041] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727273+00:00 — watchdog — failure_log.txt: [2025-08-21 17:35:45,260] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727284+00:00 — watchdog — failure_log.txt: [2025-08-21 17:38:38,886] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727294+00:00 — watchdog — failure_log.txt: [2025-08-21 17:42:45,693] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727304+00:00 — watchdog — failure_log.txt: [2025-08-21 17:42:49,426] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727315+00:00 — watchdog — failure_log.txt: [2025-08-21 17:43:08,001] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727325+00:00 — watchdog — failure_log.txt: [2025-08-21 17:43:37,162] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727336+00:00 — watchdog — failure_log.txt: [2025-08-21 17:44:31,263] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727347+00:00 — watchdog — failure_log.txt: [2025-08-21 17:46:03,403] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727357+00:00 — watchdog — failure_log.txt: [2025-08-21 17:48:50,122] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727368+00:00 — watchdog — failure_log.txt: [2025-08-21 17:54:04,686] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727378+00:00 — watchdog — failure_log.txt: [2025-08-21 17:59:15,408] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727389+00:00 — watchdog — failure_log.txt: [2025-08-21 18:04:24,526] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727400+00:00 — watchdog — failure_log.txt: [2025-08-21 18:09:28,189] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727410+00:00 — watchdog — failure_log.txt: [2025-08-21 18:14:39,160] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727437+00:00 — watchdog — failure_log.txt: [2025-08-21 18:19:47,251] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727450+00:00 — watchdog — failure_log.txt: [2025-08-21 18:25:00,134] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727461+00:00 — watchdog — failure_log.txt: [2025-08-21 18:30:09,286] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727475+00:00 — watchdog — failure_log.txt: [2025-08-21 18:35:18,385] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727486+00:00 — watchdog — failure_log.txt: [2025-08-21 18:40:22,709] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727496+00:00 — watchdog — failure_log.txt: [2025-08-21 18:45:27,640] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727507+00:00 — watchdog — failure_log.txt: [2025-08-21 18:50:39,570] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727518+00:00 — watchdog — failure_log.txt: [2025-08-21 18:55:49,231] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727528+00:00 — watchdog — failure_log.txt: [2025-08-21 19:01:08,538] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727538+00:00 — watchdog — failure_log.txt: [2025-08-21 19:06:14,371] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727549+00:00 — watchdog — failure_log.txt: [2025-08-21 19:11:23,093] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727559+00:00 — watchdog — failure_log.txt: [2025-08-21 19:16:36,281] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727574+00:00 — watchdog — failure_log.txt: [2025-08-21 19:21:42,162] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727585+00:00 — watchdog — failure_log.txt: [2025-08-21 19:26:55,256] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727595+00:00 — watchdog — failure_log.txt: [2025-08-21 19:32:09,271] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727606+00:00 — watchdog — failure_log.txt: [2025-08-21 19:37:16,544] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727616+00:00 — watchdog — failure_log.txt: [2025-08-21 19:42:28,044] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727627+00:00 — watchdog — failure_log.txt: [2025-08-21 19:47:42,343] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727638+00:00 — watchdog — failure_log.txt: [2025-08-21 19:52:53,151] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727651+00:00 — watchdog — failure_log.txt: [2025-08-21 19:58:09,231] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727662+00:00 — watchdog — failure_log.txt: [2025-08-21 20:03:22,140] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727673+00:00 — watchdog — failure_log.txt: [2025-08-21 20:08:31,212] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727685+00:00 — watchdog — failure_log.txt: [2025-08-21 20:13:35,844] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727697+00:00 — watchdog — failure_log.txt: [2025-08-21 20:18:46,168] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727708+00:00 — watchdog — failure_log.txt: [2025-08-21 20:22:22,427] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727720+00:00 — watchdog — failure_log.txt: [2025-08-21 20:22:26,994] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727732+00:00 — watchdog — failure_log.txt: [2025-08-21 20:22:43,114] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727743+00:00 — watchdog — failure_log.txt: [2025-08-21 20:23:12,334] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727755+00:00 — watchdog — failure_log.txt: [2025-08-21 20:23:57,183] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727767+00:00 — watchdog — failure_log.txt: [2025-08-21 20:25:28,180] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727779+00:00 — watchdog — failure_log.txt: [2025-08-21 20:28:22,237] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727791+00:00 — watchdog — failure_log.txt: [2025-08-21 20:33:35,134] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727801+00:00 — watchdog — failure_log.txt: [2025-08-21 20:40:42,687] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727811+00:00 — watchdog — failure_log.txt: [2025-08-21 20:44:17,753] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727821+00:00 — watchdog — failure_log.txt: [2025-08-21 20:44:21,601] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727831+00:00 — watchdog — failure_log.txt: [2025-08-21 20:44:42,491] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727842+00:00 — watchdog — failure_log.txt: [2025-08-21 20:45:25,836] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727853+00:00 — watchdog — failure_log.txt: [2025-08-21 20:46:33,312] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727870+00:00 — watchdog — failure_log.txt: [2025-08-21 20:48:12,326] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727882+00:00 — watchdog — failure_log.txt: [2025-08-21 20:51:16,168] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727893+00:00 — watchdog — failure_log.txt: [2025-08-21 20:56:41,107] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727904+00:00 — watchdog — failure_log.txt: [2025-08-21 21:01:51,109] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727915+00:00 — watchdog — failure_log.txt: [2025-08-21 21:07:16,606] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727927+00:00 — watchdog — failure_log.txt: [2025-08-21 21:12:32,513] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727939+00:00 — watchdog — failure_log.txt: [2025-08-21 21:17:37,528] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727954+00:00 — watchdog — failure_log.txt: [2025-08-21 21:22:44,216] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727965+00:00 — watchdog — failure_log.txt: [2025-08-21 21:27:48,598] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727977+00:00 — watchdog — failure_log.txt: [2025-08-21 21:32:56,720] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.727989+00:00 — watchdog — failure_log.txt: [2025-08-21 21:36:23,094] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728001+00:00 — watchdog — failure_log.txt: [2025-08-21 21:36:30,093] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728012+00:00 — watchdog — failure_log.txt: [2025-08-21 21:36:49,143] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728024+00:00 — watchdog — failure_log.txt: [2025-08-21 21:37:21,016] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728036+00:00 — watchdog — failure_log.txt: [2025-08-21 21:38:19,829] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728048+00:00 — watchdog — failure_log.txt: [2025-08-21 21:40:20,998] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728059+00:00 — watchdog — failure_log.txt: [2025-08-21 21:43:18,492] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728071+00:00 — watchdog — failure_log.txt: [2025-08-21 21:43:24,245] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728083+00:00 — watchdog — failure_log.txt: [2025-08-21 21:43:39,511] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728095+00:00 — watchdog — failure_log.txt: [2025-08-21 21:44:14,339] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728106+00:00 — watchdog — failure_log.txt: [2025-08-21 21:45:17,432] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728118+00:00 — watchdog — failure_log.txt: [2025-08-21 21:46:49,552] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728129+00:00 — watchdog — failure_log.txt: [2025-08-21 21:49:38,769] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728141+00:00 — watchdog — failure_log.txt: [2025-08-21 21:51:55,916] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728153+00:00 — watchdog — failure_log.txt: [2025-08-21 21:52:00,112] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728168+00:00 — watchdog — failure_log.txt: [2025-08-21 21:52:18,017] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728180+00:00 — watchdog — failure_log.txt: [2025-08-21 21:52:48,543] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728191+00:00 — watchdog — failure_log.txt: [2025-08-21 21:53:37,016] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728203+00:00 — watchdog — failure_log.txt: [2025-08-21 21:55:08,998] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728214+00:00 — watchdog — failure_log.txt: [2025-08-21 21:57:55,907] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728225+00:00 — watchdog — failure_log.txt: [2025-08-21 22:02:33,535] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728237+00:00 — watchdog — failure_log.txt: [2025-08-21 22:21:11,148] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728249+00:00 — watchdog — failure_log.txt: [2025-08-21 22:25:42,078] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728260+00:00 — watchdog — failure_log.txt: [2025-08-21 22:29:49,021] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728274+00:00 — watchdog — failure_log.txt: [2025-08-22 23:12:39,314] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.728288+00:00 — watchdog — failure_log.txt: [2025-08-26 18:46:38,751] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.728301+00:00 — watchdog — failure_log.txt: [2025-08-27 17:57:49.772334] Task succeeded: Watchdog Log Checker
+- [alert] 2025-12-03T07:04:57.728312+00:00 — watchdog — failure_log.txt: [2025-08-28 17:29:26.779561] Task succeeded: Watchdog Log Checker
+- [alert] 2025-12-03T07:04:57.728326+00:00 — watchdog — failure_log.txt: [2025-08-28 20:44:54,681] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.728338+00:00 — watchdog — failure_log.txt: [2025-08-28 20:44:54.786506] Task succeeded: Watchdog Log Checker
+- [alert] 2025-12-03T07:04:57.728350+00:00 — watchdog — failure_log.txt: [2025-08-28 21:02:38,592] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728362+00:00 — watchdog — failure_log.txt: [2025-08-28 21:02:40.074957] Task succeeded: Watchdog Log Checker
+- [alert] 2025-12-03T07:04:57.728375+00:00 — watchdog — failure_log.txt: [2025-08-29 16:23:19,111] [SMS FAILED] send_sms() missing 1 required positional argument: 'client'
+- [alert] 2025-12-03T07:04:57.728386+00:00 — watchdog — failure_log.txt: [2025-08-29 16:23:19.158331] Task succeeded: Watchdog Log Checker
+- [alert] 2025-12-03T07:04:57.728399+00:00 — watchdog — failure_log.txt: [2025-08-29 16:24:32,472] Alert already sent today. Skipping SMS.
+- [alert] 2025-12-03T07:04:57.728412+00:00 — watchdog — failure_log.txt: [2025-08-29 16:24:34.204914] Task succeeded: Watchdog Log Checker
+- [alert] 2025-08-12T17:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T17:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-12T18:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T18:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-12T19:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T19:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-12T19:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T19:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-12T20:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T20:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-12T20:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T20:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-12T21:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T21:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-12T21:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T21:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-12T22:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T22:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-12T22:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T22:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-12T23:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T23:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-12T23:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-12T23:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T00:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T00:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T00:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T00:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-13T01:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T01:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T01:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T01:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T02:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T02:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T02:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T02:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-13T03:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T03:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T03:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T03:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T04:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T04:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T04:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T04:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-13T05:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T05:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T05:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T05:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T06:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T06:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T06:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T06:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-13T07:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T07:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T07:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T07:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T08:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T08:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T08:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T08:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-13T09:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T09:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T09:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T09:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-13T10:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T10:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T10:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T10:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-13T11:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T11:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T11:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T11:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-13T12:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T12:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T12:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T12:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T13:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T13:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T13:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T13:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-13T14:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T14:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T14:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T14:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-13T15:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T15:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T15:50:23+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T15:50:23Z] [WARN] absorption log missing
+- [alert] 2025-08-13T16:49:09+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T16:49:09Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T16:50:24+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T16:50:24Z] [WARN] absorption log missing
+- [alert] 2025-08-13T17:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T17:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T17:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T17:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-13T18:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T18:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T18:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T18:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-13T19:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T19:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T19:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T19:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-13T20:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T20:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T20:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T20:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-13T21:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T21:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T21:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T21:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-13T22:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T22:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T22:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T22:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-13T23:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T23:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-13T23:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-13T23:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-14T00:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T00:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T00:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T00:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-14T01:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T01:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T01:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T01:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-14T02:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T02:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T02:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T02:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-14T03:24:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T03:24:15Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-14T03:24:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T03:24:15Z] [WARN] index missing
+- [alert] 2025-08-14T03:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T03:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T03:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T03:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-14T04:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T04:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T04:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T04:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-14T05:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T05:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T05:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T05:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-14T06:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T06:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T06:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T06:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-14T07:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T07:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T07:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T07:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-14T08:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T08:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T08:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T08:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-14T09:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T09:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T09:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T09:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-14T10:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T10:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T10:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T10:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-14T11:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T11:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T11:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T11:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-14T12:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T12:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T12:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T12:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-14T13:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T13:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T13:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T13:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-14T14:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T14:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T14:50:22+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T14:50:22Z] [WARN] absorption log missing
+- [alert] 2025-08-14T15:49:09+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T15:49:09Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T15:50:23+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T15:50:23Z] [WARN] absorption log missing
+- [alert] 2025-08-14T16:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T16:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T16:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T16:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-14T17:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T17:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T17:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T17:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-14T18:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T18:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T18:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T18:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-14T19:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T19:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T19:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T19:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-14T20:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T20:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T20:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T20:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-14T21:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T21:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T21:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T21:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-14T22:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T22:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T22:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T22:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-14T23:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T23:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-14T23:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-14T23:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-15T00:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T00:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T00:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T00:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-15T01:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T01:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T01:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T01:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-15T02:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T02:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T02:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T02:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-15T03:24:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T03:24:16Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-15T03:24:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T03:24:16Z] [WARN] index missing
+- [alert] 2025-08-15T03:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T03:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T03:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T03:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-15T04:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T04:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T04:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T04:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-15T05:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T05:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T05:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T05:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-15T06:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T06:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T06:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T06:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-15T07:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T07:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T07:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T07:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-15T08:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T08:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T08:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T08:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-15T09:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T09:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T09:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T09:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-15T10:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T10:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T10:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T10:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-15T11:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T11:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T11:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T11:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-15T12:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T12:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T12:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T12:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-15T13:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T13:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T13:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T13:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-15T14:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T14:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T14:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T14:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-15T15:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T15:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T15:50:24+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T15:50:24Z] [WARN] absorption log missing
+- [alert] 2025-08-15T16:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T16:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T16:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T16:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-15T17:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T17:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T17:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T17:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-15T18:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T18:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T18:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T18:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-15T19:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T19:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T19:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T19:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-15T20:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T20:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T20:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T20:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-15T21:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T21:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T21:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T21:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-15T22:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T22:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T22:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T22:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-15T23:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T23:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-15T23:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-15T23:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-16T00:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T00:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T00:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T00:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-16T01:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T01:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T01:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T01:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-16T02:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T02:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T02:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T02:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-16T03:24:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T03:24:13Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-16T03:24:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T03:24:13Z] [WARN] index missing
+- [alert] 2025-08-16T03:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T03:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T03:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T03:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-16T04:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T04:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T04:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T04:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-16T05:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T05:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T05:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T05:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-16T06:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T06:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T06:50:38+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T06:50:38Z] [WARN] absorption log missing
+- [alert] 2025-08-16T07:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T07:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T07:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T07:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-16T08:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T08:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T08:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T08:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-16T09:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T09:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T09:50:40+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T09:50:40Z] [WARN] absorption log missing
+- [alert] 2025-08-16T10:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T10:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T10:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T10:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-16T11:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T11:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T11:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T11:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-16T12:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T12:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T12:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T12:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-16T13:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T13:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T13:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T13:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-16T14:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T14:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T14:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T14:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-16T15:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T15:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T15:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T15:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-16T16:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T16:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T16:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T16:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-16T17:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T17:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T17:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T17:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-16T18:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T18:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T18:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T18:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-16T19:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T19:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T19:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T19:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-16T20:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T20:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T20:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T20:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-16T21:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T21:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T21:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T21:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-16T22:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T22:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T22:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T22:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-16T23:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T23:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-16T23:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-16T23:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-17T00:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T00:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T00:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T00:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-17T01:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T01:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T01:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T01:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-17T02:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T02:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T02:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T02:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-17T03:24:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T03:24:13Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-17T03:24:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T03:24:13Z] [WARN] index missing
+- [alert] 2025-08-17T03:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T03:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T03:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T03:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-17T04:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T04:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T04:50:37+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T04:50:37Z] [WARN] absorption log missing
+- [alert] 2025-08-17T05:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T05:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T05:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T05:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-17T06:49:17+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T06:49:17Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T06:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T06:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-17T07:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T07:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T07:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T07:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-17T08:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T08:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T08:50:38+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T08:50:38Z] [WARN] absorption log missing
+- [alert] 2025-08-17T09:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T09:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T09:50:39+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T09:50:39Z] [WARN] absorption log missing
+- [alert] 2025-08-17T10:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T10:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T10:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T10:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-17T11:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T11:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T11:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T11:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-17T12:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T12:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T12:50:38+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T12:50:38Z] [WARN] absorption log missing
+- [alert] 2025-08-17T13:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T13:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T13:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T13:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-17T14:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T14:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T14:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T14:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-17T15:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T15:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T15:50:26+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T15:50:26Z] [WARN] absorption log missing
+- [alert] 2025-08-17T16:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T16:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T16:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T16:50:25Z] [WARN] absorption log missing
+- [alert] 2025-08-17T17:49:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T17:49:10Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T17:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T17:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-17T18:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T18:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T18:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T18:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-17T19:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T19:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T19:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T19:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-17T20:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T20:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T20:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T20:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-17T21:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T21:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T21:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T21:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-17T22:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T22:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T22:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T22:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-17T23:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T23:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-17T23:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-17T23:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-18T00:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T00:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T00:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T00:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-18T01:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T01:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T01:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T01:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-18T02:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T02:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T02:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T02:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-18T03:24:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T03:24:10Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-18T03:24:10+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T03:24:10Z] [WARN] index missing
+- [alert] 2025-08-18T03:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T03:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T03:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T03:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-18T04:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T04:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T04:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T04:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-18T05:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T05:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T05:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T05:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-18T06:49:17+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T06:49:17Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T06:50:37+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T06:50:37Z] [WARN] absorption log missing
+- [alert] 2025-08-18T07:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T07:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T07:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T07:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-18T08:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T08:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T08:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T08:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-18T09:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T09:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T09:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T09:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-18T10:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T10:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T10:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T10:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-18T11:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T11:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T11:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T11:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-18T12:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T12:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T12:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T12:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-18T13:49:17+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T13:49:17Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T13:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T13:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-18T14:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T14:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T14:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T14:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-18T15:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T15:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T15:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T15:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-18T16:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T16:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T16:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T16:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-18T17:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T17:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T17:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T17:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-18T18:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T18:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T18:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T18:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-18T19:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T19:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T19:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T19:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-18T20:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T20:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T20:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T20:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-18T21:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T21:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T21:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T21:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-18T22:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T22:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T22:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T22:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-18T23:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T23:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-18T23:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-18T23:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-19T00:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T00:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T00:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T00:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-19T01:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T01:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T01:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T01:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-19T02:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T02:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T02:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T02:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-19T03:24:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T03:24:12Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-19T03:24:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T03:24:12Z] [WARN] index missing
+- [alert] 2025-08-19T03:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T03:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T03:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T03:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-19T04:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T04:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T04:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T04:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-19T05:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T05:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T05:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T05:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-19T06:49:17+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T06:49:17Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T06:50:38+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T06:50:38Z] [WARN] absorption log missing
+- [alert] 2025-08-19T07:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T07:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T07:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T07:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-19T08:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T08:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T08:50:37+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T08:50:37Z] [WARN] absorption log missing
+- [alert] 2025-08-19T09:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T09:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T09:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T09:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-19T10:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T10:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T10:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T10:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-19T11:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T11:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T11:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T11:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-19T12:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T12:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T12:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T12:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-19T13:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T13:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T13:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T13:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-19T14:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T14:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T14:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T14:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-19T15:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T15:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T15:50:27+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T15:50:27Z] [WARN] absorption log missing
+- [alert] 2025-08-19T16:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T16:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T16:50:29+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T16:50:29Z] [WARN] absorption log missing
+- [alert] 2025-08-19T17:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T17:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T17:50:33+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T17:50:33Z] [WARN] absorption log missing
+- [alert] 2025-08-19T18:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T18:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T18:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T18:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-19T19:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T19:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T19:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T19:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-19T20:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T20:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T20:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T20:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-19T21:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T21:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T21:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T21:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-19T22:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T22:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T22:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T22:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-19T23:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T23:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-19T23:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-19T23:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-20T00:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T00:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T00:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T00:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-20T01:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T01:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T01:50:30+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T01:50:30Z] [WARN] absorption log missing
+- [alert] 2025-08-20T02:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T02:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T02:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T02:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-20T03:24:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T03:24:14Z] [WARN] heartbeat missing/unparsable
+- [alert] 2025-08-20T03:24:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T03:24:14Z] [WARN] index missing
+- [alert] 2025-08-20T03:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T03:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T03:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T03:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-20T04:49:13+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T04:49:13Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T04:50:34+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T04:50:34Z] [WARN] absorption log missing
+- [alert] 2025-08-20T05:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T05:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T05:50:35+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T05:50:35Z] [WARN] absorption log missing
+- [alert] 2025-08-20T06:49:18+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T06:49:18Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T06:50:39+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T06:50:39Z] [WARN] absorption log missing
+- [alert] 2025-08-20T07:49:15+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T07:49:15Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T07:50:37+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T07:50:37Z] [WARN] absorption log missing
+- [alert] 2025-08-20T08:49:16+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T08:49:16Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T08:50:36+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T08:50:36Z] [WARN] absorption log missing
+- [alert] 2025-08-20T09:49:19+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T09:49:19Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T09:50:39+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T09:50:39Z] [WARN] absorption log missing
+- [alert] 2025-08-20T10:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T10:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T10:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T10:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-20T11:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T11:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T11:50:31+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T11:50:31Z] [WARN] absorption log missing
+- [alert] 2025-08-20T12:49:14+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T12:49:14Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T12:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T12:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-20T13:49:12+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T13:49:12Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T13:50:32+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T13:50:32Z] [WARN] absorption log missing
+- [alert] 2025-08-20T14:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T14:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T14:50:28+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T14:50:28Z] [WARN] absorption log missing
+- [alert] 2025-08-20T15:49:11+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T15:49:11Z] [WARN] geofencing heartbeat missing
+- [alert] 2025-08-20T15:50:25+00:00 — watchdog — weekly_alert_log.txt: [2025-08-20T15:50:25Z] [WARN] absorption log missing
+- [alert] 2025-12-03T07:04:57.799195+00:00 — watchdog — weekly_alert_log.txt: [2025-08-27 17:57:50.294644] Task failed (code 2): Weekly Watchdog Alert
+- [alert] 2025-12-03T07:04:57.799209+00:00 — watchdog — weekly_alert_log.txt: [2025-08-28 17:29:26.957195] Task failed (code 2): Weekly Watchdog Alert
+- [alert] 2025-12-03T07:04:57.799222+00:00 — watchdog — weekly_alert_log.txt: [2025-08-28 20:44:54.939712] Task failed (code 2): Weekly Watchdog Alert
+- [alert] 2025-12-03T07:04:57.799234+00:00 — watchdog — weekly_alert_log.txt: [2025-08-28 21:02:41.874935] Task failed (code 2): Weekly Watchdog Alert
+- [alert] 2025-12-03T07:04:57.799245+00:00 — watchdog — weekly_alert_log.txt: [2025-08-29 16:23:19.273250] Task failed (code 2): Weekly Watchdog Alert
+- [alert] 2025-12-03T07:04:57.799257+00:00 — watchdog — weekly_alert_log.txt: [2025-08-29 16:24:39.597670] Task failed (code 2): Weekly Watchdog Alert
+- [alert] 2025-12-03T07:04:57.801585+00:00 — security — next_audit.txt: 2025-12-03
+- [alert] 2025-12-03T07:04:57.801959+00:00 — security — security_audit_log.txt: [2025-08-27 17:57:49.967666] Task failed (code 2): Security Audit
+- [alert] 2025-12-03T07:04:57.801997+00:00 — security — security_audit_log.txt: [2025-08-28 17:29:26.867645] Task failed (code 2): Security Audit
+- [alert] 2025-12-03T07:04:57.802010+00:00 — security — security_audit_log.txt: [2025-08-28 20:44:54.879707] Task failed (code 2): Security Audit
+- [alert] 2025-12-03T07:04:57.802020+00:00 — security — security_audit_log.txt: [2025-08-28 21:02:41.282630] Task failed (code 2): Security Audit
+- [alert] 2025-12-03T07:04:57.802030+00:00 — security — security_audit_log.txt: [2025-08-29 16:23:19.214260] Task failed (code 2): Security Audit
+- [alert] 2025-12-03T07:04:57.802040+00:00 — security — security_audit_log.txt: [2025-08-29 16:24:36.695952] Task failed (code 2): Security Audit

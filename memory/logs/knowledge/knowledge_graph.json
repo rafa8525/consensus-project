@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    "Rafael",
+    "Fitbit",
+    "Maribel",
+    "COROS Pace 3",
+    "VPN Failure",
+    "Asia",
+    "Movies",
+    "Bills",
+    "Xfinity",
+    "Pixel Watch",
+    "Anniversary",
+    "Swimming"
+  ],
+  "edges": [
+    [
+      "Rafael",
+      "Fitbit",
+      {
+        "source": "misc_sorted_batch12.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Maribel",
+      {
+        "source": "misc_sorted_batch16.md"
+      }
+    ],
+    [
+      "Rafael",
+      "COROS Pace 3",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Rafael",
+      "VPN Failure",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Asia",
+      {
+        "source": "misc_sorted_batch16.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Bills",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Xfinity",
+      {
+        "source": "misc_sorted_batch12.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Anniversary",
+      {
+        "source": "misc_sorted_batch16.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Movies",
+      {
+        "source": "misc_sorted_batch12.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Pixel Watch",
+      {
+        "source": "misc_sorted_batch16.md"
+      }
+    ],
+    [
+      "Rafael",
+      "Swimming",
+      {
+        "source": "misc_sorted_batch21.md"
+      }
+    ],
+    [
+      "Fitbit",
+      "Xfinity",
+      {
+        "source": "milestone_report_phase3_2025-09-29.md"
+      }
+    ],
+    [
+      "Maribel",
+      "Asia",
+      {
+        "source": "misc_sorted_batch12.md"
+      }
+    ],
+    [
+      "Maribel",
+      "Fitbit",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Maribel",
+      "Movies",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Maribel",
+      "Xfinity",
+      {
+        "source": "misc_sorted_batch12.md"
+      }
+    ],
+    [
+      "Maribel",
+      "Anniversary",
+      {
+        "source": "misc_sorted_batch16.md"
+      }
+    ],
+    [
+      "Asia",
+      "Movies",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Asia",
+      "Bills",
+      {
+        "source": "misc_sorted_merged.md"
+      }
+    ],
+    [
+      "Pixel Watch",
+      "Fitbit",
+      {
+        "source": "milestone_report_phase2_2025-09-29.md"
+      }
+    ],
+    [
+      "Pixel Watch",
+      "COROS Pace 3",
+      {
+        "source": "milestone_report_phase2_2025-09-29.md"
+      }
+    ]
+  ]
+}

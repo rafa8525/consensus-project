@@ -1,0 +1,5 @@
+Date: 2025-12-03T07:06:45Z
+Steps: 7820
+Laps: 40
+AvgHR: 96
+BMI: 29.8

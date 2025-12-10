@@ -1,0 +1,6 @@
+[2025-11-05T22:41:47Z] === Movie Sync Agent Started ===
+[2025-11-05T22:41:47Z] ❌ Failed to initialize Google API service: Google OAuth credentials invalid or missing.
+[2025-11-05T22:41:47Z] ⚠️ Cloud sync unavailable — using cached backup.
+[2025-11-05T22:41:47Z] 🎬 Local movie list count: 3
+[2025-11-05T22:41:47Z] 🗂 Using range: Movies!A2:B
+[2025-11-05T22:41:47Z] 💤 Entering passive sync mode (6h intervals).

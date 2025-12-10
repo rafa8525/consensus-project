@@ -1,0 +1,15 @@
+{
+  "id": "absorption-status-20251208T2259220328400000",
+  "type": "metric",
+  "source_agent": "absorption_monitor_agent",
+  "content": "Absorption / heartbeat status at 2025-12-08T22:59:22.032840+00:00:\n\n- Status: ok\n- Reason: 675 runs in 48h; average 337.50 runs/day meets target.\n- Lookback window: last 48 hours (cutoff 2025-12-06T22:59:20.007021+00:00)\n- Total events: 675\n\nPer-log counts:\n- memory/logs/system/absorb_memory.log: 575\n- memory/logs/system/absorb_runner.log: 100\n- memory/logs/system/heartbeat.log: 0",
+  "tags": [
+    "absorption",
+    "memory",
+    "health"
+  ],
+  "sensitivity": "internal",
+  "created_at": "2025-12-08T22:59:22.032907+00:00",
+  "updated_at": "2025-12-08T22:59:22.032907+00:00",
+  "confidence": 0.7
+}

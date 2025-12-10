@@ -1,0 +1,14 @@
+[2025-11-05 22:39:24] ⚠️ SMS disabled by environment flag.
+[2025-11-05 22:39:24] ALERT SENT: ⚠️ Consensus System Alert:
+Missing environment variable: TWILIO_ACCOUNT_SID
+Missing environment variable: TWILIO_AUTH_TOKEN
+Missing environment variable: TWILIO_PHONE_NUMBER
+Missing environment variable: MY_PHONE_NUMBER
+Queue file not found (not fatal).
+[2025-11-05 22:43:02] ⚠️ SMS disabled by environment flag.
+[2025-11-05 22:43:02] ALERT SENT: ⚠️ Consensus System Alert:
+Missing environment variable: TWILIO_ACCOUNT_SID
+Missing environment variable: TWILIO_AUTH_TOKEN
+Missing environment variable: TWILIO_PHONE_NUMBER
+Missing environment variable: MY_PHONE_NUMBER
+Queue file not found (not fatal).

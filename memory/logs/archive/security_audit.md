@@ -1,0 +1,608 @@
+# Security Audit 2025-10-01
+- Outdated package: aggdraw 1.3.18.post0 -> 1.3.19
+- Outdated package: aiohttp 3.12.13 -> 3.12.15
+- Outdated package: aiosignal 1.3.2 -> 1.4.0
+- Outdated package: alembic 1.14.0 -> 1.16.5
+- Outdated package: aniso8601 9.0.1 -> 10.0.1
+- Outdated package: anyio 4.8.0 -> 4.11.0
+- Outdated package: argon2-cffi 23.1.0 -> 25.1.0
+- Outdated package: argon2-cffi-bindings 21.2.0 -> 25.1.0
+- Outdated package: asgiref 3.8.1 -> 3.9.2
+- Outdated package: async-lru 2.0.4 -> 2.0.5
+- Outdated package: attrs 24.2.0 -> 25.3.0
+- Outdated package: audioop-lts 0.2.1 -> 0.2.2
+- Outdated package: autograd 1.7.0 -> 1.8.0
+- Outdated package: babel 2.16.0 -> 2.17.0
+- Outdated package: bcrypt 4.2.1 -> 5.0.0
+- Outdated package: beautifulsoup4 4.12.3 -> 4.14.2
+- Outdated package: biopython 1.84 -> 1.85
+- Outdated package: black 24.10.0 -> 25.9.0
+- Outdated package: blinker 1.8.2 -> 1.9.0
+- Outdated package: bokeh 3.6.2 -> 3.8.0
+- Outdated package: boto3 1.35.11 -> 1.40.42
+- Outdated package: botocore 1.35.11 -> 1.40.42
+- Outdated package: bottle 0.13.2 -> 0.13.4
+- Outdated package: BTrees 6.0 -> 6.1
+- Outdated package: cachetools 5.5.0 -> 6.2.0
+- Outdated package: CairoSVG 2.7.1 -> 2.8.2
+- Outdated package: cattrs 24.1.2 -> 25.2.0
+- Outdated package: certifi 2024.8.30 -> 2025.8.3
+- Outdated package: cffi 1.17.1 -> 2.0.0
+- Outdated package: cftime 1.6.4 -> 1.6.4.post1
+- Outdated package: Chameleon 4.5.4 -> 4.6.0
+- Outdated package: charset-normalizer 3.4.1 -> 3.4.3
+- Outdated package: cheroot 10.0.1 -> 11.0.0
+- Outdated package: click 8.1.7 -> 8.3.0
+- Outdated package: cloudpickle 3.0.0 -> 3.1.1
+- Outdated package: comm 0.2.2 -> 0.2.3
+- Outdated package: cons 0.4.6 -> 0.4.7
+- Outdated package: contourpy 1.3.0 -> 1.3.3
+- Outdated package: coverage 7.6.9 -> 7.10.7
+- Outdated package: cryptography 44.0.0 -> 46.0.2
+- Outdated package: cssselect 1.2.0 -> 1.3.0
+- Outdated package: cssselect2 0.7.0 -> 0.8.0
+- Outdated package: Cython 3.0.11 -> 3.1.4
+- Outdated package: dash 2.18.1 -> 3.2.0
+- Outdated package: debugpy 1.8.11 -> 1.8.17
+- Outdated package: decorator 5.1.1 -> 5.2.1
+- Outdated package: diff-match-patch 20230430 -> 20241021
+- Outdated package: dill 0.3.8 -> 0.4.0
+- Outdated package: distlib 0.3.9 -> 0.4.0
+- Outdated package: dj-rest-auth 6.0.0 -> 7.0.1
+- Outdated package: Django 5.1.3 -> 5.2.6
+- Outdated package: django-admin-logs 1.3.0 -> 1.4.0
+- Outdated package: django-allauth 65.0.1 -> 65.11.2
+- Outdated package: django-cors-headers 4.4.0 -> 4.9.0
+- Outdated package: django-environ 0.11.2 -> 0.12.0
+- Outdated package: django-extensions 3.2.3 -> 4.1
+- Outdated package: django-import-export 4.1.1 -> 4.3.10
+- Outdated package: django-js-asset 3.0.1 -> 3.1.2
+- Outdated package: django-mptt 0.16.0 -> 0.18.0
+- Outdated package: django-tastypie 0.15.0 -> 0.15.1
+- Outdated package: djangorestframework 3.15.2 -> 3.16.1
+- Outdated package: dlib 19.24.6 -> 20.0.0
+- Outdated package: dm-tree 0.1.8 -> 0.1.9
+- Outdated package: dnspython 2.7.0 -> 2.8.0
+- Outdated package: docutils 0.21.2 -> 0.22.2
+- Outdated package: etuples 0.3.9 -> 0.3.10
+- Outdated package: executing 2.1.0 -> 2.2.1
+- Outdated package: falcon 4.0.2 -> 4.1.0
+- Outdated package: fastapi 0.115.5 -> 0.118.0
+- Outdated package: fastjsonschema 2.21.1 -> 2.21.2
+- Outdated package: feedparser 6.0.11 -> 6.0.12
+- Outdated package: filelock 3.15.4 -> 3.19.1
+- Outdated package: Flask 3.0.3 -> 3.1.2
+- Outdated package: Flask-Compress 1.17 -> 1.18
+- Outdated package: Flask-Migrate 4.0.7 -> 4.1.0
+- Outdated package: fonttools 4.53.1 -> 4.60.1
+- Outdated package: formulaic 1.1.0 -> 1.2.1
+- Outdated package: frozendict 2.4.4 -> 2.4.6
+- Outdated package: fsspec 2024.6.1 -> 2025.9.0
+- Outdated package: GDAL 3.9.3 -> 3.11.4
+- Outdated package: geographiclib 2.0 -> 2.1
+- Outdated package: gevent 24.11.1 -> 25.9.1
+- Outdated package: gitdb 4.0.11 -> 4.0.12
+- Outdated package: GitPython 3.1.43 -> 3.1.45
+- Outdated package: google-api-core 2.24.0 -> 2.25.1
+- Outdated package: google-api-python-client 2.156.0 -> 2.183.0
+- Outdated package: google-auth 2.37.0 -> 2.41.1
+- Outdated package: googleapis-common-protos 1.66.0 -> 1.70.0
+- Outdated package: greenlet 3.1.1 -> 3.2.4
+- Outdated package: grokcore.component 4.1 -> 5.0
+- Outdated package: h11 0.14.0 -> 0.16.0
+- Outdated package: h5netcdf 1.3.0 -> 1.6.4
+- Outdated package: h5py 3.11.0 -> 3.14.0
+- Outdated package: httpcore 1.0.7 -> 1.0.9
+- Outdated package: httplib2 0.22.0 -> 0.31.0
+- Outdated package: huggingface-hub 0.25.1 -> 0.35.3
+- Outdated package: humanize 4.11.0 -> 4.13.0
+- Outdated package: idna 3.8 -> 3.10
+- Outdated package: imageio 2.35.1 -> 2.37.0
+- Outdated package: imageio-ffmpeg 0.5.1 -> 0.6.0
+- Outdated package: importlib_metadata 8.5.0 -> 8.7.0
+- Outdated package: importlib_resources 6.4.4 -> 6.5.2
+- Outdated package: iniconfig 2.0.0 -> 2.1.0
+- Outdated package: ipykernel 6.29.5 -> 6.30.1
+- Outdated package: ipyparallel 8.8.0 -> 9.0.1
+- Outdated package: ipython 8.27.0 -> 9.6.0
+- Outdated package: ipywidgets 8.1.3 -> 8.1.7
+- Outdated package: isodate 0.6.1 -> 0.7.2
+- Outdated package: isort 5.13.2 -> 6.0.1
+- Outdated package: jaraco.collections 5.1.0 -> 5.2.1
+- Outdated package: jaraco.functools 4.1.0 -> 4.3.0
+- Outdated package: jedi 0.19.1 -> 0.19.2
+- Outdated package: jellyfish 1.1.3 -> 1.2.0
+- Outdated package: Jinja2 3.1.4 -> 3.1.6
+- Outdated package: joblib 1.4.2 -> 1.5.2
+- Outdated package: json5 0.10.0 -> 0.12.1
+- Outdated package: jsonschema 4.23.0 -> 4.25.1
+- Outdated package: jsonschema-specifications 2024.10.1 -> 2025.9.1
+- Outdated package: jupyter 1.0.0 -> 1.1.1
+- Outdated package: jupyter_core 5.7.2 -> 5.8.1
+- Outdated package: jupyter-events 0.11.0 -> 0.12.0
+- Outdated package: jupyter-lsp 2.2.5 -> 2.3.0
+- Outdated package: jupyter_server 2.15.0 -> 2.17.0
+- Outdated package: jupyterlab 4.2.7 -> 4.4.9
+- Outdated package: jupyterlab_widgets 3.0.13 -> 3.0.15
+- Outdated package: kaleido 0.2.1 -> 1.1.0
+- Outdated package: kiwisolver 1.4.5 -> 1.4.9
+- Outdated package: legacy-cgi 2.6.1 -> 2.6.3
+- Outdated package: Levenshtein 0.26.1 -> 0.27.1
+- Outdated package: lightgbm 4.5.0 -> 4.6.0
+- Outdated package: lxml 5.3.0 -> 6.0.2
+- Outdated package: lxml_html_clean 0.4.1 -> 0.4.2
+- Outdated package: Mako 1.3.8 -> 1.3.10
+- Outdated package: markdown-it-py 3.0.0 -> 4.0.0
+- Outdated package: MarkupSafe 2.1.5 -> 3.0.3
+- Outdated package: martian 2.0.post1 -> 2.1
+- Outdated package: matplotlib 3.9.2 -> 3.10.6
+- Outdated package: miniKanren 1.0.3 -> 1.0.5
+- Outdated package: mistune 3.1.0 -> 3.1.4
+- Outdated package: mock 5.1.0 -> 5.2.0
+- Outdated package: more-itertools 10.5.0 -> 10.8.0
+- Outdated package: moviepy 2.1.1 -> 2.2.1
+- Outdated package: multidict 6.6.2 -> 6.6.4
+- Outdated package: multipart 0.2.5 -> 1.3.0
+- Outdated package: multitasking 0.0.11 -> 0.0.12
+- Outdated package: mypy-extensions 1.0.0 -> 1.1.0
+- Outdated package: mysql-connector-python 9.1.0 -> 9.4.0
+- Outdated package: mysqlclient 2.2.6 -> 2.2.7
+- Outdated package: nbconvert 7.16.5 -> 7.16.6
+- Outdated package: ndindex 1.8 -> 1.10.0
+- Outdated package: neo4j 5.27.0 -> 6.0.0
+- Outdated package: netCDF4 1.7.1.post2 -> 1.7.2
+- Outdated package: networkx 3.1 -> 3.5
+- Outdated package: notebook 7.2.1 -> 7.4.7
+- Outdated package: numexpr 2.10.1 -> 2.13.1
+- Outdated package: numpy 2.1.0 -> 2.3.3
+- Outdated package: nvidia-nccl-cu12 2.23.4 -> 2.28.3
+- Outdated package: oauthlib 3.2.2 -> 3.3.1
+- Outdated package: opencv-contrib-python-headless 4.10.0.84 -> 4.12.0.88
+- Outdated package: orjson 3.10.7 -> 3.11.3
+- Outdated package: packaging 24.2 -> 25.0
+- Outdated package: pandas 2.2.2 -> 2.3.3
+- Outdated package: param 2.2.0 -> 2.2.1
+- Outdated package: paramiko 3.5.0 -> 4.0.0
+- Outdated package: parso 0.8.4 -> 0.8.5
+- Outdated package: patsy 0.5.6 -> 1.0.1
+- Outdated package: pbr 6.1.0 -> 7.0.1
+- Outdated package: peewee 3.17.8 -> 3.18.2
+- Outdated package: persistent 6.0 -> 6.1.1
+- Outdated package: pillow 10.4.0 -> 11.3.0
+- Outdated package: pip 24.3.1 -> 25.2
+- Outdated package: platformdirs 4.3.6 -> 4.4.0
+- Outdated package: plotly 5.24.1 -> 6.3.0
+- Outdated package: pluggy 1.5.0 -> 1.6.0
+- Outdated package: pocketsphinx 5.0.3 -> 5.0.4
+- Outdated package: portend 3.2.0 -> 3.2.1
+- Outdated package: prawcore 2.4.0 -> 3.0.2
+- Outdated package: prettytable 3.12.0 -> 3.16.0
+- Outdated package: proglog 0.1.10 -> 0.1.12
+- Outdated package: prometheus_client 0.21.1 -> 0.23.1
+- Outdated package: prompt_toolkit 3.0.48 -> 3.0.52
+- Outdated package: proto-plus 1.25.0 -> 1.26.1
+- Outdated package: protobuf 5.28.0 -> 6.32.1
+- Outdated package: psutil 6.1.1 -> 7.1.0
+- Outdated package: psycopg 3.2.3 -> 3.2.10
+- Outdated package: psycopg-pool 3.2.4 -> 3.2.6
+- Outdated package: pudb 2024.1.3 -> 2025.1.1
+- Outdated package: pyasn1_modules 0.4.1 -> 0.4.2
+- Outdated package: pybind11 2.13.6 -> 3.0.1
+- Outdated package: pycairo 1.26.1 -> 1.28.0
+- Outdated package: pycparser 2.22 -> 2.23
+- Outdated package: pydantic 2.9.2 -> 2.11.9
+- Outdated package: pydantic_core 2.23.4 -> 2.39.0
+- Outdated package: pyenchant 3.2.2 -> 3.3.0
+- Outdated package: pyflakes 3.2.0 -> 3.4.0
+- Outdated package: Pygments 2.19.1 -> 2.19.2
+- Outdated package: pyHanko 0.25.3 -> 0.31.0
+- Outdated package: pyhanko-certvalidator 0.26.5 -> 0.29.0
+- Outdated package: pyhdf 0.11.4 -> 0.11.6
+- Outdated package: pykka 4.1.1 -> 4.4.0
+- Outdated package: pymarc 5.2.3 -> 5.3.1
+- Outdated package: pymongo 4.10.1 -> 4.15.1
+- Outdated package: PyNaCl 1.5.0 -> 1.6.0
+- Outdated package: pyOpenSSL 24.3.0 -> 25.3.0
+- Outdated package: pyparsing 2.4.7 -> 3.2.5
+- Outdated package: pypdf 5.1.0 -> 6.1.1
+- Outdated package: pyphen 0.17.0 -> 0.17.2
+- Outdated package: pytest 8.3.4 -> 8.4.2
+- Outdated package: python-bidi 0.6.3 -> 0.6.6
+- Outdated package: python-dotenv 1.0.1 -> 1.1.1
+- Outdated package: python-json-logger 3.2.1 -> 3.3.0
+- Outdated package: python-Levenshtein 0.26.1 -> 0.27.1
+- Outdated package: pytz 2024.1 -> 2025.2
+- Outdated package: PyWavelets 1.7.0 -> 1.9.0
+- Outdated package: PyYAML 6.0.2 -> 6.0.3
+- Outdated package: pyzmq 26.2.0 -> 27.1.0
+- Outdated package: qrcode 8.0 -> 8.2
+- Outdated package: qtconsole 5.6.1 -> 5.7.0
+- Outdated package: QtPy 2.4.2 -> 2.4.3
+- Outdated package: RapidFuzz 3.11.0 -> 3.14.1
+- Outdated package: rdflib 7.0.0 -> 7.2.1
+- Outdated package: readability-lxml 0.8.1 -> 0.8.4.1
+- Outdated package: redis 5.2.0 -> 6.4.0
+- Outdated package: referencing 0.35.1 -> 0.36.2
+- Outdated package: regex 2024.7.24 -> 2025.9.18
+- Outdated package: reportlab 4.2.5 -> 4.4.4
+- Outdated package: requests 2.32.3 -> 2.32.5
+- Outdated package: retrying 1.3.4 -> 1.4.2
+- Outdated package: rich 13.8.0 -> 14.1.0
+- Outdated package: rpds-py 0.22.3 -> 0.27.1
+- Outdated package: rsa 4.9 -> 4.9.1
+- Outdated package: Rtree 1.3.0 -> 1.4.1
+- Outdated package: s3transfer 0.10.2 -> 0.14.0
+- Outdated package: safetensors 0.4.5 -> 0.6.2
+- Outdated package: scikit-learn 1.6.0 -> 1.7.2
+- Outdated package: scipy 1.14.1 -> 1.16.2
+- Outdated package: selenium 4.26.1 -> 4.35.0
+- Outdated package: semver 3.0.2 -> 3.0.4
+- Outdated package: setproctitle 1.3.4 -> 1.3.7
+- Outdated package: setuptools 70.0.0 -> 80.9.0
+- Outdated package: shapely 2.0.6 -> 2.1.2
+- Outdated package: simplejson 3.19.3 -> 3.20.2
+- Outdated package: singledispatch 4.1.0 -> 4.1.2
+- Outdated package: smmap 5.0.1 -> 5.0.2
+- Outdated package: snowballstemmer 2.2.0 -> 3.0.1
+- Outdated package: sounddevice 0.5.1 -> 0.5.2
+- Outdated package: soupsieve 2.6 -> 2.8
+- Outdated package: SpeechRecognition 3.10.4 -> 3.14.3
+- Outdated package: Sphinx 8.1.3 -> 8.2.3
+- Outdated package: SQLAlchemy 2.0.36 -> 2.0.43
+- Outdated package: sqlparse 0.5.1 -> 0.5.3
+- Outdated package: starlette 0.41.3 -> 0.48.0
+- Outdated package: statsmodels 0.14.3 -> 0.14.5
+- Outdated package: stevedore 5.4.0 -> 5.5.0
+- Outdated package: stripe 11.4.1 -> 13.0.0
+- Outdated package: svglib 1.5.1 -> 1.6.0
+- Outdated package: sympy 1.13.2 -> 1.14.0
+- Outdated package: tablib 3.5.0 -> 3.8.0
+- Outdated package: tempora 5.7.0 -> 5.8.1
+- Outdated package: tenacity 9.0.0 -> 9.1.2
+- Outdated package: threadpoolctl 3.5.0 -> 3.6.0
+- Outdated package: tifffile 2024.8.30 -> 2025.9.30
+- Outdated package: tokenizers 0.21.0 -> 0.22.1
+- Outdated package: tomli 2.0.1 -> 2.2.1
+- Outdated package: toolz 0.12.1 -> 1.0.0
+- Outdated package: tornado 6.4.2 -> 6.5.2
+- Outdated package: tqdm 4.66.5 -> 4.67.1
+- Outdated package: transaction 4.0 -> 5.0
+- Outdated package: transformers 4.47.1 -> 4.56.2
+- Outdated package: trio 0.26.2 -> 0.31.0
+- Outdated package: trio-websocket 0.11.1 -> 0.12.2
+- Outdated package: twilio 9.6.3 -> 9.8.3
+- Outdated package: types-python-dateutil 2.9.0.20241206 -> 2.9.0.20250822
+- Outdated package: typing_extensions 4.12.2 -> 4.15.0
+- Outdated package: tzdata 2024.1 -> 2025.2
+- Outdated package: tzlocal 5.2 -> 5.3.1
+- Outdated package: uritemplate 4.1.1 -> 4.2.0
+- Outdated package: uritools 4.0.3 -> 5.0.0
+- Outdated package: url-normalize 1.4.3 -> 2.2.1
+- Outdated package: urllib3 2.2.2 -> 2.5.0
+- Outdated package: urwid 2.6.16 -> 3.0.3
+- Outdated package: virtualenv 20.29.0 -> 20.34.0
+- Outdated package: w3lib 2.2.1 -> 2.3.1
+- Outdated package: waitress 3.0.0 -> 3.0.2
+- Outdated package: wcwidth 0.2.13 -> 0.2.14
+- Outdated package: weasyprint 62.3 -> 66.0
+- Outdated package: WebOb 1.8.8 -> 1.8.9
+- Outdated package: WebTest 3.0.1 -> 3.0.6
+- Outdated package: Werkzeug 3.0.4 -> 3.1.3
+- Outdated package: widgetsnbextension 4.0.11 -> 4.0.14
+- Outdated package: wrapt 1.17.0 -> 1.17.3
+- Outdated package: xarray 2024.7.0 -> 2025.9.1
+- Outdated package: xarray-einstats 0.7.0 -> 0.9.1
+- Outdated package: xgboost 2.1.3 -> 3.0.5
+- Outdated package: xhtml2pdf 0.2.16 -> 0.2.17
+- Outdated package: xlrd 2.0.1 -> 2.0.2
+- Outdated package: xyzservices 2024.9.0 -> 2025.4.0
+- Outdated package: yfinance 0.2.4 -> 0.2.66
+- Outdated package: z3c.pt 4.4 -> 5.1
+- Outdated package: zc.lockfile 3.0.post1 -> 4.0
+- Outdated package: ZConfig 4.1 -> 4.2
+- Outdated package: zdaemon 5.1 -> 5.2.1
+- Outdated package: ZEO 6.0.0 -> 6.1
+- Outdated package: zipp 3.20.2 -> 3.23.0
+- Outdated package: ZODB 6.0 -> 6.0.1
+- Outdated package: zodbpickle 4.0 -> 4.2
+- Outdated package: zope.annotation 5.0 -> 6.0
+- Outdated package: zope.app.appsetup 5.0 -> 6.0
+- Outdated package: zope.app.publication 5.0 -> 6.0
+- Outdated package: zope.app.wsgi 5.3 -> 6.0
+- Outdated package: zope.authentication 5.0 -> 6.0
+- Outdated package: zope.browser 3.0 -> 4.0
+- Outdated package: zope.browserpage 5.0 -> 6.0
+- Outdated package: zope.browserresource 5.1 -> 6.0
+- Outdated package: zope.cachedescriptors 5.0 -> 6.0
+- Outdated package: zope.catalog 5.0 -> 6.0
+- Outdated package: zope.component 6.0 -> 7.0
+- Outdated package: zope.configuration 5.0.1 -> 7.0
+- Outdated package: zope.container 6.0 -> 7.0
+- Outdated package: zope.contentprovider 6.0 -> 7.0
+- Outdated package: zope.contenttype 5.1 -> 6.0
+- Outdated package: zope.datetime 5.0.0 -> 6.0
+- Outdated package: zope.deferredimport 5.0 -> 6.0
+- Outdated package: zope.deprecation 5.0 -> 6.0
+- Outdated package: zope.dottedname 6.0 -> 7.0
+- Outdated package: zope.error 5.0 -> 6.0
+- Outdated package: zope.event 5.0 -> 6.0
+- Outdated package: zope.exceptions 5.1 -> 6.0
+- Outdated package: zope.filerepresentation 6.0 -> 7.0
+- Outdated package: zope.formlib 6.0 -> 7.0
+- Outdated package: zope.hookable 6.0 -> 8.0
+- Outdated package: zope.i18n 5.1 -> 6.0
+- Outdated package: zope.i18nmessageid 6.1.0 -> 8.0
+- Outdated package: zope.index 6.1 -> 8.0
+- Outdated package: zope.interface 7.0.3 -> 8.0.1
+- Outdated package: zope.intid 5.0 -> 6.0
+- Outdated package: zope.keyreference 6.0 -> 7.0
+- Outdated package: zope.lifecycleevent 5.0 -> 6.0
+- Outdated package: zope.location 5.0 -> 6.0
+- Outdated package: zope.login 3.0 -> 4.0
+- Outdated package: zope.minmax 2.3 -> 4.0
+- Outdated package: zope.pagetemplate 5.1 -> 6.0
+- Outdated package: zope.password 4.4 -> 6.1
+- Outdated package: zope.principalregistry 5.0 -> 6.0
+- Outdated package: zope.processlifetime 3.0 -> 4.0
+- Outdated package: zope.proxy 5.3 -> 7.0
+- Outdated package: zope.ptresource 5.0 -> 6.0
+- Outdated package: zope.publisher 7.0 -> 8.0
+- Outdated package: zope.schema 7.0.1 -> 8.0
+- Outdated package: zope.security 7.1 -> 8.1
+- Outdated package: zope.securitypolicy 5.0 -> 6.0
+- Outdated package: zope.session 5.1 -> 6.0
+- Outdated package: zope.site 5.0 -> 6.0
+- Outdated package: zope.size 5.0 -> 6.0
+- Outdated package: zope.tal 5.0.1 -> 6.0
+- Outdated package: zope.tales 6.0 -> 7.0
+- Outdated package: zope.testbrowser 7.0 -> 8.0
+- Outdated package: zope.testing 5.0.1 -> 6.0
+- Outdated package: zope.traversing 5.0 -> 6.0
+- Outdated package: zope.viewlet 5.0 -> 6.0
+- Outdated package: zstandard 0.23.0 -> 0.25.0
+- Potential credential in /home/rafa1215/consensus-project/tools/agents_notify.py
+- Potential credential in /home/rafa1215/consensus-project/tools/core_sanity_suite.py
+- Potential credential in /home/rafa1215/consensus-project/tools/health_check_loop.py
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/git/git_sync_log.txt
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/agents/daily_sms_and_push.log
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250923_222024.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250923_221847.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250923_221848.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250924_204859.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222511.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222627.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222621.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222216.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222431.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250924_204916.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250924_202726.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222428.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_222323.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250923_221907.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250923_222611.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_README.md_20250924_202743.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/suggestions/suggestions_CHANGELOG.md_20250923_222728.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_204904.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_063025chatgptmemoryfull.txt_20250923_221835.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250924_204906.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222713.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_204901.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_063025chatgptmemoryfull.txt_20250924_205307.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222218.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_Zo-Zla Halawa Comprehensive Research_.txt_20250923_221923.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_221902.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250924_204912.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_221913.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202722.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_221853.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202729.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202738.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250923_222221.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250924_204853.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222310.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250923_221855.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_204905.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250924_204904.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_Zo-Zla Halawa Comprehensive Research_.txt_20250923_222751.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_204911.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222300.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250924_202733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250924_202731.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222054.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_063025chatgptmemoryfull.txt_20250923_222719.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_221854.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222732.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222421.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222516.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250924_202739.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202743.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222730.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222738.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_221946.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222732.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222056.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250923_222416.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250924_204905.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222039.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222339.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_221853.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222630.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250924_202720.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250923_222218.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250923_221854.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202731.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222723.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222524.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222501.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_221841.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250924_202749.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_readme.md_20250923_222457.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222344.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_221850.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_CHANGELOG.md_20250923_222733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222051.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_README.md_20250923_222324.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/brainstorm/brainstorm_063025chatgptmemoryfull.txt_20250923_221831.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204906.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202752.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222252.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204849.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221850.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202749.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222218.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222318.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_204906.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221911.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221856.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_202733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221903.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222221.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222742.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221910.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202743.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222325.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_204916.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204908.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222548.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222724.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222501.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221906.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204910.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202727.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204916.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222513.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222329.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202746.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222416.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222731.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222250.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202735.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222034.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222053.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222427.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222745.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222320.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222736.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202734.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222531.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_222315.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222220.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222258.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_221904.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250924_202741.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_202751.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202736.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222033.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222746.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202747.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222445.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_221903.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222729.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222539.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204917.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_HISTORY.md_20250923_222730.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222037.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221952.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204909.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222744.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221855.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_222314.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221913.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222322.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222742.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_222740.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_HISTORY.md_20250923_222040.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222404.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222330.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202728.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202721.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202741.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222512.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_221916.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222424.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204915.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222331.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222401.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202738.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221837.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222525.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222332.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221852.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221858.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222314.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202745.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_221855.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222224.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222450.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222327.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222741.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221908.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222524.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204918.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204919.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_222628.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221909.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221907.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222734.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204900.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204903.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222323.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222446.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_204905.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202737.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221904.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250924_202740.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222449.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250924_204914.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221905.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222733.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222720.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_221907.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250923_222739.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222042.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204907.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222457.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_204924.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222345.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222740.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222328.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202742.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204921.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222321.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221933.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222431.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204854.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222253.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222735.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222748.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222436.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222225.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222346.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202717.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222737.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204911.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202740.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221849.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222306.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222450.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221842.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_changelog.md_20250924_204913.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222407.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222743.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_222449.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202730.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250923_221854.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_202744.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204913.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250924_204914.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222403.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_README.md_20250924_202743.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_221900.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222257.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/system/optimization/optimization_CHANGELOG.md_20250923_222506.md
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/watchdog/failure_log.txt
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/scheduler/2025-08-28T19-03-18_auto_git_sync.log
+- Potential credential in /home/rafa1215/consensus-project/memory/logs/heartbeat/voice_reminder_heartbeat.log

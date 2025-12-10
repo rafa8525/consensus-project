@@ -1,0 +1,934 @@
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-20T20:21:08.803961+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-20T20:21:08.813880+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-20T21:15:29.643906+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-20T21:15:29.655561+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-20T22:15:34.436746+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-20T22:15:34.450074+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-20T23:15:33.901601+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-20T23:15:33.913343+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T00:15:36.800527+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T00:15:36.814532+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T01:15:37.898699+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T01:15:37.908258+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T02:15:31.142774+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T02:15:31.152405+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T03:15:29.832146+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T03:15:29.840990+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T04:15:31.800117+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T04:15:31.811452+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T05:15:34.928353+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T05:15:34.941473+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T06:15:37.136796+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T06:15:37.156972+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T07:15:38.259089+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T07:15:38.274411+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T08:16:04.871640+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T08:16:04.883176+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T09:16:01.853151+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T09:16:03.230844+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T10:15:36.043755+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T10:15:36.058619+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T11:15:31.327804+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T11:15:31.342409+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T12:15:33.686784+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T12:15:33.701157+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T13:15:30.475168+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T13:15:30.481252+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T14:15:36.563885+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T14:15:36.577980+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T15:15:34.315569+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T15:15:34.326512+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T16:15:30.966447+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T16:15:30.982473+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T17:15:38.786521+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T17:15:38.801473+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T18:15:46.123533+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T18:15:46.139457+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T19:15:33.718672+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T19:15:33.735468+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T20:15:29.848541+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T20:15:29.861139+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T21:15:31.204964+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T21:15:31.218598+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T22:15:37.514909+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T22:15:37.530473+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-21T23:15:31.108338+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-21T23:15:31.119038+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T00:15:37.556025+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T00:15:37.567691+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T01:15:38.894943+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T01:15:38.907520+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T02:15:30.754876+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T02:15:30.766744+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T03:15:29.417211+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T03:15:29.429105+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T04:15:32.224151+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T04:15:32.236644+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T05:15:33.141413+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T05:15:33.153013+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T06:15:35.145683+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T06:15:35.157476+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T07:15:40.464830+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T07:15:40.477469+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T08:15:54.286763+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T08:15:54.298650+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T09:15:26.864545+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T09:15:26.876881+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T10:15:34.923830+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T10:15:34.940972+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T11:15:31.848539+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T11:15:31.866324+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T12:15:33.882348+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T12:15:33.893095+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T13:15:29.217336+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T13:15:29.227117+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T14:15:38.707858+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T14:15:38.735776+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T15:15:28.493033+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T15:15:28.503872+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T16:15:29.472443+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T16:15:29.484840+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T17:15:37.772967+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T17:15:37.789494+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T18:15:40.487886+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T18:15:40.507459+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T19:15:28.200759+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T19:15:28.217498+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T20:15:31.336143+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T20:15:31.347152+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T21:15:27.930518+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T21:15:27.942669+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T22:15:35.456464+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T22:15:35.467265+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-22T23:15:31.037304+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-22T23:15:31.047378+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T00:15:37.166260+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T00:15:37.182614+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T01:15:36.862332+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T01:15:36.876941+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T02:15:33.643721+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T02:15:33.654204+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T03:15:31.138883+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T03:15:31.152515+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T04:15:32.511314+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T04:15:32.524464+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T05:15:38.630210+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T05:15:38.644550+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T06:15:39.692462+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T06:15:39.705996+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T07:15:46.493546+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T07:15:46.506478+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T08:15:39.526554+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T08:15:39.544471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T09:15:51.208938+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T09:15:51.218210+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T10:15:45.528507+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T10:15:45.542572+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T11:15:37.280369+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T11:15:37.294480+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T12:15:35.855537+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T12:15:35.881482+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T13:15:29.241830+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T13:15:29.253780+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T14:15:36.676480+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T14:15:36.704911+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T15:15:27.621881+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T15:15:27.632373+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T16:15:24.994865+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T16:15:25.006155+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T17:15:27.730755+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T17:15:27.743281+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T18:15:33.569652+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T18:15:33.580479+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T19:15:28.379598+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T19:15:28.391519+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T20:15:32.210273+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T20:15:32.223377+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T21:15:27.628063+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T21:15:27.638950+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T22:15:35.339531+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T22:15:35.351656+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-23T23:15:31.271502+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-23T23:15:31.286979+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T00:15:34.924010+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T00:15:34.935860+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T01:15:38.366912+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T01:15:38.379580+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T02:15:31.467035+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T02:15:31.479914+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T03:15:29.717594+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T03:15:29.728499+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T04:15:31.765820+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T04:15:31.776194+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T05:15:38.676484+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T05:15:38.692585+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T06:15:40.216576+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T06:15:40.229410+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T07:15:44.765718+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T07:15:44.777391+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T08:15:30.766117+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T08:15:30.780201+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T09:15:30.869026+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T09:15:30.886773+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T10:15:36.841527+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T10:15:36.858469+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T11:15:38.553102+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T11:15:38.569789+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T12:15:35.131807+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T12:15:35.160449+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T13:15:30.918413+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T13:15:30.931696+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T14:15:39.087529+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T14:15:39.101721+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T15:15:30.472381+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T15:15:30.486101+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T16:15:30.633814+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T16:15:30.646745+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T17:15:30.440540+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T17:15:30.462485+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T18:15:32.265682+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T18:15:32.279466+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T19:15:31.057378+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T19:15:31.072645+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T20:15:31.642951+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T20:15:31.656548+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T21:15:30.949771+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T21:15:30.963089+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T22:15:34.643527+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T22:15:34.658000+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-24T23:15:31.160936+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-24T23:15:31.175596+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T00:15:33.311222+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T00:15:33.321622+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T01:15:37.742322+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T01:15:37.752462+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T02:15:32.244415+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T02:15:32.255095+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T03:15:31.014766+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T03:15:31.027264+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T04:15:32.126773+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T04:15:32.140034+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T05:15:34.405625+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T05:15:34.421273+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T06:15:32.378576+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T06:15:32.390004+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T07:15:34.558811+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T07:15:34.576353+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T08:15:35.578334+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T08:15:35.595275+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T09:15:31.172471+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T09:15:31.188389+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T10:15:37.565554+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T10:15:37.579072+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T11:15:31.847606+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T11:15:31.861899+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T12:15:36.649283+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T12:15:36.663524+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T13:15:28.703906+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T13:15:28.715953+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T14:15:38.064274+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T14:15:38.081470+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T15:15:30.317170+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T15:15:30.327131+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T16:15:29.288865+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T16:15:29.301193+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T17:15:30.250955+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T17:15:30.262417+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T18:15:34.474166+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T18:15:34.487575+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T19:15:33.686956+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T19:15:33.702061+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T20:15:31.084475+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T20:15:31.097417+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T21:15:32.090812+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T21:15:32.106468+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T22:15:37.613116+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T22:15:37.625618+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-25T23:15:35.347517+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-25T23:15:35.362087+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T00:15:36.521770+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T00:15:36.534406+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T01:15:39.531760+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T01:15:39.545044+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T02:15:35.743599+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T02:15:35.757621+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T03:15:33.823127+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T03:15:33.837964+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T04:15:33.367139+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T04:15:33.377670+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T05:15:35.756720+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T05:15:35.774121+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T06:15:34.460460+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T06:15:34.472578+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T07:15:34.295302+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T07:15:34.311136+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T08:15:30.814213+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T08:15:30.826718+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T09:15:30.664230+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T09:15:30.677037+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T10:15:35.680526+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T10:15:35.692504+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T11:15:32.279339+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T11:15:32.290278+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T12:15:36.407648+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T12:15:36.420621+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T13:15:30.455504+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T13:15:30.468239+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T14:15:37.295369+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T14:15:37.304938+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T15:15:29.678336+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T15:15:29.690921+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T16:15:28.765229+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T16:15:28.777672+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T17:15:29.026239+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T17:15:29.041550+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T18:15:28.580176+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T18:15:28.591059+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T19:15:30.484236+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T19:15:30.496956+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T20:15:31.481202+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T20:15:31.494215+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T21:15:30.801874+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T21:15:30.812773+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T22:15:36.727502+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T22:15:36.739465+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-26T23:15:36.157563+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-26T23:15:36.173539+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T00:15:36.203599+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T00:15:36.217733+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T01:15:41.135916+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T01:15:41.147108+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T02:15:31.596794+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T02:15:31.609281+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T03:15:29.848967+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T03:15:29.858761+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T04:15:31.093791+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T04:15:31.105476+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T05:15:34.641665+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T05:15:34.661809+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T06:15:34.959933+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T06:15:34.973850+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T07:15:33.362151+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T07:15:33.376717+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T08:15:33.235229+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T08:15:33.248503+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T09:16:05.232073+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T09:16:05.243761+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T10:15:33.715742+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T10:15:33.728593+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T11:15:31.530680+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T11:15:31.544389+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T12:15:33.793144+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T12:15:33.808866+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T13:15:28.327406+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T13:15:28.338071+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T14:15:38.292831+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T14:15:38.308834+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T15:15:32.274492+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T15:15:32.284560+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T16:15:27.390481+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T16:15:27.399653+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T17:15:34.342130+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T17:15:34.356469+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T18:15:31.224577+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T18:15:31.234852+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T19:15:29.853896+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T19:15:29.864439+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T20:15:28.271761+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T20:15:28.285213+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T21:15:31.293340+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T21:15:31.304378+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T22:15:34.730566+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T22:15:34.744419+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-27T23:15:34.750528+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-27T23:15:34.764958+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T00:15:34.887264+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T00:15:34.900704+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T01:15:38.606103+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T01:15:38.619745+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T02:15:33.029003+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T02:15:33.042300+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T03:15:30.009583+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T03:15:30.019771+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T04:15:31.931095+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T04:15:31.942564+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T05:15:35.881459+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T05:15:35.892595+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T06:15:34.188180+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T06:15:34.198768+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T07:15:34.105063+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T07:15:34.117856+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T08:16:15.546022+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T08:16:16.894152+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T09:15:39.062497+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T09:15:39.073859+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T10:15:32.021224+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T10:15:32.033575+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T11:15:30.950148+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T11:15:30.963282+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T12:15:32.761739+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T12:15:32.774786+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T13:15:28.239901+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T13:15:28.251006+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T14:15:36.714536+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T14:15:36.725985+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T15:15:27.523524+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T15:15:27.534214+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T16:15:27.922610+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T16:15:27.932944+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T17:15:32.505930+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T17:15:32.519055+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T18:15:31.077338+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T18:15:31.088057+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T19:15:33.336535+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T19:15:33.349485+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T20:15:29.920794+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T20:15:29.933496+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T21:15:31.286256+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T21:15:31.297217+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T22:15:34.813270+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T22:15:34.825286+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-28T23:15:32.017740+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-28T23:15:32.032796+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T00:15:32.590359+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T00:15:32.602196+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T01:15:36.642639+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T01:15:36.653154+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T02:15:30.934555+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T02:15:30.948729+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T03:15:29.348100+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T03:15:29.359494+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T04:15:31.698286+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T04:15:31.711232+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T05:15:36.183897+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T05:15:36.194848+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T06:15:37.649550+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T06:15:37.661347+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T07:15:39.859246+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T07:15:39.874186+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T08:15:39.765745+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T08:15:39.790567+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T09:15:36.632540+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T09:15:36.646283+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T10:15:33.512048+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T10:15:33.525405+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T11:15:32.778750+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T11:15:32.793023+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T12:15:34.555199+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T12:15:34.566670+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T13:15:29.475898+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T13:15:29.487139+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T14:15:37.182058+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T14:15:37.194954+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T15:15:28.839443+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T15:15:28.850521+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T16:15:31.258747+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T16:15:31.270786+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T17:15:41.135395+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T17:15:41.146540+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T18:15:39.761557+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T18:15:39.775456+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T19:15:30.718157+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T19:15:30.731130+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T20:15:31.836620+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T20:15:31.847458+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T21:15:29.521421+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T21:15:29.532300+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T22:15:35.872291+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T22:15:35.885850+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-29T23:15:35.267547+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-29T23:15:35.280627+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T00:15:38.226313+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T00:15:38.240502+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T01:15:41.209036+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T01:15:41.221791+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T02:15:36.435406+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T02:15:36.451220+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T03:15:32.092691+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T03:15:32.104549+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T04:15:33.211308+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T04:15:33.224816+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T05:15:40.522348+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T05:15:40.537843+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T06:15:38.714542+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T06:15:38.728780+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T07:15:39.668543+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T07:15:39.679565+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T08:15:39.149142+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T08:15:39.160984+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T09:15:46.678611+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T09:15:46.695822+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T10:15:45.620270+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T10:15:45.637489+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T11:15:45.739829+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T11:15:45.756545+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T12:15:34.301582+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T12:15:34.315642+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T13:15:28.246184+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T13:15:28.258514+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T14:15:37.264824+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T14:15:37.277398+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T15:15:28.499682+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T15:15:28.513730+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T16:15:27.720266+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T16:15:27.736487+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T17:15:28.840796+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T17:15:28.852953+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T18:15:27.733580+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T18:15:27.747239+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T19:15:28.052840+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T19:15:28.065239+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T20:15:30.178719+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T20:15:30.193471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T21:15:28.558211+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T21:15:28.571682+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T22:15:34.974123+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T22:15:34.986333+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-11-30T23:15:31.096124+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-11-30T23:15:31.107994+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T00:15:33.800528+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T00:15:33.815186+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T01:15:37.160451+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T01:15:37.173477+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T02:15:35.240306+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T02:15:35.253750+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T03:15:30.112930+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T03:15:30.123249+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T04:15:31.041629+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T04:15:31.051239+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T05:15:37.509954+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T05:15:37.521458+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T06:15:36.068261+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T06:15:36.078893+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T07:15:36.103192+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T07:15:36.114881+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T08:15:27.709683+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T08:15:27.720677+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T09:15:28.763595+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T09:15:28.775991+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T10:15:33.672687+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T10:15:33.685250+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T11:15:39.483252+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T11:15:39.496504+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T12:15:33.083868+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T12:15:33.100242+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T13:15:29.013368+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T13:15:29.024393+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T14:15:42.819892+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T14:15:42.842470+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T15:15:28.837148+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T15:15:28.848369+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T16:15:31.603532+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T16:15:31.615251+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T17:15:35.269525+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T17:15:35.285064+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T18:15:41.136035+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T18:15:41.150110+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T19:15:35.939809+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T19:15:35.951194+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T20:15:30.844059+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T20:15:30.851898+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T21:15:29.810414+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T21:15:29.826074+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T22:15:34.520049+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T22:15:34.535218+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-01T23:15:30.868533+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-01T23:15:30.880848+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T00:15:31.628522+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T00:15:31.644760+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T01:15:34.831663+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T01:15:34.846260+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T02:15:30.779702+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T02:15:30.790191+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T03:15:28.194538+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T03:15:28.207963+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T04:15:31.085446+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T04:15:31.098528+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T05:15:36.416806+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T05:15:36.437232+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T06:15:37.875950+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T06:15:37.887404+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T07:15:33.956553+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T07:15:33.980214+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T08:16:08.095862+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T08:16:09.430493+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T09:16:04.560526+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T09:16:05.982725+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T10:15:33.465565+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T10:15:33.475189+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T11:15:32.292265+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T11:15:32.302175+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T12:15:30.168226+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T12:15:30.179766+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T13:15:28.310375+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T13:15:28.321812+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T14:15:37.443263+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T14:15:37.462490+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T15:15:28.360680+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T15:15:28.371725+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T16:15:28.085820+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T16:15:28.097096+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T17:15:40.931144+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T17:15:40.946469+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T18:15:38.148810+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T18:15:38.159470+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T19:15:34.684771+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T19:15:34.697218+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T20:15:30.769620+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T20:15:30.782393+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T21:15:29.921012+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T21:15:29.931757+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T22:15:34.789588+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T22:15:34.806482+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-02T23:15:34.020176+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-02T23:15:34.032532+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T00:15:34.659235+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T00:15:34.670766+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T01:15:39.260696+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T01:15:39.271595+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T02:15:35.231266+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T02:15:35.244627+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T03:15:31.079038+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T03:15:31.091252+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T04:15:33.229324+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T04:15:33.239442+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T05:15:35.680567+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T05:15:35.692497+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T06:15:34.805294+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T06:15:34.820477+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T07:15:38.335925+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T07:15:38.348471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T08:15:31.236888+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T08:15:31.249204+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T09:15:29.886174+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T09:15:29.897846+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T10:15:33.623029+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T10:15:33.637712+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T11:15:31.484127+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T11:15:31.497031+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T12:15:33.558506+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T12:15:33.581679+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T13:15:29.711106+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T13:15:29.729736+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T14:15:40.075881+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T14:15:40.090913+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T15:15:36.602789+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T15:15:36.613991+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T16:15:32.715301+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T16:15:32.734880+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T17:15:40.176341+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T17:15:40.188845+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T18:15:39.428043+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T18:15:39.441363+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T19:15:32.924847+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T19:15:32.941542+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T20:15:34.579278+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T20:15:34.601739+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T21:15:30.453247+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T21:15:30.465852+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T22:15:34.554349+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T22:15:34.569946+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-03T23:15:32.030126+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-03T23:15:32.040490+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T00:15:34.084727+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T00:15:34.099859+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T01:15:33.845546+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T01:15:33.855404+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T02:15:31.189532+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T02:15:31.202547+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T03:15:28.460983+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T03:15:28.472105+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T04:15:31.811402+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T04:15:31.823912+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T05:15:36.390705+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T05:15:36.407066+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T06:15:34.600121+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T06:15:34.611587+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T07:15:36.307137+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T07:15:36.323685+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T08:15:32.723577+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T08:15:32.736088+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T09:15:41.192819+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T09:15:41.204795+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T10:15:30.680372+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T10:15:30.703910+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T11:15:29.972876+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T11:15:29.983241+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T12:15:33.020196+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T12:15:33.034960+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T13:15:27.596471+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T13:15:27.612020+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T14:15:41.742509+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T14:15:41.758686+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T15:15:35.462917+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T15:15:35.473643+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T16:15:29.630840+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T16:15:29.641827+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T17:15:32.436186+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T17:15:32.449099+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T18:15:36.298947+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T18:15:36.314737+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T19:15:31.212886+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T19:15:31.226397+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T20:15:34.781278+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T20:15:34.792809+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T21:15:28.777585+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T21:15:28.788417+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T22:15:34.008182+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T22:15:34.018734+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-04T23:15:32.035713+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-04T23:15:32.050471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T00:15:32.289752+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T00:15:32.304490+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T01:15:37.003162+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T01:15:37.013976+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T02:15:29.139521+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T02:15:29.153778+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T03:15:26.733768+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T03:15:26.744139+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T04:15:30.333848+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T04:15:30.347293+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T05:15:35.343222+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T05:15:35.355471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T06:15:35.005032+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T06:15:35.020451+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T07:15:37.096772+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T07:15:37.108615+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T08:16:07.777886+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T08:16:09.170963+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T09:15:41.345246+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T09:15:41.361263+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T10:15:33.186531+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T10:15:33.204262+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T11:15:30.156070+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T11:15:30.166500+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T12:15:33.283957+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T12:15:33.296334+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T13:15:28.133660+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T13:15:28.145253+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T14:15:36.626568+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T14:15:36.639455+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T15:15:32.235921+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T15:15:32.249901+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T16:15:29.242524+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T16:15:29.255199+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T17:15:38.504712+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T17:15:38.524718+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T18:15:39.385818+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T18:15:39.395528+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T19:15:32.462765+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T19:15:32.475733+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T20:15:31.606289+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T20:15:31.617805+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T21:15:29.601385+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T21:15:29.611946+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T22:15:37.730765+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T22:15:37.745303+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-05T23:15:35.813852+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-05T23:15:35.826439+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T00:15:36.166056+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T00:15:36.182918+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T01:15:37.616926+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T01:15:37.630401+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T02:15:32.443917+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T02:15:32.456794+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T03:15:29.937992+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T03:15:29.949321+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T04:15:30.491578+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T04:15:30.504512+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T05:15:35.487154+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T05:15:35.502852+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T06:15:33.809887+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T06:15:33.822610+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T07:15:35.328859+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T07:15:35.346258+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T08:16:09.436946+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T08:16:10.738373+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T09:16:10.935543+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T09:16:10.951600+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T10:15:32.148202+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T10:15:32.159058+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T11:15:32.351325+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T11:15:32.364107+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T12:15:33.049522+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T12:15:33.066353+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T13:15:29.183570+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T13:15:29.195449+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T14:15:36.332134+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T14:15:36.343021+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T15:15:28.250353+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T15:15:28.262152+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T16:15:28.051175+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T16:15:28.063882+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T17:15:36.998075+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T17:15:37.013193+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T18:15:35.407731+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T18:15:35.421880+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T19:15:27.117836+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T19:15:27.129236+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T20:15:29.396574+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T20:15:29.413121+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T21:15:26.817587+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T21:15:26.830332+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T22:15:35.325562+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T22:15:35.342678+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-06T23:15:30.957237+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-06T23:15:30.972476+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T00:15:33.428968+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T00:15:33.438729+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T01:15:35.966149+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T01:15:35.986471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T02:15:29.676506+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T02:15:29.687242+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T03:15:27.660221+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T03:15:27.672875+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T04:15:29.468031+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T04:15:29.482821+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T05:15:34.136964+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T05:15:34.153043+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T06:15:35.520096+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T06:15:35.534458+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T07:15:35.356165+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T07:15:35.369027+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T08:16:08.473380+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T08:16:09.849498+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T09:15:40.685533+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T09:15:40.698471+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T10:15:38.760514+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T10:15:38.773489+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T11:15:28.911538+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T11:15:28.923115+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T12:15:30.663396+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T12:15:30.678192+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T13:15:27.250526+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T13:15:27.260421+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T14:15:35.945093+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T14:15:35.960061+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T15:15:26.542462+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T15:15:26.554361+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T16:15:26.429973+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T16:15:26.446930+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T17:15:25.976525+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T17:15:25.993060+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T18:15:28.129089+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T18:15:28.139393+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T19:15:25.166441+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T19:15:25.179236+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T20:15:28.744209+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T20:15:28.756182+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T21:15:27.336080+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T21:15:27.347261+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T22:15:33.499029+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T22:15:33.511789+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-07T23:15:30.118812+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-07T23:15:30.131104+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T00:15:30.303389+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T00:15:30.316893+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T01:15:34.437324+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T01:15:34.450112+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T02:15:29.139934+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T02:15:29.151554+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T03:15:26.446590+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T03:15:26.457920+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T04:15:29.112775+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T04:15:29.124072+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T05:15:35.492111+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T05:15:35.506469+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T06:15:29.944639+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T06:15:29.957855+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T07:15:29.739768+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T07:15:29.753575+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T08:15:47.446305+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T08:15:47.458577+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T09:16:04.225366+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T09:16:04.237275+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T10:15:30.721770+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T10:15:30.731214+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T11:15:33.527516+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T11:15:33.541766+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T12:15:30.937149+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T12:15:30.950222+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T13:15:26.417469+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T13:15:26.431418+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T14:15:35.391113+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T14:15:35.406171+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T15:15:26.543855+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T15:15:26.554976+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T16:15:29.905527+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T16:15:29.918855+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T17:15:28.907580+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T17:15:28.923985+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T18:15:32.411902+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T18:15:32.424624+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T19:15:25.322672+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T19:15:25.333262+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T20:15:28.589169+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T20:15:28.600682+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T21:15:27.956965+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T21:15:27.968089+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T22:15:34.142030+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T22:15:34.159341+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-08T23:15:29.143578+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-08T23:15:29.160186+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T00:15:29.915017+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T00:15:29.924352+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T01:15:33.589955+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T01:15:33.606826+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T02:15:28.710336+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T02:15:28.720605+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T03:15:26.159376+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T03:15:26.170659+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T04:15:28.436682+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T04:15:28.450369+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T05:15:34.527045+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T05:15:34.538936+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T06:15:31.780299+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T06:15:31.790739+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T07:15:36.303601+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T07:15:36.319279+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T08:15:28.753377+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T08:15:28.765622+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T09:15:30.308088+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T09:15:30.321995+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T10:15:31.862542+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T10:15:31.881480+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T11:15:29.379490+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T11:15:29.392751+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T12:15:32.525064+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T12:15:32.537898+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T13:15:29.651758+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T13:15:29.664448+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T14:15:36.215226+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T14:15:36.231464+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T15:15:38.785551+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T15:15:38.803480+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T16:15:29.890323+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T16:15:29.906396+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T17:15:40.943697+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T17:15:40.956543+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T18:15:39.902598+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T18:15:39.918963+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T19:15:33.695516+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T19:15:33.711467+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T20:15:33.680834+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T20:15:33.695147+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T21:15:30.113863+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T21:15:30.129469+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T22:15:38.354604+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T22:15:38.369446+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-09T23:15:36.265521+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-09T23:15:36.282453+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T00:15:38.622378+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T00:15:38.640613+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T01:15:38.702089+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T01:15:38.712519+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T02:15:32.400246+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T02:15:32.416470+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T03:15:32.171959+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T03:15:32.178754+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T04:15:33.272520+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T04:15:33.286942+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T05:15:34.356975+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T05:15:34.368095+00:00"}
+{"level": "INFO", "event": "vpn_guardian_check", "ssid": "", "on_public": false, "vpn_active": false, "mode": "log_only", "timestamp": "2025-12-10T06:15:30.729029+00:00"}
+{"level": "INFO", "event": "kill_switch_clear", "on_public": false, "vpn_active": false, "timestamp": "2025-12-10T06:15:30.741527+00:00"}
