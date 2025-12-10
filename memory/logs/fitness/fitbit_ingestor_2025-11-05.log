@@ -1,0 +1,4 @@
+[2025-11-05T22:40:48Z] === Fitbit / Pixel Watch Ingestor Started ===
+[2025-11-05T22:40:48Z] ❌ Fitbit credentials or token missing.
+[2025-11-05T22:40:48Z] 🧾 Daily fitness summary written (fitbit_daily_summary.json).
+[2025-11-05T22:40:48Z] 💤 Entering passive mode (6 h intervals).

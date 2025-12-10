@@ -1,0 +1,94 @@
+2025-10-13 23:20:20,381 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-10-13_23-20-19.zip
+2025-10-13 23:20:20,381 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-10-13 23:20:20,797 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-10-13_23-20-20.zip
+2025-10-13 23:20:20,797 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-05 22:33:26,170 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-05_22-33-24.zip
+2025-11-05 22:33:26,171 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-05 22:38:43,643 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-05_22-38-39.zip
+2025-11-05 22:38:43,644 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-05 22:40:27,484 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-05_22-40-26.zip
+2025-11-05 22:40:27,484 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-06 00:53:54,140 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-06_00-53-51.zip
+2025-11-06 00:53:54,141 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-06 00:55:54,372 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-06_00-55-51.zip
+2025-11-06 00:55:54,373 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-06 00:58:17,971 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-06_00-58-10.zip
+2025-11-06 00:58:17,979 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-06 01:00:59,702 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-06_01-00-57.zip
+2025-11-06 01:00:59,702 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-06 01:02:55,682 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-06_01-02-54.zip
+2025-11-06 01:02:55,682 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-11-06 01:05:12,496 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-11-06_01-05-10.zip
+2025-11-06 01:05:12,497 - ERROR - Failed to upload to Drive: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/google_credentials.json'
+2025-12-02 22:17:39,211 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-02_22-17-39.zip
+2025-12-02 22:17:39,289 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-02 22:17:41,086 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-02 22:17:41,087 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-02 22:17:41,604 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-02_22-17-41.zip
+2025-12-02 22:17:41,657 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-02 22:17:42,980 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-02 22:17:42,980 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-03 07:09:17,019 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-03_07-09-16.zip
+2025-12-03 07:09:17,146 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-03 07:09:18,597 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-03 07:09:18,597 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-03 07:09:19,070 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-03_07-09-19.zip
+2025-12-03 07:09:19,147 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-03 07:09:20,707 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-03 07:09:20,708 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-04 07:08:59,021 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-04_07-08-58.zip
+2025-12-04 07:08:59,095 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-04 07:09:00,192 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-04 07:09:00,192 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-04 07:09:00,615 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-04_07-09-00.zip
+2025-12-04 07:09:00,675 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-04 07:09:01,862 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-04 07:09:01,862 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-05 07:09:07,427 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-05_07-09-07.zip
+2025-12-05 07:09:07,628 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-05 07:09:09,476 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-05 07:09:09,476 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-05 07:09:10,058 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-05_07-09-09.zip
+2025-12-05 07:09:10,190 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-05 07:09:11,730 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-05 07:09:11,731 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-06 07:09:05,619 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-06_07-09-05.zip
+2025-12-06 07:09:05,874 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-06 07:09:07,228 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-06 07:09:07,228 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-06 07:09:07,892 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-06_07-09-07.zip
+2025-12-06 07:09:08,020 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-06 07:09:09,284 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-06 07:09:09,284 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-07 07:09:17,808 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-07_07-09-17.zip
+2025-12-07 07:09:17,902 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-07 07:09:19,034 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-07 07:09:19,034 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-07 07:09:19,474 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-07_07-09-19.zip
+2025-12-07 07:09:19,567 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-07 07:09:20,627 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-07 07:09:20,627 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-08 07:08:55,161 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-08_07-08-55.zip
+2025-12-08 07:08:55,232 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-08 07:08:56,691 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-08 07:08:56,691 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-08 07:08:57,369 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-08_07-08-57.zip
+2025-12-08 07:08:57,461 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-08 07:08:58,640 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-08 07:08:58,640 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-09 07:09:04,902 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-09_07-09-04.zip
+2025-12-09 07:09:05,010 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-09 07:09:06,210 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-09 07:09:06,210 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-09 07:09:06,752 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-09_07-09-06.zip
+2025-12-09 07:09:06,831 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-09 07:09:08,254 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-09 07:09:08,255 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-10 07:08:31,161 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-10_07-08-31.zip
+2025-12-10 07:08:31,248 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-10 07:08:32,703 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-10 07:08:32,703 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">
+2025-12-10 07:08:33,138 - INFO - Created backup /home/rafa1215/consensus-project/backups/memory_logs_backup_2025-12-10_07-08-33.zip
+2025-12-10 07:08:33,194 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-12-10 07:08:34,621 - WARNING - Encountered 403 Forbidden with reason "insufficientParentPermissions"
+2025-12-10 07:08:34,621 - ERROR - Failed to upload to Drive: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable returned "Insufficient permissions for the specified parent.". Details: "[{'message': 'Insufficient permissions for the specified parent.', 'domain': 'global', 'reason': 'insufficientParentPermissions'}]">

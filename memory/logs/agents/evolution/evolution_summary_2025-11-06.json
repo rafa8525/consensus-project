@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-11-06T01:04:54Z",
+  "top_5": [
+    {
+      "agent": "storage_cleanup.py",
+      "score": 0.55,
+      "latency": 2.983,
+      "success": true
+    },
+    {
+      "agent": "fitbit_ingestor.py",
+      "score": 0.55,
+      "latency": 0.753,
+      "success": false
+    },
+    {
+      "agent": "github_push_verifier.py",
+      "score": 0.55,
+      "latency": 4.329,
+      "success": true
+    },
+    {
+      "agent": "absorb_log_append.py",
+      "score": 0.549,
+      "latency": 2.156,
+      "success": true
+    },
+    {
+      "agent": "mcl_guard.py",
+      "score": 0.548,
+      "latency": 3.065,
+      "success": true
+    }
+  ],
+  "average_score": 0.5038,
+  "success_rate": 0.7363
+}

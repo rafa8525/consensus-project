@@ -1,0 +1,42 @@
+{
+  "mcl_guard.py": {
+    "status": "present",
+    "sha256": "40e82ab592af235a9fb30ff63e035a7e9ec0f89d17f72f96dbcba8e3250d49d6"
+  },
+  "master_control_loop.py": {
+    "status": "present",
+    "sha256": "e193247dbb41c42ad150863821f4d5a86ebce0ab87275d5d2d549ad8acbd0821"
+  },
+  "self_heal_wrapper.py": {
+    "status": "missing",
+    "sha256": null
+  },
+  "log_memory_manifest.py": {
+    "status": "present",
+    "sha256": "e651153985bf55c5a25a2c7ce28317c09559ee8996d7fcaeb04199df8f6982cb"
+  },
+  "vpn_test_suite.py": {
+    "status": "missing",
+    "sha256": null
+  },
+  "fitness_tracking_system.py": {
+    "status": "missing",
+    "sha256": null
+  },
+  "security_audit_scheduler.py": {
+    "status": "present",
+    "sha256": "be667782d849886cbe85c5d6f4165e0ace1334e960ae2390aeea315d99fc198d"
+  },
+  "adaptive_context_compression_engine.py": {
+    "status": "missing",
+    "sha256": null
+  },
+  "dynamic_priority_orchestrator.py": {
+    "status": "missing",
+    "sha256": null
+  },
+  "ethical_alignment_monitor.py": {
+    "status": "missing",
+    "sha256": null
+  }
+}

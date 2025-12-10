@@ -1,0 +1,1103 @@
+[2025-08-26T22:01:59.531727] Running: git pull origin v1.1-dev
+[2025-08-26T22:02:01.320023] stdout: Already up to date.
+[2025-08-26T22:02:01.331592] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-26T22:02:01.339610] Running: git add -A
+[2025-08-26T22:02:10.426613] Running: git commit -m "Auto-log sync for 2025-08-26 22:02:10"
+[2025-08-26T22:02:11.675201] stdout: [v1.1-dev 9a9f4c18] Auto-log sync for 2025-08-26 22:02:10
+ 4 files changed, 57 insertions(+), 31 deletions(-)
+ rename memory/from_agents/{note_20250826T205716Z.txt => note_20250826T211019Z.txt} (100%)
+ create mode 100644 memory/from_agents/note_20250826T214751Z.txt
+[2025-08-26T22:02:11.679022] Running: git config pack.windowMemory 10m
+[2025-08-26T22:02:11.707427] Running: git config pack.packSizeLimit 20m
+[2025-08-26T22:02:11.758332] Running: git push origin v1.1-dev
+[2025-08-26T22:02:11.990932] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-26T22:02:11.994603] ❌ Git push failed.
+[2025-08-27T00:03:14.231734] Running: git pull origin v1.1-dev
+[2025-08-27T00:03:15.319767] stdout: Already up to date.
+[2025-08-27T00:03:15.327362] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T00:03:15.334364] Running: git add -A
+[2025-08-27T00:03:26.477364] Running: git commit -m "Auto-log sync for 2025-08-27 00:03:26"
+[2025-08-27T00:03:29.078158] stdout: [v1.1-dev 8d4211dd] Auto-log sync for 2025-08-27 00:03:26
+ 8 files changed, 1074 insertions(+), 1 deletion(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-05_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-10_auto_git_sync.log
+ create mode 100755 tools/agents/fanout_web_research.sh
+ create mode 100755 tools/write_memory_heartbeats.py
+[2025-08-27T00:03:29.082245] Running: git config pack.windowMemory 10m
+[2025-08-27T00:03:29.103110] Running: git config pack.packSizeLimit 20m
+[2025-08-27T00:03:29.125509] Running: git push origin v1.1-dev
+[2025-08-27T00:03:29.241361] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T00:03:29.245592] ❌ Git push failed.
+[2025-08-27T02:02:36.475213] Running: git pull origin v1.1-dev
+[2025-08-27T02:02:36.888034] stdout: Already up to date.
+[2025-08-27T02:02:36.891606] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T02:02:36.895383] Running: git add -A
+[2025-08-27T02:02:43.766995] Running: git commit -m "Auto-log sync for 2025-08-27 02:02:43"
+[2025-08-27T02:02:45.557552] stdout: [v1.1-dev ded1f875] Auto-log sync for 2025-08-27 02:02:43
+ 12 files changed, 2973 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-29_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-29_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-30_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T01-02-57_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-35_auto_git_sync.log
+[2025-08-27T02:02:45.561907] Running: git config pack.windowMemory 10m
+[2025-08-27T02:02:45.589478] Running: git config pack.packSizeLimit 20m
+[2025-08-27T02:02:45.618521] Running: git push origin v1.1-dev
+[2025-08-27T02:02:45.758481] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T02:02:45.762642] ❌ Git push failed.
+[2025-08-27T04:02:50.587725] Running: git pull origin v1.1-dev
+[2025-08-27T04:02:51.494168] stdout: Already up to date.
+[2025-08-27T04:02:51.499406] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T04:02:51.503280] Running: git add -A
+[2025-08-27T04:03:00.024038] Running: git commit -m "Auto-log sync for 2025-08-27 04:03:00"
+[2025-08-27T04:03:04.963849] stdout: [v1.1-dev c3bc7040] Auto-log sync for 2025-08-27 04:03:00
+ 12 files changed, 3049 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-45_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-46_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-46_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T03-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-02-47_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-02-49_auto_git_sync.log
+[2025-08-27T04:03:04.968115] Running: git config pack.windowMemory 10m
+[2025-08-27T04:03:04.994048] Running: git config pack.packSizeLimit 20m
+[2025-08-27T04:03:05.025473] Running: git push origin v1.1-dev
+[2025-08-27T04:03:05.196918] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T04:03:05.200734] ❌ Git push failed.
+[2025-08-27T05:03:10.921126] Running: git pull origin v1.1-dev
+[2025-08-27T05:03:12.518332] stdout: Already up to date.
+[2025-08-27T05:03:12.531109] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T05:03:12.539112] Running: git add -A
+[2025-08-27T05:03:25.559984] Running: git commit -m "Auto-log sync for 2025-08-27 05:03:25"
+[2025-08-27T05:03:30.174375] stdout: [v1.1-dev 9f6bcd50] Auto-log sync for 2025-08-27 05:03:25
+ 11 files changed, 1621 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-05_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-06_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-07_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-03_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-07_auto_git_sync.log
+[2025-08-27T05:03:30.178844] Running: git config pack.windowMemory 10m
+[2025-08-27T05:03:30.202059] Running: git config pack.packSizeLimit 20m
+[2025-08-27T05:03:30.232163] Running: git push origin v1.1-dev
+[2025-08-27T05:03:30.544721] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T05:03:30.549429] ❌ Git push failed.
+[2025-08-27T07:03:38.065870] Running: git pull origin v1.1-dev
+[2025-08-27T07:03:38.967624] stdout: Already up to date.
+[2025-08-27T07:03:38.973251] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T07:03:38.977033] Running: git add -A
+[2025-08-27T07:03:49.576179] Running: git commit -m "Auto-log sync for 2025-08-27 07:03:49"
+[2025-08-27T07:03:56.348140] stdout: [v1.1-dev 8f27b8bc] Auto-log sync for 2025-08-27 07:03:49
+ 14 files changed, 3231 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/fitness/2025-08-27.md
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-30_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-31_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-32_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T06-03-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-36_auto_git_sync.log
+ create mode 100644 memory/logs/system/heartbeat_schedule_status_2025-08-27.md
+[2025-08-27T07:03:56.354207] Running: git config pack.windowMemory 10m
+[2025-08-27T07:03:56.384863] Running: git config pack.packSizeLimit 20m
+[2025-08-27T07:03:56.439999] Running: git push origin v1.1-dev
+[2025-08-27T07:03:56.715976] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T07:03:56.719912] ❌ Git push failed.
+[2025-08-27T09:02:46.397687] Running: git pull origin v1.1-dev
+[2025-08-27T09:02:47.437435] stdout: Already up to date.
+[2025-08-27T09:02:47.441356] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T09:02:47.445943] Running: git add -A
+[2025-08-27T09:02:56.452162] Running: git commit -m "Auto-log sync for 2025-08-27 09:02:56"
+[2025-08-27T09:03:00.080074] stdout: [v1.1-dev 62f50a24] Auto-log sync for 2025-08-27 09:02:56
+ 14 files changed, 3158 insertions(+), 13 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-56_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-57_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-58_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-04-00_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-04-01_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T08-03-05_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-02-45_auto_git_sync.log
+ rewrite memory/logs/scheduler/state.json (68%)
+[2025-08-27T09:03:00.084504] Running: git config pack.windowMemory 10m
+[2025-08-27T09:03:00.125793] Running: git config pack.packSizeLimit 20m
+[2025-08-27T09:03:00.162503] Running: git push origin v1.1-dev
+[2025-08-27T09:03:00.303558] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T09:03:00.312517] ❌ Git push failed.
+[2025-08-27T11:02:46.208489] Running: git pull origin v1.1-dev
+[2025-08-27T11:02:47.286088] stdout: Already up to date.
+[2025-08-27T11:02:47.290970] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T11:02:47.294746] Running: git add -A
+[2025-08-27T11:02:57.351363] Running: git commit -m "Auto-log sync for 2025-08-27 11:02:57"
+[2025-08-27T11:03:00.397660] stdout: [v1.1-dev 1dca9f77] Auto-log sync for 2025-08-27 11:02:57
+ 12 files changed, 3031 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-00_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-01_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-03_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T10-02-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-02-44_auto_git_sync.log
+[2025-08-27T11:03:00.414920] Running: git config pack.windowMemory 10m
+[2025-08-27T11:03:00.447819] Running: git config pack.packSizeLimit 20m
+[2025-08-27T11:03:00.510120] Running: git push origin v1.1-dev
+[2025-08-27T11:03:00.823853] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T11:03:00.859674] ❌ Git push failed.
+[2025-08-27T12:03:27.388852] Running: git pull origin v1.1-dev
+[2025-08-27T12:03:28.622048] stdout: Already up to date.
+[2025-08-27T12:03:28.631106] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T12:03:28.635322] Running: git add -A
+[2025-08-27T12:03:45.097176] Running: git commit -m "Auto-log sync for 2025-08-27 12:03:45"
+[2025-08-27T12:03:48.320370] stdout: [v1.1-dev 3f38835d] Auto-log sync for 2025-08-27 12:03:45
+ 11 files changed, 1543 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-00_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-01_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-03_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-19_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-24_auto_git_sync.log
+[2025-08-27T12:03:48.324369] Running: git config pack.windowMemory 10m
+[2025-08-27T12:03:48.366236] Running: git config pack.packSizeLimit 20m
+[2025-08-27T12:03:48.407058] Running: git push origin v1.1-dev
+[2025-08-27T12:03:48.623058] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T12:03:48.632561] ❌ Git push failed.
+[2025-08-27T14:02:20.072015] Running: git pull origin v1.1-dev
+[2025-08-27T14:02:21.477621] stdout: Already up to date.
+[2025-08-27T14:02:21.499696] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T14:02:21.508760] Running: git add -A
+[2025-08-27T14:02:33.290608] Running: git commit -m "Auto-log sync for 2025-08-27 14:02:33"
+[2025-08-27T14:02:36.264347] stdout: [v1.1-dev 269ffea4] Auto-log sync for 2025-08-27 14:02:33
+ 12 files changed, 3017 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-48_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-49_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-50_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T13-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-14_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-16_auto_git_sync.log
+[2025-08-27T14:02:36.268825] Running: git config pack.windowMemory 10m
+[2025-08-27T14:02:36.299607] Running: git config pack.packSizeLimit 20m
+[2025-08-27T14:02:36.331751] Running: git push origin v1.1-dev
+[2025-08-27T14:02:36.516570] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T14:02:36.520780] ❌ Git push failed.
+[2025-08-27T16:02:38.329140] Running: git pull origin v1.1-dev
+[2025-08-27T16:02:39.136352] stdout: Already up to date.
+[2025-08-27T16:02:39.140782] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T16:02:39.144156] Running: git add -A
+[2025-08-27T16:02:46.695965] Running: git commit -m "Auto-log sync for 2025-08-27 16:02:46"
+[2025-08-27T16:02:49.424201] stdout: [v1.1-dev 3ce4486a] Auto-log sync for 2025-08-27 16:02:46
+ 24 files changed, 6164 insertions(+), 6 deletions(-)
+ create mode 100644 csv/55_Agents___Support_Sites.csv
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-36_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-37_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-37_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T15-01-53_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-35_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-37_auto_git_sync.log
+ create mode 100644 memory/web_research/2025-08-27/meta/AI_Breeder.meta
+ create mode 100644 memory/web_research/2025-08-27/meta/AI_Fault_Isolator.meta
+ create mode 100644 memory/web_research/2025-08-27/meta/AI_Hyper-Constructor.meta
+ create mode 100644 memory/web_research/2025-08-27/meta/AI_Mutator.meta
+ create mode 100644 memory/web_research/2025-08-27/raw/AI_Breeder.html
+ create mode 100644 memory/web_research/2025-08-27/raw/AI_Fault_Isolator.html
+ create mode 100644 memory/web_research/2025-08-27/raw/AI_Hyper-Constructor.html
+ create mode 100644 memory/web_research/2025-08-27/raw/AI_Mutator.html
+ create mode 100644 memory/web_research/2025-08-27/summary.csv
+ create mode 100644 memory/web_research/2025-08-27/targets.csv
+ create mode 100755 tools/agents/rebuild_web_summary.sh
+[2025-08-27T16:02:49.429229] Running: git config pack.windowMemory 10m
+[2025-08-27T16:02:49.464443] Running: git config pack.packSizeLimit 20m
+[2025-08-27T16:02:49.494197] Running: git push origin v1.1-dev
+[2025-08-27T16:02:49.649941] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T16:02:49.653610] ❌ Git push failed.
+[2025-08-27T17:57:46.904022] Running: git pull origin v1.1-dev
+[2025-08-27T17:57:46.962457] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-27T17:57:46.966237] Running: git add -A
+[2025-08-27T17:57:47.002221] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-27T17:57:47.008763] Running: git commit -m "Auto-log sync for 2025-08-27 17:57:47"
+[2025-08-27T17:57:47.083362] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-27T17:57:47.101276] Running: git config pack.windowMemory 10m
+[2025-08-27T17:57:47.292349] stderr: fatal: not in a git directory
+[2025-08-27T17:57:47.317813] Running: git config pack.packSizeLimit 20m
+[2025-08-27T17:57:47.365960] stderr: fatal: not in a git directory
+[2025-08-27T17:57:47.369726] Running: git push origin v1.1-dev
+[2025-08-27T17:57:47.554784] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-27T17:57:47.558895] ❌ Git push failed.
+[2025-08-27 17:57:47.851080] Task succeeded: Auto Git Sync
+[2025-08-27T18:02:37.707845] Running: git pull origin v1.1-dev
+[2025-08-27T18:02:38.209076] stdout: Already up to date.
+[2025-08-27T18:02:38.213738] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T18:02:38.217583] Running: git add -A
+[2025-08-27T18:02:45.958941] Running: git commit -m "Auto-log sync for 2025-08-27 18:02:45"
+[2025-08-27T18:02:50.235785] stdout: [v1.1-dev 1e2b695b] Auto-log sync for 2025-08-27 18:02:45
+ 24 files changed, 3253 insertions(+), 35 deletions(-)
+ create mode 100644 docs/PROJECT_BACKLOG.md
+ create mode 100644 memory/logs/agents/daily_sms_and_push.log
+ create mode 100644 memory/logs/heartbeat/heartbeat_log.txt
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-49_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-50_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T17-02-33_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-37_auto_git_sync.log
+ create mode 100644 memory/logs/security/security_audit_log.txt
+ create mode 100644 memory/web_research/2025-08-27/fanout.log
+ create mode 100755 tools/agents/rebuild_summary.sh
+ create mode 100755 tools/schedule_absorb_at.sh
+[2025-08-27T18:02:50.242031] Running: git config pack.windowMemory 10m
+[2025-08-27T18:02:50.273636] Running: git config pack.packSizeLimit 20m
+[2025-08-27T18:02:50.306278] Running: git push origin v1.1-dev
+[2025-08-27T18:02:50.468477] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-27T18:02:50.472094] ❌ Git push failed.
+[2025-08-27T19:02:57.336082] Running: git pull origin v1.1-dev
+[2025-08-27T19:02:58.175916] stdout: Already up to date.
+[2025-08-27T19:02:58.188188] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T19:02:58.197979] Running: git add -A
+[2025-08-27T20:02:22.499729] Running: git pull origin v1.1-dev
+[2025-08-27T20:02:23.863963] stdout: Already up to date.
+[2025-08-27T20:02:23.868500] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T20:02:23.883632] Running: git add -A
+[2025-08-27T21:01:53.403844] Running: git pull origin v1.1-dev
+[2025-08-27T21:01:54.334642] stdout: Already up to date.
+[2025-08-27T21:01:54.338498] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T21:01:54.343487] Running: git add -A
+[2025-08-27T23:02:30.136638] Running: git pull origin v1.1-dev
+[2025-08-27T23:02:30.739209] stdout: Already up to date.
+[2025-08-27T23:02:30.750859] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-27T23:02:30.757343] Running: git add -A
+[2025-08-28T00:03:28.822834] Running: git pull origin v1.1-dev
+[2025-08-28T00:03:29.364399] stdout: Already up to date.
+[2025-08-28T00:03:29.370580] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T00:03:29.374677] Running: git add -A
+[2025-08-28T00:03:33.404259] Running: git commit -m "Auto-log sync for 2025-08-28 00:03:33"
+[2025-08-28T00:03:34.555137] stdout: [v1.1-dev-clean 9bb349c7] Auto-log sync for 2025-08-28 00:03:33
+ 6 files changed, 1158 insertions(+), 1 deletion(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-25_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-27_auto_git_sync.log
+[2025-08-28T00:03:34.560010] Running: git config pack.windowMemory 10m
+[2025-08-28T00:03:34.598508] Running: git config pack.packSizeLimit 20m
+[2025-08-28T00:03:34.634503] Running: git push origin v1.1-dev
+[2025-08-28T00:03:34.767103] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T00:03:34.772646] ❌ Git push failed.
+[2025-08-28T02:02:29.845354] Running: git pull origin v1.1-dev
+[2025-08-28T02:02:30.629718] stdout: Already up to date.
+[2025-08-28T02:02:30.634190] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T02:02:30.638449] Running: git add -A
+[2025-08-28T02:02:34.995167] Running: git commit -m "Auto-log sync for 2025-08-28 02:02:34"
+[2025-08-28T02:02:36.585844] stdout: [v1.1-dev-clean c514ff6a] Auto-log sync for 2025-08-28 02:02:34
+ 12 files changed, 2965 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-34_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-35_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-35_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T01-02-47_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-28_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-29_auto_git_sync.log
+[2025-08-28T02:02:36.589488] Running: git config pack.windowMemory 10m
+[2025-08-28T02:02:36.614453] Running: git config pack.packSizeLimit 20m
+[2025-08-28T02:02:36.643546] Running: git push origin v1.1-dev
+[2025-08-28T02:02:36.756095] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T02:02:36.760779] ❌ Git push failed.
+[2025-08-28T04:02:40.750126] Running: git pull origin v1.1-dev
+[2025-08-28T04:02:41.579187] stdout: Already up to date.
+[2025-08-28T04:02:41.584395] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T04:02:41.588516] Running: git add -A
+[2025-08-28T04:02:47.620332] Running: git commit -m "Auto-log sync for 2025-08-28 04:02:47"
+[2025-08-28T04:02:51.331904] stdout: [v1.1-dev-clean 786f0165] Auto-log sync for 2025-08-28 04:02:47
+ 12 files changed, 3015 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-36_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-37_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-37_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T03-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-39_auto_git_sync.log
+[2025-08-28T04:02:51.335241] Running: git config pack.windowMemory 10m
+[2025-08-28T04:02:51.362085] Running: git config pack.packSizeLimit 20m
+[2025-08-28T04:02:51.395033] Running: git push origin v1.1-dev
+[2025-08-28T04:02:51.521215] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T04:02:51.525278] ❌ Git push failed.
+[2025-08-28T05:03:15.561126] Running: git pull origin v1.1-dev
+[2025-08-28T05:03:16.824614] stdout: Already up to date.
+[2025-08-28T05:03:16.845187] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T05:03:16.852614] Running: git add -A
+[2025-08-28T05:03:26.180462] Running: git commit -m "Auto-log sync for 2025-08-28 05:03:26"
+[2025-08-28T05:03:28.267943] stdout: [v1.1-dev-clean 7908ab44] Auto-log sync for 2025-08-28 05:03:26
+ 11 files changed, 1529 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-51_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-52_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-52_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-07_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-12_auto_git_sync.log
+[2025-08-28T05:03:28.272343] Running: git config pack.windowMemory 10m
+[2025-08-28T05:03:28.303986] Running: git config pack.packSizeLimit 20m
+[2025-08-28T05:03:28.354403] Running: git push origin v1.1-dev
+[2025-08-28T05:03:28.548406] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T05:03:28.555060] ❌ Git push failed.
+[2025-08-28T07:03:34.453265] Running: git pull origin v1.1-dev
+[2025-08-28T07:03:35.692276] stdout: Already up to date.
+[2025-08-28T07:03:35.700553] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T07:03:35.706916] Running: git add -A
+[2025-08-28T07:03:43.012136] Running: git commit -m "Auto-log sync for 2025-08-28 07:03:43"
+[2025-08-28T07:03:46.426469] stdout: [v1.1-dev-clean feb1da30] Auto-log sync for 2025-08-28 07:03:43
+ 13 files changed, 3023 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/fitness/2025-08-28.md
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-28_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-29_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-30_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T06-03-16_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-31_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-33_auto_git_sync.log
+[2025-08-28T07:03:46.433395] Running: git config pack.windowMemory 10m
+[2025-08-28T07:03:46.527837] Running: git config pack.packSizeLimit 20m
+[2025-08-28T07:03:46.573335] Running: git push origin v1.1-dev
+[2025-08-28T07:03:46.888442] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T07:03:46.895054] ❌ Git push failed.
+[2025-08-28T09:02:44.915701] Running: git pull origin v1.1-dev
+[2025-08-28T09:02:45.917316] stdout: Already up to date.
+[2025-08-28T09:02:45.922977] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T09:02:45.928644] Running: git add -A
+[2025-08-28T09:02:51.352972] Running: git commit -m "Auto-log sync for 2025-08-28 09:02:51"
+[2025-08-28T09:02:54.703486] stdout: [v1.1-dev-clean 1b047851] Auto-log sync for 2025-08-28 09:02:51
+ 14 files changed, 2978 insertions(+), 13 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-46_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-48_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-49_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-50_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T08-03-01_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-43_auto_git_sync.log
+ rewrite memory/logs/scheduler/state.json (68%)
+[2025-08-28T09:02:54.708068] Running: git config pack.windowMemory 10m
+[2025-08-28T09:02:54.733926] Running: git config pack.packSizeLimit 20m
+[2025-08-28T09:02:54.764794] Running: git push origin v1.1-dev
+[2025-08-28T09:02:54.992057] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T09:02:55.003116] ❌ Git push failed.
+[2025-08-28T11:02:47.214390] Running: git pull origin v1.1-dev
+[2025-08-28T11:02:48.020359] stdout: Already up to date.
+[2025-08-28T11:02:48.025948] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T11:02:48.030319] Running: git add -A
+[2025-08-28T11:02:54.896594] Running: git commit -m "Auto-log sync for 2025-08-28 11:02:54"
+[2025-08-28T11:02:56.799185] stdout: [v1.1-dev-clean dde4856f] Auto-log sync for 2025-08-28 11:02:54
+ 12 files changed, 3001 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-55_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-55_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-56_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T10-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-44_auto_git_sync.log
+[2025-08-28T11:02:56.804696] Running: git config pack.windowMemory 10m
+[2025-08-28T11:02:56.838902] Running: git config pack.packSizeLimit 20m
+[2025-08-28T11:02:56.907657] Running: git push origin v1.1-dev
+[2025-08-28T11:02:57.216228] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T11:02:57.220255] ❌ Git push failed.
+[2025-08-28T12:03:45.142707] Running: git pull origin v1.1-dev
+[2025-08-28T12:03:46.338561] stdout: Already up to date.
+[2025-08-28T12:03:46.343103] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T12:03:46.347290] Running: git add -A
+[2025-08-28T12:03:57.717929] Running: git commit -m "Auto-log sync for 2025-08-28 12:03:57"
+[2025-08-28T12:04:00.724438] stdout: [v1.1-dev-clean 2810b4f5] Auto-log sync for 2025-08-28 12:03:57
+ 11 files changed, 1545 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-57_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-57_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-58_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-03-39_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-03-42_auto_git_sync.log
+[2025-08-28T12:04:00.729123] Running: git config pack.windowMemory 10m
+[2025-08-28T12:04:00.784343] Running: git config pack.packSizeLimit 20m
+[2025-08-28T12:04:00.832145] Running: git push origin v1.1-dev
+[2025-08-28T12:04:01.282133] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T12:04:01.303595] ❌ Git push failed.
+[2025-08-28T14:02:20.447739] Running: git pull origin v1.1-dev
+[2025-08-28T14:02:22.222345] stdout: Already up to date.
+[2025-08-28T14:02:22.231724] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T14:02:22.236946] Running: git add -A
+[2025-08-28T14:02:31.435561] Running: git commit -m "Auto-log sync for 2025-08-28 14:02:31"
+[2025-08-28T14:02:33.447730] stdout: [v1.1-dev-clean 7bd1ea69] Auto-log sync for 2025-08-28 14:02:31
+ 12 files changed, 2953 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-01_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-04_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-08_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T13-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-17_auto_git_sync.log
+[2025-08-28T14:02:33.451693] Running: git config pack.windowMemory 10m
+[2025-08-28T14:02:33.481273] Running: git config pack.packSizeLimit 20m
+[2025-08-28T14:02:33.510738] Running: git push origin v1.1-dev
+[2025-08-28T14:02:33.665277] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T14:02:33.669552] ❌ Git push failed.
+[2025-08-28T16:02:48.788703] Running: git pull origin v1.1-dev
+[2025-08-28T16:02:49.812881] stdout: Already up to date.
+[2025-08-28T16:02:49.815881] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T16:02:49.819636] Running: git add -A
+[2025-08-28T16:02:53.974091] Running: git commit -m "Auto-log sync for 2025-08-28 16:02:53"
+[2025-08-28T16:02:57.551567] stdout: [v1.1-dev-clean 053fc3bf] Auto-log sync for 2025-08-28 16:02:53
+ 12 files changed, 3027 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-33_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-34_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-35_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T15-01-56_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-46_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-47_auto_git_sync.log
+[2025-08-28T16:02:57.556709] Running: git config pack.windowMemory 10m
+[2025-08-28T16:02:57.589556] Running: git config pack.packSizeLimit 20m
+[2025-08-28T16:02:57.623379] Running: git push origin v1.1-dev
+[2025-08-28T16:02:57.749777] stderr: fatal: could not read Username for 'https://github.com': No such device or address
+[2025-08-28T16:02:57.752987] ❌ Git push failed.
+[2025-08-28T17:29:24.948760] Running: git pull origin v1.1-dev
+[2025-08-28T17:29:24.968294] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-28T17:29:24.972669] Running: git add -A
+[2025-08-28T17:29:25.012781] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-28T17:29:25.017595] Running: git commit -m "Auto-log sync for 2025-08-28 17:29:25"
+[2025-08-28T17:29:25.061235] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-28T17:29:25.065125] Running: git config pack.windowMemory 10m
+[2025-08-28T17:29:25.154284] stderr: fatal: not in a git directory
+[2025-08-28T17:29:25.158532] Running: git config pack.packSizeLimit 20m
+[2025-08-28T17:29:25.298945] stderr: fatal: not in a git directory
+[2025-08-28T17:29:25.303012] Running: git push origin v1.1-dev
+[2025-08-28T17:29:25.373916] stderr: fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[2025-08-28T17:29:25.387685] ❌ Git push failed.
+[2025-08-28 17:29:25.596494] Task succeeded: Auto Git Sync
+[2025-08-28T18:02:35.281339] Running: git pull origin v1.1-dev
+[2025-08-28T18:02:35.755701] stdout: Already up to date.
+[2025-08-28T18:02:35.761082] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T18:02:35.765032] Running: git add -A
+[2025-08-28T19:03:22.123776] Running: git pull origin v1.1-dev
+[2025-08-28T19:03:23.001191] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+[2025-08-28T19:03:23.007432] Running: git add -A
+[2025-08-28T19:03:34.873018] Running: git commit -m "Auto-log sync for 2025-08-28 19:03:34"
+[2025-08-28T19:03:37.900412] stdout: [v1.1-dev-clean 752065fe] Auto-log sync for 2025-08-28 19:03:34
+ 12 files changed, 128 insertions(+), 1 deletion(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-41_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-42_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-43_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-44_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-18_auto_git_sync.log
+ create mode 100755 tools/dedupe_normalized.py
+ create mode 100755 tools/unpack_inbox.py
+[2025-08-28T19:03:37.907640] Running: git config pack.windowMemory 10m
+[2025-08-28T19:03:37.952697] Running: git config pack.packSizeLimit 20m
+[2025-08-28T19:03:38.032423] Running: git push origin v1.1-dev
+[2025-08-28T19:03:45.862356] stderr: remote: error: GH013: Repository rule violations found for refs/heads/v1.1-dev.        
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   —————————————————————————————————————————        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+remote:             
+remote:      (?) This repository does not have Secret Scanning enabled, but is eligible. Enable Secret Scanning to view and manage detected secrets.        
+remote:      Visit the repository settings page, https://github.com/rafa8525/consensus-project/settings/security_analysis        
+remote:             
+remote:             
+remote:       —— GitHub Personal Access Token ——————————————————————        
+remote:        locations:        
+remote:          - commit: 12e27328dedb13c1d6782c319c0dce046e0ec363        
+remote:            path: memory/logs/system/github_sync_log.md:2        
+remote:          - commit: 12e27328dedb13c1d6782c319c0dce046e0ec363        
+remote:            path: memory/logs/system/github_sync_log.md:4        
+remote:          - commit: 12e27328dedb13c1d6782c319c0dce046e0ec363        
+remote:            path: memory/logs/system/github_sync_log.md:6        
+remote:          - commit: 12e27328dedb13c1d6782c319c0dce046e0ec363        
+remote:            path: memory/logs/system/github_sync_log.md:8        
+remote:          - commit: 12e27328dedb13c1d6782c319c0dce046e0ec363        
+remote:            path: memory/logs/system/github_sync_log.md:10        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+remote:        https://github.com/rafa8525/consensus-project/security/secret-scanning/unblock-secret/31vZdntQY7yIFp790nVIVLKKrd9        
+remote:             
+remote: 
+remote: 
+To https://github.com/rafa8525/consensus-project.git
+ ! [remote rejected]   v1.1-dev -> v1.1-dev (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+[2025-08-28T19:03:45.867989] ❌ Git push failed.
+[2025-08-28T20:44:48.968500] Running: git pull origin v1.1-dev
+[2025-08-28T20:44:49.273485] stdout: Already up to date.
+[2025-08-28T20:44:49.279676] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T20:44:49.285553] Running: git add -A
+[2025-08-28T20:44:52.097041] Running: git commit -m "Auto-log sync for 2025-08-28 20:44:52"
+[2025-08-28T20:44:53.721765] stdout: [v1.1-dev-clean ff4a083c] Auto-log sync for 2025-08-28 20:44:52
+ 170 files changed, 65315 insertions(+), 6 deletions(-)
+ create mode 100644 config.yaml
+ create mode 100644 memory/logs/agents/daily_sms_and_push.log
+ create mode 100644 memory/logs/heartbeat/heartbeat.log
+ create mode 100644 memory/logs/heartbeat/heartbeat_error.log
+ create mode 100644 memory/logs/heartbeat/last_heartbeat.txt
+ create mode 100644 memory/logs/heartbeat/voice_reminder_heartbeat.log
+ create mode 100644 memory/logs/reminders/voice_reminders.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-01-55_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-01-57_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-12_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-12_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-13_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-13_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-14_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-16_geofencing_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-17_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T22-02-19_monthly_security_audit.log
+ create mode 100644 memory/logs/scheduler/2025-08-26T23-01-57_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-05_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-10_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-29_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-29_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T00-03-30_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T01-02-57_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-35_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-45_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-46_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T02-02-46_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T03-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-02-47_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-02-49_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-05_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-06_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T04-03-07_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-03_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-07_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-30_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-31_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T05-03-32_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T06-03-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-36_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-56_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-57_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-03-58_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-04-00_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T07-04-01_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T08-03-05_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-02-45_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-00_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-01_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T09-03-03_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T10-02-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-02-44_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-00_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-01_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T11-03-03_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-19_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-24_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-48_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-49_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T12-03-50_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T13-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-14_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-16_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-36_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-37_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T14-02-37_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T15-01-53_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-35_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-37_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-49_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-50_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T16-02-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T17-02-33_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-37_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-50_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-51_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-51_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T18-02-52_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T19-02-54_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T19-02-55_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T20-02-16_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T20-02-20_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T21-01-50_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T21-01-51_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T23-02-27_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-27T23-02-28_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-25_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-27_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-34_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-35_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T00-03-35_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T01-02-47_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-28_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-29_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-36_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-37_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T02-02-37_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T03-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-39_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-51_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-52_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T04-02-52_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-07_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-12_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-28_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-29_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T05-03-30_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T06-03-16_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-31_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-33_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-46_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-48_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-49_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-50_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T07-03-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T08-03-01_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-43_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-55_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-55_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T09-02-56_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T10-02-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-42_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-44_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-57_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-57_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T11-02-58_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-03-39_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-03-42_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-01_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-04_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T12-04-08_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T13-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-17_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-33_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-34_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T14-02-35_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T15-01-56_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-46_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-47_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-57_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-58_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T16-02-58_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T17-02-23_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-34_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-34_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-41_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-42_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-43_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T18-02-44_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-15_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-18_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-45_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-46_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-47_nutrition_pipeline.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T19-03-48_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T20-02-42_absorb_memory.log
+ create mode 100644 memory/logs/support_recovery/find_scan.log
+ create mode 100755 start_master.sh
+ create mode 100755 tools/absorb_once.sh
+[2025-08-28T20:44:53.726068] Running: git config pack.windowMemory 10m
+[2025-08-28T20:44:53.751430] Running: git config pack.packSizeLimit 20m
+[2025-08-28T20:44:53.789179] Running: git push origin v1.1-dev
+[2025-08-28T20:44:54.223323] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-28T20:44:54.226699] ❌ Git push failed.
+[2025-08-28 20:44:54.247699] Task succeeded: Auto Git Sync
+[2025-08-28T20:50:14.689971] Running: git pull origin v1.1-dev
+[2025-08-28T20:50:15.745295] stdout: Already up to date.
+[2025-08-28T20:50:15.749069] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T20:50:15.753043] Running: git add -A
+[2025-08-28T20:50:22.172850] Running: git commit -m "Auto-log sync for 2025-08-28 20:50:22"
+[2025-08-28T20:53:11.841938] Running: git pull origin v1.1-dev
+[2025-08-28T20:53:13.204322] stdout: Already up to date.
+[2025-08-28T20:53:13.208230] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T20:53:13.211710] Running: git add -A
+[2025-08-28T20:53:21.734963] Running: git commit -m "Auto-log sync for 2025-08-28 20:53:21"
+[2025-08-28T21:01:46.482322] Running: git pull origin v1.1-dev
+[2025-08-28T21:01:48.053253] stdout: Already up to date.
+[2025-08-28T21:01:48.067694] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T21:01:48.083596] Running: git add -A
+[2025-08-28T21:01:54.130454] Running: git commit -m "Auto-log sync for 2025-08-28 21:01:54"
+[2025-08-28T21:01:56.467776] stdout: [v1.1-dev-clean 1bcbaaa9] Auto-log sync for 2025-08-28 21:01:54
+ 15 files changed, 1548 insertions(+), 97 deletions(-)
+ create mode 100644 memory/logs/absorb/absorb_log.jsonl
+ create mode 100644 memory/logs/scheduler/2025-08-28T21-01-43_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T21-01-44_auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/auto_git_sync.log
+ create mode 100644 memory/logs/scheduler/placeholder_absorb.log
+ rewrite tools/absorb_log_append.py (98%)
+[2025-08-28T21:01:56.475550] Running: git config pack.windowMemory 10m
+[2025-08-28T21:01:56.515558] Running: git config pack.packSizeLimit 20m
+[2025-08-28T21:01:56.547996] Running: git push origin v1.1-dev
+[2025-08-28T21:01:57.440751] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-28T21:01:57.447829] ❌ Git push failed.
+[2025-08-28T21:01:59.505697] Running: git pull origin v1.1-dev
+[2025-08-28T21:02:00.982464] stdout: Already up to date.
+[2025-08-28T21:02:00.989318] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T21:02:00.994530] Running: git add -A
+[2025-08-28T21:02:12.780905] Running: git commit -m "Auto-log sync for 2025-08-28 21:02:12"
+[2025-08-28T21:02:22.841477] stdout: [v1.1-dev-clean 090115f1] Auto-log sync for 2025-08-28 21:02:12
+ 15 files changed, 311 insertions(+), 7 deletions(-)
+ create mode 100644 memory/logs/scheduler/.auto_git_sync.guard
+ create mode 100644 memory/logs/scheduler/2025-08-28T21-01-57_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T21-01-58_geofencing_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T21-01-58_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T21-01-59_voice_reminder.log
+[2025-08-28T21:02:22.872903] Running: git config pack.windowMemory 10m
+[2025-08-28T21:02:23.045784] Running: git config pack.packSizeLimit 20m
+[2025-08-28T21:02:23.160400] Running: git push origin v1.1-dev
+[2025-08-28T21:02:31.070946] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-28T21:02:31.171569] ❌ Git push failed.
+[2025-08-28 21:02:31.324558] Task succeeded: Auto Git Sync
+[2025-08-28T21:27:34.781975] Running: git pull origin v1.1-dev
+[2025-08-28T22:02:32.708839] Running: git pull origin v1.1-dev
+[2025-08-28T22:02:33.160696] stdout: Already up to date.
+[2025-08-28T22:02:33.164572] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-28T22:02:33.168034] Running: git add -A
+[2025-08-28T22:02:36.894079] Running: git commit -m "Auto-log sync for 2025-08-28 22:02:36"
+[2025-08-28T22:02:38.174440] stdout: [v1.1-dev-clean 3f127fb8] Auto-log sync for 2025-08-28 22:02:36
+ 14 files changed, 35849 insertions(+), 1 deletion(-)
+ create mode 100644 memory/logs/scheduler/2025-08-28T22-02-31_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T22-02-32_auto_git_sync.log
+[2025-08-28T22:02:38.179096] Running: git config pack.windowMemory 10m
+[2025-08-28T22:02:38.206759] Running: git config pack.packSizeLimit 20m
+[2025-08-28T22:02:38.232149] Running: git push origin v1.1-dev
+[2025-08-28T22:02:38.633087] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-28T22:02:38.636125] ❌ Git push failed.
+[2025-08-28T23:11:23.256974] Running: git pull origin v1.1-dev
+[2025-08-28T23:16:45.757819] Running: git pull origin v1.1-dev
+[2025-08-29T00:03:19.074083] Running: git pull origin v1.1-dev
+[2025-08-29T00:03:19.887780] stdout: Already up to date.
+[2025-08-29T00:03:19.899601] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T00:03:19.909244] Running: git add -A
+[2025-08-29T00:03:27.057039] Running: git commit -m "Auto-log sync for 2025-08-29 00:03:27"
+[2025-08-29T00:03:30.194308] stdout: [v1.1-dev-clean 7af7d3b8] Auto-log sync for 2025-08-29 00:03:27
+ 23 files changed, 4073 insertions(+), 112 deletions(-)
+ create mode 100755 master_control_loop.py.bak_20250828T221245
+ create mode 100755 master_control_loop.py.bak_autofix_20250828T230922
+ create mode 100755 master_control_loop.py.bak_line89_20250828T230022
+ create mode 100755 master_control_loop.py.bak_runfix_20250828T221954
+ create mode 100644 memory/logs/scheduler/2025-08-28T22-02-38_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T22-02-39_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T22-02-39_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-28T23-02-32_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T00-03-16_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T00-03-17_auto_git_sync.log
+ create mode 100644 memory/queue/sms_test_20250828T231524.json
+[2025-08-29T00:03:30.198474] Running: git config pack.windowMemory 10m
+[2025-08-29T00:03:30.228634] Running: git config pack.packSizeLimit 20m
+[2025-08-29T00:03:30.256394] Running: git push origin v1.1-dev
+[2025-08-29T00:03:30.680415] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T00:03:30.684184] ❌ Git push failed.
+[2025-08-29T02:02:49.581193] Running: git pull origin v1.1-dev
+[2025-08-29T02:02:50.006021] stdout: Already up to date.
+[2025-08-29T02:02:50.014871] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T02:02:50.018713] Running: git add -A
+[2025-08-29T02:02:54.250785] Running: git commit -m "Auto-log sync for 2025-08-29 02:02:54"
+[2025-08-29T02:02:55.752008] stdout: [v1.1-dev-clean 88cb32c1] Auto-log sync for 2025-08-29 02:02:54
+ 13 files changed, 3009 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-29T00-03-30_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T00-03-31_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T00-03-31_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T01-02-58_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T02-02-48_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T02-02-49_auto_git_sync.log
+[2025-08-29T02:02:55.756632] Running: git config pack.windowMemory 10m
+[2025-08-29T02:02:55.788256] Running: git config pack.packSizeLimit 20m
+[2025-08-29T02:02:55.819619] Running: git push origin v1.1-dev
+[2025-08-29T02:02:56.257824] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T02:02:56.262108] ❌ Git push failed.
+[2025-08-29T04:03:01.047451] Running: git pull origin v1.1-dev
+[2025-08-29T04:03:01.797192] stdout: Already up to date.
+[2025-08-29T04:03:01.803431] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T04:03:01.807311] Running: git add -A
+[2025-08-29T04:03:15.385541] Running: git commit -m "Auto-log sync for 2025-08-29 04:03:15"
+[2025-08-29T04:03:22.675955] stdout: [v1.1-dev-clean 3fcef895] Auto-log sync for 2025-08-29 04:03:15
+ 13 files changed, 3065 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-29T02-02-56_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T02-02-56_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T02-02-57_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T03-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T04-02-58_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T04-02-59_auto_git_sync.log
+[2025-08-29T04:03:22.683629] Running: git config pack.windowMemory 10m
+[2025-08-29T04:03:22.715959] Running: git config pack.packSizeLimit 20m
+[2025-08-29T04:03:22.763053] Running: git push origin v1.1-dev
+[2025-08-29T04:03:23.584160] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T04:03:23.589612] ❌ Git push failed.
+[2025-08-29T06:03:39.309919] Running: git pull origin v1.1-dev
+[2025-08-29T06:03:40.435266] stdout: Already up to date.
+[2025-08-29T06:03:40.443601] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T06:03:40.448507] Running: git add -A
+[2025-08-29T06:03:49.027352] Running: git commit -m "Auto-log sync for 2025-08-29 06:03:49"
+[2025-08-29T06:03:52.588043] stdout: [v1.1-dev-clean e65a46d6] Auto-log sync for 2025-08-29 06:03:49
+ 13 files changed, 3019 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-29T04-03-23_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T04-03-24_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T04-03-25_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T05-03-20_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T06-03-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T06-03-38_auto_git_sync.log
+[2025-08-29T06:03:52.592132] Running: git config pack.windowMemory 10m
+[2025-08-29T06:03:52.618671] Running: git config pack.packSizeLimit 20m
+[2025-08-29T06:03:52.644419] Running: git push origin v1.1-dev
+[2025-08-29T06:03:53.414527] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T06:03:53.425432] ❌ Git push failed.
+[2025-08-29T08:03:08.011268] Running: git pull origin v1.1-dev
+[2025-08-29T08:03:09.202883] stdout: Already up to date.
+[2025-08-29T08:03:09.207328] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T08:03:09.219866] Running: git add -A
+[2025-08-29T08:03:21.421377] Running: git commit -m "Auto-log sync for 2025-08-29 08:03:21"
+[2025-08-29T08:03:29.345350] stdout: [v1.1-dev-clean ab8e78ce] Auto-log sync for 2025-08-29 08:03:21
+ 16 files changed, 3036 insertions(+), 13 deletions(-)
+ create mode 100644 memory/logs/fitness/2025-08-29.md
+ create mode 100644 memory/logs/scheduler/2025-08-29T06-03-53_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T06-03-54_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T06-03-54_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T07-03-48_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T07-03-49_daily_fitness_log.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T07-03-50_heartbeat_status.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T08-03-00_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T08-03-04_auto_git_sync.log
+ rewrite memory/logs/scheduler/state.json (68%)
+[2025-08-29T08:03:29.351611] Running: git config pack.windowMemory 10m
+[2025-08-29T08:03:29.425207] Running: git config pack.packSizeLimit 20m
+[2025-08-29T08:03:29.546333] Running: git push origin v1.1-dev
+[2025-08-29T08:03:30.598860] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T08:03:30.602833] ❌ Git push failed.
+[2025-08-29T10:02:40.145092] Running: git pull origin v1.1-dev
+[2025-08-29T10:02:41.080981] stdout: Already up to date.
+[2025-08-29T10:02:41.085688] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T10:02:41.090585] Running: git add -A
+[2025-08-29T10:02:45.972053] Running: git commit -m "Auto-log sync for 2025-08-29 10:02:45"
+[2025-08-29T10:02:49.763848] stdout: [v1.1-dev-clean 3c48b63f] Auto-log sync for 2025-08-29 10:02:45
+ 13 files changed, 2995 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-29T08-03-30_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T08-03-31_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T08-03-33_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T09-02-11_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T10-02-37_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T10-02-38_auto_git_sync.log
+[2025-08-29T10:02:49.767555] Running: git config pack.windowMemory 10m
+[2025-08-29T10:02:49.797952] Running: git config pack.packSizeLimit 20m
+[2025-08-29T10:02:49.852034] Running: git push origin v1.1-dev
+[2025-08-29T10:02:50.406403] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T10:02:50.410179] ❌ Git push failed.
+[2025-08-29T12:03:50.718265] Running: git pull origin v1.1-dev
+[2025-08-29T12:03:51.789983] stdout: Already up to date.
+[2025-08-29T12:03:51.800885] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T12:03:51.804703] Running: git add -A
+[2025-08-29T12:04:02.535846] Running: git commit -m "Auto-log sync for 2025-08-29 12:04:02"
+[2025-08-29T12:04:10.333444] stdout: [v1.1-dev-clean 379e1738] Auto-log sync for 2025-08-29 12:04:02
+ 13 files changed, 3037 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-29T10-02-50_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T10-02-50_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T10-02-51_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T11-02-40_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T12-03-46_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T12-03-49_auto_git_sync.log
+[2025-08-29T12:04:10.339582] Running: git config pack.windowMemory 10m
+[2025-08-29T12:04:10.371117] Running: git config pack.packSizeLimit 20m
+[2025-08-29T12:04:10.404362] Running: git push origin v1.1-dev
+[2025-08-29T12:04:11.363317] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T12:04:11.367791] ❌ Git push failed.
+[2025-08-29T14:02:11.175576] Running: git pull origin v1.1-dev
+[2025-08-29T14:02:12.573920] stdout: Already up to date.
+[2025-08-29T14:02:12.577887] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T14:02:12.581933] Running: git add -A
+[2025-08-29T14:02:26.374023] Running: git commit -m "Auto-log sync for 2025-08-29 14:02:26"
+[2025-08-29T14:02:30.358549] stdout: [v1.1-dev-clean 5d760683] Auto-log sync for 2025-08-29 14:02:26
+ 13 files changed, 2979 insertions(+), 6 deletions(-)
+ create mode 100644 memory/logs/scheduler/2025-08-29T12-04-11_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T12-04-13_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T12-04-14_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T13-02-40_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T14-02-07_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T14-02-09_auto_git_sync.log
+[2025-08-29T14:02:30.366582] Running: git config pack.windowMemory 10m
+[2025-08-29T14:02:30.408464] Running: git config pack.packSizeLimit 20m
+[2025-08-29T14:02:30.457871] Running: git push origin v1.1-dev
+[2025-08-29T14:02:31.535108] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T14:02:31.543245] ❌ Git push failed.
+[2025-08-29T16:02:38.554832] Running: git pull origin v1.1-dev
+[2025-08-29T16:02:39.276086] stdout: Already up to date.
+[2025-08-29T16:02:39.279354] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T16:02:39.283519] Running: git add -A
+[2025-08-29T16:02:43.593564] Running: git commit -m "Auto-log sync for 2025-08-29 16:02:43"
+[2025-08-29T16:02:45.562013] stdout: [v1.1-dev-clean 11d94c35] Auto-log sync for 2025-08-29 16:02:43
+ 14 files changed, 3037 insertions(+), 6 deletions(-)
+ create mode 100644 mcl_guard.py
+ create mode 100644 memory/logs/scheduler/2025-08-29T14-02-31_auto_memory_sync.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T14-02-33_heartbeat_logger.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T14-02-34_voice_reminder.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T15-01-52_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T16-02-36_absorb_memory.log
+ create mode 100644 memory/logs/scheduler/2025-08-29T16-02-37_auto_git_sync.log
+[2025-08-29T16:02:45.564967] Running: git config pack.windowMemory 10m
+[2025-08-29T16:02:45.589530] Running: git config pack.packSizeLimit 20m
+[2025-08-29T16:02:45.616148] Running: git push origin v1.1-dev
+[2025-08-29T16:02:46.010734] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T16:02:46.015627] ❌ Git push failed.
+[2025-08-29T16:22:27.466686] Running: git pull origin v1.1-dev
+[2025-08-29T16:22:33.328166] stdout: Already up to date.
+[2025-08-29T16:22:33.359231] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T16:22:33.366031] Running: git add -A
+[2025-08-29T16:23:11.183972] Running: git commit -m "Auto-log sync for 2025-08-29 16:23:11"
+[2025-08-29T16:23:12.877514] stderr: fatal: unable to create threaded lstat: Resource temporarily unavailable
+[2025-08-29T16:23:13.128884] Running: git config pack.windowMemory 10m
+[2025-08-29T16:23:13.554921] Running: git config pack.packSizeLimit 20m
+[2025-08-29T16:23:14.068621] stderr: /bin/sh: 1: Cannot fork
+[2025-08-29T16:23:14.614942] Running: git push origin v1.1-dev
+[2025-08-29T16:23:14.707488] Unhandled exception: [Errno 1] Operation not permitted: '/bin/sh'
+[2025-08-29 16:23:15.083012] Task succeeded: Auto Git Sync
+[2025-08-29T16:23:28.169585] Running: git pull origin v1.1-dev
+[2025-08-29T16:23:31.107130] stdout: Already up to date.
+[2025-08-29T16:23:31.115450] stderr: From https://github.com/rafa8525/consensus-project
+ * branch              v1.1-dev   -> FETCH_HEAD
+[2025-08-29T16:23:31.119970] Running: git add -A
+[2025-08-29T16:23:59.992847] Running: git commit -m "Auto-log sync for 2025-08-29 16:23:59"
+[2025-08-29T16:24:01.727259] stderr: fatal: unable to create threaded lstat: Resource temporarily unavailable
+[2025-08-29T16:24:01.846771] Running: git config pack.windowMemory 10m
+[2025-08-29T16:24:02.511073] Running: git config pack.packSizeLimit 20m
+[2025-08-29T16:24:03.316311] Running: git push origin v1.1-dev
+[2025-08-29T16:24:17.492242] stderr: To https://github.com/rafa8525/consensus-project.git
+ ! [rejected]          v1.1-dev -> v1.1-dev (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rafa8525/consensus-project.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025-08-29T16:24:17.606887] ❌ Git push failed.
+[2025-08-29 16:24:18.535093] Task succeeded: Auto Git Sync

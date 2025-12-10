@@ -1,0 +1,16 @@
+{
+  "id": "geofence-sms-status-20251125T0019325724290000",
+  "type": "metric",
+  "source_agent": "geofence_sms_monitor_agent",
+  "content": "Geofence / SMS status at 2025-11-25T00:19:32.572429+00:00:\n\n- Status: idle\n- Reason: Only 0 geofence events in the window; below threshold for reliability checks.\n- Lookback window: last 48 hours (cutoff 2025-11-23T00:19:32.558119+00:00)\n- Total geofence events: 0\n- Total SMS events: 2\n\nPer-log geofence counts:\n- memory/logs/transport/transit_log.md: 0\n- memory/logs/system/sms_daemon/geofence_events.jsonl: 0\n\nPer-log SMS counts:\n- memory/logs/system/sms_daemon/sms_events.jsonl: 0\n- memory/logs/system/sms_daemon/sms_daemon.log: 0\n- memory/logs/system/voice_trigger_heartbeat.log: 2",
+  "tags": [
+    "geofence",
+    "sms",
+    "reminders",
+    "health"
+  ],
+  "sensitivity": "internal",
+  "created_at": "2025-11-25T00:19:32.572550+00:00",
+  "updated_at": "2025-11-25T00:19:32.572550+00:00",
+  "confidence": 0.7
+}

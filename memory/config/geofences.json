@@ -1,0 +1,18 @@
+{
+  "geofences": [
+    {
+      "id": "tzunun_pleasant_hill",
+      "name": "T'zunun",
+      "address": "2618 Pleasant Hill Rd, Pleasant Hill, CA 94523",
+      "radius_meters": 120,
+      "enabled": true,
+      "triggers": [
+        {
+          "channel": "sms",
+          "template_id": "tzunun_lunch_bday",
+          "quiet_hours_ok": true
+        }
+      ]
+    }
+  ]
+}

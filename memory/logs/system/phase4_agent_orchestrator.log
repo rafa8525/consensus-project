@@ -1,0 +1,2856 @@
+[2025-11-25T17:36:31.861179] START tools/scenario_simulation_suite.py
+[2025-11-25T17:36:34.026490] END   tools/scenario_simulation_suite.py status=OK
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=107.03ms
+GitHub Visibility Test → PASS | delay=1.18s
+Fitness Data Integrity Test → PASS | recovery=5.89s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 107.03, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.029791] START tools/self_improvement_engine.py
+[2025-11-25T17:36:34.083220] END   tools/self_improvement_engine.py status=ERROR 2
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.087397] START tools/predictive_planner.py
+[2025-11-25T17:36:34.138537] END   tools/predictive_planner.py status=ERROR 2
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.143188] START tools/symbolic_reasoner.py
+[2025-11-25T17:36:34.200691] END   tools/symbolic_reasoner.py status=ERROR 2
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.204434] START tools/auto_doc_agent.py
+[2025-11-25T17:36:34.265983] END   tools/auto_doc_agent.py status=ERROR 2
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.269404] START tools/learning_optimizer_agent.py
+[2025-11-25T17:36:34.324728] END   tools/learning_optimizer_agent.py status=ERROR 2
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.329025] START tools/proactive_nudge_agent.py
+[2025-11-25T17:36:34.384664] END   tools/proactive_nudge_agent.py status=ERROR 2
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.388905] START tools/meta_learning_core.py
+[2025-11-25T17:36:34.500993] END   tools/meta_learning_core.py status=OK
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-25.json
+=== Meta-Learning Core Cycle Complete ===
+
+--------------------------------------------------------------------------------
+[2025-11-25T17:36:34.505920] START tools/cross_agent_fitness.py
+[2025-11-25T17:36:34.563232] END   tools/cross_agent_fitness.py status=OK
+Stub: cross_agent_fitness.py
+
+--------------------------------------------------------------------------------
+================================================================================
+[2025-11-25T17:41:29.640075+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-11-25T17:41:29.644889+00:00] START tools/scenario_simulation_suite.py
+[2025-11-25T17:41:31.749144+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=53.19ms
+GitHub Visibility Test → PASS | delay=1.09s
+Fitness Data Integrity Test → PASS | recovery=1.65s
+Finance Logging Integrity Test → FAIL | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 3, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:31.765868+00:00] START tools/self_improvement_engine.py
+[2025-11-25T17:41:31.814220+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:31.829886+00:00] START tools/predictive_planner.py
+[2025-11-25T17:41:31.881419+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:31.897909+00:00] START tools/symbolic_reasoner.py
+[2025-11-25T17:41:31.951911+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:31.973338+00:00] START tools/auto_doc_agent.py
+[2025-11-25T17:41:32.048193+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:32.065573+00:00] START tools/learning_optimizer_agent.py
+[2025-11-25T17:41:32.137054+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:32.154095+00:00] START tools/proactive_nudge_agent.py
+[2025-11-25T17:41:32.204705+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:32.219670+00:00] START tools/meta_learning_core.py
+[2025-11-25T17:41:32.320751+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-25.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:32.335454+00:00] START tools/cross_agent_fitness.py
+[2025-11-25T17:41:32.392326+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-11-25T17:41:32.407265+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-11-26T07:03:05.100502+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-11-26T07:03:05.123088+00:00] START tools/scenario_simulation_suite.py
+[2025-11-26T07:03:08.060922+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=104.41ms
+GitHub Visibility Test → PASS | delay=2.15s
+Fitness Data Integrity Test → PASS | recovery=3.59s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:08.078254+00:00] START tools/self_improvement_engine.py
+[2025-11-26T07:03:08.490089+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:08.505148+00:00] START tools/predictive_planner.py
+[2025-11-26T07:03:08.713747+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:08.736628+00:00] START tools/symbolic_reasoner.py
+[2025-11-26T07:03:09.104326+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:09.124247+00:00] START tools/auto_doc_agent.py
+[2025-11-26T07:03:09.355566+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:09.372083+00:00] START tools/learning_optimizer_agent.py
+[2025-11-26T07:03:09.614626+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:09.628951+00:00] START tools/proactive_nudge_agent.py
+[2025-11-26T07:03:09.839927+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:09.859490+00:00] START tools/meta_learning_core.py
+[2025-11-26T07:03:10.403096+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-26.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:10.420344+00:00] START tools/cross_agent_fitness.py
+[2025-11-26T07:03:10.633629+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-11-26T07:03:10.664890+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-11-27T07:03:11.408708+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-11-27T07:03:11.413143+00:00] START tools/scenario_simulation_suite.py
+[2025-11-27T07:03:14.174656+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=315.86ms
+GitHub Visibility Test → PASS | delay=1.16s
+Fitness Data Integrity Test → FAIL | recovery=4.33s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 315.86, 'result': 'FAIL'}
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 4.33, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:14.193130+00:00] START tools/self_improvement_engine.py
+[2025-11-27T07:03:14.421629+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:14.435392+00:00] START tools/predictive_planner.py
+[2025-11-27T07:03:14.627599+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:14.641679+00:00] START tools/symbolic_reasoner.py
+[2025-11-27T07:03:14.837632+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:14.856815+00:00] START tools/auto_doc_agent.py
+[2025-11-27T07:03:15.007582+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:15.039891+00:00] START tools/learning_optimizer_agent.py
+[2025-11-27T07:03:15.190060+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:15.204515+00:00] START tools/proactive_nudge_agent.py
+[2025-11-27T07:03:15.456053+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:15.476144+00:00] START tools/meta_learning_core.py
+[2025-11-27T07:03:15.618117+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-27.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:15.635802+00:00] START tools/cross_agent_fitness.py
+[2025-11-27T07:03:15.721271+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-11-27T07:03:15.755304+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-11-28T07:03:24.443951+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-11-28T07:03:24.449027+00:00] START tools/scenario_simulation_suite.py
+[2025-11-28T07:03:26.665677+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=122.72ms
+GitHub Visibility Test → PASS | delay=1.12s
+Fitness Data Integrity Test → FAIL | recovery=4.78s
+Finance Logging Integrity Test → FAIL | missing_entries=3
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 4.78, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 3, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:26.684076+00:00] START tools/self_improvement_engine.py
+[2025-11-28T07:03:26.779848+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:26.801185+00:00] START tools/predictive_planner.py
+[2025-11-28T07:03:26.916090+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:26.935392+00:00] START tools/symbolic_reasoner.py
+[2025-11-28T07:03:27.116595+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:27.131338+00:00] START tools/auto_doc_agent.py
+[2025-11-28T07:03:27.343606+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:27.364523+00:00] START tools/learning_optimizer_agent.py
+[2025-11-28T07:03:27.536575+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:27.552360+00:00] START tools/proactive_nudge_agent.py
+[2025-11-28T07:03:27.684953+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:27.699906+00:00] START tools/meta_learning_core.py
+[2025-11-28T07:03:28.046062+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-28.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:28.062407+00:00] START tools/cross_agent_fitness.py
+[2025-11-28T07:03:28.240544+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-11-28T07:03:28.263564+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-11-29T07:03:32.579179+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-11-29T07:03:32.588823+00:00] START tools/scenario_simulation_suite.py
+[2025-11-29T07:03:34.871761+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=220.24ms
+GitHub Visibility Test → PASS | delay=2.55s
+Fitness Data Integrity Test → PASS | recovery=3.62s
+Finance Logging Integrity Test → PASS | missing_entries=1
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:34.881603+00:00] START tools/self_improvement_engine.py
+[2025-11-29T07:03:34.955870+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:34.966256+00:00] START tools/predictive_planner.py
+[2025-11-29T07:03:35.046876+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.059391+00:00] START tools/symbolic_reasoner.py
+[2025-11-29T07:03:35.134280+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.150057+00:00] START tools/auto_doc_agent.py
+[2025-11-29T07:03:35.235701+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.252166+00:00] START tools/learning_optimizer_agent.py
+[2025-11-29T07:03:35.326944+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.345160+00:00] START tools/proactive_nudge_agent.py
+[2025-11-29T07:03:35.424387+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.439478+00:00] START tools/meta_learning_core.py
+[2025-11-29T07:03:35.596200+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-29.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.621091+00:00] START tools/cross_agent_fitness.py
+[2025-11-29T07:03:35.731275+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-11-29T07:03:35.748117+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-11-30T07:03:49.797458+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-11-30T07:03:49.800999+00:00] START tools/scenario_simulation_suite.py
+[2025-11-30T07:03:52.022090+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=91.13ms
+GitHub Visibility Test → PASS | delay=0.57s
+Fitness Data Integrity Test → PASS | recovery=2.76s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:52.036027+00:00] START tools/self_improvement_engine.py
+[2025-11-30T07:03:52.249084+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:52.273636+00:00] START tools/predictive_planner.py
+[2025-11-30T07:03:52.425456+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:52.442033+00:00] START tools/symbolic_reasoner.py
+[2025-11-30T07:03:52.568852+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:52.584180+00:00] START tools/auto_doc_agent.py
+[2025-11-30T07:03:52.660910+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:52.678701+00:00] START tools/learning_optimizer_agent.py
+[2025-11-30T07:03:52.868634+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:52.892489+00:00] START tools/proactive_nudge_agent.py
+[2025-11-30T07:03:53.109584+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:53.128178+00:00] START tools/meta_learning_core.py
+[2025-11-30T07:03:53.443261+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-11-30.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:53.461869+00:00] START tools/cross_agent_fitness.py
+[2025-11-30T07:03:53.797626+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-11-30T07:03:53.812852+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-12-01T07:03:40.776037+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-01T07:03:40.782599+00:00] START tools/scenario_simulation_suite.py
+[2025-12-01T07:03:43.210639+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=222.02ms
+GitHub Visibility Test → PASS | delay=1.18s
+Fitness Data Integrity Test → PASS | recovery=4.83s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.242862+00:00] START tools/self_improvement_engine.py
+[2025-12-01T07:03:43.406642+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.430124+00:00] START tools/predictive_planner.py
+[2025-12-01T07:03:43.528820+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.548133+00:00] START tools/symbolic_reasoner.py
+[2025-12-01T07:03:43.630010+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.646859+00:00] START tools/auto_doc_agent.py
+[2025-12-01T07:03:43.733202+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.751506+00:00] START tools/learning_optimizer_agent.py
+[2025-12-01T07:03:43.809224+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.823787+00:00] START tools/proactive_nudge_agent.py
+[2025-12-01T07:03:43.878745+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:43.894650+00:00] START tools/meta_learning_core.py
+[2025-12-01T07:03:44.030804+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-01.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:44.048710+00:00] START tools/cross_agent_fitness.py
+[2025-12-01T07:03:44.128127+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-01T07:03:44.144942+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-12-02T07:03:33.321464+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-02T07:03:33.325805+00:00] START tools/scenario_simulation_suite.py
+[2025-12-02T07:03:35.550685+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=253.33ms
+GitHub Visibility Test → PASS | delay=2.06s
+Fitness Data Integrity Test → PASS | recovery=2.83s
+Finance Logging Integrity Test → PASS | missing_entries=2
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:35.573324+00:00] START tools/self_improvement_engine.py
+[2025-12-02T07:03:35.691099+00:00] END   tools/self_improvement_engine.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/self_improvement_engine.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:35.715385+00:00] START tools/predictive_planner.py
+[2025-12-02T07:03:35.976018+00:00] END   tools/predictive_planner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/predictive_planner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:35.994110+00:00] START tools/symbolic_reasoner.py
+[2025-12-02T07:03:36.148021+00:00] END   tools/symbolic_reasoner.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/symbolic_reasoner.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:36.165267+00:00] START tools/auto_doc_agent.py
+[2025-12-02T07:03:36.284515+00:00] END   tools/auto_doc_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/auto_doc_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:36.300828+00:00] START tools/learning_optimizer_agent.py
+[2025-12-02T07:03:36.415965+00:00] END   tools/learning_optimizer_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/learning_optimizer_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:36.434076+00:00] START tools/proactive_nudge_agent.py
+[2025-12-02T07:03:36.604415+00:00] END   tools/proactive_nudge_agent.py status=ERROR 2
+--- STDERR ---
+python3: can't open file '/home/rafa1215/consensus-project/tools/proactive_nudge_agent.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:36.628573+00:00] START tools/meta_learning_core.py
+[2025-12-02T07:03:36.835181+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-02.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:36.855045+00:00] START tools/cross_agent_fitness.py
+[2025-12-02T07:03:36.999541+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-02T07:03:37.019086+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=False
+================================================================================
+================================================================================
+[2025-12-02T21:59:49.684673+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-02T21:59:49.688555+00:00] START tools/scenario_simulation_suite.py
+[2025-12-02T21:59:51.775610+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=258.09ms
+GitHub Visibility Test → PASS | delay=0.55s
+Fitness Data Integrity Test → FAIL | recovery=5.79s
+Finance Logging Integrity Test → FAIL | missing_entries=1
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 5.79, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 1, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T21:59:51.789681+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-02T22:05:35.318589+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-02T22:05:35.322854+00:00] START tools/scenario_simulation_suite.py
+[2025-12-02T22:05:37.417565+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=75.24ms
+GitHub Visibility Test → FAIL | delay=2.78s
+Fitness Data Integrity Test → PASS | recovery=5.67s
+Finance Logging Integrity Test → FAIL | missing_entries=2
+=== Simulation Summary → FAIL (3 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 75.24, 'result': 'FAIL'}
+⚠️  GitHub Visibility failed with data: {'test': 'GitHub Visibility', 'delay': 2.78, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 2, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T22:05:37.434491+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-02T22:12:50.922649+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-02T22:12:50.926096+00:00] START tools/scenario_simulation_suite.py
+[2025-12-02T22:12:53.016513+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=278.5ms
+GitHub Visibility Test → PASS | delay=1.89s
+Fitness Data Integrity Test → FAIL | recovery=2.99s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 278.5, 'result': 'FAIL'}
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 2.99, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T22:12:53.031479+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-02T22:17:07.644697+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-02T22:17:07.648401+00:00] START tools/scenario_simulation_suite.py
+[2025-12-02T22:17:09.730638+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=75.5ms
+GitHub Visibility Test → PASS | delay=0.79s
+Fitness Data Integrity Test → FAIL | recovery=5.85s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 5.85, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T22:17:09.744803+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-02T22:17:12.659570+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-02T22:17:12.663040+00:00] START tools/scenario_simulation_suite.py
+[2025-12-02T22:17:14.771479+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=112.57ms
+GitHub Visibility Test → PASS | delay=2.76s
+Fitness Data Integrity Test → FAIL | recovery=2.11s
+Finance Logging Integrity Test → FAIL | missing_entries=1
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 2.11, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 1, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-02T22:17:14.784774+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-03T07:03:54.151782+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-03T07:03:54.158518+00:00] START tools/scenario_simulation_suite.py
+[2025-12-03T07:03:56.309252+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=141.28ms
+GitHub Visibility Test → PASS | delay=2.92s
+Fitness Data Integrity Test → PASS | recovery=1.48s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 141.28, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-03T07:03:56.325382+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-03T07:08:43.343070+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-03T07:08:43.347898+00:00] START tools/scenario_simulation_suite.py
+[2025-12-03T07:08:45.457155+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=73.48ms
+GitHub Visibility Test → PASS | delay=1.85s
+Fitness Data Integrity Test → FAIL | recovery=4.66s
+Finance Logging Integrity Test → FAIL | missing_entries=2
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 4.66, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 2, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-03T07:08:45.470879+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-03T07:08:48.391486+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-03T07:08:48.395322+00:00] START tools/scenario_simulation_suite.py
+[2025-12-03T07:08:50.500186+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=92.84ms
+GitHub Visibility Test → PASS | delay=2.19s
+Fitness Data Integrity Test → PASS | recovery=2.62s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-03T07:08:50.513931+00:00] START tools/recursive_self_improvement.py
+[2025-12-03T07:14:12.049989+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+⚖️ Kept original vpn_activation_test.py (score 4.875 ≥ 4.852).
+✅ Replaced agents_notify.py with improved variant (score 4.828 > 4.814).
+⚖️ Kept original catchup_guard.py (score 4.865 ≥ 4.798).
+⚖️ Kept original report_master.py (score 3.518 ≥ 3.318).
+✅ Replaced voice_guard.py with improved variant (score 4.708 > 4.694).
+⚖️ Kept original anticipation_research_agent.py (score 4.609 ≥ 4.574).
+⚖️ Kept original system_maintenance.py (score 3.917 ≥ 3.906).
+⚖️ Kept original system_bootstrap.py (score 4.904 ≥ 4.88).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.804 > 4.789).
+✅ Replaced barcode_cache.py with improved variant (score 4.512 > 4.071).
+✅ Replaced simulate_geofence.py with improved variant (score 4.84 > 4.734).
+✅ Replaced security_audit_scheduler.py with improved variant (score 4.405 > 4.043).
+✅ Replaced vpn_activation_detector.py with improved variant (score 4.872 > 4.826).
+⚖️ Kept original preflight.py (score 4.898 ≥ 4.889).
+⚖️ Kept original core_monitors_bundle.py (score 0.0 ≥ 0.0).
+✅ Replaced run_absorption.py with improved variant (score 4.341 > 4.199).
+✅ Replaced recursive_evolution_manager.py with improved variant (score 4.789 > 4.779).
+✅ Replaced support_sites_router.py with improved variant (score 4.904 > 4.896).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.835 > 4.786).
+✅ Replaced absorb_guard.py with improved variant (score 4.903 > 4.887).
+✅ Replaced nutrition_fallback.py with improved variant (score 4.943 > 4.926).
+✅ Replaced security_audit.py with improved variant (score 4.907 > 4.838).
+✅ Replaced fitness_normalize.py with improved variant (score 4.889 > 4.879).
+✅ Replaced core_sanity_suite.py with improved variant (score 4.914 > 4.899).
+✅ Replaced unpack_inbox.py with improved variant (score 4.915 > 4.908).
+✅ Replaced sms_fallback_queue.py with improved variant (score 4.609 > 4.518).
+✅ Replaced fitness_audit.py with improved variant (score 4.871 > 4.863).
+⚖️ Kept original generate_agent_docs_part1.py (score 4.76 ≥ 4.75).
+⚖️ Kept original master_guard_integrator.py (score 3.807 ≥ 3.715).
+✅ Replaced barcode_sync.py with improved variant (score 4.849 > 4.837).
+✅ Replaced alert_triage.py with improved variant (score 4.691 > 4.446).
+✅ Replaced auto_doc_agent.py with improved variant (score 4.946 > 4.94).
+⚖️ Kept original reminder_runner.py (score 4.869 ≥ 4.809).
+⚖️ Kept original agi_evolution_sandbox.py (score 4.857 ≥ 4.703).
+✅ Replaced optimize_agent_priorities.py with improved variant (score 4.359 > 4.089).
+✅ Replaced predictive_planner.py with improved variant (score 4.837 > 4.804).
+⚖️ Kept original sms_service_guard.py (score 4.585 ≥ 4.389).
+⚖️ Kept original permanent_layer_verifier.py (score 4.467 ≥ 4.392).
+⚖️ Kept original integration_manifest.py (score 4.486 ≥ 4.453).
+✅ Replaced fitness_ingest.py with improved variant (score 4.432 > 4.358).
+✅ Replaced fitness_progress_master.py with improved variant (score 3.196 > 3.158).
+✅ Replaced self_improvement.py with improved variant (score 4.61 > 4.252).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+✅ Replaced symbolic_reasoning.py with improved variant (score 4.815 > 4.626).
+✅ Replaced knowledge_sharing_validator.py with improved variant (score 4.737 > 4.69).
+✅ Replaced simulate_and_prepare.py with improved variant (score 4.714 > 4.689).
+⚖️ Kept original ask_memory.py (score 4.612 ≥ 4.597).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_parser.py with improved variant (score 3.749 > 3.68).
+⚖️ Kept original gmail_refresh_guard_v3.py (score 4.228 ≥ 4.109).
+✅ Replaced security_reliability.py with improved variant (score 4.756 > 4.62).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+⚖️ Kept original voice_schedule_event.py (score 3.952 ≥ 3.608).
+⚖️ Kept original parse_food_log_sheet.py (score 4.835 ≥ 4.829).
+⚖️ Kept original knowledge_master.py (score 0.0 ≥ 0.0).
+✅ Replaced absorb_status_report.py with improved variant (score 4.798 > 4.776).
+✅ Replaced memory_compressor.py with improved variant (score 4.463 > 4.243).
+⚖️ Kept original summary_guard.py (score 4.65 ≥ 4.637).
+✅ Replaced agents_postclean.py with improved variant (score 4.897 > 4.883).
+⚖️ Kept original self_generation_engine.py (score 4.85 ≥ 4.85).
+✅ Replaced agi_simulation.py with improved variant (score 4.897 > 4.893).
+✅ Replaced benchmark_agents.py with improved variant (score 3.724 > 3.674).
+✅ Replaced notify_layer.py with improved variant (score 4.894 > 4.876).
+⚖️ Kept original consensus_dispatcher.py (score 4.858 ≥ 4.852).
+⚖️ Kept original filename_guard.py (score 4.898 ≥ 4.89).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+✅ Replaced project_delta_report.py with improved variant (score 4.894 > 4.887).
+⚖️ Kept original import_fitness_dispatch.py (score 4.867 ≥ 4.826).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.898 > 4.852).
+✅ Replaced watch_voice_trigger.py with improved variant (score 4.932 > 4.925).
+✅ Replaced health_master.py with improved variant (score 4.228 > 4.036).
+✅ Replaced morning_master.py with improved variant (score 4.662 > 4.613).
+⚖️ Kept original decision_support.py (score 4.943 ≥ 4.939).
+⚖️ Kept original nutrition_normalize.py (score 4.922 ≥ 4.915).
+✅ Replaced log_repair_guard.py with improved variant (score 4.852 > 4.843).
+⚖️ Kept original heartbeat_monitor.py (score 4.565 ≥ 4.501).
+✅ Replaced daily_voice_reminder.py with improved variant (score 4.902 > 4.877).
+✅ Replaced fitness_integration.py with improved variant (score 4.885 > 4.883).
+⚖️ Kept original scenario_simulation_engine.py (score 4.771 ≥ 4.756).
+✅ Replaced ride_deals_scan.py with improved variant (score 3.827 > 3.764).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+✅ Replaced fitness_integration_live.py with improved variant (score 4.32 > 3.97).
+✅ Replaced voice_gmail_handler.py with improved variant (score 4.556 > 4.539).
+✅ Replaced project_status_report_agent.py with improved variant (score 4.904 > 4.896).
+✅ Replaced predictive_foresight_engine.py with improved variant (score 4.828 > 4.812).
+⚖️ Kept original agents_loop.py (score 4.902 ≥ 4.89).
+⚖️ Kept original finance_media.py (score 3.523 ≥ 2.749).
+✅ Replaced voice_context_loader.py with improved variant (score 4.928 > 4.909).
+⚖️ Kept original voice_connector_chatgpt.py (score 4.48 ≥ 4.387).
+⚖️ Kept original vpn_health_agent.py (score 4.905 ≥ 4.899).
+✅ Replaced watchdog_heartbeat.py with improved variant (score 4.917 > 4.903).
+✅ Replaced fitness_status_reporter.py with improved variant (score 4.911 > 4.876).
+✅ Replaced predictive_task_flow.py with improved variant (score 4.885 > 4.853).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 4.012 > 3.822).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+✅ Replaced coverage_refresh.py with improved variant (score 4.054 > 3.873).
+⚖️ Kept original convert_csv_to_yaml.py (score 4.662 ≥ 4.6).
+⚖️ Kept original generate_daily_state.py (score 4.831 ≥ 4.744).
+⚖️ Kept original rsi_orchestrator.py (score 4.897 ≥ 4.87).
+⚖️ Kept original state_tracker.py (score 4.91 ≥ 4.898).
+⚖️ Kept original scenario_simulation_suite.py (score 2.853 ≥ 2.776).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.783 > 4.743).
+⚖️ Kept original movies_monitor.py (score 4.601 ≥ 4.526).
+⚖️ Kept original geofence_heartbeat.py (score 4.905 ≥ 4.827).
+✅ Replaced fitness_daily_summary.py with improved variant (score 4.898 > 4.897).
+✅ Replaced recursive_ai_improvement.py with improved variant (score 4.904 > 4.893).
+✅ Replaced knowledge_graph.py with improved variant (score 1.903 > 1.515).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+⚖️ Kept original verify_knowledge_base.py (score 4.91 ≥ 4.887).
+⚖️ Kept original vpn_events_normalizer.py (score 4.902 ≥ 4.895).
+✅ Replaced consensus_auto_repair_suite.py with improved variant (score 2.753 > 2.319).
+✅ Replaced build_final_agent_report.py with improved variant (score 4.134 > 4.038).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_sync_drive.py with improved variant (score 2.886 > 2.874).
+⚖️ Kept original verify_logs_tree.py (score 4.895 ≥ 4.883).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.838 > 4.831).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.888 ≥ 4.882).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 3.847 > 3.789).
+⚖️ Kept original write_memory_heartbeats.py (score 0.0 ≥ 0.0).
+✅ Replaced scheduler.py with improved variant (score 4.823 > 4.757).
+⚖️ Kept original top10_generator.py (score 2.879 ≥ 2.136).
+✅ Replaced agents_orchestrator.py with improved variant (score 4.835 > 4.755).
+⚖️ Kept original finance_audit.py (score 4.833 ≥ 4.827).
+⚖️ Kept original geofence_engine.py (score 4.906 ≥ 4.724).
+✅ Replaced geo_receiver.py with improved variant (score 3.787 > 2.779).
+⚖️ Kept original sandbox_executor.py (score 4.506 ≥ 4.009).
+⚖️ Kept original dedupe_normalized.py (score 4.563 ≥ 4.557).
+✅ Replaced get_folder_size.py with improved variant (score 4.694 > 4.657).
+✅ Replaced vpn_functional_test_runner.py with improved variant (score 4.775 > 4.609).
+✅ Replaced finance_master.py with improved variant (score 4.902 > 4.867).
+⚖️ Kept original kb_summarizer_agent.py (score 4.784 ≥ 4.739).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+⚖️ Kept original gmail_refresh_guard.py (score 4.403 ≥ 4.245).
+⚖️ Kept original vpn_test_runner.py (score 1.671 ≥ 1.668).
+✅ Replaced voice_connector_integration.py with improved variant (score 4.143 > 4.008).
+⚖️ Kept original symbolic_reasoner.py (score 4.917 ≥ 4.916).
+⚖️ Kept original predictive_simulation_agent.py (score 4.381 ≥ 4.338).
+✅ Replaced permanent_layer_setup.py with improved variant (score 4.913 > 4.906).
+⚖️ Kept original flag_digest_logger.py (score 4.94 ≥ 4.898).
+✅ Replaced summary_generator.py with improved variant (score 4.88 > 4.872).
+✅ Replaced prediction_feed_summarizer.py with improved variant (score 4.876 > 4.868).
+✅ Replaced remind.py with improved variant (score 4.895 > 4.853).
+✅ Replaced emotion_state_tracker.py with improved variant (score 4.906 > 4.901).
+⚖️ Kept original publish_status_report.py (score 4.706 ≥ 4.695).
+✅ Replaced vpn_autoconnect.py with improved variant (score 4.876 > 4.842).
+⚖️ Kept original fitness_expansion.py (score 4.877 ≥ 4.874).
+✅ Replaced calendar_sync_guard.py with improved variant (score 4.216 > 4.172).
+✅ Replaced agi_master.py with improved variant (score 4.938 > 4.92).
+✅ Replaced movie_list_test.py with improved variant (score 4.88 > 4.87).
+✅ Replaced fitness_daily_agent.py with improved variant (score 4.823 > 4.676).
+⚖️ Kept original evolutionary_agi.py (score 4.744 ≥ 4.703).
+✅ Replaced health_check_loop.py with improved variant (score 4.849 > 4.812).
+✅ Replaced absorb_log_append.py with improved variant (score 4.82 > 4.81).
+⚖️ Kept original gen_status_report.py (score 4.864 ≥ 4.82).
+✅ Replaced proactive_nudge_agent.py with improved variant (score 4.934 > 4.926).
+✅ Replaced cross_agent_fitness.py with improved variant (score 4.874 > 4.85).
+⚖️ Kept original knowledge_sharing.py (score 4.836 ≥ 4.816).
+⚖️ Kept original agent_evolution_cycle.py (score 4.863 ≥ 4.796).
+✅ Replaced agents_daily_improvement.py with improved variant (score 4.864 > 4.846).
+✅ Replaced nutrition_pipeline.py with improved variant (score 4.744 > 4.732).
+✅ Replaced pa_tasks_audit.py with improved variant (score 4.515 > 4.428).
+✅ Replaced run_security_audit.py with improved variant (score 4.894 > 4.869).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+✅ Replaced weekly_optimizations_generator.py with improved variant (score 4.897 > 4.889).
+✅ Replaced generate_status_report.py with improved variant (score 4.899 > 4.855).
+✅ Replaced calendar_event_creator.py with improved variant (score 4.547 > 4.404).
+⚖️ Kept original fitness_tracker.py (score 4.935 ≥ 4.932).
+✅ Replaced rotate_logs.py with improved variant (score 4.923 > 4.897).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+⚖️ Kept original meta_learning_core.py (score 4.879 ≥ 4.864).
+✅ Replaced summarize_agent_logs.py with improved variant (score 4.587 > 4.536).
+⚖️ Kept original agent_self_repair_loop.py (score 4.878 ≥ 4.872).
+⚖️ Kept original system_scorecard_agent.py (score 4.911 ≥ 4.891).
+✅ Replaced storage_cleanup.py with improved variant (score 4.827 > 4.788).
+✅ Replaced kb_smoke_test.py with improved variant (score 4.889 > 4.861).
+✅ Replaced kb_event_logger.py with improved variant (score 4.888 > 4.883).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+✅ Replaced run_task.py with improved variant (score 4.738 > 4.736).
+✅ Replaced agent_log_parser.py with improved variant (score 4.859 > 4.759).
+✅ Replaced kb_api.py with improved variant (score 4.82 > 4.763).
+✅ Replaced test_email_dispatch.py with improved variant (score 4.513 > 4.479).
+⚖️ Kept original status_report_builder.py (score 4.835 ≥ 4.827).
+✅ Replaced adaptive_code_evolver.py with improved variant (score 4.877 > 4.823).
+⚖️ Kept original reminder_scheduler_loop.py (score 4.925 ≥ 4.894).
+⚖️ Kept original voice_access_movie_summary.py (score 4.866 ≥ 4.848).
+⚖️ Kept original barcode_postfilter.py (score 4.906 ≥ 4.904).
+✅ Replaced voice_memory_lookup.py with improved variant (score 4.902 > 4.886).
+✅ Replaced geofence_nudger.py with improved variant (score 4.888 > 4.873).
+⚖️ Kept original vpn_status_reporter.py (score 4.898 ≥ 4.896).
+⚖️ Kept original swim_weather_nudge.py (score 4.577 ≥ 4.572).
+✅ Replaced progress_evaluation_runner.py with improved variant (score 4.911 > 4.888).
+✅ Replaced kb_facts_writer.py with improved variant (score 4.898 > 4.887).
+⚖️ Kept original fitness_tracking_verifier.py (score 4.902 ≥ 4.82).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+⚖️ Kept original backup_fitness.py (score 4.906 ≥ 4.902).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.323 > 3.072).
+✅ Replaced absorb_hourly.py with improved variant (score 4.923 > 4.919).
+⚖️ Kept original weekly_status_report.py (score 4.87 ≥ 4.849).
+⚖️ Kept original reminder_master.py (score 4.413 ≥ 4.285).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+✅ Replaced log_memory_manifest.py with improved variant (score 4.931 > 4.93).
+⚖️ Kept original final_validation_reporter.py (score 4.916 ≥ 4.916).
+✅ Replaced github_push_verifier.py with improved variant (score 4.907 > 4.886).
+⚖️ Kept original log_rotate.py (score 4.906 ≥ 4.904).
+⚖️ Kept original calendar_sync_guard_v3.py (score 4.462 ≥ 4.45).
+⚖️ Kept original fitness_weekly_trends.py (score 4.894 ≥ 4.863).
+✅ Replaced progress_evaluator.py with improved variant (score 4.844 > 4.817).
+✅ Replaced git_auto_commit.py with improved variant (score 4.84 > 4.794).
+⚖️ Kept original shared_intelligence_loop.py (score 4.919 ≥ 4.889).
+✅ Replaced security_suite.py with improved variant (score 1.614 > 1.546).
+✅ Replaced status_postprocess.py with improved variant (score 4.923 > 4.919).
+✅ Replaced security_audit_runner.py with improved variant (score 4.915 > 4.914).
+⚖️ Kept original ai_evolution_cycle.py (score 4.598 ≥ 4.591).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_status.py with improved variant (score 4.896 > 4.873).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+✅ Replaced fitness_cluster.py with improved variant (score 4.152 > 4.076).
+✅ Replaced voice_geo_status.py with improved variant (score 4.864 > 4.834).
+✅ Replaced generate_weekly_report.py with improved variant (score 4.917 > 4.869).
+✅ Replaced generate_weekly_status.py with improved variant (score 4.836 > 4.83).
+✅ Replaced media_agents.py with improved variant (score 4.525 > 4.362).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.068114+00:00] START tools/predictive_planner.py
+[2025-12-03T07:14:12.203125+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.218535+00:00] START tools/symbolic_reasoner.py
+[2025-12-03T07:14:12.326404+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.342536+00:00] START tools/auto_doc_agent.py
+[2025-12-03T07:14:12.463758+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.482081+00:00] START tools/self_improvement.py
+[2025-12-03T07:14:12.601631+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.625560+00:00] START tools/proactive_nudge_agent.py
+[2025-12-03T07:14:12.763578+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.782485+00:00] START tools/meta_learning_core.py
+[2025-12-03T07:14:12.945097+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-03.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:12.960167+00:00] START tools/cross_agent_fitness.py
+[2025-12-03T07:14:13.050154+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-03T07:14:13.063960+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-04T07:03:54.284327+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-04T07:03:54.290492+00:00] START tools/scenario_simulation_suite.py
+[2025-12-04T07:03:56.469917+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=178.38ms
+GitHub Visibility Test → PASS | delay=0.73s
+Fitness Data Integrity Test → PASS | recovery=3.74s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 178.38, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-04T07:03:56.485659+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-04T07:08:27.143741+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-04T07:08:27.148460+00:00] START tools/scenario_simulation_suite.py
+[2025-12-04T07:08:29.285651+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=293.23ms
+GitHub Visibility Test → PASS | delay=1.0s
+Fitness Data Integrity Test → FAIL | recovery=2.21s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 2.21, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-04T07:08:29.300805+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-04T07:08:32.122084+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-04T07:08:32.125628+00:00] START tools/scenario_simulation_suite.py
+[2025-12-04T07:08:34.218378+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=129.51ms
+GitHub Visibility Test → FAIL | delay=1.2s
+Fitness Data Integrity Test → PASS | recovery=3.03s
+Finance Logging Integrity Test → PASS | missing_entries=1
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  GitHub Visibility failed with data: {'test': 'GitHub Visibility', 'delay': 1.2, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-04T07:08:34.234102+00:00] START tools/recursive_self_improvement.py
+[2025-12-04T07:13:36.261753+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+⚖️ Kept original vpn_activation_test.py (score 4.889 ≥ 4.876).
+✅ Replaced agents_notify.py with improved variant (score 4.883 > 4.816).
+✅ Replaced catchup_guard.py with improved variant (score 4.92 > 4.916).
+✅ Replaced report_master.py with improved variant (score 3.909 > 3.796).
+✅ Replaced voice_guard.py with improved variant (score 4.908 > 4.887).
+⚖️ Kept original anticipation_research_agent.py (score 4.838 ≥ 4.682).
+⚖️ Kept original system_maintenance.py (score 4.21 ≥ 4.048).
+⚖️ Kept original system_bootstrap.py (score 4.87 ≥ 4.834).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.822 > 4.704).
+✅ Replaced barcode_cache.py with improved variant (score 4.479 > 3.992).
+✅ Replaced simulate_geofence.py with improved variant (score 4.731 > 4.673).
+✅ Replaced security_audit_scheduler.py with improved variant (score 4.532 > 4.085).
+⚖️ Kept original vpn_activation_detector.py (score 4.891 ≥ 4.881).
+⚖️ Kept original preflight.py (score 4.904 ≥ 4.892).
+✅ Replaced core_monitors_bundle.py with improved variant (score 1.291 > 0.0).
+✅ Replaced run_absorption.py with improved variant (score 4.538 > 4.493).
+⚖️ Kept original recursive_evolution_manager.py (score 4.798 ≥ 4.763).
+✅ Replaced support_sites_router.py with improved variant (score 4.895 > 4.872).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.873 > 4.866).
+✅ Replaced absorb_guard.py with improved variant (score 4.893 > 4.883).
+✅ Replaced nutrition_fallback.py with improved variant (score 4.947 > 4.937).
+✅ Replaced security_audit.py with improved variant (score 4.905 > 4.888).
+✅ Replaced fitness_normalize.py with improved variant (score 4.923 > 4.92).
+✅ Replaced core_sanity_suite.py with improved variant (score 4.938 > 4.934).
+✅ Replaced unpack_inbox.py with improved variant (score 4.918 > 4.912).
+✅ Replaced sms_fallback_queue.py with improved variant (score 4.636 > 4.607).
+✅ Replaced fitness_audit.py with improved variant (score 4.919 > 4.913).
+✅ Replaced generate_agent_docs_part1.py with improved variant (score 4.782 > 4.755).
+✅ Replaced master_guard_integrator.py with improved variant (score 4.124 > 3.934).
+⚖️ Kept original barcode_sync.py (score 4.858 ≥ 4.81).
+✅ Replaced alert_triage.py with improved variant (score 4.781 > 4.537).
+✅ Replaced auto_doc_agent.py with improved variant (score 4.942 > 4.939).
+✅ Replaced reminder_runner.py with improved variant (score 4.936 > 4.933).
+⚖️ Kept original agi_evolution_sandbox.py (score 4.948 ≥ 4.947).
+⚖️ Kept original optimize_agent_priorities.py (score 4.848 ≥ 4.836).
+⚖️ Kept original predictive_planner.py (score 4.946 ≥ 4.925).
+⚖️ Kept original sms_service_guard.py (score 4.65 ≥ 4.513).
+✅ Replaced permanent_layer_verifier.py with improved variant (score 4.867 > 4.83).
+✅ Replaced integration_manifest.py with improved variant (score 4.908 > 4.88).
+✅ Replaced fitness_ingest.py with improved variant (score 4.89 > 4.792).
+⚖️ Kept original fitness_progress_master.py (score 3.951 ≥ 3.788).
+⚖️ Kept original self_improvement.py (score 4.673 ≥ 4.593).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+⚖️ Kept original symbolic_reasoning.py (score 4.629 ≥ 4.596).
+✅ Replaced knowledge_sharing_validator.py with improved variant (score 4.744 > 4.588).
+⚖️ Kept original simulate_and_prepare.py (score 4.683 ≥ 4.673).
+⚖️ Kept original ask_memory.py (score 4.647 ≥ 4.547).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+⚖️ Kept original gmail_parser.py (score 3.971 ≥ 3.884).
+⚖️ Kept original gmail_refresh_guard_v3.py (score 4.301 ≥ 4.206).
+✅ Replaced security_reliability.py with improved variant (score 4.687 > 4.663).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_schedule_event.py with improved variant (score 4.517 > 4.469).
+✅ Replaced parse_food_log_sheet.py with improved variant (score 4.951 > 4.943).
+⚖️ Kept original knowledge_master.py (score 0.437 ≥ 0.0).
+✅ Replaced absorb_status_report.py with improved variant (score 4.669 > 4.489).
+✅ Replaced memory_compressor.py with improved variant (score 3.847 > 3.56).
+⚖️ Kept original summary_guard.py (score 4.434 ≥ 4.429).
+⚖️ Kept original agents_postclean.py (score 4.891 ≥ 4.873).
+⚖️ Kept original self_generation_engine.py (score 4.874 ≥ 4.835).
+✅ Replaced agi_simulation.py with improved variant (score 4.922 > 4.912).
+⚖️ Kept original benchmark_agents.py (score 3.74 ≥ 3.71).
+✅ Replaced notify_layer.py with improved variant (score 4.913 > 4.879).
+⚖️ Kept original consensus_dispatcher.py (score 4.853 ≥ 4.853).
+✅ Replaced filename_guard.py with improved variant (score 4.927 > 4.921).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+⚖️ Kept original project_delta_report.py (score 4.911 ≥ 4.883).
+⚖️ Kept original import_fitness_dispatch.py (score 4.907 ≥ 4.9).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.919 > 4.912).
+⚖️ Kept original watch_voice_trigger.py (score 4.943 ≥ 4.921).
+✅ Replaced health_master.py with improved variant (score 4.409 > 4.136).
+✅ Replaced morning_master.py with improved variant (score 4.682 > 4.627).
+✅ Replaced decision_support.py with improved variant (score 4.936 > 4.933).
+⚖️ Kept original nutrition_normalize.py (score 4.927 ≥ 4.925).
+✅ Replaced log_repair_guard.py with improved variant (score 4.923 > 4.889).
+✅ Replaced heartbeat_monitor.py with improved variant (score 4.658 > 4.573).
+⚖️ Kept original daily_voice_reminder.py (score 4.902 ≥ 4.882).
+⚖️ Kept original fitness_integration.py (score 4.907 ≥ 4.892).
+✅ Replaced scenario_simulation_engine.py with improved variant (score 4.879 > 4.79).
+✅ Replaced ride_deals_scan.py with improved variant (score 4.332 > 4.044).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+⚖️ Kept original report_master_mutated_1537.py (score 4.52 ≥ 4.499).
+✅ Replaced fitness_integration_live.py with improved variant (score 4.278 > 4.194).
+⚖️ Kept original voice_gmail_handler.py (score 4.61 ≥ 4.61).
+✅ Replaced project_status_report_agent.py with improved variant (score 4.91 > 4.905).
+⚖️ Kept original predictive_foresight_engine.py (score 4.87 ≥ 4.85).
+⚖️ Kept original agents_loop.py (score 4.922 ≥ 4.919).
+✅ Replaced finance_media.py with improved variant (score 3.231 > 2.881).
+✅ Replaced voice_context_loader.py with improved variant (score 4.939 > 4.918).
+✅ Replaced voice_connector_chatgpt.py with improved variant (score 4.512 > 4.485).
+✅ Replaced vpn_health_agent.py with improved variant (score 4.895 > 4.883).
+⚖️ Kept original watchdog_heartbeat.py (score 4.952 ≥ 4.944).
+✅ Replaced fitness_status_reporter.py with improved variant (score 4.913 > 4.902).
+✅ Replaced predictive_task_flow.py with improved variant (score 4.925 > 4.915).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 4.25 > 4.058).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original coverage_refresh.py (score 4.685 ≥ 4.682).
+✅ Replaced convert_csv_to_yaml.py with improved variant (score 4.899 > 4.893).
+⚖️ Kept original generate_daily_state.py (score 4.934 ≥ 4.931).
+⚖️ Kept original rsi_orchestrator.py (score 4.918 ≥ 4.914).
+✅ Replaced state_tracker.py with improved variant (score 4.931 > 4.925).
+⚖️ Kept original scenario_simulation_suite.py (score 2.906 ≥ 2.901).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.717 > 4.705).
+⚖️ Kept original movies_monitor.py (score 4.524 ≥ 4.473).
+✅ Replaced geofence_heartbeat.py with improved variant (score 4.904 > 4.868).
+✅ Replaced fitness_daily_summary.py with improved variant (score 4.914 > 4.894).
+✅ Replaced recursive_ai_improvement.py with improved variant (score 4.926 > 4.913).
+✅ Replaced knowledge_graph.py with improved variant (score 2.667 > 1.866).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+⚖️ Kept original verify_knowledge_base.py (score 4.916 ≥ 4.89).
+⚖️ Kept original vpn_events_normalizer.py (score 4.915 ≥ 4.906).
+✅ Replaced consensus_auto_repair_suite.py with improved variant (score 3.053 > 2.678).
+✅ Replaced build_final_agent_report.py with improved variant (score 4.612 > 4.58).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+⚖️ Kept original backup_sync_drive.py (score 3.359 ≥ 3.318).
+✅ Replaced verify_logs_tree.py with improved variant (score 4.862 > 4.832).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.84 > 4.835).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.902 ≥ 4.882).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 4.112 > 3.971).
+✅ Replaced write_memory_heartbeats.py with improved variant (score 4.71 > 0.0).
+✅ Replaced scheduler.py with improved variant (score 4.927 > 4.922).
+⚖️ Kept original top10_generator.py (score 3.612 ≥ 3.533).
+✅ Replaced agents_orchestrator.py with improved variant (score 4.918 > 4.907).
+✅ Replaced finance_audit.py with improved variant (score 4.89 > 4.881).
+⚖️ Kept original geofence_engine.py (score 4.916 ≥ 4.888).
+⚖️ Kept original geo_receiver.py (score 4.692 ≥ 4.657).
+✅ Replaced sandbox_executor.py with improved variant (score 4.921 > 4.917).
+⚖️ Kept original dedupe_normalized.py (score 4.93 ≥ 4.928).
+⚖️ Kept original get_folder_size.py (score 4.916 ≥ 4.916).
+⚖️ Kept original vpn_functional_test_runner.py (score 4.918 ≥ 4.89).
+✅ Replaced finance_master.py with improved variant (score 4.93 > 4.925).
+✅ Replaced kb_summarizer_agent.py with improved variant (score 4.887 > 4.878).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_refresh_guard.py with improved variant (score 4.533 > 4.461).
+⚖️ Kept original vpn_test_runner.py (score 1.75 ≥ 1.628).
+⚖️ Kept original voice_connector_integration.py (score 3.952 ≥ 3.274).
+⚖️ Kept original symbolic_reasoner.py (score 4.863 ≥ 4.751).
+✅ Replaced predictive_simulation_agent.py with improved variant (score 3.431 > 3.232).
+⚖️ Kept original permanent_layer_setup.py (score 4.81 ≥ 4.772).
+✅ Replaced flag_digest_logger.py with improved variant (score 4.887 > 4.765).
+⚖️ Kept original summary_generator.py (score 4.858 ≥ 4.812).
+⚖️ Kept original prediction_feed_summarizer.py (score 4.767 ≥ 4.745).
+✅ Replaced remind.py with improved variant (score 4.859 > 4.828).
+⚖️ Kept original emotion_state_tracker.py (score 4.913 ≥ 4.913).
+⚖️ Kept original publish_status_report.py (score 4.818 ≥ 4.79).
+⚖️ Kept original vpn_autoconnect.py (score 4.901 ≥ 4.893).
+✅ Replaced fitness_expansion.py with improved variant (score 4.891 > 4.889).
+⚖️ Kept original calendar_sync_guard.py (score 4.386 ≥ 4.086).
+⚖️ Kept original agi_master.py (score 4.944 ≥ 4.932).
+✅ Replaced movie_list_test.py with improved variant (score 4.905 > 4.903).
+✅ Replaced fitness_daily_agent.py with improved variant (score 4.813 > 4.772).
+⚖️ Kept original evolutionary_agi.py (score 4.93 ≥ 4.914).
+✅ Replaced health_check_loop.py with improved variant (score 4.91 > 4.9).
+✅ Replaced absorb_log_append.py with improved variant (score 4.911 > 4.905).
+⚖️ Kept original gen_status_report.py (score 4.931 ≥ 4.919).
+⚖️ Kept original proactive_nudge_agent.py (score 4.922 ≥ 4.919).
+✅ Replaced cross_agent_fitness.py with improved variant (score 4.923 > 4.915).
+⚖️ Kept original knowledge_sharing.py (score 4.888 ≥ 4.884).
+✅ Replaced agent_evolution_cycle.py with improved variant (score 4.897 > 4.888).
+⚖️ Kept original agents_daily_improvement.py (score 4.911 ≥ 4.903).
+✅ Replaced nutrition_pipeline.py with improved variant (score 4.828 > 4.774).
+⚖️ Kept original pa_tasks_audit.py (score 4.668 ≥ 4.615).
+⚖️ Kept original run_security_audit.py (score 4.93 ≥ 4.916).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+✅ Replaced weekly_optimizations_generator.py with improved variant (score 4.871 > 4.852).
+✅ Replaced generate_status_report.py with improved variant (score 4.902 > 4.891).
+⚖️ Kept original calendar_event_creator.py (score 4.35 ≥ 4.138).
+✅ Replaced fitness_tracker.py with improved variant (score 4.87 > 4.85).
+✅ Replaced rotate_logs.py with improved variant (score 4.826 > 4.814).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+⚖️ Kept original meta_learning_core.py (score 4.891 ≥ 4.878).
+✅ Replaced summarize_agent_logs.py with improved variant (score 4.728 > 4.631).
+⚖️ Kept original agent_self_repair_loop.py (score 4.921 ≥ 4.882).
+✅ Replaced system_scorecard_agent.py with improved variant (score 4.909 > 4.908).
+✅ Replaced storage_cleanup.py with improved variant (score 4.904 > 4.9).
+⚖️ Kept original kb_smoke_test.py (score 4.92 ≥ 4.898).
+⚖️ Kept original kb_event_logger.py (score 4.919 ≥ 4.91).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+✅ Replaced run_task.py with improved variant (score 4.916 > 4.903).
+✅ Replaced agent_log_parser.py with improved variant (score 4.927 > 4.92).
+⚖️ Kept original kb_api.py (score 4.925 ≥ 4.902).
+✅ Replaced test_email_dispatch.py with improved variant (score 4.555 > 4.55).
+✅ Replaced status_report_builder.py with improved variant (score 4.915 > 4.905).
+✅ Replaced adaptive_code_evolver.py with improved variant (score 4.927 > 4.917).
+⚖️ Kept original reminder_scheduler_loop.py (score 4.884 ≥ 4.876).
+✅ Replaced voice_access_movie_summary.py with improved variant (score 4.873 > 4.865).
+⚖️ Kept original barcode_postfilter.py (score 4.936 ≥ 4.934).
+⚖️ Kept original voice_memory_lookup.py (score 4.932 ≥ 4.931).
+⚖️ Kept original geofence_nudger.py (score 4.894 ≥ 4.884).
+✅ Replaced vpn_status_reporter.py with improved variant (score 4.921 > 4.884).
+✅ Replaced swim_weather_nudge.py with improved variant (score 4.659 > 4.657).
+⚖️ Kept original progress_evaluation_runner.py (score 4.905 ≥ 4.889).
+✅ Replaced kb_facts_writer.py with improved variant (score 4.914 > 4.834).
+⚖️ Kept original fitness_tracking_verifier.py (score 4.909 ≥ 4.901).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+⚖️ Kept original backup_fitness.py (score 4.918 ≥ 4.91).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.686 > 3.425).
+⚖️ Kept original absorb_hourly.py (score 4.91 ≥ 4.91).
+⚖️ Kept original weekly_status_report.py (score 4.894 ≥ 4.875).
+✅ Replaced reminder_master.py with improved variant (score 4.746 > 4.718).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original log_memory_manifest.py (score 4.861 ≥ 4.847).
+⚖️ Kept original final_validation_reporter.py (score 4.914 ≥ 4.898).
+⚖️ Kept original github_push_verifier.py (score 4.884 ≥ 4.816).
+⚖️ Kept original log_rotate.py (score 4.919 ≥ 4.915).
+⚖️ Kept original calendar_sync_guard_v3.py (score 4.546 ≥ 4.535).
+⚖️ Kept original fitness_weekly_trends.py (score 4.893 ≥ 4.864).
+⚖️ Kept original progress_evaluator.py (score 4.849 ≥ 4.848).
+✅ Replaced git_auto_commit.py with improved variant (score 4.864 > 4.792).
+⚖️ Kept original shared_intelligence_loop.py (score 4.908 ≥ 4.907).
+⚖️ Kept original security_suite.py (score 1.547 ≥ 1.446).
+✅ Replaced status_postprocess.py with improved variant (score 4.928 > 4.924).
+⚖️ Kept original security_audit_runner.py (score 4.901 ≥ 4.894).
+✅ Replaced ai_evolution_cycle.py with improved variant (score 4.42 > 4.3).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_status.py with improved variant (score 4.919 > 4.902).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+⚖️ Kept original fitness_cluster.py (score 4.467 ≥ 4.463).
+⚖️ Kept original voice_geo_status.py (score 4.934 ≥ 4.917).
+⚖️ Kept original generate_weekly_report.py (score 4.946 ≥ 4.941).
+✅ Replaced generate_weekly_status.py with improved variant (score 4.891 > 4.787).
+✅ Replaced media_agents.py with improved variant (score 4.713 > 4.629).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.289967+00:00] START tools/predictive_planner.py
+[2025-12-04T07:13:36.335085+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.348614+00:00] START tools/symbolic_reasoner.py
+[2025-12-04T07:13:36.409863+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.424859+00:00] START tools/auto_doc_agent.py
+[2025-12-04T07:13:36.473670+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.488554+00:00] START tools/self_improvement.py
+[2025-12-04T07:13:36.541146+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.557761+00:00] START tools/proactive_nudge_agent.py
+[2025-12-04T07:13:36.620159+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.637971+00:00] START tools/meta_learning_core.py
+[2025-12-04T07:13:36.763200+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-04.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.778952+00:00] START tools/cross_agent_fitness.py
+[2025-12-04T07:13:36.879591+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-04T07:13:36.896209+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-05T07:03:47.951280+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-05T07:03:47.956094+00:00] START tools/scenario_simulation_suite.py
+[2025-12-05T07:03:50.351884+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=104.64ms
+GitHub Visibility Test → FAIL | delay=0.53s
+Fitness Data Integrity Test → FAIL | recovery=3.96s
+Finance Logging Integrity Test → FAIL | missing_entries=2
+=== Simulation Summary → FAIL (3 failed) ===
+⚠️  GitHub Visibility failed with data: {'test': 'GitHub Visibility', 'delay': 0.53, 'result': 'FAIL'}
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 3.96, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 2, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-05T07:03:50.368103+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-05T07:08:34.210784+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-05T07:08:34.214828+00:00] START tools/scenario_simulation_suite.py
+[2025-12-05T07:08:36.362479+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=290.58ms
+GitHub Visibility Test → PASS | delay=1.14s
+Fitness Data Integrity Test → FAIL | recovery=1.18s
+Finance Logging Integrity Test → PASS | missing_entries=1
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 1.18, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-05T07:08:36.376509+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-05T07:08:39.160933+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-05T07:08:39.165209+00:00] START tools/scenario_simulation_suite.py
+[2025-12-05T07:08:41.282709+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=177.58ms
+GitHub Visibility Test → PASS | delay=2.1s
+Fitness Data Integrity Test → FAIL | recovery=4.26s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 4.26, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-05T07:08:41.297612+00:00] START tools/recursive_self_improvement.py
+[2025-12-05T07:13:53.276712+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+⚖️ Kept original vpn_activation_test.py (score 4.756 ≥ 4.68).
+✅ Replaced agents_notify.py with improved variant (score 4.853 > 4.685).
+✅ Replaced catchup_guard.py with improved variant (score 4.853 > 4.847).
+✅ Replaced report_master.py with improved variant (score 4.422 > 3.507).
+✅ Replaced voice_guard.py with improved variant (score 4.836 > 4.813).
+✅ Replaced anticipation_research_agent.py with improved variant (score 4.889 > 4.882).
+✅ Replaced system_maintenance.py with improved variant (score 4.577 > 4.419).
+⚖️ Kept original system_bootstrap.py (score 4.932 ≥ 4.83).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.805 > 4.608).
+✅ Replaced barcode_cache.py with improved variant (score 4.183 > 3.846).
+⚖️ Kept original simulate_geofence.py (score 4.669 ≥ 4.629).
+✅ Replaced security_audit_scheduler.py with improved variant (score 4.405 > 3.766).
+⚖️ Kept original vpn_activation_detector.py (score 4.763 ≥ 4.737).
+⚖️ Kept original preflight.py (score 4.836 ≥ 4.78).
+⚖️ Kept original core_monitors_bundle.py (score 0.0 ≥ 0.0).
+⚖️ Kept original run_absorption.py (score 4.47 ≥ 4.365).
+✅ Replaced recursive_evolution_manager.py with improved variant (score 4.776 > 4.739).
+✅ Replaced support_sites_router.py with improved variant (score 4.893 > 4.861).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.848 > 4.803).
+✅ Replaced absorb_guard.py with improved variant (score 4.872 > 4.833).
+⚖️ Kept original nutrition_fallback.py (score 4.938 ≥ 4.934).
+✅ Replaced security_audit.py with improved variant (score 4.905 > 4.903).
+✅ Replaced fitness_normalize.py with improved variant (score 4.919 > 4.907).
+✅ Replaced core_sanity_suite.py with improved variant (score 4.932 > 4.924).
+✅ Replaced unpack_inbox.py with improved variant (score 4.861 > 4.855).
+⚖️ Kept original sms_fallback_queue.py (score 4.639 ≥ 4.611).
+✅ Replaced fitness_audit.py with improved variant (score 4.916 > 4.912).
+⚖️ Kept original generate_agent_docs_part1.py (score 4.766 ≥ 4.747).
+✅ Replaced master_guard_integrator.py with improved variant (score 4.013 > 3.942).
+✅ Replaced barcode_sync.py with improved variant (score 4.857 > 4.83).
+✅ Replaced alert_triage.py with improved variant (score 4.734 > 4.266).
+✅ Replaced auto_doc_agent.py with improved variant (score 4.949 > 4.946).
+⚖️ Kept original reminder_runner.py (score 4.907 ≥ 4.905).
+⚖️ Kept original agi_evolution_sandbox.py (score 4.946 ≥ 4.943).
+✅ Replaced optimize_agent_priorities.py with improved variant (score 4.829 > 4.822).
+⚖️ Kept original predictive_planner.py (score 4.942 ≥ 4.932).
+✅ Replaced sms_service_guard.py with improved variant (score 4.584 > 4.528).
+⚖️ Kept original permanent_layer_verifier.py (score 4.843 ≥ 4.812).
+⚖️ Kept original integration_manifest.py (score 4.772 ≥ 4.693).
+⚖️ Kept original fitness_ingest.py (score 4.747 ≥ 4.695).
+✅ Replaced fitness_progress_master.py with improved variant (score 4.265 > 4.072).
+✅ Replaced self_improvement.py with improved variant (score 4.859 > 4.839).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+⚖️ Kept original symbolic_reasoning.py (score 4.624 ≥ 4.441).
+✅ Replaced knowledge_sharing_validator.py with improved variant (score 4.686 > 4.468).
+⚖️ Kept original simulate_and_prepare.py (score 4.474 ≥ 4.365).
+⚖️ Kept original ask_memory.py (score 4.602 ≥ 4.556).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+⚖️ Kept original gmail_parser.py (score 3.323 ≥ 3.309).
+✅ Replaced gmail_refresh_guard_v3.py with improved variant (score 3.941 > 3.846).
+⚖️ Kept original security_reliability.py (score 4.678 ≥ 4.609).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_schedule_event.py with improved variant (score 4.409 > 4.151).
+✅ Replaced parse_food_log_sheet.py with improved variant (score 4.939 > 4.935).
+⚖️ Kept original knowledge_master.py (score 0.0 ≥ 0.0).
+✅ Replaced absorb_status_report.py with improved variant (score 4.511 > 4.277).
+✅ Replaced memory_compressor.py with improved variant (score 3.788 > 3.558).
+⚖️ Kept original summary_guard.py (score 4.572 ≥ 4.459).
+⚖️ Kept original agents_postclean.py (score 4.831 ≥ 4.79).
+⚖️ Kept original self_generation_engine.py (score 4.855 ≥ 4.818).
+⚖️ Kept original agi_simulation.py (score 4.875 ≥ 4.872).
+⚖️ Kept original benchmark_agents.py (score 3.729 ≥ 3.683).
+✅ Replaced notify_layer.py with improved variant (score 4.891 > 4.871).
+⚖️ Kept original consensus_dispatcher.py (score 4.831 ≥ 4.823).
+⚖️ Kept original filename_guard.py (score 4.9 ≥ 4.886).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+⚖️ Kept original project_delta_report.py (score 4.918 ≥ 4.912).
+⚖️ Kept original import_fitness_dispatch.py (score 4.86 ≥ 4.827).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.894 > 4.887).
+✅ Replaced watch_voice_trigger.py with improved variant (score 4.937 > 4.92).
+✅ Replaced health_master.py with improved variant (score 4.337 > 3.984).
+✅ Replaced morning_master.py with improved variant (score 4.578 > 4.534).
+✅ Replaced decision_support.py with improved variant (score 4.946 > 4.925).
+✅ Replaced nutrition_normalize.py with improved variant (score 4.878 > 4.832).
+✅ Replaced log_repair_guard.py with improved variant (score 4.915 > 4.841).
+✅ Replaced heartbeat_monitor.py with improved variant (score 4.653 > 4.514).
+✅ Replaced daily_voice_reminder.py with improved variant (score 4.893 > 4.82).
+⚖️ Kept original fitness_integration.py (score 4.884 ≥ 4.879).
+⚖️ Kept original scenario_simulation_engine.py (score 4.854 ≥ 4.82).
+✅ Replaced ride_deals_scan.py with improved variant (score 3.979 > 3.858).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+⚖️ Kept original report_master_mutated_1537.py (score 4.454 ≥ 4.356).
+⚖️ Kept original fitness_integration_live.py (score 4.235 ≥ 4.112).
+✅ Replaced voice_gmail_handler.py with improved variant (score 4.483 > 4.466).
+✅ Replaced project_status_report_agent.py with improved variant (score 4.887 > 4.872).
+⚖️ Kept original predictive_foresight_engine.py (score 4.833 ≥ 4.816).
+⚖️ Kept original agents_loop.py (score 4.916 ≥ 4.9).
+✅ Replaced finance_media.py with improved variant (score 3.197 > 2.645).
+✅ Replaced voice_context_loader.py with improved variant (score 4.926 > 4.917).
+✅ Replaced voice_connector_chatgpt.py with improved variant (score 4.319 > 4.248).
+⚖️ Kept original vpn_health_agent.py (score 4.906 ≥ 4.902).
+✅ Replaced watchdog_heartbeat.py with improved variant (score 4.932 > 4.911).
+✅ Replaced fitness_status_reporter.py with improved variant (score 4.888 > 4.874).
+✅ Replaced predictive_task_flow.py with improved variant (score 4.918 > 4.915).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 4.039 > 3.676).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original coverage_refresh.py (score 4.626 ≥ 4.581).
+⚖️ Kept original convert_csv_to_yaml.py (score 4.886 ≥ 4.878).
+✅ Replaced generate_daily_state.py with improved variant (score 4.924 > 4.909).
+⚖️ Kept original rsi_orchestrator.py (score 4.896 ≥ 4.884).
+✅ Replaced state_tracker.py with improved variant (score 4.847 > 4.837).
+✅ Replaced scenario_simulation_suite.py with improved variant (score 2.813 > 2.735).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.801 > 4.763).
+⚖️ Kept original movies_monitor.py (score 4.59 ≥ 4.449).
+✅ Replaced geofence_heartbeat.py with improved variant (score 4.885 > 4.847).
+✅ Replaced fitness_daily_summary.py with improved variant (score 4.907 > 4.892).
+✅ Replaced recursive_ai_improvement.py with improved variant (score 4.905 > 4.901).
+✅ Replaced knowledge_graph.py with improved variant (score 1.678 > 1.55).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+✅ Replaced verify_knowledge_base.py with improved variant (score 4.915 > 4.913).
+⚖️ Kept original vpn_events_normalizer.py (score 4.912 ≥ 4.904).
+✅ Replaced consensus_auto_repair_suite.py with improved variant (score 2.583 > 2.473).
+✅ Replaced build_final_agent_report.py with improved variant (score 4.514 > 4.426).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_sync_drive.py with improved variant (score 2.735 > 1.972).
+✅ Replaced verify_logs_tree.py with improved variant (score 4.879 > 4.8).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.851 > 4.78).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.884 ≥ 4.875).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 3.913 > 3.723).
+✅ Replaced write_memory_heartbeats.py with improved variant (score 4.66 > 0.0).
+⚖️ Kept original scheduler.py (score 4.887 ≥ 4.847).
+⚖️ Kept original top10_generator.py (score 3.236 ≥ 3.236).
+✅ Replaced agents_orchestrator.py with improved variant (score 4.904 > 4.649).
+⚖️ Kept original finance_audit.py (score 4.914 ≥ 4.899).
+⚖️ Kept original geofence_engine.py (score 4.907 ≥ 4.894).
+⚖️ Kept original geo_receiver.py (score 4.614 ≥ 4.605).
+⚖️ Kept original sandbox_executor.py (score 4.882 ≥ 4.865).
+⚖️ Kept original dedupe_normalized.py (score 4.91 ≥ 4.907).
+⚖️ Kept original get_folder_size.py (score 4.92 ≥ 4.905).
+⚖️ Kept original vpn_functional_test_runner.py (score 4.905 ≥ 4.898).
+⚖️ Kept original finance_master.py (score 4.948 ≥ 4.944).
+⚖️ Kept original kb_summarizer_agent.py (score 4.909 ≥ 4.889).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+⚖️ Kept original gmail_refresh_guard.py (score 3.213 ≥ 2.575).
+⚖️ Kept original vpn_test_runner.py (score 1.155 ≥ 1.007).
+✅ Replaced voice_connector_integration.py with improved variant (score 3.959 > 3.936).
+⚖️ Kept original symbolic_reasoner.py (score 4.939 ≥ 4.938).
+⚖️ Kept original predictive_simulation_agent.py (score 4.499 ≥ 4.437).
+✅ Replaced permanent_layer_setup.py with improved variant (score 4.913 > 4.901).
+⚖️ Kept original flag_digest_logger.py (score 4.939 ≥ 4.922).
+✅ Replaced summary_generator.py with improved variant (score 4.858 > 4.848).
+⚖️ Kept original prediction_feed_summarizer.py (score 4.853 ≥ 4.848).
+✅ Replaced remind.py with improved variant (score 4.907 > 4.898).
+⚖️ Kept original emotion_state_tracker.py (score 4.905 ≥ 4.896).
+⚖️ Kept original publish_status_report.py (score 4.805 ≥ 4.797).
+✅ Replaced vpn_autoconnect.py with improved variant (score 4.86 > 4.847).
+✅ Replaced fitness_expansion.py with improved variant (score 4.869 > 4.85).
+✅ Replaced calendar_sync_guard.py with improved variant (score 4.193 > 4.088).
+✅ Replaced agi_master.py with improved variant (score 4.927 > 4.922).
+✅ Replaced movie_list_test.py with improved variant (score 4.909 > 4.898).
+⚖️ Kept original fitness_daily_agent.py (score 4.842 ≥ 4.834).
+✅ Replaced evolutionary_agi.py with improved variant (score 4.897 > 4.868).
+✅ Replaced health_check_loop.py with improved variant (score 4.914 > 4.913).
+⚖️ Kept original absorb_log_append.py (score 4.872 ≥ 4.871).
+⚖️ Kept original gen_status_report.py (score 4.899 ≥ 4.883).
+✅ Replaced proactive_nudge_agent.py with improved variant (score 4.918 > 4.901).
+⚖️ Kept original cross_agent_fitness.py (score 4.918 ≥ 4.918).
+✅ Replaced knowledge_sharing.py with improved variant (score 4.85 > 4.826).
+✅ Replaced agent_evolution_cycle.py with improved variant (score 4.903 > 4.901).
+⚖️ Kept original agents_daily_improvement.py (score 4.891 ≥ 4.873).
+✅ Replaced nutrition_pipeline.py with improved variant (score 4.754 > 4.616).
+✅ Replaced pa_tasks_audit.py with improved variant (score 4.606 > 4.605).
+⚖️ Kept original run_security_audit.py (score 4.906 ≥ 4.904).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+⚖️ Kept original weekly_optimizations_generator.py (score 4.821 ≥ 4.79).
+✅ Replaced generate_status_report.py with improved variant (score 4.82 > 4.76).
+⚖️ Kept original calendar_event_creator.py (score 4.508 ≥ 4.365).
+⚖️ Kept original fitness_tracker.py (score 4.895 ≥ 4.867).
+✅ Replaced rotate_logs.py with improved variant (score 4.896 > 4.826).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+✅ Replaced meta_learning_core.py with improved variant (score 4.796 > 4.764).
+✅ Replaced summarize_agent_logs.py with improved variant (score 4.617 > 4.449).
+✅ Replaced agent_self_repair_loop.py with improved variant (score 4.903 > 4.887).
+✅ Replaced system_scorecard_agent.py with improved variant (score 4.882 > 4.817).
+✅ Replaced storage_cleanup.py with improved variant (score 4.896 > 4.882).
+✅ Replaced kb_smoke_test.py with improved variant (score 4.896 > 4.855).
+✅ Replaced kb_event_logger.py with improved variant (score 4.891 > 4.875).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+✅ Replaced run_task.py with improved variant (score 4.883 > 4.843).
+✅ Replaced agent_log_parser.py with improved variant (score 4.887 > 4.836).
+⚖️ Kept original kb_api.py (score 4.882 ≥ 4.853).
+✅ Replaced test_email_dispatch.py with improved variant (score 4.598 > 4.55).
+⚖️ Kept original status_report_builder.py (score 4.922 ≥ 4.917).
+⚖️ Kept original adaptive_code_evolver.py (score 4.875 ≥ 4.841).
+⚖️ Kept original reminder_scheduler_loop.py (score 4.901 ≥ 4.89).
+✅ Replaced voice_access_movie_summary.py with improved variant (score 4.895 > 4.863).
+✅ Replaced barcode_postfilter.py with improved variant (score 4.886 > 4.863).
+✅ Replaced voice_memory_lookup.py with improved variant (score 4.901 > 4.812).
+⚖️ Kept original geofence_nudger.py (score 4.852 ≥ 4.811).
+✅ Replaced vpn_status_reporter.py with improved variant (score 4.832 > 4.718).
+⚖️ Kept original swim_weather_nudge.py (score 4.551 ≥ 4.493).
+⚖️ Kept original progress_evaluation_runner.py (score 4.88 ≥ 4.867).
+⚖️ Kept original kb_facts_writer.py (score 4.882 ≥ 4.84).
+⚖️ Kept original fitness_tracking_verifier.py (score 4.932 ≥ 4.926).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_fitness.py with improved variant (score 4.909 > 4.906).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.267 > 3.049).
+⚖️ Kept original absorb_hourly.py (score 4.922 ≥ 4.906).
+✅ Replaced weekly_status_report.py with improved variant (score 4.886 > 4.883).
+⚖️ Kept original reminder_master.py (score 4.768 ≥ 4.645).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+✅ Replaced log_memory_manifest.py with improved variant (score 4.897 > 4.895).
+⚖️ Kept original final_validation_reporter.py (score 4.887 ≥ 4.87).
+✅ Replaced github_push_verifier.py with improved variant (score 4.884 > 4.854).
+⚖️ Kept original log_rotate.py (score 4.895 ≥ 4.842).
+✅ Replaced calendar_sync_guard_v3.py with improved variant (score 4.433 > 4.164).
+✅ Replaced fitness_weekly_trends.py with improved variant (score 4.82 > 4.757).
+⚖️ Kept original progress_evaluator.py (score 4.624 ≥ 4.623).
+✅ Replaced git_auto_commit.py with improved variant (score 4.817 > 4.688).
+⚖️ Kept original shared_intelligence_loop.py (score 4.845 ≥ 4.835).
+✅ Replaced security_suite.py with improved variant (score 1.573 > 1.461).
+⚖️ Kept original status_postprocess.py (score 4.916 ≥ 4.902).
+✅ Replaced security_audit_runner.py with improved variant (score 4.926 > 4.915).
+✅ Replaced ai_evolution_cycle.py with improved variant (score 4.599 > 4.526).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+⚖️ Kept original voice_status.py (score 4.911 ≥ 4.895).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+✅ Replaced fitness_cluster.py with improved variant (score 4.435 > 4.404).
+✅ Replaced voice_geo_status.py with improved variant (score 4.921 > 4.913).
+⚖️ Kept original generate_weekly_report.py (score 4.949 ≥ 4.949).
+✅ Replaced generate_weekly_status.py with improved variant (score 4.893 > 4.852).
+⚖️ Kept original media_agents.py (score 4.681 ≥ 4.623).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.295331+00:00] START tools/predictive_planner.py
+[2025-12-05T07:13:53.346472+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.361516+00:00] START tools/symbolic_reasoner.py
+[2025-12-05T07:13:53.412022+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.428646+00:00] START tools/auto_doc_agent.py
+[2025-12-05T07:13:53.474578+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.488243+00:00] START tools/self_improvement.py
+[2025-12-05T07:13:53.536729+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.551291+00:00] START tools/proactive_nudge_agent.py
+[2025-12-05T07:13:53.611626+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.624607+00:00] START tools/meta_learning_core.py
+[2025-12-05T07:13:53.715778+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-05.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.729652+00:00] START tools/cross_agent_fitness.py
+[2025-12-05T07:13:53.779261+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-05T07:13:53.794339+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-06T07:03:42.722750+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-06T07:03:42.726990+00:00] START tools/scenario_simulation_suite.py
+[2025-12-06T07:03:45.256194+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=75.2ms
+GitHub Visibility Test → PASS | delay=2.86s
+Fitness Data Integrity Test → PASS | recovery=2.47s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-06T07:03:45.272044+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-06T07:08:32.579516+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-06T07:08:32.583170+00:00] START tools/scenario_simulation_suite.py
+[2025-12-06T07:08:34.701743+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=340.4ms
+GitHub Visibility Test → PASS | delay=2.1s
+Fitness Data Integrity Test → PASS | recovery=4.36s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 340.4, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-06T07:08:34.716791+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-06T07:08:37.531648+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-06T07:08:37.536838+00:00] START tools/scenario_simulation_suite.py
+[2025-12-06T07:08:39.639851+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=265.72ms
+GitHub Visibility Test → FAIL | delay=2.28s
+Fitness Data Integrity Test → FAIL | recovery=4.28s
+Finance Logging Integrity Test → FAIL | missing_entries=3
+=== Simulation Summary → FAIL (3 failed) ===
+⚠️  GitHub Visibility failed with data: {'test': 'GitHub Visibility', 'delay': 2.28, 'result': 'FAIL'}
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 4.28, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 3, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-06T07:08:39.659516+00:00] START tools/recursive_self_improvement.py
+[2025-12-06T07:13:48.588555+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+⚖️ Kept original vpn_activation_test.py (score 4.787 ≥ 4.773).
+✅ Replaced agents_notify.py with improved variant (score 4.659 > 4.478).
+✅ Replaced catchup_guard.py with improved variant (score 4.687 > 4.617).
+✅ Replaced report_master.py with improved variant (score 4.133 > 2.684).
+✅ Replaced voice_guard.py with improved variant (score 4.889 > 4.882).
+⚖️ Kept original anticipation_research_agent.py (score 4.81 ≥ 4.809).
+⚖️ Kept original system_maintenance.py (score 4.362 ≥ 4.132).
+⚖️ Kept original system_bootstrap.py (score 4.924 ≥ 4.881).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.736 > 4.705).
+⚖️ Kept original barcode_cache.py (score 4.287 ≥ 3.477).
+✅ Replaced simulate_geofence.py with improved variant (score 4.804 > 4.695).
+✅ Replaced security_audit_scheduler.py with improved variant (score 4.2 > 3.185).
+⚖️ Kept original vpn_activation_detector.py (score 4.663 ≥ 4.647).
+✅ Replaced preflight.py with improved variant (score 4.854 > 4.67).
+⚖️ Kept original core_monitors_bundle.py (score 0.0 ≥ 0.0).
+✅ Replaced run_absorption.py with improved variant (score 4.297 > 4.247).
+✅ Replaced recursive_evolution_manager.py with improved variant (score 4.767 > 4.709).
+✅ Replaced support_sites_router.py with improved variant (score 4.904 > 4.882).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.833 > 4.782).
+✅ Replaced absorb_guard.py with improved variant (score 4.876 > 4.844).
+⚖️ Kept original nutrition_fallback.py (score 4.931 ≥ 4.93).
+✅ Replaced security_audit.py with improved variant (score 4.904 > 4.832).
+⚖️ Kept original fitness_normalize.py (score 4.912 ≥ 4.879).
+⚖️ Kept original core_sanity_suite.py (score 4.909 ≥ 4.905).
+✅ Replaced unpack_inbox.py with improved variant (score 4.881 > 4.865).
+✅ Replaced sms_fallback_queue.py with improved variant (score 4.627 > 4.603).
+⚖️ Kept original fitness_audit.py (score 4.89 ≥ 4.869).
+⚖️ Kept original generate_agent_docs_part1.py (score 4.747 ≥ 4.722).
+✅ Replaced master_guard_integrator.py with improved variant (score 3.826 > 3.534).
+✅ Replaced barcode_sync.py with improved variant (score 4.855 > 4.792).
+✅ Replaced alert_triage.py with improved variant (score 4.648 > 4.391).
+⚖️ Kept original auto_doc_agent.py (score 4.922 ≥ 4.899).
+✅ Replaced reminder_runner.py with improved variant (score 4.916 > 4.86).
+⚖️ Kept original agi_evolution_sandbox.py (score 4.934 ≥ 4.934).
+✅ Replaced optimize_agent_priorities.py with improved variant (score 4.814 > 4.798).
+✅ Replaced predictive_planner.py with improved variant (score 4.947 > 4.945).
+⚖️ Kept original sms_service_guard.py (score 4.605 ≥ 4.573).
+✅ Replaced permanent_layer_verifier.py with improved variant (score 4.898 > 4.864).
+✅ Replaced integration_manifest.py with improved variant (score 4.901 > 4.893).
+⚖️ Kept original fitness_ingest.py (score 4.857 ≥ 4.76).
+✅ Replaced fitness_progress_master.py with improved variant (score 4.41 > 4.068).
+✅ Replaced self_improvement.py with improved variant (score 4.847 > 4.83).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+⚖️ Kept original symbolic_reasoning.py (score 4.796 ≥ 4.66).
+⚖️ Kept original knowledge_sharing_validator.py (score 4.746 ≥ 4.682).
+✅ Replaced simulate_and_prepare.py with improved variant (score 4.844 > 4.407).
+⚖️ Kept original ask_memory.py (score 4.676 ≥ 4.61).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_parser.py with improved variant (score 3.234 > 3.037).
+⚖️ Kept original gmail_refresh_guard_v3.py (score 4.044 ≥ 3.882).
+✅ Replaced security_reliability.py with improved variant (score 4.711 > 4.677).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_schedule_event.py with improved variant (score 4.404 > 4.355).
+⚖️ Kept original parse_food_log_sheet.py (score 4.928 ≥ 4.926).
+⚖️ Kept original knowledge_master.py (score 0.0 ≥ 0.0).
+✅ Replaced absorb_status_report.py with improved variant (score 4.559 > 4.41).
+✅ Replaced memory_compressor.py with improved variant (score 3.841 > 3.579).
+✅ Replaced summary_guard.py with improved variant (score 4.589 > 4.503).
+✅ Replaced agents_postclean.py with improved variant (score 4.828 > 4.768).
+✅ Replaced self_generation_engine.py with improved variant (score 4.743 > 4.726).
+⚖️ Kept original agi_simulation.py (score 4.845 ≥ 4.844).
+⚖️ Kept original benchmark_agents.py (score 3.715 ≥ 3.648).
+⚖️ Kept original notify_layer.py (score 4.866 ≥ 4.865).
+⚖️ Kept original consensus_dispatcher.py (score 4.869 ≥ 4.833).
+⚖️ Kept original filename_guard.py (score 4.87 ≥ 4.856).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+⚖️ Kept original project_delta_report.py (score 4.911 ≥ 4.841).
+⚖️ Kept original import_fitness_dispatch.py (score 4.885 ≥ 4.882).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.926 > 4.919).
+✅ Replaced watch_voice_trigger.py with improved variant (score 4.936 > 4.919).
+✅ Replaced health_master.py with improved variant (score 4.21 > 4.029).
+✅ Replaced morning_master.py with improved variant (score 4.675 > 4.515).
+⚖️ Kept original decision_support.py (score 4.939 ≥ 4.938).
+⚖️ Kept original nutrition_normalize.py (score 4.906 ≥ 4.899).
+✅ Replaced log_repair_guard.py with improved variant (score 4.914 > 4.864).
+✅ Replaced heartbeat_monitor.py with improved variant (score 4.623 > 4.566).
+⚖️ Kept original daily_voice_reminder.py (score 4.88 ≥ 4.871).
+✅ Replaced fitness_integration.py with improved variant (score 4.892 > 4.841).
+⚖️ Kept original scenario_simulation_engine.py (score 4.848 ≥ 4.82).
+✅ Replaced ride_deals_scan.py with improved variant (score 4.329 > 4.171).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+✅ Replaced report_master_mutated_1537.py with improved variant (score 4.27 > 4.211).
+✅ Replaced fitness_integration_live.py with improved variant (score 4.221 > 3.83).
+✅ Replaced voice_gmail_handler.py with improved variant (score 4.501 > 4.474).
+✅ Replaced project_status_report_agent.py with improved variant (score 4.844 > 4.829).
+⚖️ Kept original predictive_foresight_engine.py (score 4.821 ≥ 4.814).
+✅ Replaced agents_loop.py with improved variant (score 4.897 > 4.869).
+✅ Replaced finance_media.py with improved variant (score 3.526 > 2.204).
+✅ Replaced voice_context_loader.py with improved variant (score 4.934 > 4.92).
+⚖️ Kept original voice_connector_chatgpt.py (score 4.405 ≥ 4.34).
+✅ Replaced vpn_health_agent.py with improved variant (score 4.87 > 4.809).
+✅ Replaced watchdog_heartbeat.py with improved variant (score 4.934 > 4.904).
+✅ Replaced fitness_status_reporter.py with improved variant (score 4.865 > 4.862).
+✅ Replaced predictive_task_flow.py with improved variant (score 4.912 > 4.903).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 4.084 > 3.755).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+✅ Replaced coverage_refresh.py with improved variant (score 4.596 > 4.473).
+⚖️ Kept original convert_csv_to_yaml.py (score 4.876 ≥ 4.869).
+✅ Replaced generate_daily_state.py with improved variant (score 4.901 > 4.881).
+⚖️ Kept original rsi_orchestrator.py (score 4.899 ≥ 4.897).
+✅ Replaced state_tracker.py with improved variant (score 4.889 > 4.882).
+⚖️ Kept original scenario_simulation_suite.py (score 2.866 ≥ 2.772).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.783 > 4.679).
+✅ Replaced movies_monitor.py with improved variant (score 4.411 > 4.359).
+⚖️ Kept original geofence_heartbeat.py (score 4.866 ≥ 4.821).
+⚖️ Kept original fitness_daily_summary.py (score 4.882 ≥ 4.859).
+⚖️ Kept original recursive_ai_improvement.py (score 4.889 ≥ 4.888).
+⚖️ Kept original knowledge_graph.py (score 1.634 ≥ 1.407).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+⚖️ Kept original verify_knowledge_base.py (score 4.881 ≥ 4.845).
+⚖️ Kept original vpn_events_normalizer.py (score 4.908 ≥ 4.896).
+✅ Replaced consensus_auto_repair_suite.py with improved variant (score 2.789 > 2.424).
+✅ Replaced build_final_agent_report.py with improved variant (score 4.581 > 4.445).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_sync_drive.py with improved variant (score 2.94 > 2.485).
+⚖️ Kept original verify_logs_tree.py (score 4.884 ≥ 4.731).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.846 > 4.776).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.896 ≥ 4.891).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 3.974 > 3.697).
+✅ Replaced write_memory_heartbeats.py with improved variant (score 4.625 > 0.0).
+⚖️ Kept original scheduler.py (score 4.915 ≥ 4.91).
+⚖️ Kept original top10_generator.py (score 3.225 ≥ 2.573).
+⚖️ Kept original agents_orchestrator.py (score 4.832 ≥ 4.819).
+✅ Replaced finance_audit.py with improved variant (score 4.895 > 4.829).
+✅ Replaced geofence_engine.py with improved variant (score 4.909 > 4.906).
+✅ Replaced geo_receiver.py with improved variant (score 4.647 > 4.644).
+⚖️ Kept original sandbox_executor.py (score 4.889 ≥ 4.825).
+✅ Replaced dedupe_normalized.py with improved variant (score 4.909 > 4.9).
+⚖️ Kept original get_folder_size.py (score 4.911 ≥ 4.908).
+✅ Replaced vpn_functional_test_runner.py with improved variant (score 4.902 > 4.901).
+⚖️ Kept original finance_master.py (score 4.945 ≥ 4.932).
+⚖️ Kept original kb_summarizer_agent.py (score 4.908 ≥ 4.899).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_refresh_guard.py with improved variant (score 4.369 > 4.271).
+⚖️ Kept original vpn_test_runner.py (score 1.127 ≥ 0.775).
+✅ Replaced voice_connector_integration.py with improved variant (score 3.263 > 3.215).
+✅ Replaced symbolic_reasoner.py with improved variant (score 4.899 > 4.865).
+⚖️ Kept original predictive_simulation_agent.py (score 4.5 ≥ 4.33).
+✅ Replaced permanent_layer_setup.py with improved variant (score 4.883 > 4.86).
+✅ Replaced flag_digest_logger.py with improved variant (score 4.931 > 4.897).
+⚖️ Kept original summary_generator.py (score 4.894 ≥ 4.894).
+✅ Replaced prediction_feed_summarizer.py with improved variant (score 4.842 > 4.771).
+✅ Replaced remind.py with improved variant (score 4.899 > 4.883).
+✅ Replaced emotion_state_tracker.py with improved variant (score 4.904 > 4.883).
+⚖️ Kept original publish_status_report.py (score 4.823 ≥ 4.815).
+✅ Replaced vpn_autoconnect.py with improved variant (score 4.868 > 4.826).
+✅ Replaced fitness_expansion.py with improved variant (score 4.87 > 4.869).
+✅ Replaced calendar_sync_guard.py with improved variant (score 4.264 > 4.178).
+⚖️ Kept original agi_master.py (score 4.922 ≥ 4.922).
+⚖️ Kept original movie_list_test.py (score 4.87 ≥ 4.852).
+✅ Replaced fitness_daily_agent.py with improved variant (score 4.851 > 4.814).
+✅ Replaced evolutionary_agi.py with improved variant (score 4.897 > 4.858).
+✅ Replaced health_check_loop.py with improved variant (score 4.865 > 4.843).
+✅ Replaced absorb_log_append.py with improved variant (score 4.921 > 4.903).
+✅ Replaced gen_status_report.py with improved variant (score 4.907 > 4.9).
+✅ Replaced proactive_nudge_agent.py with improved variant (score 4.943 > 4.939).
+✅ Replaced cross_agent_fitness.py with improved variant (score 4.938 > 4.904).
+⚖️ Kept original knowledge_sharing.py (score 4.891 ≥ 4.878).
+✅ Replaced agent_evolution_cycle.py with improved variant (score 4.886 > 4.856).
+✅ Replaced agents_daily_improvement.py with improved variant (score 4.901 > 4.896).
+✅ Replaced nutrition_pipeline.py with improved variant (score 4.773 > 4.721).
+⚖️ Kept original pa_tasks_audit.py (score 4.612 ≥ 4.553).
+✅ Replaced run_security_audit.py with improved variant (score 4.905 > 4.901).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+✅ Replaced weekly_optimizations_generator.py with improved variant (score 4.887 > 4.846).
+✅ Replaced generate_status_report.py with improved variant (score 4.89 > 4.889).
+⚖️ Kept original calendar_event_creator.py (score 4.305 ≥ 4.235).
+✅ Replaced fitness_tracker.py with improved variant (score 4.92 > 4.907).
+⚖️ Kept original rotate_logs.py (score 4.858 ≥ 4.832).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+⚖️ Kept original meta_learning_core.py (score 4.871 ≥ 4.866).
+⚖️ Kept original summarize_agent_logs.py (score 4.552 ≥ 4.469).
+⚖️ Kept original agent_self_repair_loop.py (score 4.907 ≥ 4.888).
+✅ Replaced system_scorecard_agent.py with improved variant (score 4.904 > 4.879).
+✅ Replaced storage_cleanup.py with improved variant (score 4.9 > 4.878).
+✅ Replaced kb_smoke_test.py with improved variant (score 4.915 > 4.896).
+⚖️ Kept original kb_event_logger.py (score 4.909 ≥ 4.905).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+✅ Replaced run_task.py with improved variant (score 4.898 > 4.864).
+⚖️ Kept original agent_log_parser.py (score 4.877 ≥ 4.819).
+✅ Replaced kb_api.py with improved variant (score 4.879 > 4.805).
+✅ Replaced test_email_dispatch.py with improved variant (score 4.623 > 4.527).
+⚖️ Kept original status_report_builder.py (score 4.919 ≥ 4.896).
+✅ Replaced adaptive_code_evolver.py with improved variant (score 4.901 > 4.845).
+✅ Replaced reminder_scheduler_loop.py with improved variant (score 4.912 > 4.91).
+✅ Replaced voice_access_movie_summary.py with improved variant (score 4.885 > 4.871).
+✅ Replaced barcode_postfilter.py with improved variant (score 4.929 > 4.921).
+⚖️ Kept original voice_memory_lookup.py (score 4.909 ≥ 4.899).
+⚖️ Kept original geofence_nudger.py (score 4.914 ≥ 4.897).
+✅ Replaced vpn_status_reporter.py with improved variant (score 4.772 > 4.758).
+✅ Replaced swim_weather_nudge.py with improved variant (score 4.616 > 4.499).
+✅ Replaced progress_evaluation_runner.py with improved variant (score 4.899 > 4.873).
+✅ Replaced kb_facts_writer.py with improved variant (score 4.812 > 4.798).
+✅ Replaced fitness_tracking_verifier.py with improved variant (score 4.919 > 4.911).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+⚖️ Kept original backup_fitness.py (score 4.888 ≥ 4.886).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.254 > 3.143).
+⚖️ Kept original absorb_hourly.py (score 4.908 ≥ 4.894).
+✅ Replaced weekly_status_report.py with improved variant (score 4.89 > 4.857).
+⚖️ Kept original reminder_master.py (score 4.748 ≥ 4.719).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original log_memory_manifest.py (score 4.915 ≥ 4.914).
+⚖️ Kept original final_validation_reporter.py (score 4.899 ≥ 4.888).
+✅ Replaced github_push_verifier.py with improved variant (score 4.896 > 4.861).
+✅ Replaced log_rotate.py with improved variant (score 4.913 > 4.844).
+✅ Replaced calendar_sync_guard_v3.py with improved variant (score 4.542 > 4.537).
+✅ Replaced fitness_weekly_trends.py with improved variant (score 4.904 > 4.895).
+⚖️ Kept original progress_evaluator.py (score 4.803 ≥ 4.749).
+✅ Replaced git_auto_commit.py with improved variant (score 4.814 > 4.746).
+✅ Replaced shared_intelligence_loop.py with improved variant (score 4.803 > 4.776).
+✅ Replaced security_suite.py with improved variant (score 1.599 > 1.484).
+✅ Replaced status_postprocess.py with improved variant (score 4.896 > 4.889).
+✅ Replaced security_audit_runner.py with improved variant (score 4.916 > 4.914).
+⚖️ Kept original ai_evolution_cycle.py (score 4.615 ≥ 4.493).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+⚖️ Kept original voice_status.py (score 4.885 ≥ 4.879).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+⚖️ Kept original fitness_cluster.py (score 4.422 ≥ 4.404).
+✅ Replaced voice_geo_status.py with improved variant (score 4.933 > 4.903).
+⚖️ Kept original generate_weekly_report.py (score 4.936 ≥ 4.92).
+✅ Replaced generate_weekly_status.py with improved variant (score 4.877 > 4.867).
+✅ Replaced media_agents.py with improved variant (score 4.755 > 4.708).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:48.605231+00:00] START tools/predictive_planner.py
+[2025-12-06T07:13:48.681710+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:48.696350+00:00] START tools/symbolic_reasoner.py
+[2025-12-06T07:13:48.772108+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:48.788688+00:00] START tools/auto_doc_agent.py
+[2025-12-06T07:13:48.837684+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:48.852704+00:00] START tools/self_improvement.py
+[2025-12-06T07:13:48.901519+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:48.916004+00:00] START tools/proactive_nudge_agent.py
+[2025-12-06T07:13:48.986082+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:49.004586+00:00] START tools/meta_learning_core.py
+[2025-12-06T07:13:49.121308+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-06.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:49.137582+00:00] START tools/cross_agent_fitness.py
+[2025-12-06T07:13:49.187341+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-06T07:13:49.202416+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-07T07:03:46.298611+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-07T07:03:46.302104+00:00] START tools/scenario_simulation_suite.py
+[2025-12-07T07:03:48.603894+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=291.01ms
+GitHub Visibility Test → PASS | delay=2.81s
+Fitness Data Integrity Test → FAIL | recovery=2.09s
+Finance Logging Integrity Test → PASS | missing_entries=1
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 2.09, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-07T07:03:48.620542+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-07T07:08:43.967995+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-07T07:08:43.971361+00:00] START tools/scenario_simulation_suite.py
+[2025-12-07T07:08:46.071944+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=161.01ms
+GitHub Visibility Test → PASS | delay=0.59s
+Fitness Data Integrity Test → PASS | recovery=1.36s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-07T07:08:46.092490+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-07T07:08:48.998513+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-07T07:08:49.003140+00:00] START tools/scenario_simulation_suite.py
+[2025-12-07T07:08:51.115958+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=216.4ms
+GitHub Visibility Test → PASS | delay=2.31s
+Fitness Data Integrity Test → FAIL | recovery=4.68s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 4.68, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-07T07:08:51.131217+00:00] START tools/recursive_self_improvement.py
+[2025-12-07T07:13:59.647454+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+⚖️ Kept original vpn_activation_test.py (score 4.733 ≥ 4.391).
+✅ Replaced agents_notify.py with improved variant (score 4.614 > 4.445).
+⚖️ Kept original catchup_guard.py (score 4.8 ≥ 4.624).
+✅ Replaced report_master.py with improved variant (score 4.321 > 3.282).
+⚖️ Kept original voice_guard.py (score 4.828 ≥ 4.79).
+✅ Replaced anticipation_research_agent.py with improved variant (score 4.875 > 4.837).
+✅ Replaced system_maintenance.py with improved variant (score 4.52 > 4.499).
+✅ Replaced system_bootstrap.py with improved variant (score 4.867 > 4.785).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.866 > 4.511).
+✅ Replaced barcode_cache.py with improved variant (score 4.143 > 3.971).
+✅ Replaced simulate_geofence.py with improved variant (score 4.868 > 4.762).
+✅ Replaced security_audit_scheduler.py with improved variant (score 4.287 > 3.837).
+✅ Replaced vpn_activation_detector.py with improved variant (score 4.809 > 4.803).
+⚖️ Kept original preflight.py (score 4.794 ≥ 4.736).
+⚖️ Kept original core_monitors_bundle.py (score 0.0 ≥ 0.0).
+⚖️ Kept original run_absorption.py (score 4.488 ≥ 4.486).
+⚖️ Kept original recursive_evolution_manager.py (score 4.723 ≥ 4.712).
+✅ Replaced support_sites_router.py with improved variant (score 4.911 > 4.901).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.792 > 4.789).
+✅ Replaced absorb_guard.py with improved variant (score 4.907 > 4.905).
+⚖️ Kept original nutrition_fallback.py (score 4.949 ≥ 4.949).
+✅ Replaced security_audit.py with improved variant (score 4.906 > 4.891).
+⚖️ Kept original fitness_normalize.py (score 4.923 ≥ 4.92).
+✅ Replaced core_sanity_suite.py with improved variant (score 4.921 > 4.907).
+✅ Replaced unpack_inbox.py with improved variant (score 4.875 > 4.835).
+✅ Replaced sms_fallback_queue.py with improved variant (score 4.66 > 4.592).
+✅ Replaced fitness_audit.py with improved variant (score 4.903 > 4.863).
+✅ Replaced generate_agent_docs_part1.py with improved variant (score 4.731 > 4.723).
+✅ Replaced master_guard_integrator.py with improved variant (score 4.019 > 3.749).
+⚖️ Kept original barcode_sync.py (score 4.866 ≥ 4.854).
+✅ Replaced alert_triage.py with improved variant (score 4.665 > 4.349).
+⚖️ Kept original auto_doc_agent.py (score 4.944 ≥ 4.93).
+✅ Replaced reminder_runner.py with improved variant (score 4.918 > 4.898).
+✅ Replaced agi_evolution_sandbox.py with improved variant (score 4.937 > 4.933).
+⚖️ Kept original optimize_agent_priorities.py (score 4.835 ≥ 4.812).
+⚖️ Kept original predictive_planner.py (score 4.943 ≥ 4.938).
+✅ Replaced sms_service_guard.py with improved variant (score 4.583 > 4.527).
+✅ Replaced permanent_layer_verifier.py with improved variant (score 4.853 > 4.84).
+⚖️ Kept original integration_manifest.py (score 4.878 ≥ 4.863).
+⚖️ Kept original fitness_ingest.py (score 4.867 ≥ 4.824).
+✅ Replaced fitness_progress_master.py with improved variant (score 4.484 > 4.177).
+⚖️ Kept original self_improvement.py (score 4.937 ≥ 4.924).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+✅ Replaced symbolic_reasoning.py with improved variant (score 4.627 > 4.45).
+✅ Replaced knowledge_sharing_validator.py with improved variant (score 4.786 > 4.659).
+⚖️ Kept original simulate_and_prepare.py (score 4.549 ≥ 4.465).
+⚖️ Kept original ask_memory.py (score 4.629 ≥ 4.564).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_parser.py with improved variant (score 3.148 > 3.009).
+⚖️ Kept original gmail_refresh_guard_v3.py (score 4.119 ≥ 4.09).
+✅ Replaced security_reliability.py with improved variant (score 4.722 > 4.667).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_schedule_event.py with improved variant (score 4.345 > 4.251).
+✅ Replaced parse_food_log_sheet.py with improved variant (score 4.905 > 4.886).
+⚖️ Kept original knowledge_master.py (score 0.0 ≥ 0.0).
+✅ Replaced absorb_status_report.py with improved variant (score 4.502 > 4.422).
+✅ Replaced memory_compressor.py with improved variant (score 4.06 > 3.42).
+✅ Replaced summary_guard.py with improved variant (score 4.517 > 4.343).
+✅ Replaced agents_postclean.py with improved variant (score 4.854 > 4.819).
+⚖️ Kept original self_generation_engine.py (score 4.817 ≥ 4.727).
+⚖️ Kept original agi_simulation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original benchmark_agents.py (score 3.67 ≥ 3.597).
+✅ Replaced notify_layer.py with improved variant (score 4.887 > 4.885).
+✅ Replaced consensus_dispatcher.py with improved variant (score 4.856 > 4.843).
+✅ Replaced filename_guard.py with improved variant (score 4.912 > 4.907).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+✅ Replaced project_delta_report.py with improved variant (score 4.908 > 4.897).
+⚖️ Kept original import_fitness_dispatch.py (score 4.875 ≥ 4.872).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.918 > 4.903).
+✅ Replaced watch_voice_trigger.py with improved variant (score 4.918 > 4.902).
+✅ Replaced health_master.py with improved variant (score 4.243 > 4.084).
+✅ Replaced morning_master.py with improved variant (score 4.651 > 4.535).
+✅ Replaced decision_support.py with improved variant (score 4.945 > 4.938).
+✅ Replaced nutrition_normalize.py with improved variant (score 4.903 > 4.9).
+✅ Replaced log_repair_guard.py with improved variant (score 4.907 > 4.835).
+✅ Replaced heartbeat_monitor.py with improved variant (score 4.602 > 4.526).
+⚖️ Kept original daily_voice_reminder.py (score 4.905 ≥ 4.89).
+✅ Replaced fitness_integration.py with improved variant (score 4.903 > 4.875).
+⚖️ Kept original scenario_simulation_engine.py (score 4.859 ≥ 4.835).
+⚖️ Kept original ride_deals_scan.py (score 4.268 ≥ 4.214).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+⚖️ Kept original report_master_mutated_1537.py (score 4.546 ≥ 4.376).
+✅ Replaced fitness_integration_live.py with improved variant (score 4.166 > 4.139).
+⚖️ Kept original voice_gmail_handler.py (score 4.511 ≥ 4.437).
+✅ Replaced project_status_report_agent.py with improved variant (score 4.89 > 4.868).
+✅ Replaced predictive_foresight_engine.py with improved variant (score 4.808 > 4.781).
+✅ Replaced agents_loop.py with improved variant (score 4.924 > 4.883).
+⚖️ Kept original finance_media.py (score 2.723 ≥ 2.635).
+⚖️ Kept original voice_context_loader.py (score 4.933 ≥ 4.928).
+⚖️ Kept original voice_connector_chatgpt.py (score 4.41 ≥ 4.314).
+✅ Replaced vpn_health_agent.py with improved variant (score 4.897 > 4.884).
+✅ Replaced watchdog_heartbeat.py with improved variant (score 4.922 > 4.891).
+⚖️ Kept original fitness_status_reporter.py (score 4.904 ≥ 4.888).
+✅ Replaced predictive_task_flow.py with improved variant (score 4.901 > 4.893).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 3.733 > 3.727).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+✅ Replaced coverage_refresh.py with improved variant (score 4.025 > 3.965).
+✅ Replaced convert_csv_to_yaml.py with improved variant (score 4.742 > 4.712).
+✅ Replaced generate_daily_state.py with improved variant (score 4.794 > 4.735).
+⚖️ Kept original rsi_orchestrator.py (score 4.883 ≥ 4.874).
+⚖️ Kept original state_tracker.py (score 4.85 ≥ 4.813).
+⚖️ Kept original scenario_simulation_suite.py (score 2.847 ≥ 2.823).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.815 > 4.789).
+✅ Replaced movies_monitor.py with improved variant (score 4.542 > 4.496).
+✅ Replaced geofence_heartbeat.py with improved variant (score 4.917 > 4.905).
+⚖️ Kept original fitness_daily_summary.py (score 4.871 ≥ 4.851).
+✅ Replaced recursive_ai_improvement.py with improved variant (score 4.911 > 4.88).
+✅ Replaced knowledge_graph.py with improved variant (score 1.713 > 1.144).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+✅ Replaced verify_knowledge_base.py with improved variant (score 4.891 > 4.889).
+⚖️ Kept original vpn_events_normalizer.py (score 4.906 ≥ 4.901).
+⚖️ Kept original consensus_auto_repair_suite.py (score 2.485 ≥ 2.413).
+⚖️ Kept original build_final_agent_report.py (score 4.209 ≥ 4.1).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_sync_drive.py with improved variant (score 3.372 > 3.111).
+✅ Replaced verify_logs_tree.py with improved variant (score 4.852 > 4.829).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.853 > 4.844).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.88 ≥ 4.857).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 3.868 > 3.777).
+✅ Replaced write_memory_heartbeats.py with improved variant (score 4.648 > 0.0).
+✅ Replaced scheduler.py with improved variant (score 4.899 > 4.88).
+✅ Replaced top10_generator.py with improved variant (score 3.201 > 3.15).
+✅ Replaced agents_orchestrator.py with improved variant (score 4.89 > 4.724).
+✅ Replaced finance_audit.py with improved variant (score 4.869 > 4.864).
+⚖️ Kept original geofence_engine.py (score 4.913 ≥ 4.885).
+✅ Replaced geo_receiver.py with improved variant (score 4.678 > 4.622).
+⚖️ Kept original sandbox_executor.py (score 4.857 ≥ 4.851).
+⚖️ Kept original dedupe_normalized.py (score 4.919 ≥ 4.911).
+⚖️ Kept original get_folder_size.py (score 4.897 ≥ 4.801).
+⚖️ Kept original vpn_functional_test_runner.py (score 4.859 ≥ 4.835).
+⚖️ Kept original finance_master.py (score 4.928 ≥ 4.843).
+⚖️ Kept original kb_summarizer_agent.py (score 4.793 ≥ 4.789).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_refresh_guard.py with improved variant (score 3.696 > 3.187).
+✅ Replaced vpn_test_runner.py with improved variant (score 1.561 > 1.49).
+⚖️ Kept original voice_connector_integration.py (score 4.13 ≥ 4.129).
+⚖️ Kept original symbolic_reasoner.py (score 4.888 ≥ 4.888).
+⚖️ Kept original predictive_simulation_agent.py (score 4.451 ≥ 4.411).
+✅ Replaced permanent_layer_setup.py with improved variant (score 4.874 > 4.839).
+✅ Replaced flag_digest_logger.py with improved variant (score 4.921 > 4.911).
+✅ Replaced summary_generator.py with improved variant (score 4.893 > 4.889).
+⚖️ Kept original prediction_feed_summarizer.py (score 4.884 ≥ 4.865).
+⚖️ Kept original remind.py (score 4.853 ≥ 4.849).
+✅ Replaced emotion_state_tracker.py with improved variant (score 4.903 > 4.879).
+⚖️ Kept original publish_status_report.py (score 4.774 ≥ 4.755).
+⚖️ Kept original vpn_autoconnect.py (score 4.867 ≥ 4.844).
+✅ Replaced fitness_expansion.py with improved variant (score 4.884 > 4.85).
+✅ Replaced calendar_sync_guard.py with improved variant (score 4.253 > 4.232).
+⚖️ Kept original agi_master.py (score 4.936 ≥ 4.889).
+⚖️ Kept original movie_list_test.py (score 4.872 ≥ 4.796).
+⚖️ Kept original fitness_daily_agent.py (score 4.841 ≥ 4.82).
+⚖️ Kept original evolutionary_agi.py (score 4.823 ≥ 4.813).
+⚖️ Kept original health_check_loop.py (score 4.917 ≥ 4.917).
+⚖️ Kept original absorb_log_append.py (score 4.908 ≥ 4.882).
+⚖️ Kept original gen_status_report.py (score 4.844 ≥ 4.829).
+✅ Replaced proactive_nudge_agent.py with improved variant (score 4.937 > 4.907).
+⚖️ Kept original cross_agent_fitness.py (score 4.925 ≥ 4.925).
+✅ Replaced knowledge_sharing.py with improved variant (score 4.849 > 4.764).
+⚖️ Kept original agent_evolution_cycle.py (score 4.86 ≥ 4.816).
+✅ Replaced agents_daily_improvement.py with improved variant (score 4.856 > 4.748).
+✅ Replaced nutrition_pipeline.py with improved variant (score 4.528 > 4.51).
+⚖️ Kept original pa_tasks_audit.py (score 4.557 ≥ 4.385).
+✅ Replaced run_security_audit.py with improved variant (score 4.865 > 4.837).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+✅ Replaced weekly_optimizations_generator.py with improved variant (score 4.902 > 4.899).
+✅ Replaced generate_status_report.py with improved variant (score 4.9 > 4.872).
+✅ Replaced calendar_event_creator.py with improved variant (score 4.486 > 4.464).
+✅ Replaced fitness_tracker.py with improved variant (score 4.941 > 4.931).
+✅ Replaced rotate_logs.py with improved variant (score 4.886 > 4.849).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+✅ Replaced meta_learning_core.py with improved variant (score 4.879 > 4.878).
+✅ Replaced summarize_agent_logs.py with improved variant (score 4.664 > 4.584).
+✅ Replaced agent_self_repair_loop.py with improved variant (score 4.9 > 4.896).
+✅ Replaced system_scorecard_agent.py with improved variant (score 4.862 > 4.858).
+✅ Replaced storage_cleanup.py with improved variant (score 4.898 > 4.864).
+✅ Replaced kb_smoke_test.py with improved variant (score 4.904 > 4.885).
+⚖️ Kept original kb_event_logger.py (score 4.909 ≥ 4.901).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+⚖️ Kept original run_task.py (score 4.901 ≥ 4.893).
+✅ Replaced agent_log_parser.py with improved variant (score 4.902 > 4.875).
+⚖️ Kept original kb_api.py (score 4.859 ≥ 4.779).
+⚖️ Kept original test_email_dispatch.py (score 4.47 ≥ 4.324).
+✅ Replaced status_report_builder.py with improved variant (score 4.82 > 4.808).
+⚖️ Kept original adaptive_code_evolver.py (score 4.885 ≥ 4.878).
+✅ Replaced reminder_scheduler_loop.py with improved variant (score 4.879 > 4.875).
+✅ Replaced voice_access_movie_summary.py with improved variant (score 4.762 > 4.756).
+⚖️ Kept original barcode_postfilter.py (score 4.888 ≥ 4.811).
+⚖️ Kept original voice_memory_lookup.py (score 4.85 ≥ 4.819).
+✅ Replaced geofence_nudger.py with improved variant (score 4.79 > 4.77).
+✅ Replaced vpn_status_reporter.py with improved variant (score 4.886 > 4.862).
+⚖️ Kept original swim_weather_nudge.py (score 4.624 ≥ 4.601).
+✅ Replaced progress_evaluation_runner.py with improved variant (score 4.901 > 4.896).
+✅ Replaced kb_facts_writer.py with improved variant (score 4.878 > 4.873).
+✅ Replaced fitness_tracking_verifier.py with improved variant (score 4.933 > 4.907).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_fitness.py with improved variant (score 4.896 > 4.843).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.291 > 3.248).
+⚖️ Kept original absorb_hourly.py (score 4.917 ≥ 4.905).
+✅ Replaced weekly_status_report.py with improved variant (score 4.87 > 4.845).
+⚖️ Kept original reminder_master.py (score 4.745 ≥ 4.701).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+✅ Replaced log_memory_manifest.py with improved variant (score 4.843 > 4.82).
+✅ Replaced final_validation_reporter.py with improved variant (score 4.867 > 4.866).
+⚖️ Kept original github_push_verifier.py (score 4.848 ≥ 4.822).
+✅ Replaced log_rotate.py with improved variant (score 4.894 > 4.891).
+⚖️ Kept original calendar_sync_guard_v3.py (score 4.608 ≥ 4.526).
+⚖️ Kept original fitness_weekly_trends.py (score 4.917 ≥ 4.916).
+✅ Replaced progress_evaluator.py with improved variant (score 4.873 > 4.734).
+✅ Replaced git_auto_commit.py with improved variant (score 4.884 > 4.848).
+✅ Replaced shared_intelligence_loop.py with improved variant (score 4.919 > 4.913).
+✅ Replaced security_suite.py with improved variant (score 1.632 > 1.602).
+⚖️ Kept original status_postprocess.py (score 4.903 ≥ 4.89).
+✅ Replaced security_audit_runner.py with improved variant (score 4.903 > 4.898).
+✅ Replaced ai_evolution_cycle.py with improved variant (score 4.622 > 4.579).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_status.py with improved variant (score 4.903 > 4.902).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+⚖️ Kept original fitness_cluster.py (score 4.53 ≥ 4.412).
+✅ Replaced voice_geo_status.py with improved variant (score 4.938 > 4.932).
+✅ Replaced generate_weekly_report.py with improved variant (score 4.925 > 4.915).
+✅ Replaced generate_weekly_status.py with improved variant (score 4.865 > 4.828).
+✅ Replaced media_agents.py with improved variant (score 4.659 > 4.635).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-07T07:13:59.663149+00:00] START tools/predictive_planner.py
+[2025-12-07T07:13:59.724262+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-07T07:13:59.740063+00:00] START tools/symbolic_reasoner.py
+[2025-12-07T07:13:59.790669+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-07T07:13:59.805783+00:00] START tools/auto_doc_agent.py
+[2025-12-07T07:13:59.861833+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-07T07:13:59.875861+00:00] START tools/self_improvement.py
+[2025-12-07T07:13:59.955710+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-07T07:13:59.970652+00:00] START tools/proactive_nudge_agent.py
+[2025-12-07T07:14:00.036492+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-07T07:14:00.053356+00:00] START tools/meta_learning_core.py
+[2025-12-07T07:14:00.173628+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-07.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-07T07:14:00.187926+00:00] START tools/cross_agent_fitness.py
+[2025-12-07T07:14:00.258873+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-07T07:14:00.275136+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-08T07:03:39.729647+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-08T07:03:39.733514+00:00] START tools/scenario_simulation_suite.py
+[2025-12-08T07:03:41.970540+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=249.5ms
+GitHub Visibility Test → PASS | delay=0.64s
+Fitness Data Integrity Test → PASS | recovery=3.06s
+Finance Logging Integrity Test → PASS | missing_entries=2
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 249.5, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-08T07:03:41.994960+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-08T07:08:23.020816+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-08T07:08:23.024474+00:00] START tools/scenario_simulation_suite.py
+[2025-12-08T07:08:25.135627+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → FAIL | latency=272.9ms
+GitHub Visibility Test → PASS | delay=0.52s
+Fitness Data Integrity Test → PASS | recovery=3.55s
+Finance Logging Integrity Test → FAIL | missing_entries=3
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  VPN Stress failed with data: {'test': 'VPN Stress', 'latency': 272.9, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 3, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-08T07:08:25.149901+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-08T07:08:28.035862+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-08T07:08:28.039359+00:00] START tools/scenario_simulation_suite.py
+[2025-12-08T07:08:30.204992+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=150.28ms
+GitHub Visibility Test → FAIL | delay=0.77s
+Fitness Data Integrity Test → PASS | recovery=2.85s
+Finance Logging Integrity Test → FAIL | missing_entries=3
+=== Simulation Summary → FAIL (2 failed) ===
+⚠️  GitHub Visibility failed with data: {'test': 'GitHub Visibility', 'delay': 0.77, 'result': 'FAIL'}
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 3, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-08T07:08:30.220975+00:00] START tools/recursive_self_improvement.py
+[2025-12-08T07:13:29.405728+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+✅ Replaced vpn_activation_test.py with improved variant (score 4.842 > 4.777).
+⚖️ Kept original agents_notify.py (score 4.812 ≥ 4.749).
+✅ Replaced catchup_guard.py with improved variant (score 4.893 > 4.878).
+✅ Replaced report_master.py with improved variant (score 4.475 > 3.717).
+✅ Replaced voice_guard.py with improved variant (score 4.896 > 4.893).
+✅ Replaced anticipation_research_agent.py with improved variant (score 4.895 > 4.842).
+✅ Replaced system_maintenance.py with improved variant (score 4.487 > 4.471).
+⚖️ Kept original system_bootstrap.py (score 4.951 ≥ 4.946).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.913 > 4.82).
+✅ Replaced barcode_cache.py with improved variant (score 4.482 > 4.363).
+✅ Replaced simulate_geofence.py with improved variant (score 4.904 > 4.903).
+✅ Replaced security_audit_scheduler.py with improved variant (score 4.493 > 4.332).
+✅ Replaced vpn_activation_detector.py with improved variant (score 4.824 > 4.77).
+⚖️ Kept original preflight.py (score 4.896 ≥ 4.85).
+⚖️ Kept original core_monitors_bundle.py (score 0.0 ≥ 0.0).
+⚖️ Kept original run_absorption.py (score 4.552 ≥ 4.536).
+✅ Replaced recursive_evolution_manager.py with improved variant (score 4.823 > 4.804).
+✅ Replaced support_sites_router.py with improved variant (score 4.928 > 4.911).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.879 > 4.876).
+✅ Replaced absorb_guard.py with improved variant (score 4.924 > 4.918).
+⚖️ Kept original nutrition_fallback.py (score 4.956 ≥ 4.95).
+⚖️ Kept original security_audit.py (score 4.929 ≥ 4.914).
+⚖️ Kept original fitness_normalize.py (score 4.924 ≥ 4.924).
+✅ Replaced core_sanity_suite.py with improved variant (score 4.93 > 4.913).
+✅ Replaced unpack_inbox.py with improved variant (score 4.918 > 4.903).
+⚖️ Kept original sms_fallback_queue.py (score 4.618 ≥ 4.554).
+✅ Replaced fitness_audit.py with improved variant (score 4.916 > 4.914).
+✅ Replaced generate_agent_docs_part1.py with improved variant (score 4.797 > 4.796).
+✅ Replaced master_guard_integrator.py with improved variant (score 4.176 > 3.846).
+⚖️ Kept original barcode_sync.py (score 4.893 ≥ 4.839).
+✅ Replaced alert_triage.py with improved variant (score 4.67 > 4.48).
+✅ Replaced auto_doc_agent.py with improved variant (score 4.955 > 4.954).
+✅ Replaced reminder_runner.py with improved variant (score 4.896 > 4.889).
+⚖️ Kept original agi_evolution_sandbox.py (score 4.956 ≥ 4.954).
+✅ Replaced report_master_mutated_5177.py with improved variant (score 4.613 > 4.611).
+✅ Replaced optimize_agent_priorities.py with improved variant (score 4.876 > 4.866).
+✅ Replaced predictive_planner.py with improved variant (score 4.958 > 4.955).
+✅ Replaced sms_service_guard.py with improved variant (score 4.637 > 4.584).
+✅ Replaced permanent_layer_verifier.py with improved variant (score 4.912 > 4.911).
+⚖️ Kept original integration_manifest.py (score 4.925 ≥ 4.916).
+✅ Replaced fitness_ingest.py with improved variant (score 4.928 > 4.921).
+✅ Replaced fitness_progress_master.py with improved variant (score 4.638 > 4.587).
+⚖️ Kept original self_improvement.py (score 4.962 ≥ 4.96).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+⚖️ Kept original symbolic_reasoning.py (score 4.706 ≥ 4.631).
+⚖️ Kept original knowledge_sharing_validator.py (score 4.766 ≥ 4.754).
+⚖️ Kept original simulate_and_prepare.py (score 4.645 ≥ 4.511).
+⚖️ Kept original ask_memory.py (score 4.527 ≥ 4.018).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+⚖️ Kept original gmail_parser.py (score 2.518 ≥ 2.195).
+✅ Replaced gmail_refresh_guard_v3.py with improved variant (score 3.914 > 3.763).
+✅ Replaced security_reliability.py with improved variant (score 4.594 > 4.571).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+⚖️ Kept original voice_schedule_event.py (score 4.428 ≥ 4.425).
+✅ Replaced parse_food_log_sheet.py with improved variant (score 4.928 > 4.926).
+✅ Replaced knowledge_master.py with improved variant (score 2.253 > 0.774).
+✅ Replaced absorb_status_report.py with improved variant (score 4.906 > 4.892).
+✅ Replaced memory_compressor.py with improved variant (score 4.587 > 4.266).
+⚖️ Kept original summary_guard.py (score 4.666 ≥ 4.487).
+✅ Replaced agents_postclean.py with improved variant (score 4.849 > 4.691).
+✅ Replaced self_generation_engine.py with improved variant (score 4.706 > 4.671).
+⚖️ Kept original agi_simulation.py (score 4.849 ≥ 4.789).
+⚖️ Kept original benchmark_agents.py (score 3.486 ≥ 3.388).
+⚖️ Kept original notify_layer.py (score 4.721 ≥ 4.707).
+⚖️ Kept original consensus_dispatcher.py (score 4.72 ≥ 4.715).
+⚖️ Kept original filename_guard.py (score 4.84 ≥ 4.755).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+✅ Replaced project_delta_report.py with improved variant (score 4.903 > 4.879).
+⚖️ Kept original import_fitness_dispatch.py (score 4.863 ≥ 4.83).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.914 > 4.887).
+⚖️ Kept original watch_voice_trigger.py (score 4.942 ≥ 4.934).
+✅ Replaced health_master.py with improved variant (score 4.138 > 4.064).
+✅ Replaced morning_master.py with improved variant (score 4.7 > 4.522).
+✅ Replaced decision_support.py with improved variant (score 4.954 > 4.949).
+⚖️ Kept original nutrition_normalize.py (score 4.926 ≥ 4.915).
+✅ Replaced log_repair_guard.py with improved variant (score 4.925 > 4.877).
+⚖️ Kept original report_master_mutated_1108.py (score 4.561 ≥ 4.522).
+✅ Replaced heartbeat_monitor.py with improved variant (score 4.667 > 4.62).
+⚖️ Kept original daily_voice_reminder.py (score 4.879 ≥ 4.865).
+⚖️ Kept original fitness_integration.py (score 4.895 ≥ 4.88).
+✅ Replaced scenario_simulation_engine.py with improved variant (score 4.858 > 4.801).
+⚖️ Kept original ride_deals_scan.py (score 4.214 ≥ 2.158).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+⚖️ Kept original report_master_mutated_1537.py (score 4.315 ≥ 4.104).
+⚖️ Kept original fitness_integration_live.py (score 4.011 ≥ 3.433).
+⚖️ Kept original voice_gmail_handler.py (score 4.154 ≥ 4.108).
+⚖️ Kept original project_status_report_agent.py (score 4.863 ≥ 4.836).
+⚖️ Kept original predictive_foresight_engine.py (score 4.848 ≥ 4.789).
+⚖️ Kept original agents_loop.py (score 4.925 ≥ 4.916).
+⚖️ Kept original finance_media.py (score 2.854 ≥ 2.699).
+⚖️ Kept original voice_context_loader.py (score 4.943 ≥ 4.939).
+✅ Replaced voice_connector_chatgpt.py with improved variant (score 4.509 > 4.429).
+✅ Replaced vpn_health_agent.py with improved variant (score 4.884 > 4.88).
+✅ Replaced watchdog_heartbeat.py with improved variant (score 4.942 > 4.935).
+✅ Replaced fitness_status_reporter.py with improved variant (score 4.905 > 4.868).
+⚖️ Kept original predictive_task_flow.py (score 4.926 ≥ 4.912).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 4.288 > 4.072).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original coverage_refresh.py (score 4.694 ≥ 4.689).
+⚖️ Kept original convert_csv_to_yaml.py (score 4.902 ≥ 4.894).
+⚖️ Kept original generate_daily_state.py (score 4.938 ≥ 4.931).
+⚖️ Kept original rsi_orchestrator.py (score 4.912 ≥ 4.908).
+⚖️ Kept original state_tracker.py (score 4.923 ≥ 4.918).
+✅ Replaced scenario_simulation_suite.py with improved variant (score 2.917 > 2.912).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.826 > 4.731).
+⚖️ Kept original movies_monitor.py (score 4.543 ≥ 4.391).
+✅ Replaced geofence_heartbeat.py with improved variant (score 4.842 > 4.832).
+✅ Replaced fitness_daily_summary.py with improved variant (score 4.881 > 4.824).
+⚖️ Kept original recursive_ai_improvement.py (score 4.901 ≥ 4.864).
+✅ Replaced knowledge_graph.py with improved variant (score 1.433 > 0.756).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+✅ Replaced verify_knowledge_base.py with improved variant (score 4.906 > 4.898).
+✅ Replaced vpn_events_normalizer.py with improved variant (score 4.93 > 4.919).
+✅ Replaced consensus_auto_repair_suite.py with improved variant (score 3.001 > 2.47).
+✅ Replaced build_final_agent_report.py with improved variant (score 4.657 > 4.649).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_sync_drive.py with improved variant (score 3.063 > 2.837).
+✅ Replaced verify_logs_tree.py with improved variant (score 4.921 > 4.914).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.854 > 4.845).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.908 ≥ 4.903).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 4.111 > 3.9).
+✅ Replaced write_memory_heartbeats.py with improved variant (score 4.771 > 0.0).
+✅ Replaced scheduler.py with improved variant (score 4.925 > 4.888).
+✅ Replaced top10_generator.py with improved variant (score 3.578 > 3.571).
+⚖️ Kept original agents_orchestrator.py (score 4.927 ≥ 4.922).
+⚖️ Kept original finance_audit.py (score 4.928 ≥ 4.92).
+✅ Replaced geofence_engine.py with improved variant (score 4.924 > 4.915).
+✅ Replaced geo_receiver.py with improved variant (score 4.696 > 4.657).
+✅ Replaced sandbox_executor.py with improved variant (score 4.891 > 4.856).
+⚖️ Kept original dedupe_normalized.py (score 4.942 ≥ 4.925).
+⚖️ Kept original get_folder_size.py (score 4.926 ≥ 4.915).
+⚖️ Kept original vpn_functional_test_runner.py (score 4.927 ≥ 4.91).
+⚖️ Kept original finance_master.py (score 4.956 ≥ 4.955).
+⚖️ Kept original kb_summarizer_agent.py (score 4.907 ≥ 4.903).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+⚖️ Kept original gmail_refresh_guard.py (score 4.601 ≥ 4.457).
+✅ Replaced vpn_test_runner.py with improved variant (score 1.758 > 1.731).
+⚖️ Kept original voice_connector_integration.py (score 4.153 ≥ 3.994).
+✅ Replaced symbolic_reasoner.py with improved variant (score 4.945 > 4.919).
+✅ Replaced predictive_simulation_agent.py with improved variant (score 4.572 > 4.358).
+✅ Replaced permanent_layer_setup.py with improved variant (score 4.745 > 4.714).
+✅ Replaced flag_digest_logger.py with improved variant (score 4.835 > 4.771).
+✅ Replaced summary_generator.py with improved variant (score 4.694 > 4.679).
+⚖️ Kept original prediction_feed_summarizer.py (score 4.705 ≥ 4.611).
+✅ Replaced remind.py with improved variant (score 4.72 > 4.652).
+✅ Replaced emotion_state_tracker.py with improved variant (score 4.855 > 4.701).
+✅ Replaced publish_status_report.py with improved variant (score 4.711 > 4.516).
+✅ Replaced vpn_autoconnect.py with improved variant (score 4.851 > 4.772).
+✅ Replaced fitness_expansion.py with improved variant (score 4.859 > 4.8).
+✅ Replaced calendar_sync_guard.py with improved variant (score 4.283 > 4.225).
+⚖️ Kept original agi_master.py (score 4.934 ≥ 4.933).
+⚖️ Kept original movie_list_test.py (score 4.91 ≥ 4.901).
+✅ Replaced fitness_daily_agent.py with improved variant (score 4.873 > 4.867).
+✅ Replaced evolutionary_agi.py with improved variant (score 4.921 > 4.911).
+✅ Replaced health_check_loop.py with improved variant (score 4.933 > 4.929).
+⚖️ Kept original absorb_log_append.py (score 4.913 ≥ 4.801).
+⚖️ Kept original gen_status_report.py (score 4.915 ≥ 4.905).
+⚖️ Kept original proactive_nudge_agent.py (score 4.949 ≥ 4.93).
+✅ Replaced cross_agent_fitness.py with improved variant (score 4.95 > 4.909).
+⚖️ Kept original knowledge_sharing.py (score 4.876 ≥ 4.869).
+✅ Replaced agent_evolution_cycle.py with improved variant (score 4.914 > 4.909).
+⚖️ Kept original agents_daily_improvement.py (score 4.884 ≥ 4.869).
+✅ Replaced nutrition_pipeline.py with improved variant (score 4.808 > 4.715).
+⚖️ Kept original pa_tasks_audit.py (score 4.702 ≥ 4.532).
+✅ Replaced run_security_audit.py with improved variant (score 4.917 > 4.915).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+✅ Replaced weekly_optimizations_generator.py with improved variant (score 4.912 > 4.904).
+✅ Replaced generate_status_report.py with improved variant (score 4.913 > 4.897).
+✅ Replaced calendar_event_creator.py with improved variant (score 4.622 > 4.439).
+✅ Replaced fitness_tracker.py with improved variant (score 4.942 > 4.901).
+✅ Replaced rotate_logs.py with improved variant (score 4.932 > 4.913).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+✅ Replaced meta_learning_core.py with improved variant (score 4.858 > 4.845).
+✅ Replaced summarize_agent_logs.py with improved variant (score 4.539 > 4.513).
+⚖️ Kept original agent_self_repair_loop.py (score 4.879 ≥ 4.822).
+✅ Replaced system_scorecard_agent.py with improved variant (score 4.915 > 4.878).
+✅ Replaced storage_cleanup.py with improved variant (score 4.907 > 4.904).
+✅ Replaced kb_smoke_test.py with improved variant (score 4.895 > 4.88).
+✅ Replaced kb_event_logger.py with improved variant (score 4.892 > 4.84).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+✅ Replaced run_task.py with improved variant (score 4.896 > 4.859).
+✅ Replaced agent_log_parser.py with improved variant (score 4.929 > 4.909).
+✅ Replaced kb_api.py with improved variant (score 4.906 > 4.875).
+✅ Replaced test_email_dispatch.py with improved variant (score 4.557 > 4.547).
+⚖️ Kept original status_report_builder.py (score 4.934 ≥ 4.919).
+⚖️ Kept original adaptive_code_evolver.py (score 4.917 ≥ 4.873).
+✅ Replaced reminder_scheduler_loop.py with improved variant (score 4.892 > 4.873).
+✅ Replaced voice_access_movie_summary.py with improved variant (score 4.885 > 4.846).
+✅ Replaced barcode_postfilter.py with improved variant (score 4.94 > 4.925).
+✅ Replaced voice_memory_lookup.py with improved variant (score 4.932 > 4.923).
+✅ Replaced geofence_nudger.py with improved variant (score 4.936 > 4.927).
+✅ Replaced vpn_status_reporter.py with improved variant (score 4.892 > 4.878).
+✅ Replaced swim_weather_nudge.py with improved variant (score 4.661 > 4.551).
+✅ Replaced progress_evaluation_runner.py with improved variant (score 4.923 > 4.916).
+✅ Replaced kb_facts_writer.py with improved variant (score 4.928 > 4.927).
+✅ Replaced fitness_tracking_verifier.py with improved variant (score 4.942 > 4.928).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+⚖️ Kept original backup_fitness.py (score 4.903 ≥ 4.868).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.494 > 3.34).
+✅ Replaced absorb_hourly.py with improved variant (score 4.94 > 4.921).
+✅ Replaced weekly_status_report.py with improved variant (score 4.912 > 4.865).
+⚖️ Kept original reminder_master.py (score 4.787 ≥ 4.78).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original log_memory_manifest.py (score 4.937 ≥ 4.928).
+⚖️ Kept original final_validation_reporter.py (score 4.929 ≥ 4.927).
+⚖️ Kept original github_push_verifier.py (score 4.9 ≥ 4.837).
+⚖️ Kept original log_rotate.py (score 4.907 ≥ 4.902).
+✅ Replaced calendar_sync_guard_v3.py with improved variant (score 4.642 > 4.637).
+✅ Replaced fitness_weekly_trends.py with improved variant (score 4.905 > 4.891).
+⚖️ Kept original progress_evaluator.py (score 4.827 ≥ 4.802).
+✅ Replaced git_auto_commit.py with improved variant (score 4.855 > 4.821).
+⚖️ Kept original shared_intelligence_loop.py (score 4.905 ≥ 4.876).
+⚖️ Kept original security_suite.py (score 1.626 ≥ 1.545).
+✅ Replaced status_postprocess.py with improved variant (score 4.933 > 4.907).
+✅ Replaced security_audit_runner.py with improved variant (score 4.918 > 4.914).
+✅ Replaced ai_evolution_cycle.py with improved variant (score 4.702 > 4.692).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+⚖️ Kept original voice_status.py (score 4.933 ≥ 4.928).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+✅ Replaced fitness_cluster.py with improved variant (score 4.511 > 4.478).
+✅ Replaced voice_geo_status.py with improved variant (score 4.948 > 4.941).
+✅ Replaced generate_weekly_report.py with improved variant (score 4.954 > 4.949).
+⚖️ Kept original generate_weekly_status.py (score 4.849 ≥ 4.849).
+✅ Replaced media_agents.py with improved variant (score 4.782 > 4.74).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.422556+00:00] START tools/predictive_planner.py
+[2025-12-08T07:13:29.463816+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.478673+00:00] START tools/symbolic_reasoner.py
+[2025-12-08T07:13:29.521155+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.536015+00:00] START tools/auto_doc_agent.py
+[2025-12-08T07:13:29.592358+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.608164+00:00] START tools/self_improvement.py
+[2025-12-08T07:13:29.649578+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.665057+00:00] START tools/proactive_nudge_agent.py
+[2025-12-08T07:13:29.724059+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.744721+00:00] START tools/meta_learning_core.py
+[2025-12-08T07:13:29.881268+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-08.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.898475+00:00] START tools/cross_agent_fitness.py
+[2025-12-08T07:13:29.979066+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-08T07:13:29.992702+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-09T07:03:41.812462+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-09T07:03:41.817350+00:00] START tools/scenario_simulation_suite.py
+[2025-12-09T07:03:44.227983+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=110.7ms
+GitHub Visibility Test → PASS | delay=1.41s
+Fitness Data Integrity Test → PASS | recovery=3.28s
+Finance Logging Integrity Test → PASS | missing_entries=2
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-09T07:03:44.243630+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-09T07:08:31.630035+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-09T07:08:31.633635+00:00] START tools/scenario_simulation_suite.py
+[2025-12-09T07:08:33.794272+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=336.8ms
+GitHub Visibility Test → PASS | delay=2.2s
+Fitness Data Integrity Test → FAIL | recovery=1.88s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Fitness Data failed with data: {'test': 'Fitness Data', 'recovery_time': 1.88, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-09T07:08:33.813524+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-09T07:08:36.797679+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-09T07:08:36.801922+00:00] START tools/scenario_simulation_suite.py
+[2025-12-09T07:08:38.958212+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=309.23ms
+GitHub Visibility Test → PASS | delay=1.2s
+Fitness Data Integrity Test → PASS | recovery=5.31s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-09T07:08:38.973306+00:00] START tools/recursive_self_improvement.py
+[2025-12-09T07:13:50.765160+00:00] END   tools/recursive_self_improvement.py status=OK
+--- STDOUT ---
+=== Recursive Self-Improvement Cycle Start ===
+✅ Replaced vpn_activation_test.py with improved variant (score 4.834 > 4.826).
+⚖️ Kept original agents_notify.py (score 4.798 ≥ 4.742).
+✅ Replaced catchup_guard.py with improved variant (score 4.868 > 4.679).
+✅ Replaced report_master.py with improved variant (score 4.32 > 3.58).
+✅ Replaced voice_guard.py with improved variant (score 4.783 > 4.767).
+✅ Replaced anticipation_research_agent.py with improved variant (score 4.908 > 4.884).
+⚖️ Kept original system_maintenance.py (score 4.511 ≥ 4.496).
+⚖️ Kept original system_bootstrap.py (score 4.949 ≥ 4.917).
+⚠️ Skipping __init__.py — empty or unreadable.
+✅ Replaced kb_ingest.py with improved variant (score 4.838 > 4.736).
+✅ Replaced barcode_cache.py with improved variant (score 4.48 > 4.092).
+⚖️ Kept original simulate_geofence.py (score 4.843 ≥ 4.668).
+✅ Replaced security_audit_scheduler.py with improved variant (score 3.962 > 3.233).
+⚖️ Kept original vpn_activation_detector.py (score 4.649 ≥ 4.537).
+✅ Replaced preflight.py with improved variant (score 4.799 > 4.669).
+⚖️ Kept original core_monitors_bundle.py (score 0.0 ≥ 0.0).
+✅ Replaced run_absorption.py with improved variant (score 4.494 > 4.483).
+✅ Replaced recursive_evolution_manager.py with improved variant (score 4.812 > 4.772).
+✅ Replaced support_sites_router.py with improved variant (score 4.896 > 4.89).
+✅ Replaced corrective_action_executor.py with improved variant (score 4.854 > 4.828).
+✅ Replaced absorb_guard.py with improved variant (score 4.911 > 4.907).
+✅ Replaced nutrition_fallback.py with improved variant (score 4.949 > 4.947).
+✅ Replaced security_audit.py with improved variant (score 4.916 > 4.894).
+⚖️ Kept original fitness_normalize.py (score 4.921 ≥ 4.921).
+✅ Replaced core_sanity_suite.py with improved variant (score 4.931 > 4.923).
+✅ Replaced unpack_inbox.py with improved variant (score 4.897 > 4.863).
+⚖️ Kept original sms_fallback_queue.py (score 4.661 ≥ 4.587).
+✅ Replaced fitness_audit.py with improved variant (score 4.9 > 4.889).
+⚖️ Kept original generate_agent_docs_part1.py (score 4.775 ≥ 4.745).
+✅ Replaced master_guard_integrator.py with improved variant (score 4.06 > 3.737).
+✅ Replaced barcode_sync.py with improved variant (score 4.852 > 4.834).
+✅ Replaced alert_triage.py with improved variant (score 4.68 > 4.41).
+⚖️ Kept original auto_doc_agent.py (score 4.946 ≥ 4.94).
+✅ Replaced reminder_runner.py with improved variant (score 4.925 > 4.919).
+✅ Replaced agi_evolution_sandbox.py with improved variant (score 4.937 > 4.868).
+✅ Replaced report_master_mutated_5177.py with improved variant (score 4.571 > 4.563).
+⚖️ Kept original optimize_agent_priorities.py (score 4.848 ≥ 4.848).
+✅ Replaced predictive_planner.py with improved variant (score 4.949 > 4.946).
+⚖️ Kept original sms_service_guard.py (score 4.633 ≥ 4.612).
+✅ Replaced permanent_layer_verifier.py with improved variant (score 4.893 > 4.865).
+✅ Replaced integration_manifest.py with improved variant (score 4.908 > 4.903).
+✅ Replaced fitness_ingest.py with improved variant (score 4.913 > 4.858).
+✅ Replaced fitness_progress_master.py with improved variant (score 4.619 > 4.596).
+✅ Replaced self_improvement.py with improved variant (score 4.946 > 4.939).
+⚖️ Kept original movie_recommender.py (score 0.0 ≥ 0.0).
+⚖️ Kept original symbolic_reasoning.py (score 4.718 ≥ 4.56).
+✅ Replaced knowledge_sharing_validator.py with improved variant (score 4.786 > 4.747).
+⚖️ Kept original simulate_and_prepare.py (score 4.798 ≥ 4.737).
+⚖️ Kept original ask_memory.py (score 4.61 ≥ 4.462).
+⚖️ Kept original calendar_parser.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_parser.py with improved variant (score 2.963 > 2.563).
+✅ Replaced gmail_refresh_guard_v3.py with improved variant (score 3.695 > 3.463).
+✅ Replaced security_reliability.py with improved variant (score 4.63 > 4.531).
+⚖️ Kept original mcl_guard.py (score 0.0 ≥ 0.0).
+✅ Replaced voice_schedule_event.py with improved variant (score 4.379 > 4.166).
+⚖️ Kept original parse_food_log_sheet.py (score 4.928 ≥ 4.885).
+⚖️ Kept original knowledge_master.py (score 0.417 ≥ 0.0).
+✅ Replaced absorb_status_report.py with improved variant (score 4.855 > 4.824).
+⚖️ Kept original memory_compressor.py (score 3.873 ≥ 2.713).
+✅ Replaced summary_guard.py with improved variant (score 4.401 > 4.17).
+⚖️ Kept original agents_postclean.py (score 4.86 ≥ 4.842).
+✅ Replaced self_generation_engine.py with improved variant (score 4.714 > 4.704).
+⚖️ Kept original agi_simulation.py (score 4.857 ≥ 4.796).
+✅ Replaced benchmark_agents.py with improved variant (score 3.746 > 3.436).
+✅ Replaced notify_layer.py with improved variant (score 4.869 > 4.81).
+⚖️ Kept original consensus_dispatcher.py (score 4.845 ≥ 4.842).
+✅ Replaced filename_guard.py with improved variant (score 4.893 > 4.881).
+⚠️ Skipping agent_sim_logger.py — empty or unreadable.
+✅ Replaced project_delta_report.py with improved variant (score 4.929 > 4.922).
+⚖️ Kept original import_fitness_dispatch.py (score 4.878 ≥ 4.875).
+✅ Replaced fitness_tracker_sync.py with improved variant (score 4.921 > 4.891).
+✅ Replaced watch_voice_trigger.py with improved variant (score 4.907 > 4.888).
+✅ Replaced health_master.py with improved variant (score 4.177 > 4.13).
+✅ Replaced morning_master.py with improved variant (score 4.695 > 4.592).
+⚖️ Kept original decision_support.py (score 4.945 ≥ 4.933).
+✅ Replaced nutrition_normalize.py with improved variant (score 4.918 > 4.912).
+✅ Replaced log_repair_guard.py with improved variant (score 4.927 > 4.893).
+✅ Replaced report_master_mutated_1108.py with improved variant (score 4.597 > 4.585).
+✅ Replaced heartbeat_monitor.py with improved variant (score 4.632 > 4.597).
+✅ Replaced daily_voice_reminder.py with improved variant (score 4.919 > 4.904).
+✅ Replaced fitness_integration.py with improved variant (score 4.872 > 4.847).
+⚖️ Kept original scenario_simulation_engine.py (score 4.832 ≥ 4.808).
+✅ Replaced ride_deals_scan.py with improved variant (score 4.281 > 4.128).
+⚖️ Kept original fix_remaining_twilio_calls.py (score 0.0 ≥ 0.0).
+⚖️ Kept original ai_evolutionist.py (score 0.0 ≥ 0.0).
+⚖️ Kept original report_master_mutated_1537.py (score 4.35 ≥ 4.193).
+✅ Replaced fitness_integration_live.py with improved variant (score 4.206 > 3.866).
+✅ Replaced voice_gmail_handler.py with improved variant (score 4.506 > 4.388).
+⚖️ Kept original project_status_report_agent.py (score 4.859 ≥ 4.853).
+⚖️ Kept original predictive_foresight_engine.py (score 4.859 ≥ 4.842).
+⚖️ Kept original agents_loop.py (score 4.917 ≥ 4.917).
+✅ Replaced finance_media.py with improved variant (score 2.945 > 2.793).
+⚖️ Kept original voice_context_loader.py (score 4.936 ≥ 4.927).
+⚖️ Kept original voice_connector_chatgpt.py (score 4.363 ≥ 4.149).
+✅ Replaced vpn_health_agent.py with improved variant (score 4.909 > 4.907).
+✅ Replaced watchdog_heartbeat.py with improved variant (score 4.897 > 4.877).
+✅ Replaced fitness_status_reporter.py with improved variant (score 4.893 > 4.88).
+✅ Replaced predictive_task_flow.py with improved variant (score 4.898 > 4.808).
+✅ Replaced knowledge_share_kpi.py with improved variant (score 3.995 > 3.871).
+⚖️ Kept original system_file_auditor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original coverage_refresh.py (score 4.639 ≥ 4.594).
+✅ Replaced convert_csv_to_yaml.py with improved variant (score 4.889 > 4.884).
+✅ Replaced generate_daily_state.py with improved variant (score 4.926 > 4.925).
+⚖️ Kept original rsi_orchestrator.py (score 4.896 ≥ 4.89).
+⚖️ Kept original state_tracker.py (score 4.901 ≥ 4.871).
+✅ Replaced scenario_simulation_suite.py with improved variant (score 2.896 > 2.884).
+⚖️ Kept original recursive_self_improvement_old.py (score 0.0 ≥ 0.0).
+✅ Replaced refine_agent_registry.py with improved variant (score 4.777 > 4.766).
+⚖️ Kept original movies_monitor.py (score 4.459 ≥ 4.246).
+⚖️ Kept original geofence_heartbeat.py (score 4.818 ≥ 4.796).
+✅ Replaced fitness_daily_summary.py with improved variant (score 4.816 > 4.761).
+✅ Replaced recursive_ai_improvement.py with improved variant (score 4.909 > 4.897).
+✅ Replaced knowledge_graph.py with improved variant (score 1.231 > 1.156).
+⚖️ Kept original phase4_agent_orchestrator.py (score 0.0 ≥ 0.0).
+✅ Replaced verify_knowledge_base.py with improved variant (score 4.919 > 4.916).
+⚖️ Kept original vpn_events_normalizer.py (score 4.914 ≥ 4.914).
+✅ Replaced consensus_auto_repair_suite.py with improved variant (score 2.548 > 2.199).
+✅ Replaced build_final_agent_report.py with improved variant (score 4.587 > 4.373).
+⚖️ Kept original absorb_memory.py (score 0.0 ≥ 0.0).
+⚖️ Kept original backup_sync_drive.py (score 2.993 ≥ 2.92).
+✅ Replaced verify_logs_tree.py with improved variant (score 4.888 > 4.877).
+✅ Replaced vpn_auto_detect_activate.py with improved variant (score 4.793 > 4.767).
+⚖️ Kept original absorb_runner.py (score 0.0 ≥ 0.0).
+⚖️ Kept original vpn_load_stress_test_runner.py (score 4.891 ≥ 4.887).
+✅ Replaced agent_summary_orchestrator.py with improved variant (score 3.993 > 3.992).
+✅ Replaced write_memory_heartbeats.py with improved variant (score 4.648 > 0.0).
+⚖️ Kept original scheduler.py (score 4.907 ≥ 4.897).
+⚖️ Kept original top10_generator.py (score 3.319 ≥ 3.214).
+⚖️ Kept original agents_orchestrator.py (score 4.891 ≥ 4.878).
+⚖️ Kept original finance_audit.py (score 4.862 ≥ 4.851).
+✅ Replaced geofence_engine.py with improved variant (score 4.895 > 4.883).
+⚖️ Kept original geo_receiver.py (score 4.622 ≥ 4.569).
+⚖️ Kept original sandbox_executor.py (score 4.905 ≥ 4.901).
+✅ Replaced dedupe_normalized.py with improved variant (score 4.921 > 4.909).
+✅ Replaced get_folder_size.py with improved variant (score 4.922 > 4.914).
+✅ Replaced vpn_functional_test_runner.py with improved variant (score 4.906 > 4.895).
+✅ Replaced finance_master.py with improved variant (score 4.943 > 4.939).
+⚖️ Kept original kb_summarizer_agent.py (score 4.888 ≥ 4.86).
+⚖️ Kept original gmail_auth_setup.py (score 0.0 ≥ 0.0).
+✅ Replaced gmail_refresh_guard.py with improved variant (score 4.371 > 4.315).
+⚖️ Kept original vpn_test_runner.py (score 1.368 ≥ 1.208).
+✅ Replaced voice_connector_integration.py with improved variant (score 3.221 > 3.165).
+⚖️ Kept original symbolic_reasoner.py (score 4.896 ≥ 4.87).
+✅ Replaced predictive_simulation_agent.py with improved variant (score 4.323 > 4.162).
+⚖️ Kept original permanent_layer_setup.py (score 4.906 ≥ 4.889).
+⚖️ Kept original flag_digest_logger.py (score 4.895 ≥ 4.895).
+⚖️ Kept original summary_generator.py (score 4.894 ≥ 4.877).
+⚖️ Kept original prediction_feed_summarizer.py (score 4.887 ≥ 4.85).
+✅ Replaced remind.py with improved variant (score 4.887 > 4.883).
+⚖️ Kept original emotion_state_tracker.py (score 4.878 ≥ 4.806).
+⚖️ Kept original publish_status_report.py (score 4.793 ≥ 4.782).
+⚖️ Kept original vpn_autoconnect.py (score 4.89 ≥ 4.87).
+✅ Replaced fitness_expansion.py with improved variant (score 4.893 > 4.825).
+✅ Replaced calendar_sync_guard.py with improved variant (score 4.223 > 4.192).
+⚖️ Kept original report_master_mutated_8312.py (score 4.533 ≥ 4.249).
+✅ Replaced agi_master.py with improved variant (score 4.943 > 4.938).
+✅ Replaced movie_list_test.py with improved variant (score 4.892 > 4.868).
+⚖️ Kept original fitness_daily_agent.py (score 4.894 ≥ 4.891).
+✅ Replaced evolutionary_agi.py with improved variant (score 4.878 > 4.872).
+⚖️ Kept original health_check_loop.py (score 4.923 ≥ 4.898).
+✅ Replaced absorb_log_append.py with improved variant (score 4.9 > 4.894).
+⚖️ Kept original gen_status_report.py (score 4.899 ≥ 4.869).
+✅ Replaced proactive_nudge_agent.py with improved variant (score 4.94 > 4.937).
+✅ Replaced cross_agent_fitness.py with improved variant (score 4.937 > 4.933).
+⚖️ Kept original knowledge_sharing.py (score 4.867 ≥ 4.864).
+⚖️ Kept original agent_evolution_cycle.py (score 4.88 ≥ 4.822).
+⚖️ Kept original agents_daily_improvement.py (score 4.818 ≥ 4.804).
+⚖️ Kept original nutrition_pipeline.py (score 4.762 ≥ 4.714).
+⚖️ Kept original pa_tasks_audit.py (score 4.588 ≥ 4.576).
+⚖️ Kept original run_security_audit.py (score 4.924 ≥ 4.856).
+⚖️ Kept original sms_persistence_daemon.py (score 0.0 ≥ 0.0).
+⚖️ Kept original weekly_optimizations_generator.py (score 4.824 ≥ 4.802).
+✅ Replaced generate_status_report.py with improved variant (score 4.826 > 4.804).
+⚖️ Kept original calendar_event_creator.py (score 4.402 ≥ 4.34).
+✅ Replaced fitness_tracker.py with improved variant (score 4.918 > 4.87).
+✅ Replaced rotate_logs.py with improved variant (score 4.87 > 4.807).
+⚖️ Kept original master_control_loop.py (score 0.0 ≥ 0.0).
+✅ Replaced meta_learning_core.py with improved variant (score 4.886 > 4.879).
+⚖️ Kept original summarize_agent_logs.py (score 4.624 ≥ 4.391).
+⚖️ Kept original agent_self_repair_loop.py (score 4.928 ≥ 4.914).
+✅ Replaced system_scorecard_agent.py with improved variant (score 4.901 > 4.892).
+✅ Replaced storage_cleanup.py with improved variant (score 4.887 > 4.847).
+✅ Replaced kb_smoke_test.py with improved variant (score 4.916 > 4.908).
+✅ Replaced kb_event_logger.py with improved variant (score 4.913 > 4.851).
+⚖️ Kept original audit_geofencing.py (score 0.0 ≥ 0.0).
+⚖️ Kept original run_task.py (score 4.887 ≥ 4.887).
+⚖️ Kept original agent_log_parser.py (score 4.909 ≥ 4.868).
+✅ Replaced kb_api.py with improved variant (score 4.88 > 4.869).
+✅ Replaced test_email_dispatch.py with improved variant (score 4.615 > 4.482).
+⚖️ Kept original status_report_builder.py (score 4.928 ≥ 4.911).
+⚖️ Kept original adaptive_code_evolver.py (score 4.912 ≥ 4.904).
+✅ Replaced reminder_scheduler_loop.py with improved variant (score 4.906 > 4.903).
+⚖️ Kept original voice_access_movie_summary.py (score 4.868 ≥ 4.863).
+⚖️ Kept original barcode_postfilter.py (score 4.919 ≥ 4.912).
+⚖️ Kept original voice_memory_lookup.py (score 4.902 ≥ 4.892).
+⚖️ Kept original geofence_nudger.py (score 4.813 ≥ 4.75).
+✅ Replaced vpn_status_reporter.py with improved variant (score 4.883 > 4.78).
+⚖️ Kept original swim_weather_nudge.py (score 4.304 ≥ 4.293).
+✅ Replaced progress_evaluation_runner.py with improved variant (score 4.884 > 4.82).
+⚖️ Kept original kb_facts_writer.py (score 4.888 ≥ 4.887).
+✅ Replaced fitness_tracking_verifier.py with improved variant (score 4.921 > 4.916).
+⚖️ Kept original auto_documentation.py (score 0.0 ≥ 0.0).
+⚖️ Kept original movie_sync_agent.py (score 0.0 ≥ 0.0).
+✅ Replaced backup_fitness.py with improved variant (score 4.884 > 4.849).
+✅ Replaced top10_selfcheck.py with improved variant (score 3.077 > 2.376).
+✅ Replaced absorb_hourly.py with improved variant (score 4.914 > 4.887).
+⚖️ Kept original weekly_status_report.py (score 4.868 ≥ 4.81).
+⚖️ Kept original reminder_master.py (score 4.709 ≥ 4.677).
+⚖️ Kept original fitbit_ingestor.py (score 0.0 ≥ 0.0).
+⚖️ Kept original log_memory_manifest.py (score 4.927 ≥ 4.903).
+✅ Replaced final_validation_reporter.py with improved variant (score 4.917 > 4.906).
+✅ Replaced github_push_verifier.py with improved variant (score 4.897 > 4.88).
+⚖️ Kept original log_rotate.py (score 4.897 ≥ 4.886).
+✅ Replaced calendar_sync_guard_v3.py with improved variant (score 4.548 > 4.457).
+✅ Replaced fitness_weekly_trends.py with improved variant (score 4.867 > 4.811).
+⚖️ Kept original progress_evaluator.py (score 4.845 ≥ 4.816).
+✅ Replaced git_auto_commit.py with improved variant (score 4.744 > 4.582).
+✅ Replaced shared_intelligence_loop.py with improved variant (score 4.81 > 4.764).
+✅ Replaced security_suite.py with improved variant (score 1.6 > 1.571).
+✅ Replaced status_postprocess.py with improved variant (score 4.905 > 4.903).
+⚖️ Kept original security_audit_runner.py (score 4.917 ≥ 4.912).
+✅ Replaced ai_evolution_cycle.py with improved variant (score 4.49 > 4.368).
+⚖️ Kept original fitbit_auth_manual.py (score 0.0 ≥ 0.0).
+⚖️ Kept original voice_status.py (score 4.891 ≥ 4.889).
+⚖️ Kept original watchdog_memory_absorb.py (score 0.0 ≥ 0.0).
+✅ Replaced fitness_cluster.py with improved variant (score 4.449 > 4.359).
+✅ Replaced voice_geo_status.py with improved variant (score 4.925 > 4.923).
+⚖️ Kept original generate_weekly_report.py (score 4.946 ≥ 4.944).
+✅ Replaced generate_weekly_status.py with improved variant (score 4.862 > 4.788).
+⚖️ Kept original media_agents.py (score 4.677 ≥ 4.543).
+=== Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:50.782681+00:00] START tools/predictive_planner.py
+[2025-12-09T07:13:50.859215+00:00] END   tools/predictive_planner.py status=OK
+--- STDOUT ---
+Stub: predictive_planner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:50.873192+00:00] START tools/symbolic_reasoner.py
+[2025-12-09T07:13:50.951645+00:00] END   tools/symbolic_reasoner.py status=OK
+--- STDOUT ---
+Stub: symbolic_reasoner.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:50.968586+00:00] START tools/auto_doc_agent.py
+[2025-12-09T07:13:51.023298+00:00] END   tools/auto_doc_agent.py status=OK
+--- STDOUT ---
+Stub: auto_doc_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:51.039952+00:00] START tools/self_improvement.py
+[2025-12-09T07:13:51.095374+00:00] END   tools/self_improvement.py status=OK
+--- STDOUT ---
+Stub: self_improvement.py
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:51.110244+00:00] START tools/proactive_nudge_agent.py
+[2025-12-09T07:13:51.165344+00:00] END   tools/proactive_nudge_agent.py status=OK
+--- STDOUT ---
+Stub: proactive_nudge_agent.py (not yet fully implemented)
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:51.185526+00:00] START tools/meta_learning_core.py
+[2025-12-09T07:13:51.351539+00:00] END   tools/meta_learning_core.py status=OK
+--- STDOUT ---
+=== Meta-Learning Core Cycle Start ===
+🧠 Meta-learning snapshot written to /home/rafa1215/consensus-project/memory/logs/agents/meta_learning/meta_snapshot_2025-12-09.json
+=== Meta-Learning Core Cycle Complete ===
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:51.366013+00:00] START tools/cross_agent_fitness.py
+[2025-12-09T07:13:51.423952+00:00] END   tools/cross_agent_fitness.py status=OK
+--- STDOUT ---
+Stub: cross_agent_fitness.py
+--------------------------------------------------------------------------------
+[2025-12-09T07:13:51.437216+00:00] PHASE4_ORCHESTRATOR RUN END all_ok=True
+================================================================================
+================================================================================
+[2025-12-10T07:03:21.642241+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-10T07:03:21.645581+00:00] START tools/scenario_simulation_suite.py
+[2025-12-10T07:03:23.921890+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=319.62ms
+GitHub Visibility Test → PASS | delay=2.1s
+Fitness Data Integrity Test → PASS | recovery=2.2s
+Finance Logging Integrity Test → FAIL | missing_entries=3
+=== Simulation Summary → FAIL (1 failed) ===
+⚠️  Finance Logging failed with data: {'test': 'Finance Logging', 'missing_entries': 3, 'result': 'FAIL'}
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-10T07:03:23.940891+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-10T07:07:57.435743+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-10T07:07:57.439819+00:00] START tools/scenario_simulation_suite.py
+[2025-12-10T07:07:59.520348+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=222.77ms
+GitHub Visibility Test → PASS | delay=0.92s
+Fitness Data Integrity Test → PASS | recovery=3.59s
+Finance Logging Integrity Test → PASS | missing_entries=3
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-10T07:07:59.534418+00:00] START tools/recursive_self_improvement.py
+================================================================================
+[2025-12-10T07:08:02.719798+00:00] PHASE4_ORCHESTRATOR RUN START
+[2025-12-10T07:08:02.723432+00:00] START tools/scenario_simulation_suite.py
+[2025-12-10T07:08:04.900091+00:00] END   tools/scenario_simulation_suite.py status=OK
+--- STDOUT ---
+=== Scenario Simulation Suite Start ===
+VPN Stress Test → PASS | latency=160.67ms
+GitHub Visibility Test → PASS | delay=1.19s
+Fitness Data Integrity Test → PASS | recovery=3.96s
+Finance Logging Integrity Test → PASS | missing_entries=0
+=== Simulation Summary → PASS ===
+=== Scenario Simulation Suite Complete ===
+--------------------------------------------------------------------------------
+[2025-12-10T07:08:04.914895+00:00] START tools/recursive_self_improvement.py
