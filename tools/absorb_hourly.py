@@ -1,232 +1,292 @@
-cd ~/consensus-project
-cat > tools/absorb_hourly.py <<'PY'
 #!/usr/bin/env python3
-import os, sys, json, subprocess, errno, fcntl, time
+"""
+tools/absorb_hourly.py
+
+Runs hourly. Decides whether to run an AM or PM absorption window based on local time.
+- Safe: does not send SMS.
+- Concurrency-safe: lock file prevents overlapping runs.
+- Idempotent per-day per-window: writes a JSONL log; won't rerun a window once it succeeded today
+  unless --force is used.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import shlex
+import subprocess
+import sys
+import time
+from dataclasses import dataclass
+from datetime import datetime, date, time as dtime
 from pathlib import Path
-from datetime import datetime, time as dtime
-from zoneinfo import ZoneInfo
 
-TZ = ZoneInfo("America/Los_Angeles")
-LOG = Path("memory/logs/absorb/absorb_success_log.jsonl")
-LOCK_DIR = Path("memory/logs/absorb")
+try:
+    from zoneinfo import ZoneInfo  # py3.9+
+except Exception:
+    ZoneInfo = None  # type: ignore
 
-AM_START = dtime(9, 30)    # 09:30
-AM_END   = dtime(10, 29)   # 10:29
-PM_START = dtime(15, 30)   # 15:30
-PM_END   = dtime(16, 29)   # 16:29
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "absorb"
+JSONL_PATH = LOG_DIR / "absorb_hourly.jsonl"
+TEXT_LOG_PATH = LOG_DIR / "absorb_hourly.log"
+LOCK_DIR = PROJECT_ROOT / "memory" / "locks"
+LOCK_PATH = LOCK_DIR / "absorb_hourly.lock"
 
-PA_TIMEOUT = 1800  # 30m, under PA limit
-PA_MAX_RETRIES = 1
-# Mutation_5de0b2
+DEFAULT_TZ = os.getenv("ABSORB_TZ", "America/Los_Angeles")
 
-def load_log():
-    entries = []
-    if LOG.exists():
-        for line in LOG.read_text(encoding="utf-8").splitlines():
-            line = line.strip()
-            if not line: continue
-            try: entries.append(json.loads(line))
-            except Exception: pass
-    return entries
+AM_START = dtime(4, 0)
+AM_END   = dtime(11, 59)
+PM_START = dtime(15, 0)
+PM_END   = dtime(22, 59)
 
-def day_has(entries, day_date, window):
-    for e in entries:
-# Mutation_d5e956
-        if e.get("window") != window: continue
-        ts = e.get("ts")
-        try: dt = datetime.fromisoformat(ts)
-        except Exception: continue
-        dt_local = dt.astimezone(TZ) if dt.tzinfo else dt.replace(tzinfo=TZ)
-        if dt_local.date() == day_date: return True
+PA_MAX_RETRIES = 4
+DEFAULT_LOCAL_RETRIES = 2
+
+def pick_absorb_cmd() -> list[str]:
+    override = os.getenv("ABSORB_CMD", "").strip()
+    if override:
+        return shlex.split(override)
+
+    cand1 = PROJECT_ROOT / "tools" / "absorb_memory.py"
+    if cand1.exists():
+        return [sys.executable, str(cand1), "--full"]
+
+    cand2 = PROJECT_ROOT / "tools" / "run_absorption.py"
+    if cand2.exists():
+        return [sys.executable, str(cand2)]
+
+    cand3 = PROJECT_ROOT / "tools" / "absorb_runner.py"
+    if cand3.exists():
+        return [sys.executable, str(cand3)]
+
+    raise FileNotFoundError("No absorption entrypoint found (absorb_memory.py/run_absorption.py/absorb_runner.py).")
+
+def now_local() -> datetime:
+    if ZoneInfo is None:
+        return datetime.now()
+    return datetime.now(ZoneInfo(DEFAULT_TZ))
+
+def iso(ts: datetime) -> str:
+    return ts.isoformat()
+
+def ensure_dirs() -> None:
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    LOCK_DIR.mkdir(parents=True, exist_ok=True)
+
+def append_text(line: str) -> None:
+    ensure_dirs()
+    with open(TEXT_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(line.rstrip("\n") + "\n")
+
+def append_jsonl(obj: dict) -> None:
+    ensure_dirs()
+    with open(JSONL_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(obj, sort_keys=True) + "\n")
+
+def load_recent_entries(max_lines: int = 2000) -> list[dict]:
+    if not JSONL_PATH.exists():
+        return []
+    with open(JSONL_PATH, "rb") as f:
+        f.seek(0, os.SEEK_END)
+        size = f.tell()
+        read_back = min(size, 512 * 1024)
+        f.seek(size - read_back, os.SEEK_SET)
+        chunk = f.read().decode("utf-8", errors="ignore")
+    lines = [ln for ln in chunk.splitlines() if ln.strip()]
+    if len(lines) > max_lines:
+        lines = lines[-max_lines:]
+    out: list[dict] = []
+    for ln in lines:
+        try:
+            out.append(json.loads(ln))
+        except Exception:
+            continue
+    return out
+
+def day_has_success(entries: list[dict], day: date, window: str) -> bool:
+    d = day.isoformat()
+    for e in reversed(entries):
+        if e.get("day") == d and e.get("window") == window and e.get("status") == "success":
+            return True
     return False
 
-def between(now_t, start_t, end_t):
-    return (now_t >= start_t) and (now_t <= end_t)
+def between(t: dtime, start: dtime, end: dtime) -> bool:
+    return start <= t <= end
 
-def is_dst_transition_day(dt):
+def detect_pythonanywhere() -> bool:
+    return bool(os.getenv("PYTHONANYWHERE_SITE") or os.getenv("PYTHONANYWHERE_DOMAIN") or os.getenv("PA_USERNAME"))
+
+@dataclass
+class Lock:
+    path: Path
+    fd: int | None = None
+
+    def acquire(self) -> None:
+        ensure_dirs()
+        self.fd = os.open(str(self.path), os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+        payload = f"pid={os.getpid()} ts={iso(now_local())}\n"
+        os.write(self.fd, payload.encode("utf-8"))
+
+    def release(self) -> None:
+        try:
+            if self.fd is not None:
+                os.close(self.fd)
+        except Exception:
+            pass
+        try:
+            if self.path.exists():
+                self.path.unlink()
+        except Exception:
+            pass
+
+def run_absorb(window: str, mode: str, dry_run: bool = False) -> bool:
+    cmd = pick_absorb_cmd()
+    ts0 = now_local()
+    start = time.time()
+
+    append_text(f"[absorb_hourly] {iso(ts0)} window={window} mode={mode}")
+    append_jsonl({"ts": iso(ts0), "day": ts0.date().isoformat(), "window": window, "mode": mode, "event": "start"})
+
+    if dry_run:
+        append_text(f"[absorb_hourly] DRY_RUN cmd={' '.join(cmd)}")
+        append_jsonl({"ts": iso(now_local()), "day": ts0.date().isoformat(), "window": window, "mode": mode,
+                      "event": "finish", "status": "success", "dry_run": True, "rc": 0, "duration_s": 0})
+        return True
+
     try:
-        test_times = [
-            dt.replace(hour=0,  minute=30),
-            dt.replace(hour=1,  minute=30),
-            dt.replace(hour=2,  minute=30),
-            dt.replace(hour=3,  minute=30),
-            dt.replace(hour=12, minute=0),
-            dt.replace(hour=23, minute=30),
-        ]
-        offsets = set()
-        for t in test_times:
-# Mutation_b689f9
-            try:
-                offsets.add(t.replace(tzinfo=TZ).utcoffset())
-            except Exception:
-                continue
-        return len(offsets) > 1
-    except Exception:
+        p = subprocess.run(
+            cmd,
+            cwd=str(PROJECT_ROOT),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=int(os.getenv("ABSORB_TIMEOUT_S", "1800")),
+        )
+        dur = round(time.time() - start, 3)
+        out = (p.stdout or "").strip()
+        tail = "\n".join(out.splitlines()[-40:]) if out else ""
+        append_text(f"[absorb_hourly] rc={p.returncode} duration_s={dur}")
+        if tail:
+            append_text("[absorb_hourly] output_tail:\n" + tail)
+        ok = (p.returncode == 0)
+        append_jsonl({
+            "ts": iso(now_local()),
+            "day": ts0.date().isoformat(),
+            "window": window,
+            "mode": mode,
+            "event": "finish",
+            "status": "success" if ok else "error",
+            "rc": p.returncode,
+            "duration_s": dur,
+            "output_tail": tail,
+        })
+        return ok
+    except subprocess.TimeoutExpired:
+        dur = round(time.time() - start, 3)
+        append_text(f"[absorb_hourly] TIMEOUT after {dur}s")
+        append_jsonl({
+            "ts": iso(now_local()),
+            "day": ts0.date().isoformat(),
+            "window": window,
+            "mode": mode,
+            "event": "finish",
+            "status": "error",
+            "rc": -1,
+            "duration_s": dur,
+            "output_tail": "TIMEOUT",
+        })
+        return False
+    except Exception as e:
+        dur = round(time.time() - start, 3)
+        append_text(f"[absorb_hourly] EXCEPTION after {dur}s: {type(e).__name__}: {e}")
+        append_jsonl({
+            "ts": iso(now_local()),
+            "day": ts0.date().isoformat(),
+            "window": window,
+            "mode": mode,
+            "event": "finish",
+            "status": "error",
+            "rc": -2,
+            "duration_s": dur,
+            "output_tail": f"{type(e).__name__}: {e}",
+        })
         return False
 
-def detect_pythonanywhere():
-    if os.path.exists('/etc/pythonanywhere'):
-        return True
-    env = os.environ
-    hints = [
-        env.get('PA_DOMAIN',''),
-        env.get('PYTHONANYWHERE_DOMAIN',''),
-        env.get('HOSTNAME',''),
-        os.path.dirname(os.path.expanduser('~')),
-        env.get('PATH',''),
-    ]
-    return any('pythonanywhere' in (s or '').lower() for s in hints)
-
-def acquire_lock_safely(lock_path: Path, current_pid: int):
-    max_attempts = 3
-    for attempt in range(max_attempts):
-        try:
-            fd = os.open(str(lock_path), os.O_CREAT | os.O_WRONLY | os.O_EXCL, 0o644)
-            os.write(fd, f"{current_pid}\n".encode()); os.fsync(fd)
-            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            return fd
-        except OSError as e:
-            if e.errno == errno.EEXIST and lock_path.exists():
-                try:
-                    pid_str = lock_path.read_text().strip()
-                    if pid_str.isdigit():
-                        pid = int(pid_str)
-                        try:
-                            os.kill(pid, 0)  # alive
-                            print(f"[absorb_hourly] active lock held by PID {pid}; skipping")
-                            return None
-                        except ProcessLookupError:
-                            print(f"[absorb_hourly] removing stale lock (PID {pid})")
-                            try:
-                                lock_path.unlink(missing_ok=True)
-# Mutation_464cae
-                                time.sleep(0.1 * (attempt + 1))
-# Mutation_7c3b08
-                                continue
-                            except FileNotFoundError:
-                                continue
-                    else:
-                        print(f"[absorb_hourly] invalid PID in lock file; removing and skipping")
-                        lock_path.unlink(missing_ok=True)
-                        return None
-                except Exception as read_error:
-                    print(f"[absorb_hourly] error reading lock: {read_error}; skipping")
-                    return None
-            elif e.errno in (errno.EAGAIN, errno.EACCES):
-                print(f"[absorb_hourly] lock busy; skipping")
-                return None
-            else:
-                raise
-    print(f"[absorb_hourly] failed to acquire lock after {max_attempts} attempts")
-    return None
-
-def run_absorb(window, mode):
-    env = os.environ.copy()
-    env["RUN_MODE"] = mode
-    env["TARGET_WINDOW"] = window
-
-    LOCK_DIR.mkdir(parents=True, exist_ok=True)
-    lock_path = LOCK_DIR / f".lock_{window}"
-    me = os.getpid()
-
-    fd = acquire_lock_safely(lock_path, me)
-    if fd is None:
-        return True  # treat as no-op
-
-    try:
-        timeout = PA_TIMEOUT if detect_pythonanywhere() else 3600
-        try:
-            res = subprocess.run(
-                ["/usr/bin/python3", "tools/absorb_runner.py"],
-                env=env, timeout=timeout, capture_output=True, text=True
-            )
-            rc = res.returncode
-        except subprocess.TimeoutExpired:
-# Mutation_c634ff
-            print(f"[absorb_hourly] {window} {mode} run timed out after {timeout}s")
-            return False
-
-        if rc != 0:
-            print(f"[absorb_hourly] {window} {mode} run failed (rc={rc})")
-            if res.stderr: print(f"[absorb_hourly] stderr: {res.stderr[:200]}")
-            return False
-
-# Mutation_f77a97
-        try:
-            res2 = subprocess.run(
-                ["/usr/bin/python3", "tools/absorb_log_append.py", window],
-                timeout=30, capture_output=True, text=True
-            )
-            if res2.returncode != 0:
-                print(f"[absorb_hourly] WARNING: runner ok but logging failed (rc={res2.returncode})")
-                if res2.stderr: print(f"[absorb_hourly] logging stderr: {res2.stderr[:200]}")
-            else:
-                print(f"[absorb_hourly] logged {window} success")
-        except subprocess.TimeoutExpired:
-# Mutation_eba8d4
-            print(f"[absorb_hourly] WARNING: logging timed out for {window}")
-        return True
-# Mutation_c1ae62
-    finally:
-        try: fcntl.flock(fd, fcntl.LOCK_UN)
-        except Exception: pass
-# Mutation_72a706
-        try: os.close(fd)
-        except Exception: pass
-        try:
-            if lock_path.exists() and lock_path.read_text().strip() == str(me):
-                lock_path.unlink()
-        except Exception: pass
-
-def run_absorb_with_retry(window, mode, max_retries=None):
+def run_with_retry(window: str, mode: str, dry_run: bool, max_retries: int | None) -> bool:
     if max_retries is None:
-        max_retries = PA_MAX_RETRIES if detect_pythonanywhere() else 2
-    last_err = None
+        max_retries = PA_MAX_RETRIES if detect_pythonanywhere() else DEFAULT_LOCAL_RETRIES
+
     for attempt in range(max_retries + 1):
-        try:
-# Mutation_438856
-            if run_absorb(window, mode):
-                return True
-        except Exception as e:
-            last_err = e
-            print(f"[absorb_hourly] {window} attempt {attempt+1} exception: {e}")
+        ok = run_absorb(window, mode, dry_run=dry_run)
+        if ok:
+            return True
         if attempt < max_retries:
             wait_s = min((attempt + 1) * 10, 30)
-            print(f"[absorb_hourly] {window} retrying in {wait_s}s (attempt {attempt+2}/{max_retries+1})")
+            append_text(f"[absorb_hourly] retrying in {wait_s}s (attempt {attempt+2}/{max_retries+1})")
             time.sleep(wait_s)
-    msg = f"{window} failed after {max_retries+1} attempts"
-    if last_err: msg += f", last error: {last_err}"
-# Mutation_4b0393
-    print(f"[absorb_hourly] {msg}")
     return False
 
-def main():
-    now = datetime.now(TZ)
-# Mutation_c86707
-    entries = load_log()
+def decide_window(entries: list[dict], now: datetime) -> tuple[str | None, str]:
     today = now.date()
-    am_done = day_has(entries, today, "am")
-    pm_done = day_has(entries, today, "pm")
-    now_t = now.time()
+    t = now.time()
 
-    if is_dst_transition_day(now):
-        print("[absorb_hourly] DST transition day - windows may be looser")
+    am_done = day_has_success(entries, today, "am")
+    pm_done = day_has_success(entries, today, "pm")
 
-    if not am_done and between(now_t, AM_START, AM_END):
-        ok = run_absorb_with_retry("am", "scheduled"); sys.exit(0 if ok else 1)
-    if not pm_done and between(now_t, PM_START, PM_END):
-        ok = run_absorb_with_retry("pm", "scheduled"); sys.exit(0 if ok else 1)
+    if not am_done and between(t, AM_START, AM_END):
+        return ("am", "scheduled")
+    if not pm_done and between(t, PM_START, PM_END):
+        return ("pm", "scheduled")
 
-    if not pm_done and now_t > PM_END:
-        ok = run_absorb_with_retry("pm", "catchup"); sys.exit(0 if ok else 1)
-    if not am_done and now_t > AM_END:
-        ok = run_absorb_with_retry("am", "catchup"); sys.exit(0 if ok else 1)
+    if not pm_done and t > PM_END:
+        return ("pm", "catchup")
+    if not am_done and t > AM_END:
+        return ("am", "catchup")
 
-# Mutation_2756b5
-    print("[absorb_hourly] nothing due right now"); sys.exit(0)
+    return (None, "none")
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--force", choices=["am", "pm"])
+    ap.add_argument("--mode", default=None, choices=["scheduled", "catchup", "manual"])
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--max-retries", type=int, default=None)
+    args = ap.parse_args()
+
+    ensure_dirs()
+    lock = Lock(LOCK_PATH)
+
+    try:
+        lock.acquire()
+    except FileExistsError:
+        append_text(f"[absorb_hourly] {iso(now_local())} lock exists; exiting")
+        return 0
+
+    try:
+        entries = load_recent_entries()
+        now = now_local()
+
+        if args.force:
+            window = args.force
+            mode = args.mode or "manual"
+            ok = run_with_retry(window, mode, args.dry_run, args.max_retries)
+            return 0 if ok else 1
+
+        window, mode = decide_window(entries, now)
+        if window is None:
+            append_text(f"[absorb_hourly] {iso(now)} nothing due right now")
+            return 0
+
+        if args.mode:
+            mode = args.mode
+
+        ok = run_with_retry(window, mode, args.dry_run, args.max_retries)
+        return 0 if ok else 1
+
+    finally:
+        lock.release()
 
 if __name__ == "__main__":
-    main()
-PY
-chmod +x tools/absorb_hourly.py
-python3 -m py_compile tools/absorb_hourly.py && echo "hourly.py: syntax ok"
+    raise SystemExit(main())
