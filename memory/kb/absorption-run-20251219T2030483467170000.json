@@ -1,0 +1,15 @@
+{
+  "id": "absorption-run-20251219T2030483467170000",
+  "type": "metric",
+  "source_agent": "absorption_runner_agent",
+  "content": "Absorption runner snapshot:\n- Timestamp: 2025-12-19T20:30:48.346717+00:00\n- Total files: 13062\n- Total bytes: 76533303\n- Latest mtime: 2025-12-19T20:23:36.559260+00:00",
+  "tags": [
+    "absorption",
+    "memory",
+    "indexing"
+  ],
+  "sensitivity": "internal",
+  "created_at": "2025-12-19T20:30:48.346755+00:00",
+  "updated_at": "2025-12-19T20:30:48.346755+00:00",
+  "confidence": 0.7
+}

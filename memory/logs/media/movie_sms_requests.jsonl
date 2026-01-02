@@ -1,1 +1,2 @@
 {"event": "new_movies_sms_request", "new_movies": ["Test Movie (2025)", "Another Test Movie (2025)", "Primitive War (2024)", "Godzilla Minus One (2023)", "Godzilla vs Kong (2021)", "Dune: Part Two (2024)"], "total_count": 6, "timestamp": "2025-11-24T23:12:39.200484+00:00"}
+{"event": "new_movies_sms_request", "new_movies": ["Godzilla Minus One", "Blue Beetle", "Troll 2", "Primitive War", "Sean Combs: The Reckoning", "Shadow Master"], "total_count": 6, "timestamp": "2025-12-12T21:49:12.455875+00:00"}

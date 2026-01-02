@@ -991,9 +991,9 @@
 
 ## Twilio <no-reply@twilio.com>
 - **Your Twilio account has been recharged** (2025-10-14 21:27)
-  Snippet: The balance of My first Twilio account with SID: AC4b4d18bdc5bc1b13f7bf2220a9d02287 and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
+  Snippet: The balance of My first Twilio account with SID: AC<redacted> and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
 - **Your Twilio account has been recharged** (2025-08-10 15:46)
-  Snippet: The balance of My first Twilio account with SID: AC4b4d18bdc5bc1b13f7bf2220a9d02287 and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
+  Snippet: The balance of My first Twilio account with SID: AC<redacted> and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
 
 ## UptimeRobot <info@uptimerobot.com>
 - **Monthly uptime report - September 2025** (2025-10-02 21:45)
@@ -15002,7 +15002,7 @@ Your Citibank® Debit Card is ready to use in Google Pay** (2023-10-26 00:54)
 
 ## Twilio <no-reply@twilio.com>
 - **Your Twilio account has been recharged** (2025-08-07 18:45)
-  Snippet: The balance of My first Twilio account with SID: AC4b4d18bdc5bc1b13f7bf2220a9d02287 and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
+  Snippet: The balance of My first Twilio account with SID: AC<redacted> and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
 
 ## UptimeRobot <alert@uptimerobot.com>
 - **Monitor is DOWN: rafa1215.pythonanywhere.com/monitor** (2025-07-28 21:47)

@@ -1,0 +1,15 @@
+{
+  "id": "gmail-status-20251228T2130513206730000",
+  "type": "metric",
+  "source_agent": "gmail_monitor_agent",
+  "content": "Gmail integration status at 2025-12-28T21:30:51.320673+00:00:\n\n- Status: ok\n- Reason: 49 Gmail-related events in the window with no errors detected.\n- Lookback window: last 48 hours (cutoff 2025-12-26T21:30:51.304073+00:00)\n- Total events: 49\n- Error events: 0\n- Error ratio: 0.00\n\nPer-log breakdown:\n- memory/logs/system/gmail_agent.log: 0 events, 0 errors\n- memory/logs/system/gmail_alert_agent.log: 0 events, 0 errors\n- memory/logs/system/gmail_voice_reader.log: 0 events, 0 errors\n- memory/logs/gmail/gmail_activity.jsonl: 49 events, 0 errors",
+  "tags": [
+    "gmail",
+    "email",
+    "health"
+  ],
+  "sensitivity": "internal",
+  "created_at": "2025-12-28T21:30:51.320755+00:00",
+  "updated_at": "2025-12-28T21:30:51.320755+00:00",
+  "confidence": 0.7
+}

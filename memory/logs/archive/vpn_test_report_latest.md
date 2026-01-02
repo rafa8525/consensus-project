@@ -1,6 +1,6 @@
 # VPN Functional Test Report
-- Generated (UTC): 2025-12-09T07:09:48.879991+00:00
-- Date: 2025-12-09
+- Generated (UTC): 2025-12-31T07:10:17.650365+00:00
+- Date: 2025-12-31
 
 ## Overview
 This report documents functional test cases for the automatic VPN activation feature. Current results are based on **simulation only**; manual verification is still required on real networks/devices.

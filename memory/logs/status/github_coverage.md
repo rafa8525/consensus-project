@@ -1,8 +1,8 @@
 # GitHub Coverage Report (Whitelist)
-Generated: 2025-12-10 07:07:22 UTC
+Generated: 2026-01-01 07:09:20 UTC
 
 Dirs: tools, agents, core, services, scripts
-Total .py: **290** | Entry-like: **211**
+Total .py: **299** | Entry-like: **220**
 On schedule: **165** | In registry: **165**
 | File | Entry | Scheduled | In Registry |
 |---|---:|---:|---:|
@@ -13,8 +13,11 @@ On schedule: **165** | In registry: **165**
 | `agents/core/event_bus.py` | no | no | no |
 | `agents/core/metrics.py` | no | no | no |
 | `agents/core/store.py` | no | no | no |
+| `agents/core_monitors_bundle.py` | YES | no | no |
+| `agents/creative_boost_agent.py` | YES | no | no |
 | `agents/evaluator.py` | no | no | no |
 | `agents/executor.py` | no | no | no |
+| `agents/fitness_daily_template.py` | YES | no | no |
 | `agents/fitness_pipeline_agent.py` | YES | no | no |
 | `agents/generate_digest.py` | YES | YES | YES |
 | `agents/geofence_sms_monitor_agent.py` | YES | no | no |
@@ -29,11 +32,13 @@ On schedule: **165** | In registry: **165**
 | `agents/gmail_monitor_agent.py` | YES | no | no |
 | `agents/gmail_voice_reader.py` | YES | YES | YES |
 | `agents/log_insights.py` | no | no | no |
+| `agents/mcl_guard.py` | YES | no | no |
 | `agents/memory_manager.py` | no | no | no |
 | `agents/monitor_orchestrator_agent.py` | YES | no | no |
 | `agents/movie_detector_agent.py` | YES | no | no |
 | `agents/planner.py` | no | no | no |
 | `agents/prediction_feed_agent.py` | YES | no | no |
+| `agents/prediction_feed_summary_agent.py` | YES | no | no |
 | `agents/prediction_summary_agent.py` | YES | no | no |
 | `agents/proactive_nudges_agent.py` | no | no | no |
 | `agents/researcher.py` | no | no | no |
@@ -102,7 +107,7 @@ On schedule: **165** | In registry: **165**
 | `tools/core_sanity_suite.py` | YES | YES | YES |
 | `tools/corrective_action_executor.py` | YES | YES | YES |
 | `tools/coverage_refresh.py` | YES | YES | YES |
-| `tools/coverage_refresh_mutated_2149.py` | YES | no | no |
+| `tools/coverage_refresh_mutated_6450.py` | YES | no | no |
 | `tools/cross_agent_fitness.py` | no | no | no |
 | `tools/daily_voice_reminder.py` | no | no | no |
 | `tools/decision_support.py` | no | no | no |
@@ -219,7 +224,10 @@ On schedule: **165** | In registry: **165**
 | `tools/report_master.py` | YES | YES | YES |
 | `tools/report_master_mutated_1108.py` | YES | no | no |
 | `tools/report_master_mutated_1537.py` | YES | no | no |
+| `tools/report_master_mutated_2241.py` | YES | no | no |
+| `tools/report_master_mutated_5069.py` | YES | no | no |
 | `tools/report_master_mutated_5177.py` | YES | no | no |
+| `tools/report_master_mutated_5613.py` | YES | no | no |
 | `tools/report_master_mutated_8312.py` | YES | no | no |
 | `tools/ride_deals_scan.py` | YES | YES | YES |
 | `tools/rotate_logs.py` | YES | no | no |
@@ -267,6 +275,7 @@ On schedule: **165** | In registry: **165**
 | `tools/test_email_dispatch.py` | no | no | no |
 | `tools/top10_generator.py` | no | no | no |
 | `tools/top10_selfcheck.py` | YES | YES | YES |
+| `tools/twilio_helper.py` | YES | no | no |
 | `tools/unpack_inbox.py` | YES | YES | YES |
 | `tools/verify_knowledge_base.py` | YES | YES | YES |
 | `tools/verify_logs_tree.py` | YES | YES | YES |
@@ -301,20 +310,25 @@ On schedule: **165** | In registry: **165**
 - agents/absorption_monitor_agent.py
 - agents/absorption_runner_agent.py
 - agents/auto_status_agent.py
+- agents/core_monitors_bundle.py
+- agents/creative_boost_agent.py
+- agents/fitness_daily_template.py
 - agents/fitness_pipeline_agent.py
 - agents/geofence_sms_monitor_agent.py
 - agents/geofence_sms_seed_agent.py
 - agents/gmail_activity_seed_agent.py
 - agents/gmail_monitor_agent.py
+- agents/mcl_guard.py
 - agents/monitor_orchestrator_agent.py
 - agents/movie_detector_agent.py
 - agents/prediction_feed_agent.py
+- agents/prediction_feed_summary_agent.py
 - agents/prediction_summary_agent.py
 - agents/vpn_guardian_agent.py
 - tools/agent_summary_orchestrator.py
 - tools/auto_doc_agent.py
 - tools/core_monitors_bundle.py
-- tools/coverage_refresh_mutated_2149.py
+- tools/coverage_refresh_mutated_6450.py
 - tools/fitness_daily_agent.py
 - tools/fitness_daily_summary.py
 - tools/fitness_status_reporter.py
@@ -331,13 +345,17 @@ On schedule: **165** | In registry: **165**
 - tools/project_status_report_agent.py
 - tools/report_master_mutated_1108.py
 - tools/report_master_mutated_1537.py
+- tools/report_master_mutated_2241.py
+- tools/report_master_mutated_5069.py
 - tools/report_master_mutated_5177.py
+- tools/report_master_mutated_5613.py
 - tools/report_master_mutated_8312.py
 - tools/rotate_logs.py
 - tools/rsi_orchestrator.py
 - tools/state_tracker.py
 - tools/symbolic_reasoner.py
 - tools/system_scorecard_agent.py
+- tools/twilio_helper.py
 - tools/vpn_events_normalizer.py
 - tools/vpn_functional_test_runner.py
 - tools/vpn_health_agent.py

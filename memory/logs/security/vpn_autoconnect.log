@@ -31,3 +31,66 @@
 [2025-12-09T07:10:31.647565] SSID='<unknown>' public=True status='unknown'
 [2025-12-09T07:10:31.651641] VPN_UP_CMD not set; cannot connect.
 [2025-12-09T07:10:31.787392] SSID='<unknown>' public=True status='unknown'
+[2025-12-10T07:09:51.282762] SSID='<unknown>' public=True status='unknown'
+[2025-12-10T07:09:51.285931] VPN_UP_CMD not set; cannot connect.
+[2025-12-10T07:09:51.394609] SSID='<unknown>' public=True status='unknown'
+[2025-12-11T07:10:30.877387] SSID='<unknown>' public=True status='unknown'
+[2025-12-11T07:10:30.881890] VPN_UP_CMD not set; cannot connect.
+[2025-12-11T07:10:31.057624] SSID='<unknown>' public=True status='unknown'
+[2025-12-12T07:10:37.082652] SSID='<unknown>' public=True status='unknown'
+[2025-12-12T07:10:37.085844] VPN_UP_CMD not set; cannot connect.
+[2025-12-12T07:10:37.215171] SSID='<unknown>' public=True status='unknown'
+[2025-12-13T07:10:37.234523] SSID='<unknown>' public=True status='unknown'
+[2025-12-13T07:10:37.238711] VPN_UP_CMD not set; cannot connect.
+[2025-12-13T07:10:37.379352] SSID='<unknown>' public=True status='unknown'
+[2025-12-15T07:11:24.921511] SSID='<unknown>' public=True status='unknown'
+[2025-12-15T07:11:24.924524] VPN_UP_CMD not set; cannot connect.
+[2025-12-15T07:11:25.072017] SSID='<unknown>' public=True status='unknown'
+[2025-12-16T07:11:22.048828] SSID='<unknown>' public=True status='unknown'
+[2025-12-16T07:11:22.053017] VPN_UP_CMD not set; cannot connect.
+[2025-12-16T07:11:22.216622] SSID='<unknown>' public=True status='unknown'
+[2025-12-17T07:11:52.426969] SSID='<unknown>' public=True status='unknown'
+[2025-12-17T07:11:52.431360] VPN_UP_CMD not set; cannot connect.
+[2025-12-17T07:11:52.593010] SSID='<unknown>' public=True status='unknown'
+[2025-12-18T07:11:05.818821] SSID='<unknown>' public=True status='unknown'
+[2025-12-18T07:11:05.823813] VPN_UP_CMD not set; cannot connect.
+[2025-12-18T07:11:06.083052] SSID='<unknown>' public=True status='unknown'
+[2025-12-19T07:11:23.382620] SSID='<unknown>' public=True status='unknown'
+[2025-12-19T07:11:23.389701] VPN_UP_CMD not set; cannot connect.
+[2025-12-19T07:11:23.525837] SSID='<unknown>' public=True status='unknown'
+[2025-12-20T07:10:57.353845] SSID='<unknown>' public=True status='unknown'
+[2025-12-20T07:10:57.358273] VPN_UP_CMD not set; cannot connect.
+[2025-12-20T07:10:57.547437] SSID='<unknown>' public=True status='unknown'
+[2025-12-21T07:11:30.075936] SSID='<unknown>' public=True status='unknown'
+[2025-12-21T07:11:30.079171] VPN_UP_CMD not set; cannot connect.
+[2025-12-21T07:11:30.192251] SSID='<unknown>' public=True status='unknown'
+[2025-12-22T07:11:47.662611] SSID='<unknown>' public=True status='unknown'
+[2025-12-22T07:11:47.666834] VPN_UP_CMD not set; cannot connect.
+[2025-12-22T07:11:47.779757] SSID='<unknown>' public=True status='unknown'
+[2025-12-23T07:10:52.489677] SSID='<unknown>' public=True status='unknown'
+[2025-12-23T07:10:52.493242] VPN_UP_CMD not set; cannot connect.
+[2025-12-23T07:10:52.615218] SSID='<unknown>' public=True status='unknown'
+[2025-12-24T07:11:16.560153] SSID='<unknown>' public=True status='unknown'
+[2025-12-24T07:11:16.563532] VPN_UP_CMD not set; cannot connect.
+[2025-12-24T07:11:16.736772] SSID='<unknown>' public=True status='unknown'
+[2025-12-25T07:11:39.554885] SSID='<unknown>' public=True status='unknown'
+[2025-12-25T07:11:39.558907] VPN_UP_CMD not set; cannot connect.
+[2025-12-25T07:11:39.697148] SSID='<unknown>' public=True status='unknown'
+[2025-12-26T07:11:24.720512] SSID='<unknown>' public=True status='unknown'
+[2025-12-26T07:11:24.723855] VPN_UP_CMD not set; cannot connect.
+[2025-12-26T07:11:24.852724] SSID='<unknown>' public=True status='unknown'
+[2025-12-27T07:11:22.041477] SSID='<unknown>' public=True status='unknown'
+[2025-12-27T07:11:22.044829] VPN_UP_CMD not set; cannot connect.
+[2025-12-27T07:11:22.141691] SSID='<unknown>' public=True status='unknown'
+[2025-12-28T07:11:22.399860] SSID='<unknown>' public=True status='unknown'
+[2025-12-28T07:11:22.402931] VPN_UP_CMD not set; cannot connect.
+[2025-12-28T07:11:22.526143] SSID='<unknown>' public=True status='unknown'
+[2025-12-29T07:10:49.071457] SSID='<unknown>' public=True status='unknown'
+[2025-12-29T07:10:49.074880] VPN_UP_CMD not set; cannot connect.
+[2025-12-29T07:10:49.167221] SSID='<unknown>' public=True status='unknown'
+[2025-12-30T07:11:28.420457] SSID='<unknown>' public=True status='unknown'
+[2025-12-30T07:11:28.423483] VPN_UP_CMD not set; cannot connect.
+[2025-12-30T07:11:28.618168] SSID='<unknown>' public=True status='unknown'
+[2025-12-31T07:10:58.996625] SSID='<unknown>' public=True status='unknown'
+[2025-12-31T07:10:59.000839] VPN_UP_CMD not set; cannot connect.
+[2025-12-31T07:10:59.104226] SSID='<unknown>' public=True status='unknown'

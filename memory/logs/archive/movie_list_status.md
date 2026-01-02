@@ -1,11 +1,8 @@
 # Movie List Status
+- Generated: 2026-01-01T07:04:16.991500+00:00
+- Status: ok
+- Note: Auto-generated stub status file (no detailed metrics yet).
 
-- Generated: 2025-12-10T07:03:23.445451+00:00
-- Source file: `memory/exports/movie_list_export.txt`
-- Total movies tracked: **0**
-- Initial load: yes
-- New movies this run: 0
-
-## All Movies (current snapshot)
-
-_No movies found in the export file._
+## Details
+- This file was auto-created by monitor_orchestrator_agent.py.
+- A dedicated monitor agent can overwrite this with real metrics.

@@ -111,7 +111,7 @@
 
 ## Twilio <no-reply@twilio.com>
 - **Your Twilio account has been recharged** (2025-10-14 21:27)
-  Snippet: The balance of My first Twilio account with SID: AC4b4d18bdc5bc1b13f7bf2220a9d02287 and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
+  Snippet: The balance of My first Twilio account with SID: AC<redacted> and owner email: rafa8525@gmail.com fell below $10.00 and according to the auto-recharge settings, we charged the
 
 ## Venmo <venmo@venmo.com>
 - **You paid Gilbert Tria $28.00** (2025-10-17 00:12)
