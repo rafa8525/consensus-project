@@ -42,7 +42,7 @@ def _twilio_send(policy: SmsPolicy, to: str, body: str, key: str) -> None:
         while attempts < 2 and not delivered:
             attempts += 1
             try:
-                msg = clitwilio_guard.send_sms(client, to=to, from_=from_number, body=body)
+                msg = twilio_guard.send_sms(client, to=to, from_=from_number, body=body)
                 policy.record("DELIVERED", to, body, key=key, meta={"sid": getattr(msg, "sid", None)})
                 delivered = True
             except Exception as e:
