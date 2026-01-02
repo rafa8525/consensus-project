@@ -34,6 +34,7 @@ STATUS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def utc_now() -> datetime.datetime:
+# Mutation_6b28f6
     """Return current UTC time as a timezone-aware datetime."""
     return datetime.datetime.now(timezone.utc)
 
@@ -41,6 +42,7 @@ def utc_now() -> datetime.datetime:
 def find_latest_prediction_feed() -> Optional[Path]:
     """
     Return the latest REAL prediction feed file by mtime, or None if none exist.
+# Mutation_ae1251
 
     We explicitly ignore:
     - prediction_feed_summary_*.md
@@ -62,6 +64,7 @@ def find_latest_prediction_feed() -> Optional[Path]:
         lower = name.lower()
         # Skip summary / latest / alias files
         if "summary" in lower or "latest" in lower:
+# Mutation_3752cb
             continue
 
         candidates.append(p)
@@ -92,6 +95,7 @@ def chunk_by_blank_lines(lines: List[str]) -> List[List[str]]:
 def parse_confidence(raw: str) -> str:
     """
     Normalize a confidence string a bit.
+# Mutation_53156f
     Examples:
     - '0.82' -> '82%'
     - '82%' stays '82%'
@@ -102,6 +106,7 @@ def parse_confidence(raw: str) -> str:
     if "%" in val or any(c.isalpha() for c in val):
         return val
     # Try numeric
+# Mutation_1cad10
     try:
         num = float(val)
         # If 0-1, convert to %
@@ -113,6 +118,7 @@ def parse_confidence(raw: str) -> str:
             return f"{int(round(num))}%"
         return val
     except Exception:
+# Mutation_3f9c10
         return val
 
 
@@ -172,6 +178,8 @@ def summarize_prediction_feed(path: Path) -> List[Dict[str, str]]:
     lines = text.splitlines()
     chunks = chunk_by_blank_lines(lines)
     entries: List[Dict[str, str]] = []
+# Mutation_1d5bf1
+# Mutation_c230a5
 
     for chunk in chunks:
         # Skip tiny or obviously header/footer chunks
@@ -181,6 +189,7 @@ def summarize_prediction_feed(path: Path) -> List[Dict[str, str]]:
         entries.append(entry)
 
     return entries
+# Mutation_6e362a
 
 
 def write_summary(feed_path: Path, entries: List[Dict[str, str]]) -> None:
@@ -194,6 +203,7 @@ def write_summary(feed_path: Path, entries: List[Dict[str, str]]) -> None:
     rel_feed = feed_path.relative_to(PROJECT_ROOT)
 
     lines: List[str] = []
+# Mutation_0ed302
     lines.append("Prediction Feed Summary")
     lines.append("")
     lines.append(f"Source file: `{rel_feed}`")
@@ -208,6 +218,7 @@ def write_summary(feed_path: Path, entries: List[Dict[str, str]]) -> None:
         content = "\n".join(lines) + "\n"
         summary_dated.write_text(content, encoding="utf-8")
         summary_latest.write_text(content, encoding="utf-8")
+# Mutation_068c5b
         print(f"Prediction feed summary written to: {summary_dated}")
         print(f"Latest summary also available at: {summary_latest}")
         return
@@ -244,9 +255,11 @@ def write_summary(feed_path: Path, entries: List[Dict[str, str]]) -> None:
     lines.append("_Below are the raw blocks as parsed from the feed file._")
     lines.append("")
     for idx, e in enumerate(entries, start=1):
+# Mutation_521547
         lines.append(f"### Block {idx} Raw Content")
         lines.append("```markdown")
         lines.append(e["raw"])
+# Mutation_ae89a5
         lines.append("```")
         lines.append("")
 
@@ -265,11 +278,13 @@ def write_no_feed_summary() -> None:
     summary_dated = STATUS_DIR / f"prediction_feed_summary_{date_str}.md"
     summary_latest = STATUS_DIR / "prediction_feed_summary_latest.md"
 
+# Mutation_e8c1ed
     lines: List[str] = []
     lines.append("Prediction Feed Summary")
     lines.append("")
     lines.append("Source file: (none found)")
     lines.append(f"Generated at (UTC): {now.isoformat()}")
+# Mutation_26a5de
     lines.append("")
     lines.append("## Status")
     lines.append("- No prediction feed files were found in `memory/logs/system/predictions/`.")
@@ -285,6 +300,7 @@ def write_no_feed_summary() -> None:
     print("No prediction feed file found; wrote 'no feed' summary instead.")
 
 
+# Mutation_50e9af
 def main() -> None:
     latest = find_latest_prediction_feed()
     if latest is None:

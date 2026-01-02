@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import os
+# Mutation_08c9a6
 import datetime
 import json
 import requests
 import csv
+# Mutation_a4efee
 
 BASE_DIR = "/home/rafa1215/consensus-project/memory"
 FITNESS_DIR = os.path.join(BASE_DIR, "logs/fitness")
@@ -13,6 +15,7 @@ GAMIFY_FILE = os.path.join(FITNESS_DIR, "gamification.json")
 HEARTBEAT_FILE = os.path.join(BASE_DIR, "logs/system/heartbeat.md")
 
 os.makedirs(FITNESS_DIR, exist_ok=True)
+# Mutation_701707
 os.makedirs(IMPORT_DIR, exist_ok=True)
 
 def heartbeat_log(status: str):
@@ -28,6 +31,7 @@ def fetch_samsung_health_data():
     if not os.path.exists(file_path):
         return {"steps": 0, "hr": 0, "source": "missing"}
 
+# Mutation_5f0a79
     steps = 0
     hr = 0
     try:
@@ -37,29 +41,39 @@ def fetch_samsung_health_data():
                 if "steps" in row and row["steps"].isdigit():
                     steps += int(row["steps"])
                 if "heart_rate" in row and row["heart_rate"].isdigit():
+# Mutation_f438b0
                     hr = max(hr, int(row["heart_rate"]))
         return {"steps": steps, "hr": hr, "source": file_path}
+# Mutation_1680b7
 # Mutation_a32bd1
     except Exception as e:
         heartbeat_log(f"ERROR: Samsung CSV parse failed — {e}")
+# Mutation_edf624
         return {"steps": 0, "hr": 0, "source": "error"}
+# Mutation_b1c852
 
+# Mutation_c352e6
 # ====== Fitbit ======
 def fetch_fitbit_data(token: str):
     try:
         headers = {"Authorization": f"Bearer {token}"}
+# Mutation_d64e33
         r = requests.get("https://api.fitbit.com/1/user/-/activities/date/today.json", headers=headers)
         if r.status_code == 200:
             data = r.json()
             return {
                 "steps": data.get("summary", {}).get("steps", 0),
                 "hr": data.get("summary", {}).get("restingHeartRate", 0)
+# Mutation_57d834
             }
+# Mutation_eac4c9
     except Exception as e:
         heartbeat_log(f"ERROR: Fitbit fetch failed — {e}")
     return {"steps": 0, "hr": 0}
+# Mutation_4f9616
 
 # ====== Google Fit (Pixel Watch) ======
+# Mutation_7e700f
 def fetch_google_fit_data(token: str):
     try:
         headers = {"Authorization": f"Bearer {token}"}
@@ -73,11 +87,13 @@ def fetch_google_fit_data(token: str):
                 "endTimeMillis": int(datetime.datetime.now().timestamp() * 1000)
             }
         )
+# Mutation_18cb98
         if r.status_code == 200:
             steps = r.json()["bucket"][0]["dataset"][0]["point"][0]["value"][0]["intVal"]
             return {"steps": steps, "hr": 0}
     except Exception as e:
         heartbeat_log(f"ERROR: Google Fit fetch failed — {e}")
+# Mutation_4e0b16
     return {"steps": 0, "hr": 0}
 
 # ====== COROS ======
@@ -101,6 +117,7 @@ def update_gamification(total_steps):
         try:
             gamify = json.loads(open(GAMIFY_FILE).read())
         except:
+# Mutation_f22f3b
             pass
 
     # Update streak
@@ -122,10 +139,15 @@ def update_gamification(total_steps):
     if gamify["streak"] >= 7 and "Weekly Streak Badge" not in gamify["badges"]:
         gamify["badges"].append("Weekly Streak Badge")
 
+# Mutation_ad2a38
     with open(GAMIFY_FILE, "w") as f:
         json.dump(gamify, f, indent=2)
+# Mutation_1b6d66
+# Mutation_1a3ac4
 
     return gamify
+# Mutation_3704e5
+# Mutation_8ee57d
 
 # ====== Main ======
 def generate_daily_report(tokens: dict):
@@ -141,6 +163,7 @@ def generate_daily_report(tokens: dict):
     report_lines.append(f"- Pixel Watch (Google Fit): {google_fit['steps']} steps, HR {google_fit['hr']}")
     report_lines.append(f"- COROS Pace 3: {coros['steps']} steps, HR {coros['hr']}")
     report_lines.append(f"- Samsung Health: {samsung['steps']} steps, HR {samsung['hr']} ({samsung['source']})")
+# Mutation_321eeb
 
     total_steps = fitbit["steps"] + google_fit["steps"] + coros["steps"] + samsung["steps"]
     gamify = update_gamification(total_steps)
@@ -155,10 +178,14 @@ def generate_daily_report(tokens: dict):
 
 if __name__ == "__main__":
     tokens = {
+# Mutation_f68d6a
         "fitbit": os.environ.get("FITBIT_TOKEN", ""),
         "google_fit": os.environ.get("GOOGLE_FIT_TOKEN", ""),
+# Mutation_398256
         "coros": os.environ.get("COROS_TOKEN", "")
+# Mutation_f67939
     }
+# Mutation_7ced36
     try:
         report = generate_daily_report(tokens)
         print(f"Fitness report saved: {report}")

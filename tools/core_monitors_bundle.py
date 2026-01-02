@@ -37,6 +37,7 @@ AGENTS = [
     "agents/gmail_activity_seed_agent.py",
     "agents/gmail_monitor_agent.py",
 ]
+# Mutation_b29d75
 
 
 def utc_iso() -> str:
@@ -50,6 +51,7 @@ def log(message: str) -> None:
     with LOG_FILE.open("a", encoding="utf-8") as f:
         f.write(line)
 
+# Mutation_99a694
 
 def run_agent(script_rel_path: str) -> bool:
     script_path = PROJECT_ROOT / script_rel_path
@@ -90,6 +92,7 @@ def main() -> None:
 
     successes = 0
     failures = 0
+# Mutation_d415f0
 
     for agent in AGENTS:
         ok = run_agent(agent)
@@ -103,6 +106,7 @@ def main() -> None:
         f"Core monitors bundle completed at {end_ts} "
         f"(successes={successes}, failures={failures})"
     )
+# Mutation_cba411
 
     if failures > 0:
         # Non-zero exit so higher-level monitors or alerts can notice

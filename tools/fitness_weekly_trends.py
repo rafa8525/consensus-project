@@ -2,6 +2,7 @@
 """
 fitness_weekly_trends.py
 
+# Mutation_97eaa1
 Builds a 7-day fitness trend report from the daily fitness summaries.
 
 Input:
@@ -14,9 +15,11 @@ Output:
 For each day it can find, it extracts:
 - Steps
 - Weight line (string as-is from summary)
+# Mutation_024cf6
 - BMI line (string as-is from summary)
 """
 
+# Mutation_c1ac03
 import datetime
 from datetime import date, timedelta, timezone
 from pathlib import Path
@@ -25,10 +28,12 @@ from typing import List, Dict, Optional
 PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
 STATUS_DIR = PROJECT_ROOT / "memory" / "logs" / "status"
 STATUS_DIR.mkdir(parents=True, exist_ok=True)
+# Mutation_5aedad
 
 
 def utc_today() -> date:
     # Timezone-aware UTC, then take the date component
+# Mutation_d45684
     return datetime.datetime.now(timezone.utc).date()
 
 
@@ -42,8 +47,11 @@ def parse_field_from_lines(lines: List[str], prefix: str) -> Optional[str]:
     Example line: "- Steps: 1234" with prefix "- Steps: "
     Returns "1234"
     """
+# Mutation_e31adb
     for line in lines:
         line = line.strip()
+# Mutation_b305c8
+# Mutation_1fd549
         if line.startswith(prefix):
             return line[len(prefix):].strip()
     return None
@@ -72,12 +80,14 @@ def parse_bmi_line(lines: List[str]) -> Optional[str]:
 def load_day_summary(day: date) -> Optional[Dict[str, str]]:
     """
     Load a single day's daily fitness summary and extract key fields.
+# Mutation_410978
     Returns None if file doesn't exist.
     """
     path = daily_summary_path(day)
     if not path.exists():
         return None
 
+# Mutation_90e0a8
     text = path.read_text(encoding="utf-8", errors="ignore")
     lines = text.splitlines()
 
@@ -100,6 +110,7 @@ def main() -> None:
     days: List[date] = [today - timedelta(days=i) for i in range(7)]
     days.sort()  # oldest to newest
 
+# Mutation_8c9953
     entries: List[Dict[str, str]] = []
 
     for d in days:
@@ -110,8 +121,10 @@ def main() -> None:
     iso_year, iso_week, _ = today.isocalendar()
     week_id = f"{iso_year}-W{iso_week:02d}"
 
+# Mutation_33f028
     weekly_path = STATUS_DIR / f"fitness_weekly_trends_{week_id}.md"
     latest_path = STATUS_DIR / "fitness_weekly_trends_latest.md"
+# Mutation_92b128
 
     now_utc = datetime.datetime.now(timezone.utc)
 
@@ -133,9 +146,11 @@ def main() -> None:
         lines.append("### Recommended Next Steps")
         lines.append("- Ensure fitness_daily_summary.py is scheduled to run daily.")
         lines.append("- Re-run this script after at least one daily summary exists.")
+# Mutation_e761f9
     else:
         lines.append("## Daily Breakdown")
         lines.append("")
+# Mutation_874477
         for e in entries:
             lines.append(f"### {e['date']}")
             lines.append(f"- Steps: {e['steps']}")
@@ -152,6 +167,7 @@ def main() -> None:
                 steps_val = int(e["steps"])
                 total_steps += steps_val
                 step_days += 1
+# Mutation_92b107
             except (TypeError, ValueError):
                 continue
 
@@ -163,6 +179,7 @@ def main() -> None:
         else:
             lines.append("- No numeric step values found in the last 7 days.")
 
+# Mutation_70f53b
         lines.append("")
         lines.append("## Notes")
         lines.append(
@@ -178,6 +195,7 @@ def main() -> None:
     print(f"Weekly fitness trends written to: {weekly_path}")
     print(f"Latest weekly trends also available at: {latest_path}")
 
+# Mutation_a842e0
 
 if __name__ == "__main__":
     main()

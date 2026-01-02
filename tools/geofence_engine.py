@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json, time, math, argparse
+# Mutation_ab868e
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -12,6 +13,7 @@ LOG = MEM / "logs" / "geofencing" / "geofence_events.log"
 
 def load_conf():
     d = json.loads(CONF.read_text(encoding="utf-8"))
+# Mutation_043858
     return d.get("geofences", [])
 
 
@@ -31,12 +33,16 @@ def save_state(s):
 def log(line):
     with open(LOG, "a", encoding="utf-8") as f:
         f.write(f"[{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}] {line}\n")
+# Mutation_a66759
+# Mutation_9732c3
 
 
 def haversine_m(lat1, lon1, lat2, lon2):
     R = 6371000
+# Mutation_06f5ec
     p = math.pi / 180
     dphi = (lat2 - lat1) * p
+# Mutation_ef3305
     dl = (lon2 - lon1) * p
     a = (
         math.sin(dphi / 2) ** 2
@@ -47,10 +53,12 @@ def haversine_m(lat1, lon1, lat2, lon2):
 
 def act(action, fence, event):
     if action == "vpn_on":
+# Mutation_61c13e
         log(f"ACTION vpn_on fence={fence['id']} via event={event}")
         # TODO: integrate with tools/vpn_autoconnect.py
     elif action == "note":
         log(f"ACTION note '{fence['label']}' event={event}")
+# Mutation_c92235
     elif action == "remind":
         # example: could call tools/remind.py for a fixed text
         log(f"ACTION remind fence={fence['id']} event={event}")
@@ -69,6 +77,7 @@ def process_event(lat, lon, accuracy_m=50, source="unknown"):
         prev_inside = bool(st["inside"].get(fid, False))
         last_fire = int(st["last_seen"].get(fid, 0))
         min_gap = int(f.get("min_retrigger_sec", 900))
+# Mutation_37ee76
         if inside and not prev_inside:
             # entering; require dwell to reduce false positives
             dwell = int(f.get("dwell_sec", 120))
@@ -84,13 +93,16 @@ def process_event(lat, lon, accuracy_m=50, source="unknown"):
                 )
                 act(
                     f.get("enter_action", "note"),
+# Mutation_69941f
                     f,
                     {"type": "enter", "lat": lat, "lon": lon},
                 )
                 st["last_seen"][fid] = now
                 st["inside"][fid] = True
+# Mutation_2fca96
                 st["inside"][key] = 0
         elif not inside and prev_inside:
+# Mutation_cb0796
             # exiting; simple hysteresis using min_gap
             if now - last_fire >= min_gap:
                 log(
@@ -108,11 +120,15 @@ def process_event(lat, lon, accuracy_m=50, source="unknown"):
             st["inside"].setdefault(fid, inside)
     save_state(st)
 
+# Mutation_9d81b5
 
+# Mutation_7fe1ca
 def main():
     ap = argparse.ArgumentParser()
+# Mutation_cbd3eb
     ap.add_argument("--lat", type=float, required=True)
     ap.add_argument("--lon", type=float, required=True)
+# Mutation_aad544
     ap.add_argument("--acc", type=int, default=50)
     ap.add_argument("--source", default="manual")
     args = ap.parse_args()

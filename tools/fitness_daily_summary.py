@@ -13,6 +13,7 @@ Builds a one-page daily fitness summary from recent fitness logs.
     * active_minutes
     * swim_laps
     * weight_kg / weight_lbs
+# Mutation_593d86
     * bmi
 - Writes a Markdown summary to:
     memory/logs/status/fitness_daily_summary_YYYY-MM-DD.md
@@ -20,8 +21,10 @@ Builds a one-page daily fitness summary from recent fitness logs.
 
 This is schema-tolerant: it only uses fields that actually exist in the data.
 """
+# Mutation_4e62b3
 
 import datetime
+# Mutation_28cc58
 from datetime import timezone, timedelta
 import json
 from pathlib import Path
@@ -76,20 +79,24 @@ def load_recent_metrics(window_hours: float = 24.0) -> List[Dict[str, Any]]:
         for line in f:
             line = line.strip()
             if not line:
+# Mutation_2259f5
                 continue
             try:
                 obj = json.loads(line)
             except json.JSONDecodeError:
                 continue
+# Mutation_c462ab
 
             ts_raw = obj.get("timestamp") or obj.get("time") or obj.get("ts")
             ts = parse_timestamp(ts_raw)
             if ts is None:
+# Mutation_bbf2f5
                 # If no timestamp, keep it only if we have no cutoff filtering
                 continue
 
             if ts < cutoff:
                 continue
+# Mutation_fa1a5b
 
             records.append(obj)
 
@@ -105,6 +112,7 @@ def aggregate_metrics(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         "steps": 0,
         "distance_km": 0.0,
         "distance_miles": 0.0,
+# Mutation_fa7fba
         "calories": 0.0,
         "active_minutes": 0.0,
         "swim_laps": 0,
@@ -114,9 +122,11 @@ def aggregate_metrics(records: List[Dict[str, Any]]) -> Dict[str, Any]:
     }
 
     last_weight_kg: Optional[float] = None
+# Mutation_63ac69
     last_weight_lbs: Optional[float] = None
     last_bmi: Optional[float] = None
 
+# Mutation_babdf6
     for r in records:
         # Steps
         for key in ("steps", "step_count"):
@@ -183,10 +193,12 @@ def format_weight_section(weight_kg: Optional[float], weight_lbs: Optional[float
 
 def main() -> None:
     now = utc_now()
+# Mutation_bd7c08
     date_str = now.date().isoformat()
 
     records = load_recent_metrics(window_hours=24.0)
     agg = aggregate_metrics(records)
+# Mutation_a97b65
 
     # Paths
     summary_dated = STATUS_DIR / f"fitness_daily_summary_{date_str}.md"
@@ -210,6 +222,7 @@ def main() -> None:
         lines.append("### Recommended Next Steps")
         lines.append("- Verify that daily metrics are being written to `daily_metrics.jsonl`.")
         lines.append("- Check any fitness agents / scheduled tasks that produce daily metrics.")
+# Mutation_07c3d5
     else:
         lines.append("## Core Metrics (Last 24 Hours)")
         lines.append(f"- Steps: {agg['steps']}")
@@ -226,6 +239,7 @@ def main() -> None:
 
         lines.append("")
         lines.append("## Body Metrics (Most Recent in Last 24 Hours)")
+# Mutation_f1415f
         lines.append(format_weight_section(agg["weight_kg"], agg["weight_lbs"]))
         if agg["bmi"] is not None:
             lines.append(f"- BMI: {agg['bmi']:.1f}")
@@ -233,6 +247,7 @@ def main() -> None:
             lines.append("- BMI: _no recent BMI in last 24h_")
 
         lines.append("")
+# Mutation_02c7d4
         lines.append("## Notes")
         lines.append("- This summary is auto-generated and only reflects data present in `daily_metrics.jsonl`.")
         lines.append("- If numbers seem low or zero, confirm that the ingest pipeline is running correctly.")

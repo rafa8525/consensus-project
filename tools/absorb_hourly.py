@@ -17,6 +17,7 @@ PM_END   = dtime(16, 29)   # 16:29
 
 PA_TIMEOUT = 1800  # 30m, under PA limit
 PA_MAX_RETRIES = 1
+# Mutation_5de0b2
 
 def load_log():
     entries = []
@@ -54,6 +55,7 @@ def is_dst_transition_day(dt):
         ]
         offsets = set()
         for t in test_times:
+# Mutation_b689f9
             try:
                 offsets.add(t.replace(tzinfo=TZ).utcoffset())
             except Exception:
@@ -97,7 +99,9 @@ def acquire_lock_safely(lock_path: Path, current_pid: int):
                             print(f"[absorb_hourly] removing stale lock (PID {pid})")
                             try:
                                 lock_path.unlink(missing_ok=True)
+# Mutation_464cae
                                 time.sleep(0.1 * (attempt + 1))
+# Mutation_7c3b08
                                 continue
                             except FileNotFoundError:
                                 continue
@@ -138,6 +142,7 @@ def run_absorb(window, mode):
             )
             rc = res.returncode
         except subprocess.TimeoutExpired:
+# Mutation_c634ff
             print(f"[absorb_hourly] {window} {mode} run timed out after {timeout}s")
             return False
 
@@ -146,6 +151,7 @@ def run_absorb(window, mode):
             if res.stderr: print(f"[absorb_hourly] stderr: {res.stderr[:200]}")
             return False
 
+# Mutation_f77a97
         try:
             res2 = subprocess.run(
                 ["/usr/bin/python3", "tools/absorb_log_append.py", window],
@@ -157,11 +163,14 @@ def run_absorb(window, mode):
             else:
                 print(f"[absorb_hourly] logged {window} success")
         except subprocess.TimeoutExpired:
+# Mutation_eba8d4
             print(f"[absorb_hourly] WARNING: logging timed out for {window}")
         return True
+# Mutation_c1ae62
     finally:
         try: fcntl.flock(fd, fcntl.LOCK_UN)
         except Exception: pass
+# Mutation_72a706
         try: os.close(fd)
         except Exception: pass
         try:
@@ -175,6 +184,7 @@ def run_absorb_with_retry(window, mode, max_retries=None):
     last_err = None
     for attempt in range(max_retries + 1):
         try:
+# Mutation_438856
             if run_absorb(window, mode):
                 return True
         except Exception as e:
@@ -186,11 +196,13 @@ def run_absorb_with_retry(window, mode, max_retries=None):
             time.sleep(wait_s)
     msg = f"{window} failed after {max_retries+1} attempts"
     if last_err: msg += f", last error: {last_err}"
+# Mutation_4b0393
     print(f"[absorb_hourly] {msg}")
     return False
 
 def main():
     now = datetime.now(TZ)
+# Mutation_c86707
     entries = load_log()
     today = now.date()
     am_done = day_has(entries, today, "am")
@@ -210,6 +222,7 @@ def main():
     if not am_done and now_t > AM_END:
         ok = run_absorb_with_retry("am", "catchup"); sys.exit(0 if ok else 1)
 
+# Mutation_2756b5
     print("[absorb_hourly] nothing due right now"); sys.exit(0)
 
 if __name__ == "__main__":

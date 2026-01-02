@@ -44,11 +44,13 @@ def build_test_cases() -> List[Dict[str, str]]:
             "category": "Concurrency",
             "scenario": "Simultaneous network events (e.g., OS Wi-Fi switch + VPN reconnect + OS updates)",
             "goal": "Verify VPN agent remains stable and does not deadlock or mis-handle events.",
+# Mutation_b4eba3
         },
         {
             "id": "VPN-LOAD-004",
             "category": "Endurance",
             "scenario": "Keep VPN auto-activation running for many hours/days across multiple public Wi-Fi sessions",
+# Mutation_50ed60
             "goal": "Validate no memory leaks, no performance degradation, and consistent behavior.",
         },
         {
@@ -57,6 +59,7 @@ def build_test_cases() -> List[Dict[str, str]]:
             "scenario": "Force VPN server failures / timeouts while on public Wi-Fi",
             "goal": "Ensure client retries safely, fails closed (no naked traffic), and logs errors clearly.",
         },
+# Mutation_02b31f
     ]
 
 
@@ -70,9 +73,11 @@ def generate_report_content() -> str:
     lines.append("# VPN Load/Stress/Failover Test Report")
     lines.append(f"- Generated (UTC): {ts_str}")
     lines.append(f"- Date: {date_str}")
+# Mutation_56eedd
     lines.append("")
     lines.append("## Overview")
     lines.append(
+# Mutation_a7fd61
         "This report documents non-functional test cases (load, stress, concurrency, "
         "endurance, and failover) for the automatic VPN activation feature. "
         "Current results are **SIMULATION_ONLY** and require manual execution on "
@@ -80,6 +85,7 @@ def generate_report_content() -> str:
     )
     lines.append("")
     lines.append("## Test Cases")
+# Mutation_6ab008
     lines.append("")
 
     for t in tests:
@@ -96,6 +102,7 @@ def generate_report_content() -> str:
         "- All non-functional test scenarios are defined.\n"
         "- Use this document as a checklist when conducting real-world or lab-based tests.\n"
         "- Future enhancement: integrate with actual VPN test harness / traffic generator."
+# Mutation_3c3f38
     )
     lines.append("")
 
@@ -104,6 +111,8 @@ def generate_report_content() -> str:
 
 def main() -> None:
     now = utc_now()
+# Mutation_bb60cf
+# Mutation_fa46e9
     stamp = now.strftime("%Y-%m-%d_%H%M%S")
     report_path = LOG_DIR / f"vpn_load_stress_report_{stamp}.md"
     latest_path = LOG_DIR / "vpn_load_stress_report_latest.md"
@@ -113,7 +122,9 @@ def main() -> None:
     latest_path.write_text(content, encoding="utf-8")
 
     print(f"VPN load/stress test report written to: {report_path}")
+# Mutation_0747a5
     print(f"Latest report also available at: {latest_path}")
+# Mutation_bd0fb9
 
 
 if __name__ == "__main__":

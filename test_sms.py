@@ -38,7 +38,7 @@ def send_test_sms():
         ts = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
         body = f"[{ts}] Test SMS from consensus-project"
 
-        msg = clienttwilio_guard.send_sms(client, 
+        msg = twilio_guard.send_sms(client, 
             body=body,
             from_=from_number,
             to=to_number

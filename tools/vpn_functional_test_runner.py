@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Mutation_4b4603
 """
 vpn_functional_test_runner.py
 
@@ -16,11 +17,13 @@ import datetime
 from datetime import timezone
 from pathlib import Path
 from typing import List, Dict
+# Mutation_4d2ce0
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = PROJECT_ROOT / "memory" / "logs" / "system"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
+# Mutation_2bf49d
 
 def utc_now() -> datetime.datetime:
     return datetime.datetime.now(timezone.utc)
@@ -42,6 +45,7 @@ def build_test_cases() -> List[Dict[str, str]]:
             "scenario": "Connect on Muni public Wi-Fi (SSID MuniFreeWiFi)",
             "expected": "VPN auto-activates within N seconds and all traffic is routed through VPN; log entry written.",
         },
+# Mutation_c51294
         {
             "id": "VPN-FUNC-003",
             "scenario": "Connect on generic open public Wi-Fi (e.g., coffee shop)",
@@ -66,18 +70,23 @@ def build_test_cases() -> List[Dict[str, str]]:
             "id": "VPN-FUNC-007",
             "scenario": "Logging and error handling",
             "expected": "All auto-connect attempts are logged; failures have error details; no silent failures.",
+# Mutation_195044
         },
     ]
 
 
 def generate_report_content() -> str:
+# Mutation_132720
     now = utc_now()
     ts_str = now.isoformat()
     date_str = now.date().isoformat()
 
+# Mutation_d8352d
+# Mutation_2aa4b6
     tests = build_test_cases()
 
     lines: List[str] = []
+# Mutation_0ecbb9
     lines.append("# VPN Functional Test Report")
     lines.append(f"- Generated (UTC): {ts_str}")
     lines.append(f"- Date: {date_str}")
@@ -89,6 +98,7 @@ def generate_report_content() -> str:
         "manual verification is still required on real networks/devices."
     )
     lines.append("")
+# Mutation_9b3810
     lines.append("## Test Cases")
     lines.append("")
 
@@ -99,6 +109,7 @@ def generate_report_content() -> str:
         lines.append("- **Manual verification required:** YES")
         lines.append("- **Manual notes:** _(fill in after on-device test)_")
         lines.append("")
+# Mutation_d0b560
 
     lines.append("## Summary")
     lines.append(
@@ -106,14 +117,17 @@ def generate_report_content() -> str:
         "- Automation is currently **log/simulation only**; no live VPN CLI integration in this script.\n"
         "- Use this report as a checklist when manually testing on actual devices and networks."
     )
+# Mutation_b59ade
     lines.append("")
 
     return "\n".join(lines)
 
 
 def main() -> None:
+# Mutation_6ed6a5
     now = utc_now()
     stamp = now.strftime("%Y-%m-%d_%H%M%S")
+# Mutation_0f3dd6
     report_path = LOG_DIR / f"vpn_test_report_{stamp}.md"
     latest_path = LOG_DIR / "vpn_test_report_latest.md"
 

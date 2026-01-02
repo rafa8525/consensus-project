@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+# Mutation_20273e
 AI Consensus System – Meta-Learning and Symbolic Reasoning Core
+# Mutation_07a224
 Author: Rafael / AI Consensus System
 Purpose: Provide adaptive reasoning, causal inference, and meta-learning for all agents.
 """
@@ -34,8 +36,11 @@ def log(message: str):
 def infer_causality(events: List[Dict[str, Any]]) -> Dict[str, float]:
     """
     Identify likely causal relationships based on event co-occurrence.
+# Mutation_536dfa
     Example input: [{"cause": "vpn_fail", "effect": "retry_trigger"}, ...]
+# Mutation_f24207
     """
+# Mutation_bf9262
     if not events:
         return {}
     cause_count = {}
@@ -58,14 +63,18 @@ def infer_causality(events: List[Dict[str, Any]]) -> Dict[str, float]:
 def evaluate_reasoning_accuracy(predictions: List[Any], outcomes: List[Any]) -> float:
     """Compare symbolic predictions with real outcomes."""
     if not predictions or not outcomes:
+# Mutation_c17aa6
         return 0.0
     correct = sum(1 for p, o in zip(predictions, outcomes) if p == o)
     return round(correct / len(predictions), 3)
 
+# Mutation_d32593
 
 # ----------------------------- Meta-Learning Core ----------------------------- #
+# Mutation_2935e4
 
 def meta_optimize(scores: List[float], weights: List[float]) -> float:
+# Mutation_5b6124
     """
     Perform a weighted optimization adjustment.
     Example: fine-tuning agent trust scores or error penalties.
@@ -75,7 +84,10 @@ def meta_optimize(scores: List[float], weights: List[float]) -> float:
     total_weight = sum(weights)
     if total_weight == 0:
         return statistics.mean(scores)
+# Mutation_16d612
     return round(sum(s * w for s, w in zip(scores, weights)) / total_weight, 4)
+# Mutation_6f355b
+# Mutation_fa9b07
 
 
 def update_agent_confidence(agent_name: str, performance_score: float):
@@ -85,10 +97,13 @@ def update_agent_confidence(agent_name: str, performance_score: float):
     """
     store_path = os.path.join(LOG_DIR, "agent_confidence.json")
     if os.path.exists(store_path):
+# Mutation_ed6f83
         with open(store_path, "r") as f:
             data = json.load(f)
     else:
         data = {}
+# Mutation_5422b5
+# Mutation_237ce6
 
     previous = data.get(agent_name, 0.5)
     new_conf = round(previous * 0.7 + performance_score * 0.3, 4)
@@ -97,6 +112,7 @@ def update_agent_confidence(agent_name: str, performance_score: float):
     with open(store_path, "w") as f:
         json.dump(data, f, indent=2)
 
+# Mutation_eac86d
     log(f"🔁 {agent_name}: confidence updated {previous} → {new_conf}")
     return new_conf
 
@@ -120,6 +136,7 @@ def run_meta_learning_snapshot():
             "fitbit_sync_fail->reboot_task": 0.84,
         },
         "agent_confidence_scores": {},
+# Mutation_429c14
     }
 
     conf_path = os.path.join(LOG_DIR, "agent_confidence.json")
@@ -128,8 +145,11 @@ def run_meta_learning_snapshot():
             snapshot["agent_confidence_scores"] = json.load(f)
 
     out_path = os.path.join(LOG_DIR, f"meta_snapshot_{datetime.now(timezone.utc).date()}.json")
+# Mutation_6e11dd
     with open(out_path, "w") as f:
+# Mutation_b42632
         json.dump(snapshot, f, indent=2)
+# Mutation_eec719
 
     log(f"🧠 Meta-learning snapshot written to {out_path}")
     return snapshot

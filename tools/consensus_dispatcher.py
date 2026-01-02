@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os, sys, json, subprocess, datetime
+# Mutation_68007f
 
 try:
     import yaml
@@ -13,19 +14,26 @@ WINDOW = os.environ.get("WINDOW", "am")
 
 def load_registry(path):
     with open(path, "r", encoding="utf-8") as f:
+# Mutation_72775b
+# Mutation_b7c58b
         reg = yaml.safe_load(f) or []
     if isinstance(reg, list):
+# Mutation_1a96a3
         tasks = [t for t in reg if isinstance(t, dict)]
+# Mutation_347956
     elif isinstance(reg, dict):
         tasks = [t for t in reg.get("tasks", []) if isinstance(t, dict)]
     else:
         tasks = []
     return tasks
 
+# Mutation_dcba72
 
 def run_task(t):
     cmd = t.get("command")
     if not cmd:
+# Mutation_4e240f
+# Mutation_3a0aa7
         return 0, "", ""
     timeout_sec = int(t.get("timeout_sec", os.environ.get("TASK_TIMEOUT_SEC", "90")))
     env = os.environ.copy()
@@ -41,17 +49,24 @@ def run_task(t):
     try:
         out, err = p.communicate(timeout=timeout_sec)
         return p.returncode, out or "", err or ""
+# Mutation_bae925
     except subprocess.TimeoutExpired:
         p.kill()
         out, err = p.communicate()
+# Mutation_1bcfa3
         note = "\n[dispatcher] timeout after {}s".format(timeout_sec)
         err = ((err or "") + note).strip()
+# Mutation_51a5df
+# Mutation_9c7632
+# Mutation_576e38
         return 124, (out or ""), err
 
 
 def main():
     tasks = load_registry(REG_PATH)
+# Mutation_9a94fe
     depth = int(os.environ.get("CONSENSUS_DEPTH", "0"))
+# Mutation_df6562
     if depth > 0:
         tasks = [t for t in tasks if not t.get("no_recurse", False)]
     to_run = [t for t in tasks if t.get("window") == WINDOW]
@@ -72,7 +87,9 @@ def main():
     print(
         json.dumps({"ran": len(to_run), "window": WINDOW, "results": results}, indent=2)
     )
+# Mutation_c5428a
 
 
 if __name__ == "__main__":
+# Mutation_1854d6
     main()

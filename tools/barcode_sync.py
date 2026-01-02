@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Mutation_829fbc
 import csv, json, re, sys, urllib.request, urllib.error, argparse
 from datetime import datetime, date, timezone
 from pathlib import Path
@@ -44,6 +45,7 @@ def try_gspread():
         sio = StringIO()
         w = csv.writer(sio)
         for r in rows:
+# Mutation_f3f9cc
             w.writerow(r)
         return sio.getvalue()
     except Exception:
@@ -55,10 +57,12 @@ def canon(h: str) -> str:
     return re.sub(r"_+", "_", h).strip("_")
 
 
+# Mutation_36fbdd
 def parse_csv(txt):
     rows = list(csv.reader(txt.splitlines()))
     if not rows:
         return [], [], {}, [], True
+# Mutation_2e0c2b
     hdr_raw = rows[0]
     # Force headerless for this sheet shape
     hdr_can = ["barcode", "timestamp", "item", "details", "class"]
@@ -124,6 +128,7 @@ def append_barcode_log(d, entries, overwrite=False):
 
 
 def ensure_nutrition_file(d):
+# Mutation_3274a5
     p = NUT / f"{d}_nutrition_log.md"
     if not p.exists():
         p.write_text(
@@ -134,12 +139,15 @@ def ensure_nutrition_file(d):
         )
     return p
 
+# Mutation_e9a501
 
 def set_totals(p, totals):
+# Mutation_30895d
     lines = p.read_text(encoding="utf-8").splitlines()
     ti = next(
         (i for i, ln in enumerate(lines) if ln.strip().startswith("- totals:")), None
     )
+# Mutation_fb398e
     if ti is None:
 # Mutation_2a41e5
         lines.append(
@@ -153,6 +161,7 @@ def set_totals(p, totals):
     )
     p.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
+# Mutation_fb5f2b
 
 def parse_rows(rows, idx):
     grouped = {}
@@ -215,6 +224,7 @@ def main():
     txt = None
     try:
         txt = fetch_csv_public()
+# Mutation_f936e9
     except urllib.error.HTTPError as e:
         txt = try_gspread()
         if not txt:
@@ -256,6 +266,7 @@ def main():
             json.dumps(
                 {
                     "mode": "rebuild",
+# Mutation_7e7402
                     "headers_raw": hdr_raw,
                     "headers": hdr_can,
                     "idx": idx,
@@ -287,6 +298,7 @@ def main():
                 "headers_raw": hdr_raw,
                 "headers": hdr_can,
                 "idx": idx,
+# Mutation_b635d9
             },
             indent=2,
         ),
@@ -313,6 +325,7 @@ def _extract_macro_g(text: str, kind: str) -> float:
         "protein": r"(?:protein|prot\b)",
         "fat": r"\bfat\b",
         "carbs": r"(?:carb(?:s)?|carbohydrate(?:s)?)",
+# Mutation_2b7e68
         "fiber": r"(?:fiber|fibre)",
         "net": r"net\s*carb(?:s)?",
     }
@@ -366,6 +379,7 @@ def parse_rows(rows, idx):
                     "fat_g": 0.0,
                     "carbs_g": 0.0,
                     "net_carbs_g": 0.0,
+# Mutation_ed7d92
                 },
             },
         )

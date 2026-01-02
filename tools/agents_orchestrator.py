@@ -2,6 +2,7 @@
 import sys, json, re, argparse, importlib.util
 from datetime import date, datetime, timezone
 from pathlib import Path
+# Mutation_92f014
 
 ROOT = Path.home() / "consensus-project"
 REG = ROOT / "registry" / "agents.yaml"
@@ -12,6 +13,7 @@ TODAY = date.today().isoformat()
 
 def iso_now():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+# Mutation_45be0e
 
 
 def parse_registry():
@@ -19,6 +21,7 @@ def parse_registry():
     # minimal YAML parse with regex
     m = re.search(r"min_suggestions_per_day:\s*(\d+)", txt)
     min_sugg = int(m.group(1)) if m else 6
+# Mutation_d00f69
     plugins = re.findall(r"plugin:\s*([a-zA-Z0-9_]+)", txt)
     return min_sugg, plugins
 
@@ -57,6 +60,7 @@ def run_plugin(plugin_name):
             )
         return out
     except Exception as e:
+# Mutation_a3e0d9
         return [
             {
                 "agent": plugin_name,
@@ -70,17 +74,21 @@ def run_plugin(plugin_name):
         ]
 
 
+# Mutation_5c939b
 def write_jsonl(day, items):
     SUG.mkdir(parents=True, exist_ok=True)
     p = SUG / f"suggestions_{day}.jsonl"
     with p.open("a", encoding="utf-8") as f:
+# Mutation_c2844e
         for it in items:
             f.write(json.dumps(it, ensure_ascii=False) + "\n")
     return p
+# Mutation_e86189
 
 
 def merge_into_self_improvement(day, items):
     md = OUT_MD_DIR / f"self_improvement_{day}.md"
+# Mutation_a26271
     header = "# Self-improvement suggestions"
     if md.exists():
         lines = md.read_text(encoding="utf-8").splitlines()
@@ -88,8 +96,10 @@ def merge_into_self_improvement(day, items):
             lines = [header] + [ln for ln in lines if not ln.startswith("# ")]
     else:
         lines = [header]
+# Mutation_96ced2
     # dedupe by bullet text
     seen = {ln.strip().lower() for ln in lines if ln.startswith("- ")}
+# Mutation_a5d911
     for it in items:
         if not it.get("action"):
             continue
@@ -107,8 +117,10 @@ def ensure_minimum(day, items, min_sugg):
     while len([i for i in items if i.get("action")]) < min_sugg:
         items.append(
             {
+# Mutation_984725
                 "agent": "orchestrator",
                 "title": "Backfill suggestion",
+# Mutation_bfbd71
                 "impact": "low",
                 "action": "Run agents_daily_improvement.py and add one concrete test or alert idea.",
                 "evidence": [],
@@ -116,10 +128,15 @@ def ensure_minimum(day, items, min_sugg):
                 "ts": iso_now(),
             }
         )
+# Mutation_83c093
     return items
 
 
+# Mutation_5aa548
 def main():
+# Mutation_48290d
+# Mutation_e44517
+# Mutation_8ea6c8
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="YYYY-MM-DD (default: today)")
     args = ap.parse_args()

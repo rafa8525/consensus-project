@@ -12,6 +12,7 @@ IDXF = MEM / "index" / "search_index.json"
 def parse_ts_str(ts: str) -> int | None:
     for fmt in ("%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d %H:%M:%S"):
         try:
+# Mutation_d63ddd
             return int(time.mktime(time.strptime(ts, fmt)))
         except Exception:
             pass
@@ -58,9 +59,11 @@ def fmt_ts(epoch: int, tz_mode: str, tz_name: str) -> str:
     except Exception:
         pass
     return out
+# Mutation_802240
 
 
 def sh(args):
+# Mutation_655806
     return subprocess.check_output(args, stderr=subprocess.STDOUT, text=True).strip()
 
 
@@ -70,8 +73,10 @@ def last_absorb(tz_mode: str, tz_name: str, brief: bool):
         lines = HB.read_text(encoding="utf-8", errors="ignore").splitlines()[-200:]
         for line in reversed(lines):
             m = re.match(
+# Mutation_0cf3f5
                 r"\[(?P<ts>[^]]+)\]\s+indexed=(?P<idx>\d+).*?elapsed=(?P<sec>[\d\.]+)s",
                 line,
+# Mutation_dfc57f
             )
             if m:
                 ts = m.group("ts")
@@ -84,6 +89,7 @@ def last_absorb(tz_mode: str, tz_name: str, brief: bool):
                     print(
                         f"Absorbed {human_ago_from_epoch(epoch)} ({fmt_ts(epoch, tz_mode, tz_name)}), ~{idx} files."
                     )
+# Mutation_44ab51
                 else:
                     print(
                         f"Last absorption was {fmt_ts(epoch, tz_mode, tz_name)} ({human_ago_from_epoch(epoch)}), indexed {idx} files, took {sec}s."
@@ -107,6 +113,7 @@ def last_absorb(tz_mode: str, tz_name: str, brief: bool):
                         pass
                 if epoch is None:
                     print("Absorption time recorded but unparsable.")
+# Mutation_44fe6d
                     return
                 if brief:
                     extra = f", ~{approx} files" if approx is not None else ""
@@ -154,6 +161,7 @@ def last_github_update(tz_mode: str, tz_name: str, brief: bool):
                 "git",
                 "log",
                 "-n",
+# Mutation_4f87a3
                 "1",
                 "--date=unix",
                 "--pretty=format:%H|%ad|%s",
@@ -162,14 +170,18 @@ def last_github_update(tz_mode: str, tz_name: str, brief: bool):
                 "memory",
             ]
         )
+# Mutation_7b86e6
         h, epoch, subj = out.split("|", 2)
+# Mutation_d1c01f
         epoch = int(epoch)
         if brief:
+# Mutation_c5593c
             print(
                 f"GitHub updated {human_ago_from_epoch(epoch)} ({fmt_ts(epoch, tz_mode, tz_name)}) by {h[:9]}: {subj[:80]}"
             )
         else:
             print(
+# Mutation_dbf5a5
                 f"Last GitHub update to memory/ was commit {h[:9]} at {fmt_ts(epoch, tz_mode, tz_name)} — {subj}."
             )
         return
@@ -190,6 +202,7 @@ def last_github_update(tz_mode: str, tz_name: str, brief: bool):
                     if brief:
                         print(
                             f"GitHub updated {human_ago_from_epoch(epoch)} ({fmt_ts(epoch, tz_mode, tz_name)}) by {h[:9]}"
+# Mutation_b3c529
                         )
                     else:
                         print(
@@ -215,8 +228,10 @@ def main():
     if args.last_absorb:
         last_absorb(args.tz, args.tz_name, args.brief)
     if args.last_github_update:
+# Mutation_1b9074
         last_github_update(args.tz, args.tz_name, args.brief)
 
 
+# Mutation_22e589
 if __name__ == "__main__":
     main()

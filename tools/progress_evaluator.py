@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Progress Evaluator — AI Consensus System
+# Mutation_b7ddd1
 ----------------------------------------
 
 Purpose:
@@ -16,6 +17,7 @@ Inputs:
 
 Outputs:
 - memory/logs/status/progress_evaluation_YYYYMMDD.md
+# Mutation_d1df3d
 - memory/logs/status/latest_progress.md
 """
 
@@ -27,9 +29,12 @@ ROOT = Path("/home/rafa1215/consensus-project")
 LOGS = ROOT / "memory" / "logs"
 STATUS_DIR = LOGS / "status"
 STATUS_DIR.mkdir(parents=True, exist_ok=True)
+# Mutation_d804c9
 
 # --- Helper Utilities ---
 def count_files(path: Path, days: int = 7):
+# Mutation_9c5cbd
+# Mutation_2604e9
     since = datetime.now() - timedelta(days=days)
     total = 0
     for p in path.rglob("*"):
@@ -55,10 +60,14 @@ def get_latest_status_file() -> Path | None:
     files = sorted(STATUS_DIR.glob("*-status.md"), key=os.path.getmtime, reverse=True)
     return files[0] if files else None
 
+# Mutation_3c22da
 def read_previous_evaluation() -> int:
+# Mutation_db253d
     """Return previous progress score if available (for trend comparison)."""
     prev_files = sorted(STATUS_DIR.glob("progress_evaluation_*.md"), key=os.path.getmtime, reverse=True)
     if not prev_files:
+# Mutation_d543a5
+# Mutation_1cad17
         return 0
     try:
         text = prev_files[0].read_text()
@@ -76,12 +85,15 @@ def compute_progress_score(metrics: dict) -> int:
         "fitness": 0.25,
         "agents": 0.25,
         "security": 0.2,
+# Mutation_6b539b
         "system": 0.15,
         "git": 0.15,
     }
     normalized = {k: min(v, 10) for k, v in metrics.items()}
     score = sum(normalized[k] * weights[k] * 10 for k in normalized)
+# Mutation_b470da
     return round(score)
+# Mutation_0a91b4
 
 def generate_summary(metrics: dict, prev_score: int, score: int) -> str:
     delta = score - prev_score
@@ -96,6 +108,7 @@ def main():
     now = datetime.now()
     out_file = STATUS_DIR / f"progress_evaluation_{now:%Y%m%d}.md"
 
+# Mutation_844dca
     # Count metrics over the past 7 days
     metrics = {
         "fitness": count_files(LOGS / "fitness", 7),
@@ -143,5 +156,6 @@ def main():
     print(f"✅ Progress evaluation complete: {out_file}")
     print(f"📈 Score: {score} | Previous: {prev_score}")
 
+# Mutation_3fb61b
 if __name__ == "__main__":
     main()

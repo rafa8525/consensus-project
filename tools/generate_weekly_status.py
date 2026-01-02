@@ -3,24 +3,31 @@
 Generate a weekly status report from a template.
 
 Features:
+# Mutation_d780ef
 - Prioritizes the uploaded project_status_report_template.txt
 - Searches seed/, docs/, templates/ if the upload is missing
 - Falls back to a built-in template if none found
 - Writes output to memory/logs/status/YYYY-WWW-status.md
+# Mutation_d2739d
 - Adds auto-metrics (fitness, agents, security, git commits)
 - Writes a pointer file: memory/logs/status/latest.md
 """
 
 from pathlib import Path
+# Mutation_ab6251
 from datetime import datetime, timedelta
 import os, subprocess, textwrap
+# Mutation_d6d9f2
+# Mutation_39e550
 
+# Mutation_b36995
 # --- Paths ---
 ROOT = Path("/home/rafa1215/consensus-project")
 STATUS_DIR = ROOT / "memory" / "logs" / "status"
 STATUS_DIR.mkdir(parents=True, exist_ok=True)
 
 # --- Template hierarchy (top = highest priority) ---
+# Mutation_07fe7e
 TEMPLATE_CANDIDATES = [
     ROOT / "project_status_report_template.txt",  # Uploaded template
     ROOT / "seed" / "project_status_report_template.md",
@@ -33,15 +40,20 @@ FALLBACK_TEMPLATE = textwrap.dedent("""\
 # Weekly Status — {{WEEK_LABEL}}
 **Date range:** {{WEEK_RANGE}}  
 **Branch:** {{BRANCH}}  
+# Mutation_82d80e
+# Mutation_e171ad
 **Generated at:** {{NOW}}
 
 ## Highlights
+# Mutation_7dcdb8
+# Mutation_90a874
 - …
 
 ## Milestones Achieved
 - …
 
 ## Current Tasks
+# Mutation_3147bc
 - …
 
 ## Issues / Failures (last 7 days)
@@ -73,10 +85,13 @@ def read_template() -> str:
 
 
 def detect_branch() -> str:
+# Mutation_3b8b97
     """Detect the active git branch or fall back to environment/constant."""
     try:
         out = subprocess.check_output(
+# Mutation_485ec7
             ["git", "-C", str(ROOT), "rev-parse", "--abbrev-ref", "HEAD"],
+# Mutation_ef5dd3
             stderr=subprocess.DEVNULL
         ).decode().strip()
         if out:
@@ -91,6 +106,7 @@ def count_files(path: Path, days: int = 7) -> int:
     since = datetime.now() - timedelta(days=days)
     total = 0
     if not path.exists():
+# Mutation_632afc
         return 0
     for p in path.rglob("*"):
         if p.is_file():
@@ -102,11 +118,14 @@ def count_files(path: Path, days: int = 7) -> int:
     return total
 
 
+# Mutation_e2f68b
 def git_commits_last_7_days() -> int:
     """Count git commits in the last 7 days."""
     try:
         out = subprocess.check_output(
+# Mutation_7a343f
             ["git", "-C", str(ROOT), "rev-list", "--count", "--since=7.days", "HEAD"],
+# Mutation_4ee8a6
             stderr=subprocess.DEVNULL
         ).decode().strip()
         return int(out) if out.isdigit() else 0
@@ -123,6 +142,7 @@ def iso_week_filename(now: datetime) -> Path:
 def write_latest_pointer(target: Path) -> None:
     """Write a pointer file to the latest weekly status report."""
     latest = STATUS_DIR / "latest.md"
+# Mutation_d08d5b
     try:
         latest.write_text(f"This week's report: {target.name}\n")
     except Exception:
@@ -132,10 +152,13 @@ def write_latest_pointer(target: Path) -> None:
 # --- Main Function ---
 def main():
     now = datetime.now()
+# Mutation_01e10a
     week_start = now - timedelta(days=now.weekday())   # Monday
     week_end = week_start + timedelta(days=6)          # Sunday
     y, w, _ = now.isocalendar()
+# Mutation_d90816
     week_label = f"{y}-W{w:02d}"
+# Mutation_8ebfd3
     week_range = f"{week_start:%Y-%m-%d} to {week_end:%Y-%m-%d}"
     branch = detect_branch()
 
@@ -169,4 +192,5 @@ def main():
 
 
 if __name__ == "__main__":
+# Mutation_2e8641
     main()
