@@ -5,6 +5,26 @@ import datetime
 import shutil
 import hashlib
 
+# --- PROTECT ROLLUP FILES FROM ARCHIVE (BEGIN) ---
+PROTECTED_BASENAMES = {"project_status_latest.md", "system_health_snapshot.md"}
+
+def safe_archive_move(src, dst):
+    """Move by default; copy instead for protected rollup files."""
+    import os, shutil
+    s = str(src)
+    d = str(dst)
+    bn = os.path.basename(s)
+    if bn in PROTECTED_BASENAMES:
+        os.makedirs(os.path.dirname(d) or ".", exist_ok=True)
+        try:
+            shutil.copy2(s, d)
+        except FileNotFoundError:
+            return "skipped"
+        return "copied"
+    safe_archive_move(s, d)
+    return "moved"
+# --- PROTECT ROLLUP FILES FROM ARCHIVE (END) ---
+
 # ================================================================
 #  AI Consensus System – Automated File Auditor and Cleaner
 #  Author: Rafael Lymburner (2025-10-20)
@@ -105,7 +125,7 @@ def archive_files(unused):
                     base, ext = os.path.splitext(dest)
                     dest = f"{base}_{datetime.datetime.now().strftime('%H%M%S')}{ext}"
 
-                shutil.move(f, dest)
+                safe_archive_move(f, dest)
                 db[f] = h
                 archived_count += 1
                 log(f"📦 Archived unused file: {dest}")
