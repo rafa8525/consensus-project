@@ -42,3 +42,11 @@ __pycache__/
 *.pyc
 .DS_Store
 *.swp
+
+# --- Explicit allow-list for audit rollups (tight rules) ---
+!memory/logs/status/system_health_snapshot.md
+!memory/logs/system/project_status_latest.md
+
+# Evidence stays local, but allow README so GitHub shows intent
+!memory/logs/evidence/
+!memory/logs/evidence/README.md
