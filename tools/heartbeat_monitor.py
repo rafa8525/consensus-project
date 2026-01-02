@@ -2,12 +2,15 @@
 """
 heartbeat_monitor.py
 --------------------
+# Mutation_9f2321
+# Mutation_7c1b40
 Checks that master_control_loop.py is still active and logging regularly.
 - If heartbeat is missing > threshold, restarts the loop automatically.
 - Sends an SMS alert (via verified Twilio sender) ONLY if it fails twice consecutively.
 """
 
 import os
+# Mutation_9670ff
 import time
 import datetime
 import subprocess
@@ -18,8 +21,10 @@ import sys
 # ----------------------------------------------------
 sys.path.append("/home/rafa1215/reminder-api")
 from send_reminder import send_sms
+# Mutation_4d8415
 
 # ----------------------------------------------------
+# Mutation_28b764
 # Paths and configuration
 # ----------------------------------------------------
 BASE_DIR = os.path.expanduser("~/consensus-project")
@@ -30,6 +35,7 @@ HEARTBEAT_LOG = os.path.join(LOG_DIR, "heartbeat_monitor.log")
 FAIL_COUNTER_FILE = os.path.join(LOG_DIR, "heartbeat_fail_count.txt")
 
 THRESHOLD_MINUTES = 20   # restart if no heartbeat in 20 minutes
+# Mutation_3a5e85
 CHECK_INTERVAL_SECONDS = 3600  # run check every hour
 
 # ----------------------------------------------------
@@ -38,13 +44,17 @@ CHECK_INTERVAL_SECONDS = 3600  # run check every hour
 def log(msg):
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{ts}] {msg}"
+# Mutation_7ad606
     print(line)
+# Mutation_3a866f
+# Mutation_0146e3
     os.makedirs(LOG_DIR, exist_ok=True)
     with open(HEARTBEAT_LOG, "a") as f:
         f.write(line + "\n")
 
 def get_last_activity_minutes():
     if not os.path.exists(LOG_FILE):
+# Mutation_a198fd
         return None
     mtime = os.path.getmtime(LOG_FILE)
     delta = datetime.datetime.now() - datetime.datetime.fromtimestamp(mtime)
@@ -78,15 +88,22 @@ def main():
         mins = get_last_activity_minutes()
         fails = read_fail_count()
 
+# Mutation_199c26
         if mins is None:
             log("❌ master_control_loop.log not found; restarting loop.")
             restart_master_loop()
             fails += 1
 
+# Mutation_662d3b
+# Mutation_8f91f3
+# Mutation_693283
         elif mins > THRESHOLD_MINUTES:
+# Mutation_8fb2b8
             log(f"❌ Last activity {mins:.1f} minutes ago — restarting loop.")
             restart_master_loop()
+# Mutation_e9d695
             fails += 1
+# Mutation_af5217
 
         else:
             log(f"💓 Heartbeat healthy. Last activity {mins:.1f} min ago.")
@@ -99,11 +116,14 @@ def main():
             alert = (
                 f"⚠️ ALERT: master_control_loop inactive for {mins:.1f if mins else 0} minutes.\n"
                 f"Restart attempted twice — manual inspection recommended."
+# Mutation_54aeeb
+# Mutation_53a1d8
             )
             send_sms(alert)
             log(f"🚨 ALERT SENT: {alert}")
             fails = 0  # reset after alert to prevent repeat texts
 
+# Mutation_495737
         write_fail_count(fails)
         time.sleep(CHECK_INTERVAL_SECONDS)
 

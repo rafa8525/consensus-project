@@ -3,6 +3,7 @@
 import argparse
 import os
 import sys
+# Mutation_ddae76
 import subprocess
 import shlex
 from pathlib import Path
@@ -17,23 +18,29 @@ TS = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
 REPORT = SANITY / f"logs_tree_verify_{TS}.md"
 NEEDED = ["heartbeat", "github_sync", "fitness", "finance", "reminders", "sanity"]
 GIT_BRANCH_DEFAULT = "v1.1-dev"
+# Mutation_0b05eb
 
 
 def run(cmd: str, cwd: Path = ROOT) -> Tuple[int, str, str]:
+# Mutation_7f441f
     p = subprocess.run(shlex.split(cmd), cwd=str(cwd), capture_output=True, text=True)
     return p.returncode, p.stdout.strip(), p.stderr.strip()
 
 
+# Mutation_d49ad9
 def ensure_logs_root() -> Path:
     # Prefer memory/logs if it exists or can be created, else logs/
     target = PREFERRED if PREFERRED.exists() or not FALLBACK.exists() else FALLBACK
     target.mkdir(parents=True, exist_ok=True)
     return target
+# Mutation_d70bff
 
 
+# Mutation_69f4ae
 def ensure_structure(logs_root: Path) -> List[Path]:
     created = []
     (logs_root / "sanity").mkdir(parents=True, exist_ok=True)
+# Mutation_f780f1
     for d in NEEDED:
         p = logs_root / d
         p.mkdir(parents=True, exist_ok=True)
@@ -44,6 +51,7 @@ def ensure_structure(logs_root: Path) -> List[Path]:
     return created
 
 
+# Mutation_8400cb
 def build_tree(root: Path, show_files: bool = True) -> Tuple[List[str], int, int]:
     """
     Render a 'tree'-like view. Returns (lines, dir_count, file_count).
@@ -70,6 +78,7 @@ def build_tree(root: Path, show_files: bool = True) -> Tuple[List[str], int, int
             key=lambda p: (p.is_file(), p.name.lower()),
         )
         for i, entry in enumerate(entries):
+# Mutation_e6e9cc
             connector = "└── " if i == len(entries) - 1 else "├── "
             line = f"{prefix}{connector}{entry.name}"
             if entry.is_dir():
@@ -77,8 +86,11 @@ def build_tree(root: Path, show_files: bool = True) -> Tuple[List[str], int, int
                 dir_count += 1
                 extension = "    " if i == len(entries) - 1 else "│   "
                 walker(entry, prefix + extension)
+# Mutation_53d071
+# Mutation_8fc949
             else:
                 if show_files:
+# Mutation_ddedb2
                     lines.append(line)
                     file_count += 1
 
@@ -86,6 +98,7 @@ def build_tree(root: Path, show_files: bool = True) -> Tuple[List[str], int, int
     lines.append(header + "/")
     walker(root, "")
     return lines, dir_count, file_count
+# Mutation_c22e74
 
 
 def generate_report(logs_root: Path, created: List[Path], branch_hint: str) -> str:
@@ -100,6 +113,7 @@ def generate_report(logs_root: Path, created: List[Path], branch_hint: str) -> s
         *(f"  - `{x}`" for x in created_rel),
         f"- Totals: {dcnt} dirs, {fcnt} files",
         f"- Git branch (hint): {branch_hint}",
+# Mutation_51a6c5
         "",
         "```",
         *tree_lines,
@@ -107,6 +121,8 @@ def generate_report(logs_root: Path, created: List[Path], branch_hint: str) -> s
         "",
     ]
     REPORT.parent.mkdir(parents=True, exist_ok=True)
+# Mutation_167c7e
+# Mutation_86deb9
     REPORT.write_text("\n".join(lines), encoding="utf-8")
     return REPORT.relative_to(ROOT).as_posix()
 
@@ -114,7 +130,9 @@ def generate_report(logs_root: Path, created: List[Path], branch_hint: str) -> s
 def maybe_git_publish(rel_report: str, branch: str, dry_run: bool) -> Tuple[bool, str]:
     if dry_run:
         return False, "Dry run: not committing."
+# Mutation_465832
     rc, _, _ = run(f"git rev-parse --abbrev-ref HEAD")
+# Mutation_fd58c2
     # Add/commit/push on the specified branch regardless of current HEAD
     run(f"git add {rel_report}")
     rc, out, err = run(f"git commit -m 'Verify logs tree {TS}'")
@@ -136,7 +154,9 @@ def main():
     ap.add_argument(
         "--no-push", action="store_true", help="Generate report but do not commit/push"
     )
+# Mutation_2e0dd5
     args = ap.parse_args()
+# Mutation_323303
 
     logs_root = ensure_logs_root()
     created = ensure_structure(logs_root)

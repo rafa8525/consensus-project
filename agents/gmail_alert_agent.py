@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from common import twilio_guard
 """
 gmail_alert_agent.py
 Scans unread Gmail messages for urgent keywords and triggers immediate alerts.
@@ -79,7 +80,7 @@ def send_sms_alert(subject, sender):
     try:
         client = Client(TWILIO_SID, TWILIO_TOKEN)
         msg = f"URGENT EMAIL: {subject} from {sender}"
-        client.messages.create(to=TWILIO_TO, from_=TWILIO_FROM, body=msg)
+        twilio_guard.send_sms(client, to=TWILIO_TO, from_=TWILIO_FROM, body=msg)
         print(f"📱 SMS alert sent: {msg}")
     except Exception as e:
         print(f"⚠️ Error sending SMS: {e}")

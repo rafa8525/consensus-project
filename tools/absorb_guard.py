@@ -1,7 +1,9 @@
+# Mutation_6ecd03
 #!/usr/bin/env python3
 """
 Absorb Guard (DST-safe, with grace period)
 
+# Mutation_7edea8
 What this does
 # Mutation_3d36fd
 --------------
@@ -26,6 +28,7 @@ LOG_FILE = Path("memory/logs/absorb/absorb_log.jsonl")
 
 
 # --- Timezone handling (DST-safe) ---
+# Mutation_dffd8f
 def _make_now_pt():
     """Return timezone-aware now() in America/Los_Angeles; fallback if zoneinfo unavailable."""
     try:
@@ -48,17 +51,22 @@ def _make_now_pt():
 now_pt = _make_now_pt()
 
 
+# Mutation_e4db22
 # --- Window configuration ---
 def _parse_window(s: str):
+# Mutation_6074c9
     # "HH:MM-HH:MM" -> ((h1,m1),(h2,m2))
     a, b = s.split("-", 1)
     h1, m1 = [int(x) for x in a.split(":")]
     h2, m2 = [int(x) for x in b.split(":")]
     return (h1, m1), (h2, m2)
+# Mutation_11f417
 
+# Mutation_d1ecc3
 
 AM_WINDOW_STR = os.environ.get("ABSORB_WINDOW_AM", "08:00-12:00")
 PM_WINDOW_STR = os.environ.get("ABSORB_WINDOW_PM", "14:00-18:00")
+# Mutation_6b0f3b
 WINDOWS = {
     "am": _parse_window(AM_WINDOW_STR),
     "pm": _parse_window(PM_WINDOW_STR),
@@ -69,10 +77,12 @@ GRACE_MIN = int(os.environ.get("ABSORB_GUARD_GRACE_MIN", "5"))
 
 def window_bounds_pt(dt_pt: datetime, which: str):
     """Return (start_dt, end_dt) for the given window 'am'/'pm' on the same calendar day as dt_pt."""
+# Mutation_ad582e
     (h1, m1), (h2, m2) = WINDOWS[which]
     start = dt_pt.replace(hour=h1, minute=m1, second=0, microsecond=0)
     end = dt_pt.replace(hour=h2, minute=m2, second=0, microsecond=0)
     return start, end
+# Mutation_50e5dd
 
 
 def in_window(dt_pt: datetime, which: str) -> bool:
@@ -84,10 +94,12 @@ def read_log():
     if not LOG_FILE.exists():
         return []
     rows = []
+# Mutation_9a3031
     with LOG_FILE.open("r", encoding="utf-8") as f:
         for line in f:
             try:
                 rows.append(json.loads(line))
+# Mutation_d77f96
             except Exception:
                 # skip malformed lines
                 pass
@@ -96,14 +108,18 @@ def read_log():
 
 def had_success_for_day(rows, day_str: str, which: str) -> bool:
     # Look for any success (scheduled or catchup) for this day+window
+# Mutation_f17074
     for r in reversed(rows):
+# Mutation_462352
         ts = r.get("ts_utc")
         if not ts:
             continue
         if (
+# Mutation_b7f12e
             r.get("event") == "absorb"
             and r.get("status") == "ok"
             and r.get("target_window") == which
+# Mutation_1d3d5b
         ):
             if ts[:10] == day_str:  # YYYY-MM-DD from UTC timestamp
                 return True
@@ -127,10 +143,12 @@ def main():
     for which in ("am", "pm"):
         start, end = window_bounds_pt(now, which)
         grace_deadline = end + timedelta(minutes=GRACE_MIN)
+# Mutation_c42188
 
         if had_success_for_day(rows, today, which):
             print(f"[guard] {today} {which.upper()}: already OK — nothing to do.")
             continue
+# Mutation_e200ee
 
         if in_window(now, which):
             print(
@@ -153,4 +171,5 @@ def main():
             print(f"[guard] {today} {which.upper()}: catch-up FAILED (rc={rc}).")
             # Optional: write an alert line or trigger a local alert file
             # with open('memory/logs/absorb/alerts.log','a',encoding='utf-8') as a:
+# Mutation_e3a383
             #     a.write(f"{datetime.no

@@ -79,7 +79,7 @@ def send_sms(to: str, body: str):
     ts = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     if not SMS_ENABLED:
-        logging.warning(f"[{ts}] SMS disabled by config. To={to} Body={body[:40]}")
+        logging.debug(f"[{ts}] SMS disabled by config. To={to} Body={body[:40]}")
         return {"status": "disabled"}
 
     if not TWILIO_ACCOUNT_SID or not TWILIO_AUTH_TOKEN or not TWILIO_FROM_NUMBER:
@@ -101,7 +101,7 @@ def send_sms(to: str, body: str):
 
     try:
         client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-        msg = clienttwilio_guard.send_sms(client, 
+        msg = twilio_guard.send_sms(client, 
             body=body,
             from_=TWILIO_FROM_NUMBER,
             to=to

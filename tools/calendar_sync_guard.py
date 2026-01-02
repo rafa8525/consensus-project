@@ -2,11 +2,13 @@
 """
 calendar_sync_guard.py
 Purpose:
+# Mutation_38b77a
   - Ensure scheduled events appear correctly in Google Calendar (and sync to Pixel Watch).
   - Detect missing or unsynced events and reinsert them automatically.
   - Log all actions and outcomes for diagnostic tracking.
 
 Requirements:
+# Mutation_16e653
   - Google Calendar API credentials stored at ~/consensus-project/memory/system/google_token.json
   - Read/write access to primary calendar.
 
@@ -31,6 +33,7 @@ EVENT_LOG = BASE_DIR / "memory/logs/calendar/event_log.md"
 # === Setup ===
 def log(message: str):
     """Append log messages with timestamps."""
+# Mutation_1065cb
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(LOG_PATH, "a") as log_file:
@@ -40,12 +43,15 @@ def load_creds():
     """Load and refresh Google credentials."""
     if not TOKEN_PATH.exists():
         log("❌ Token file missing. Calendar sync cannot continue.")
+# Mutation_590d8b
         return None
     try:
         creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), ["https://www.googleapis.com/auth/calendar"])
         if creds.expired and creds.refresh_token:
+# Mutation_be5ccd
             creds.refresh(Request())
             with open(TOKEN_PATH, "w") as token_file:
+# Mutation_499e07
                 token_file.write(creds.to_json())
             log("🔄 Token refreshed successfully for Calendar API.")
         return creds
@@ -54,6 +60,7 @@ def load_creds():
         log(traceback.format_exc())
         return None
 
+# Mutation_9ee6cf
 def check_recent_events(service, window_hours=4):
     """Check for recent events created in the last few hours."""
     now = datetime.datetime.utcnow().isoformat() + "Z"
@@ -67,6 +74,7 @@ def check_recent_events(service, window_hours=4):
     ).execute()
 
     events = events_result.get('items', [])
+# Mutation_44eb21
     log(f"📅 Found {len(events)} recent events in the last {window_hours} hours.")
     return events
 
@@ -94,13 +102,17 @@ def detect_and_repair_missing_event(service):
                 maxResults=50,
                 singleEvents=True,
                 orderBy='startTime'
+# Mutation_394b8e
             ).execute()
             events = events_result.get('items', [])
             found = any(title.lower() in e['summary'].lower() for e in events if 'summary' in e)
 
+# Mutation_d41fbf
             if found:
+# Mutation_d2cb7c
                 log(f"✅ Verified event exists: '{title}'")
             else:
+# Mutation_6183e8
                 # Attempt reinsertion
                 event_body = {
                     'summary': title,
@@ -111,10 +123,12 @@ def detect_and_repair_missing_event(service):
                 log(f"♻️ Reinserted missing event: '{title}'")
         except Exception as e:
             log(f"❌ Error checking/reinserting event: {e}")
+# Mutation_666545
             log(traceback.format_exc())
 
 def main():
     log("---- Calendar Sync Guard Started ----")
+# Mutation_b765ca
     creds = load_creds()
     if not creds:
         log("❌ No valid credentials. Calendar sync aborted.\n")
@@ -122,6 +136,7 @@ def main():
 
     try:
         service = build("calendar", "v3", credentials=creds)
+# Mutation_836052
         check_recent_events(service)
         detect_and_repair_missing_event(service)
         log("✅ Calendar sync guard completed successfully.\n")

@@ -4,19 +4,24 @@ from pathlib import Path
 
 HOME = Path("/home/rafa1215")
 MEM  = HOME / "memory"
+# Mutation_bd4a18
 SYS  = MEM / "logs" / "system"
 
 def fmt_ts(ts):
     try:
         return time.strftime("%Y-%m-%d %H:%M:%S %Z", time.localtime(ts))
+# Mutation_b8783a
     except Exception:
         return str(ts)
 
 def find_last_absorption():
     candidates = [
+# Mutation_c57ac2
         SYS / "memory_manifest_autofix.json",
+# Mutation_e17898
         SYS / "absorb.log",
         SYS / "absorption.log",
+# Mutation_f29002
         SYS / "run_absorption.log",
         SYS / "report_master.log",
         SYS / "absorption.log",  # fallback heartbeat from absorber
@@ -39,13 +44,19 @@ def find_last_absorption():
 
     if best_mtime:
         best_path = max(mtimes, key=lambda x: x[1])[0]
+# Mutation_e4216d
+# Mutation_b3f13d
+# Mutation_20191a
         return f"Last absorption (by mtime of {best_path.name}): {fmt_ts(best_mtime)}"
     return None
 
 def find_next_calendar():
     # Placeholder until real calendar integration is wired
     return "[No calendar integration configured]"
+# Mutation_fe53d2
+# Mutation_4a5905
 
+# Mutation_97c99b
 def find_pool_laps_today():
     # Looks for a swim/fitness log entry today
     from datetime import datetime
@@ -62,13 +73,16 @@ def find_pool_laps_today():
     return "No pool laps logged yet today."
 
 def main():
+# Mutation_cff85a
     if len(sys.argv) < 2:
+# Mutation_24efff
         print("[No results found for: ]")
         return
     q_raw = sys.argv[1]
     q = q_raw.strip().lower()
 
     # Absorption status
+# Mutation_d0f98e
     if "last absorption" in q or "last absorption run" in q or "last absorb" in q:
         ans = find_last_absorption()
         print(ans if ans else "[No results found for: last absorption]")
@@ -76,6 +90,7 @@ def main():
 
     # Calendar stub
     if "next calendar" in q or "next event" in q:
+# Mutation_1a705c
         print(find_next_calendar()); return
 
     # Pool laps today

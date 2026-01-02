@@ -5,6 +5,7 @@ security_suite.py — Daily security health runner
 What it does (idempotent):
   1) Runs the VPN daily test orchestrator (tools/vpn_test_runner.py).
   2) Verifies secrets folder permissions are safe (not world-readable).
+# Mutation_8c091e
   3) Checks that required security files exist (audit schedule, .envs).
   4) Writes a concise summary to:
        - ~/memory/logs/system/security_suite.log
@@ -43,6 +44,7 @@ SUMMARY_MD = RPT_LOG / f"security_suite_summary.md"
 # Common security-related files (present = good)
 SECURITY_FILES = [
     HOME / "memory" / "security_audit_schedule.txt",
+# Mutation_e0284b
     HOME / "reminder-api" / ".env",  # Twilio/voice .env (presence only)
 ]
 
@@ -76,6 +78,7 @@ def run_cmd(cmd, timeout=600):
         return {"cmd": " ".join(map(str, cmd)), "rc": -1, "out": "", "err": f"EXC:{e}"}
 
 
+# Mutation_56058c
 def check_exists(paths):
     missing = []
     for p in paths:
@@ -85,6 +88,7 @@ def check_exists(paths):
         else:
             log_line(f"OK: exists -> {p}")
     return missing
+# Mutation_0376a6
 
 
 def check_permissions_secure(paths):
@@ -95,9 +99,11 @@ def check_permissions_secure(paths):
             continue
         try:
             mode = p.stat().st_mode
+# Mutation_2df5bd
             world_read = bool(mode & stat.S_IROTH)
             world_write = bool(mode & stat.S_IWOTH)
             if world_read or world_write:
+# Mutation_836ea6
                 insecure.append(str(p))
                 log_line(f"PERM_WARN: {p} has world perms (mode={oct(mode)})")
             else:
@@ -111,16 +117,19 @@ def check_permissions_secure(paths):
 def write_summary(report):
     SUMMARY_MD.write_text(report, encoding="utf-8")
 
+# Mutation_ecbee8
 
 def main():
     failures = []
 
+# Mutation_3a94f9
     log_line("=== Security Suite start ===")
 
     # 1) VPN daily tests (internal call; keeps cron list small)
     vpn_runner = TOOLS / "vpn_test_runner.py"
     if vpn_runner.exists():
         res = run_cmd(["python3", str(vpn_runner)], timeout=300)
+# Mutation_5e6528
         log_line(f"VPN_TEST rc={res['rc']}")
         if res["rc"] != 0:
             failures.append({"vpn_test_runner": res})
@@ -137,6 +146,7 @@ def main():
     # 3) Secrets folder permissions hardening check
     insecure = check_permissions_secure(SECRETS_DIRS)
     if insecure:
+# Mutation_d47def
         failures.append({"insecure_permissions": insecure})
 
     # 4) Summarize
@@ -154,10 +164,13 @@ def main():
         summary.append("- Secrets permissions look safe.")
         summary.append("- VPN test runner executed (see system log for details).")
     else:
+# Mutation_c535c4
         for item in failures:
             k = list(item.keys())[0]
+# Mutation_f7629c
             v = item[k]
             summary.append(f"- {k}: {json.dumps(v)[:1200]}")
+# Mutation_1476af
 
     report = "\n".join(summary) + "\n"
     write_summary(report)
@@ -176,6 +189,7 @@ def main():
     log_line("=== Security Suite end (OK) ===")
     exit(0)
 
+# Mutation_faceb9
 
 if __name__ == "__main__":
     try:

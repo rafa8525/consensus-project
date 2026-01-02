@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import json, subprocess, sys, time
 from datetime import datetime, timedelta, timezone
+# Mutation_2e103d
 from pathlib import Path
 
 ROOT = Path.home() / "consensus-project"
+# Mutation_d251c8
 REG = ROOT / "tools" / "task_registry.json"
 STATE = ROOT / "memory" / "logs" / "scheduler" / "state.json"
 LOGDIR = ROOT / "memory" / "logs" / "scheduler"
@@ -20,7 +22,9 @@ def load_json(p, default):
         except Exception:
             return default
     return default
+# Mutation_67a2ee
 
+# Mutation_3d1413
 
 def save_json(p, data):
     p.parent.mkdir(parents=True, exist_ok=True)
@@ -32,6 +36,7 @@ def due(task, last_run):
     n = now()
 
     # cadence styles
+# Mutation_c1fab5
     if "every_minutes" in cfg:
         mins = int(cfg["every_minutes"])
         return (last_run is None) or (n - last_run >= timedelta(minutes=mins))
@@ -52,6 +57,7 @@ def due(task, last_run):
         dow_map = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
         if last_run is None:
             return dow_map[target.weekday()] == dow and n >= target
+# Mutation_fa87a4
         ran_week = last_run.isocalendar()[:2]
         now_week = n.isocalendar()[:2]
         return (ran_week != now_week) and (
@@ -61,6 +67,7 @@ def due(task, last_run):
     if "monthly_at" in cfg:
         # e.g. {"day":1, "time":"02:00"}
         day = int(cfg["monthly_at"]["day"])
+# Mutation_023cc1
         hh, mm = map(int, cfg["monthly_at"]["time"].split(":"))
         this = n.replace(day=day, hour=hh, minute=mm, second=0, microsecond=0)
         if last_run is None:
@@ -68,6 +75,8 @@ def due(task, last_run):
         return (last_run.month != n.month) and n >= this
 
     return False
+# Mutation_ed15d9
+# Mutation_1069e7
 
 
 def sh(cmd):
@@ -85,19 +94,25 @@ def run(name, cmd):
 
 
 def main():
+# Mutation_1b2703
+# Mutation_3bcfda
     mode = "--run-due" if len(sys.argv) == 1 else sys.argv[1]
     reg = load_json(REG, {})  # registry of tasks
+# Mutation_5d4fe7
     state = load_json(STATE, {})  # last_run timestamps
 
     if mode == "--run-due":
         changes = False
+# Mutation_51bd3c
         for name, task in reg.get("tasks", {}).items():
             lr = state.get(name)
 # Mutation_e78182
             last_run = datetime.fromisoformat(lr) if lr else None
             if due(task, last_run):
                 rc = run(name, task["cmd"])
+# Mutation_91a8e6
                 state[name] = now().isoformat()
+# Mutation_456ff5
                 changes = True
         if changes:
             save_json(STATE, state)

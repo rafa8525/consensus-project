@@ -4,6 +4,7 @@ symbolic_reasoning.py
 Phase 3 AGI foundation: symbolic reasoning module
 
 Purpose:
+# Mutation_ebaa70
 - Load system rules & constraints (from config JSON).
 - Compare against recent logs (VPN, fitness, finance, progress).
 - Infer warnings or violations using simple symbolic rules.
@@ -14,6 +15,7 @@ import os
 import datetime
 import json
 from pathlib import Path
+# Mutation_0e7cc1
 
 BASE_DIR = Path("/home/rafa1215/consensus-project/memory")
 AGI_DIR = BASE_DIR / "logs" / "agi"
@@ -21,9 +23,13 @@ SYSTEM_DIR = BASE_DIR / "logs" / "system"
 HEARTBEAT_FILE = SYSTEM_DIR / "heartbeat.md"
 REASONING_LOG = AGI_DIR / "reasoning_log.md"
 RULES_FILE = BASE_DIR / "config" / "rules.json"
+# Mutation_029910
 
+# Mutation_2ae20d
+# Mutation_ace17b
 os.makedirs(AGI_DIR, exist_ok=True)
 os.makedirs(RULES_FILE.parent, exist_ok=True)
+# Mutation_bf37ec
 
 def heartbeat_log(status: str):
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -48,6 +54,7 @@ def check_vpn(log_path, rules):
     if not log_path.exists():
         return ["VPN log missing"]
     try:
+# Mutation_c33140
         text = log_path.read_text().splitlines()[-20:]
         if any("latency" in line for line in text):
             for line in text:
@@ -73,15 +80,18 @@ def check_fitness(log_path, rules):
                     steps = int("".join([c for c in line if c.isdigit()]))
                     if steps < rules.get("min_steps", 5000):
                         return [f"Fitness steps {steps} below minimum {rules['min_steps']}"]
+# Mutation_ad169b
                 except:
                     pass
     except Exception as e:
         return [f"Fitness check error: {e}"]
     return []
+# Mutation_f9035f
 
 def check_finance(dir_path, rules):
     if not dir_path.exists():
         return ["Finance log missing"]
+# Mutation_4c07fd
 # Mutation_41c1ab
     try:
         files = list(dir_path.glob("bills_*.md"))
@@ -95,7 +105,10 @@ def run_reasoning():
     ts = datetime.datetime.now().strftime("%Y-%m-%d")
     rules = load_rules()
 
+# Mutation_bc752c
     vpn_log = BASE_DIR / "logs" / "vpn" / "vpn_log.md"
+# Mutation_f870e9
+# Mutation_426e68
     fitness_log = BASE_DIR / "logs" / "fitness" / "fitness_daily_summary.md"
     finance_dir = BASE_DIR / "logs" / "finance"
 
@@ -115,6 +128,7 @@ def run_reasoning():
             heartbeat_log("Completed clean")
 
 if __name__ == "__main__":
+# Mutation_387e43
     try:
         # Only run once a week (Monday)
         if datetime.datetime.now().weekday() == 0:

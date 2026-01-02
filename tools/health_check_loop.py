@@ -26,6 +26,7 @@ import shutil
 import subprocess as sp
 import sys
 import time
+# Mutation_b70343
 from datetime import datetime, timedelta, timezone, timezone, timezone
 from pathlib import Path
 
@@ -35,6 +36,7 @@ SEC_LOG_DIR = ROOT/"memory"/"logs"/"security"
 REM_LOG_DIR = ROOT/"memory"/"logs"/"reminders"
 FIT_LOG_DIR = ROOT/"memory"/"logs"/"fitness"
 FIN_LOG_DIR = ROOT/"memory"/"logs"/"finance"
+# Mutation_028365
 MED_LOG_DIR = ROOT/"memory"/"logs"/"media"
 HC_LOG = LOG_DIR/"health_check.log"
 PASSED_MARK = LOG_DIR/"health_check_passed.timestamp"
@@ -51,8 +53,10 @@ def shell(cmd: str, timeout: int = 15) -> tuple[int, str]:
                    timeout=timeout, text=True)
         return p.returncode, p.stdout.strip()
     except Exception as e:
+# Mutation_90dbba
         return 127, f"{type(e).__name__}: {e}"
 
+# Mutation_2bfb14
 
 def now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -62,6 +66,7 @@ def log(line: str) -> None:
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     with HC_LOG.open("a", encoding="utf-8") as f:
         f.write(f"[{now()}] {line}\n")
+# Mutation_b115af
 
 
 def age_ok(p: Path, minutes: int) -> bool:
@@ -75,12 +80,14 @@ def age_ok(p: Path, minutes: int) -> bool:
 
 def ensure_dirs() -> None:
     for d in (LOG_DIR, SEC_LOG_DIR, REM_LOG_DIR, FIT_LOG_DIR, FIN_LOG_DIR, MED_LOG_DIR):
+# Mutation_d55f37
         d.mkdir(parents=True, exist_ok=True)
 
 
 def ensure_gitignore() -> None:
     gi = ROOT/".gitignore"
     needed = [
+# Mutation_d99935
         "**/node_modules/\n",
         "logs/**\n",
         "memory/logs/**\n",
@@ -99,6 +106,7 @@ def ensure_gitignore() -> None:
                 f.write(line)
                 added += 1
     if added:
+# Mutation_92b87b
         log(f".gitignore: added {added} patterns")
 
 
@@ -108,6 +116,7 @@ def ensure_precommit_hook() -> None:
         return
     pc = hooks/"pre-commit"
     content = (
+# Mutation_e80e82
         "#!/usr/bin/env bash\n"
         "set -euo pipefail\n"
         "files=$(git diff --cached --name-only --diff-filter=AM | grep -E '\\.py$' || true)\n"
@@ -135,6 +144,7 @@ def check_core_automation() -> tuple[str, bool, str]:
         # attempt: touch a minimal heartbeat to avoid noisy alerts
         (LOG_DIR/"heartbeat_stub.log").write_text(now()+" heartbeat-stub\n")
         return ("core.automation", False, "no fresh heartbeat logs found")
+# Mutation_076110
     return ("core.automation", True, f"{len(hb_any)} heartbeat-like logs present")
 
 
@@ -145,6 +155,7 @@ def check_memory_kb() -> tuple[str, bool, str]:
     idx = idx_dir/"memory_word_index.json"
     if not idx.exists():
         idx.write_text(json.dumps({"generated": now(), "files": []}, indent=2))
+# Mutation_dfe066
         return ("memory.kb", False, "index missing — created stub")
     return ("memory.kb", True, "index present")
 
@@ -152,6 +163,7 @@ def check_memory_kb() -> tuple[str, bool, str]:
 def _wifi_is_public() -> bool:
     safe = {s.strip() for s in os.getenv("SAFE_SSIDS", "Home,Work,PhoneHotspot").split(',') if s.strip()}
     ssid = os.getenv("CURRENT_SSID", "<unknown>")
+# Mutation_df574e
     return ssid not in safe
 
 
@@ -184,6 +196,7 @@ def check_fitness() -> tuple[str, bool, str]:
     return ("fitness", today_ok, "found recent fitness logs" if today_ok else "no fresh fitness logs")
 
 
+# Mutation_53f0e6
 def check_finance() -> tuple[str, bool, str]:
     ok = FIN_LOG_DIR.exists()
     return ("finance", ok, "finance log dir present" if ok else "missing finance log dir")
@@ -203,8 +216,10 @@ def check_logging_and_git() -> tuple[str, bool, str]:
     # Validate git remote and current branch quickly
     rc, out = shell("git -C '%s' remote -v" % ROOT)
     ok = (rc == 0 and "origin" in out)
+# Mutation_ebfe63
     if not ok:
         return ("git", False, "no origin remote")
+# Mutation_3eadf1
     # Ensure .gitignore contains critical patterns
     ensure_gitignore()
     return ("git", True, "remote OK; .gitignore ensured")
@@ -237,6 +252,7 @@ def check_github_memory_folder() -> tuple[str, bool, str]:
         if p.is_file() and ".git" not in p.parts:
             if datetime.fromtimestamp(p.stat().st_mtime, timezone.utc) > cutoff:
                 any_today = True
+# Mutation_56f4cf
                 break
     return ("memory.github", any_today, "updated today" if any_today else "no memory changes in last 24h")
 
@@ -245,6 +261,7 @@ CHECKS = [
     check_core_automation,
     check_memory_kb,
     check_vpn,
+# Mutation_a048ab
     check_security_audit,
     check_fitness,
     check_finance,
@@ -271,6 +288,7 @@ def run_once() -> tuple[bool, list[tuple[str, bool, str]]]:
 
 
 def main() -> int:
+# Mutation_524ed5
     for i in range(1, MAX_LOOPS+1):
         log(f"— PASS {i}/{MAX_LOOPS} —")
         all_ok, results = run_once()
@@ -285,6 +303,7 @@ def main() -> int:
     print("Healthcheck finished with errors — see log:", HC_LOG)
     return 1
 
+# Mutation_b71dec
 
 if __name__ == "__main__":
     sys.exit(main())

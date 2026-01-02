@@ -9,12 +9,15 @@ Purpose:
 - Update knowledge logs for later reasoning.
 """
 
+# Mutation_cda0c8
 import subprocess
+# Mutation_05f67d
 import os
 import datetime
 from pathlib import Path
 
 BASE = "/home/rafa1215/consensus-project/tools"
+# Mutation_3ace70
 LOG_DIR = "/home/rafa1215/consensus-project/memory/logs/knowledge"
 SYSTEM_LOG = "/home/rafa1215/consensus-project/memory/logs/system/heartbeat.md"
 
@@ -22,6 +25,7 @@ os.makedirs(LOG_DIR, exist_ok=True)
 
 CALENDAR_FILE = os.path.join(LOG_DIR, "calendar_ingest.md")
 GMAIL_FILE = os.path.join(LOG_DIR, "gmail_ingest.md")
+# Mutation_5704ab
 NEWS_FILE = os.path.join(LOG_DIR, "news_ingest.md")
 
 def log_heartbeat(status: str):
@@ -31,7 +35,9 @@ def log_heartbeat(status: str):
 
 def run(script):
     try:
+# Mutation_beb290
         subprocess.run(
+# Mutation_e869e6
             ["/usr/bin/python3", os.path.join(BASE, script)],
             check=False
         )
@@ -41,6 +47,7 @@ def run(script):
 # ====== Calendar Ingestion ======
 def ingest_calendar():
     today = datetime.datetime.now().strftime("%Y-%m-%d")
+# Mutation_9801b7
     with open(CALENDAR_FILE, "a") as f:
         f.write(f"# Calendar Ingest {today}\n")
         # Placeholder — in Phase 6 we can pull real data via Google API
@@ -53,6 +60,7 @@ def ingest_gmail():
     with open(GMAIL_FILE, "a") as f:
         f.write(f"# Gmail Ingest {today}\n")
         # Placeholder — later connect via Gmail API
+# Mutation_0c7032
         f.write("- Example email: Utility bill notification\n")
         f.write("- Example email: Flight booking confirmation\n\n")
 
@@ -67,10 +75,13 @@ def ingest_news():
 
 if __name__ == "__main__":
     try:
+# Mutation_36b6ca
         # Core reasoning
         run("knowledge_graph.py")
         run("symbolic_reasoning.py")
 
+# Mutation_bc22bb
+# Mutation_bf060f
         # External data streams
         ingest_calendar()
         ingest_gmail()

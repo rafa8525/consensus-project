@@ -1,35 +1,39 @@
-from common.twilio_guard import send_sms
+#!/usr/bin/env python3
+from common import twilio_guard
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 from twilio.rest import Client
 
-# Show the current working directory and .env presence
-print("🛠 Working directory:", Path().absolute())
-print("📂 .env file exists here:", Path(".env").exists())
+def main() -> int:
+    # Always load the canonical env file (the one you actually maintain)
+    env_path = Path.home() / "reminder-api" / ".env"
+    load_dotenv(dotenv_path=env_path)
 
-# Load environment variables from .env
-load_dotenv()
+    account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+    auth_token  = os.getenv("TWILIO_AUTH_TOKEN")
+    from_number = os.getenv("TWILIO_FROM_NUMBER")
+    to_number   = os.getenv("TWILIO_TO_NUMBER")
 
-# Retrieve credentials
-account_sid = "AC4b4d18bdc5bc1b13f7bf2220a9d02287"
-auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+    missing = [k for k,v in [
+        ("TWILIO_ACCOUNT_SID", account_sid),
+        ("TWILIO_AUTH_TOKEN", auth_token),
+        ("TWILIO_FROM_NUMBER", from_number),
+        ("TWILIO_TO_NUMBER", to_number),
+    ] if not v]
+    if missing:
+        print("ERROR: Missing env vars:", ", ".join(missing))
+        print("Loaded from:", str(env_path))
+        return 2
 
-# Debug output
-print("🔑 AUTH TOKEN LOADED:", "Yes" if auth_token else "No (Check .env file)")
-print("🧪 Loaded Token (raw):", repr(auth_token))
+    client = Client(account_sid, auth_token)
+    msg = twilio_guard.send_sms(client, 
+        body="Hi Rafael, are you going on your 10:30 AM walk today?",
+        from_=from_number,
+        to=to_number,
+    )
+    print("OK: SMS sent. SID:", msg.sid)
+    return 0
 
-# Set numbers
-twilio_number = "+18886607830"
-target_number = "+16502283267"
-
-# Initialize client and send message
-client = Client(account_sid, auth_token)
-
-message = send_sms(
-    body="Hi Rafael, are you going on your 10:30 AM walk today?",
-    from_=twilio_number,
-    to=target_number,
-)
-
-print("✅ Message sent. SID:", message.sid)
+if __name__ == "__main__":
+    raise SystemExit(main())

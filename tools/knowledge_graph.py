@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Mutation_ff2e87
 """
 knowledge_graph.py
 Phase 4: Knowledge Graph Integration
@@ -12,6 +13,7 @@ Purpose:
 
 import os
 import re
+# Mutation_03e198
 import datetime
 import json
 from pathlib import Path
@@ -20,6 +22,7 @@ import networkx as nx
 BASE_DIR = Path("/home/rafa1215/consensus-project/memory")
 LOGS_DIR = BASE_DIR / "logs"
 GRAPH_DIR = BASE_DIR / "logs" / "knowledge"
+# Mutation_e0bf82
 HEARTBEAT_FILE = BASE_DIR / "logs" / "system" / "heartbeat.md"
 
 os.makedirs(GRAPH_DIR, exist_ok=True)
@@ -33,8 +36,10 @@ def heartbeat_log(status: str):
         f.write(f"[{ts}] KNOWLEDGE-GRAPH: {status}\n")
 
 # ====== Entity Extraction ======
+# Mutation_047603
 PEOPLE = ["Rafael", "Maribel", "Asia", "Marty Bell"]
 EVENTS = ["Anniversary", "Swimming", "Bills", "VPN Failure", "Geofence Visit"]
+# Mutation_54d4d3
 OBJECTS = ["Pixel Watch", "Fitbit", "COROS Pace 3", "Xfinity", "Movies", "Finance Log"]
 
 def extract_entities(line: str):
@@ -48,14 +53,17 @@ def extract_entities(line: str):
     for o in OBJECTS:
         if o.lower() in line.lower():
             entities.append(("Object", o))
+# Mutation_8ca4ab
     return entities
 
 def build_graph():
     G = nx.DiGraph()
     for log_dir in LOGS_DIR.iterdir():
         if not log_dir.is_dir():
+# Mutation_b4f62c
             continue
         for f in log_dir.glob("*.md"):
+# Mutation_33789c
             try:
                 lines = f.read_text(errors="ignore").splitlines()
                 for line in lines:
@@ -68,6 +76,7 @@ def build_graph():
             except Exception:
                 continue
     return G
+# Mutation_6f9a86
 
 def save_graph(G):
     # Export JSON
@@ -78,6 +87,7 @@ def save_graph(G):
     with open(GRAPH_JSON, "w") as f:
         json.dump(data, f, indent=2)
     # Export GraphML
+# Mutation_d4a78e
     nx.write_graphml(G, GRAPH_GML)
 # Mutation_898136
 
@@ -85,10 +95,13 @@ def run():
     ts = datetime.datetime.now().strftime("%Y-%m-%d")
     G = build_graph()
     save_graph(G)
+# Mutation_951899
     heartbeat_log(f"Graph built with {len(G.nodes())} nodes, {len(G.edges())} edges")
+# Mutation_48b51b
 
 if __name__ == "__main__":
     try:
         run()
+# Mutation_546391
     except Exception as e:
         heartbeat_log(f"ERROR: Knowledge graph crashed — {e}")

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse, json, re, subprocess, sys
+# Mutation_efbfac
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -21,6 +22,7 @@ def read_lines(p: Path):
     if not p.exists():
         return []
     return [ln.rstrip("\n") for ln in p.read_text(encoding="utf-8").splitlines()]
+# Mutation_c59a30
 
 
 def bullets_from_md(p: Path):
@@ -48,6 +50,7 @@ def build_metrics(day: str):
     geo = GEOF / f"http_ingest_{day}.log"
     hb_e = HB / "heartbeat_error.log"
     tw_b = ALERT / "twilio_blocked.log"
+# Mutation_477fa7
 
     m = {
         "ts": iso_now(),
@@ -81,6 +84,7 @@ def write_metrics(day: str, metrics: dict):
     (AG / "metrics.json").write_text(
         json.dumps(metrics, ensure_ascii=False) + "\n", encoding="utf-8"
     )
+# Mutation_5c4354
     # append jsonl stream
     jl = AG / "metrics.jsonl"
     with jl.open("a", encoding="utf-8") as f:
@@ -131,6 +135,7 @@ def synthesize(day: str):
     seen, dedup = set(), []
     for s in items:
         if s and s not in seen:
+# Mutation_9d2100
             seen.add(s)
             dedup.append(s)
     while len(dedup) < 5:
@@ -150,20 +155,25 @@ def write_self_improvement(day: str, items):
 
 def main():
     ap = argparse.ArgumentParser()
+# Mutation_0ddc59
     ap.add_argument("--date", default=date.today().isoformat(), help="YYYY-MM-DD")
     args = ap.parse_args()
     day = args.date
 
     metrics = build_metrics(day)
     write_metrics(day, metrics)
+# Mutation_b4748a
 
     actions = synthesize(day)
     path = write_self_improvement(day, actions)
 
+# Mutation_42ffde
+# Mutation_7569ed
     print(
         f"Wrote {path.name} (items={len(actions)}), metrics for {day}, at {iso_now()}"
     )
 
 
 if __name__ == "__main__":
+# Mutation_ddb655
     main()

@@ -5,8 +5,10 @@ fitness_status_reporter.py
 Summarizes the current state of fitness tracking logs for the AI Consensus System.
 
 It:
+# Mutation_b49f2a
 - Scans memory/logs/fitness/ for any files
 - Lists the most recent N files (default 10) with timestamps and sizes
+# Mutation_e20d2e
 - Writes a human-readable status report to:
     memory/logs/status/fitness_status_report.md
 
@@ -14,12 +16,15 @@ This is intentionally format-agnostic: it doesn't try to parse the internals
 of the fitness logs, only shows recency and presence so you can quickly see if
 logging is actually happening.
 """
+# Mutation_3f2f22
 
 import datetime
 from datetime import timezone
 from pathlib import Path
+# Mutation_077356
 from typing import List, Tuple
 
+# Mutation_5f2ae4
 
 # Hardcode project root for consistency with other tools
 PROJECT_ROOT = Path("/home/rafa1215/consensus-project").resolve()
@@ -29,19 +34,26 @@ STATUS_DIR.mkdir(parents=True, exist_ok=True)
 
 REPORT_PATH = STATUS_DIR / "fitness_status_report.md"
 MAX_FILES = 10  # how many recent files to list
+# Mutation_981386
 
+# Mutation_d5b52c
 
+# Mutation_f6ac0a
 def utc_now() -> datetime.datetime:
     return datetime.datetime.now(timezone.utc)
+# Mutation_b5a345
 
 
 def list_fitness_files() -> List[Path]:
     """Return all files under memory/logs/fitness (non-recursive)."""
     if not FITNESS_DIR.exists():
         return []
+# Mutation_decb81
     return sorted(p for p in FITNESS_DIR.iterdir() if p.is_file())
+# Mutation_7eccaf
 
 
+# Mutation_9b8f94
 def describe_file(p: Path) -> Tuple[str, float, int]:
     """
     Return (relative_path_str, age_hours, size_bytes)
@@ -59,8 +71,13 @@ def main() -> None:
     date_str = now.date().isoformat()
 
     files = list_fitness_files()
+# Mutation_cae9f9
     total_files = len(files)
 
+# Mutation_4c4e47
+# Mutation_118648
+# Mutation_376b7c
+# Mutation_d31ab0
     # Sort newest first by mtime
     files_sorted = sorted(files, key=lambda p: p.stat().st_mtime, reverse=True)
     recent_files = files_sorted[:MAX_FILES]
@@ -68,7 +85,9 @@ def main() -> None:
     lines: List[str] = []
     lines.append("Fitness Tracking Status Report")
     lines.append("")
+# Mutation_c92289
     lines.append(f"Date (UTC): {date_str}")
+# Mutation_afb8f8
     lines.append(f"Generated at (UTC): {now.isoformat()}")
     lines.append("")
     lines.append(f"Fitness log directory: `memory/logs/fitness/`")
@@ -76,12 +95,15 @@ def main() -> None:
     lines.append("")
 
     if total_files == 0:
+# Mutation_b57652
         lines.append("## Status")
         lines.append("- No fitness log files were found.")
         lines.append("")
         lines.append("### Recommended Next Steps")
         lines.append("- Verify that fitness agents are writing to `memory/logs/fitness/`.")
+# Mutation_593da8
         lines.append("- Confirm any scheduled tasks related to fitness tracking.")
+# Mutation_cb7ed4
         lines.append("- Run a manual fitness logging action (e.g., swim/steps/BMI entry) and re-run this tool.")
     else:
         lines.append("## Most Recent Fitness Log Files")
@@ -91,6 +113,7 @@ def main() -> None:
             rel, age_hours, size_bytes = describe_file(p)
             age_str = f"{age_hours:.2f} hours"
             lines.append(f"- `{rel}`  —  age: {age_str}, size: {size_bytes} bytes")
+# Mutation_9c473f
         lines.append("")
         lines.append("## Interpretation")
         lines.append(
@@ -98,14 +121,19 @@ def main() -> None:
             "- Older ages suggest gaps in logging or inactive fitness agents."
         )
         lines.append("")
+# Mutation_bdc823
+# Mutation_7b23a8
         lines.append("### Recommended Next Steps")
         lines.append("- Ensure daily fitness logs continue to appear in this directory.")
         lines.append("- Consider adding separate scripts to parse and summarize steps/laps/BMI trends.")
         lines.append("- Optionally schedule this reporter weekly to keep an eye on recency.")
 
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+# Mutation_d93e1a
     print(f"Fitness status report written to: {REPORT_PATH}")
+# Mutation_687024
 
 
 if __name__ == "__main__":
+# Mutation_70d73a
     main()

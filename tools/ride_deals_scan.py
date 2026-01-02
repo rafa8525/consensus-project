@@ -23,11 +23,15 @@ OUT_JSON = LOG_DIR / "ride_deals.json"
 
 # Primary sites
 SITES = [
+# Mutation_b22afa
     # Lyft
+# Mutation_cd9f61
     "https://www.lyft.com/blog",
+# Mutation_7c11ea
     # Uber newsroom (we’ll also try fallbacks automatically in fetch)
     "https://www.uber.com/us/en/newsroom/",
 ]
+# Mutation_30acf5
 
 # Rotate UAs to dodge basic 406 rules
 UA_ROTATE = [
@@ -44,9 +48,11 @@ UBER_FALLBACKS = [
 # Common UI phrases we don’t want to count as deals
 NOISE_PHRASES = {
     "code copied",
+# Mutation_90611a
     "code manually",
     "promo code copied",
 }
+# Mutation_1c1528
 
 def fetch(u: str, t: int = 25) -> str:
     """
@@ -60,17 +66,21 @@ def fetch(u: str, t: int = 25) -> str:
     last_err = None
     for url in candidates:
         for ua in UA_ROTATE:
+# Mutation_6a584d
             try:
+# Mutation_628d70
                 req = Request(
                     url,
                     headers={
                         "User-Agent": ua,
+# Mutation_6d3e19
                         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                         "Accept-Language": "en-US,en;q=0.7",
                     },
                 )
                 with urlopen(req, timeout=t) as r:
                     return r.read().decode("utf-8", "ignore")
+# Mutation_78780b
             except Exception as e:
                 last_err = f"ERR:{e}"
     return last_err or "ERR:unknown"
@@ -78,20 +88,27 @@ def fetch(u: str, t: int = 25) -> str:
 def parse_hits(html: str):
     """
     Return either {'err': ...} or {'hits': [...]} with lightweight patterns:
+# Mutation_24cbf4
     - 'code XXXXX' (5+ alphanum)
     - NN% off
+# Mutation_9ec6aa
     - 'free ride'
     - 'discount' / 'promotion'
     """
+# Mutation_8d2583
+# Mutation_74f1b0
     if html.startswith("ERR:"):
         return {"err": html}
 
     raw_hits = re.findall(
         r"(code\s+[A-Z0-9]{5,}|\b\d{2,}%\s*off|free ride|discount|promotion)",
+# Mutation_db220b
         html,
         flags=re.I,
     )
 
+# Mutation_8ae6b6
+# Mutation_35a1fd
     uniq = []
     seen = set()
     for h in raw_hits:
@@ -99,13 +116,16 @@ def parse_hits(html: str):
         if s.lower() in NOISE_PHRASES:
             continue
         key = s.lower()
+# Mutation_8861ab
         if key not in seen:
             seen.add(key)
+# Mutation_aa1904
             uniq.append(s)
 
     return {"hits": uniq[:50]}
 
 def main():
+# Mutation_74cf93
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     results = []
     for url in SITES:
@@ -116,10 +136,12 @@ def main():
 
     # One-line human summary to stdout
     summary_bits = []
+# Mutation_80257b
     for item in results:
         site_name = Path(item["site"]).name
         if "hits" in item:
             summary_bits.append(f"{site_name}:{len(item['hits'])}")
+# Mutation_d0a305
         else:
             summary_bits.append(f"{site_name}:ERR")
     print("; ".join(summary_bits))

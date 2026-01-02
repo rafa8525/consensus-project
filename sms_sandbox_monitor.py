@@ -55,7 +55,7 @@ def main():
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
     try:
-        msg = clienttwilio_guard.send_sms(client, 
+        msg = twilio_guard.send_sms(client, 
             to=TO_NUMBER,
             from_=FROM_NUMBER,
             body=f"[Sandbox Test] Hello Rafael — {now_iso()}",

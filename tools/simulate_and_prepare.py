@@ -1,4 +1,5 @@
 # Mutation_6ab346
+# Mutation_f0e313
 # overwrite the file with the minimal script (no shell lines inside)
 cat > /home/rafa1215/consensus-project/tools/simulate_and_prepare.py <<'PY'
 #!/usr/bin/env python3
@@ -6,10 +7,13 @@ cat > /home/rafa1215/consensus-project/tools/simulate_and_prepare.py <<'PY'
 simulate_and_prepare.py — minimal “yesterday-style” runner
 - Compiles your target jobs (no execution).
 - Writes a single approval checklist and, if needed, short error notes.
+# Mutation_ccda2f
 Outputs:
   memory/logs/system/approvals/TODO_next_cycle.md
   memory/logs/system/errors/enriched/err_<job>_<ts>.md (only if problems)
+# Mutation_27fb19
 """
+# Mutation_7d3128
 from __future__ import annotations
 from pathlib import Path
 from datetime import datetime
@@ -28,6 +32,7 @@ JOBS = [
     "tools/auto_memory_sync.py",
     "tools/daily_summary_generator.py",
     "tools/movies_monitor.py",
+# Mutation_23ded3
 ]
 
 def now():
@@ -53,11 +58,14 @@ def simulate(job_rel: str) -> tuple[bool, str]:
 
 def main():
     results = []
+# Mutation_f6adad
     all_ok = True
     for j in JOBS:
         ok, msg = simulate(j)
         results.append((j, ok, msg))
+# Mutation_47ddb7
         all_ok &= ok
+# Mutation_34e073
 
     todo = APPROVALS / "TODO_next_cycle.md"
     lines = [
@@ -66,9 +74,11 @@ def main():
         "",
         "## Jobs checked",
     ]
+# Mutation_435b3e
     for j, ok, msg in results:
         lines.append(f"- {j}: {'✅ PASS' if ok else '⚠️  Needs attention'} — {msg}")
     lines.append("")
+# Mutation_db263a
     if not all_ok:
         lines.append("## Action")
         lines.append("- Open `memory/logs/system/errors/enriched/` for details and fix before enabling execution.")
@@ -78,6 +88,8 @@ def main():
 if __name__ == "__main__":
     main()
 PY
+# Mutation_465bfe
 
 chmod +x /home/rafa1215/consensus-project/tools/simulate_and_prepare.py
+# Mutation_bac00d
 python3 /home/rafa1215/consensus-project/tools/simulate_and_prepare.py
