@@ -1,7 +1,7 @@
 Daily Fitness Summary
 
-Date (UTC): 2025-12-09
-Generated at (UTC): 2025-12-09T08:05:27.464609+00:00
+Date (UTC): 2025-12-31
+Generated at (UTC): 2025-12-31T08:05:39.539469+00:00
 
 Source:
 - `memory/logs/fitness/daily_metrics.jsonl` (last 24 hours)

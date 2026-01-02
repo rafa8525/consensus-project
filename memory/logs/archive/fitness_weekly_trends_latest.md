@@ -1,7 +1,7 @@
 Weekly Fitness Trends
 
-Week: 2025-W50
-Generated (UTC): 2025-12-10T07:03:22.063327+00:00
+Week: 2026-W01
+Generated (UTC): 2026-01-01T07:04:16.691211+00:00
 
 Source daily summaries:
 - `memory/logs/status/fitness_daily_summary_YYYY-MM-DD.md` (last 7 days)

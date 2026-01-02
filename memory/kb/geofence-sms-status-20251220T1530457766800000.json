@@ -1,0 +1,16 @@
+{
+  "id": "geofence-sms-status-20251220T1530457766800000",
+  "type": "metric",
+  "source_agent": "geofence_sms_monitor_agent",
+  "content": "Geofence / SMS status at 2025-12-20T15:30:45.776680+00:00:\n\n- Status: ok\n- Reason: SMS / geofence ratio 2.02 meets or exceeds target 0.80.\n- Lookback window: last 48 hours (cutoff 2025-12-18T15:30:45.750363+00:00)\n- Total geofence events: 49\n- Total SMS events: 99\n- SMS / geofence ratio: 2.02\n\nPer-log geofence counts:\n- memory/logs/transport/transit_log.md: 0\n- memory/logs/system/sms_daemon/geofence_events.jsonl: 49\n\nPer-log SMS counts:\n- memory/logs/system/sms_daemon/sms_events.jsonl: 49\n- memory/logs/system/sms_daemon/sms_daemon.log: 49\n- memory/logs/system/voice_trigger_heartbeat.log: 1",
+  "tags": [
+    "geofence",
+    "sms",
+    "reminders",
+    "health"
+  ],
+  "sensitivity": "internal",
+  "created_at": "2025-12-20T15:30:45.776893+00:00",
+  "updated_at": "2025-12-20T15:30:45.776893+00:00",
+  "confidence": 0.7
+}

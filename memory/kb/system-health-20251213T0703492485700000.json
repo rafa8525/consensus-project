@@ -1,0 +1,15 @@
+{
+  "id": "system-health-20251213T0703492485700000",
+  "type": "metric",
+  "source_agent": "monitor_orchestrator_agent",
+  "content": "System health snapshot at 2025-12-13T07:03:49.248570+00:00:\n\n- Overall status: ok\n\nSubsystems:\n- weekly_auto_status: status=unknown, path=memory/logs/status/weekly_status_auto.md, present=yes\n- absorption: status=ok, path=memory/logs/status/absorption_status.md, present=yes\n- geofence_sms: status=ok, path=memory/logs/status/geofence_sms_status.md, present=yes\n- gmail: status=ok, path=memory/logs/status/gmail_status.md, present=yes\n- movie_list: status=unknown, path=memory/logs/media/movie_list_status.md, present=yes\n- predictions: status=unknown, path=memory/logs/system/predictions/prediction_feed_summary_latest.md, present=yes",
+  "tags": [
+    "system_health",
+    "monitor",
+    "summary"
+  ],
+  "sensitivity": "internal",
+  "created_at": "2025-12-13T07:03:49.248607+00:00",
+  "updated_at": "2025-12-13T07:03:49.248607+00:00",
+  "confidence": 0.7
+}

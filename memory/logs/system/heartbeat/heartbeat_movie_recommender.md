@@ -4,7 +4,7 @@
 2025-10-08 15:52:37.461107 | ⚠️ SMS failed: 
 [31m[49mHTTP Error[0m [37m[49mYour request was:[0m
 
-[36m[49mPOST /Accounts/AC4b4d18bdc5bc1b13f7bf2220a9d02287/Messages.json[0m
+[36m[49mPOST /Accounts/AC<redacted>/Messages.json[0m
 
 [37m[49mTwilio returned the following information:[0m
 
@@ -19,7 +19,7 @@
 2025-10-08 15:58:59.887936 | ⚠️ SMS attempt 1 failed: 
 [31m[49mHTTP Error[0m [37m[49mYour request was:[0m
 
-[36m[49mPOST /Accounts/AC4b4d18bdc5bc1b13f7bf2220a9d02287/Messages.json[0m
+[36m[49mPOST /Accounts/AC<redacted>/Messages.json[0m
 
 [37m[49mTwilio returned the following information:[0m
 
@@ -33,7 +33,7 @@
 2025-10-08 15:59:09.941960 | ❌ SMS retry failed: 
 [31m[49mHTTP Error[0m [37m[49mYour request was:[0m
 
-[36m[49mPOST /Accounts/AC4b4d18bdc5bc1b13f7bf2220a9d02287/Messages.json[0m
+[36m[49mPOST /Accounts/AC<redacted>/Messages.json[0m
 
 [37m[49mTwilio returned the following information:[0m
 
@@ -158,3 +158,87 @@
 2025-12-10 07:04:36.378657 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
 2025-12-10 07:04:41.207108 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-10.md | Total: 10
 2025-12-10 07:04:41.395992 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-11 07:04:54.444946 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-11.md | Total: 10
+2025-12-11 07:04:54.682707 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-11 07:04:59.456148 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-11.md | Total: 10
+2025-12-11 07:04:59.695381 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-12 07:05:03.021758 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-12.md | Total: 10
+2025-12-12 07:05:03.439730 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-12 07:05:08.141376 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-12.md | Total: 10
+2025-12-12 07:05:09.280622 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-13 07:05:04.120360 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-13.md | Total: 10
+2025-12-13 07:05:04.698083 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-13 07:05:09.293710 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-13.md | Total: 10
+2025-12-13 07:05:10.606635 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-15 07:05:47.781843 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-15.md | Total: 10
+2025-12-15 07:05:48.173659 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-15 07:05:52.760608 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-15.md | Total: 10
+2025-12-15 07:05:53.065476 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-16 07:05:40.658724 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-16.md | Total: 10
+2025-12-16 07:05:40.935876 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-16 07:05:45.697298 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-16.md | Total: 10
+2025-12-16 07:05:46.128485 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-17 07:06:17.735738 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-17.md | Total: 10
+2025-12-17 07:06:18.451735 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-17 07:06:22.796769 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-17.md | Total: 10
+2025-12-17 07:06:23.476367 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-18 07:05:23.709496 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-18.md | Total: 10
+2025-12-18 07:05:25.360630 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-18 07:05:28.735616 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-18.md | Total: 10
+2025-12-18 07:05:29.648720 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-19 07:05:32.209728 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-19.md | Total: 10
+2025-12-19 07:05:33.571169 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-19 07:05:36.962605 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-19.md | Total: 10
+2025-12-19 07:05:38.116863 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-20 07:05:27.010584 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-20.md | Total: 10
+2025-12-20 07:05:28.014643 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-20 07:05:31.927609 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-20.md | Total: 10
+2025-12-20 07:05:33.115951 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-21 07:05:45.792964 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-21.md | Total: 10
+2025-12-21 07:05:46.144380 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-21 07:05:50.941234 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-21.md | Total: 10
+2025-12-21 07:05:51.474518 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-22 07:05:57.233642 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-22.md | Total: 10
+2025-12-22 07:05:57.720570 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-22 07:06:02.252530 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-22.md | Total: 10
+2025-12-22 07:06:02.940818 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-23 07:05:18.701779 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-23.md | Total: 10
+2025-12-23 07:05:19.926631 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-23 07:05:23.482644 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-23.md | Total: 10
+2025-12-23 07:05:25.022449 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-24 07:05:38.629399 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-24.md | Total: 10
+2025-12-24 07:05:39.326306 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-24 07:05:43.502189 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-24.md | Total: 10
+2025-12-24 07:05:43.841080 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-25 07:05:51.796110 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-25.md | Total: 10
+2025-12-25 07:05:52.262576 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-25 07:05:56.824297 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-25.md | Total: 10
+2025-12-25 07:05:57.302776 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-26 07:05:41.272953 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-26.md | Total: 10
+2025-12-26 07:05:42.062625 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-26 07:05:46.158696 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-26.md | Total: 10
+2025-12-26 07:05:46.568577 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-27 07:05:31.729725 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-27.md | Total: 10
+2025-12-27 07:05:32.498634 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-27 07:05:36.866424 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-27.md | Total: 10
+2025-12-27 07:05:37.908707 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-28 07:05:14.326483 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-28.md | Total: 10
+2025-12-28 07:05:14.943695 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-28 07:05:19.506622 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-28.md | Total: 10
+2025-12-28 07:05:20.722389 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-29 07:05:06.893796 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-29.md | Total: 10
+2025-12-29 07:05:07.339495 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-29 07:05:11.994213 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-29.md | Total: 10
+2025-12-29 07:05:12.661623 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-30 07:05:29.231609 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-30.md | Total: 10
+2025-12-30 07:05:30.816881 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-30 07:05:34.089398 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-30.md | Total: 10
+2025-12-30 07:05:35.176089 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-31 07:05:25.959232 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-31.md | Total: 10
+2025-12-31 07:05:26.954627 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2025-12-31 07:05:30.887062 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2025-12-31.md | Total: 10
+2025-12-31 07:05:31.872623 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2026-01-01 07:06:15.801743 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2026-01-01.md | Total: 10
+2026-01-01 07:06:16.186438 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
+2026-01-01 07:06:20.930670 | ✅ Movie recommender executed successfully | Saved file: weekly_list_2026-01-01.md | Total: 10
+2026-01-01 07:06:21.658531 | ⚠️ SMS attempt 1 failed: name 'clienttwilio_guard' is not defined
