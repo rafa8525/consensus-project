@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 from datetime import datetime, date
 from pathlib import Path
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "memory" / "logs" / "system" / "predictions"
+SUMMARIZER = ROOT / "tools" / "prediction_feed_summarizer.py"
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -28,6 +31,15 @@ Generated: {datetime.now().isoformat()}
 
     out_path.write_text(content, encoding="utf-8")
     print(f"Wrote: {out_path}")
+
+    if SUMMARIZER.exists():
+        log = Path("/tmp/prediction_feed_summarizer.log")
+        with log.open("w", encoding="utf-8") as f:
+            subprocess.run([sys.executable, str(SUMMARIZER)], stdout=f, stderr=f, check=False)
+        print("Summarizer: ran (see /tmp/prediction_feed_summarizer.log)")
+    else:
+        print("Summarizer: not found, skipping")
+
     return 0
 
 if __name__ == "__main__":
