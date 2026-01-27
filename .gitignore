@@ -9,6 +9,11 @@ memory/logs/**
 # Un-ignore parents so exceptions are seen
 !memory/logs/
 !memory/logs/system/
+
+# Allow prediction feed markdowns (repo mirror)
+!memory/logs/system/predictions/
+!memory/logs/system/predictions/*.md
+
 !memory/logs/reports/
 !memory/logs/status/
 # Keep curated rollups + contents
