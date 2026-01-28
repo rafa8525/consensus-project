@@ -2,29 +2,32 @@
 from __future__ import annotations
 
 import argparse
-import os
+import glob
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-import glob
 
 CRIT = "CRITICAL"
 WARN = "WARN"
 OK = "OK"
+
 
 @dataclass
 class Check:
     level: str
     msg: str
 
+
 def iso_now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
 
 def newest_mtime(paths: list[Path]) -> Path | None:
     if not paths:
         return None
     return max(paths, key=lambda p: p.stat().st_mtime)
+
 
 def find_recent_files(root: Path, patterns: list[str], days: int = 2) -> list[Path]:
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
@@ -33,18 +36,23 @@ def find_recent_files(root: Path, patterns: list[str], days: int = 2) -> list[Pa
         for s in glob.glob(str(root / pat), recursive=True):
             p = Path(s)
             try:
+                if not p.is_file():
+                    continue
                 mt = datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc)
-                if mt >= cutoff and p.is_file():
+                if mt >= cutoff:
                     out.append(p)
             except FileNotFoundError:
+                # race: file deleted between glob and stat
                 pass
     return out
+
 
 def safe_size(p: Path) -> int:
     try:
         return p.stat().st_size
     except FileNotFoundError:
         return 0
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -70,7 +78,7 @@ def main() -> int:
     else:
         checks.append(Check(OK, f"Memory root OK: {mem}"))
 
-    # Prediction output dirs
+    # Prediction output dirs (canonical)
     pred_dir = mem / "logs/system/predictions"
     try:
         pred_dir.mkdir(parents=True, exist_ok=True)
@@ -85,26 +93,36 @@ def main() -> int:
     else:
         checks.append(Check(WARN, f"System health snapshot missing: {shs}"))
 
-    # Fitness logs (discover via globs; adjust patterns as you learn your real filenames)
+    # Fitness signals:
+    # - "true" fitness logs in logs/fitness
+    # - plus the newer audit outputs living in logs/system
     fitness_patterns = [
         "logs/fitness/**/*.md",
         "logs/fitness/**/*.csv",
         "logs/fitness/**/*steps*.*",
         "logs/fitness/**/*swim*.*",
         "logs/fitness/**/*fitbit*.*",
+        "logs/system/fitness_audit_summary.md",
+        "logs/system/fitness_audit.log",
     ]
     recent_fitness = find_recent_files(mem, fitness_patterns, days=args.days)
     if recent_fitness:
         newest = newest_mtime(recent_fitness)
-        checks.append(Check(OK, f"Recent fitness log(s) found: {len(recent_fitness)}; newest={newest}"))
+        checks.append(Check(OK, f"Recent fitness signal(s) found: {len(recent_fitness)}; newest={newest}"))
     else:
-        checks.append(Check(WARN, f"No fitness logs in last {args.days} day(s) under {mem}/logs/fitness (patterns: {len(fitness_patterns)})"))
+        checks.append(
+            Check(
+                WARN,
+                f"No fitness signals in last {args.days} day(s) under {mem}/logs "
+                f"(patterns checked: {len(fitness_patterns)})",
+            )
+        )
 
     # Movie export sanity
     movie_export = mem / "exports/movie_list_export.txt"
     if movie_export.is_file():
         sz = safe_size(movie_export)
-        if sz < 300:  # tune threshold; <300 bytes usually indicates stub
+        if sz < 300:  # small often indicates a stub export
             checks.append(Check(WARN, f"Movie export looks tiny ({sz} bytes): {movie_export}"))
         else:
             checks.append(Check(OK, f"Movie export OK ({sz} bytes): {movie_export}"))
@@ -120,6 +138,7 @@ def main() -> int:
 
     # Print report
     print(f"[preflight] {iso_now()} repo={repo} mem_root={mem} days={args.days}")
+
     worst = OK
     for c in checks:
         print(f"- [{c.level}] {c.msg}")
@@ -133,6 +152,7 @@ def main() -> int:
     if worst == WARN and args.strict:
         return 1
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
