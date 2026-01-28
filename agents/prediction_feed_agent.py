@@ -24,8 +24,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
-
-VERSION = "v2026-01-28-wow-v4-0-audit-signal"
+VERSION = "v2026-01-28-wow-v4-1-export-parse-fix"
 
 
 # ----------------------------
@@ -140,24 +139,10 @@ class MovieCounts:
     unknown: int
 
 
-def _split_row(line: str) -> list[str]:
-    """
-    Heuristic splitter for unknown export format:
-    - prefer tab
-    - else pipe
-    - else comma
-    """
-    if "\t" in line:
-        return [c.strip() for c in line.split("\t")]
-    if "|" in line:
-        return [c.strip() for c in line.split("|")]
-    if "," in line:
-        return [c.strip() for c in line.split(",")]
-    # fallback: multiple spaces
-    return [c.strip() for c in re.split(r"\s{2,}", line.strip()) if c.strip()]
+RANK_PREFIX_RE = re.compile(r"^\s*\d+\.\s*")
 
 
-def _norm_status(s: str) -> str:
+def _norm(s: str) -> str:
     x = s.strip().lower()
     x = re.sub(r"\s+", " ", x)
     return x
@@ -165,81 +150,104 @@ def _norm_status(s: str) -> str:
 
 def parse_movie_export(export_path: Path) -> tuple[MovieCounts, list[tuple[str, str]]]:
     """
+    Parse the canonical export format you showed:
+
+    - Header/comment lines start with '#'
+    - Data lines are TAB-separated:
+        Title<TAB>Year<TAB>Status<TAB>Preference
+    - Title often begins with 'N. ' ranking prefix
+    - Status values look like:
+        'YES (Watched)'
+        'NO (Removed)'
+
     Returns:
       (counts, rows)
     rows: list of (title, status_norm)
     """
     text = safe_read_text(export_path, max_bytes=3_000_000)
-    lines = [ln.strip("\n\r") for ln in text.splitlines() if ln.strip()]
+    raw_lines = [ln.rstrip("\n\r") for ln in text.splitlines()]
+
+    # Keep only non-empty, non-comment lines
+    lines = [ln for ln in raw_lines if ln.strip() and not ln.lstrip().startswith("#")]
     if not lines:
         return MovieCounts(0, 0, 0, 0, 0, 0), []
 
-    # Detect header row if present.
-    header = _split_row(lines[0])
-    title_idx = 0
-    status_idx = 1 if len(header) > 1 else 0
-
-    header_norm = [_norm_status(h) for h in header]
-    if any("movie" in h and "title" in h for h in header_norm) or any(h == "title" for h in header_norm):
-        # likely a header
-        # try to locate "title" and "status"
-        for i, h in enumerate(header_norm):
-            if "title" in h:
-                title_idx = i
-            if "status" in h:
-                status_idx = i
-        data_lines = lines[1:]
-    else:
-        data_lines = lines
-
     rows: list[tuple[str, str]] = []
-    for ln in data_lines:
-        cols = _split_row(ln)
-        if not cols:
+    for ln in lines:
+        # export format: TAB
+        parts = ln.split("\t")
+        # Some exports can include multiple spaces; be tolerant:
+        if len(parts) < 3:
+            # fallback: collapse multiple spaces into tabs
+            parts = re.split(r"\s{2,}", ln.strip())
+        if len(parts) < 3:
             continue
-        if title_idx >= len(cols):
-            # cannot parse
-            continue
-        title = cols[title_idx].strip()
-        if not title or title.lower() in ("movie title", "title"):
-            continue
-        status = ""
-        if status_idx < len(cols):
-            status = cols[status_idx].strip()
-        rows.append((title, _norm_status(status)))
 
-    # Deduplicate by title while keeping "best" status if multiple lines.
-    # Priority: watched/removed/maybe/candidate/unknown
-    pri = {"watched": 5, "removed": 4, "maybe": 3, "candidate": 2, "unwatched": 2, "": 0}
+        title = parts[0].strip()
+        year = parts[1].strip() if len(parts) > 1 else ""
+        status = parts[2].strip() if len(parts) > 2 else ""
+
+        # Strip rank prefix from title (e.g., "10. Godzilla..." -> "Godzilla...")
+        title = RANK_PREFIX_RE.sub("", title).strip()
+
+        if not title:
+            continue
+
+        stn = _norm(status)
+
+        # Normalize status into buckets we can count reliably
+        # Keep original normalized text too for downstream pick listing.
+        rows.append((title, stn))
+
+    # Deduplicate by title (keep the most informative status)
+    # Priority: watched > removed > maybe/candidate > unknown
+    pri = {
+        "watched": 4,
+        "removed": 3,
+        "maybe": 2,
+        "candidate": 2,
+        "unknown": 1,
+    }
+
+    def classify(stn: str) -> str:
+        # status examples: "yes (watched)" "no (removed)"
+        s = stn
+        if "watched" in s or s.startswith("yes"):
+            return "watched"
+        if "removed" in s or s.startswith("no"):
+            return "removed"
+        if "maybe" in s:
+            return "maybe"
+        if "candidate" in s or "unwatched" in s or "to watch" in s or "queue" in s:
+            return "candidate"
+        return "unknown"
+
     best: dict[str, str] = {}
-    for title, st in rows:
-        key = title.strip()
-        if key not in best:
-            best[key] = st
-            continue
-        a = best[key]
-        if pri.get(st, 1) > pri.get(a, 1):
-            best[key] = st
+    best_class: dict[str, str] = {}
+    for title, stn in rows:
+        c = classify(stn)
+        if title not in best:
+            best[title] = stn
+            best_class[title] = c
+        else:
+            if pri.get(c, 1) > pri.get(best_class[title], 1):
+                best[title] = stn
+                best_class[title] = c
 
-    # Count categories
     watched = removed = maybe = candidates = unknown = 0
     normalized_rows: list[tuple[str, str]] = []
-    for title, st in best.items():
-        stn = _norm_status(st)
+    for title, stn in best.items():
+        cls = classify(stn)
         normalized_rows.append((title, stn))
-
-        if not stn:
-            unknown += 1
-        elif "watch" in stn and "unwatch" not in stn:
+        if cls == "watched":
             watched += 1
-        elif "remove" in stn or stn in ("rm", "deleted"):
+        elif cls == "removed":
             removed += 1
-        elif "maybe" in stn:
+        elif cls == "maybe":
             maybe += 1
-        elif "candidate" in stn or "unwatched" in stn or stn in ("to watch", "towatch", "todo", "queue"):
+        elif cls == "candidate":
             candidates += 1
         else:
-            # treat other statuses as unknown
             unknown += 1
 
     total = len(best)
@@ -358,25 +366,25 @@ def build_feed(mem_root: Path, repo_root: Path) -> str:
         lines.append("   - Reason: This keeps your taste profile sharp and recommendations accurate.")
 
         lines.append(
-            f"2. [LOW] Breakdown: watched={counts.watched}, removed={counts.removed}, maybe={counts.maybe}, candidates={counts.candidates}."
+            f"2. [LOW] Breakdown: watched={counts.watched}, removed={counts.removed}, maybe={counts.maybe}, candidates={counts.candidates}, unknown={counts.unknown}."
         )
         lines.append("   - Reason: Derived from Status column in your export.")
 
-        # If there are no candidates, encourage adding "Maybe"
-        if counts.maybe == 0 and counts.candidates == 0:
+        # List up to 5 "Maybe/Candidate" titles if present
+        picks: list[str] = []
+        for title, st in rows:
+            s = st.lower()
+            if "maybe" in s or "candidate" in s or "unwatched" in s or "to watch" in s or "queue" in s:
+                picks.append(title)
+            if len(picks) >= 5:
+                break
+
+        if not picks:
             lines.append("3. [LOW] No unwatched candidates found in the export. If you want recommendations, add a few 'Maybe' titles to the sheets.")
-            lines.append("   - Reason: All titles appear watched/removed, or the export has no candidate statuses.")
+            lines.append("   - Reason: Your export statuses are currently Watched/Removed only.")
         else:
-            # List up to 5 "maybe/candidate" titles to nudge action
-            picks: list[str] = []
-            for title, st in rows:
-                if "maybe" in st or "candidate" in st or "unwatched" in st or st in ("to watch", "towatch", "queue"):
-                    picks.append(title)
-                if len(picks) >= 5:
-                    break
-            if picks:
-                lines.append("3. [LOW] Unwatched picks from your list: " + "; ".join(picks) + ".")
-                lines.append("   - Reason: These are tagged as Maybe/Candidate/Unwatched in your export.")
+            lines.append("3. [LOW] Unwatched picks from your list: " + "; ".join(picks) + ".")
+            lines.append("   - Reason: These are tagged as Maybe/Candidate/Unwatched in your export.")
 
     # Save state for next run
     state["movie_export_hash"] = export_hash
@@ -397,7 +405,6 @@ def build_feed(mem_root: Path, repo_root: Path) -> str:
     if last_ts:
         lines.append(f"1. [MEDIUM] System health snapshot: OK/RECENT (last: {last_ts}).")
     else:
-        # fallback to file mtime
         mt = file_mtime_dt(shs_path)
         mt_s = mt.isoformat(timespec="minutes") + "Z" if mt else "unknown"
         lines.append(f"1. [MEDIUM] System health snapshot: present (mtime: {mt_s}).")
