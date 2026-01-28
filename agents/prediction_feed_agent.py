@@ -9,6 +9,11 @@ And mirrors it into the repo:
   /home/rafa1215/consensus-project/memory/logs/system/predictions/prediction_feed_YYYY-MM-DD.md
 
 Mirror update is skipped if the only difference is the "Generated:" line.
+
+New in v4.2:
+- If your movie export has no Maybe/Candidate entries, generates a deterministic
+  offline fallback list of 3 recommendations (with IMDb ratings) and logs them to:
+    /home/rafa1215/memory/logs/system/predictions/reco_suggestions_YYYY-MM-DD.md
 """
 
 from __future__ import annotations
@@ -24,7 +29,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
-VERSION = "v2026-01-28-wow-v4-1-export-parse-fix"
+VERSION = "v2026-01-28-wow-v4-2-reco-fallback"
 
 
 # ----------------------------
@@ -120,13 +125,8 @@ ISO_TS_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-
 
 
 def parse_last_iso_timestamp(text: str) -> str | None:
-    """
-    Find the last ISO-ish timestamp in a text blob.
-    """
     matches = ISO_TS_RE.findall(text)
-    if not matches:
-        return None
-    return matches[-1]
+    return matches[-1] if matches else None
 
 
 @dataclass
@@ -150,7 +150,7 @@ def _norm(s: str) -> str:
 
 def parse_movie_export(export_path: Path) -> tuple[MovieCounts, list[tuple[str, str]]]:
     """
-    Parse the canonical export format you showed:
+    Parse the canonical export format:
 
     - Header/comment lines start with '#'
     - Data lines are TAB-separated:
@@ -159,58 +159,36 @@ def parse_movie_export(export_path: Path) -> tuple[MovieCounts, list[tuple[str, 
     - Status values look like:
         'YES (Watched)'
         'NO (Removed)'
-
-    Returns:
-      (counts, rows)
-    rows: list of (title, status_norm)
+        'MAYBE'
+        'CANDIDATE'
     """
     text = safe_read_text(export_path, max_bytes=3_000_000)
     raw_lines = [ln.rstrip("\n\r") for ln in text.splitlines()]
 
-    # Keep only non-empty, non-comment lines
     lines = [ln for ln in raw_lines if ln.strip() and not ln.lstrip().startswith("#")]
     if not lines:
         return MovieCounts(0, 0, 0, 0, 0, 0), []
 
     rows: list[tuple[str, str]] = []
     for ln in lines:
-        # export format: TAB
         parts = ln.split("\t")
-        # Some exports can include multiple spaces; be tolerant:
         if len(parts) < 3:
-            # fallback: collapse multiple spaces into tabs
             parts = re.split(r"\s{2,}", ln.strip())
         if len(parts) < 3:
             continue
 
         title = parts[0].strip()
-        year = parts[1].strip() if len(parts) > 1 else ""
         status = parts[2].strip() if len(parts) > 2 else ""
 
-        # Strip rank prefix from title (e.g., "10. Godzilla..." -> "Godzilla...")
         title = RANK_PREFIX_RE.sub("", title).strip()
-
         if not title:
             continue
 
-        stn = _norm(status)
+        rows.append((title, _norm(status)))
 
-        # Normalize status into buckets we can count reliably
-        # Keep original normalized text too for downstream pick listing.
-        rows.append((title, stn))
-
-    # Deduplicate by title (keep the most informative status)
-    # Priority: watched > removed > maybe/candidate > unknown
-    pri = {
-        "watched": 4,
-        "removed": 3,
-        "maybe": 2,
-        "candidate": 2,
-        "unknown": 1,
-    }
+    pri = {"watched": 4, "removed": 3, "maybe": 2, "candidate": 2, "unknown": 1}
 
     def classify(stn: str) -> str:
-        # status examples: "yes (watched)" "no (removed)"
         s = stn
         if "watched" in s or s.startswith("yes"):
             return "watched"
@@ -259,10 +237,6 @@ def parse_movie_export(export_path: Path) -> tuple[MovieCounts, list[tuple[str, 
 # ----------------------------
 
 def fitness_audit_note(mem_root: Path) -> str:
-    """
-    If the fitness audit ran today, return a short note with timestamp.
-    This indicates the pipeline ran, not that the user logged activity.
-    """
     candidates = [
         mem_root / "logs/system/fitness_audit_summary.md",
         mem_root / "logs/system/fitness_audit.log",
@@ -277,10 +251,6 @@ def fitness_audit_note(mem_root: Path) -> str:
 
 
 def has_activity_log_today(mem_root: Path) -> bool:
-    """
-    Treat any file under logs/fitness modified today as an activity log.
-    (Conservative: won't count audit logs as activity.)
-    """
     start_of_today = datetime.combine(utc_now().date(), datetime.min.time(), tzinfo=timezone.utc)
     patterns = [
         "logs/fitness/**/*.md",
@@ -289,6 +259,59 @@ def has_activity_log_today(mem_root: Path) -> bool:
     ]
     recent = list_recent_files(mem_root, patterns, since_dt=start_of_today)
     return len(recent) > 0
+
+
+# ----------------------------
+# Reco fallback (offline, deterministic)
+# ----------------------------
+
+def fallback_recos() -> list[dict]:
+    """
+    Offline deterministic fallback list for nights when there are no 'Maybe/Candidate' items
+    in the export. Keep it stable; update occasionally.
+    """
+    return [
+        {
+            "title": "Constantine",
+            "year": "2005",
+            "imdb": "7.0",
+            "why": "Supernatural detective vs demons/angels; dark comic-book vibe.",
+            "watch_hint": "Availability rotates — check JustWatch for your services.",
+        },
+        {
+            "title": "Underworld",
+            "year": "2003",
+            "imdb": "7.0",
+            "why": "Gothic action; vampires vs werewolves; stylish dark fantasy.",
+            "watch_hint": "Availability rotates — check JustWatch for your services.",
+        },
+        {
+            "title": "Hellboy",
+            "year": "2004",
+            "imdb": "6.9",
+            "why": "Paranormal superhero/monster mythology; creature-feature energy.",
+            "watch_hint": "Availability rotates — check JustWatch for your services.",
+        },
+    ]
+
+
+def write_reco_suggestions(mem_root: Path, ymd: str, recos: list[dict]) -> Path:
+    out_path = mem_root / "logs/system/predictions" / f"reco_suggestions_{ymd}.md"
+    lines = [
+        f"# Recommendation Suggestions – {ymd}",
+        f"Generated: {iso_utc(utc_now())}",
+        f"Agent: prediction_feed_agent.py {VERSION}",
+        "",
+        "These are **fallback recommendations** because your movie export has no 'Maybe/Candidate' entries.",
+        "",
+    ]
+    for i, r in enumerate(recos, 1):
+        lines.append(f"{i}. **{r['title']}** ({r['year']}) — IMDb {r['imdb']}")
+        lines.append(f"   - Why: {r['why']}")
+        lines.append(f"   - Watch: {r['watch_hint']}")
+        lines.append("")
+    write_text_atomic(out_path, "\n".join(lines).rstrip() + "\n")
+    return out_path
 
 
 # ----------------------------
@@ -334,7 +357,7 @@ def build_feed(mem_root: Path, repo_root: Path) -> str:
         if note:
             lines.append(f"   - Note: {note}")
 
-    # Errands & Geofences (placeholder until geofence-to-errand signals are wired)
+    # Errands & Geofences (placeholder)
     lines.append("## Errands & Geofences")
     lines.append("1. [LOW] Pick one small errand you can knock out this week.")
     lines.append("   - Reason: No strong geofence-derived errands were found in this feed run.")
@@ -352,7 +375,6 @@ def build_feed(mem_root: Path, repo_root: Path) -> str:
 
     last_hash = state.get("movie_export_hash")
     last_count = state.get("movie_total")
-
     unchanged = (last_hash == export_hash) and (last_count == counts.total) and (counts.total > 0)
 
     if counts.total == 0:
@@ -370,7 +392,7 @@ def build_feed(mem_root: Path, repo_root: Path) -> str:
         )
         lines.append("   - Reason: Derived from Status column in your export.")
 
-        # List up to 5 "Maybe/Candidate" titles if present
+        # picks from your list if they exist
         picks: list[str] = []
         for title, st in rows:
             s = st.lower()
@@ -380,8 +402,18 @@ def build_feed(mem_root: Path, repo_root: Path) -> str:
                 break
 
         if not picks:
-            lines.append("3. [LOW] No unwatched candidates found in the export. If you want recommendations, add a few 'Maybe' titles to the sheets.")
-            lines.append("   - Reason: Your export statuses are currently Watched/Removed only.")
+            # WOW fallback recos
+            if counts.maybe == 0 and counts.candidates == 0:
+                recos = fallback_recos()
+                reco_path = write_reco_suggestions(mem_root, ymd, recos)
+
+                lines.append("3. [MEDIUM] No 'Maybe/Candidate' titles found — here are 3 picks for tonight:")
+                for r in recos:
+                    lines.append(f"   - {r['title']} ({r['year']}) — IMDb {r['imdb']} — {r['why']}")
+                lines.append(f"   - Reason: Your export is Watched/Removed only; suggestions logged to {reco_path}.")
+            else:
+                lines.append("3. [LOW] No unwatched candidates found in the export. If you want recommendations, add a few 'Maybe' titles to the sheets.")
+                lines.append("   - Reason: Your export statuses are currently Watched/Removed only.")
         else:
             lines.append("3. [LOW] Unwatched picks from your list: " + "; ".join(picks) + ".")
             lines.append("   - Reason: These are tagged as Maybe/Candidate/Unwatched in your export.")
@@ -438,11 +470,9 @@ def main() -> int:
 
     feed = build_feed(mem_root=mem_root, repo_root=repo_root)
 
-    # Write canonical always
     write_text_atomic(canonical_path, feed)
     print(f"Wrote (canonical): {canonical_path}")
 
-    # Mirror: only write if content differs beyond Generated line
     existing_mirror = safe_read_text(mirror_path)
     if existing_mirror:
         if normalize_for_compare(existing_mirror) == normalize_for_compare(feed):
