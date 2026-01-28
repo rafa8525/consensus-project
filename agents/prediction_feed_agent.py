@@ -2,352 +2,450 @@
 """
 prediction_feed_agent.py
 
-Goal:
-- Generate a daily "Prediction Feed" markdown file (canonical memory path)
-- Mirror it into the repo for GitHub visibility
-- IMPORTANT: avoid same-day Git churn by only rewriting the repo mirror
-  when meaningful content changes (ignoring the volatile "Generated:" line)
-
-Canonical (memory) write:
+Generates a daily "Prediction Feed" markdown file in canonical memory storage:
   /home/rafa1215/memory/logs/system/predictions/prediction_feed_YYYY-MM-DD.md
 
-Repo mirror:
+And mirrors it into the repo:
   /home/rafa1215/consensus-project/memory/logs/system/predictions/prediction_feed_YYYY-MM-DD.md
+
+Mirror update is skipped if the only difference is the "Generated:" line.
 """
 
 from __future__ import annotations
 
+import argparse
+import hashlib
+import json
 import os
+import re
 import sys
 from dataclasses import dataclass
-from datetime import datetime, timezone, date
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Iterable
 
 
-VERSION = "v2026-01-27-wow-v3-9-stable-mirror"
+VERSION = "v2026-01-28-wow-v4-0-audit-signal"
 
 
-@dataclass
-class Finding:
-    category: str
-    level: str  # LOW / MEDIUM / HIGH
-    title: str
-    reason: str
+# ----------------------------
+# Utilities
+# ----------------------------
+
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc)
 
 
-def _now_local() -> datetime:
-    # PythonAnywhere runs in UTC by default; we keep "Generated:" local-ish by using local time.
-    # If your system timezone is set, datetime.now() will reflect it.
-    return datetime.now()
+def today_ymd() -> str:
+    return utc_now().date().isoformat()
 
 
-def _today_yyyy_mm_dd() -> str:
-    return date.today().isoformat()
+def iso_utc(dt: datetime) -> str:
+    return dt.astimezone(timezone.utc).isoformat(timespec="microseconds")
 
 
-def _iso_utc_from_mtime(path: Path) -> str:
+def safe_read_text(p: Path, max_bytes: int = 1_000_000) -> str:
     try:
-        ts = path.stat().st_mtime
+        data = p.read_bytes()
+        if len(data) > max_bytes:
+            data = data[:max_bytes]
+        return data.decode("utf-8", errors="replace")
     except FileNotFoundError:
-        return "UNKNOWN"
-    return datetime.fromtimestamp(ts, tz=timezone.utc).isoformat()
+        return ""
+    except Exception:
+        return ""
 
 
-def _read_text(path: Path) -> Optional[str]:
+def sha256_bytes(b: bytes) -> str:
+    return hashlib.sha256(b).hexdigest()
+
+
+def ensure_dir(p: Path) -> None:
+    p.mkdir(parents=True, exist_ok=True)
+
+
+def normalize_for_compare(md_text: str) -> str:
+    """
+    Compare documents while ignoring the dynamic Generated line.
+    """
+    out_lines = []
+    for line in md_text.splitlines():
+        if line.startswith("Generated:"):
+            continue
+        out_lines.append(line)
+    return "\n".join(out_lines).rstrip() + "\n"
+
+
+def write_text_atomic(path: Path, text: str) -> None:
+    """
+    Atomic write: write to temp file in same directory then replace.
+    """
+    ensure_dir(path.parent)
+    tmp = path.with_name(f".{path.name}.tmp")
+    data = text.encode("utf-8")
+    with open(tmp, "wb") as f:
+        f.write(data)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+
+def list_recent_files(root: Path, patterns: Iterable[str], since_dt: datetime) -> list[Path]:
+    """
+    Return files matching patterns (glob relative to root) whose mtime >= since_dt.
+    """
+    out: list[Path] = []
+    since_ts = since_dt.timestamp()
+    for pat in patterns:
+        for p in root.glob(pat):
+            try:
+                if p.is_file() and p.stat().st_mtime >= since_ts:
+                    out.append(p)
+            except FileNotFoundError:
+                continue
+    return out
+
+
+def file_mtime_dt(p: Path) -> datetime | None:
     try:
-        return path.read_text(encoding="utf-8", errors="replace")
+        return datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc)
     except FileNotFoundError:
         return None
 
 
-def _write_text(path: Path, content: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8", newline="\n")
+# ----------------------------
+# Parsers
+# ----------------------------
+
+ISO_TS_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})\b")
 
 
-def _normalize_for_repo_diff(s: str) -> str:
+def parse_last_iso_timestamp(text: str) -> str | None:
     """
-    Normalize content for repo mirror comparison to prevent churn.
-    We ignore the volatile 'Generated:' line which changes on every run.
+    Find the last ISO-ish timestamp in a text blob.
     """
-    out: List[str] = []
-    for line in s.splitlines():
-        if line.startswith("Generated: "):
+    matches = ISO_TS_RE.findall(text)
+    if not matches:
+        return None
+    return matches[-1]
+
+
+@dataclass
+class MovieCounts:
+    total: int
+    watched: int
+    removed: int
+    maybe: int
+    candidates: int
+    unknown: int
+
+
+def _split_row(line: str) -> list[str]:
+    """
+    Heuristic splitter for unknown export format:
+    - prefer tab
+    - else pipe
+    - else comma
+    """
+    if "\t" in line:
+        return [c.strip() for c in line.split("\t")]
+    if "|" in line:
+        return [c.strip() for c in line.split("|")]
+    if "," in line:
+        return [c.strip() for c in line.split(",")]
+    # fallback: multiple spaces
+    return [c.strip() for c in re.split(r"\s{2,}", line.strip()) if c.strip()]
+
+
+def _norm_status(s: str) -> str:
+    x = s.strip().lower()
+    x = re.sub(r"\s+", " ", x)
+    return x
+
+
+def parse_movie_export(export_path: Path) -> tuple[MovieCounts, list[tuple[str, str]]]:
+    """
+    Returns:
+      (counts, rows)
+    rows: list of (title, status_norm)
+    """
+    text = safe_read_text(export_path, max_bytes=3_000_000)
+    lines = [ln.strip("\n\r") for ln in text.splitlines() if ln.strip()]
+    if not lines:
+        return MovieCounts(0, 0, 0, 0, 0, 0), []
+
+    # Detect header row if present.
+    header = _split_row(lines[0])
+    title_idx = 0
+    status_idx = 1 if len(header) > 1 else 0
+
+    header_norm = [_norm_status(h) for h in header]
+    if any("movie" in h and "title" in h for h in header_norm) or any(h == "title" for h in header_norm):
+        # likely a header
+        # try to locate "title" and "status"
+        for i, h in enumerate(header_norm):
+            if "title" in h:
+                title_idx = i
+            if "status" in h:
+                status_idx = i
+        data_lines = lines[1:]
+    else:
+        data_lines = lines
+
+    rows: list[tuple[str, str]] = []
+    for ln in data_lines:
+        cols = _split_row(ln)
+        if not cols:
             continue
-        out.append(line)
-    return "\n".join(out).rstrip() + "\n"
+        if title_idx >= len(cols):
+            # cannot parse
+            continue
+        title = cols[title_idx].strip()
+        if not title or title.lower() in ("movie title", "title"):
+            continue
+        status = ""
+        if status_idx < len(cols):
+            status = cols[status_idx].strip()
+        rows.append((title, _norm_status(status)))
+
+    # Deduplicate by title while keeping "best" status if multiple lines.
+    # Priority: watched/removed/maybe/candidate/unknown
+    pri = {"watched": 5, "removed": 4, "maybe": 3, "candidate": 2, "unwatched": 2, "": 0}
+    best: dict[str, str] = {}
+    for title, st in rows:
+        key = title.strip()
+        if key not in best:
+            best[key] = st
+            continue
+        a = best[key]
+        if pri.get(st, 1) > pri.get(a, 1):
+            best[key] = st
+
+    # Count categories
+    watched = removed = maybe = candidates = unknown = 0
+    normalized_rows: list[tuple[str, str]] = []
+    for title, st in best.items():
+        stn = _norm_status(st)
+        normalized_rows.append((title, stn))
+
+        if not stn:
+            unknown += 1
+        elif "watch" in stn and "unwatch" not in stn:
+            watched += 1
+        elif "remove" in stn or stn in ("rm", "deleted"):
+            removed += 1
+        elif "maybe" in stn:
+            maybe += 1
+        elif "candidate" in stn or "unwatched" in stn or stn in ("to watch", "towatch", "todo", "queue"):
+            candidates += 1
+        else:
+            # treat other statuses as unknown
+            unknown += 1
+
+    total = len(best)
+    return MovieCounts(total, watched, removed, maybe, candidates, unknown), normalized_rows
 
 
-def _detect_fitness_logged_today(mem_root: Path, today: str) -> bool:
+# ----------------------------
+# Fitness detection
+# ----------------------------
+
+def fitness_audit_note(mem_root: Path) -> str:
     """
-    Heuristic: look for today's date string in common fitness logs.
-    This keeps behavior stable even if filenames change over time.
+    If the fitness audit ran today, return a short note with timestamp.
+    This indicates the pipeline ran, not that the user logged activity.
     """
     candidates = [
-        mem_root / "logs" / "fitness" / "fitness_tracker.log",
-        mem_root / "logs" / "system" / "fitness_integration.log",
-        mem_root / "logs" / "status" / "fitness_daily_summary_latest.md",
+        mem_root / "logs/system/fitness_audit_summary.md",
+        mem_root / "logs/system/fitness_audit.log",
     ]
+    today = utc_now().date()
     for p in candidates:
-        txt = _read_text(p)
-        if txt and today in txt:
-            return True
-    return False
+        mt = file_mtime_dt(p)
+        if mt and mt.date() == today:
+            ts = mt.isoformat(timespec="minutes")
+            return f"Fitness audit ran today ({p.name} @ {ts}Z); pipeline OK, but no activity entry was found."
+    return ""
 
 
-def _parse_movie_export_counts(export_text: str) -> Tuple[int, int, int, int, int]:
+def has_activity_log_today(mem_root: Path) -> bool:
     """
-    Parses a simple exported movie list text file.
-
-    Expected (best-effort) formats supported:
-    - TSV / CSV with a header containing 'Status' column
-    - Or lines containing 'Status:' markers
-
-    Returns: (total, watched, removed, maybe, candidates)
-    'candidates' here means 'unwatched / to-watch' style items
-    (best-effort; depends on your Status conventions).
+    Treat any file under logs/fitness modified today as an activity log.
+    (Conservative: won't count audit logs as activity.)
     """
-    lines = [ln for ln in export_text.splitlines() if ln.strip()]
-    if not lines:
-        return (0, 0, 0, 0, 0)
-
-    # Try CSV/TSV header detection
-    header = lines[0]
-    delim = "\t" if "\t" in header else ("," if "," in header else None)
-    status_idx: Optional[int] = None
-
-    if delim:
-        cols = [c.strip().strip('"').strip("'") for c in header.split(delim)]
-        for i, c in enumerate(cols):
-            if c.lower() == "status":
-                status_idx = i
-                break
-
-        watched = removed = maybe = candidates = 0
-        total = 0
-
-        for row in lines[1:]:
-            parts = [p.strip().strip('"').strip("'") for p in row.split(delim)]
-            if not parts or all(not p for p in parts):
-                continue
-            total += 1
-            st = ""
-            if status_idx is not None and status_idx < len(parts):
-                st = parts[status_idx].strip().lower()
-
-            # Best-effort mapping: adjust to your conventions as needed
-            if "watch" in st and "un" not in st:
-                watched += 1
-            elif "remove" in st:
-                removed += 1
-            elif "maybe" in st:
-                maybe += 1
-            elif st in ("", "todo", "to watch", "unwatched", "candidate", "candidates"):
-                candidates += 1
-            else:
-                # If unknown, assume it is not a candidate
-                pass
-
-        return (total, watched, removed, maybe, candidates)
-
-    # Fallback: line-based scan for "Status:" tokens
-    total = watched = removed = maybe = candidates = 0
-    for ln in lines:
-        total += 1
-        low = ln.lower()
-        if "status" in low:
-            if "watched" in low and "unwatched" not in low:
-                watched += 1
-            elif "removed" in low or "remove" in low:
-                removed += 1
-            elif "maybe" in low:
-                maybe += 1
-            elif "unwatched" in low or "candidate" in low or "to watch" in low:
-                candidates += 1
-        # If no explicit status token, we leave it out of candidate count
-
-    return (total, watched, removed, maybe, candidates)
+    start_of_today = datetime.combine(utc_now().date(), datetime.min.time(), tzinfo=timezone.utc)
+    patterns = [
+        "logs/fitness/**/*.md",
+        "logs/fitness/**/*.csv",
+        "logs/fitness/**/*.log",
+    ]
+    recent = list_recent_files(mem_root, patterns, since_dt=start_of_today)
+    return len(recent) > 0
 
 
-def _get_movie_export_text(repo_root: Path, mem_root: Path) -> Optional[str]:
-    # Prefer the repo copy if it exists, otherwise fallback to canonical memory
-    repo_path = repo_root / "memory" / "exports" / "movie_list_export.txt"
-    mem_path = mem_root / "exports" / "movie_list_export.txt"
-    txt = _read_text(repo_path)
-    if txt is not None and txt.strip():
-        return txt
-    txt = _read_text(mem_path)
-    if txt is not None and txt.strip():
-        return txt
-    return None
+# ----------------------------
+# State
+# ----------------------------
+
+def load_state(state_path: Path) -> dict:
+    try:
+        return json.loads(state_path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
 
-def _make_feed(findings: List[Finding], today: str) -> str:
-    generated = _now_local().isoformat()
-    lines: List[str] = []
-    lines.append(f"# Prediction Feed – {today}")
+def save_state(state_path: Path, state: dict) -> None:
+    ensure_dir(state_path.parent)
+    tmp = state_path.with_name(f".{state_path.name}.tmp")
+    tmp.write_text(json.dumps(state, indent=2, sort_keys=True), encoding="utf-8")
+    os.replace(tmp, state_path)
+
+
+# ----------------------------
+# Feed generation
+# ----------------------------
+
+def build_feed(mem_root: Path, repo_root: Path) -> str:
+    ymd = today_ymd()
+    generated = iso_utc(utc_now())
+
+    lines: list[str] = []
+    lines.append(f"# Prediction Feed – {ymd}")
     lines.append(f"Generated: {generated}")
     lines.append(f"Agent: prediction_feed_agent.py {VERSION}")
 
-    # Preserve stable section ordering
-    sections = [
-        "Health/Fitness",
-        "Errands & Geofences",
-        "Media & Fun",
-        "Family/Events",
-        "System/Project",
-    ]
+    # Health/Fitness
+    lines.append("## Health/Fitness")
+    if has_activity_log_today(mem_root):
+        lines.append("1. [LOW] Fitness activity logged today.")
+        lines.append("   - Reason: Activity entries were detected under logs/fitness for today.")
+    else:
+        lines.append("1. [MEDIUM] No fitness log detected for today. Log steps or swim laps.")
+        lines.append("   - Reason: Missing entries degrade weekly summaries and can hide patterns.")
+        note = fitness_audit_note(mem_root)
+        if note:
+            lines.append(f"   - Note: {note}")
 
-    by_cat = {s: [] for s in sections}
-    for f in findings:
-        if f.category not in by_cat:
-            by_cat[f.category] = []
-        by_cat[f.category].append(f)
+    # Errands & Geofences (placeholder until geofence-to-errand signals are wired)
+    lines.append("## Errands & Geofences")
+    lines.append("1. [LOW] Pick one small errand you can knock out this week.")
+    lines.append("   - Reason: No strong geofence-derived errands were found in this feed run.")
 
-    for cat in sections:
-        lines.append(f"## {cat}")
-        items = by_cat.get(cat, [])
-        if not items:
-            lines.append("1. [LOW] No items this run.")
-            lines.append("   - Reason: No signals found for this category.")
-            continue
-        for i, f in enumerate(items, start=1):
-            lines.append(f"{i}. [{f.level}] {f.title}")
-            lines.append(f"   - Reason: {f.reason}")
+    # Media & Fun
+    lines.append("## Media & Fun")
+    export_path = mem_root / "exports/movie_list_export.txt"
+    counts, rows = parse_movie_export(export_path)
+
+    # Track unchanged based on hash + count
+    state_path = mem_root / "state/prediction_feed_state.json"
+    state = load_state(state_path)
+    export_bytes = export_path.read_bytes() if export_path.exists() else b""
+    export_hash = sha256_bytes(export_bytes)
+
+    last_hash = state.get("movie_export_hash")
+    last_count = state.get("movie_total")
+
+    unchanged = (last_hash == export_hash) and (last_count == counts.total) and (counts.total > 0)
+
+    if counts.total == 0:
+        lines.append("1. [LOW] Movie export is empty or unreadable. Re-export your movie sheets.")
+        lines.append("   - Reason: No titles could be parsed from the export.")
+    else:
+        if unchanged:
+            lines.append(f"1. [LOW] Movie list unchanged ({counts.total}). Pick one movie tonight and log it.")
+        else:
+            lines.append(f"1. [LOW] Movie list updated ({counts.total}). Consider logging what you watched most recently.")
+        lines.append("   - Reason: This keeps your taste profile sharp and recommendations accurate.")
+
+        lines.append(
+            f"2. [LOW] Breakdown: watched={counts.watched}, removed={counts.removed}, maybe={counts.maybe}, candidates={counts.candidates}."
+        )
+        lines.append("   - Reason: Derived from Status column in your export.")
+
+        # If there are no candidates, encourage adding "Maybe"
+        if counts.maybe == 0 and counts.candidates == 0:
+            lines.append("3. [LOW] No unwatched candidates found in the export. If you want recommendations, add a few 'Maybe' titles to the sheets.")
+            lines.append("   - Reason: All titles appear watched/removed, or the export has no candidate statuses.")
+        else:
+            # List up to 5 "maybe/candidate" titles to nudge action
+            picks: list[str] = []
+            for title, st in rows:
+                if "maybe" in st or "candidate" in st or "unwatched" in st or st in ("to watch", "towatch", "queue"):
+                    picks.append(title)
+                if len(picks) >= 5:
+                    break
+            if picks:
+                lines.append("3. [LOW] Unwatched picks from your list: " + "; ".join(picks) + ".")
+                lines.append("   - Reason: These are tagged as Maybe/Candidate/Unwatched in your export.")
+
+    # Save state for next run
+    state["movie_export_hash"] = export_hash
+    state["movie_total"] = counts.total
+    state["movie_state_updated_utc"] = iso_utc(utc_now())
+    save_state(state_path, state)
+
+    # Family/Events
+    lines.append("## Family/Events")
+    lines.append("1. [LOW] Reunion (Mar 28, 2026 — SF Italian American Club): do one micro-task today (invite/page/music/menu).")
+    lines.append("   - Reason: A high-impact future win with a 5-minute action now.")
+
+    # System/Project
+    lines.append("## System/Project")
+    shs_path = mem_root / "logs/status/system_health_snapshot.md"
+    shs_text = safe_read_text(shs_path)
+    last_ts = parse_last_iso_timestamp(shs_text)
+    if last_ts:
+        lines.append(f"1. [MEDIUM] System health snapshot: OK/RECENT (last: {last_ts}).")
+    else:
+        # fallback to file mtime
+        mt = file_mtime_dt(shs_path)
+        mt_s = mt.isoformat(timespec="minutes") + "Z" if mt else "unknown"
+        lines.append(f"1. [MEDIUM] System health snapshot: present (mtime: {mt_s}).")
+    lines.append(f"   - Reason: Pulled from {shs_path}.")
+
+    lines.append("2. [LOW] System logs updated today — skim the newest entry and confirm it’s writing to the right path.")
+    lines.append("   - Reason: Fast validation prevents silent drift.")
 
     return "\n".join(lines).rstrip() + "\n"
 
 
+# ----------------------------
+# Main
+# ----------------------------
+
 def main() -> int:
-    repo_root = Path(__file__).resolve().parents[1]  # .../consensus-project
-    mem_root = Path(os.environ.get("MEMORY_ROOT", "/home/rafa1215/memory")).resolve()
-    today = _today_yyyy_mm_dd()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--mem-root", default=str(Path.home() / "memory"), help="canonical memory root")
+    ap.add_argument("--repo", default=str(Path.home() / "consensus-project"), help="repo root for mirror")
+    args = ap.parse_args()
 
-    print(
-        f"RUN {VERSION} file={Path(__file__).resolve()} mem_root={mem_root} repo={repo_root}",
-        flush=True,
-    )
+    mem_root = Path(args.mem_root).expanduser().resolve()
+    repo_root = Path(args.repo).expanduser().resolve()
+    agent_file = Path(__file__).resolve()
 
-    # Output paths
-    canonical_path = mem_root / "logs" / "system" / "predictions" / f"prediction_feed_{today}.md"
-    repo_path = repo_root / "memory" / "logs" / "system" / "predictions" / f"prediction_feed_{today}.md"
+    print(f"RUN {VERSION} file={agent_file} mem_root={mem_root} repo={repo_root}")
 
-    findings: List[Finding] = []
+    ymd = today_ymd()
+    canonical_path = mem_root / "logs/system/predictions" / f"prediction_feed_{ymd}.md"
+    mirror_path = repo_root / "memory/logs/system/predictions" / f"prediction_feed_{ymd}.md"
 
-    # --- Health/Fitness ---
-    if not _detect_fitness_logged_today(mem_root, today):
-        findings.append(
-            Finding(
-                category="Health/Fitness",
-                level="MEDIUM",
-                title="No fitness log detected for today. Log steps or swim laps.",
-                reason="Missing entries degrade weekly summaries and can hide patterns.",
-            )
-        )
+    feed = build_feed(mem_root=mem_root, repo_root=repo_root)
 
-    # --- Errands & Geofences ---
-    findings.append(
-        Finding(
-            category="Errands & Geofences",
-            level="LOW",
-            title="Pick one small errand you can knock out this week.",
-            reason="No strong geofence-derived errands were found in this feed run.",
-        )
-    )
-
-    # --- Media & Fun ---
-    export_txt = _get_movie_export_text(repo_root, mem_root)
-    if export_txt is None:
-        findings.append(
-            Finding(
-                category="Media & Fun",
-                level="MEDIUM",
-                title="Movie export not found or empty. Regenerate movie_list_export.txt from Sheets.",
-                reason="Without the export, media deltas and tailored recommendations are limited.",
-            )
-        )
-    else:
-        total, watched, removed, maybe, candidates = _parse_movie_export_counts(export_txt)
-        findings.append(
-            Finding(
-                category="Media & Fun",
-                level="LOW",
-                title=f"Movie list unchanged ({total}). Pick one movie tonight and log it.",
-                reason="This keeps your taste profile sharp and recommendations accurate.",
-            )
-        )
-        findings.append(
-            Finding(
-                category="Media & Fun",
-                level="LOW",
-                title=f"Breakdown: watched={watched}, removed={removed}, maybe={maybe}, candidates={candidates}.",
-                reason="Derived from Status column in your export.",
-            )
-        )
-        if candidates <= 0:
-            findings.append(
-                Finding(
-                    category="Media & Fun",
-                    level="LOW",
-                    title="No unwatched candidates found in the export. If you want recommendations, add a few 'Maybe' titles to the sheets.",
-                    reason="All titles appear watched/removed or export is too small.",
-                )
-            )
-
-    # --- Family/Events ---
-    findings.append(
-        Finding(
-            category="Family/Events",
-            level="LOW",
-            title="Reunion (Mar 28, 2026 — SF Italian American Club): do one micro-task today (invite/page/music/menu).",
-            reason="A high-impact future win with a 5-minute action now.",
-        )
-    )
-
-    # --- System/Project ---
-    snap_path = mem_root / "logs" / "status" / "system_health_snapshot.md"
-    snap_ts = _iso_utc_from_mtime(snap_path)
-    findings.append(
-        Finding(
-            category="System/Project",
-            level="MEDIUM",
-            title=f"System health snapshot: {'UNKNOWN' if snap_ts == 'UNKNOWN' else 'OK/RECENT'} (last: {snap_ts}).",
-            reason=f"Pulled from {snap_path}.",
-        )
-    )
-    findings.append(
-        Finding(
-            category="System/Project",
-            level="LOW",
-            title="System logs updated today — skim the newest entry and confirm it’s writing to the right path.",
-            reason="Fast validation prevents silent drift.",
-        )
-    )
-
-    # Render feed
-    content = _make_feed(findings, today)
-
-    # Always write canonical memory feed (authoritative)
-    _write_text(canonical_path, content)
+    # Write canonical always
+    write_text_atomic(canonical_path, feed)
     print(f"Wrote (canonical): {canonical_path}")
 
-    # Mirror to repo only if meaningful changes (ignore Generated line)
-    new_norm = _normalize_for_repo_diff(content)
-    if repo_path.exists():
-        old_text = repo_path.read_text(encoding="utf-8", errors="replace")
-        old_norm = _normalize_for_repo_diff(old_text)
-        if old_norm == new_norm:
-            print(f"Mirror unchanged (ignoring Generated line): {repo_path}")
-        else:
-            _write_text(repo_path, content)
-            print(f"Mirrored (repo): {repo_path}")
-    else:
-        _write_text(repo_path, content)
-        print(f"Mirrored (repo): {repo_path}")
+    # Mirror: only write if content differs beyond Generated line
+    existing_mirror = safe_read_text(mirror_path)
+    if existing_mirror:
+        if normalize_for_compare(existing_mirror) == normalize_for_compare(feed):
+            print(f"Mirror unchanged (ignoring Generated line): {mirror_path}")
+            return 0
 
+    write_text_atomic(mirror_path, feed)
+    print(f"Mirrored (repo): {mirror_path}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(main())
