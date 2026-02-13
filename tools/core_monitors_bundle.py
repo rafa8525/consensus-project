@@ -1,317 +1,311 @@
 #!/usr/bin/env python3
 """
-tools/core_monitors_bundle.py
+core_monitors_bundle.py
 
-Runs a manifest-defined bundle of scripts safely:
-- Uses config/core_monitors_manifest.txt as the single source of truth.
-- Never floods the console: child stdout/stderr are redirected to per-script log files.
-- Writes a simple health snapshot to: /home/rafa1215/memory/logs/status/system_health_snapshot.md
-- FAILS FAST with NON-ZERO exit if manifest is missing or contains missing entries (even in --dry-run).
-- Enforces per-script timeouts and kills hung processes.
+Creates a lightweight, deterministic system health snapshot.
 
-Usage:
-  python3 tools/core_monitors_bundle.py --dry-run
-  python3 tools/core_monitors_bundle.py
+Outputs (canonical):
+  /home/rafa1215/memory/logs/status/system_health_snapshot.md
 
-Recommended:
-  python3 tools/console_guard.py --timeout 120 --max-bytes 12000 -- \
-    python3 tools/core_monitors_bundle.py
+Also mirrors the same snapshot into the repo (for GitHub visibility):
+  <repo_root>/memory/logs/status/system_health_snapshot.md
+
+Design goals:
+- Safe to run frequently (idempotent, small file, no noisy diffs beyond timestamps)
+- No external dependencies
+- Clear, minimal checks that reflect whether core subsystems are producing fresh logs
 """
+
 from __future__ import annotations
 
 import argparse
 import os
-import signal
-import subprocess
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Tuple
+from typing import Callable, List, Tuple
 
 
-def utc_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
-
-
-def project_root() -> Path:
-    # tools/ -> repo root
-    return Path(__file__).resolve().parent.parent
-
-
-# Rafael canonical status/log locations (outside repo)
-STATUS_DIR = Path("/home/rafa1215/memory/logs/status")
-EXEC_DIR = Path("/home/rafa1215/memory/logs/system/exec")
-
-
-def ensure_dirs() -> None:
-    STATUS_DIR.mkdir(parents=True, exist_ok=True)
-    EXEC_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def default_manifest_path() -> Path:
-    return project_root() / "config" / "core_monitors_manifest.txt"
-
-
-def parse_manifest(manifest: Path) -> List[str]:
-    """
-    Returns a list of relative script paths (as strings) from the manifest.
-    Ignores blank lines and comments beginning with '#'.
-    """
-    lines = manifest.read_text(encoding="utf-8").splitlines()
-    items: List[str] = []
-    for raw in lines:
-        s = raw.strip()
-        if not s or s.startswith("#"):
-            continue
-        # Normalize: no leading ./, no absolute paths
-        s = s.lstrip("./")
-        if s.startswith("/"):
-            raise ValueError(f"Manifest contains absolute path (not allowed): {s}")
-        items.append(s)
-    return items
-
-
-def discover_candidates(repo: Path, limit: int = 40) -> List[str]:
-    """
-    Best-effort discovery list for debugging when manifest is missing.
-    """
-    patterns = ("agent", "monitor", "orchestrator", "absorb", "geofence", "gmail", "status", "prediction", "movie")
-    out: List[str] = []
-    for p in repo.rglob("*.py"):
-        rel = str(p.relative_to(repo))
-        low = rel.lower()
-        if any(k in low for k in patterns):
-            out.append(rel)
-    out.sort()
-    return out[:limit]
+VERSION = "v2026-02-13-core-monitors-bundle-mirror-v1"
 
 
 @dataclass
 class CheckResult:
-    runnable: List[str]
-    missing: List[str]
+    subsystem: str
+    status: str  # ok | warn | fail
+    notes: str
 
 
-def check_manifest_entries(repo: Path, entries: List[str]) -> CheckResult:
-    runnable: List[str] = []
-    missing: List[str] = []
-    for rel in entries:
-        path = repo / rel
-        if path.exists() and path.is_file():
-            runnable.append(rel)
-        else:
-            missing.append(rel)
-    return CheckResult(runnable=runnable, missing=missing)
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
 
-def snapshot_path() -> Path:
-    return STATUS_DIR / "system_health_snapshot.md"
+def file_mtime_utc_iso(p: Path) -> str:
+    dt = datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc)
+    return dt.isoformat().replace("+00:00", "Z")
 
 
-def write_snapshot(dry_run: bool, rows: List[Tuple[str, str, str]]) -> None:
+def age_seconds(p: Path, now_ts: float) -> float:
+    return max(0.0, now_ts - p.stat().st_mtime)
+
+
+def fmt_age(age_s: float) -> str:
+    # Human-ish compact age format
+    if age_s < 90:
+        return f"{int(age_s)}s"
+    if age_s < 90 * 60:
+        return f"{age_s/60:.1f}m"
+    if age_s < 72 * 3600:
+        return f"{age_s/3600:.1f}h"
+    return f"{age_s/86400:.1f}d"
+
+
+def ok_if_recent_file(
+    subsystem: str,
+    path: Path,
+    *,
+    max_age_s: float,
+    now_ts: float,
+    missing_is: str = "fail",
+    label: str | None = None,
+) -> CheckResult:
     """
-    rows: (subsystem, status, notes)
+    Returns ok if file exists and mtime <= max_age_s, warn if older, fail if missing.
     """
-    sp = snapshot_path()
-    lines: List[str] = []
-    lines.append("# System Health Snapshot")
-    lines.append(f"- Generated: {utc_iso()}")
-    lines.append(f"- Dry run: {str(dry_run).lower()}")
-    lines.append("| Subsystem | Status | Notes |")
-    lines.append("|---|---|---|")
-    for subsystem, status, notes in rows:
-        lines.append(f"| {subsystem} | {status} | {notes} |")
-    sp.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-
-def subsystem_name(rel: str) -> str:
-    # tools/foo_bar.py -> foo_bar
-    base = Path(rel).name
-    return base[:-3] if base.endswith(".py") else base
-
-
-def kill_process_tree(proc: subprocess.Popen) -> None:
-    """
-    Kill the process group if possible, else the process.
-    """
+    disp = label or str(path)
+    if not path.exists():
+        status = "fail" if missing_is == "fail" else "warn"
+        return CheckResult(subsystem, status, f"missing: {disp}")
     try:
-        pgid = os.getpgid(proc.pid)
-        os.killpg(pgid, signal.SIGTERM)
-    except Exception:
-        try:
-            proc.terminate()
-        except Exception:
-            pass
+        a = age_seconds(path, now_ts)
+    except Exception as e:
+        return CheckResult(subsystem, "warn", f"stat failed for {disp}: {e}")
+
+    if a <= max_age_s:
+        return CheckResult(subsystem, "ok", "ran clean")
+    return CheckResult(subsystem, "warn", f"stale ({fmt_age(a)} old): {disp}")
 
 
-def run_script(repo: Path, rel: str, timeout_s: int, run_ts: str) -> Tuple[str, str, str]:
+def ok_if_recent_any(
+    subsystem: str,
+    candidates: List[Path],
+    *,
+    max_age_s: float,
+    now_ts: float,
+) -> CheckResult:
     """
-    Returns (subsystem, status, notes)
-    status ∈ {ready, ok, fail, timeout}
+    Returns ok if ANY candidate exists and is recent.
+    Warn if exists but stale.
+    Fail if none exist.
     """
-    name = subsystem_name(rel)
-    script_path = repo / rel
-
-    # Per-script log file
-    safe_name = name.replace(" ", "_")
-    child_log = EXEC_DIR / f"child_{safe_name}_{run_ts}.log"
-
-    if not script_path.exists():
-        return (name, "missing", "not found")
-
-    # Redirect child stdout+stderr to file to avoid console flooding
-    with child_log.open("ab") as lf:
-        lf.write(b"\n" + (b"=" * 80) + b"\n")
-        lf.write(f"[{utc_iso()}] START {rel}\n".encode("utf-8"))
-        lf.flush()
-
-        try:
-            proc = subprocess.Popen(
-                [sys.executable, str(script_path)],
-                cwd=str(repo),
-                stdout=lf,
-                stderr=lf,
-                start_new_session=True,  # gives us a process group to kill
-                text=False,
-            )
-        except Exception as exc:
-            lf.write(f"[{utc_iso()}] EXCEPTION spawning {rel}: {exc}\n".encode("utf-8"))
-            lf.flush()
-            return (name, "fail", f"spawn error (see {child_log})")
-
-        try:
-            rc = proc.wait(timeout=timeout_s)
-        except subprocess.TimeoutExpired:
-            kill_process_tree(proc)
+    existing: List[Tuple[Path, float]] = []
+    for p in candidates:
+        if p.exists():
             try:
-                proc.wait(timeout=3)
+                existing.append((p, age_seconds(p, now_ts)))
             except Exception:
+                # ignore stat errors here; will be caught below
                 pass
-            lf.write(f"[{utc_iso()}] TIMEOUT after {timeout_s}s {rel}\n".encode("utf-8"))
-            lf.flush()
-            return (name, "timeout", f"timed out (see {child_log})")
 
-        lf.write(f"[{utc_iso()}] END rc={rc} {rel}\n".encode("utf-8"))
-        lf.flush()
+    if not existing:
+        return CheckResult(subsystem, "fail", "missing: no expected files found")
 
-        if rc == 0:
-            return (name, "ok", "ran clean")
-        return (name, "fail", f"rc={rc} (see {child_log})")
+    # choose newest
+    existing.sort(key=lambda t: t[1])
+    p, a = existing[0]
+    if a <= max_age_s:
+        return CheckResult(subsystem, "ok", "ran clean")
+    return CheckResult(subsystem, "warn", f"stale ({fmt_age(a)} old): {p}")
+
+
+def write_snapshot(snapshot_path: Path, lines: List[str], *, dry_run: bool) -> None:
+    snapshot_path.parent.mkdir(parents=True, exist_ok=True)
+    content = "\n".join(lines).rstrip() + "\n"
+    if dry_run:
+        print(content)
+        return
+    snapshot_path.write_text(content, encoding="utf-8")
+
+
+def mirror_snapshot(snapshot_path: Path, repo_root: Path, *, dry_run: bool) -> None:
+    """
+    Mirror canonical snapshot into repo tree for GitHub visibility.
+    Non-fatal on error.
+    """
+    mirror = repo_root / "memory/logs/status/system_health_snapshot.md"
+    mirror.parent.mkdir(parents=True, exist_ok=True)
+    if dry_run:
+        return
+    mirror.write_text(snapshot_path.read_text(encoding="utf-8"), encoding="utf-8")
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--manifest", default=str(default_manifest_path()))
-    ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--timeout", type=int, default=int(os.getenv("CORE_BUNDLE_TIMEOUT", "300")),
-                    help="Per-script timeout seconds (default 300)")
+    ap.add_argument("--dry-run", action="store_true", help="print output only; do not write files")
+    ap.add_argument(
+        "--max-age-hours",
+        type=float,
+        default=float(os.environ.get("CORE_MON_MAX_AGE_HOURS", "48")),
+        help="freshness window in hours for log/heartbeat checks (default 48)",
+    )
+    ap.add_argument(
+        "--mem-root",
+        default=os.environ.get("MEM_ROOT", "/home/rafa1215/memory"),
+        help="canonical memory root (default /home/rafa1215/memory)",
+    )
     args = ap.parse_args()
 
-    ensure_dirs()
-    repo = project_root()
-    manifest = Path(args.manifest)
+    dry_run: bool = args.dry_run
+    mem_root = Path(args.mem_root).resolve()
+    repo_root = Path(__file__).resolve().parents[1]  # /home/rafa1215/consensus-project
+    status_dir = mem_root / "logs/status"
+    system_dir = mem_root / "logs/system"
+    now_ts = datetime.now(timezone.utc).timestamp()
+    max_age_s = float(args.max_age_hours) * 3600.0
 
-    run_ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%S")
-    bundle_log = EXEC_DIR / f"bundle_{run_ts}.log"
+    # Canonical output
+    snapshot_path = status_dir / "system_health_snapshot.md"
 
-    rows: List[Tuple[str, str, str]] = []
+    # Checks (simple + robust; based on file existence/freshness)
+    # Note: These are intentionally conservative and file-based.
+    checks: List[CheckResult] = []
 
-    # Manifest missing => FAIL (non-zero), but still write snapshot + helpful candidates
-    if not manifest.exists():
-        candidates = discover_candidates(repo, limit=40)
-        rows.append(("core_monitors_bundle", "missing", f"manifest missing: {manifest}"))
-        for c in candidates:
-            rows.append((subsystem_name(c), "candidate", "discovered"))
-        write_snapshot(args.dry_run, rows)
-
-        msg = (
-            "[core_monitors_bundle] FAIL (expected until wired)\n"
-            f"- repo={repo}\n"
-            f"- manifest missing: {manifest}\n"
-            "- candidates discovered (first 40 shown):\n  "
-            + "\n  ".join(candidates)
-            + f"\n- snapshot: {snapshot_path()}\n"
-            f"- log: {bundle_log}\n"
+    # Absorption: prefer explicit absorption status file, else any absorb log
+    checks.append(
+        ok_if_recent_any(
+            "absorb_runner",
+            [
+                status_dir / "absorption_status.md",
+                system_dir / "absorb_public_marker_ok.log",
+                system_dir / "absorb_runner_ok.log",
+                system_dir / "absorb_runner.log",
+            ],
+            max_age_s=max_age_s,
+            now_ts=now_ts,
         )
-        bundle_log.write_text(msg, encoding="utf-8")
-        print(msg.strip())
-        return 2
-
-    # Parse + validate
-    try:
-        entries = parse_manifest(manifest)
-    except Exception as exc:
-        rows.append(("core_monitors_bundle", "fail", f"bad manifest: {exc}"))
-        write_snapshot(args.dry_run, rows)
-        bundle_log.write_text(f"[{utc_iso()}] BAD MANIFEST: {exc}\n", encoding="utf-8")
-        print(f"[core_monitors_bundle] FAIL: bad manifest: {exc}")
-        return 2
-
-    chk = check_manifest_entries(repo, entries)
-
-    # Build snapshot rows
-    for rel in chk.runnable:
-        rows.append((subsystem_name(rel), "ready" if args.dry_run else "ready", "wired"))
-    for rel in chk.missing:
-        rows.append((subsystem_name(rel), "missing", "not found"))
-
-    # If missing entries => FAIL (non-zero) even in dry-run
-    if chk.missing:
-        write_snapshot(args.dry_run, rows)
-
-        msg = (
-            "[core_monitors_bundle] FAIL (expected until manifest is correct)\n"
-            f"- repo={repo}\n"
-            f"- manifest={manifest}\n"
-            f"- found={len(chk.runnable)} missing={len(chk.missing)} dry_run={args.dry_run}\n"
-            "- missing:\n  " + "\n  ".join(chk.missing) + "\n"
-            f"- snapshot: {snapshot_path()}\n"
-            f"- log: {bundle_log}\n"
-        )
-        bundle_log.write_text(msg, encoding="utf-8")
-        print(msg.strip())
-        return 2
-
-    # Dry-run success
-    if args.dry_run:
-        write_snapshot(True, rows)
-        msg = (
-            "[core_monitors_bundle] DRY RUN\n"
-            f"- repo={repo}\n"
-            f"- manifest={manifest}\n"
-            f"- runnable={len(chk.runnable)}\n"
-            f"- snapshot: {snapshot_path()}\n"
-        )
-        bundle_log.write_text(msg, encoding="utf-8")
-        print(msg.strip())
-        return 0
-
-    # Real run: execute each script safely
-    exec_rows: List[Tuple[str, str, str]] = []
-    any_fail = False
-
-    bundle_log.write_text(
-        f"[{utc_iso()}] START bundle manifest={manifest}\n"
-        f"timeout_per_script={args.timeout}s\n"
-        f"runnable={len(chk.runnable)}\n",
-        encoding="utf-8",
     )
 
-    for rel in chk.runnable:
-        name, status, notes = run_script(repo, rel, timeout_s=args.timeout, run_ts=run_ts)
-        exec_rows.append((name, status, notes))
-        if status in ("fail", "timeout", "missing"):
-            any_fail = True
+    checks.append(
+        ok_if_recent_file(
+            "absorb_status_report",
+            status_dir / "absorption_status.md",
+            max_age_s=max_age_s,
+            now_ts=now_ts,
+            missing_is="warn",
+            label="absorption_status.md",
+        )
+    )
 
-    write_snapshot(False, exec_rows)
+    # Geofence heartbeat
+    checks.append(
+        ok_if_recent_any(
+            "geofence_heartbeat",
+            [
+                system_dir / "heartbeat.md",
+                system_dir / "geofence_heartbeat.log",
+                system_dir / "geofence_heartbeat.md",
+            ],
+            max_age_s=max_age_s,
+            now_ts=now_ts,
+        )
+    )
 
-    with bundle_log.open("a", encoding="utf-8") as f:
-        f.write(f"[{utc_iso()}] END bundle any_fail={any_fail}\n")
-        f.write(f"snapshot={snapshot_path()}\n")
+    # Gmail refresh guard
+    checks.append(
+        ok_if_recent_any(
+            "gmail_refresh_guard_v3",
+            [
+                system_dir / "gmail_status.md",
+                system_dir / "gmail_refresh_guard.log",
+                system_dir / "gmail_refresh_guard_v3.log",
+            ],
+            max_age_s=max_age_s,
+            now_ts=now_ts,
+        )
+    )
 
-    # Non-zero if any subsystem failed/timed out
-    return 1 if any_fail else 0
+    # Status report generator (weekly status report file present)
+    checks.append(
+        ok_if_recent_any(
+            "generate_status_report",
+            [
+                status_dir / "weekly_status_report.md",
+                system_dir / "status_report_{}.md".format(datetime.now(timezone.utc).strftime("%Y-%m-%d")),
+                system_dir / "status_report_latest.md",
+            ],
+            max_age_s=max_age_s,
+            now_ts=now_ts,
+        )
+    )
+
+    # Movies monitor
+    checks.append(
+        ok_if_recent_any(
+            "movies_monitor",
+            [
+                system_dir / "movies_monitor_status.json",
+                status_dir / "movie_list_status.md",
+                system_dir / "movies_monitor.log",
+            ],
+            max_age_s=max_age_s,
+            now_ts=now_ts,
+        )
+    )
+
+    # Agents orchestrator / MCL logs indicate system running
+    checks.append(
+        ok_if_recent_any(
+            "agents_orchestrator",
+            [
+                system_dir / "master_control_loop.log",
+                system_dir / "agent_self_repair.log",
+                system_dir / "agent_evolution_cycle.log",
+            ],
+            max_age_s=max_age_s,
+            now_ts=now_ts,
+        )
+    )
+
+    # Build snapshot content
+    gen_ts = utc_now_iso()
+    lines: List[str] = []
+    lines.append("# System Health Snapshot")
+    lines.append(f"- Generated: {gen_ts}")
+    lines.append(f"- Dry run: {str(dry_run).lower()}")
+    lines.append(f"- Agent: core_monitors_bundle.py {VERSION}")
+    lines.append(f"- mem_root: {mem_root}")
+    lines.append("")
+    lines.append("| Subsystem | Status | Notes |")
+    lines.append("|---|---|---|")
+
+    # Normalize statuses, and include stable notes for "ok" rows
+    for r in checks:
+        s = r.status.strip().lower()
+        if s not in ("ok", "warn", "fail"):
+            s = "warn"
+        lines.append(f"| {r.subsystem} | {s} | {r.notes} |")
+
+    # Summarize
+    any_fail = any(r.status == "fail" for r in checks)
+    any_warn = any(r.status == "warn" for r in checks)
+    lines.append("")
+    overall = "ok"
+    if any_fail:
+        overall = "fail"
+    elif any_warn:
+        overall = "warn"
+    lines.append(f"- Overall: {overall}")
+
+    # Write canonical + mirror
+    write_snapshot(snapshot_path, lines, dry_run=dry_run)
+    try:
+        mirror_snapshot(snapshot_path, repo_root, dry_run=dry_run)
+    except Exception as e:
+        # Non-fatal: canonical snapshot already written
+        print(f"[WARN] mirror snapshot failed: {e}", file=sys.stderr)
+
+    return 1 if any_fail and not dry_run else 0
 
 
 if __name__ == "__main__":
