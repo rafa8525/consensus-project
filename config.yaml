@@ -14,7 +14,7 @@ geofences:
 
   - name: "Super Duper (Sunvalley Mall)"
     # TODO: set exact coordinates when you have them (Google Maps pin is best)
-    lat: 0.0
-    lon: 0.0
+    lat: 37.972792899386114
+    lon: -122.05737144782017
     radius_m: 150
     reminder: "You're at Super Duper. Last time: mini cheeseburger + garlic fries + Dr Pepper."
