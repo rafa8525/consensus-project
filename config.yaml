@@ -6,15 +6,15 @@ geofences:
     lat: 38.0057
     lon: -121.8092
     radius_m: 120
+
   - name: "Side Gate Brewing"
     lat: 38.0178
     lon: -121.8240
     radius_m: 120
 
-# --- Geofence: Super Duper (Sunvalley Mall) ---
-geofence_super_duper_sunvalley:
-  label: "Super Duper (Sunvalley Mall)"
-  place_hint: "Sunvalley Shopping Center, Concord, CA"
-  trigger: "arrival"
-  radius_m: 150
-  reminder: "You’re at Super Duper. Last time: mini cheeseburger + garlic fries + Dr Pepper."
+  - name: "Super Duper (Sunvalley Mall)"
+    # TODO: set exact coordinates when you have them (Google Maps pin is best)
+    lat: 0.0
+    lon: 0.0
+    radius_m: 150
+    reminder: "You're at Super Duper. Last time: mini cheeseburger + garlic fries + Dr Pepper."
