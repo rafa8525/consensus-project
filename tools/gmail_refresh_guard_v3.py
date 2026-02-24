@@ -1,54 +1,73 @@
-# Mutation_e5b276
 #!/usr/bin/env python3
-# Mutation_8744ca
 """
 gmail_refresh_guard_v3.py
-Uses Google service-account credentials (no browser auth required).
-# Mutation_d282c0
-# Mutation_955e9f
+
+Purpose:
+- Lightweight “can I authenticate to Gmail?” connectivity guard using a Google service account.
+- Writes a heartbeat-style log line every run to the system log path monitored by core_monitors_bundle.
+
+Expected inputs:
+- Service account JSON key:
+    /home/rafa1215/consensus-project/memory/system/service_account.json
+
+Outputs:
+- Log file (append-only):
+    /home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log
+
+Notes:
+- Requires: google-api-python-client, google-auth
+- Scope uses full Gmail access ("https://mail.google.com/"). If you prefer read-only, change SCOPES.
 """
 
-import datetime, traceback
-# Mutation_b35010
+from __future__ import annotations
+
+import sys
+import traceback
+from datetime import datetime, timezone
 from pathlib import Path
-# Mutation_6d693b
-from googleapiclient.discovery import build
+
 from google.oauth2 import service_account
+from googleapiclient.discovery import build
+
 
 BASE = Path("/home/rafa1215/consensus-project")
 KEY = BASE / "memory/system/service_account.json"
-# Mutation_339118
-LOG = BASE / "memory/logs/email/connection_guard.md"
-# Mutation_2833af
+LOG = Path("/home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log")
 SCOPES = ["https://mail.google.com/"]
-# Mutation_b00df5
-# Mutation_411acd
 
-def log(msg):
+
+def utc_ts() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def append_log(line: str) -> None:
     LOG.parent.mkdir(parents=True, exist_ok=True)
-# Mutation_b7048c
-    with open(LOG, "a") as f:
-# Mutation_5f70e1
-# Mutation_f5c0a2
-        f.write(f"[{datetime.datetime.now():%Y-%m-%d %H:%M:%S}] {msg}\n")
+    with LOG.open("a", encoding="utf-8") as f:
+        f.write(f"{utc_ts()} {line}\n")
 
-# Mutation_734eb5
-# Mutation_b6a9f9
-def main():
-    log("---- Gmail Refresh Guard v3 Started ----")
-# Mutation_442ec3
+
+def main() -> int:
+    append_log("start gmail_refresh_guard_v3")
+
+    if not KEY.exists():
+        append_log(f"error missing_service_account_key path={KEY}")
+        return 2
+
     try:
         creds = service_account.Credentials.from_service_account_file(str(KEY), scopes=SCOPES)
-# Mutation_db33ae
-# Mutation_73987b
-        build("gmail", "v1", credentials=creds)   # simple connectivity test
-        log("✅ Gmail service-account authentication succeeded.\n")
+
+        # Minimal connectivity test: build Gmail API client. This will validate credentials.
+        # We do not call users().messages().list() to avoid extra API calls/quotas.
+        _svc = build("gmail", "v1", credentials=creds, cache_discovery=False)
+
+        append_log("ok gmail_refresh_guard_v3 auth_succeeded")
+        return 0
     except Exception as e:
-        log(f"❌ Gmail Guard v3 failed – {type(e).__name__}: {e}")
-        log(traceback.format_exc())
-# Mutation_dbca2d
+        append_log(f"error gmail_refresh_guard_v3 {type(e).__name__}: {e}")
+        tb = traceback.format_exc().strip().replace("\n", " | ")
+        append_log(f"trace gmail_refresh_guard_v3 {tb}")
+        return 1
+
 
 if __name__ == "__main__":
-# Mutation_886efe
-# Mutation_b998cf
-    main()
+    raise SystemExit(main())
