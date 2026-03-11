@@ -1,0 +1,404 @@
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Sat Nov  8 08:01:20 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-08 07:59:19
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-08 07:15:29
+🕒  predictive_planner.log → 2025-11-08 07:02:10
+🕒  learning_optimizer_agent.log → 2025-11-08 07:30:38
+🕒  meta_learning_core.log → 2025-11-08 07:30:37
+
+[3] File Sizes:
+📦  evolution_scores.log → 24K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 8.0K
+📦  meta_learning_core.log → 4.0K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-08 07:59:19.213921] Cross-Agent Evaluation Results: {"learning_optimizer": 97.9, "predictive_planner": 91.44, "symbolic_reasoner": 97.73, "proactive_nudge": 92.35, "auto_doc_agent": 99.48, "self_improvement_engine": 91.57}
+[2025-11-08 07:59:19.216990] Average Fitness Score: 95.08%
+[2025-11-08 07:59:19.219982] ✅  Performance optimal.
+[2025-11-08 07:59:19.223677] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Sat Nov  8 08:01:21 UTC 2025
+==========================================================
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Sun Nov  9 08:01:29 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-09 07:59:25
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-09 07:15:34
+🕒  predictive_planner.log → 2025-11-09 07:02:03
+🕒  learning_optimizer_agent.log → 2025-11-09 07:30:42
+🕒  meta_learning_core.log → 2025-11-09 07:30:41
+
+[3] File Sizes:
+📦  evolution_scores.log → 60K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 12K
+📦  meta_learning_core.log → 4.0K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-09 07:59:25.728099] Cross-Agent Evaluation Results: {"learning_optimizer": 95.26, "predictive_planner": 92.4, "symbolic_reasoner": 92.6, "proactive_nudge": 94.52, "auto_doc_agent": 97.2, "self_improvement_engine": 92.01}
+[2025-11-09 07:59:25.731987] Average Fitness Score: 94.00%
+[2025-11-09 07:59:25.735825] ⚠️  Performance below optimal threshold — triggering Evolution Auditor.
+[2025-11-09 07:59:25.739454] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Sun Nov  9 08:01:31 UTC 2025
+==========================================================
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Mon Nov 10 08:01:20 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-10 07:59:19
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-10 07:15:34
+🕒  predictive_planner.log → 2025-11-10 07:02:20
+🕒  learning_optimizer_agent.log → 2025-11-10 07:30:37
+🕒  meta_learning_core.log → 2025-11-10 07:30:37
+
+[3] File Sizes:
+📦  evolution_scores.log → 96K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 24K
+📦  meta_learning_core.log → 4.0K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-10 07:59:19.989878] Cross-Agent Evaluation Results: {"learning_optimizer": 90.97, "predictive_planner": 99.3, "symbolic_reasoner": 97.57, "proactive_nudge": 94.29, "auto_doc_agent": 91.3, "self_improvement_engine": 97.42}
+[2025-11-10 07:59:19.993033] Average Fitness Score: 95.14%
+[2025-11-10 07:59:19.996021] ✅  Performance optimal.
+[2025-11-10 07:59:19.999219] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Mon Nov 10 08:01:21 UTC 2025
+==========================================================
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Tue Nov 11 08:01:19 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-11 07:59:22
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-11 07:15:39
+🕒  predictive_planner.log → 2025-11-11 07:02:35
+🕒  learning_optimizer_agent.log → 2025-11-11 07:30:43
+🕒  meta_learning_core.log → 2025-11-11 07:30:42
+
+[3] File Sizes:
+📦  evolution_scores.log → 132K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 32K
+📦  meta_learning_core.log → 8.0K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-11 07:59:22.599480] Cross-Agent Evaluation Results: {"learning_optimizer": 99.77, "predictive_planner": 92.58, "symbolic_reasoner": 93.67, "proactive_nudge": 97.92, "auto_doc_agent": 97.5, "self_improvement_engine": 97.23}
+[2025-11-11 07:59:22.602982] Average Fitness Score: 96.44%
+[2025-11-11 07:59:22.606389] ✅  Performance optimal.
+[2025-11-11 07:59:22.609696] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Tue Nov 11 08:01:19 UTC 2025
+==========================================================
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Wed Nov 12 08:01:27 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-12 07:59:18
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-12 07:15:33
+🕒  predictive_planner.log → 2025-11-12 07:02:43
+🕒  learning_optimizer_agent.log → 2025-11-12 07:30:39
+🕒  meta_learning_core.log → 2025-11-12 07:30:38
+
+[3] File Sizes:
+📦  evolution_scores.log → 168K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 36K
+📦  meta_learning_core.log → 8.0K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-12 07:59:18.776483] Cross-Agent Evaluation Results: {"learning_optimizer": 90.7, "predictive_planner": 95.45, "symbolic_reasoner": 93.7, "proactive_nudge": 90.03, "auto_doc_agent": 94.36, "self_improvement_engine": 90.05}
+[2025-11-12 07:59:18.779142] Average Fitness Score: 92.38%
+[2025-11-12 07:59:18.781413] ⚠️  Performance below optimal threshold — triggering Evolution Auditor.
+[2025-11-12 07:59:18.784513] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Wed Nov 12 08:01:28 UTC 2025
+==========================================================
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Thu Nov 13 08:01:39 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-13 07:59:26
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-13 07:15:39
+🕒  predictive_planner.log → 2025-11-13 07:02:55
+🕒  learning_optimizer_agent.log → 2025-11-13 07:30:45
+🕒  meta_learning_core.log → 2025-11-13 07:30:44
+
+[3] File Sizes:
+📦  evolution_scores.log → 204K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 44K
+📦  meta_learning_core.log → 8.0K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-13 07:59:26.857975] Cross-Agent Evaluation Results: {"learning_optimizer": 97.92, "predictive_planner": 92.85, "symbolic_reasoner": 99.26, "proactive_nudge": 91.55, "auto_doc_agent": 93.2, "self_improvement_engine": 96.53}
+[2025-11-13 07:59:26.860949] Average Fitness Score: 95.22%
+[2025-11-13 07:59:26.863938] ✅  Performance optimal.
+[2025-11-13 07:59:26.866883] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Thu Nov 13 08:01:41 UTC 2025
+==========================================================
+==========================================================
+ PHASE 4 STATUS VERIFICATION — Fri Nov 14 08:01:24 UTC 2025
+==========================================================
+
+[1] Log File Presence:
+✅  Found: evolution_scores.log
+✅  Found: phase4_simulation_report.txt
+✅  Found: system_health_summary.log
+✅  Found: predictive_planner.log
+✅  Found: learning_optimizer_agent.log
+✅  Found: meta_learning_core.log
+
+[2] Last Modified Timestamps:
+🕒  evolution_scores.log → 2025-11-14 07:59:22
+🕒  phase4_simulation_report.txt → 2025-11-07 21:04:44
+🕒  system_health_summary.log → 2025-11-14 07:15:32
+🕒  predictive_planner.log → 2025-11-14 07:02:51
+🕒  learning_optimizer_agent.log → 2025-11-14 07:30:45
+🕒  meta_learning_core.log → 2025-11-14 07:30:45
+
+[3] File Sizes:
+📦  evolution_scores.log → 240K
+📦  phase4_simulation_report.txt → 4.0K
+📦  system_health_summary.log → 4.0K
+📦  predictive_planner.log → 4.0K
+📦  learning_optimizer_agent.log → 52K
+📦  meta_learning_core.log → 12K
+
+[4] Preview: evolution_scores.log (last 5 lines)
+[2025-11-14 07:59:22.050055] Cross-Agent Evaluation Results: {"learning_optimizer": 98.85, "predictive_planner": 93.35, "symbolic_reasoner": 93.2, "proactive_nudge": 90.15, "auto_doc_agent": 90.04, "self_improvement_engine": 97.14}
+[2025-11-14 07:59:22.053732] Average Fitness Score: 93.79%
+[2025-11-14 07:59:22.057581] ⚠️  Performance below optimal threshold — triggering Evolution Auditor.
+[2025-11-14 07:59:22.060772] === Evaluation Cycle Complete ===
+
+
+[5] Overall Health Status:
+✅  All required logs detected. Phase 4 appears stable.
+
+==========================================================
+ Phase 4 Verification Completed — Fri Nov 14 08:01:26 UTC 2025
+==========================================================
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory
+bash: /home/rafa1215/consensus-project/tools/verify_phase4_status.sh: No such file or directory

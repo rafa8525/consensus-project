@@ -1,1 +1,0 @@
-../archive/prediction_feed_summary_latest.md
