@@ -1,7 +1,36 @@
-Godzilla Minus One
-Blue Beetle
-Troll 2
-Primitive War
-Sean Combs: The Reckoning
-Shadow Master
+# movie_list_export
+# generated_utc=2026-03-11T18:10:19.746266+00:00
+# exporter_version=2026-01-26-movie-export-stable-v4-write-even-if-small
+# sources=3 unique_titles=30
+# format: Title<TAB>Year<TAB>Status<TAB>Preference
 
+1. A Minecraft Movie	2025	NO (Removed)	Action: Removed from future tracking; preference for gaming adaptations is lowered.
+1. Dune: Part Two	2024	YES (Watched)	Action: Added to Watched List; Strong preference for high-budget, high-concept Sci-Fi sequels is increased.
+1. Oppenheimer	2023	YES (Watched)	Action: Added to Watched List; Strong preference for historical/biographical thrillers is increased.
+10. Godzilla x Kong: The New Empire	2024	YES (Watched)	Action: Added to Watched List; preference for monster blockbusters is increased.
+10. The Hunger Games: The Ballad of Songbirds & Snakes	2023	NO (Removed)	Action: Removed from future tracking; preference for dystopian prequels is slightly decreased (though still high).
+10. Thunderbolts*	2025	YES (Watched)	Action: Added to Watched List; preference for anti-hero/team-up films is increased.
+2. Barbie	2023	NO (Removed)	Action: Removed from future tracking; preference for musical/fantasy comedy is lowered.
+2. Inside Out 2	2024	NO (Removed)	Action: Removed from future tracking; preference for pure animation sequels is lowered.
+2. Lilo & Stitch	2025	YES (Watched)	Action: Added to Watched List; preference for Disney live-action/animation is increased.
+3. Deadpool & Wolverine	2024	YES (Watched)	Action: Added to Watched List; preference for R-rated superhero crossovers is increased.
+3. Guardians of the Galaxy Vol. 3	2023	YES (Watched)	Action: Added to Watched List; preference for established superhero team-ups is increased.
+3. Superman	2025	YES (Watched)	Action: Added to Watched List; preference for major superhero reboots is increased.
+4. A Quiet Place: Day One	2024	YES (Watched)	Action: Added to Watched List; preference for high-concept horror prequels is increased.
+4. Jurassic World Rebirth	2025	YES (Watched)	Action: Added to Watched List; preference for established adventure franchises is increased.
+4. Mission: Impossible – Dead Reckoning Part One	2023	YES (Watched)	Action: Added to Watched List; preference for major action spy franchises is increased.
+5. Beetlejuice 2	2024	YES (Watched)	Action: Added to Watched List; preference for legacy sequels/fantasy is increased.
+5. Spider-Man: Across the Spider-Verse	2023	YES (Watched)	Action: Added to Watched List; Strong preference for innovative superhero animation is increased.
+5. The Fantastic Four: First Steps	2025	YES (Watched)	Action: Added to Watched List; preference for major superhero reboots is increased.
+6. Avatar: Fire and Ash	2025	NO (Removed)	Action: Removed from future tracking; preference for high-budget sci-fi sequels is lowered.
+6. Gladiator 2	2024	YES (Watched)	Action: Added to Watched List; preference for historical epics/legacy sequels is increased.
+6. John Wick: Chapter 4	2023	YES (Watched)	Action: Added to Watched List; Strong preference for stylized action franchises is increased.
+7. Fast X	2023	YES (Watched)	Action: Added to Watched List; preference for large-scale vehicle action sequels is increased.
+7. How to Train Your Dragon	2025	YES (Watched)	Action: Added to Watched List; preference for live-action fantasy remakes is increased.
+7. The Lion King 2	2024	NO (Removed)	Action: Removed from future tracking; preference for photorealistic animation sequels is lowered.
+8. Captain America: Brave New World	2025	YES (Watched)	Action: Added to Watched List; preference for established superhero sequels is increased.
+8. The Creator	2023	YES (Watched)	Action: Added to Watched List; preference for original Sci-Fi concepts is increased.
+8. Wicked Part One	2024	NO (Removed)	Action: Removed from future tracking; preference for musical fantasy adaptations is lowered.
+9. Furiosa: A Mad Max Saga	2024	YES (Watched)	Action: Added to Watched List; Strong preference for dystopian action/prequels is increased.
+9. Indiana Jones and the Dial of Destiny	2023	YES (Watched)	Action: Added to Watched List; preference for legacy adventure sequels is increased.
+9. Mission: Impossible – The Final Reckoning	2025	YES (Watched)	Action: Added to Watched List; preference for major action spy franchises is increased.

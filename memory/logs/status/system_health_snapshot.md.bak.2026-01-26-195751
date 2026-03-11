@@ -1,0 +1,213 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import os
+import re
+from dataclasses import dataclass
+from pathlib import Path
+from typing import List, Optional, Tuple
+
+VERSION = "2026-01-26-snapshot-v1-overall-line"
+
+
+@dataclass
+class Row:
+    subsystem: str
+    status: str
+    notes: str
+
+
+def now_utc_iso() -> str:
+    return dt.datetime.now(dt.timezone.utc).isoformat(timespec="microseconds")
+
+
+def ensure_dir(p: Path) -> None:
+    p.mkdir(parents=True, exist_ok=True)
+
+
+def safe_read_text(p: Path, max_bytes: int = 800_000) -> str:
+    try:
+        b = p.read_bytes()
+    except Exception:
+        return ""
+    if len(b) > max_bytes:
+        b = b[-max_bytes:]
+    return b.decode("utf-8", errors="replace")
+
+
+def repo_root_from_this_file() -> Path:
+    return Path(__file__).resolve().parents[1]
+
+
+def resolve_memory_root(repo: Path) -> Path:
+    env = os.environ.get("MEMORY_ROOT", "").strip()
+    candidates: List[Path] = []
+    if env:
+        candidates.append(Path(env).expanduser())
+    candidates.append(Path("/home/rafa1215/memory"))
+    candidates.append(repo / "memory")
+    for c in candidates:
+        c = c.resolve()
+        if c.exists() and c.is_dir():
+            return c
+    return candidates[0].resolve()
+
+
+def parse_markdown_table_rows(text: str) -> List[Row]:
+    """
+    Parses rows of the form:
+    | Subsystem | Status | Notes |
+    |---|---|---|
+    | absorb_runner | ok | ran clean |
+    """
+    rows: List[Row] = []
+    for ln in text.splitlines():
+        ln = ln.strip()
+        if not ln.startswith("|") or ln.count("|") < 6:
+            continue
+        parts = [p.strip() for p in ln.strip("|").split("|")]
+        if len(parts) < 3:
+            continue
+        if parts[0].lower() in ("subsystem", "---"):
+            continue
+        subsystem, status, notes = parts[0], parts[1], parts[2]
+        if subsystem and status:
+            rows.append(Row(subsystem=subsystem, status=status, notes=notes))
+    return rows
+
+
+def normalize_status(s: str) -> str:
+    s = (s or "").strip().lower()
+    if s in ("ok", "green", "pass", "passed", "clean"):
+        return "OK"
+    if s in ("warn", "warning", "yellow", "degraded"):
+        return "WARN"
+    if s in ("error", "fail", "failed", "red", "down", "critical"):
+        return "ERROR"
+    if s in ("unknown", "n/a", "na", "-"):
+        return "UNKNOWN"
+    # heuristic catch
+    if re.search(r"\b(fail|failed|error|critical|down)\b", s, flags=re.IGNORECASE):
+        return "ERROR"
+    if re.search(r"\b(warn|warning|yellow)\b", s, flags=re.IGNORECASE):
+        return "WARN"
+    if re.search(r"\bok\b", s, flags=re.IGNORECASE):
+        return "OK"
+    return "UNKNOWN"
+
+
+def infer_overall(rows: List[Row]) -> str:
+    if not rows:
+        return "UNKNOWN"
+    norm = [normalize_status(r.status) for r in rows]
+    if any(x == "ERROR" for x in norm):
+        return "ERROR"
+    if any(x in ("WARN", "UNKNOWN") for x in norm):
+        return "WARN"
+    return "OK"
+
+
+def first_issue(rows: List[Row]) -> str:
+    for r in rows:
+        st = normalize_status(r.status)
+        if st in ("ERROR", "WARN", "UNKNOWN"):
+            note = r.notes.strip()
+            if note:
+                return f"{r.subsystem}: {st} ({note})"
+            return f"{r.subsystem}: {st}"
+    return ""
+
+
+def scan_status_dir(status_dir: Path) -> List[Row]:
+    """
+    Fallback if no input snapshot is provided:
+    Scan mem/logs/status for '*status*.md' files and infer a rough status.
+    """
+    rows: List[Row] = []
+    if not status_dir.exists():
+        return rows
+
+    md_files = sorted([p for p in status_dir.glob("*.md") if p.is_file()])
+    for p in md_files:
+        name = p.stem
+        if "status" not in name.lower() and "snapshot" not in name.lower():
+            continue
+        txt = safe_read_text(p)
+
+        # Try to infer a status token
+        up = txt.upper()
+        if any(k in up for k in ("ERROR", "FAILED", "FAIL", "CRITICAL", " DOWN", "DOWN:")):
+            st = "ERROR"
+        elif any(k in up for k in ("WARN", "WARNING", "YELLOW")):
+            st = "WARN"
+        elif any(k in up for k in ("STATUS: OK", "OVERALL: OK", "OVERALL OK", "ALL OK", "ALL GREEN")):
+            st = "OK"
+        else:
+            # If file exists but we can't tell, call it UNKNOWN rather than OK
+            st = "UNKNOWN"
+
+        rows.append(Row(subsystem=name, status=st, notes=f"from {p.name}"))
+    return rows
+
+
+def format_snapshot(generated: str, dry_run: bool, rows: List[Row]) -> str:
+    overall = infer_overall(rows)
+    issue = first_issue(rows)
+    issue_line = f"- First issue: {issue}\n" if issue else ""
+
+    lines = []
+    lines.append("# System Health Snapshot")
+    lines.append(f"- Generated: {generated}")
+    lines.append(f"- Dry run: {'true' if dry_run else 'false'}")
+    lines.append(f"- Overall status: {overall}")
+    if issue_line:
+        lines.append(issue_line.rstrip("\n"))
+
+    lines.append("| Subsystem | Status | Notes |")
+    lines.append("|---|---|---|")
+    for r in rows:
+        lines.append(f"| {r.subsystem} | {r.status} | {r.notes} |")
+    lines.append("")
+    lines.append(f"<!-- generator: {Path(__file__).name} v{VERSION} -->")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Generate system_health_snapshot.md with an explicit Overall status line.")
+    ap.add_argument("--in", dest="in_path", default="", help="Optional existing snapshot to normalize/upgrade.")
+    ap.add_argument("--out", dest="out_path", default="", help="Output path (default: $MEMORY_ROOT/logs/status/system_health_snapshot.md).")
+    ap.add_argument("--dry-run", action="store_true", help="Do not write output; print to stdout.")
+    args = ap.parse_args()
+
+    repo = repo_root_from_this_file()
+    mem = resolve_memory_root(repo)
+
+    out_path = Path(args.out_path).expanduser() if args.out_path else (mem / "logs/status/system_health_snapshot.md")
+    in_path = Path(args.in_path).expanduser() if args.in_path else out_path
+
+    rows: List[Row] = []
+    if in_path.exists():
+        txt = safe_read_text(in_path)
+        rows = parse_markdown_table_rows(txt)
+
+    if not rows:
+        rows = scan_status_dir(mem / "logs/status")
+
+    generated = now_utc_iso()
+    doc = format_snapshot(generated=generated, dry_run=args.dry_run, rows=rows)
+
+    if args.dry_run:
+        print(doc)
+        return 0
+
+    ensure_dir(out_path.parent)
+    out_path.write_text(doc, encoding="utf-8")
+    print(f"Wrote: {out_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
