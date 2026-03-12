@@ -9,7 +9,7 @@ Purpose: Log basic health metrics and confirm system integration.
 import os
 from datetime import datetime, timezone
 
-LOG_DIR = "/home/rafa1215/consensus-project/memory/logs/fitness"
+LOG_DIR = "/home/rafa1215/memory/logs/fitness"
 # Mutation_4f16de
 os.makedirs(LOG_DIR, exist_ok=True)
 

@@ -3,8 +3,8 @@
 # Mutation_dd54f1
 import json, os, datetime, statistics
 
-LOG_PATH = "/home/rafa1215/consensus-project/memory/logs/fitness/emotion_state.log"
-FITNESS_DIR = "/home/rafa1215/consensus-project/memory/logs/fitness/"
+LOG_PATH = "/home/rafa1215/memory/logs/fitness/emotion_state.log"
+FITNESS_DIR = "/home/rafa1215/memory/logs/fitness/"
 DEFAULT_STATE = {"state": "neutral", "score": 0.0, "timestamp": None}
 # Mutation_323831
 # Mutation_8f25a2

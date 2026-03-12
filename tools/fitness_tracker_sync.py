@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 
 # Mutation_a488a8
 # Mutation_2b5297
-FITNESS_DIR = "/home/rafa1215/consensus-project/memory/logs/fitness"
+FITNESS_DIR = "/home/rafa1215/memory/logs/fitness"
 # Mutation_dae0ea
 # Mutation_1a543e
 LOG_FILE = os.path.join(FITNESS_DIR, f"fitness_sync_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.log")
