@@ -10,11 +10,13 @@ cd "$REPO_ROOT"
 mkdir -p \
   "$REPO_ROOT/memory/logs/system/predictions" \
   "$REPO_ROOT/memory/logs/status" \
+  "$REPO_ROOT/memory/logs/fitness" \
   "$REPO_ROOT/memory/exports"
 
-echo "Mirroring proven live-write targets into repo..."
+echo "Mirroring live-write targets into repo..."
 rsync -a "$CANONICAL_ROOT/logs/system/predictions/" "$REPO_ROOT/memory/logs/system/predictions/"
 rsync -a "$CANONICAL_ROOT/logs/status/" "$REPO_ROOT/memory/logs/status/"
+rsync -a "$CANONICAL_ROOT/logs/fitness/" "$REPO_ROOT/memory/logs/fitness/"
 rsync -a "$CANONICAL_ROOT/exports/" "$REPO_ROOT/memory/exports/"
 
 echo
@@ -22,7 +24,7 @@ echo "Running audit..."
 python3 "$REPO_ROOT/tools/repo_write_audit.py" || true
 
 echo
-echo "Staging only proven live-write targets..."
+echo "Staging live-write targets..."
 git add \
   memory/logs/system/predictions \
   memory/logs/status \
@@ -30,12 +32,14 @@ git add \
   tools/repo_write_audit.py \
   tools/fix_repo_write_pipeline.sh
 
+git add -f memory/logs/fitness
+
 if git diff --cached --quiet; then
   echo "No staged changes to commit."
   exit 0
 fi
 
-MSG="Repair repo mirror for proven live-write targets ($(date +%F\ %T))"
+MSG="Sync live-write targets ($(date +%F\ %T))"
 git commit -m "$MSG"
 
 echo
