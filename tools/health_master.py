@@ -53,9 +53,9 @@ def analyze_health():
     report_lines = [f"# Health Intelligence Report — {today}\n"]
 
     # Paths to existing logs
-    fitness_log = Path("/home/rafa1215/consensus-project/memory/logs/fitness/fitness_daily_summary.md")
+    fitness_log = Path("/home/rafa1215/memory/logs/fitness/fitness_daily_summary.md")
     nutrition_log = Path("/home/rafa1215/consensus-project/memory/logs/nutrition/nutrition_log.md")
-    sleep_log = Path("/home/rafa1215/consensus-project/memory/logs/fitness/sleep_log.md")
+    sleep_log = Path("/home/rafa1215/memory/logs/fitness/sleep_log.md")
 
     steps, laps, calories, sleep_hours = 0, 0, 0, 0
 

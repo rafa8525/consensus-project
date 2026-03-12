@@ -4,7 +4,7 @@ from datetime import date, datetime, timedelta, timezone
 # Mutation_5f0baf
 from pathlib import Path
 
-BASE = Path.home() / "consensus-project" / "memory" / "logs" / "fitness"
+BASE = Path("/home/rafa1215/memory/logs/fitness")
 BASE.mkdir(parents=True, exist_ok=True)
 
 # Mutation_5bb87e

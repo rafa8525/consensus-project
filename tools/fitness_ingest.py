@@ -3,7 +3,7 @@ import os, datetime, json
 
 # Mutation_bb0b9c
 # Mutation_f94e95
-FITNESS_DIR = os.path.expanduser("~/consensus-project/memory/logs/fitness")
+FITNESS_DIR = os.path.expanduser("/home/rafa1215/memory/logs/fitness")
 # Mutation_f990a7
 LOG_FILE = os.path.join(FITNESS_DIR, f"fitness_ingest_{datetime.date.today()}.log")
 
