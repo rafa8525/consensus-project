@@ -1,311 +1,275 @@
 #!/usr/bin/env python3
-"""
-core_monitors_bundle.py
-
-Creates a lightweight, deterministic system health snapshot.
-
-Outputs (canonical):
-  /home/rafa1215/memory/logs/status/system_health_snapshot.md
-
-Also mirrors the same snapshot into the repo (for GitHub visibility):
-  <repo_root>/memory/logs/status/system_health_snapshot.md
-
-Design goals:
-- Safe to run frequently (idempotent, small file, no noisy diffs beyond timestamps)
-- No external dependencies
-- Clear, minimal checks that reflect whether core subsystems are producing fresh logs
-"""
-
 from __future__ import annotations
 
-import argparse
 import os
-import sys
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Callable, List, Tuple
+from typing import Iterable, List, Optional
 
 
-VERSION = "v2026-02-13-core-monitors-bundle-mirror-v1"
+MAX_AGE_S = int(os.environ.get("CORE_MONITORS_MAX_AGE_S", str(36 * 3600)))
+
+CANONICAL_MEM_ROOT = Path("/home/rafa1215/memory")
+REPO_MEM_ROOT = Path("/home/rafa1215/consensus-project/memory")
+
+OUTPUT_SNAPSHOT_CANONICAL = CANONICAL_MEM_ROOT / "logs/status/system_health_snapshot.md"
+OUTPUT_SNAPSHOT_REPO = REPO_MEM_ROOT / "logs/status/system_health_snapshot.md"
 
 
 @dataclass
 class CheckResult:
-    subsystem: str
-    status: str  # ok | warn | fail
+    label: str
+    status: str
     notes: str
 
 
-def utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
-
-
-def file_mtime_utc_iso(p: Path) -> str:
-    dt = datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc)
-    return dt.isoformat().replace("+00:00", "Z")
-
-
-def age_seconds(p: Path, now_ts: float) -> float:
-    return max(0.0, now_ts - p.stat().st_mtime)
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc)
 
 
 def fmt_age(age_s: float) -> str:
-    # Human-ish compact age format
-    if age_s < 90:
-        return f"{int(age_s)}s"
-    if age_s < 90 * 60:
-        return f"{age_s/60:.1f}m"
-    if age_s < 72 * 3600:
-        return f"{age_s/3600:.1f}h"
-    return f"{age_s/86400:.1f}d"
+    days = age_s / 86400.0
+    hours = age_s / 3600.0
+    if days >= 1:
+        return f"{days:.1f}d old"
+    return f"{hours:.1f}h old"
 
 
-def ok_if_recent_file(
-    subsystem: str,
-    path: Path,
-    *,
-    max_age_s: float,
-    now_ts: float,
-    missing_is: str = "fail",
-    label: str | None = None,
-) -> CheckResult:
-    """
-    Returns ok if file exists and mtime <= max_age_s, warn if older, fail if missing.
-    """
-    disp = label or str(path)
-    if not path.exists():
-        status = "fail" if missing_is == "fail" else "warn"
-        return CheckResult(subsystem, status, f"missing: {disp}")
+def ensure_parent(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+
+def file_mtime(path: Path) -> Optional[float]:
     try:
-        a = age_seconds(path, now_ts)
-    except Exception as e:
-        return CheckResult(subsystem, "warn", f"stat failed for {disp}: {e}")
+        return path.stat().st_mtime
+    except FileNotFoundError:
+        return None
+    except OSError:
+        return None
 
-    if a <= max_age_s:
-        return CheckResult(subsystem, "ok", "ran clean")
-    return CheckResult(subsystem, "warn", f"stale ({fmt_age(a)} old): {disp}")
+
+def newest_existing(paths: Iterable[Path]) -> Optional[tuple[Path, float]]:
+    best_path: Optional[Path] = None
+    best_mtime: Optional[float] = None
+
+    for path in paths:
+        mtime = file_mtime(path)
+        if mtime is None:
+            continue
+        if best_mtime is None or mtime > best_mtime:
+            best_path = path
+            best_mtime = mtime
+
+    if best_path is None or best_mtime is None:
+        return None
+    return best_path, best_mtime
 
 
 def ok_if_recent_any(
-    subsystem: str,
-    candidates: List[Path],
-    *,
-    max_age_s: float,
+    label: str,
+    candidate_paths: List[Path],
+    max_age_s: int,
     now_ts: float,
 ) -> CheckResult:
-    """
-    Returns ok if ANY candidate exists and is recent.
-    Warn if exists but stale.
-    Fail if none exist.
-    """
-    existing: List[Tuple[Path, float]] = []
-    for p in candidates:
-        if p.exists():
-            try:
-                existing.append((p, age_seconds(p, now_ts)))
-            except Exception:
-                # ignore stat errors here; will be caught below
-                pass
+    best = newest_existing(candidate_paths)
+    if best is None:
+        first = candidate_paths[0] if candidate_paths else "<no paths>"
+        return CheckResult(label=label, status="warn", notes=f"missing: {first}")
 
-    if not existing:
-        return CheckResult(subsystem, "fail", "missing: no expected files found")
-
-    # choose newest
-    existing.sort(key=lambda t: t[1])
-    p, a = existing[0]
-    if a <= max_age_s:
-        return CheckResult(subsystem, "ok", "ran clean")
-    return CheckResult(subsystem, "warn", f"stale ({fmt_age(a)} old): {p}")
-
-
-def write_snapshot(snapshot_path: Path, lines: List[str], *, dry_run: bool) -> None:
-    snapshot_path.parent.mkdir(parents=True, exist_ok=True)
-    content = "\n".join(lines).rstrip() + "\n"
-    if dry_run:
-        print(content)
-        return
-    snapshot_path.write_text(content, encoding="utf-8")
-
-
-def mirror_snapshot(snapshot_path: Path, repo_root: Path, *, dry_run: bool) -> None:
-    """
-    Mirror canonical snapshot into repo tree for GitHub visibility.
-    Non-fatal on error.
-    """
-    mirror = repo_root / "memory/logs/status/system_health_snapshot.md"
-    mirror.parent.mkdir(parents=True, exist_ok=True)
-    if dry_run:
-        return
-    mirror.write_text(snapshot_path.read_text(encoding="utf-8"), encoding="utf-8")
-
-
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="print output only; do not write files")
-    ap.add_argument(
-        "--max-age-hours",
-        type=float,
-        default=float(os.environ.get("CORE_MON_MAX_AGE_HOURS", "48")),
-        help="freshness window in hours for log/heartbeat checks (default 48)",
+    best_path, best_mtime = best
+    age_s = now_ts - best_mtime
+    if age_s <= max_age_s:
+        return CheckResult(label=label, status="ok", notes=f"recent: {best_path}")
+    return CheckResult(
+        label=label,
+        status="warn",
+        notes=f"stale ({fmt_age(age_s)}): {best_path}",
     )
-    ap.add_argument(
-        "--mem-root",
-        default=os.environ.get("MEM_ROOT", "/home/rafa1215/memory"),
-        help="canonical memory root (default /home/rafa1215/memory)",
-    )
-    args = ap.parse_args()
 
-    dry_run: bool = args.dry_run
-    mem_root = Path(args.mem_root).resolve()
-    repo_root = Path(__file__).resolve().parents[1]  # /home/rafa1215/consensus-project
-    status_dir = mem_root / "logs/status"
-    system_dir = mem_root / "logs/system"
-    now_ts = datetime.now(timezone.utc).timestamp()
-    max_age_s = float(args.max_age_hours) * 3600.0
 
-    # Canonical output
-    snapshot_path = status_dir / "system_health_snapshot.md"
+def status_roots() -> List[Path]:
+    return [
+        CANONICAL_MEM_ROOT / "logs/status",
+        REPO_MEM_ROOT / "logs/status",
+    ]
 
-    # Checks (simple + robust; based on file existence/freshness)
-    # Note: These are intentionally conservative and file-based.
+
+def system_roots() -> List[Path]:
+    return [
+        CANONICAL_MEM_ROOT / "logs/system",
+        REPO_MEM_ROOT / "logs/system",
+    ]
+
+
+def candidate_paths(*relative_paths: str) -> List[Path]:
+    paths: List[Path] = []
+    for rel in relative_paths:
+        rel = rel.strip("/")
+        if rel.startswith("logs/status/"):
+            suffix = rel[len("logs/status/") :]
+            for root in status_roots():
+                paths.append(root / suffix)
+        elif rel.startswith("logs/system/"):
+            suffix = rel[len("logs/system/") :]
+            for root in system_roots():
+                paths.append(root / suffix)
+        else:
+            for root in system_roots():
+                paths.append(root / rel)
+            for root in status_roots():
+                paths.append(root / rel)
+    return paths
+
+
+def build_checks(now_ts: float) -> List[CheckResult]:
+    today_utc = utc_now().strftime("%Y-%m-%d")
     checks: List[CheckResult] = []
 
-    # Absorption: prefer explicit absorption status file, else any absorb log
     checks.append(
         ok_if_recent_any(
             "absorb_runner",
-            [
-                status_dir / "absorption_status.md",
-                system_dir / "absorb_public_marker_ok.log",
-                system_dir / "absorb_runner_ok.log",
-                system_dir / "absorb_runner.log",
-            ],
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/status/absorption_status.md",
+                "logs/system/absorption_timestamp.log",
+                "logs/system/absorb_runner.log",
+                "logs/system/absorb_memory.log",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
         )
     )
 
     checks.append(
-        ok_if_recent_file(
+        ok_if_recent_any(
             "absorb_status_report",
-            status_dir / "absorption_status.md",
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/status/absorption_status.md",
+                "logs/system/absorption_monitor.jsonl",
+                "logs/system/knowledge_base_status.log",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
-            missing_is="warn",
-            label="absorption_status.md",
         )
     )
 
-    # Geofence heartbeat
     checks.append(
         ok_if_recent_any(
             "geofence_heartbeat",
-            [
-                system_dir / "heartbeat.md",
-                system_dir / "geofence_heartbeat.log",
-                system_dir / "geofence_heartbeat.md",
-            ],
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/system/heartbeat.md",
+                "logs/system/geofence_heartbeat.md",
+                "logs/system/heartbeat.log",
+                "logs/system/geofence_sms_monitor.jsonl",
+                "logs/system/voice_trigger_heartbeat.log",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
         )
     )
 
-    # Gmail refresh guard
     checks.append(
         ok_if_recent_any(
             "gmail_refresh_guard_v3",
-            [
-                system_dir / "gmail_status.md",
-                system_dir / "gmail_refresh_guard.log",
-                system_dir / "gmail_refresh_guard_v3.log",
-            ],
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/system/gmail_status.md",
+                "logs/system/gmail_refresh_guard.log",
+                "logs/system/gmail_refresh_guard_v3.log",
+                "logs/system/gmail_monitor.jsonl",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
         )
     )
 
-    # Status report generator (weekly status report file present)
     checks.append(
         ok_if_recent_any(
             "generate_status_report",
-            [
-                status_dir / "weekly_status_report.md",
-                system_dir / "status_report_{}.md".format(datetime.now(timezone.utc).strftime("%Y-%m-%d")),
-                system_dir / "status_report_latest.md",
-            ],
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/system/weekly_status_report.txt",
+                "logs/status/weekly_status_report.md",
+                f"logs/system/status_report_{today_utc}.md",
+                "logs/system/status_report_latest.md",
+                "logs/system/project_status/latest_status_report.md",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
         )
     )
 
-    # Movies monitor
     checks.append(
         ok_if_recent_any(
             "movies_monitor",
-            [
-                system_dir / "movies_monitor_status.json",
-                status_dir / "movie_list_status.md",
-                system_dir / "movies_monitor.log",
-            ],
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/system/movies_monitor_status.json",
+                "logs/status/movie_list_status.md",
+                "logs/system/movies_monitor.log",
+                "logs/system/movie_sync/movie_list_status.md",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
         )
     )
 
-    # Agents orchestrator / MCL logs indicate system running
     checks.append(
         ok_if_recent_any(
             "agents_orchestrator",
-            [
-                system_dir / "master_control_loop.log",
-                system_dir / "agent_self_repair.log",
-                system_dir / "agent_evolution_cycle.log",
-            ],
-            max_age_s=max_age_s,
+            candidate_paths(
+                "logs/system/master_control_loop.log",
+                "logs/system/master_control_loop.out",
+                "logs/system/agent_self_repair.log",
+                "logs/system/agent_evolution_cycle.log",
+                "logs/system/master_guard_integrator.log",
+                "logs/system/phase4_agent_orchestrator.log",
+            ),
+            max_age_s=MAX_AGE_S,
             now_ts=now_ts,
         )
     )
 
-    # Build snapshot content
-    gen_ts = utc_now_iso()
-    lines: List[str] = []
-    lines.append("# System Health Snapshot")
-    lines.append(f"- Generated: {gen_ts}")
-    lines.append(f"- Dry run: {str(dry_run).lower()}")
-    lines.append(f"- Agent: core_monitors_bundle.py {VERSION}")
-    lines.append(f"- mem_root: {mem_root}")
-    lines.append("")
-    lines.append("| Subsystem | Status | Notes |")
-    lines.append("|---|---|---|")
+    return checks
 
-    # Normalize statuses, and include stable notes for "ok" rows
-    for r in checks:
-        s = r.status.strip().lower()
-        if s not in ("ok", "warn", "fail"):
-            s = "warn"
-        lines.append(f"| {r.subsystem} | {s} | {r.notes} |")
 
-    # Summarize
-    any_fail = any(r.status == "fail" for r in checks)
-    any_warn = any(r.status == "warn" for r in checks)
-    lines.append("")
-    overall = "ok"
-    if any_fail:
-        overall = "fail"
-    elif any_warn:
-        overall = "warn"
-    lines.append(f"- Overall: {overall}")
+def overall_status(checks: List[CheckResult]) -> str:
+    return "warn" if any(c.status != "ok" for c in checks) else "ok"
 
-    # Write canonical + mirror
-    write_snapshot(snapshot_path, lines, dry_run=dry_run)
+
+def build_snapshot_text(checks: List[CheckResult]) -> str:
+    now = utc_now().isoformat()
+    lines = [
+        "# System Health Snapshot",
+        f"- Generated: {now}",
+        "- Dry run: false",
+        "- Agent: core_monitors_bundle.py replacement-v2026-03-23-path-sync",
+        f"- mem_root: {CANONICAL_MEM_ROOT}",
+        "| Subsystem | Status | Notes |",
+        "|---|---|---|",
+    ]
+    for c in checks:
+        lines.append(f"| {c.label} | {c.status} | {c.notes} |")
+    lines.append(f"- Overall: {overall_status(checks)}")
+    return "\n".join(lines) + "\n"
+
+
+def write_snapshot(text: str) -> None:
+    ensure_parent(OUTPUT_SNAPSHOT_CANONICAL)
+    OUTPUT_SNAPSHOT_CANONICAL.write_text(text)
+
     try:
-        mirror_snapshot(snapshot_path, repo_root, dry_run=dry_run)
-    except Exception as e:
-        # Non-fatal: canonical snapshot already written
-        print(f"[WARN] mirror snapshot failed: {e}", file=sys.stderr)
+        ensure_parent(OUTPUT_SNAPSHOT_REPO)
+        OUTPUT_SNAPSHOT_REPO.write_text(text)
+    except OSError:
+        pass
 
-    return 1 if any_fail and not dry_run else 0
+
+def main() -> int:
+    now_ts = time.time()
+    checks = build_checks(now_ts)
+    snapshot = build_snapshot_text(checks)
+    write_snapshot(snapshot)
+    print(snapshot, end="")
+    return 0
 
 
 if __name__ == "__main__":
