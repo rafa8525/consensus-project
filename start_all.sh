@@ -15,7 +15,7 @@ pkill -f voice_guard.py 2>/dev/null || true
 pkill -f github_sync.py 2>/dev/null || true
 
 # Start Master Control Loop
-nohup python3 "$PROJECT_DIR/master_control_loop.py" >>"$LOG_FILE" 2>&1 &
+nohup python3 "$PROJECT_DIR/tools/master_control_loop.py" >>"$LOG_FILE" 2>&1 &
 echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] ✅ master_control_loop.py started (pid=$!)" | tee -a "$LOG_FILE"
 
 # Start Voice Guard
