@@ -12,7 +12,7 @@ echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] 🚀 Launching Master Control Loop..." 
 pkill -f master_control_loop.py 2>/dev/null || true
 
 # Start fresh in background, detached from console
-nohup python3 "$PROJECT_DIR/master_control_loop.py" >>"$LOG_FILE" 2>&1 &
+nohup python3 "$PROJECT_DIR/tools/master_control_loop.py" >>"$LOG_FILE" 2>&1 &
 
 PID=$!
 echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] ✅ master_control_loop.py started (pid=$PID)" | tee -a "$LOG_FILE"
