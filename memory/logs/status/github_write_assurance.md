@@ -1,8 +1,8 @@
 # GitHub Write Assurance
 
-- Status: ACTION REQUIRED
-- Generated UTC: 2026-05-15T21:57:43+00:00
-- Agent: github_write_assurance.py v2026-05-15-one-time-fix
+- Status: OK
+- Generated UTC: 2026-05-15T22:01:27+00:00
+- Agent: github_write_assurance.py v2026-05-15-clean-final-proof-v3
 - Repo root: `/home/rafa1215/consensus-project`
 - Memory root: `/home/rafa1215/memory`
 - Expected branch: `v1.1-dev`
@@ -11,20 +11,21 @@
 - Push enabled: `true`
 
 ## Proof
-
-- Mirrored files copied: 332
-- Mirrored files skipped by safety rules: 2512
+- Mirrored files copied: 1053
+- Mirrored files skipped by safety rules: 25
+- Broken symlinks skipped safely: 1
+- Stale repo mirror files removed: 14208
 - Commit created: `true`
-- Commit hash: `cd9d76acbb54b86f0bd5a1a9572085687f7ec16d`
+- Commit hash: `7122c3078c107820eadfdb35a3aa8e3b59fc72a9`
+- Final proof commit hash: ``
 - Push OK: `true`
 - Remote verified: `true`
 
 ## Git status after run
-
 ```text
-clean
+pending final proof commit
 ```
 
-## Errors
-
-- mirror error for /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204: [Errno 2] No such file or directory: '/home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204'
+## Warnings
+- skipped symlink file: /home/rafa1215/memory/logs/system/absorption/last_success.json
+- skipped broken symlink: /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204
