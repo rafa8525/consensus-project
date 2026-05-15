@@ -1,8 +1,8 @@
 {
   "branch_actual": "v1.1-dev",
   "branch_expected": "v1.1-dev",
-  "commit_created": false,
-  "commit_hash": "",
+  "commit_created": true,
+  "commit_hash": "cd9d76acbb54b86f0bd5a1a9572085687f7ec16d",
   "dry_run": false,
   "errors": [],
   "generated_utc": "2026-05-15T21:57:43+00:00",
@@ -15,10 +15,10 @@
   "mirror_files_copied": 332,
   "mirror_files_skipped": 2512,
   "push_enabled": true,
-  "push_ok": false,
-  "remote_verified": false,
+  "push_ok": true,
+  "remote_verified": true,
   "repo_root": "/home/rafa1215/consensus-project",
-  "status": "unknown",
+  "status": "action_required",
   "version": "github_write_assurance.py v2026-05-15-one-time-fix",
   "warnings": []
 }

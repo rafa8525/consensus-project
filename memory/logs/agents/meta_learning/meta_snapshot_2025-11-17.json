@@ -1,8 +1,0 @@
-{
-  "timestamp": "2025-11-17T07:30:41Z",
-  "reasoning_examples": {
-    "vpn_fail->retry_trigger": 0.91,
-    "fitbit_sync_fail->reboot_task": 0.84
-  },
-  "agent_confidence_scores": {}
-}

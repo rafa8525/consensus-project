@@ -1,6 +1,0 @@
-# Finance Audit 2025-12-31
-- MISSING: Xfinity Internet (due 2025-10-01)
-- MISSING: Spotify (due 2025-10-05)
-# Finance Audit 2025-12-31
-- MISSING: Xfinity Internet (due 2025-10-01)
-- MISSING: Spotify (due 2025-10-05)
