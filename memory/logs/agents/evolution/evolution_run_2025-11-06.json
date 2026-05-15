@@ -1,8 +1,0 @@
-{
-  "timestamp": "2025-11-06T01:03:50.945434",
-  "scores": {
-    "/home/rafa1215/consensus-project/tools/brainstorm_agent.py": 0.9960920095443726,
-    "/home/rafa1215/consensus-project/tools/summary_agent.py": 0.9967921574910482
-  },
-  "winner": "/home/rafa1215/consensus-project/tools/summary_agent.py"
-}

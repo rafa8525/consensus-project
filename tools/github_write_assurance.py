@@ -1,582 +1,445 @@
 #!/usr/bin/env python3
 """
 github_write_assurance.py
+One-time durable GitHub write/mirror assurance agent for Rafael's AI Consensus System.
 
-Purpose:
-  Guarantee that important AI Consensus System files are mirrored from canonical
-  memory into the GitHub repo, committed, pushed to v1.1-dev, and logged with proof.
+Flow:
+  canonical memory (/home/rafa1215/memory)
+  -> repo mirror (/home/rafa1215/consensus-project/memory)
+  -> git add -A
+  -> commit
+  -> push origin v1.1-dev
+  -> verify remote
+  -> write committed proof files
 
-Default paths for Rafael's PythonAnywhere project:
-  Canonical memory: /home/rafa1215/memory
-  Repo root:        /home/rafa1215/consensus-project
-  Branch:           v1.1-dev
-
-Safe-by-default behavior:
-  - Mirrors canonical memory into repo/memory.
-  - Excludes secrets, env files, caches, virtualenvs, giant files, and private keys.
-  - Commits only whitelisted project paths.
-  - Writes canonical status proof and repo mirror proof.
-  - Supports --dry-run, --no-push, and --self-test.
+Safe by default:
+  - skips secrets, env files, keys, caches, databases, zips, venvs, and large files
+  - skips broken symlinks as warnings, not failures
+  - never follows symlink directories
 """
-
 from __future__ import annotations
 
 import argparse
-import fnmatch
-import hashlib
 import json
 import os
 import shutil
 import subprocess
-import sys
 import tempfile
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable, List, Optional, Sequence, Tuple
+from typing import Iterable
 
-VERSION = "github_write_assurance.py v2026-05-15-one-time-fix"
-
-DEFAULT_REPO_ROOT = Path("/home/rafa1215/consensus-project")
-DEFAULT_MEMORY_ROOT = Path("/home/rafa1215/memory")
+AGENT_VERSION = "github_write_assurance.py v2026-05-15-clean-final-proof-v3"
+DEFAULT_REPO = Path("/home/rafa1215/consensus-project")
+DEFAULT_MEMORY = Path("/home/rafa1215/memory")
 DEFAULT_BRANCH = "v1.1-dev"
+MAX_FILE_BYTES = 10 * 1024 * 1024
 
-STATUS_REL = Path("logs/status/github_write_assurance.md")
-STATUS_JSON_REL = Path("logs/status/github_write_assurance.json")
-REPO_STATUS_REL = Path("memory/logs/status/github_write_assurance.md")
-REPO_STATUS_JSON_REL = Path("memory/logs/status/github_write_assurance.json")
-
-MAX_FILE_BYTES_DEFAULT = 10 * 1024 * 1024
-
-EXCLUDE_DIR_NAMES = {
-    ".git",
-    ".hg",
-    ".svn",
-    "__pycache__",
-    ".pytest_cache",
-    ".mypy_cache",
-    ".ruff_cache",
-    "node_modules",
-    "venv",
-    ".venv",
-    "env",
-    ".envdir",
-    "site-packages",
-    "dist",
-    "build",
+SKIP_DIR_NAMES = {
+    ".git", ".hg", ".svn", "__pycache__", ".pytest_cache", ".mypy_cache",
+    ".venv", "venv", "env", "node_modules", ".cache", "cache", "tmp", "temp",
+    "backups", "backup_zips",
+}
+SKIP_SUFFIXES = {
+    ".env", ".key", ".pem", ".p12", ".pfx", ".crt", ".cer", ".sqlite",
+    ".sqlite3", ".db", ".zip", ".tar", ".gz", ".7z", ".rar", ".pyc",
+}
+SKIP_NAME_PARTS = {
+    "secret", "secrets", "credential", "credentials", "token", "tokens",
+    "private_key", "client_secret", "oauth", "password", "passwd",
+    "twilio_auth", "api_key",
 }
 
-EXCLUDE_GLOBS = [
-    ".env",
-    ".env.*",
-    "*.env",
-    "*secret*",
-    "*secrets*",
-    "*credential*",
-    "*credentials*",
-    "*token*",
-    "*apikey*",
-    "*api_key*",
-    "*private_key*",
-    "*.pem",
-    "*.key",
-    "*.p12",
-    "*.pfx",
-    "*.sqlite",
-    "*.sqlite3",
-    "*.db",
-    "*.db-wal",
-    "*.db-shm",
-    "*.pyc",
-    "*.pyo",
-    "*.zip",
-    "*.tar",
-    "*.tar.gz",
-    "*.tgz",
-    "*.7z",
-    "*.rar",
-    "*.log.tmp",
-    "tmp_*",
-]
-
-# Only these top-level repo paths are staged by default. This prevents accidental
-# commits of credentials or unrelated workspace files.
-DEFAULT_STAGE_PATHS = [
-    "agents",
-    "tools",
-    "memory",
-    "docs",
-    "public",
-    "config.yaml",
-    "requirements.txt",
-    "run_with_env.sh",
-    "start_github_sync.sh",
-]
-
 
 @dataclass
-class CommandResult:
-    command: str
-    returncode: int
-    stdout: str = ""
-    stderr: str = ""
-
-
-@dataclass
-class AssuranceReport:
-    version: str
+class Result:
+    status: str
     generated_utc: str
+    agent: str
     repo_root: str
     memory_root: str
-    branch_expected: str
-    branch_actual: str = "unknown"
-    dry_run: bool = False
-    push_enabled: bool = True
-    status: str = "unknown"
-    mirror_files_copied: int = 0
-    mirror_files_skipped: int = 0
-    mirror_errors: List[str] = field(default_factory=list)
-    git_dirty_before: str = ""
-    git_dirty_after: str = ""
+    expected_branch: str
+    actual_branch: str
+    dry_run: bool
+    push_enabled: bool
+    mirrored_files_copied: int = 0
+    mirrored_files_skipped_safety: int = 0
+    mirrored_broken_symlinks_skipped: int = 0
+    stale_repo_files_removed: int = 0
     commit_created: bool = False
     commit_hash: str = ""
+    final_proof_commit_hash: str = ""
     push_ok: bool = False
     remote_verified: bool = False
-    warnings: List[str] = field(default_factory=list)
-    errors: List[str] = field(default_factory=list)
+    git_status_after_run: str = ""
+    warnings: list[str] | None = None
+    errors: list[str] | None = None
+
+    def __post_init__(self) -> None:
+        if self.warnings is None:
+            self.warnings = []
+        if self.errors is None:
+            self.errors = []
 
 
 def utc_now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
-def run_cmd(
-    args: Sequence[str],
-    cwd: Optional[Path] = None,
-    timeout: int = 120,
-    check: bool = False,
-) -> CommandResult:
-    proc = subprocess.run(
-        list(args),
-        cwd=str(cwd) if cwd else None,
-        text=True,
-        capture_output=True,
-        timeout=timeout,
-    )
-    result = CommandResult(
-        command=" ".join(args),
-        returncode=proc.returncode,
-        stdout=(proc.stdout or "").strip(),
-        stderr=(proc.stderr or "").strip(),
-    )
-    if check and result.returncode != 0:
-        raise RuntimeError(
-            f"Command failed ({result.returncode}): {result.command}\n"
-            f"STDOUT: {result.stdout}\nSTDERR: {result.stderr}"
-        )
-    return result
+def run(cmd: list[str], cwd: Path, check: bool = False) -> subprocess.CompletedProcess[str]:
+    p = subprocess.run(cmd, cwd=str(cwd), text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if check and p.returncode != 0:
+        raise RuntimeError(f"command failed: {' '.join(cmd)}\nstdout={p.stdout}\nstderr={p.stderr}")
+    return p
 
 
-def is_git_repo(repo_root: Path) -> bool:
-    return (repo_root / ".git").exists()
+def git_output(repo: Path, args: list[str], check: bool = False) -> str:
+    p = run(["git", *args], repo, check=check)
+    return (p.stdout or p.stderr or "").strip()
 
 
-def rel_posix(path: Path, base: Path) -> str:
-    return path.relative_to(base).as_posix()
+def current_branch(repo: Path) -> str:
+    return git_output(repo, ["rev-parse", "--abbrev-ref", "HEAD"]) or "UNKNOWN"
 
 
-def lower_name(path: Path) -> str:
-    return path.name.lower()
+def git_status(repo: Path) -> str:
+    out = git_output(repo, ["status", "--short"])
+    return out if out else "clean"
 
 
-def should_exclude(rel: Path, max_file_bytes: int, src_path: Optional[Path] = None) -> bool:
-    parts_lower = [part.lower() for part in rel.parts]
-    if any(part in EXCLUDE_DIR_NAMES for part in parts_lower):
+def unsafe_path(rel: Path, src: Path) -> bool:
+    parts_lower = [p.lower() for p in rel.parts]
+    name_lower = src.name.lower()
+
+    if any(part in SKIP_DIR_NAMES for part in parts_lower[:-1]):
+        return True
+    if name_lower in {".env", ".env.local", ".env.production", ".netrc"}:
+        return True
+    if src.suffix.lower() in SKIP_SUFFIXES:
+        return True
+    if any(marker in name_lower for marker in SKIP_NAME_PARTS):
         return True
 
-    rel_s = rel.as_posix().lower()
-    name = lower_name(rel)
-    for pattern in EXCLUDE_GLOBS:
-        pattern_lower = pattern.lower()
-        if fnmatch.fnmatch(name, pattern_lower) or fnmatch.fnmatch(rel_s, pattern_lower):
+    try:
+        if src.is_file() and src.stat().st_size > MAX_FILE_BYTES:
             return True
-
-    if src_path and src_path.is_file():
-        try:
-            if src_path.stat().st_size > max_file_bytes:
-                return True
-        except OSError:
-            return True
+    except OSError:
+        return True
 
     return False
 
 
-def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
+def iter_memory_files(memory_root: Path) -> Iterable[Path]:
+    for root, dirs, files in os.walk(memory_root, topdown=True, followlinks=False):
+        root_path = Path(root)
+
+        kept_dirs = []
+        for d in dirs:
+            p = root_path / d
+            rel = p.relative_to(memory_root)
+            if p.is_symlink() or unsafe_path(rel, p):
+                continue
+            kept_dirs.append(d)
+        dirs[:] = kept_dirs
+
+        for f in files:
+            yield root_path / f
 
 
-def files_differ(src: Path, dst: Path) -> bool:
-    if not dst.exists():
-        return True
-    try:
-        if src.stat().st_size != dst.stat().st_size:
-            return True
-    except OSError:
-        return True
-    return sha256_file(src) != sha256_file(dst)
-
-
-def mirror_memory(
-    memory_root: Path,
-    repo_root: Path,
-    dry_run: bool,
-    max_file_bytes: int,
-) -> Tuple[int, int, List[str]]:
-    copied = 0
-    skipped = 0
-    errors: List[str] = []
+def mirror_memory(memory_root: Path, repo_root: Path, res: Result) -> None:
     repo_memory = repo_root / "memory"
+    repo_memory.mkdir(parents=True, exist_ok=True)
 
-    if not memory_root.exists():
-        errors.append(f"memory root missing: {memory_root}")
-        return copied, skipped, errors
-
-    for src in memory_root.rglob("*"):
+    for src in iter_memory_files(memory_root):
         try:
             rel = src.relative_to(memory_root)
-            if src.is_dir():
-                if should_exclude(rel, max_file_bytes):
-                    skipped += 1
+        except ValueError:
+            continue
+
+        if src.is_symlink():
+            if not src.exists():
+                res.mirrored_broken_symlinks_skipped += 1
+                res.warnings.append(f"skipped broken symlink: {src}")
                 continue
+            res.mirrored_files_skipped_safety += 1
+            res.warnings.append(f"skipped symlink file: {src}")
+            continue
 
-            if should_exclude(rel, max_file_bytes, src):
-                skipped += 1
-                continue
+        if unsafe_path(rel, src):
+            res.mirrored_files_skipped_safety += 1
+            continue
 
-            dst = repo_memory / rel
-            if files_differ(src, dst):
-                copied += 1
-                if not dry_run:
-                    dst.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(src, dst)
-        except Exception as exc:  # noqa: BLE001 - log and continue
-            errors.append(f"mirror error for {src}: {exc}")
+        dst = repo_memory / rel
+        try:
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            res.mirrored_files_copied += 1
+        except FileNotFoundError as e:
+            res.warnings.append(f"skipped disappearing file: {src}: {e}")
+        except Exception as e:
+            res.errors.append(f"mirror error for {src}: {e}")
 
-    return copied, skipped, errors
-
-
-def git_status_porcelain(repo_root: Path) -> str:
-    result = run_cmd(["git", "status", "--short"], cwd=repo_root, timeout=60)
-    if result.returncode != 0:
-        raise RuntimeError(result.stderr or result.stdout or "git status failed")
-    return result.stdout
-
-
-def current_branch(repo_root: Path) -> str:
-    result = run_cmd(["git", "branch", "--show-current"], cwd=repo_root, timeout=60)
-    if result.returncode != 0:
-        return "unknown"
-    return result.stdout.strip() or "detached"
-
-
-def git_head(repo_root: Path) -> str:
-    result = run_cmd(["git", "rev-parse", "HEAD"], cwd=repo_root, timeout=60)
-    if result.returncode != 0:
-        return ""
-    return result.stdout.strip()
+    for dst in list(repo_memory.rglob("*")):
+        if not dst.is_file() or dst.is_symlink():
+            continue
+        try:
+            rel = dst.relative_to(repo_memory)
+        except ValueError:
+            continue
+        if unsafe_path(rel, dst):
+            continue
+        src = memory_root / rel
+        if not src.exists():
+            try:
+                dst.unlink()
+                res.stale_repo_files_removed += 1
+            except Exception as e:
+                res.warnings.append(f"could not remove stale repo mirror file {dst}: {e}")
 
 
-def git_add_whitelist(repo_root: Path, stage_paths: Iterable[str]) -> None:
-    existing_paths = [p for p in stage_paths if (repo_root / p).exists()]
-    if not existing_paths:
-        return
-    run_cmd(["git", "add", "--"] + existing_paths, cwd=repo_root, timeout=120, check=True)
-
-
-def staged_diff_exists(repo_root: Path) -> bool:
-    result = run_cmd(["git", "diff", "--cached", "--quiet"], cwd=repo_root, timeout=60)
-    # git diff --quiet returns 1 when differences exist.
-    return result.returncode == 1
-
-
-def commit_changes(repo_root: Path, message: str) -> str:
-    run_cmd(["git", "commit", "-m", message], cwd=repo_root, timeout=180, check=True)
-    return git_head(repo_root)
-
-
-def push_branch(repo_root: Path, branch: str) -> bool:
-    result = run_cmd(["git", "push", "origin", branch], cwd=repo_root, timeout=240)
-    return result.returncode == 0
-
-
-def verify_remote_head(repo_root: Path, branch: str, expected_head: str) -> bool:
-    if not expected_head:
-        return False
-    result = run_cmd(["git", "ls-remote", "origin", f"refs/heads/{branch}"], cwd=repo_root, timeout=120)
-    if result.returncode != 0 or not result.stdout:
-        return False
-    remote_hash = result.stdout.split()[0].strip()
-    return remote_hash == expected_head
-
-
-def render_markdown(report: AssuranceReport) -> str:
-    status_icon = "OK" if report.status == "ok" else "ACTION REQUIRED"
+def render_markdown(res: Result) -> str:
     lines = [
         "# GitHub Write Assurance",
         "",
-        f"- Status: {status_icon}",
-        f"- Generated UTC: {report.generated_utc}",
-        f"- Agent: {report.version}",
-        f"- Repo root: `{report.repo_root}`",
-        f"- Memory root: `{report.memory_root}`",
-        f"- Expected branch: `{report.branch_expected}`",
-        f"- Actual branch: `{report.branch_actual}`",
-        f"- Dry run: `{str(report.dry_run).lower()}`",
-        f"- Push enabled: `{str(report.push_enabled).lower()}`",
+        f"- Status: {res.status}",
+        f"- Generated UTC: {res.generated_utc}",
+        f"- Agent: {res.agent}",
+        f"- Repo root: `{res.repo_root}`",
+        f"- Memory root: `{res.memory_root}`",
+        f"- Expected branch: `{res.expected_branch}`",
+        f"- Actual branch: `{res.actual_branch}`",
+        f"- Dry run: `{str(res.dry_run).lower()}`",
+        f"- Push enabled: `{str(res.push_enabled).lower()}`",
         "",
         "## Proof",
-        "",
-        f"- Mirrored files copied: {report.mirror_files_copied}",
-        f"- Mirrored files skipped by safety rules: {report.mirror_files_skipped}",
-        f"- Commit created: `{str(report.commit_created).lower()}`",
-        f"- Commit hash: `{report.commit_hash or 'none'}`",
-        f"- Push OK: `{str(report.push_ok).lower()}`",
-        f"- Remote verified: `{str(report.remote_verified).lower()}`",
+        f"- Mirrored files copied: {res.mirrored_files_copied}",
+        f"- Mirrored files skipped by safety rules: {res.mirrored_files_skipped_safety}",
+        f"- Broken symlinks skipped safely: {res.mirrored_broken_symlinks_skipped}",
+        f"- Stale repo mirror files removed: {res.stale_repo_files_removed}",
+        f"- Commit created: `{str(res.commit_created).lower()}`",
+        f"- Commit hash: `{res.commit_hash}`",
+        f"- Final proof commit hash: `{res.final_proof_commit_hash}`",
+        f"- Push OK: `{str(res.push_ok).lower()}`",
+        f"- Remote verified: `{str(res.remote_verified).lower()}`",
         "",
         "## Git status after run",
-        "",
         "```text",
-        report.git_dirty_after or "clean",
+        res.git_status_after_run or "unknown",
         "```",
     ]
-    if report.warnings:
-        lines += ["", "## Warnings", ""] + [f"- {w}" for w in report.warnings]
-    if report.errors or report.mirror_errors:
-        lines += ["", "## Errors", ""] + [f"- {e}" for e in report.errors + report.mirror_errors]
-    lines.append("")
-    return "\n".join(lines)
+
+    if res.warnings:
+        lines += ["", "## Warnings"]
+        lines += [f"- {w}" for w in res.warnings[:50]]
+        if len(res.warnings) > 50:
+            lines.append(f"- ... {len(res.warnings) - 50} more warnings omitted from markdown; see JSON.")
+
+    if res.errors:
+        lines += ["", "## Errors"]
+        lines += [f"- {e}" for e in res.errors]
+
+    return "\n".join(lines) + "\n"
 
 
-def write_status(report: AssuranceReport, memory_root: Path, repo_root: Path, dry_run: bool) -> None:
-    md = render_markdown(report)
-    js = json.dumps(asdict(report), indent=2, sort_keys=True) + "\n"
+def write_proof_files(repo_root: Path, memory_root: Path, res: Result) -> None:
+    status_dir = memory_root / "logs" / "status"
+    repo_status_dir = repo_root / "memory" / "logs" / "status"
+    status_dir.mkdir(parents=True, exist_ok=True)
+    repo_status_dir.mkdir(parents=True, exist_ok=True)
 
-    targets = [
-        (memory_root / STATUS_REL, md),
-        (memory_root / STATUS_JSON_REL, js),
-        (repo_root / REPO_STATUS_REL, md),
-        (repo_root / REPO_STATUS_JSON_REL, js),
-    ]
-    if dry_run:
-        return
-    for path, content in targets:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content, encoding="utf-8")
+    md = render_markdown(res)
+    js = json.dumps(asdict(res), indent=2, sort_keys=True) + "\n"
+
+    for base in (status_dir, repo_status_dir):
+        (base / "github_write_assurance.md").write_text(md, encoding="utf-8")
+        (base / "github_write_assurance.json").write_text(js, encoding="utf-8")
 
 
-def run_assurance(
-    repo_root: Path,
-    memory_root: Path,
-    branch: str,
-    dry_run: bool,
-    push_enabled: bool,
-    max_file_bytes: int,
-    stage_paths: Sequence[str],
-) -> AssuranceReport:
-    report = AssuranceReport(
-        version=VERSION,
+def commit_if_needed(repo: Path, message: str) -> tuple[bool, str]:
+    run(["git", "add", "-A"], repo)
+
+    if git_status(repo) == "clean":
+        return False, git_output(repo, ["rev-parse", "HEAD"])
+
+    p = run(["git", "commit", "-m", message], repo)
+    if p.returncode != 0:
+        raise RuntimeError(f"git commit failed\nstdout={p.stdout}\nstderr={p.stderr}")
+
+    return True, git_output(repo, ["rev-parse", "HEAD"], check=True)
+
+
+def push_and_verify(repo: Path, branch: str, push_enabled: bool, dry_run: bool) -> tuple[bool, bool, str]:
+    head = git_output(repo, ["rev-parse", "HEAD"], check=True)
+
+    if dry_run or not push_enabled:
+        return False, False, head
+
+    p = run(["git", "push", "origin", f"HEAD:{branch}"], repo)
+    if p.returncode != 0:
+        raise RuntimeError(f"git push failed\nstdout={p.stdout}\nstderr={p.stderr}")
+
+    remote = git_output(repo, ["ls-remote", "origin", f"refs/heads/{branch}"], check=True)
+    verified = bool(remote.split()) and remote.split()[0] == head
+    return True, verified, head
+
+
+def run_agent(repo_root: Path, memory_root: Path, branch: str, dry_run: bool, push_enabled: bool) -> Result:
+    repo_root = repo_root.resolve()
+    memory_root = memory_root.resolve()
+
+    res = Result(
+        status="ACTION REQUIRED",
         generated_utc=utc_now(),
+        agent=AGENT_VERSION,
         repo_root=str(repo_root),
         memory_root=str(memory_root),
-        branch_expected=branch,
+        expected_branch=branch,
+        actual_branch="UNKNOWN",
         dry_run=dry_run,
         push_enabled=push_enabled,
     )
 
+    if not repo_root.exists():
+        res.errors.append(f"repo root missing: {repo_root}")
+        return res
+
+    if not memory_root.exists():
+        res.errors.append(f"memory root missing: {memory_root}")
+        return res
+
     try:
-        if not repo_root.exists():
-            report.errors.append(f"repo root missing: {repo_root}")
-            report.status = "action_required"
-            write_status(report, memory_root, repo_root, dry_run)
-            return report
-        if not is_git_repo(repo_root):
-            report.errors.append(f"not a git repo: {repo_root}")
-            report.status = "action_required"
-            write_status(report, memory_root, repo_root, dry_run)
-            return report
+        res.actual_branch = current_branch(repo_root)
 
-        report.branch_actual = current_branch(repo_root)
-        if report.branch_actual != branch:
-            report.errors.append(f"wrong branch: expected {branch}, got {report.branch_actual}")
+        if res.actual_branch != branch:
+            res.errors.append(f"wrong branch: expected {branch}, got {res.actual_branch}")
 
-        report.git_dirty_before = git_status_porcelain(repo_root)
-
-        copied, skipped, mirror_errors = mirror_memory(
-            memory_root=memory_root,
-            repo_root=repo_root,
-            dry_run=dry_run,
-            max_file_bytes=max_file_bytes,
-        )
-        report.mirror_files_copied = copied
-        report.mirror_files_skipped = skipped
-        report.mirror_errors = mirror_errors
+        mirror_memory(memory_root, repo_root, res)
 
         if dry_run:
-            report.git_dirty_after = git_status_porcelain(repo_root)
-            report.status = "ok" if not report.errors and not report.mirror_errors else "action_required"
-            return report
+            res.git_status_after_run = git_status(repo_root)
+            res.status = "OK" if not res.errors else "ACTION REQUIRED"
+            write_proof_files(repo_root, memory_root, res)
+            return res
 
-        # Write preliminary status before staging so the proof file itself is committed.
-        write_status(report, memory_root, repo_root, dry_run=False)
+        created, commit_hash = commit_if_needed(repo_root, "GitHub write assurance sync")
+        res.commit_created = created
+        res.commit_hash = commit_hash
 
-        git_add_whitelist(repo_root, stage_paths)
+        pushed, verified, _ = push_and_verify(repo_root, branch, push_enabled, dry_run)
+        res.push_ok = pushed
+        res.remote_verified = verified
 
-        if staged_diff_exists(repo_root):
-            message = f"GitHub write assurance sync {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}"
-            report.commit_hash = commit_changes(repo_root, message)
-            report.commit_created = True
-        else:
-            report.commit_hash = git_head(repo_root)
-            report.commit_created = False
+        res.git_status_after_run = "pending final proof commit"
+        res.status = "OK" if (not res.errors and res.push_ok and res.remote_verified) else "ACTION REQUIRED"
+        write_proof_files(repo_root, memory_root, res)
 
-        if push_enabled:
-            if report.branch_actual == branch:
-                report.push_ok = push_branch(repo_root, branch)
-                if report.push_ok:
-                    report.remote_verified = verify_remote_head(repo_root, branch, git_head(repo_root))
-                else:
-                    report.errors.append("git push failed")
-            else:
-                report.errors.append("push skipped because branch mismatch")
-        else:
-            report.warnings.append("push disabled by --no-push")
+        proof_created, proof_hash = commit_if_needed(repo_root, "Update GitHub write assurance proof")
+        if proof_created:
+            res.final_proof_commit_hash = proof_hash
+            pushed2, verified2, _ = push_and_verify(repo_root, branch, push_enabled, dry_run)
+            res.push_ok = res.push_ok and pushed2
+            res.remote_verified = verified2
 
-        report.git_dirty_after = git_status_porcelain(repo_root)
+        res.git_status_after_run = git_status(repo_root)
+        res.status = "OK" if (
+            not res.errors
+            and res.push_ok
+            and res.remote_verified
+            and res.git_status_after_run == "clean"
+        ) else "ACTION REQUIRED"
 
-        if report.errors or report.mirror_errors:
-            report.status = "action_required"
-        elif push_enabled and not report.remote_verified:
-            report.status = "action_required"
-            report.errors.append("remote verification failed or unavailable")
-        else:
-            report.status = "ok"
+        print(render_markdown(res), end="")
+        return res
 
-        # Final status contains final push/verify result. Commit it on next run; it is also
-        # available immediately in canonical memory and repo working tree.
-        write_status(report, memory_root, repo_root, dry_run=False)
-        return report
-
-    except Exception as exc:  # noqa: BLE001 - last-resort proof capture
-        report.errors.append(str(exc))
-        report.status = "action_required"
+    except Exception as e:
+        res.errors.append(str(e))
+        res.git_status_after_run = git_status(repo_root) if repo_root.exists() else "unknown"
+        res.status = "ACTION REQUIRED"
         try:
-            report.git_dirty_after = git_status_porcelain(repo_root)
+            write_proof_files(repo_root, memory_root, res)
         except Exception:
             pass
-        try:
-            write_status(report, memory_root, repo_root, dry_run=dry_run)
-        except Exception:
-            pass
-        return report
+        print(render_markdown(res), end="")
+        return res
 
 
-def run_self_test() -> int:
-    with tempfile.TemporaryDirectory(prefix="gwa_selftest_") as tmp:
-        base = Path(tmp)
+def self_test() -> None:
+    with tempfile.TemporaryDirectory(prefix="gwa_selftest_") as td:
+        base = Path(td)
         memory = base / "memory"
         repo = base / "repo"
         remote = base / "remote.git"
-        memory.mkdir(parents=True)
-        repo.mkdir(parents=True)
 
-        run_cmd(["git", "init", "--bare", str(remote)], check=True)
-        run_cmd(["git", "init"], cwd=repo, check=True)
-        run_cmd(["git", "config", "user.email", "selftest@example.invalid"], cwd=repo, check=True)
-        run_cmd(["git", "config", "user.name", "GWA Self Test"], cwd=repo, check=True)
-        run_cmd(["git", "checkout", "-b", "v1.1-dev"], cwd=repo, check=True)
-        run_cmd(["git", "remote", "add", "origin", str(remote)], cwd=repo, check=True)
-
-        (repo / "memory").mkdir()
-        (repo / "tools").mkdir()
-        (repo / "tools" / ".keep").write_text("keep\n", encoding="utf-8")
-        run_cmd(["git", "add", "tools/.keep"], cwd=repo, check=True)
-        run_cmd(["git", "commit", "-m", "initial"], cwd=repo, check=True)
-        run_cmd(["git", "push", "-u", "origin", "v1.1-dev"], cwd=repo, check=True)
+        memory.mkdir()
+        repo.mkdir()
 
         (memory / "logs" / "status").mkdir(parents=True)
-        (memory / "logs" / "status" / "sample_status.md").write_text("sample ok\n", encoding="utf-8")
-        (memory / ".env").write_text("SECRET=do_not_copy\n", encoding="utf-8")
-        (memory / "logs" / "status" / "api_token.txt").write_text("do_not_copy\n", encoding="utf-8")
+        (memory / "logs" / "status" / "ok.md").write_text("ok\n", encoding="utf-8")
+        (memory / ".env").write_text("SECRET=1\n", encoding="utf-8")
+        (memory / "token_file.txt").write_text("secret\n", encoding="utf-8")
 
-        report = run_assurance(
-            repo_root=repo,
-            memory_root=memory,
-            branch="v1.1-dev",
-            dry_run=False,
-            push_enabled=True,
-            max_file_bytes=MAX_FILE_BYTES_DEFAULT,
-            stage_paths=DEFAULT_STAGE_PATHS,
-        )
+        broken_dir = memory / "quarantine_symlinks"
+        broken_dir.mkdir()
 
-        checks = [
-            report.status == "ok",
-            (repo / "memory" / "logs" / "status" / "sample_status.md").exists(),
-            not (repo / "memory" / ".env").exists(),
-            not (repo / "memory" / "logs" / "status" / "api_token.txt").exists(),
-            (memory / STATUS_REL).exists(),
-            (repo / REPO_STATUS_REL).exists(),
-            report.push_ok,
-            report.remote_verified,
-        ]
-        if all(checks):
-            print("SELF-TEST OK")
-            print(render_markdown(report))
-            return 0
+        try:
+            (broken_dir / "broken.md").symlink_to(memory / "missing_target.md")
+        except OSError:
+            pass
 
-        print("SELF-TEST FAILED")
-        print(render_markdown(report))
-        return 1
+        run(["git", "init", "--bare", str(remote)], base, check=True)
+        run(["git", "init", "-b", "v1.1-dev"], repo, check=True)
+        run(["git", "config", "user.email", "selftest@example.com"], repo, check=True)
+        run(["git", "config", "user.name", "GWA Self Test"], repo, check=True)
+        run(["git", "remote", "add", "origin", str(remote)], repo, check=True)
 
+        (repo / "README.md").write_text("self test\n", encoding="utf-8")
+        run(["git", "add", "README.md"], repo, check=True)
+        run(["git", "commit", "-m", "init"], repo, check=True)
+        run(["git", "push", "-u", "origin", "v1.1-dev"], repo, check=True)
 
-def parse_args(argv: Sequence[str]) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Mirror, commit, push, and prove GitHub write health.")
-    parser.add_argument("--repo-root", default=str(DEFAULT_REPO_ROOT))
-    parser.add_argument("--memory-root", default=str(DEFAULT_MEMORY_ROOT))
-    parser.add_argument("--branch", default=DEFAULT_BRANCH)
-    parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--no-push", action="store_true", help="Commit locally but do not push.")
-    parser.add_argument("--max-file-mb", type=int, default=10)
-    parser.add_argument("--stage-path", action="append", default=None, help="Repo path to stage; may be repeated.")
-    parser.add_argument("--self-test", action="store_true")
-    return parser.parse_args(argv)
+        res = run_agent(repo, memory, "v1.1-dev", dry_run=False, push_enabled=True)
+
+        assert res.status == "OK", render_markdown(res)
+        assert res.push_ok, render_markdown(res)
+        assert res.remote_verified, render_markdown(res)
+        assert res.git_status_after_run == "clean", render_markdown(res)
+        assert (repo / "memory" / "logs" / "status" / "ok.md").exists()
+        assert not (repo / "memory" / ".env").exists()
+        assert not res.errors, render_markdown(res)
+
+        print("SELF-TEST OK")
 
 
-def main(argv: Sequence[str]) -> int:
-    args = parse_args(argv)
-    if args.self_test:
-        return run_self_test()
-
-    repo_root = Path(args.repo_root).expanduser().resolve()
-    memory_root = Path(args.memory_root).expanduser().resolve()
-    max_file_bytes = max(1, args.max_file_mb) * 1024 * 1024
-    stage_paths = args.stage_path if args.stage_path else DEFAULT_STAGE_PATHS
-
-    report = run_assurance(
-        repo_root=repo_root,
-        memory_root=memory_root,
-        branch=args.branch,
-        dry_run=args.dry_run,
-        push_enabled=not args.no_push,
-        max_file_bytes=max_file_bytes,
-        stage_paths=stage_paths,
+def parse_args() -> argparse.Namespace:
+    ap = argparse.ArgumentParser(
+        description="Mirror canonical memory to repo, commit, push, and verify GitHub write assurance."
     )
-    print(render_markdown(report))
-    return 0 if report.status == "ok" else 2
+    ap.add_argument("--repo", default=str(DEFAULT_REPO))
+    ap.add_argument("--memory", default=str(DEFAULT_MEMORY))
+    ap.add_argument("--branch", default=DEFAULT_BRANCH)
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--self-test", action="store_true")
+    return ap.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+
+    if args.self_test:
+        self_test()
+        return 0
+
+    res = run_agent(
+        Path(args.repo),
+        Path(args.memory),
+        args.branch,
+        args.dry_run,
+        not args.no_push,
+    )
+    return 0 if res.status == "OK" else 1
 
 
 if __name__ == "__main__":
-    raise SystemExit(main(sys.argv[1:]))
+    raise SystemExit(main())
