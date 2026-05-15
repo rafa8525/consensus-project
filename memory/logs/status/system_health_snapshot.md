@@ -1,17 +1,15 @@
 # System Health Snapshot
-- Generated: 2026-03-03T19:21:12.839304+00:00
+- Generated: 2026-05-15T21:43:10.102539+00:00
 - Dry run: false
-- Agent: core_monitors_bundle.py v2026-02-13-core-monitors-bundle-mirror-v1
+- Agent: core_monitors_bundle.py replacement-v2026-03-23-path-sync
 - mem_root: /home/rafa1215/memory
-
 | Subsystem | Status | Notes |
 |---|---|---|
-| absorb_runner | ok | ran clean |
-| absorb_status_report | ok | ran clean |
-| geofence_heartbeat | ok | ran clean |
-| gmail_refresh_guard_v3 | ok | ran clean |
-| generate_status_report | ok | ran clean |
-| movies_monitor | warn | stale (7.1d old): /home/rafa1215/memory/logs/system/movies_monitor_status.json |
-| agents_orchestrator | ok | ran clean |
-
-- Overall: warn
+| absorb_runner | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |
+| absorb_status_report | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/knowledge_base_status.log |
+| geofence_heartbeat | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/heartbeat.md |
+| gmail_refresh_guard_v3 | ok | recent: /home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log |
+| generate_status_report | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/weekly_status_report.txt |
+| movies_monitor | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/movies_monitor_status.json |
+| agents_orchestrator | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/master_control_loop.log |
+- Overall: ok

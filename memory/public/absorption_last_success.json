@@ -1,6 +1,13 @@
 {
-  "git_commit": "abdfd546c",
-  "source": "post-absorption hook",
+  "last_success_local": "2026-05-15T11:10:35.477483-07:00",
+  "last_success_utc": "2026-05-15T18:10:35.477372+00:00",
+  "local_tz": "America/Los_Angeles",
   "status": "ok",
-  "ts_utc": "2026-02-06T19:29:25Z"
+  "export_size_bytes": 4291,
+  "export_mtime_utc": 1778868623.4727902,
+  "export_mtime_iso_utc": "2026-05-15T18:10:23Z",
+  "source": "absorption public marker",
+  "git_commit": "c304a1c92",
+  "marker_write_iso_utc": "2026-05-15T18:10:35Z",
+  "centralized_knowledge_base_size_bytes": 14330322
 }

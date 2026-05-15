@@ -484,5 +484,115 @@ def main() -> int:
     return 0
 
 
+# >>> STREAMING_AVAILABILITY_DIRECT_GATE_V2 >>>
+import atexit as _r_streaming_atexit
+from pathlib import Path as _RStreamingPath
+from datetime import datetime as _RStreamingDatetime
+import re as _r_streaming_re
+
+def _rafael_streaming_availability_direct_gate_v2():
+    mem_dir = _RStreamingPath("/home/rafa1215/memory/logs/system/predictions")
+    repo_dir = _RStreamingPath("/home/rafa1215/consensus-project/memory/logs/system/predictions")
+    today = _RStreamingDatetime.now().strftime("%Y-%m-%d")
+    paths = [mem_dir / f"prediction_feed_{today}.md", repo_dir / f"prediction_feed_{today}.md"]
+
+    allowed_platforms = [
+        "Netflix", "Max", "Hulu", "Prime Video", "Paramount+", "Apple TV+",
+        "Disney+", "Tubi", "Roku Channel", "Plex", "Hoopla", "Fawesome",
+        "Freevee", "Fandango at Home Free"
+    ]
+
+    suppressed_titles = [
+        "Constantine", "Underworld", "The Sandman", "Invincible",
+        "Jupiter's Legacy", "The Dark Knight", "The Umbrella Academy",
+        "Godzilla Minus One", "The Witch", "The Rip", "War Machine",
+        "Troll 2", "Primitive War", "Blade", "Ghost Rider", "Spawn",
+        "Predator: Badlands", "The Green Knight", "Sinners",
+        "Dracula: A Love Tale"
+    ]
+
+    def has_streaming_proof(line):
+        low = line.lower()
+        has_platform = any(p.lower() in low for p in allowed_platforms)
+        has_source = ("source:" in low) or ("verified:" in low) or ("justwatch" in low)
+        has_date = ("checked:" in low) or ("date checked:" in low)
+        rent_buy_only = ("rent" in low or "buy" in low) and not any(p.lower() in low for p in allowed_platforms)
+        return has_platform and has_source and has_date and not rent_buy_only
+
+    def has_suppressed_title(line):
+        low = line.lower()
+        return any(t.lower() in low for t in suppressed_titles)
+
+    for path in paths:
+        if not path.exists():
+            continue
+
+        original = path.read_text(errors="replace")
+        lines = original.splitlines()
+        out = []
+        changed = False
+        i = 0
+
+        while i < len(lines):
+            line = lines[i]
+            low = line.lower()
+
+            starts_movie_reco_block = (
+                "here are 3 picks for tonight" in low
+                or "recommended movies" in low
+                or "movie recommendation" in low
+                or "no 'maybe/candidate' titles found" in low
+            )
+
+            if starts_movie_reco_block:
+                block = [line]
+                j = i + 1
+                while j < len(lines):
+                    nxt = lines[j]
+                    if j > i + 1 and (
+                        _r_streaming_re.match(r"^\d+\.\s+\[[A-Z]+\]", nxt)
+                        or nxt.startswith("## ")
+                    ):
+                        break
+                    block.append(nxt)
+                    j += 1
+
+                movie_lines = [
+                    b for b in block
+                    if b.strip().startswith("-") and ("imdb" in b.lower() or "—" in b)
+                ]
+
+                missing_streaming_proof = bool(movie_lines) and not all(has_streaming_proof(b) for b in movie_lines)
+                contains_suppressed_title = any(has_suppressed_title(b) for b in movie_lines)
+
+                if missing_streaming_proof or contains_suppressed_title:
+                    out.append("3. [LOW] Streaming recommendation gate blocked unverified movie picks.")
+                    out.append("   - Reason: Movie suggestions must include verified current U.S. streaming platform, verification source, and date checked. Rent/buy-only, ambiguous, already-watched, or suppressed titles are rejected.")
+                    changed = True
+                    i = j
+                    continue
+
+            out.append(line)
+            i += 1
+
+        if changed:
+            path.write_text("\n".join(out).rstrip() + "\n")
+            audit = mem_dir / "streaming_gate_audit.log"
+            audit.parent.mkdir(parents=True, exist_ok=True)
+            with audit.open("a") as f:
+                f.write(f"{_RStreamingDatetime.now().isoformat()} blocked_unverified_or_suppressed_movie_recommendations file={path}\n")
+
+            mirror_audit = repo_dir / "streaming_gate_audit.log"
+            mirror_audit.parent.mkdir(parents=True, exist_ok=True)
+            try:
+                mirror_audit.write_text(audit.read_text())
+            except Exception:
+                pass
+
+_r_streaming_atexit.register(_rafael_streaming_availability_direct_gate_v2)
+# <<< STREAMING_AVAILABILITY_DIRECT_GATE_V2 <<<
+
+
 if __name__ == "__main__":
     sys.exit(main())
+
