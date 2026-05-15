@@ -1,1 +1,8 @@
-Next Audit Date: 2026-01-01
+# Security Audit Schedule (UTC)
+# Cadence: 1st of every month @ 17:00 UTC
+# Owner: Security/Privacy Manager agent
+# Outputs: ~/memory/logs/security/audit/YYYY-MM/summary.md
+
+NEXT_RUN_UTC=2025-12-01T17:00:00Z
+SCOPE=VPN, credentials hygiene, permissions, backups, watchdog health
+NOTES=Rotate tokens if flagged; verify Twilio .env; confirm Gmail secrets path

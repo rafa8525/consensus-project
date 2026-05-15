@@ -1,0 +1,211 @@
+cd /home/rafa1215/consensus-project
+
+python3 - <<'PY'
+from pathlib import Path
+from datetime import datetime
+import shutil
+
+agent = Path("agents/prediction_feed_agent.py")
+if not agent.exists():
+    raise SystemExit("FAIL: agents/prediction_feed_agent.py not found")
+
+stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+backup = agent.with_suffix(agent.suffix + f".bak_streaming_gate_{stamp}")
+shutil.copy2(agent, backup)
+
+text = agent.read_text()
+
+marker = "# >>> STREAMING_AVAILABILITY_HARD_GATE_V1 >>>"
+if marker in text:
+    print("OK: streaming availability hard gate already installed")
+    print(f"Backup still created: {backup}")
+    raise SystemExit(0)
+
+gate = r'''
+# >>> STREAMING_AVAILABILITY_HARD_GATE_V1 >>>
+# Fail-safe guard: remove movie recommendations unless each pick has verified
+# current U.S. streaming proof. This prevents rent/buy-only or ambiguous titles
+# from appearing in Rafael's prediction feed.
+import atexit as _streaming_gate_atexit
+import re as _streaming_gate_re
+from pathlib import Path as _StreamingGatePath
+from datetime import datetime as _StreamingGateDatetime
+
+def _streaming_gate_sanitize_prediction_feed():
+    try:
+        today = _StreamingGateDatetime.now().strftime("%Y-%m-%d")
+        candidates = [
+            _StreamingGatePath("/home/rafa1215/memory/logs/system/predictions") / f"prediction_feed_{today}.md",
+            _StreamingGatePath("/home/rafa1215/consensus-project/memory/logs/system/predictions") / f"prediction_feed_{today}.md",
+        ]
+
+        allowed_platforms = [
+            "Netflix", "Max", "Hulu", "Prime Video", "Paramount+", "Apple TV+",
+            "Disney+", "Tubi", "Roku Channel", "Plex", "Hoopla", "Fawesome",
+            "Freevee", "Fandango at Home Free"
+        ]
+
+        def has_required_streaming_proof(line):
+            low = line.lower()
+            has_platform = any(p.lower() in low for p in allowed_platforms)
+            has_source = ("source:" in low) or ("verified:" in low) or ("justwatch" in low)
+            has_checked_date = ("checked:" in low) or ("date checked:" in low)
+            rent_buy_only = ("rent" in low or "buy" in low) and not any(
+                p.lower() in low for p in ["tubi", "roku", "plex", "hoopla", "fawesome", "freevee", "netflix", "max", "hulu", "prime video", "paramount", "apple tv+", "disney+"]
+            )
+            return has_platform and has_source and has_checked_date and not rent_buy_only
+
+        for path in candidates:
+            if not path.exists():
+                continue
+
+            original = path.read_text()
+            lines = original.splitlines()
+            out = []
+            changed = False
+            i = 0
+
+            while i < len(lines):
+                line = lines[i]
+                low = line.lower()
+
+                is_reco_header = (
+                    "here are 3 picks for tonight" in low
+                    or "movie recommendation" in low
+                    or "recommended movies" in low
+                )
+
+                if is_reco_header:
+                    block = [line]
+                    j = i + 1
+                    while j < len(lines):
+                        nxt = lines[j]
+                        nxt_low = nxt.lower()
+
+                        # Stop at next numbered item or next section.
+                        if j > i + 1 and (
+                            _streaming_gate_re.match(r"^\d+\.\s+\[[A-Z]+\]", nxt)
+                            or nxt.startswith("## ")
+                        ):
+                            break
+
+                        block.append(nxt)
+                        j += 1
+
+                    movie_lines = [
+                        b for b in block
+                        if "imdb" in b.lower() and b.strip().startswith("-")
+                    ]
+
+                    if movie_lines and not all(has_required_streaming_proof(b) for b in movie_lines):
+                        out.append("3. [LOW] Streaming recommendation gate blocked unverified movie picks.")
+                        out.append("   - Reason: Movie suggestions must include verified current U.S. streaming platform, verification source, and date checked. Rent/buy-only or ambiguous titles are rejected.")
+                        changed = True
+                        i = j
+                        continue
+
+                out.append(line)
+                i += 1
+
+            if changed:
+                path.write_text("\n".join(out).rstrip() + "\n")
+
+                audit = _StreamingGatePath("/home/rafa1215/memory/logs/system/predictions/streaming_gate_audit.log")
+                audit.parent.mkdir(parents=True, exist_ok=True)
+                with audit.open("a") as f:
+                    f.write(
+                        f"{_StreamingGateDatetime.now().isoformat()} "
+                        f"blocked_unverified_movie_recommendations file={path}\n"
+                    )
+
+                mirror_audit = _StreamingGatePath("/home/rafa1215/consensus-project/memory/logs/system/predictions/streaming_gate_audit.log")
+                mirror_audit.parent.mkdir(parents=True, exist_ok=True)
+                try:
+                    mirror_audit.write_text(audit.read_text())
+                except Exception:
+                    pass
+
+    except Exception as exc:
+        try:
+            audit = _StreamingGatePath("/home/rafa1215/memory/logs/system/predictions/streaming_gate_audit.log")
+            audit.parent.mkdir(parents=True, exist_ok=True)
+            with audit.open("a") as f:
+                f.write(f"{_StreamingGateDatetime.now().isoformat()} streaming_gate_error={exc!r}\n")
+        except Exception:
+            pass
+
+_streaming_gate_atexit.register(_streaming_gate_sanitize_prediction_feed)
+# <<< STREAMING_AVAILABILITY_HARD_GATE_V1 <<<
+'''
+
+# Insert after shebang if present, otherwise at top.
+if text.startswith("#!"):
+    first_newline = text.find("\n")
+    patched = text[:first_newline + 1] + gate + "\n" + text[first_newline + 1:]
+else:
+    patched = gate + "\n" + text
+
+agent.write_text(patched)
+
+rule_dir = Path("/home/rafa1215/memory/config/agent_training")
+rule_dir.mkdir(parents=True, exist_ok=True)
+rule_file = rule_dir / "streaming_availability_hard_gate.md"
+rule_file.write_text("""# Streaming Availability Hard Gate
+
+Effective: 2026-05-15
+
+Rule:
+Prediction feed movie recommendations must not appear unless every recommended title includes verified current U.S. streaming availability.
+
+Allowed availability:
+- Netflix
+- Max
+- Hulu
+- Prime Video
+- Paramount+
+- Apple TV+
+- Disney+
+- Tubi
+- Roku Channel
+- Plex
+- Hoopla
+- Fawesome
+- Freevee / Fandango at Home Free
+
+Rejected:
+- Rent only
+- Buy only
+- DVD/Blu-ray only
+- Unknown availability
+- Ambiguous title match
+- Any movie line without platform, verification source, and date checked
+
+Required proof fields per movie:
+- Platform
+- Source / verification reference
+- Date checked
+
+Failure behavior:
+If proof is missing, suppress the recommendations and replace them with a clear gate-blocked message.
+""")
+
+repo_rule_dir = Path("/home/rafa1215/consensus-project/memory/config/agent_training")
+repo_rule_dir.mkdir(parents=True, exist_ok=True)
+(repo_rule_dir / "streaming_availability_hard_gate.md").write_text(rule_file.read_text())
+
+print(f"OK: patched {agent}")
+print(f"OK: backup saved at {backup}")
+print(f"OK: wrote rule file {rule_file}")
+PY
+
+python3 -m py_compile agents/prediction_feed_agent.py
+
+python3 agents/prediction_feed_agent.py
+
+echo
+echo "===== MEDIA & FUN PROOF ====="
+awk '/^## Media & Fun/{flag=1} /^## Family\/Events/{flag=0} flag{print}' /home/rafa1215/memory/logs/system/predictions/prediction_feed_$(date +%F).md
+
+echo
+echo "===== STREAMING GATE AUDIT ====="
+tail -20 /home/rafa1215/memory/logs/system/predictions/streaming_gate_audit.log

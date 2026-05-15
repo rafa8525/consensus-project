@@ -3,6 +3,9 @@ set -euo pipefail
 
 # 1) Run the prediction feed
 python3 /home/rafa1215/consensus-project/agents/prediction_feed_agent.py
+echo "[gate] Running prediction feed training gate..."
+python3 /home/rafa1215/consensus-project/tools/gates/prediction_feed_training_gate.py
+echo "[gate] Prediction feed training gate passed."
 
 # 2) Append Quick Actions block (canonical + mirror) if missing
 python3 /home/rafa1215/consensus-project/tools/append_prediction_quick_actions.py

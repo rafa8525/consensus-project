@@ -1,0 +1,22 @@
+{
+  "credentials_json": "/home/rafa1215/.secrets/google/service_account.json",
+  "output_path": "/home/rafa1215/memory/exports/movie_list_export.txt",
+  "repo_mirror_path": "/home/rafa1215/consensus-project/memory/exports/movie_list_export.txt",
+  "sources": [
+    {
+      "name": "2023",
+      "spreadsheet_id": "10tAxeIQQyZCLX4qeMRQjwrmgLBb7aDbBysQYCY21sz4",
+      "gid": 2079610893
+    },
+    {
+      "name": "2024",
+      "spreadsheet_id": "1KdARYk6fE12wVR9pz-sCt-7hqnMB2H2Nt6QAnY81DF0",
+      "gid": 1306174521
+    },
+    {
+      "name": "2025",
+      "spreadsheet_id": "1QNEKyNj7PBAUYngukX6EC8VbWZtWdysjr3XNPakeL-o",
+      "gid": 804938180
+    }
+  ]
+}

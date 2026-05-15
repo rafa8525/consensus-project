@@ -216,6 +216,7 @@ def build_checks(now_ts: float) -> List[CheckResult]:
         ok_if_recent_any(
             "agents_orchestrator",
             candidate_paths(
+                "logs/status/agent_orchestrator_status.md",
                 "logs/system/master_control_loop.log",
                 "logs/system/master_control_loop.out",
                 "logs/system/agent_self_repair.log",

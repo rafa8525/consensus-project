@@ -1,0 +1,83 @@
+{
+  "generated_local": "2026-04-03T15:10:17.179329-07:00",
+  "generated_utc": "2026-04-03T22:10:17.179329+00:00",
+  "last_full_run": "2026-04-03T15:10:17.179329-07:00",
+  "absorption": "UNKNOWN",
+  "sms_system": "UNKNOWN",
+  "prediction_feed": "OK",
+  "fitness_log": "OK",
+  "finance_log": "OK",
+  "geofence": "UNKNOWN",
+  "vpn_status": "OK",
+  "prevention_memory": "OK",
+  "decision_layer": "WARN",
+  "optimization_layer": "OK",
+  "scorecard_layer": "OK",
+  "system_health_snapshot": "WARN",
+  "overall_status": "WARN",
+  "details": {
+    "system_health_snapshot": {
+      "name": "system_health_snapshot",
+      "status": "WARN",
+      "detail": "fresh but warning state (0.0h old)",
+      "age_hours": 6.377527777777778e-05,
+      "source_path": "/home/rafa1215/memory/logs/status/system_health_snapshot.md"
+    },
+    "prediction_feed": {
+      "name": "prediction_feed",
+      "status": "OK",
+      "detail": "today's feed fresh (4.1h old)",
+      "age_hours": 4.080568331944445,
+      "source_path": "/home/rafa1215/memory/logs/system/predictions/prediction_feed_2026-04-03.md"
+    },
+    "fitness_log": {
+      "name": "fitness_log",
+      "status": "OK",
+      "detail": "today's fitness log present",
+      "age_hours": 0.055115688333333336,
+      "source_path": "/home/rafa1215/memory/logs/fitness/daily_2026-04-03.md"
+    },
+    "finance_log": {
+      "name": "finance_log",
+      "status": "OK",
+      "detail": "recent (1.0 days old)",
+      "age_hours": 24.41884410138889,
+      "source_path": "/home/rafa1215/memory/logs/finance/2026-04-02_finance_log.md"
+    },
+    "vpn_status": {
+      "name": "vpn_status",
+      "status": "OK",
+      "detail": "vpn status indicates on",
+      "age_hours": 24.416596296111113,
+      "source_path": "/home/rafa1215/memory/logs/system/vpn_status.md"
+    },
+    "prevention_memory": {
+      "name": "prevention_memory",
+      "status": "OK",
+      "detail": "prevention index present",
+      "age_hours": 24.413888485277777,
+      "source_path": "/home/rafa1215/memory/logs/prevention/prevention_index.md"
+    },
+    "decision_layer": {
+      "name": "decision_layer",
+      "status": "WARN",
+      "detail": "today's decision WARN (0.0h old)",
+      "age_hours": 3.1552777777777776e-05,
+      "source_path": "/home/rafa1215/memory/logs/decisions/2026-04-03_decision.json"
+    },
+    "optimization_layer": {
+      "name": "optimization_layer",
+      "status": "OK",
+      "detail": "today's optimization present (3 suggestions)",
+      "age_hours": 0.02486635861111111,
+      "source_path": "/home/rafa1215/memory/logs/optimization/2026-04-03_optimization.json"
+    },
+    "scorecard_layer": {
+      "name": "scorecard_layer",
+      "status": "OK",
+      "detail": "today's scorecard present (grade=C, pct=74.0%)",
+      "age_hours": 0.024834135833333333,
+      "source_path": "/home/rafa1215/memory/logs/scorecards/2026-04-03_weekly_scorecard.json"
+    }
+  }
+}

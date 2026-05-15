@@ -1,5 +1,5 @@
 # GitHub Coverage Report (Whitelist)
-Generated: 2025-12-31 07:08:16 UTC
+Generated: 2026-01-01 07:09:20 UTC
 
 Dirs: tools, agents, core, services, scripts
 Total .py: **299** | Entry-like: **220**
@@ -107,7 +107,7 @@ On schedule: **165** | In registry: **165**
 | `tools/core_sanity_suite.py` | YES | YES | YES |
 | `tools/corrective_action_executor.py` | YES | YES | YES |
 | `tools/coverage_refresh.py` | YES | YES | YES |
-| `tools/coverage_refresh_mutated_9020.py` | YES | no | no |
+| `tools/coverage_refresh_mutated_6450.py` | YES | no | no |
 | `tools/cross_agent_fitness.py` | no | no | no |
 | `tools/daily_voice_reminder.py` | no | no | no |
 | `tools/decision_support.py` | no | no | no |
@@ -328,7 +328,7 @@ On schedule: **165** | In registry: **165**
 - tools/agent_summary_orchestrator.py
 - tools/auto_doc_agent.py
 - tools/core_monitors_bundle.py
-- tools/coverage_refresh_mutated_9020.py
+- tools/coverage_refresh_mutated_6450.py
 - tools/fitness_daily_agent.py
 - tools/fitness_daily_summary.py
 - tools/fitness_status_reporter.py

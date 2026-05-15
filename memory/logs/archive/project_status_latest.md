@@ -1,17 +1,43 @@
-# Project Status Report - Week 2026-W01
-- Generated: 2025-12-31T14:19:35.835918-08:00
-- Coverage: 2025-12-31 to 2025-12-31
-- Days analyzed: 1
+# Project Status Report (Template v2 — evidence required)
 
-## Summary
-- Days OK: 1
-- Days DEGRADED: 0
+## Project / Subsystem
+- Name:
+- Report date (PT):
+- Reporter (agent/person):
 
-## Daily Breakdown
-- 2025-12-31: Overall status = **OK**
+## Current status
+- Overall status: **OK / WARN / FAIL**
+- Last verified (PT):
+- Definition of Done (DoD) met? **Yes/No** (if No, list gaps)
+
+## What changed since last report
+- Change 1:
+- Change 2:
+
+## Evidence (required)
+Provide links/paths to proof artifacts:
+- Evidence folder: `memory/logs/evidence/<subsystem>/<YYYY-MM-DD>/`
+- Key files:
+  - `...`
+  - `...`
+
+## Metrics (pick what applies)
+- Success rate (last 7 days):
+- Failures (count + top causes):
+- Mean time to recovery (MTTR):
+- Alert volume (count):
+
+## Risks / issues
+- Issue:
+  - Impact:
+  - Owner:
+  - Mitigation:
+  - ETA:
+
+## Next actions (1–5)
+1.
+2.
+3.
 
 ## Notes
-- All analyzed days were OK. System appears stable for this period.
-
-## Next Steps (suggested)
-- Maintain current configuration and continue monitoring.
+- Anything unusual, including “almost failures” or near misses.
