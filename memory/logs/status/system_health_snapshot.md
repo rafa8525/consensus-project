@@ -1,5 +1,5 @@
 # System Health Snapshot
-- Generated: 2026-05-15T22:43:13.567999+00:00
+- Generated: 2026-05-15T23:43:11.794978+00:00
 - Dry run: false
 - Agent: core_monitors_bundle.py replacement-v2026-03-23-path-sync
 - mem_root: /home/rafa1215/memory
