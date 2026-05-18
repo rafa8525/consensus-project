@@ -1,5 +1,5 @@
 # Recommendation Suggestions – 2026-05-18
-Generated: 2026-05-18T13:43:14.908305+00:00
+Generated: 2026-05-18T14:43:11.722165+00:00
 Agent: prediction_feed_agent.py v2026-01-28-wow-v4-2-reco-fallback
 
 These are **fallback recommendations** because your movie export has no 'Maybe/Candidate' entries.
