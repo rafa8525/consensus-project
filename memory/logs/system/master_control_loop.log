@@ -110568,44 +110568,44 @@ TypeError: run() missing 1 required positional argument: 'script'
 [2026-03-03 19:42:55] ---- Agent Evolution/Repair Cycle Complete ----
 [2026-03-03 19:42:55] OK: All subsystems executed
 [2026-03-03 19:42:55] ==== Master Control Loop Cycle Complete ====
-[2026-05-22 22:02:18] HEARTBEAT: restarting next cycle
-[2026-05-22 22:02:18] ==== Master Control Loop Cycle Start ====
-[2026-05-22 22:02:18] ---- Guard Cycle Started ----
-[2026-05-22 22:02:19] OK: Executed /home/rafa1215/consensus-project/tools/log_repair_guard.py successfully
-[2026-05-22 22:02:19] FAIL: gmail_refresh_guard_v3 returned error code 2
-[2026-05-22 22:02:19] REPAIR: Invoking self-repair sequence for gmail_refresh_guard_v3 ...
-[2026-05-22 22:02:19] OK: Executed /home/rafa1215/consensus-project/tools/calendar_sync_guard_v3.py successfully
-[2026-05-22 22:02:20] OK: Executed /home/rafa1215/consensus-project/tools/master_guard_integrator.py successfully
-[2026-05-22 22:02:20] ---- Guard Cycle Complete ----
-[2026-05-22 22:02:20] ---- Core Cycle Started ----
-[2026-05-22 22:02:21] OK: Executed /home/rafa1215/consensus-project/tools/vpn_auto_detect_activate.py successfully
-[2026-05-22 22:02:21] OK: Executed /home/rafa1215/consensus-project/tools/weekly_status_report.py successfully
-[2026-05-22 22:02:21] OK: Executed /home/rafa1215/consensus-project/tools/progress_evaluation_runner.py successfully
-[2026-05-22 22:02:21] ---- Core Cycle Complete ----
-[2026-05-22 22:02:21] ---- Fitness Cycle Started ----
-[2026-05-22 22:02:21] OK: Executed /home/rafa1215/consensus-project/tools/fitness_tracking_verifier.py successfully
-[2026-05-22 22:02:21] FAIL: Error running health_master: run() missing 1 required positional argument: 'script'
-[2026-05-22 22:02:21] REPAIR: Invoking self-repair sequence for health_master ...
+[2026-05-22 23:02:37] HEARTBEAT: restarting next cycle
+[2026-05-22 23:02:37] ==== Master Control Loop Cycle Start ====
+[2026-05-22 23:02:37] ---- Guard Cycle Started ----
+[2026-05-22 23:02:37] OK: Executed /home/rafa1215/consensus-project/tools/log_repair_guard.py successfully
+[2026-05-22 23:02:37] FAIL: gmail_refresh_guard_v3 returned error code 2
+[2026-05-22 23:02:37] REPAIR: Invoking self-repair sequence for gmail_refresh_guard_v3 ...
+[2026-05-22 23:02:38] OK: Executed /home/rafa1215/consensus-project/tools/calendar_sync_guard_v3.py successfully
+[2026-05-22 23:02:39] OK: Executed /home/rafa1215/consensus-project/tools/master_guard_integrator.py successfully
+[2026-05-22 23:02:39] ---- Guard Cycle Complete ----
+[2026-05-22 23:02:39] ---- Core Cycle Started ----
+[2026-05-22 23:02:39] OK: Executed /home/rafa1215/consensus-project/tools/vpn_auto_detect_activate.py successfully
+[2026-05-22 23:02:39] OK: Executed /home/rafa1215/consensus-project/tools/weekly_status_report.py successfully
+[2026-05-22 23:02:39] OK: Executed /home/rafa1215/consensus-project/tools/progress_evaluation_runner.py successfully
+[2026-05-22 23:02:39] ---- Core Cycle Complete ----
+[2026-05-22 23:02:39] ---- Fitness Cycle Started ----
+[2026-05-22 23:02:39] OK: Executed /home/rafa1215/consensus-project/tools/fitness_tracking_verifier.py successfully
+[2026-05-22 23:02:39] FAIL: Error running health_master: run() missing 1 required positional argument: 'script'
+[2026-05-22 23:02:39] REPAIR: Invoking self-repair sequence for health_master ...
 Traceback (most recent call last):
   File "/home/rafa1215/consensus-project/tools/master_control_loop.py", line 54, in run_module
     if os.path.isfile(script_path):
 TypeError: run() missing 1 required positional argument: 'script'
-[2026-05-22 22:02:21] OK: Executed /home/rafa1215/consensus-project/tools/backup_fitness.py successfully
-[2026-05-22 22:02:21] ---- Fitness Cycle Complete ----
-[2026-05-22 22:02:21] ---- Knowledge/Reports Cycle Started ----
-[2026-05-22 22:02:21] OK: Executed /home/rafa1215/consensus-project/tools/knowledge_sharing_validator.py successfully
-[2026-05-22 22:02:21] FAIL: Error running report_master: run() missing 1 required positional argument: 'script'
-[2026-05-22 22:02:21] REPAIR: Invoking self-repair sequence for report_master ...
+[2026-05-22 23:02:39] OK: Executed /home/rafa1215/consensus-project/tools/backup_fitness.py successfully
+[2026-05-22 23:02:39] ---- Fitness Cycle Complete ----
+[2026-05-22 23:02:39] ---- Knowledge/Reports Cycle Started ----
+[2026-05-22 23:02:40] OK: Executed /home/rafa1215/consensus-project/tools/knowledge_sharing_validator.py successfully
+[2026-05-22 23:02:40] FAIL: Error running report_master: run() missing 1 required positional argument: 'script'
+[2026-05-22 23:02:40] REPAIR: Invoking self-repair sequence for report_master ...
 Traceback (most recent call last):
   File "/home/rafa1215/consensus-project/tools/master_control_loop.py", line 54, in run_module
     if os.path.isfile(script_path):
 TypeError: run() missing 1 required positional argument: 'script'
-[2026-05-22 22:02:23] OK: Executed /home/rafa1215/consensus-project/tools/memory_compressor.py successfully
-[2026-05-22 22:02:23] OK: Executed /home/rafa1215/consensus-project/tools/status_report_builder.py successfully
-[2026-05-22 22:02:23] ---- Knowledge/Reports Cycle Complete ----
-[2026-05-22 22:02:23] ---- Agent Evolution/Repair Cycle Started ----
-[2026-05-22 22:02:23] OK: Executed /home/rafa1215/consensus-project/tools/agent_evolution_cycle.py successfully
-[2026-05-22 22:02:23] OK: Executed /home/rafa1215/consensus-project/tools/agent_self_repair_loop.py successfully
-[2026-05-22 22:02:23] ---- Agent Evolution/Repair Cycle Complete ----
-[2026-05-22 22:02:23] OK: All subsystems executed
-[2026-05-22 22:02:23] ==== Master Control Loop Cycle Complete ====
+[2026-05-22 23:02:42] OK: Executed /home/rafa1215/consensus-project/tools/memory_compressor.py successfully
+[2026-05-22 23:02:42] OK: Executed /home/rafa1215/consensus-project/tools/status_report_builder.py successfully
+[2026-05-22 23:02:42] ---- Knowledge/Reports Cycle Complete ----
+[2026-05-22 23:02:42] ---- Agent Evolution/Repair Cycle Started ----
+[2026-05-22 23:02:42] OK: Executed /home/rafa1215/consensus-project/tools/agent_evolution_cycle.py successfully
+[2026-05-22 23:02:42] OK: Executed /home/rafa1215/consensus-project/tools/agent_self_repair_loop.py successfully
+[2026-05-22 23:02:42] ---- Agent Evolution/Repair Cycle Complete ----
+[2026-05-22 23:02:42] OK: All subsystems executed
+[2026-05-22 23:02:42] ==== Master Control Loop Cycle Complete ====
