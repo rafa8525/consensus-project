@@ -2762,4 +2762,4 @@
 [2026-03-03 19:12:43] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
 [2026-03-03 19:27:49] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
 [2026-03-03 19:42:55] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
-[2026-05-22 23:02:42] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
+[2026-05-23 00:03:02] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
