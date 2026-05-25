@@ -1,7 +1,7 @@
 # GitHub Write Assurance
 
-- Status: OK
-- Generated UTC: 2026-05-25T08:02:31+00:00
+- Status: ACTION REQUIRED
+- Generated UTC: 2026-05-25T09:02:17+00:00
 - Agent: github_write_assurance.py v2026-05-15-clean-final-proof-v3
 - Repo root: `/home/rafa1215/consensus-project`
 - Memory root: `/home/rafa1215/memory`
@@ -16,16 +16,26 @@
 - Broken symlinks skipped safely: 1
 - Stale repo mirror files removed: 312
 - Commit created: `true`
-- Commit hash: `7984f5088807f91d2242dc1841000c3df6519e4b`
+- Commit hash: `6b2b484a688fd105ebc0691bac2e6fc720a39a93`
 - Final proof commit hash: ``
-- Push OK: `true`
-- Remote verified: `true`
+- Push OK: `false`
+- Remote verified: `false`
 
 ## Git status after run
 ```text
-pending final proof commit
+clean
 ```
 
 ## Warnings
 - skipped symlink file: /home/rafa1215/memory/logs/system/absorption/last_success.json
 - skipped broken symlink: /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204
+
+## Errors
+- git push failed
+stdout=
+stderr=git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
