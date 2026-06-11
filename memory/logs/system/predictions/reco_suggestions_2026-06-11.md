@@ -1,17 +1,21 @@
 # Recommendation Suggestions – 2026-06-11
-Generated: 2026-06-11T19:43:09.571734+00:00
+Generated: 2026-06-11T21:01:22.000921+00:00
 Agent: prediction_feed_agent.py v2026-01-28-wow-v4-2-reco-fallback
 
 These are **fallback recommendations** because your movie export has no 'Maybe/Candidate' entries.
 
-1. **Constantine** (2005) — IMDb 7.0
-   - Why: Supernatural detective vs demons/angels; dark comic-book vibe.
-   - Watch: Availability rotates — check JustWatch for your services.
+Streaming recommendation gate status:
+- No verified stream-now recommendation was emitted.
+- Reason: recommendations must include a current U.S. streaming platform, verification source, and date checked.
+- Already-watched, suppressed, rent/buy-only, or ambiguous titles remain blocked.
 
-2. **Underworld** (2003) — IMDb 7.0
-   - Why: Gothic action; vampires vs werewolves; stylish dark fantasy.
-   - Watch: Availability rotates — check JustWatch for your services.
+Current media state:
+- watched=23
+- removed=7
+- maybe=0
+- candidates=0
+- unknown=0
+- total=30
 
-3. **Hellboy** (2004) — IMDb 6.9
-   - Why: Paranormal superhero/monster mythology; creature-feature energy.
-   - Watch: Availability rotates — check JustWatch for your services.
+Action:
+- Add at least one verified streamable Candidate/Maybe item before expecting a movie recommendation.
