@@ -4,9 +4,3 @@
 - repo config exists: OK (/home/rafa1215/consensus-project/config.yaml)
 - repo memory folder exists: OK (/home/rafa1215/consensus-project/memory)
 - Overall: FAIL
-[2026-06-15 09:02:57] ---- Starting Knowledge Sharing Validation ----
-[2026-06-15 09:02:57] ❌ Centralized Knowledge Base missing.
-[2026-06-15 09:02:57] ⚠️ No agent knowledge updates in the last 24 hours (175187.0 min ago).
-[2026-06-15 09:02:58] ⚠️ Knowledge sharing requires attention.
-[2026-06-15 09:02:58] ---- Validation complete: ATTENTION REQUIRED ----
-

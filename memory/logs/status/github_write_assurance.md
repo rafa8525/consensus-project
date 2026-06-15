@@ -1,7 +1,7 @@
 # GitHub Write Assurance
 
-- Status: OK
-- Generated UTC: 2026-06-15T09:02:09+00:00
+- Status: ACTION REQUIRED
+- Generated UTC: 2026-06-15T11:02:30+00:00
 - Agent: github_write_assurance.py v2026-05-15-clean-final-proof-v3
 - Repo root: `/home/rafa1215/consensus-project`
 - Memory root: `/home/rafa1215/memory`
@@ -14,20 +14,64 @@
 - Mirrored files copied: 1179
 - Mirrored files skipped by safety rules: 25
 - Broken symlinks skipped safely: 1
-- Stale repo mirror files removed: 168
-- Commit created: `true`
-- Commit hash: `1dd2df583194ddccfe8c867b8951b1003c9cfb92`
+- Stale repo mirror files removed: 354
+- Commit created: `false`
+- Commit hash: ``
 - Final proof commit hash: ``
-- Push OK: `true`
-- Remote verified: `true`
+- Push OK: `false`
+- Remote verified: `false`
 
 ## Git status after run
 ```text
-pending final proof commit
+M memory/logs/status/github_write_assurance.json
+ D memory/logs/status/github_write_assurance.md
+ M memory/logs/system/agent_evolution_cycle.log
+ M memory/logs/system/agent_self_repair.log
+ M memory/logs/system/fitness_integration.log
+ M memory/logs/system/heartbeat.md
+ M memory/logs/system/knowledge_sharing_validation.log
+ M memory/logs/system/master_control_loop.log
+ M memory/logs/system/master_guard_integrator.log
+ M memory/logs/system/predictions/prediction_feed_2026-06-15.md
+ M memory/logs/system/predictions/reco_suggestions_2026-06-15.md
+ M memory/logs/system/progress_evaluation.log
+ M memory/logs/system/vpn_cron.log
+ M memory/logs/system/vpn_simulated_active.flag
+ M memory/logs/system/vpn_test.log
 ```
 
 ## Warnings
 - skipped symlink file: /home/rafa1215/memory/logs/system/absorption/last_success.json
 - skipped broken symlink: /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204
-- could not remove stale repo mirror file /home/rafa1215/consensus-project/memory/logs/calendar/event_sync_guard.md: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/memory/logs/calendar/event_sync_guard.md'
-- could not remove stale repo mirror file /home/rafa1215/consensus-project/memory/logs/voice/voice_connector_log.md: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/memory/logs/voice/voice_connector_log.md'
+
+## Errors
+- git commit failed
+stdout=On branch v1.1-dev
+Your branch is up to date with 'origin/v1.1-dev'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   memory/logs/status/github_write_assurance.json
+	deleted:    memory/logs/status/github_write_assurance.md
+	modified:   memory/logs/system/agent_evolution_cycle.log
+	modified:   memory/logs/system/agent_self_repair.log
+	modified:   memory/logs/system/fitness_integration.log
+	modified:   memory/logs/system/heartbeat.md
+	modified:   memory/logs/system/knowledge_sharing_validation.log
+	modified:   memory/logs/system/master_control_loop.log
+	modified:   memory/logs/system/master_guard_integrator.log
+	modified:   memory/logs/system/predictions/prediction_feed_2026-06-15.md
+	modified:   memory/logs/system/predictions/reco_suggestions_2026-06-15.md
+	modified:   memory/logs/system/progress_evaluation.log
+	modified:   memory/logs/system/vpn_cron.log
+	modified:   memory/logs/system/vpn_simulated_active.flag
+	modified:   memory/logs/system/vpn_test.log
+
+
+It took 4.86 seconds to enumerate untracked files. 'status -uno'
+may speed it up, but you have to be careful not to forget to add
+new files yourself (see 'git help status').
+no changes added to commit (use "git add" and/or "git commit -a")
+
+stderr=
