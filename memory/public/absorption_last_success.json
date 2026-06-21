@@ -1,13 +1,13 @@
 {
-  "last_success_local": "2026-06-20T23:03:03.407773-07:00",
-  "last_success_utc": "2026-06-21T06:03:03.406885+00:00",
+  "last_success_local": "2026-06-21T11:10:20.364783-07:00",
+  "last_success_utc": "2026-06-21T18:10:20.364677+00:00",
   "local_tz": "America/Los_Angeles",
   "status": "ok",
   "export_size_bytes": 4291,
-  "export_mtime_utc": 1782021767.4266183,
-  "export_mtime_iso_utc": "2026-06-21T06:02:47Z",
+  "export_mtime_utc": 1782065417.940668,
+  "export_mtime_iso_utc": "2026-06-21T18:10:17Z",
   "source": "absorption public marker",
-  "git_commit": "8c569a73a",
-  "marker_write_iso_utc": "2026-06-21T06:03:03Z",
-  "centralized_knowledge_base_size_bytes": 8933392
+  "git_commit": "b366be8ac",
+  "marker_write_iso_utc": "2026-06-21T18:10:20Z",
+  "centralized_knowledge_base_size_bytes": 8956356
 }
