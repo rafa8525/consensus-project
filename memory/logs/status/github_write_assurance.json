@@ -2,12 +2,12 @@
   "actual_branch": "v1.1-dev",
   "agent": "github_write_assurance.py v2026-05-15-clean-final-proof-v3",
   "commit_created": true,
-  "commit_hash": "8240075e6e6604191900ab3a45486bb647a3cf70",
+  "commit_hash": "7d65505e480382bfeb56298c1570f7eeada6dc56",
   "dry_run": false,
   "errors": [],
   "expected_branch": "v1.1-dev",
   "final_proof_commit_hash": "",
-  "generated_utc": "2026-06-30T19:02:00+00:00",
+  "generated_utc": "2026-06-30T20:02:09+00:00",
   "git_status_after_run": "pending final proof commit",
   "memory_root": "/home/rafa1215/memory",
   "mirrored_broken_symlinks_skipped": 1,
@@ -17,10 +17,12 @@
   "push_ok": true,
   "remote_verified": true,
   "repo_root": "/home/rafa1215/consensus-project",
-  "stale_repo_files_removed": 384,
+  "stale_repo_files_removed": 14,
   "status": "OK",
   "warnings": [
     "skipped symlink file: /home/rafa1215/memory/logs/system/absorption/last_success.json",
-    "skipped broken symlink: /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204"
+    "skipped broken symlink: /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204",
+    "could not remove stale repo mirror file /home/rafa1215/consensus-project/memory/logs/calendar/event_sync_guard.md: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/memory/logs/calendar/event_sync_guard.md'",
+    "could not remove stale repo mirror file /home/rafa1215/consensus-project/memory/logs/voice/voice_connector_log.md: [Errno 2] No such file or directory: '/home/rafa1215/consensus-project/memory/logs/voice/voice_connector_log.md'"
   ]
 }
