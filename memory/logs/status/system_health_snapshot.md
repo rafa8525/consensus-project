@@ -1,11 +1,11 @@
 # System Health Snapshot
-- Generated: 2026-07-08T23:43:13.821028+00:00
+- Generated: 2026-07-09T01:43:09.615928+00:00
 - Dry run: false
 - Agent: core_monitors_bundle.py replacement-v2026-03-23-path-sync
 - mem_root: /home/rafa1215/memory
 | Subsystem | Status | Notes |
 |---|---|---|
-| absorb_runner | warn | stale (8.7d old): /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |
+| absorb_runner | warn | stale (8.8d old): /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |
 | absorb_status_report | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/knowledge_base_status.log |
 | geofence_heartbeat | ok | recent: /home/rafa1215/consensus-project/memory/logs/system/heartbeat.md |
 | gmail_refresh_guard_v3 | ok | recent: /home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log |
