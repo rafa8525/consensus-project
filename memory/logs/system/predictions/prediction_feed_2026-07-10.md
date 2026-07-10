@@ -1,18 +1,18 @@
 # Prediction Feed – 2026-07-10
-Generated: 2026-07-10T17:43:13.198998+00:00
-Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1
+Generated: 2026-07-10T18:43:12.588095+00:00
+Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.1
 
 ## Health/Fitness
-1. [HIGH] Today's fitness log was found (activity data).
-   - Reason: At least one current-day fitness source was detected, so the missing-log warning was suppressed.
-   - Evidence: /home/rafa1215/consensus-project/memory/logs/status/system_health_snapshot.md; /home/rafa1215/memory/logs/status/system_health_snapshot.md; /home/rafa1215/consensus-project/memory/logs/system/fitness_integration.log; /home/rafa1215/consensus-project/memory/logs/archive/system_health_snapshot.md
+1. [MEDIUM] No current-day fitness measurement was found.
+   - Reason: The agent checked Fitbit, COROS, steps, swim and workout sources while excluding system-health and archived logs.
+   - Action: Sync a wearable or add today's step count or swim laps.
 
 ## Errands & Geofences
 1. [LOW] No actionable errands were detected.
    - Reason: No grounded shopping-list, calendar, delivery, geofence, or task item was found; the old 'pick one small errand' filler was intentionally removed.
 
 ## Media & Fun
-1. [LOW] Media summary: tracked=0, watched=0, suppressed/removed=0, maybe=0, candidates=0, unknown=0; last watched=Not available.
+1. [HIGH] Media summary: tracked=32, watched=24, suppressed/removed=8, maybe=0, candidates=0, unknown=0; last watched=Mission: Impossible – The Final Reckoning	2025	YES.
    - Reason: The feed now exposes meaningful status totals instead of only reporting that the list is unchanged.
    - Action: Refresh the verified U.S. streaming catalog only when candidates reach zero.
 2. [MEDIUM] No verified streaming candidate is currently available.
@@ -20,9 +20,8 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1
    - Action: Run the streaming-verification source refresh; do not bypass the gate with an unverified title.
 
 ## Family/Events
-1. [MEDIUM] Next dated family event: [2026-07-10 17:37:35] Created missing log file: event_sync_guard.md
-   - Reason: A current or future dated event was found.
-   - Evidence: /home/rafa1215/consensus-project/memory/logs/archive/event_sync_guard.md
+1. [LOW] No current family event requires action.
+   - Reason: No valid current or future family-specific reminder was found.
 
 ## System/Project
 1. [MEDIUM] System health: WARN (0 minutes old). Details: | absorb_runner | warn | stale (10.5d old): /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |; Overall: warn
@@ -31,9 +30,12 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1
    - Evidence: /home/rafa1215/memory/logs/status/system_health_snapshot.md
 
 ## 24–72 Hour Predictions
-1. [HIGH] The next movie recommendation run will likely return no pick.
+1. [MEDIUM] Today's activity summary is likely to remain incomplete unless a wearable sync or manual log arrives.
+   - Reason: No current-day activity record was found across all configured sources.
+   - Action: Sync or log activity before the nightly summary runs.
+2. [HIGH] The next movie recommendation run will likely return no pick.
    - Reason: There are zero verified candidates and the streaming gate is correctly blocking unsupported choices.
    - Action: Refresh verified U.S. streaming availability before the next recommendation cycle.
-2. [MEDIUM] Prediction quality may remain degraded until the upstream health warning is cleared.
+3. [MEDIUM] Prediction quality may remain degraded until the upstream health warning is cleared.
    - Reason: At least one current system-health finding is not OK.
    - Action: Resolve the first named health failure and rerun the health snapshot before relying on forecasts.
