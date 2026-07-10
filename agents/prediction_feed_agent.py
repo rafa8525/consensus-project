@@ -29,7 +29,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable, Sequence
 
-VERSION = "v2026-07-10-smart-feed-v1.1"
+VERSION = "v2026-07-10-smart-feed-v1.2"
 STALE_EVENT_DAYS = int(os.getenv("PREDICTION_STALE_EVENT_DAYS", "14"))
 HEALTH_STALE_MINUTES = int(os.getenv("PREDICTION_HEALTH_STALE_MINUTES", "180"))
 
@@ -256,32 +256,34 @@ def detect_errands(ctx: Context) -> None:
 
 
 def read_movie_status(ctx: Context) -> dict[str, int | str]:
-    """Read movie state from CSV, JSON, Markdown or text exports."""
-    roots = [ctx.memory_root, ctx.repo_root / "memory", ctx.repo_root]
-    files = recent_files(
-        roots,
-        [
-            "**/*movie*.csv", "**/*media*.csv", "**/*watch*.csv",
-            "**/*movie*.json", "**/*media*.json", "**/*movie*.md",
-            "**/*movie*.txt", "**/*watch*.txt", "**/movie_list_export.txt",
-        ],
-        days=365,
-    )
+    """Read one authoritative movie export and avoid cross-file double counting."""
     counts: dict[str, int | str] = {
-        "watched": 0, "removed": 0, "maybe": 0,
-        "candidates": 0, "unknown": 0, "last_watched": "Not available",
+        "watched": 0,
+        "removed": 0,
+        "maybe": 0,
+        "candidates": 0,
+        "unknown": 0,
+        "last_watched": "Not available",
     }
-    seen_records: set[tuple[str, str]] = set()
-    newest_watched_time = 0.0
+
     status_aliases = {
-        "watched": {"watched", "seen", "finished", "complete", "completed", "done"},
-        "removed": {"removed", "suppressed", "suppress", "rejected", "skip", "skipped", "blocked", "deleted"},
+        "watched": {"yes", "watched", "seen", "finished", "complete", "completed", "done"},
+        "removed": {"no", "removed", "suppressed", "suppress", "rejected", "skip", "skipped", "blocked", "deleted"},
         "maybe": {"maybe", "considering", "consider", "possible"},
         "candidates": {"candidate", "candidates", "recommended", "available", "queued", "watchlist", "to watch", "unwatched"},
     }
+
     def classify(raw_status: str) -> str:
         cleaned = re.sub(r"[^a-z0-9 ]+", " ", raw_status.lower())
         cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        tokens = set(cleaned.split())
+
+        # The stable export uses values such as YES (Watched) and NO (Removed).
+        if "watched" in tokens or cleaned.startswith("yes"):
+            return "watched"
+        if "removed" in tokens or cleaned.startswith("no"):
+            return "removed"
+
         for category, aliases in status_aliases.items():
             if cleaned in aliases:
                 return category
@@ -289,86 +291,149 @@ def read_movie_status(ctx: Context) -> dict[str, int | str]:
             if any(alias in cleaned for alias in aliases):
                 return category
         return "unknown"
-    def add_record(title: str, status: str, source: Path) -> None:
-        nonlocal newest_watched_time
-        title = title.strip().strip("|,;:-") or "Untitled"
-        category = classify(status)
-        key = (title.lower(), category)
-        if key in seen_records:
-            return
-        seen_records.add(key)
-        counts[category] = int(counts[category]) + 1
-        if category == "watched":
-            try:
-                modified = source.stat().st_mtime
-            except OSError:
-                modified = 0
-            if modified >= newest_watched_time:
-                newest_watched_time = modified
-                counts["last_watched"] = title
-    for source in files[:80]:
+
+    def clean_title(raw_title: str) -> str:
+        title = raw_title.strip().strip("|,;:-")
+        title = re.sub(r"^\s*\d+[.)]\s*", "", title)
+        title = re.sub(r"\s+", " ", title).strip()
+        return title or "Untitled"
+
+    def apply_records(records: list[tuple[str, str]], source: Path) -> bool:
+        if not records:
+            return False
+
+        seen_titles: set[str] = set()
+        last_watched = "Not available"
+
+        for raw_title, raw_status in records:
+            title = clean_title(raw_title)
+            key = title.casefold()
+            if key in seen_titles:
+                continue
+            seen_titles.add(key)
+
+            category = classify(raw_status)
+            counts[category] = int(counts[category]) + 1
+            if category == "watched":
+                last_watched = title
+
+        counts["last_watched"] = last_watched
+        return bool(seen_titles)
+
+    # Prefer the stable export. Canonical memory wins; repo mirror is fallback.
+    preferred = [
+        ctx.memory_root / "exports/movie_list_export.txt",
+        ctx.repo_root / "memory/exports/movie_list_export.txt",
+    ]
+
+    for source in preferred:
         body = safe_read(source)
         if not body:
             continue
+
+        records: list[tuple[str, str]] = []
+        for raw_line in body.splitlines():
+            line = raw_line.rstrip("\n\r")
+            if not line.strip() or line.lstrip().startswith("#"):
+                continue
+
+            # Stable format: Title<TAB>Year<TAB>Status<TAB>Preference
+            parts = line.split("\t", 3)
+            if len(parts) >= 3:
+                title, _year, status = parts[:3]
+                records.append((title, status))
+
+        if apply_records(records, source):
+            return counts
+
+    # Fallback: read the newest single structured movie file only.
+    roots = [ctx.memory_root, ctx.repo_root / "memory", ctx.repo_root]
+    files = recent_files(
+        roots,
+        [
+            "**/*movie*.csv",
+            "**/*media*.csv",
+            "**/*watch*.csv",
+            "**/*movie*.json",
+            "**/*media*.json",
+            "**/*movie*.md",
+            "**/*movie*.txt",
+            "**/*watch*.txt",
+        ],
+        days=365,
+    )
+
+    for source in files:
+        if source.name == "movie_list_export.txt":
+            continue
+        body = safe_read(source)
+        if not body:
+            continue
+
+        records: list[tuple[str, str]] = []
         try:
             if source.suffix.lower() == ".json":
                 parsed = json.loads(body)
-                entries = parsed.get("movies", parsed.get("items", parsed.get("records", []))) if isinstance(parsed, dict) else parsed
+                entries = (
+                    parsed.get("movies", parsed.get("items", parsed.get("records", [])))
+                    if isinstance(parsed, dict)
+                    else parsed
+                )
                 if isinstance(entries, list):
                     for entry in entries:
-                        if isinstance(entry, dict):
-                            normalized = {str(k).lower().strip(): str(v or "").strip() for k, v in entry.items()}
-                            add_record(normalized.get("title", normalized.get("name", "Untitled")), normalized.get("status", normalized.get("state", "unknown")), source)
-                continue
-            lines = body.splitlines()
-            first_line = lines[0] if lines else ""
-            delimiter = "\t" if "\t" in first_line else "|" if "|" in first_line else ","
-            rows = list(csv.DictReader(lines, delimiter=delimiter))
-            usable_rows = False
-            for row in rows:
-                normalized = {str(k or "").lower().strip(): str(v or "").strip() for k, v in row.items()}
-                status = normalized.get("status", normalized.get("state", ""))
-                title = normalized.get("title", normalized.get("movie", normalized.get("name", "")))
-                if status:
-                    usable_rows = True
-                    add_record(title, status, source)
-            if usable_rows:
-                continue
+                        if not isinstance(entry, dict):
+                            continue
+                        normalized = {
+                            str(key).lower().strip(): str(value or "").strip()
+                            for key, value in entry.items()
+                        }
+                        records.append((
+                            normalized.get("title", normalized.get("name", "Untitled")),
+                            normalized.get("status", normalized.get("state", "unknown")),
+                        ))
+            else:
+                lines = [line for line in body.splitlines() if line.strip() and not line.lstrip().startswith("#")]
+                if lines:
+                    sample = lines[0]
+                    delimiter = "\t" if "\t" in sample else "|" if "|" in sample else ","
+                    reader = csv.DictReader(lines, delimiter=delimiter)
+                    for row in reader:
+                        normalized = {
+                            str(key or "").lower().strip(): str(value or "").strip()
+                            for key, value in row.items()
+                        }
+                        status = normalized.get("status", normalized.get("state", ""))
+                        title = normalized.get("title", normalized.get("movie", normalized.get("name", "")))
+                        if status and title:
+                            records.append((title, status))
         except (ValueError, csv.Error, json.JSONDecodeError):
-            pass
-        for raw_line in body.splitlines():
-            line = raw_line.strip()
-            if not line or len(line) > 500:
-                continue
-            status_match = re.search(
-                r"\b(watched|seen|finished|complete|completed|done|removed|suppressed|rejected|skipped|blocked|maybe|considering|candidate|recommended|available|queued|watchlist)\b",
-                line, re.IGNORECASE,
-            )
-            if not status_match:
-                continue
-            status = status_match.group(1)
-            title = re.sub(r"^\s*\d+[.)]\s*", "", line[:status_match.start()]).strip(" |,;:-[]()")
-            if title.lower() in {"", "status", "movie", "movies", "title", "breakdown"}:
-                continue
-            add_record(title, status, source)
-    tracked = sum(int(counts[k]) for k in ("watched", "removed", "maybe", "candidates", "unknown"))
-    if tracked == 0:
-        previous_files = recent_files([
-            ctx.memory_root / "logs/system/predictions",
-            ctx.repo_root / "memory/logs/system/predictions",
-        ], ["prediction_feed_*.md"], days=365)
-        for previous in previous_files:
-            match = re.search(
-                r"Breakdown:\s*watched=(\d+),\s*removed=(\d+),\s*maybe=(\d+),\s*candidates=(\d+),\s*unknown=(\d+)",
-                safe_read(previous), re.IGNORECASE,
-            )
-            if match:
-                counts["watched"] = int(match.group(1))
-                counts["removed"] = int(match.group(2))
-                counts["maybe"] = int(match.group(3))
-                counts["candidates"] = int(match.group(4))
-                counts["unknown"] = int(match.group(5))
-                break
+            records = []
+
+        if apply_records(records, source):
+            return counts
+
+    # Preserve the latest established breakdown when no source is readable.
+    prediction_dirs = [
+        ctx.memory_root / "logs/system/predictions",
+        ctx.repo_root / "memory/logs/system/predictions",
+    ]
+    previous_files = recent_files(prediction_dirs, ["prediction_feed_*.md"], days=365)
+    for previous in previous_files:
+        previous_text = safe_read(previous)
+        match = re.search(
+            r"(?:Breakdown:\s*)?watched=(\d+),\s*(?:suppressed/)?removed=(\d+),"
+            r"\s*maybe=(\d+),\s*candidates=(\d+),\s*unknown=(\d+)",
+            previous_text,
+            re.IGNORECASE,
+        )
+        if match:
+            counts["watched"] = int(match.group(1))
+            counts["removed"] = int(match.group(2))
+            counts["maybe"] = int(match.group(3))
+            counts["candidates"] = int(match.group(4))
+            counts["unknown"] = int(match.group(5))
+            break
+
     return counts
 
 def detect_media(ctx: Context) -> None:
