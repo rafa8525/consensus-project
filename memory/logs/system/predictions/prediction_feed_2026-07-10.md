@@ -1,5 +1,5 @@
 # Prediction Feed – 2026-07-10
-Generated: 2026-07-10T20:43:13.798944+00:00
+Generated: 2026-07-10T21:48:55.134093+00:00
 Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
 
 ## Health/Fitness
@@ -24,7 +24,7 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
    - Reason: No valid current or future family-specific reminder was found.
 
 ## System/Project
-1. [MEDIUM] System health: WARN (0 minutes old). Details: | absorb_runner | warn | stale (10.6d old): /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |; Overall: warn
+1. [MEDIUM] System health: OK (0 minutes old). Details: The snapshot does not state the component-level cause.
    - Reason: The prediction feed now extracts warning details from the health snapshot instead of emitting only WARN/RECENT.
    - Action: Open the snapshot and latest monitor log; repair the first failing upstream component, then rerun this feed.
    - Evidence: /home/rafa1215/memory/logs/status/system_health_snapshot.md
@@ -36,6 +36,3 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
 2. [HIGH] The next movie recommendation run will likely return no pick.
    - Reason: There are zero verified candidates and the streaming gate is correctly blocking unsupported choices.
    - Action: Refresh verified U.S. streaming availability before the next recommendation cycle.
-3. [MEDIUM] Prediction quality may remain degraded until the upstream health warning is cleared.
-   - Reason: At least one current system-health finding is not OK.
-   - Action: Resolve the first named health failure and rerun the health snapshot before relying on forecasts.
