@@ -29,7 +29,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable, Sequence
 
-VERSION = "v2026-07-10-smart-feed-v1"
+VERSION = "v2026-07-10-smart-feed-v1.1"
 STALE_EVENT_DAYS = int(os.getenv("PREDICTION_STALE_EVENT_DAYS", "14"))
 HEALTH_STALE_MINUTES = int(os.getenv("PREDICTION_HEALTH_STALE_MINUTES", "180"))
 
@@ -146,49 +146,76 @@ def resolve_roots() -> tuple[Path, Path]:
     return repo_root, memory_root
 
 
+
 def detect_fitness(ctx: Context) -> None:
-    roots = [ctx.memory_root, ctx.repo_root / "memory"]
+    """Find genuine current-day fitness measurements, not system-log mentions."""
+    roots = [
+        ctx.memory_root / "logs/fitness",
+        ctx.memory_root / "logs/health",
+        ctx.memory_root / "fitness",
+        ctx.memory_root / "health",
+        ctx.repo_root / "memory/logs/fitness",
+        ctx.repo_root / "memory/logs/health",
+        ctx.repo_root / "memory/exports",
+    ]
     files = recent_files(
         roots,
         [
-            "**/*fitness*.*", "**/*health*.*", "**/*fitbit*.*", "**/*coros*.*",
-            "**/*steps*.*", "**/*swim*.*", "**/*activity*.*", "**/*workout*.*",
+            "**/*fitness*.*", "**/*fitbit*.*", "**/*coros*.*",
+            "**/*steps*.*", "**/*swim*.*", "**/*workout*.*", "**/*activity*.*",
         ],
         days=8,
     )
     evidence: list[str] = []
     steps: float | None = None
     laps: float | None = None
-    for path in files[:80]:
-        text = safe_read(path)
-        if not text or not contains_today(text, ctx.today):
+    workout_found = False
+    excluded_path_terms = (
+        "/archive/", "/status/", "/system/", "system_health",
+        "integration.log", "monitor", "diagnostic", "snapshot",
+    )
+    workout_terms = (
+        "workout completed", "completed workout", "swim completed",
+        "exercise completed", "activity completed", "stationary bike", "pool workout",
+    )
+    for candidate in files[:100]:
+        normalized_path = str(candidate).lower().replace("\\\\", "/")
+        if any(term in normalized_path for term in excluded_path_terms):
             continue
-        s = extract_number(text, ["steps", "step count", "daily steps"])
-        l = extract_number(text, ["laps", "swim laps", "pool laps"])
-        if s is not None:
-            steps = max(steps or 0, s)
-        if l is not None:
-            laps = max(laps or 0, l)
-        evidence.append(str(path))
+        body = safe_read(candidate)
+        if not body or not contains_today(body, ctx.today):
+            continue
+        found_steps = extract_number(body, ["steps", "step count", "daily steps", "total steps"])
+        found_laps = extract_number(body, ["laps", "swim laps", "pool laps", "running laps"])
+        explicit_workout = any(term in body.lower() for term in workout_terms)
+        if found_steps is None and found_laps is None and not explicit_workout:
+            continue
+        if found_steps is not None:
+            steps = max(steps or 0, found_steps)
+        if found_laps is not None:
+            laps = max(laps or 0, found_laps)
+        workout_found = workout_found or explicit_workout
+        evidence.append(str(candidate))
     if evidence:
-        parts = []
+        details: list[str] = []
         if steps is not None:
-            parts.append(f"{steps:,.0f} steps")
+            details.append(f"{steps:,.0f} steps")
         if laps is not None:
-            parts.append(f"{laps:,.0f} swim laps")
-        summary = ", ".join(parts) if parts else "activity data"
+            details.append(f"{laps:,.0f} swim laps")
+        if workout_found and not details:
+            details.append("completed workout")
         ctx.findings.append(Finding(
-            "Health/Fitness", "HIGH", f"Today's fitness log was found ({summary}).",
-            "At least one current-day fitness source was detected, so the missing-log warning was suppressed.",
+            "Health/Fitness", "HIGH",
+            f"Today's fitness log was found ({', '.join(details)}).",
+            "A genuine current-day measurement or completed workout was found.",
             evidence=tuple(evidence[:4]),
         ))
     else:
         ctx.findings.append(Finding(
-            "Health/Fitness", "MEDIUM", "No current-day fitness entry was found across the configured sources.",
-            "The agent checked health, Fitbit, COROS, steps, swim, activity, and workout files before raising this warning.",
-            "Sync a wearable or add one concise manual entry for steps or swim laps.",
+            "Health/Fitness", "MEDIUM", "No current-day fitness measurement was found.",
+            "The agent checked Fitbit, COROS, steps, swim and workout sources while excluding system-health and archived logs.",
+            "Sync a wearable or add today's step count or swim laps.",
         ))
-
 
 def parse_task_lines(text: str) -> list[str]:
     tasks: list[str] = []
@@ -227,51 +254,122 @@ def detect_errands(ctx: Context) -> None:
         ))
 
 
-def read_movie_status(ctx: Context) -> dict[str, int | str]:
-    roots = [ctx.memory_root, ctx.repo_root / "memory", ctx.repo_root]
-    files = recent_files(roots, ["**/*movie*.csv", "**/*media*.csv", "**/*watch*.csv", "**/*movie*.json", "**/*media*.json", "**/*movie*.md"], days=180)
-    counts = {"watched": 0, "removed": 0, "maybe": 0, "candidates": 0, "unknown": 0}
-    last_watched = "Not available"
-    newest_watched_time = 0.0
-    for path in files[:50]:
-        text = safe_read(path)
-        if not text:
-            continue
-        rows: list[dict[str, str]] = []
-        try:
-            if path.suffix.lower() == ".csv":
-                rows = [{str(k): str(v or "") for k, v in row.items()} for row in csv.DictReader(text.splitlines())]
-            elif path.suffix.lower() == ".json":
-                data = json.loads(text)
-                candidates = data if isinstance(data, list) else data.get("movies", data.get("items", [])) if isinstance(data, dict) else []
-                if isinstance(candidates, list):
-                    rows = [{str(k): str(v or "") for k, v in item.items()} for item in candidates if isinstance(item, dict)]
-        except (ValueError, json.JSONDecodeError):
-            rows = []
-        for row in rows:
-            normalized = {k.lower().strip(): v.strip() for k, v in row.items()}
-            status = normalized.get("status", normalized.get("state", "unknown")).lower()
-            title = normalized.get("title", normalized.get("name", "Untitled"))
-            if status in ("watched", "seen", "finished", "complete", "completed"):
-                counts["watched"] += 1
-                try:
-                    mtime = path.stat().st_mtime
-                except OSError:
-                    mtime = 0
-                if mtime >= newest_watched_time:
-                    newest_watched_time = mtime
-                    last_watched = title
-            elif status in ("removed", "suppressed", "rejected", "skip", "skipped"):
-                counts["removed"] += 1
-            elif status in ("maybe", "considering"):
-                counts["maybe"] += 1
-            elif status in ("candidate", "recommended", "available", "queued", "watchlist"):
-                counts["candidates"] += 1
-            else:
-                counts["unknown"] += 1
-    counts["last_watched"] = last_watched
-    return counts
 
+def read_movie_status(ctx: Context) -> dict[str, int | str]:
+    """Read movie state from CSV, JSON, Markdown or text exports."""
+    roots = [ctx.memory_root, ctx.repo_root / "memory", ctx.repo_root]
+    files = recent_files(
+        roots,
+        [
+            "**/*movie*.csv", "**/*media*.csv", "**/*watch*.csv",
+            "**/*movie*.json", "**/*media*.json", "**/*movie*.md",
+            "**/*movie*.txt", "**/*watch*.txt", "**/movie_list_export.txt",
+        ],
+        days=365,
+    )
+    counts: dict[str, int | str] = {
+        "watched": 0, "removed": 0, "maybe": 0,
+        "candidates": 0, "unknown": 0, "last_watched": "Not available",
+    }
+    seen_records: set[tuple[str, str]] = set()
+    newest_watched_time = 0.0
+    status_aliases = {
+        "watched": {"watched", "seen", "finished", "complete", "completed", "done"},
+        "removed": {"removed", "suppressed", "suppress", "rejected", "skip", "skipped", "blocked", "deleted"},
+        "maybe": {"maybe", "considering", "consider", "possible"},
+        "candidates": {"candidate", "candidates", "recommended", "available", "queued", "watchlist", "to watch", "unwatched"},
+    }
+    def classify(raw_status: str) -> str:
+        cleaned = re.sub(r"[^a-z0-9 ]+", " ", raw_status.lower())
+        cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        for category, aliases in status_aliases.items():
+            if cleaned in aliases:
+                return category
+        for category, aliases in status_aliases.items():
+            if any(alias in cleaned for alias in aliases):
+                return category
+        return "unknown"
+    def add_record(title: str, status: str, source: Path) -> None:
+        nonlocal newest_watched_time
+        title = title.strip().strip("|,;:-") or "Untitled"
+        category = classify(status)
+        key = (title.lower(), category)
+        if key in seen_records:
+            return
+        seen_records.add(key)
+        counts[category] = int(counts[category]) + 1
+        if category == "watched":
+            try:
+                modified = source.stat().st_mtime
+            except OSError:
+                modified = 0
+            if modified >= newest_watched_time:
+                newest_watched_time = modified
+                counts["last_watched"] = title
+    for source in files[:80]:
+        body = safe_read(source)
+        if not body:
+            continue
+        try:
+            if source.suffix.lower() == ".json":
+                parsed = json.loads(body)
+                entries = parsed.get("movies", parsed.get("items", parsed.get("records", []))) if isinstance(parsed, dict) else parsed
+                if isinstance(entries, list):
+                    for entry in entries:
+                        if isinstance(entry, dict):
+                            normalized = {str(k).lower().strip(): str(v or "").strip() for k, v in entry.items()}
+                            add_record(normalized.get("title", normalized.get("name", "Untitled")), normalized.get("status", normalized.get("state", "unknown")), source)
+                continue
+            lines = body.splitlines()
+            first_line = lines[0] if lines else ""
+            delimiter = "\t" if "\t" in first_line else "|" if "|" in first_line else ","
+            rows = list(csv.DictReader(lines, delimiter=delimiter))
+            usable_rows = False
+            for row in rows:
+                normalized = {str(k or "").lower().strip(): str(v or "").strip() for k, v in row.items()}
+                status = normalized.get("status", normalized.get("state", ""))
+                title = normalized.get("title", normalized.get("movie", normalized.get("name", "")))
+                if status:
+                    usable_rows = True
+                    add_record(title, status, source)
+            if usable_rows:
+                continue
+        except (ValueError, csv.Error, json.JSONDecodeError):
+            pass
+        for raw_line in body.splitlines():
+            line = raw_line.strip()
+            if not line or len(line) > 500:
+                continue
+            status_match = re.search(
+                r"\b(watched|seen|finished|complete|completed|done|removed|suppressed|rejected|skipped|blocked|maybe|considering|candidate|recommended|available|queued|watchlist)\b",
+                line, re.IGNORECASE,
+            )
+            if not status_match:
+                continue
+            status = status_match.group(1)
+            title = re.sub(r"^\s*\d+[.)]\s*", "", line[:status_match.start()]).strip(" |,;:-[]()")
+            if title.lower() in {"", "status", "movie", "movies", "title", "breakdown"}:
+                continue
+            add_record(title, status, source)
+    tracked = sum(int(counts[k]) for k in ("watched", "removed", "maybe", "candidates", "unknown"))
+    if tracked == 0:
+        previous_files = recent_files([
+            ctx.memory_root / "logs/system/predictions",
+            ctx.repo_root / "memory/logs/system/predictions",
+        ], ["prediction_feed_*.md"], days=365)
+        for previous in previous_files:
+            match = re.search(
+                r"Breakdown:\s*watched=(\d+),\s*removed=(\d+),\s*maybe=(\d+),\s*candidates=(\d+),\s*unknown=(\d+)",
+                safe_read(previous), re.IGNORECASE,
+            )
+            if match:
+                counts["watched"] = int(match.group(1))
+                counts["removed"] = int(match.group(2))
+                counts["maybe"] = int(match.group(3))
+                counts["candidates"] = int(match.group(4))
+                counts["unknown"] = int(match.group(5))
+                break
+    return counts
 
 def detect_media(ctx: Context) -> None:
     c = read_movie_status(ctx)
@@ -306,35 +404,53 @@ def dated_lines(text: str) -> Iterable[tuple[date, str]]:
             break
 
 
+
 def detect_family_events(ctx: Context) -> None:
+    """Detect only real family events, not event-related system logs."""
     roots = [ctx.memory_root, ctx.repo_root / "memory"]
-    files = recent_files(roots, ["**/*family*.*", "**/*event*.*", "**/*reunion*.*", "**/*birthday*.*", "**/*reminder*.*"], days=365)
+    files = recent_files(
+        roots,
+        ["**/*family*.*", "**/*reunion*.*", "**/*birthday*.*", "**/*anniversary*.*", "**/*reminder*.*"],
+        days=365,
+    )
     stale: list[tuple[date, str, Path]] = []
     future: list[tuple[date, str, Path]] = []
-    for path in files[:80]:
-        text = safe_read(path)
-        for when, line in dated_lines(text):
-            low = line.lower()
-            if not any(k in low for k in ("family", "reunion", "birthday", "anniversary", "event", "reminder")):
+    family_terms = ("family", "reunion", "birthday", "anniversary", "maribel", "asia", "rafael", "wedding", "graduation")
+    excluded_terms = ("created missing log", "event_sync", "event sync", "sync_guard", "sync guard", "system event", "log file", "monitor", "diagnostic", "health snapshot", "archived")
+    excluded_path_terms = ("/logs/archive/", "/logs/status/", "/logs/system/", "event_sync_guard", "system_health", "monitor", "diagnostic")
+    for source in files[:100]:
+        normalized_path = str(source).lower().replace("\\\\", "/")
+        if any(term in normalized_path for term in excluded_path_terms):
+            continue
+        for when, line in dated_lines(safe_read(source)):
+            lowered = line.lower()
+            if any(term in lowered for term in excluded_terms):
                 continue
-            age = (ctx.today - when).days
-            if age > STALE_EVENT_DAYS:
-                stale.append((when, line, path))
+            if not any(term in lowered for term in family_terms):
+                continue
+            age_days = (ctx.today - when).days
+            if age_days > STALE_EVENT_DAYS:
+                stale.append((when, line, source))
             elif when >= ctx.today:
-                future.append((when, line, path))
+                future.append((when, line, source))
     if future:
-        when, line, path = sorted(future, key=lambda x: x[0])[0]
-        ctx.findings.append(Finding("Family/Events", "MEDIUM", f"Next dated family event: {line}", "A current or future dated event was found.", evidence=(str(path),)))
+        when, line, source = sorted(future, key=lambda item: item[0])[0]
+        ctx.findings.append(Finding(
+            "Family/Events", "MEDIUM", f"Next dated family event: {line}",
+            "A current or future family-specific event was found.", evidence=(str(source),),
+        ))
     elif stale:
-        when, line, path = sorted(stale, key=lambda x: x[0])[0]
+        when, line, source = sorted(stale, key=lambda item: item[0], reverse=True)[0]
         ctx.findings.append(Finding(
             "Family/Events", "LOW", f"Suppressed stale family reminder dated {when.isoformat()}.",
-            f"The event is more than {STALE_EVENT_DAYS} days old, so it is no longer emitted as an active reminder.",
-            "Archive or update the source reminder during the next memory-maintenance run.", (str(path),),
+            f"The family event is more than {STALE_EVENT_DAYS} days old.",
+            "Archive or update the source reminder during memory maintenance.", (str(source),),
         ))
     else:
-        ctx.findings.append(Finding("Family/Events", "LOW", "No current family event requires action.", "No active dated family reminder was found."))
-
+        ctx.findings.append(Finding(
+            "Family/Events", "LOW", "No current family event requires action.",
+            "No valid current or future family-specific reminder was found.",
+        ))
 
 def health_snapshot_path(ctx: Context) -> Path | None:
     candidates = [
