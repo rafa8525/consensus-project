@@ -1,6 +1,6 @@
 # Prediction Feed – 2026-07-10
-Generated: 2026-07-10T18:43:12.588095+00:00
-Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.1
+Generated: 2026-07-10T19:43:12.982017+00:00
+Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
 
 ## Health/Fitness
 1. [MEDIUM] No current-day fitness measurement was found.
@@ -12,7 +12,7 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.1
    - Reason: No grounded shopping-list, calendar, delivery, geofence, or task item was found; the old 'pick one small errand' filler was intentionally removed.
 
 ## Media & Fun
-1. [HIGH] Media summary: tracked=32, watched=24, suppressed/removed=8, maybe=0, candidates=0, unknown=0; last watched=Mission: Impossible – The Final Reckoning	2025	YES.
+1. [HIGH] Media summary: tracked=30, watched=23, suppressed/removed=7, maybe=0, candidates=0, unknown=0; last watched=Mission: Impossible – The Final Reckoning.
    - Reason: The feed now exposes meaningful status totals instead of only reporting that the list is unchanged.
    - Action: Refresh the verified U.S. streaming catalog only when candidates reach zero.
 2. [MEDIUM] No verified streaming candidate is currently available.
@@ -24,7 +24,7 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.1
    - Reason: No valid current or future family-specific reminder was found.
 
 ## System/Project
-1. [MEDIUM] System health: WARN (0 minutes old). Details: | absorb_runner | warn | stale (10.5d old): /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |; Overall: warn
+1. [MEDIUM] System health: WARN (0 minutes old). Details: | absorb_runner | warn | stale (10.6d old): /home/rafa1215/consensus-project/memory/logs/system/absorb_runner.log |; Overall: warn
    - Reason: The prediction feed now extracts warning details from the health snapshot instead of emitting only WARN/RECENT.
    - Action: Open the snapshot and latest monitor log; repair the first failing upstream component, then rerun this feed.
    - Evidence: /home/rafa1215/memory/logs/status/system_health_snapshot.md
