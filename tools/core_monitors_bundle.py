@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+"""Core system health monitor bundle.
+
+Version: replacement-v2026-07-10-remove-obsolete-absorb-runner
+
+This monitor checks only implemented, evidence-producing subsystems.
+The obsolete absorb_runner freshness check has been removed because the
+repository has no absorption worker implementation.
+"""
+
 from __future__ import annotations
 
 import os
@@ -9,16 +18,28 @@ from pathlib import Path
 from typing import Iterable, List, Optional
 
 
+VERSION = "replacement-v2026-07-10-remove-obsolete-absorb-runner"
 MAX_AGE_S = int(os.environ.get("CORE_MONITORS_MAX_AGE_S", str(36 * 3600)))
 
-CANONICAL_MEM_ROOT = Path("/home/rafa1215/memory")
-REPO_MEM_ROOT = Path("/home/rafa1215/consensus-project/memory")
+CANONICAL_MEM_ROOT = Path(
+    os.environ.get("CONSENSUS_MEMORY_ROOT", "/home/rafa1215/memory")
+).expanduser()
 
-OUTPUT_SNAPSHOT_CANONICAL = CANONICAL_MEM_ROOT / "logs/status/system_health_snapshot.md"
-OUTPUT_SNAPSHOT_REPO = REPO_MEM_ROOT / "logs/status/system_health_snapshot.md"
+REPO_ROOT = Path(
+    os.environ.get("CONSENSUS_REPO_ROOT", "/home/rafa1215/consensus-project")
+).expanduser()
+
+REPO_MEM_ROOT = REPO_ROOT / "memory"
+
+OUTPUT_SNAPSHOT_CANONICAL = (
+    CANONICAL_MEM_ROOT / "logs/status/system_health_snapshot.md"
+)
+OUTPUT_SNAPSHOT_REPO = (
+    REPO_MEM_ROOT / "logs/status/system_health_snapshot.md"
+)
 
 
-@dataclass
+@dataclass(frozen=True)
 class CheckResult:
     label: str
     status: str
@@ -44,9 +65,7 @@ def ensure_parent(path: Path) -> None:
 def file_mtime(path: Path) -> Optional[float]:
     try:
         return path.stat().st_mtime
-    except FileNotFoundError:
-        return None
-    except OSError:
+    except (FileNotFoundError, OSError):
         return None
 
 
@@ -64,6 +83,7 @@ def newest_existing(paths: Iterable[Path]) -> Optional[tuple[Path, float]]:
 
     if best_path is None or best_mtime is None:
         return None
+
     return best_path, best_mtime
 
 
@@ -74,14 +94,25 @@ def ok_if_recent_any(
     now_ts: float,
 ) -> CheckResult:
     best = newest_existing(candidate_paths)
+
     if best is None:
         first = candidate_paths[0] if candidate_paths else "<no paths>"
-        return CheckResult(label=label, status="warn", notes=f"missing: {first}")
+        return CheckResult(
+            label=label,
+            status="warn",
+            notes=f"missing: {first}",
+        )
 
     best_path, best_mtime = best
-    age_s = now_ts - best_mtime
+    age_s = max(0.0, now_ts - best_mtime)
+
     if age_s <= max_age_s:
-        return CheckResult(label=label, status="ok", notes=f"recent: {best_path}")
+        return CheckResult(
+            label=label,
+            status="ok",
+            notes=f"recent: {best_path}",
+        )
+
     return CheckResult(
         label=label,
         status="warn",
@@ -105,21 +136,26 @@ def system_roots() -> List[Path]:
 
 def candidate_paths(*relative_paths: str) -> List[Path]:
     paths: List[Path] = []
+
     for rel in relative_paths:
         rel = rel.strip("/")
+
         if rel.startswith("logs/status/"):
             suffix = rel[len("logs/status/") :]
             for root in status_roots():
                 paths.append(root / suffix)
+
         elif rel.startswith("logs/system/"):
             suffix = rel[len("logs/system/") :]
             for root in system_roots():
                 paths.append(root / suffix)
+
         else:
             for root in system_roots():
                 paths.append(root / rel)
             for root in status_roots():
                 paths.append(root / rel)
+
     return paths
 
 
@@ -127,19 +163,8 @@ def build_checks(now_ts: float) -> List[CheckResult]:
     today_utc = utc_now().strftime("%Y-%m-%d")
     checks: List[CheckResult] = []
 
-    checks.append(
-        ok_if_recent_any(
-            "absorb_runner",
-            candidate_paths(
-                "logs/status/absorption_status.md",
-                "logs/system/absorption_timestamp.log",
-                "logs/system/absorb_runner.log",
-                "logs/system/absorb_memory.log",
-            ),
-            max_age_s=MAX_AGE_S,
-            now_ts=now_ts,
-        )
-    )
+    # Obsolete absorb_runner check intentionally removed.
+    # No actual absorption worker exists in this repository.
 
     checks.append(
         ok_if_recent_any(
@@ -233,35 +258,55 @@ def build_checks(now_ts: float) -> List[CheckResult]:
 
 
 def overall_status(checks: List[CheckResult]) -> str:
-    return "warn" if any(c.status != "ok" for c in checks) else "ok"
+    return "warn" if any(check.status != "ok" for check in checks) else "ok"
+
+
+def escape_table_cell(value: str) -> str:
+    return value.replace("|", "\\|").replace("\n", " ").strip()
 
 
 def build_snapshot_text(checks: List[CheckResult]) -> str:
     now = utc_now().isoformat()
+
     lines = [
         "# System Health Snapshot",
         f"- Generated: {now}",
         "- Dry run: false",
-        "- Agent: core_monitors_bundle.py replacement-v2026-03-23-path-sync",
+        f"- Agent: core_monitors_bundle.py {VERSION}",
         f"- mem_root: {CANONICAL_MEM_ROOT}",
         "| Subsystem | Status | Notes |",
         "|---|---|---|",
     ]
-    for c in checks:
-        lines.append(f"| {c.label} | {c.status} | {c.notes} |")
+
+    for check in checks:
+        lines.append(
+            f"| {escape_table_cell(check.label)} | "
+            f"{escape_table_cell(check.status)} | "
+            f"{escape_table_cell(check.notes)} |"
+        )
+
     lines.append(f"- Overall: {overall_status(checks)}")
     return "\n".join(lines) + "\n"
 
 
+def atomic_write(path: Path, text: str) -> None:
+    ensure_parent(path)
+    temporary = path.with_name(f".{path.name}.tmp-{os.getpid()}")
+    temporary.write_text(text, encoding="utf-8")
+    os.replace(temporary, path)
+
+
 def write_snapshot(text: str) -> None:
-    ensure_parent(OUTPUT_SNAPSHOT_CANONICAL)
-    OUTPUT_SNAPSHOT_CANONICAL.write_text(text)
+    atomic_write(OUTPUT_SNAPSHOT_CANONICAL, text)
 
     try:
-        ensure_parent(OUTPUT_SNAPSHOT_REPO)
-        OUTPUT_SNAPSHOT_REPO.write_text(text)
-    except OSError:
-        pass
+        if OUTPUT_SNAPSHOT_REPO.resolve() != OUTPUT_SNAPSHOT_CANONICAL.resolve():
+            atomic_write(OUTPUT_SNAPSHOT_REPO, text)
+    except OSError as exc:
+        print(
+            f"WARN: unable to write repository snapshot mirror: {exc}",
+            file=os.sys.stderr,
+        )
 
 
 def main() -> int:
