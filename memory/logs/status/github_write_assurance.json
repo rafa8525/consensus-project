@@ -1,16 +1,16 @@
 {
   "actual_branch": "v1.1-dev",
   "agent": "github_write_assurance.py v2026-05-15-clean-final-proof-v3",
-  "commit_created": true,
-  "commit_hash": "b8185b9c77803ef7744341d9a41a78b6d2876bb3",
+  "commit_created": false,
+  "commit_hash": "",
   "dry_run": false,
   "errors": [
-    "git push failed\nstdout=\nstderr=To github.com:rafa8525/consensus-project.git\n ! [rejected]            HEAD -> v1.1-dev (non-fast-forward)\nerror: failed to push some refs to 'github.com:rafa8525/consensus-project.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    "git commit failed\nstdout=On branch v1.1-dev\nYour branch and 'origin/v1.1-dev' have diverged,\nand have 230 and 10 different commits each, respectively.\n  (use \"git pull\" to merge the remote branch into yours)\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   memory/logs/status/github_write_assurance.json\n\tmodified:   memory/logs/system/agent_evolution_cycle.log\n\tmodified:   memory/logs/system/agent_self_repair.log\n\tmodified:   memory/logs/system/fitness_integration.log\n\tmodified:   memory/logs/system/heartbeat.md\n\tmodified:   memory/logs/system/knowledge_sharing_validation.log\n\tmodified:   memory/logs/system/master_control_loop.log\n\tmodified:   memory/logs/system/master_guard_integrator.log\n\tmodified:   memory/logs/system/predictions/prediction_feed_2026-07-20.md\n\tmodified:   memory/logs/system/progress_evaluation.log\n\tmodified:   memory/logs/system/security_audit.log\n\tmodified:   memory/logs/system/vpn_cron.log\n\tmodified:   memory/logs/system/vpn_simulated_active.flag\n\tmodified:   memory/logs/system/vpn_test.log\n\n\nIt took 2.48 seconds to enumerate untracked files. 'status -uno'\nmay speed it up, but you have to be careful not to forget to add\nnew files yourself (see 'git help status').\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n\nstderr="
   ],
   "expected_branch": "v1.1-dev",
   "final_proof_commit_hash": "",
-  "generated_utc": "2026-07-20T07:02:25+00:00",
-  "git_status_after_run": "clean",
+  "generated_utc": "2026-07-20T09:02:14+00:00",
+  "git_status_after_run": "M memory/logs/status/github_write_assurance.json\n M memory/logs/system/agent_evolution_cycle.log\n M memory/logs/system/agent_self_repair.log\n M memory/logs/system/fitness_integration.log\n M memory/logs/system/heartbeat.md\n M memory/logs/system/knowledge_sharing_validation.log\n M memory/logs/system/master_control_loop.log\n M memory/logs/system/master_guard_integrator.log\n M memory/logs/system/predictions/prediction_feed_2026-07-20.md\n M memory/logs/system/progress_evaluation.log\n M memory/logs/system/security_audit.log\n M memory/logs/system/vpn_cron.log\n M memory/logs/system/vpn_simulated_active.flag\n M memory/logs/system/vpn_test.log",
   "memory_root": "/home/rafa1215/memory",
   "mirrored_broken_symlinks_skipped": 1,
   "mirrored_files_copied": 1309,
@@ -19,7 +19,7 @@
   "push_ok": false,
   "remote_verified": false,
   "repo_root": "/home/rafa1215/consensus-project",
-  "stale_repo_files_removed": 424,
+  "stale_repo_files_removed": 40,
   "status": "ACTION REQUIRED",
   "warnings": [
     "skipped symlink file: /home/rafa1215/memory/logs/system/absorption/last_success.json",
