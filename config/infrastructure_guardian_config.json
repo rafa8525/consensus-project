@@ -1,0 +1,19 @@
+{
+  "repo_root": "/home/rafa1215/consensus-project",
+  "memory_root": "/home/rafa1215/memory",
+  "state_dir": "/home/rafa1215/memory/logs/system",
+  "quota_gb": 5.0,
+  "disk_warn_percent": 80,
+  "disk_critical_percent": 90,
+  "disk_emergency_percent": 95,
+  "git_dir_warn_mb": 500,
+  "loose_object_warn_count": 10000,
+  "log_rotate_mb": 25,
+  "max_rotated_logs": 2,
+  "auto_rotate_logs": true,
+  "auto_remove_stale_locks": true,
+  "auto_repack_loose_objects": false,
+  "auto_push_when_safe": false,
+  "suspend_nonessential_marker": "/home/rafa1215/memory/logs/system/.suspend_nonessential_jobs",
+  "notification_command": null
+}
