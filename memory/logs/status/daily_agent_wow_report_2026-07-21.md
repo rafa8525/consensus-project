@@ -1,7 +1,7 @@
-# Daily Agent Wow Report — 2026-07-23
+# Daily Agent Wow Report — 2026-07-21
 
-- Generated local: 2026-07-23T20:30:32.669200-07:00
-- Generated UTC: 2026-07-24T03:30:32.669214+00:00
+- Generated local: 2026-07-21T20:30:41.624437-07:00
+- Generated UTC: 2026-07-22T03:30:41.624452+00:00
 - Agent: daily_agent_wow_report.py v2026-04-27-wow-v2-movie-reco
 - Overall system read: **OK**
 
@@ -12,27 +12,27 @@ The report now includes a daily personalized movie recommendation plus repair co
 
 ## Daily Movie Recommendation
 
-**Pick:** Solomon Kane (2009)
+**Pick:** Hellboy II: The Golden Army (2008)
 
-- IMDb rating: 6.1
+- IMDb rating: 7.0
 - Confidence: HIGH
 - Source: offline taste-profile fallback
-- Why it fits Rafael: Dark fantasy action with demons, cursed warriors, swordplay, and gothic atmosphere.
-- Proof log: `/home/rafa1215/memory/logs/movies/daily_movie_recommendation_2026-07-23.md`
+- Why it fits Rafael: Mythological creatures, dark fantasy, monsters, and superhero-style action.
+- Proof log: `/home/rafa1215/memory/logs/movies/daily_movie_recommendation_2026-07-21.md`
 
 ## High-Impact Wins Today
 
-1. **System Health Agent** — System health is OK. Proof: `/home/rafa1215/memory/logs/status/system_health_snapshot.md` age=47 minutes ago
-2. **Prediction Feed Agent** — Prediction feed exists. Proof: `/home/rafa1215/memory/logs/system/predictions/prediction_feed_2026-07-23.md` age=3.8 hours ago
-3. **Absorption Agent** — Absorption marker found. Last success=2026-07-23T11:06:01.242394-07:00; source=absorption public marker; export_size_bytes=4291. Proof: `/home/rafa1215/memory/public/absorption_last_success.json` age=9.4 hours ago
-4. **Movie Recommendation Agent** — Recommended Solomon Kane (2009), IMDb 6.1. Proof: `/home/rafa1215/memory/logs/movies/daily_movie_recommendation_2026-07-23.md`
+1. **System Health Agent** — System health is OK. Proof: `/home/rafa1215/memory/logs/status/system_health_snapshot.md` age=48 minutes ago
+2. **Prediction Feed Agent** — Prediction feed exists. Proof: `/home/rafa1215/memory/logs/system/predictions/prediction_feed_2026-07-21.md` age=3.8 hours ago
+3. **Absorption Agent** — Absorption marker found. Last success=2026-07-21T11:06:02.618072-07:00; source=absorption public marker; export_size_bytes=4291. Proof: `/home/rafa1215/memory/public/absorption_last_success.json` age=9.4 hours ago
+4. **Movie Recommendation Agent** — Recommended Hellboy II: The Golden Army (2008), IMDb 7.0. Proof: `/home/rafa1215/memory/logs/movies/daily_movie_recommendation_2026-07-21.md`
 5. **Movie Memory Agent** — Movie export found with about 30 entries. Recent items: Furiosa: A Mad Max Saga, Indiana Jones and the Dial of Destiny, Mission: Impossible – The Final Reckoning. Proof: `/home/rafa1215/memory/exports/movie_list_export.txt` age=9.3 hours ago
 
 ## Other Agent Activity
 
-1. **Fitness Agent** — Latest fitness log found: daily_2026-05-22.md. It is older than 7 days. Proof: `/home/rafa1215/memory/logs/fitness/daily_2026-05-22.md` age=62.5 days ago
-2. **Finance Agent** — Latest finance log found: finance_agent_status_2026-04-24.md. It is older than 7 days. Proof: `/home/rafa1215/memory/logs/finance/finance_agent_status_2026-04-24.md` age=90.4 days ago
-3. **Geofence Agent** — Latest geofence log found: heartbeat_2026-04-24.md. It is older than 7 days. Proof: `/home/rafa1215/memory/logs/geofencing/heartbeat_2026-04-24.md` age=90.4 days ago
+1. **Fitness Agent** — Latest fitness log found: daily_2026-05-22.md. It is older than 7 days. Proof: `/home/rafa1215/memory/logs/fitness/daily_2026-05-22.md` age=60.5 days ago
+2. **Finance Agent** — Latest finance log found: finance_agent_status_2026-04-24.md. It is older than 7 days. Proof: `/home/rafa1215/memory/logs/finance/finance_agent_status_2026-04-24.md` age=88.4 days ago
+3. **Geofence Agent** — Latest geofence log found: heartbeat_2026-04-24.md. It is older than 7 days. Proof: `/home/rafa1215/memory/logs/geofencing/heartbeat_2026-04-24.md` age=88.4 days ago
 
 ## Useful Discoveries
 
@@ -82,14 +82,14 @@ mkdir -p /home/rafa1215/memory/logs/geofencing && echo '# Geofence Heartbeat
 
 ## Source Files Checked
 
-- **system_health**: `/home/rafa1215/memory/logs/status/system_health_snapshot.md` age=47 minutes ago
-- **prediction_feed**: `/home/rafa1215/memory/logs/system/predictions/prediction_feed_2026-07-23.md` age=3.8 hours ago
+- **system_health**: `/home/rafa1215/memory/logs/status/system_health_snapshot.md` age=48 minutes ago
+- **prediction_feed**: `/home/rafa1215/memory/logs/system/predictions/prediction_feed_2026-07-21.md` age=3.8 hours ago
 - **absorption**: `/home/rafa1215/memory/public/absorption_last_success.json` age=9.4 hours ago
 - **movie_export**: `/home/rafa1215/memory/exports/movie_list_export.txt` age=9.3 hours ago
-- **fitness**: `/home/rafa1215/memory/logs/fitness/daily_2026-05-22.md` age=62.5 days ago
-- **finance**: `/home/rafa1215/memory/logs/finance/finance_agent_status_2026-04-24.md` age=90.4 days ago
-- **geofence**: `/home/rafa1215/memory/logs/geofencing/heartbeat_2026-04-24.md` age=90.4 days ago
-- **daily_movie_recommendation**: `/home/rafa1215/memory/logs/movies/daily_movie_recommendation_2026-07-23.md`
+- **fitness**: `/home/rafa1215/memory/logs/fitness/daily_2026-05-22.md` age=60.5 days ago
+- **finance**: `/home/rafa1215/memory/logs/finance/finance_agent_status_2026-04-24.md` age=88.4 days ago
+- **geofence**: `/home/rafa1215/memory/logs/geofencing/heartbeat_2026-04-24.md` age=88.4 days ago
+- **daily_movie_recommendation**: `/home/rafa1215/memory/logs/movies/daily_movie_recommendation_2026-07-21.md`
 
 ## Next-Level Wow Upgrade
 
