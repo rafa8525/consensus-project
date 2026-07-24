@@ -55,3 +55,6 @@ __pycache__/
 # Evidence stays local, but allow README so GitHub shows intent
 !memory/logs/evidence/
 !memory/logs/evidence/README.md
+
+# Dependencies
+node_modules/
