@@ -110568,9 +110568,3 @@ TypeError: run() missing 1 required positional argument: 'script'
 [2026-03-03 19:42:55] ---- Agent Evolution/Repair Cycle Complete ----
 [2026-03-03 19:42:55] OK: All subsystems executed
 [2026-03-03 19:42:55] ==== Master Control Loop Cycle Complete ====
-[2026-07-25 17:02:52] 💓 Heartbeat: restarting next cycle.
-[2026-07-25 17:02:52] ==== Master Control Loop Cycle Start ====
-[2026-07-25 17:02:52] ---- Guard Cycle Started ----
-[2026-07-25 17:02:52] ✅ Executed /home/rafa1215/consensus-project/tools/log_repair_guard.py successfully
-[2026-07-25 17:02:53] ❌ gmail_refresh_guard_v3 returned error code 2
-[2026-07-25 17:02:53] 🩺 Invoking self-repair sequence for gmail_refresh_guard_v3 ...
