@@ -98,10 +98,3 @@ OK: no likely hardcoded secret literals detected (env lookups and passthroughs i
 2026-01-15T21:08:35.344190+00:00 SKIP gate_days=27 last_run=2026-01-15T21:06:49.672740+00:00
 2026-01-15T21:39:00.697378+00:00 CALLER pid=998 ppid=1 cwd=/home/rafa1215/consensus-project argv=tools/security_audit_runner.py parent=bash
 2026-01-15T21:39:00.697378+00:00 SKIP gate_days=27 last_run=2026-01-15T21:06:49.672740+00:00
-[2026-07-25 16:02:34] ---- Starting Monthly Security Audit ----
-[2026-07-25 16:02:34] ✅ PASS: VPN logs present
-[2026-07-25 16:02:34] ✅ PASS: Cron file exists
-[2026-07-25 16:02:34] ✅ PASS: Simulation flag valid
-[2026-07-25 16:02:34] ✅ All audit checks passed.
-[2026-07-25 16:02:34] ---- Audit Complete ----
-
