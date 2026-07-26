@@ -16582,9 +16582,3 @@
 [2026-03-03 19:42:53] ✅ Simulated VPN activation successful (flag created).
 [2026-03-03 19:42:53] ---- Check complete: PASS (Simulated) ----
 
-[2026-07-26 06:07:12] ---- Starting VPN Auto-Detect/Activate check ----
-[2026-07-26 06:07:12] Simulating connection to SSID BART-WiFi
-[2026-07-26 06:07:12] ⚠️ VPN not active. Initiating simulation/fallback.
-[2026-07-26 06:07:12] ✅ Simulated VPN activation successful (flag created).
-[2026-07-26 06:07:12] ---- Check complete: PASS (Simulated) ----
-
