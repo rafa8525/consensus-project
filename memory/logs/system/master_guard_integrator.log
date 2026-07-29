@@ -19348,9 +19348,3 @@
 [2026-03-03 19:42:53] ✅ Completed guard: calendar_sync_guard_v3.py
 [2026-03-03 19:42:53] ✅ All guards executed successfully.
 
-[2026-07-29 14:02:11] ❌ Guard gmail_refresh_guard_v3.py failed with error:
-
-[2026-07-29 14:02:11] Starting guard: calendar_sync_guard_v3.py
-[2026-07-29 14:02:11] ✅ Completed guard: calendar_sync_guard_v3.py
-[2026-07-29 14:02:11] ✅ All guards executed successfully.
-
