@@ -438,121 +438,19 @@ def read_movie_status(ctx: Context) -> dict[str, int | str]:
 
 def detect_media(ctx: Context) -> None:
     c = read_movie_status(ctx)
-
-    total = sum(
-        int(c[k])
-        for k in (
-            "watched",
-            "removed",
-            "maybe",
-            "candidates",
-            "unknown",
-        )
-    )
-
-    # Read the verification queue separately from the authoritative
-    # watched/removed movie export. Pending titles are NOT treated as
-    # verified candidates.
-    verification_paths = [
-        ctx.memory_root / "state/streaming_verification_queue.json",
-        ctx.repo_root / "memory/state/streaming_verification_queue.json",
-    ]
-
-    pending_verification = 0
-    verification_source = None
-
-    for queue_path in verification_paths:
-        if not queue_path.is_file():
-            continue
-
-        try:
-            payload = json.loads(safe_read(queue_path))
-
-            pending_verification = int(
-                payload.get(
-                    "pending_count",
-                    len(payload.get("pending", [])),
-                )
-            )
-
-            verification_source = queue_path
-            break
-
-        except (ValueError, TypeError, json.JSONDecodeError):
-            continue
-
-    verified_candidates = int(c["candidates"])
-
+    total = sum(int(c[k]) for k in ("watched", "removed", "maybe", "candidates", "unknown"))
     ctx.findings.append(Finding(
-        "Media & Fun",
-        "HIGH" if total else "LOW",
-        (
-            f"Media summary: tracked={total}, "
-            f"watched={c['watched']}, "
-            f"suppressed/removed={c['removed']}, "
-            f"maybe={c['maybe']}, "
-            f"verified candidates={verified_candidates}, "
-            f"pending verification={pending_verification}, "
-            f"unknown={c['unknown']}; "
-            f"last watched={c['last_watched']}."
-        ),
-        (
-            "The feed separates verified stream-now candidates from "
-            "titles that still require streaming verification."
-        ),
-        (
-            "Refresh streaming verification when verified candidates "
-            "reach zero and pending titles exist."
-            if verified_candidates == 0 and pending_verification > 0
-            else None
-        ),
-        (
-            (str(verification_source),)
-            if verification_source
-            else ()
-        ),
+        "Media & Fun", "HIGH" if total else "LOW",
+        f"Media summary: tracked={total}, watched={c['watched']}, suppressed/removed={c['removed']}, maybe={c['maybe']}, candidates={c['candidates']}, unknown={c['unknown']}; last watched={c['last_watched']}.",
+        "The feed now exposes meaningful status totals instead of only reporting that the list is unchanged.",
+        "Refresh the verified U.S. streaming catalog only when candidates reach zero." if int(c["candidates"]) == 0 else None,
     ))
-
-    if verified_candidates == 0:
-        if pending_verification > 0:
-            ctx.findings.append(Finding(
-                "Media & Fun",
-                "MEDIUM",
-                (
-                    f"No verified streaming candidate is currently "
-                    f"available; {pending_verification} title(s) are "
-                    f"waiting for verification."
-                ),
-                (
-                    "Pending titles exist, but the recommendation gate "
-                    "correctly refuses to treat them as stream-now picks "
-                    "until current U.S. availability is proven."
-                ),
-                (
-                    "Verify the pending titles against a current U.S. "
-                    "streaming source; then promote only confirmed "
-                    "subscription/included/free titles."
-                ),
-                (
-                    (str(verification_source),)
-                    if verification_source
-                    else ()
-                ),
-            ))
-        else:
-            ctx.findings.append(Finding(
-                "Media & Fun",
-                "MEDIUM",
-                "No verified streaming candidate is currently available.",
-                (
-                    "The recommendation gate correctly rejects rent/buy-only, "
-                    "ambiguous, watched, suppressed, or unverified titles."
-                ),
-                (
-                    "Populate the streaming-verification queue and verify "
-                    "new candidates before the next recommendation cycle."
-                ),
-            ))
+    if int(c["candidates"]) == 0:
+        ctx.findings.append(Finding(
+            "Media & Fun", "MEDIUM", "No verified streaming candidate is currently available.",
+            "The recommendation gate correctly rejects rent/buy-only, ambiguous, watched, suppressed, or unverified titles.",
+            "Run the streaming-verification source refresh; do not bypass the gate with an unverified title.",
+        ))
 
 
 def dated_lines(text: str) -> Iterable[tuple[date, str]]:
