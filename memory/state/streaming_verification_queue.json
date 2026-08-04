@@ -1,0 +1,48 @@
+{
+  "generated": "2026-08-04T16:32:20.632113",
+  "pending_count": 3,
+  "pending": [
+    {
+      "title": "Constantine",
+      "year": 2005,
+      "status": "Needs Verification",
+      "reason": "Missing or stale current U.S. streaming proof",
+      "required_fields": [
+        "verified=true",
+        "platform",
+        "country=US",
+        "checked_date",
+        "verification_source",
+        "availability=subscription/included/free"
+      ]
+    },
+    {
+      "title": "Underworld",
+      "year": 2003,
+      "status": "Needs Verification",
+      "reason": "Missing or stale current U.S. streaming proof",
+      "required_fields": [
+        "verified=true",
+        "platform",
+        "country=US",
+        "checked_date",
+        "verification_source",
+        "availability=subscription/included/free"
+      ]
+    },
+    {
+      "title": "Hellboy",
+      "year": 2004,
+      "status": "Needs Verification",
+      "reason": "Missing or stale current U.S. streaming proof",
+      "required_fields": [
+        "verified=true",
+        "platform",
+        "country=US",
+        "checked_date",
+        "verification_source",
+        "availability=subscription/included/free"
+      ]
+    }
+  ]
+}

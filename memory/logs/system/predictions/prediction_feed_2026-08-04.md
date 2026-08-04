@@ -1,5 +1,5 @@
 # Prediction Feed – 2026-08-04
-Generated: 2026-08-04T15:43:09.148924+00:00
+Generated: 2026-08-04T16:43:11.091483+00:00
 Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
 
 ## Health/Fitness
@@ -12,21 +12,23 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
    - Reason: No grounded shopping-list, calendar, delivery, geofence, or task item was found; the old 'pick one small errand' filler was intentionally removed.
 
 ## Media & Fun
-1. [HIGH] Media summary: tracked=30, watched=23, suppressed/removed=7, maybe=0, candidates=0, unknown=0; last watched=Mission: Impossible – The Final Reckoning.
-   - Reason: The feed now exposes meaningful status totals instead of only reporting that the list is unchanged.
-   - Action: Refresh the verified U.S. streaming catalog only when candidates reach zero.
-2. [MEDIUM] No verified streaming candidate is currently available.
-   - Reason: The recommendation gate correctly rejects rent/buy-only, ambiguous, watched, suppressed, or unverified titles.
-   - Action: Run the streaming-verification source refresh; do not bypass the gate with an unverified title.
+1. [HIGH] Media summary: tracked=30, watched=23, suppressed/removed=7, maybe=0, verified candidates=0, pending verification=3, unknown=0; last watched=Mission: Impossible – The Final Reckoning.
+   - Reason: The feed separates verified stream-now candidates from titles that still require streaming verification.
+   - Action: Refresh streaming verification when verified candidates reach zero and pending titles exist.
+   - Evidence: /home/rafa1215/memory/state/streaming_verification_queue.json
+2. [MEDIUM] No verified streaming candidate is currently available; 3 title(s) are waiting for verification.
+   - Reason: Pending titles exist, but the recommendation gate correctly refuses to treat them as stream-now picks until current U.S. availability is proven.
+   - Action: Verify the pending titles against a current U.S. streaming source; then promote only confirmed subscription/included/free titles.
+   - Evidence: /home/rafa1215/memory/state/streaming_verification_queue.json
 
 ## Family/Events
 1. [LOW] No current family event requires action.
    - Reason: No valid current or future family-specific reminder was found.
 
 ## System/Project
-1. [MEDIUM] System health: OK (0 minutes old). Details: The snapshot does not state the component-level cause.
+1. [HIGH] System health: OK (0 minutes old). Details: The snapshot does not state the component-level cause.
    - Reason: The prediction feed now extracts warning details from the health snapshot instead of emitting only WARN/RECENT.
-   - Action: Open the snapshot and latest monitor log; repair the first failing upstream component, then rerun this feed.
+   - Action: No corrective action required.
    - Evidence: /home/rafa1215/memory/logs/status/system_health_snapshot.md
 
 ## 24–72 Hour Predictions

@@ -1,0 +1,77 @@
+{
+  "task_type": "streaming_verification",
+  "assigned_agent": "Researcher",
+  "generated_utc": "2026-08-04T16:44:50.847200+00:00",
+  "status": "ASSIGNED",
+  "priority": "HIGH",
+  "input_queue": "/home/rafa1215/memory/state/streaming_verification_queue.json",
+  "objective": "Verify current United States stream-now availability for every pending movie candidate.",
+  "verification_rules": {
+    "country": "US",
+    "allowed_access": [
+      "subscription",
+      "included",
+      "free",
+      "free with ads"
+    ],
+    "reject": [
+      "rent only",
+      "buy only",
+      "unknown",
+      "ambiguous",
+      "stale availability"
+    ],
+    "required_evidence": [
+      "platform",
+      "checked_date",
+      "verification_source",
+      "availability"
+    ],
+    "maximum_age_days": 7,
+    "never_guess_platform": true
+  },
+  "pending": [
+    {
+      "title": "Constantine",
+      "year": 2005,
+      "status": "Needs Verification",
+      "reason": "Missing or stale current U.S. streaming proof",
+      "required_fields": [
+        "verified=true",
+        "platform",
+        "country=US",
+        "checked_date",
+        "verification_source",
+        "availability=subscription/included/free"
+      ]
+    },
+    {
+      "title": "Underworld",
+      "year": 2003,
+      "status": "Needs Verification",
+      "reason": "Missing or stale current U.S. streaming proof",
+      "required_fields": [
+        "verified=true",
+        "platform",
+        "country=US",
+        "checked_date",
+        "verification_source",
+        "availability=subscription/included/free"
+      ]
+    },
+    {
+      "title": "Hellboy",
+      "year": 2004,
+      "status": "Needs Verification",
+      "reason": "Missing or stale current U.S. streaming proof",
+      "required_fields": [
+        "verified=true",
+        "platform",
+        "country=US",
+        "checked_date",
+        "verification_source",
+        "availability=subscription/included/free"
+      ]
+    }
+  ]
+}

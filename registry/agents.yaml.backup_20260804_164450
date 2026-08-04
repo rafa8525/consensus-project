@@ -12,5 +12,3 @@ agents:
     plugin: context_weaver
   - name: AI Role Assigner
     plugin: role_assigner
-  - name: AI Streaming Verification Researcher
-    plugin: streaming_verifier
