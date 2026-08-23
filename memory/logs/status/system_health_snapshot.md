@@ -1,5 +1,5 @@
 # System Health Snapshot
-- Generated: 2026-08-23T00:43:10.444175+00:00
+- Generated: 2026-08-23T01:43:10.566272+00:00
 - Dry run: false
 - Agent: core_monitors_bundle.py replacement-v2026-07-10-remove-obsolete-absorb-runner
 - mem_root: /home/rafa1215/memory
