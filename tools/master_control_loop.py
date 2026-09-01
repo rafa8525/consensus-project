@@ -46,20 +46,34 @@ def run_module(module_name: str, func_name: str = "run"):
     """Try to import and execute a module; fallback to standalone script."""
     try:
         mod = importlib.import_module(module_name)
+        script_path = os.path.join(TOOLS_DIR, module_name.split(".")[-1] + ".py")
+
         if hasattr(mod, func_name):
-            getattr(mod, func_name)()
-            log(f"✅ {module_name}.{func_name} executed successfully")
-        else:
-            script_path = os.path.join(TOOLS_DIR, module_name.split(".")[-1] + ".py")
-            if os.path.isfile(script_path):
-                result = subprocess.run(["/usr/bin/python3", script_path])
-                if result.returncode == 0:
-                    log(f"✅ Executed {script_path} successfully")
-                else:
-                    log(f"❌ {module_name} returned error code {result.returncode}")
-                    trigger_repair(module_name)
+            import inspect
+            func = getattr(mod, func_name)
+            required = [
+                p for p in inspect.signature(func).parameters.values()
+                if p.default is inspect.Parameter.empty
+                and p.kind in (
+                    inspect.Parameter.POSITIONAL_ONLY,
+                    inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                )
+            ]
+
+            if not required:
+                func()
+                log(f"✅ {module_name}.{func_name} executed successfully")
+                return
+
+        if os.path.isfile(script_path):
+            result = subprocess.run(["/usr/bin/python3", script_path])
+            if result.returncode == 0:
+                log(f"✅ Executed {script_path} successfully")
             else:
-                log(f"⚠️ {module_name}: no run() or script found")
+                log(f"❌ {module_name} returned error code {result.returncode}")
+                trigger_repair(module_name)
+        else:
+            log(f"⚠️ {module_name}: no callable run() or script found")
     except Exception as e:
         log(f"❌ Error running {module_name}: {e}")
         trigger_repair(module_name)
