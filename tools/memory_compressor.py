@@ -94,3 +94,4 @@ if __name__ == "__main__":
     except Exception as e:
 # Mutation_b1b783
         heartbeat_log(f"ERROR: Memory compressor crashed — {e}")
+        raise SystemExit(1)
