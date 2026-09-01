@@ -19348,11 +19348,3 @@
 [2026-03-03 19:42:53] ✅ Completed guard: calendar_sync_guard_v3.py
 [2026-03-03 19:42:53] ✅ All guards executed successfully.
 
-[2026-09-01 19:02:21] ---- Master Guard Integrator Started ----
-[2026-09-01 19:02:21] Starting guard: gmail_refresh_guard_v3.py
-[2026-09-01 19:02:21] ❌ Guard gmail_refresh_guard_v3.py failed with error:
-
-[2026-09-01 19:02:21] Starting guard: calendar_sync_guard_v3.py
-[2026-09-01 19:02:21] ✅ Completed guard: calendar_sync_guard_v3.py
-[2026-09-01 19:02:21] ✅ All guards executed successfully.
-
