@@ -1,0 +1,46 @@
+{
+  "repeat_alert_minutes": 360,
+  "send_recovery_sms": true,
+  "state_file": "/home/rafa1215/memory/state/task_failure_guardian_state.json",
+  "heartbeat_file": "/home/rafa1215/memory/logs/system/task_failure_guardian_heartbeat.json",
+  "alert_log": "/home/rafa1215/memory/logs/system/task_failure_guardian_alerts.log",
+  "tasks": [
+    {
+      "name": "Hourly Core Monitor",
+      "enabled": true,
+      "log": "/home/rafa1215/memory/logs/system/core_monitor_hourly_task.log",
+      "max_age_minutes": 95,
+      "tail_lines": 350
+    },
+    {
+      "name": "GitHub Write Assurance",
+      "enabled": true,
+      "log": "/home/rafa1215/memory/logs/system/github_write_assurance_task.log",
+      "max_age_minutes": 95,
+      "tail_lines": 250
+    },
+    {
+      "name": "Daily Agent WOW Report",
+      "enabled": true,
+      "log": "/home/rafa1215/memory/logs/system/exec/daily_agent_wow_report_task.log",
+      "max_age_minutes": 1560,
+      "tail_lines": 200
+    }
+  ],
+  "file_checks": [
+    {
+      "name": "Memory Absorption Marker",
+      "enabled": true,
+      "path": "/home/rafa1215/memory/public/absorption_last_success.json",
+      "max_age_minutes": 1500,
+      "json_status_key": "status",
+      "json_status_value": "ok"
+    },
+    {
+      "name": "Prediction Feed",
+      "enabled": false,
+      "path": "/home/rafa1215/memory/logs/system/predictions/prediction_feed_latest.md",
+      "max_age_minutes": 1500
+    }
+  ]
+}
