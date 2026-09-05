@@ -1,5 +1,5 @@
 # Prediction Feed – 2026-09-05
-Generated: 2026-09-05T05:43:10.589992+00:00
+Generated: 2026-09-05T06:43:11.133205+00:00
 Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
 
 ## Health/Fitness
@@ -12,7 +12,7 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
    - Reason: No grounded shopping-list, calendar, delivery, geofence, or task item was found; the old 'pick one small errand' filler was intentionally removed.
 
 ## Media & Fun
-1. [HIGH] Media summary: tracked=30, watched=23, suppressed/removed=7, maybe=0, verified candidates=0, pending verification=3, unknown=0; last watched=Mission: Impossible – The Final Reckoning.
+1. [HIGH] Media summary: tracked=20, watched=15, suppressed/removed=5, maybe=0, verified candidates=0, pending verification=3, unknown=0; last watched=Indiana Jones and the Dial of Destiny.
    - Reason: The feed separates verified stream-now candidates from titles that still require streaming verification.
    - Action: Refresh streaming verification when verified candidates reach zero and pending titles exist.
    - Evidence: /home/rafa1215/memory/state/streaming_verification_queue.json
