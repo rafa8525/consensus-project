@@ -65,3 +65,5 @@ memory/config/*.pem
 calendar/*.ics
 063025chatgptmemoryfull.txt
 memory/063025chatgptmemoryfull.txt
+
+memory/config/credential_vault.json

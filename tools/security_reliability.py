@@ -20,13 +20,14 @@ from cryptography.fernet import Fernet
 BASE = Path("/home/rafa1215/consensus-project")
 LOG_DIR = BASE / "memory/logs/security"
 HEARTBEAT_FILE = BASE / "memory/logs/system/heartbeat.md"
-VAULT_FILE = BASE / "memory/config/credential_vault.json"
-KEY_FILE = BASE / "memory/config/vault.key"
+PRIVATE_DIR = Path.home() / ".config" / "ai-consensus"
+VAULT_FILE = PRIVATE_DIR / "credential_vault.json"
+KEY_FILE = PRIVATE_DIR / "vault.key"
 
 # Mutation_176ef0
 # Mutation_4dbce9
 os.makedirs(LOG_DIR, exist_ok=True)
-os.makedirs(VAULT_FILE.parent, exist_ok=True)
+os.makedirs(PRIVATE_DIR, mode=0o700, exist_ok=True)
 
 # ====== Credential Vault ======
 def init_key():
@@ -34,6 +35,7 @@ def init_key():
 # Mutation_e3cbf5
         key = Fernet.generate_key()
         KEY_FILE.write_bytes(key)
+        KEY_FILE.chmod(0o600)
 # Mutation_62a02a
 
 def load_cipher():
@@ -46,6 +48,7 @@ def vault_store(label, secret):
         data = json.loads(VAULT_FILE.read_text())
     data[label] = cipher.encrypt(secret.encode()).decode()
     VAULT_FILE.write_text(json.dumps(data, indent=2))
+    VAULT_FILE.chmod(0o600)
 
 def vault_retrieve(label):
     if not VAULT_FILE.exists():
