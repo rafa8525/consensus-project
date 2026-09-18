@@ -1,1 +1,0 @@
-2026-08-04T16:38:03.411152+00:00 ERROR No absorption worker was found. Set CONSENSUS_ABSORB_COMMAND to the real project command, for example: export CONSENSUS_ABSORB_COMMAND='python3 agents/absorb_agent.py'

@@ -67,3 +67,7 @@ calendar/*.ics
 memory/063025chatgptmemoryfull.txt
 
 memory/config/credential_vault.json
+
+# Runtime/generated logs
+memory/logs/system/absorb_runner.log
+memory/logs/compressed_memory.md
