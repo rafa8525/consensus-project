@@ -1,0 +1,168 @@
+{
+  "active_branch": "v1.1-dev",
+  "critical_paths": [
+    {
+      "exists": true,
+      "is_dir": true,
+      "mtime_utc": "2026-09-18T20:42:16.304498+00:00",
+      "path": "agents",
+      "size": 4096
+    },
+    {
+      "exists": true,
+      "is_dir": true,
+      "mtime_utc": "2026-09-19T19:01:50.113658+00:00",
+      "path": "memory",
+      "size": 4096
+    },
+    {
+      "exists": true,
+      "is_dir": true,
+      "mtime_utc": "2026-09-18T18:41:09.834749+00:00",
+      "path": "logs",
+      "size": 4096
+    },
+    {
+      "exists": true,
+      "is_dir": false,
+      "mtime_utc": "2026-09-18T20:42:17.220511+00:00",
+      "path": "requirements.txt",
+      "size": 39
+    }
+  ],
+  "generated_at_utc": "2026-09-19T19:18:39.112177+00:00",
+  "git": {
+    "last_commit": {
+      "ok": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "1322f9b470f12499fe4390489e4710aa3bf5f2d8|2026-09-19T19:01:57+00:00|Update GitHub write assurance proof"
+    },
+    "origin_reachable": {
+      "ok": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "b67f203ef1f08b32c7ce67966e3479e2c48f06f7\tHEAD"
+    },
+    "status": {
+      "ok": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "M memory/logs/system/agent_evolution_cycle.log\n M memory/logs/system/agent_self_repair.log\n M memory/logs/system/fitness_integration.log\n M memory/logs/system/heartbeat.md\n M memory/logs/system/knowledge_sharing_validation.log\n M memory/logs/system/master_control_loop.log\n M memory/logs/system/master_guard_integrator.log\n M memory/logs/system/progress_evaluation.log\n M memory/logs/system/security_audit.log\n M memory/logs/system/vpn_cron.log\n M memory/logs/system/vpn_simulated_active.flag\n M memory/logs/system/vpn_test.log\n M memory/security_audit_schedule.txt"
+    },
+    "unresolved_merge_conflict": false
+  },
+  "pythonanywhere_schedule": {
+    "available": true,
+    "health_task": {
+      "enabled": true,
+      "found": true,
+      "matching_task_ids": [
+        1521711
+      ]
+    },
+    "tasks": [
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 18,
+        "id": 1339843,
+        "interval": "daily",
+        "is_health_task": false,
+        "minute": 5
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 18,
+        "id": 1339844,
+        "interval": "daily",
+        "is_health_task": false,
+        "minute": 10
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 8,
+        "id": 1350443,
+        "interval": "daily",
+        "is_health_task": false,
+        "minute": 16
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": null,
+        "id": 1350476,
+        "interval": "hourly",
+        "is_health_task": false,
+        "minute": 51
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 10,
+        "id": 1350480,
+        "interval": "daily",
+        "is_health_task": false,
+        "minute": 13
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 6,
+        "id": 1360771,
+        "interval": "daily",
+        "is_health_task": false,
+        "minute": 0
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 3,
+        "id": 1397202,
+        "interval": "daily",
+        "is_health_task": false,
+        "minute": 30
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": null,
+        "id": 1406340,
+        "interval": "hourly",
+        "is_health_task": false,
+        "minute": 43
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": null,
+        "id": 1413907,
+        "interval": "hourly",
+        "is_health_task": false,
+        "minute": 1
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": null,
+        "id": 1509276,
+        "interval": "hourly",
+        "is_health_task": false,
+        "minute": 50
+      },
+      {
+        "description": "",
+        "enabled": true,
+        "hour": 7,
+        "id": 1521711,
+        "interval": "daily",
+        "is_health_task": true,
+        "minute": 2
+      }
+    ]
+  },
+  "schema_version": 3,
+  "source": "pythonanywhere"
+}
