@@ -4,6 +4,11 @@
 Publishes logs/system/pythonanywhere_health.json to origin/main without merging
 or rebasing the live PythonAnywhere branch. No secrets or file contents are
 included in the snapshot.
+
+Source-of-truth rules:
+- runtime execution evidence comes from PythonAnywhere runtime state;
+- GitHub commit activity is repository evidence, not agent-execution evidence;
+- legacy heartbeat/knowledge-validation logs are not authoritative.
 """
 from __future__ import annotations
 
@@ -12,17 +17,24 @@ import os
 import shutil
 import subprocess
 import tempfile
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path.home() / "consensus-project"
 OUT = REPO / "logs" / "system" / "pythonanywhere_health.json"
 EXPECTED_HEALTH_MARKER = "run_pythonanywhere_health_bridge.sh"
+ACS01_STATE = REPO / "memory" / "agents" / "state.json"
+ACS01_MAX_AGE_SECONDS = 36 * 60 * 60
 CRITICAL_PATHS = [
     REPO / "agents",
     REPO / "memory",
     REPO / "logs",
     REPO / "requirements.txt",
+]
+KNOWLEDGE_PATHS = [
+    REPO / "memory",
+    REPO / "memory" / "agents",
 ]
 
 def run(cmd, cwd=REPO, timeout=30):
@@ -44,6 +56,57 @@ def path_meta(path):
     except FileNotFoundError:
         return {"path": str(path.relative_to(REPO)), "exists": False}
 
+def acs01_execution_evidence():
+    """Read Supervisor/ACS-01 runtime evidence without inventing a run."""
+    base = {
+        "agent": "ACS-01",
+        "runtime_component": "agents.supervisor.Supervisor",
+        "cadence": "daily",
+        "evidence_source": "memory/agents/state.json:last_supervisor_ts",
+        "verified": False,
+        "status": "missing",
+    }
+    try:
+        raw = json.loads(ACS01_STATE.read_text(encoding="utf-8"))
+        ts = raw.get("last_supervisor_ts")
+        if not isinstance(ts, (int, float)) or ts <= 0:
+            return base
+        age = max(0.0, time.time() - float(ts))
+        base.update({
+            "last_execution_utc": datetime.fromtimestamp(float(ts), timezone.utc).isoformat(),
+            "age_seconds": round(age, 1),
+            "verified": True,
+            "status": "current" if age <= ACS01_MAX_AGE_SECONDS else "stale",
+            "stale_after_seconds": ACS01_MAX_AGE_SECONDS,
+        })
+        return base
+    except FileNotFoundError:
+        return base
+    except Exception as exc:
+        base["status"] = "unreadable"
+        base["error_type"] = type(exc).__name__
+        return base
+
+def knowledge_validation():
+    """Validate current knowledge roots and explicitly retire obsolete checks."""
+    current = [path_meta(p) for p in KNOWLEDGE_PATHS]
+    ok = all(item.get("exists") for item in current)
+    return {
+        "status": "ok" if ok else "attention",
+        "authoritative_runtime_roots": current,
+        "legacy_checks": {
+            "heartbeat.log": "deprecated; not execution evidence",
+            "knowledge_sharing_validation.log": "deprecated; historical only",
+            "centralized_knowledge_base.txt": "deprecated; absence is not a failure",
+            "AI Consensus System Project.txt": "deprecated; absence is not a failure",
+        },
+        "source_of_truth": {
+            "agent_execution": "runtime state written by the executing agent",
+            "infrastructure_health": "logs/system/pythonanywhere_health.json",
+            "repository_activity": "Git history; never substitute for agent execution",
+        },
+    }
+
 def pythonanywhere_schedule():
     token = os.environ.get("API_TOKEN")
     username = os.environ.get("USER")
@@ -61,37 +124,53 @@ def pythonanywhere_schedule():
 
         sanitized = []
         matches = []
+        acs01_matches = []
         for task in r.json():
             command = str(task.get("command") or "")
             description = str(task.get("description") or "")
             is_health = EXPECTED_HEALTH_MARKER in command or "pythonanywhere health" in description.lower()
+            is_acs01 = (
+                "agents.supervisor" in command
+                or "agents/supervisor.py" in command
+                or "supervisor.py" in command
+                or "acs-01" in description.lower()
+            )
             item = {"id": task.get("id"), "enabled": task.get("enabled"),
                     "interval": task.get("interval"), "hour": task.get("hour"),
                     "minute": task.get("minute"), "description": description,
-                    "is_health_task": is_health}
+                    "is_health_task": is_health, "is_acs01_task": is_acs01}
             sanitized.append(item)
             if is_health:
                 matches.append(item)
+            if is_acs01:
+                acs01_matches.append(item)
 
         enabled_matches = [x for x in matches if x.get("enabled") is True]
+        enabled_acs01 = [x for x in acs01_matches if x.get("enabled") is True]
         return {"available": True, "tasks": sanitized,
                 "health_task": {"found": bool(matches),
                                 "enabled": bool(enabled_matches),
-                                "matching_task_ids": [x.get("id") for x in matches]}}
+                                "matching_task_ids": [x.get("id") for x in matches]},
+                "acs01_task": {"found": bool(acs01_matches),
+                               "enabled": bool(enabled_acs01),
+                               "matching_task_ids": [x.get("id") for x in acs01_matches]}}
     except Exception as exc:
         return {"available": False, "reason": type(exc).__name__,
-                "health_task": {"found": False, "enabled": False}}
+                "health_task": {"found": False, "enabled": False},
+                "acs01_task": {"found": False, "enabled": False}}
 
 git_status = run(["git", "status", "--porcelain=v1", "--untracked-files=no"])
 status_text = git_status.get("stdout", "")
 conflict = any(line[:2] in {"DD","AU","UD","UA","DU","AA","UU"} for line in status_text.splitlines())
 
 snapshot = {
-    "schema_version": 3,
+    "schema_version": 4,
     "generated_at_utc": datetime.now(timezone.utc).isoformat(),
     "source": "pythonanywhere",
     "active_branch": run(["git", "branch", "--show-current"]).get("stdout", ""),
     "critical_paths": [path_meta(p) for p in CRITICAL_PATHS],
+    "acs01_orchestrator": acs01_execution_evidence(),
+    "knowledge_validation": knowledge_validation(),
     "git": {
         "status": git_status,
         "unresolved_merge_conflict": conflict,
