@@ -17,6 +17,8 @@ class SelfImprover(Agent):
     name = "self_improver"
 
     def run(self) -> Dict[str, Any]:
+        # Runtime directories are generated state and may not exist in a clean checkout.
+        PATCH_DIR.mkdir(parents=True, exist_ok=True)
         suggestions = []
 
         # Bash hardening for tools/*.sh

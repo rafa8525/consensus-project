@@ -1,7 +1,7 @@
 # GitHub Write Assurance
 
-- Status: OK
-- Generated UTC: 2026-09-21T18:01:16+00:00
+- Status: ACTION REQUIRED
+- Generated UTC: 2026-09-21T19:01:22+00:00
 - Agent: github_write_assurance.py v2026-05-15-clean-final-proof-v3
 - Repo root: `/home/rafa1215/consensus-project`
 - Memory root: `/home/rafa1215/memory`
@@ -14,18 +14,31 @@
 - Mirrored files copied: 1515
 - Mirrored files skipped by safety rules: 22
 - Broken symlinks skipped safely: 1
-- Stale repo mirror files removed: 10
+- Stale repo mirror files removed: 13
 - Commit created: `true`
-- Commit hash: `5fdd6d825e4b6c218a883615a83f565a7e6c3fce`
+- Commit hash: `b87865a4537ce71d4c90a4bd081ec5cd697fcc45`
 - Final proof commit hash: ``
-- Push OK: `true`
-- Remote verified: `true`
+- Push OK: `false`
+- Remote verified: `false`
 
 ## Git status after run
 ```text
-pending final proof commit
+clean
 ```
 
 ## Warnings
 - skipped symlink file: /home/rafa1215/memory/logs/system/absorption/last_success.json
 - skipped broken symlink: /home/rafa1215/memory/quarantine_symlinks/prediction_feed_summary_2026-01-05.md.20260108_215204
+
+## Errors
+- git push failed
+stdout=
+stderr=To github.com:rafa8525/consensus-project.git
+ ! [rejected]            HEAD -> v1.1-dev (fetch first)
+error: failed to push some refs to 'github.com:rafa8525/consensus-project.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
