@@ -133,6 +133,7 @@ def pythonanywhere_schedule():
                 "agents.supervisor" in command
                 or "agents/supervisor.py" in command
                 or "supervisor.py" in command
+                or "run_acs01_supervisor.sh" in command
                 or "acs-01" in description.lower()
             )
             item = {"id": task.get("id"), "enabled": task.get("enabled"),
