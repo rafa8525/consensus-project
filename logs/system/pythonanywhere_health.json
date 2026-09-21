@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 89.6,
+    "age_seconds": 470.8,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
@@ -11,6 +11,62 @@
     "verified": true
   },
   "active_branch": "v1.1-dev",
+  "agents": {
+    "ACS-01": {
+      "age_seconds": 470.8,
+      "agent": "ACS-01",
+      "cadence": "daily",
+      "evidence_source": "memory/agents/state.json:last_supervisor_ts",
+      "last_execution_utc": "2026-09-21T19:02:29.207677+00:00",
+      "runtime_component": "agents.supervisor.Supervisor",
+      "stale_after_seconds": 129600,
+      "status": "current",
+      "verified": true
+    },
+    "ACS-02": {
+      "age_seconds": 3594.7,
+      "agent": "ACS-02",
+      "evidence_source": "/home/rafa1215/consensus-project/memory/public/absorption_last_success.json",
+      "last_execution_utc": "2026-09-21T18:10:25.366473+00:00",
+      "role": "Knowledge Cycle",
+      "stale_after_seconds": 129600,
+      "status": "current",
+      "verified": true
+    },
+    "ACS-03": {
+      "age_seconds": 17450846.3,
+      "agent": "ACS-03",
+      "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/fitness_integration.log",
+      "last_execution_utc": "2026-03-03T19:42:53.778944+00:00",
+      "role": "Health Cycle",
+      "stale_after_seconds": 129600,
+      "status": "stale",
+      "verified": true
+    },
+    "ACS-04": {
+      "age_seconds": 4156314.4,
+      "agent": "ACS-04",
+      "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/infrastructure_guardian_status.json",
+      "last_execution_utc": "2026-08-04T16:38:25.642957+00:00",
+      "role": "Infrastructure Cycle",
+      "stale_after_seconds": 129600,
+      "status": "stale",
+      "verified": false
+    },
+    "ACS-05": {
+      "agent": "ACS-05",
+      "evidence_candidates": [
+        "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian_state.json",
+        "/home/rafa1215/memory/logs/system/continuity_guardian_state.json",
+        "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian.log",
+        "/home/rafa1215/memory/logs/system/continuity_guardian.log"
+      ],
+      "role": "Continuity Cycle",
+      "stale_after_seconds": 129600,
+      "status": "missing",
+      "verified": false
+    }
+  },
   "critical_paths": [
     {
       "exists": true,
@@ -41,7 +97,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-09-21T19:03:58.779061+00:00",
+  "generated_at_utc": "2026-09-21T19:10:20.022861+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -53,7 +109,7 @@
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "a08998f7ade22b4a2d026a881ae39ca5ef2619a7\tHEAD"
+      "stdout": "630f0cada2079b170192bcd88a28f3378a5526c0\tHEAD"
     },
     "status": {
       "ok": true,
@@ -232,6 +288,6 @@
       }
     ]
   },
-  "schema_version": 4,
+  "schema_version": 5,
   "source": "pythonanywhere"
 }
