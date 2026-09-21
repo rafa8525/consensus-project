@@ -26,6 +26,12 @@ OUT = REPO / "logs" / "system" / "pythonanywhere_health.json"
 EXPECTED_HEALTH_MARKER = "run_pythonanywhere_health_bridge.sh"
 ACS01_STATE = REPO / "memory" / "agents" / "state.json"
 ACS01_MAX_AGE_SECONDS = 36 * 60 * 60
+ACS_STATE_FILES = {
+    "ACS-02": REPO / "memory" / "agents" / "acs02_state.json",
+    "ACS-03": REPO / "memory" / "agents" / "acs03_state.json",
+    "ACS-04": REPO / "memory" / "agents" / "acs04_state.json",
+    "ACS-05": REPO / "memory" / "agents" / "acs05_state.json",
+}
 ACS_DEFINITIONS = {
     "ACS-02": {
         "role": "Knowledge Cycle",
