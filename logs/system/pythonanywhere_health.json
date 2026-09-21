@@ -1,4 +1,12 @@
 {
+  "acs01_orchestrator": {
+    "agent": "ACS-01",
+    "cadence": "daily",
+    "evidence_source": "memory/agents/state.json:last_supervisor_ts",
+    "runtime_component": "agents.supervisor.Supervisor",
+    "status": "missing",
+    "verified": false
+  },
   "active_branch": "v1.1-dev",
   "critical_paths": [
     {
@@ -11,7 +19,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-09-20T06:01:55.332709+00:00",
+      "mtime_utc": "2026-09-21T06:02:00.285163+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -30,19 +38,19 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-09-20T07:02:19.234466+00:00",
+  "generated_at_utc": "2026-09-21T07:02:23.043646+00:00",
   "git": {
     "last_commit": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "4082bfc0b39c3ad18eedd7050c7f4e4936ee8ff1|2026-09-20T07:02:02+00:00|Update GitHub write assurance proof"
+      "stdout": "8562df044a6b925c6640c3b404a8971d981ddc38|2026-09-21T07:02:10+00:00|Update GitHub write assurance proof"
     },
     "origin_reachable": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "967d7291f9cc52309e0f6c20de4fa949146994c4\tHEAD"
+      "stdout": "c128c3287b758c43f3285f941ea20e7d6378bba8\tHEAD"
     },
     "status": {
       "ok": true,
@@ -52,7 +60,42 @@
     },
     "unresolved_merge_conflict": false
   },
+  "knowledge_validation": {
+    "authoritative_runtime_roots": [
+      {
+        "exists": true,
+        "is_dir": true,
+        "mtime_utc": "2026-09-21T06:02:00.285163+00:00",
+        "path": "memory",
+        "size": 4096
+      },
+      {
+        "exists": true,
+        "is_dir": true,
+        "mtime_utc": "2026-05-15T21:51:50.574133+00:00",
+        "path": "memory/agents",
+        "size": 4096
+      }
+    ],
+    "legacy_checks": {
+      "AI Consensus System Project.txt": "deprecated; absence is not a failure",
+      "centralized_knowledge_base.txt": "deprecated; absence is not a failure",
+      "heartbeat.log": "deprecated; not execution evidence",
+      "knowledge_sharing_validation.log": "deprecated; historical only"
+    },
+    "source_of_truth": {
+      "agent_execution": "runtime state written by the executing agent",
+      "infrastructure_health": "logs/system/pythonanywhere_health.json",
+      "repository_activity": "Git history; never substitute for agent execution"
+    },
+    "status": "ok"
+  },
   "pythonanywhere_schedule": {
+    "acs01_task": {
+      "enabled": false,
+      "found": false,
+      "matching_task_ids": []
+    },
     "available": true,
     "health_task": {
       "enabled": true,
@@ -68,6 +111,7 @@
         "hour": 18,
         "id": 1339843,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 5
       },
@@ -77,6 +121,7 @@
         "hour": 18,
         "id": 1339844,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 10
       },
@@ -86,6 +131,7 @@
         "hour": 8,
         "id": 1350443,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 16
       },
@@ -95,6 +141,7 @@
         "hour": null,
         "id": 1350476,
         "interval": "hourly",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 51
       },
@@ -104,6 +151,7 @@
         "hour": 10,
         "id": 1350480,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 13
       },
@@ -113,6 +161,7 @@
         "hour": 6,
         "id": 1360771,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 0
       },
@@ -122,6 +171,7 @@
         "hour": 3,
         "id": 1397202,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 30
       },
@@ -131,6 +181,7 @@
         "hour": null,
         "id": 1406340,
         "interval": "hourly",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 43
       },
@@ -140,6 +191,7 @@
         "hour": null,
         "id": 1413907,
         "interval": "hourly",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 1
       },
@@ -149,6 +201,7 @@
         "hour": null,
         "id": 1509276,
         "interval": "hourly",
+        "is_acs01_task": false,
         "is_health_task": false,
         "minute": 50
       },
@@ -158,11 +211,12 @@
         "hour": 7,
         "id": 1521711,
         "interval": "daily",
+        "is_acs01_task": false,
         "is_health_task": true,
         "minute": 2
       }
     ]
   },
-  "schema_version": 3,
+  "schema_version": 4,
   "source": "pythonanywhere"
 }
