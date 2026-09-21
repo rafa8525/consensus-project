@@ -26,6 +26,52 @@ OUT = REPO / "logs" / "system" / "pythonanywhere_health.json"
 EXPECTED_HEALTH_MARKER = "run_pythonanywhere_health_bridge.sh"
 ACS01_STATE = REPO / "memory" / "agents" / "state.json"
 ACS01_MAX_AGE_SECONDS = 36 * 60 * 60
+ACS_DEFINITIONS = {
+    "ACS-02": {
+        "role": "Knowledge Cycle",
+        "paths": [
+            REPO / "memory" / "public" / "absorption_last_success.json",
+            Path.home() / "memory" / "public" / "absorption_last_success.json",
+        ],
+        "json_ts": "last_success_utc",
+        "json_status": "status",
+        "max_age": 36 * 60 * 60,
+    },
+    "ACS-03": {
+        "role": "Health Cycle",
+        "paths": [
+            REPO / "memory" / "logs" / "system" / "fitness_integration.log",
+            Path.home() / "memory" / "logs" / "system" / "fitness_integration.log",
+        ],
+        "max_age": 36 * 60 * 60,
+        "success_markers": ["PASS", "Fitness logs are current"],
+        "failure_markers": ["ATTENTION REQUIRED", "ERROR", "FAIL"],
+    },
+    "ACS-04": {
+        "role": "Infrastructure Cycle",
+        "paths": [
+            REPO / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
+            Path.home() / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
+            REPO / "memory" / "logs" / "status" / "system_health_snapshot.md",
+            Path.home() / "memory" / "logs" / "status" / "system_health_snapshot.md",
+        ],
+        "max_age": 36 * 60 * 60,
+        "success_markers": ['"status": "healthy"', '"status": "ok"', "- Overall: ok"],
+        "failure_markers": ['"status": "critical"', '"status": "degraded"', "- Overall: warn"],
+    },
+    "ACS-05": {
+        "role": "Continuity Cycle",
+        "paths": [
+            REPO / "memory" / "logs" / "system" / "continuity_guardian_state.json",
+            Path.home() / "memory" / "logs" / "system" / "continuity_guardian_state.json",
+            REPO / "memory" / "logs" / "system" / "continuity_guardian.log",
+            Path.home() / "memory" / "logs" / "system" / "continuity_guardian.log",
+        ],
+        "max_age": 36 * 60 * 60,
+        "success_markers": ['"status": "ok"', '"critical": []', "CRITICAL=0", "critical=0"],
+        "failure_markers": ['"status": "critical"', "CRITICAL=", "critical="],
+    },
+}
 CRITICAL_PATHS = [
     REPO / "agents",
     REPO / "memory",
@@ -86,6 +132,78 @@ def acs01_execution_evidence():
         base["status"] = "unreadable"
         base["error_type"] = type(exc).__name__
         return base
+
+
+def _first_existing(paths):
+    for path in paths:
+        if path.exists():
+            return path
+    return None
+
+def _iso_from_value(value):
+    if isinstance(value, (int, float)):
+        return datetime.fromtimestamp(float(value), timezone.utc)
+    if isinstance(value, str):
+        try:
+            return datetime.fromisoformat(value.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    return None
+
+def acs_execution_evidence(agent, spec):
+    """Verify ACS-02..05 from the component's own runtime artifact."""
+    base = {
+        "agent": agent, "role": spec["role"], "verified": False,
+        "status": "missing", "stale_after_seconds": spec["max_age"],
+    }
+    path = _first_existing(spec["paths"])
+    if path is None:
+        base["evidence_candidates"] = [str(p) for p in spec["paths"]]
+        return base
+    try:
+        st = path.stat()
+        evidence_time = datetime.fromtimestamp(st.st_mtime, timezone.utc)
+        text = path.read_text(encoding="utf-8", errors="replace")
+        data = None
+        if path.suffix == ".json":
+            data = json.loads(text)
+            ts_key = spec.get("json_ts")
+            if ts_key:
+                parsed = _iso_from_value(data.get(ts_key))
+                if parsed is not None:
+                    evidence_time = parsed.astimezone(timezone.utc)
+        age = max(0.0, time.time() - evidence_time.timestamp())
+        status_ok = None
+        if data is not None and spec.get("json_status"):
+            status_ok = str(data.get(spec["json_status"], "")).lower() in {"ok", "healthy", "pass", "passed"}
+        if status_ok is None:
+            tail = text[-12000:]
+            success_positions = [tail.rfind(m) for m in spec.get("success_markers", [])]
+            failure_positions = [tail.rfind(m) for m in spec.get("failure_markers", [])]
+            latest_success = max(success_positions, default=-1)
+            latest_failure = max(failure_positions, default=-1)
+            if latest_success >= 0 or latest_failure >= 0:
+                status_ok = latest_success > latest_failure
+        base.update({
+            "evidence_source": str(path),
+            "last_execution_utc": evidence_time.isoformat(),
+            "age_seconds": round(age, 1),
+            "verified": status_ok is not None,
+            "status": ("stale" if age > spec["max_age"] else ("current" if status_ok else "degraded"))
+                      if status_ok is not None else ("stale" if age > spec["max_age"] else "unverified"),
+        })
+        return base
+    except Exception as exc:
+        base["evidence_source"] = str(path)
+        base["status"] = "unreadable"
+        base["error_type"] = type(exc).__name__
+        return base
+
+def all_acs_evidence():
+    result = {"ACS-01": acs01_execution_evidence()}
+    for agent, spec in ACS_DEFINITIONS.items():
+        result[agent] = acs_execution_evidence(agent, spec)
+    return result
 
 def knowledge_validation():
     """Validate current knowledge roots and explicitly retire obsolete checks."""
@@ -165,12 +283,13 @@ status_text = git_status.get("stdout", "")
 conflict = any(line[:2] in {"DD","AU","UD","UA","DU","AA","UU"} for line in status_text.splitlines())
 
 snapshot = {
-    "schema_version": 4,
+    "schema_version": 5,
     "generated_at_utc": datetime.now(timezone.utc).isoformat(),
     "source": "pythonanywhere",
     "active_branch": run(["git", "branch", "--show-current"]).get("stdout", ""),
     "critical_paths": [path_meta(p) for p in CRITICAL_PATHS],
     "acs01_orchestrator": acs01_execution_evidence(),
+    "agents": all_acs_evidence(),
     "knowledge_validation": knowledge_validation(),
     "git": {
         "status": git_status,
