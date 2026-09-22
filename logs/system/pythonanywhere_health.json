@@ -1,40 +1,34 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 470.8,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
-    "last_execution_utc": "2026-09-21T19:02:29.207677+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
-    "stale_after_seconds": 129600,
-    "status": "current",
-    "verified": true
+    "status": "missing",
+    "verified": false
   },
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 470.8,
       "agent": "ACS-01",
       "cadence": "daily",
       "evidence_source": "memory/agents/state.json:last_supervisor_ts",
-      "last_execution_utc": "2026-09-21T19:02:29.207677+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
-      "stale_after_seconds": 129600,
-      "status": "current",
-      "verified": true
+      "status": "missing",
+      "verified": false
     },
     "ACS-02": {
-      "age_seconds": 3594.7,
+      "age_seconds": 3668.4,
       "agent": "ACS-02",
       "evidence_source": "/home/rafa1215/consensus-project/memory/public/absorption_last_success.json",
-      "last_execution_utc": "2026-09-21T18:10:25.366473+00:00",
+      "last_execution_utc": "2026-09-22T06:01:10.626463+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 17450846.3,
+      "age_seconds": 17493565.2,
       "agent": "ACS-03",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/fitness_integration.log",
       "last_execution_utc": "2026-03-03T19:42:53.778944+00:00",
@@ -44,7 +38,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 4156314.4,
+      "age_seconds": 4199033.4,
       "agent": "ACS-04",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/infrastructure_guardian_status.json",
       "last_execution_utc": "2026-08-04T16:38:25.642957+00:00",
@@ -78,7 +72,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-09-21T19:02:10.703682+00:00",
+      "mtime_utc": "2026-09-22T06:01:56.259410+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -97,25 +91,25 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-09-21T19:10:20.022861+00:00",
+  "generated_at_utc": "2026-09-22T07:02:18.991914+00:00",
   "git": {
     "last_commit": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "b87865a4537ce71d4c90a4bd081ec5cd697fcc45|2026-09-21T19:02:16+00:00|GitHub write assurance sync"
+      "stdout": "76f9492543e3f7f209c41abe49e1f284b951d624|2026-09-22T07:01:58+00:00|GitHub write assurance sync"
     },
     "origin_reachable": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "630f0cada2079b170192bcd88a28f3378a5526c0\tHEAD"
+      "stdout": "588cba38643379a2dda3b358ba6a52feaa93c9cc\tHEAD"
     },
     "status": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "M agents/run_acs01_supervisor.sh\n M agents/self_improver.py\n M memory/agents/state.json\n M memory/logs/status/github_write_assurance.json\n M memory/logs/status/github_write_assurance.md"
+      "stdout": "M memory/logs/status/github_write_assurance.json\n M memory/logs/status/github_write_assurance.md"
     },
     "unresolved_merge_conflict": false
   },
@@ -124,7 +118,7 @@
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-09-21T19:02:10.703682+00:00",
+        "mtime_utc": "2026-09-22T06:01:56.259410+00:00",
         "path": "memory",
         "size": 4096
       },
