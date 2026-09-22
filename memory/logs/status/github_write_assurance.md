@@ -1,7 +1,7 @@
 # GitHub Write Assurance
 
 - Status: ACTION REQUIRED
-- Generated UTC: 2026-09-22T17:01:16+00:00
+- Generated UTC: 2026-09-22T18:01:18+00:00
 - Agent: github_write_assurance.py v2026-05-15-clean-final-proof-v3
 - Repo root: `/home/rafa1215/consensus-project`
 - Memory root: `/home/rafa1215/memory`
@@ -14,9 +14,9 @@
 - Mirrored files copied: 1518
 - Mirrored files skipped by safety rules: 22
 - Broken symlinks skipped safely: 1
-- Stale repo mirror files removed: 10
+- Stale repo mirror files removed: 22
 - Commit created: `true`
-- Commit hash: `96fd0040b186aac565d9291a8fb8708ac7fee847`
+- Commit hash: `55da5fd8d697db990b4597704bf98ab2b3630566`
 - Final proof commit hash: ``
 - Push OK: `false`
 - Remote verified: `false`
@@ -34,11 +34,10 @@ clean
 - git push failed
 stdout=
 stderr=To github.com:rafa8525/consensus-project.git
- ! [rejected]            HEAD -> v1.1-dev (fetch first)
+ ! [rejected]            HEAD -> v1.1-dev (non-fast-forward)
 error: failed to push some refs to 'github.com:rafa8525/consensus-project.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
