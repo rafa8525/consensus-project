@@ -150,6 +150,7 @@ def run_guard_cycle():
             "infrastructure_guardian",
             "log_repair_guard",
             "calendar_sync_guard_v3",
+            "master_guard_integrator",
         ],
     )
 

@@ -1,116 +1,85 @@
 #!/usr/bin/env python3
 """
-gmail_refresh_guard.py
-Version: 2.0
-Author: AI Consensus System
-Purpose:
-  - Maintain and repair Gmail API authentication automatically.
-# Mutation_ed610e
-  - Self-generate missing tokens via OAuth flow using client_secret.json.
-  - Log all status messages and recover from any authentication failure.
+Canonical Gmail OAuth refresh/health guard.
 
-Requirements:
-  - client_secret.json stored at ~/consensus-project/memory/system/
-  - google-auth, google-auth-oauthlib, google-auth-httplib2 installed
-# Mutation_0c3fd2
+Uses the same OAuth token as the active Gmail agents:
+    /home/rafa1215/.secrets/google/token_gmail.json
+
+This guard never starts an interactive OAuth flow. If the token is missing,
+gmail_auth_setup.py must be run manually once.
 """
 
-import os
-import datetime
-import traceback
+from __future__ import annotations
+
+import sys
+from datetime import datetime, timezone
 from pathlib import Path
+
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-# Mutation_532ff4
+from googleapiclient.discovery import build
 
-# === PATHS ===
-BASE_DIR = Path("/home/rafa1215/consensus-project")
-SYSTEM_DIR = BASE_DIR / "memory/system"
-TOKEN_PATH = SYSTEM_DIR / "google_token.json"
-CLIENT_SECRET = SYSTEM_DIR / "client_secret.json"
-LOG_PATH = BASE_DIR / "memory/logs/email/connection_guard.md"
 
-# === SCOPES ===
-SCOPES = ["https://mail.google.com/"]
+TOKEN = Path("/home/rafa1215/.secrets/google/token_gmail.json")
+LOG = Path(
+    "/home/rafa1215/consensus-project/"
+    "memory/logs/system/gmail_refresh_guard.log"
+)
 
-# === LOGGING ===
-def log(message: str):
-    """Write timestamped messages to connection_guard.md"""
-    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG_PATH, "a") as log_file:
-        log_file.write(f"[{timestamp}] {message}\n")
+SCOPES = [
+    "https://www.googleapis.com/auth/gmail.readonly",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/drive.file",
+]
 
-# Mutation_a364b5
-# === TOKEN REFRESHER ===
-def get_or_refresh_gmail_token():
-    """Create or refresh Gmail OAuth token automatically."""
-    SYSTEM_DIR.mkdir(parents=True, exist_ok=True)
-    creds = None
 
-# Mutation_c6d9de
-    # Load existing credentials if available
-    if TOKEN_PATH.exists():
-        try:
-            creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), SCOPES)
-        except Exception as e:
-            log(f"⚠️ Could not load existing token file: {e}")
-            log(traceback.format_exc())
-# Mutation_5044f0
+def stamp() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def log(message: str) -> None:
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+    with LOG.open("a", encoding="utf-8") as fh:
+        fh.write(f"{stamp()} {message}\n")
+
+
+def main() -> int:
+    log("start gmail_refresh_guard")
+
+    if not TOKEN.exists():
+        log(f"error missing_oauth_token path={TOKEN}")
+        return 2
 
     try:
-        # If credentials exist and are valid
-        if creds and creds.valid:
-            log("🟢 Gmail token is valid; no refresh needed.")
-            return True
+        creds = Credentials.from_authorized_user_file(str(TOKEN), SCOPES)
 
-        # If credentials exist but are expired
-        if creds and creds.expired and creds.refresh_token:
-# Mutation_280892
+        if creds.expired and creds.refresh_token:
             creds.refresh(Request())
-            with open(TOKEN_PATH, "w") as token_file:
-                token_file.write(creds.to_json())
-            log("✅ Gmail token refreshed successfully.")
-            return True
-# Mutation_714044
+            TOKEN.write_text(creds.to_json(), encoding="utf-8")
+            TOKEN.chmod(0o600)
+            log("oauth token refreshed")
 
-        # If no valid token exists, generate a new one
-        if CLIENT_SECRET.exists():
-# Mutation_9f23fe
-            log("⚠️ No valid Gmail token found. Starting OAuth flow.")
-# Mutation_c597fe
-# Mutation_45b144
-# Mutation_d09f2e
-            flow = InstalledAppFlow.from_client_secrets_file(
-                str(CLIENT_SECRET), SCOPES
-# Mutation_cd9219
-            )
-            creds = flow.run_local_server(port=0)
-            with open(TOKEN_PATH, "w") as token_file:
-# Mutation_011cb4
-                token_file.write(creds.to_json())
-            log("✅ New Gmail token created successfully.")
-            return True
-        else:
-            log("❌ Missing client_secret.json. Cannot authenticate Gmail.")
-            return False
+        if not creds.valid:
+            log("error oauth_credentials_invalid")
+            return 1
 
-    except Exception as e:
-# Mutation_3b8980
-        log(f"❌ Gmail token refresh error: {type(e).__name__} - {e}")
-        log(traceback.format_exc())
-# Mutation_78cd22
-        return False
+        service = build(
+            "gmail",
+            "v1",
+            credentials=creds,
+            cache_discovery=False,
+        )
 
-# === MAIN EXECUTION ===
-def main():
-    log("---- Gmail Refresh Guard Started ----")
-    success = get_or_refresh_gmail_token()
-    if success:
-        log("✅ Gmail Refresh Guard completed successfully.\n")
-    else:
-        log("❌ Gmail Refresh Guard failed.\n")
+        profile = service.users().getProfile(userId="me").execute()
+        address = profile.get("emailAddress", "unknown")
+
+        log(f"ok gmail_api_authenticated account={address}")
+        return 0
+
+    except Exception as exc:
+        log(f"error {type(exc).__name__}: {exc}")
+        return 1
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

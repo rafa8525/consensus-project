@@ -190,16 +190,6 @@ def mirror_memory(memory_root: Path, repo_root: Path, res: Result) -> None:
         if unsafe_path(rel, dst):
             continue
         src = memory_root / rel
-
-        # Some files are generated directly inside the repository memory tree
-        # and therefore have no canonical counterpart under /home/rafa1215/memory.
-        # Never treat those repo-generated artifacts as stale mirror files.
-        protected_repo_artifacts = {
-            Path("centralized_knowledge_base.txt"),
-        }
-        if rel in protected_repo_artifacts:
-            continue
-
         if not src.exists():
             try:
                 dst.unlink()

@@ -70,8 +70,9 @@ def should_skip(path: Path) -> bool:
         if not path.is_file():
             return True
 
-        # Skip generated output itself
-        if path.name == output_file().name:
+        # Skip generated output and its in-progress temporary file.
+        output = output_file()
+        if path == output or path == output.with_suffix(output.suffix + ".tmp"):
             return True
 
         # Skip nested mirrored memory trees like memory/memory/...

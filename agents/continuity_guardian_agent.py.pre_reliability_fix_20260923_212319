@@ -233,14 +233,8 @@ def check_master_control() -> None:
     src = text_of(TOOLS / "master_control_loop.py")
     if "inspect.signature" not in src:
         CRITICAL.append("Master Control Loop lost required-argument dispatcher fallback")
-    success_line = 'log("✅ All subsystems executed successfully.")'
-    if success_line in src:
-        success_pos = src.find(success_line)
-        conditional_pos = src.rfind("if all(results)", 0, success_pos)
-        if conditional_pos == -1:
-            WARN.append(
-                "Master Control Loop still has unconditional all-subsystems-success message"
-            )
+    if 'log("✅ All subsystems executed successfully.")' in src:
+        WARN.append("Master Control Loop still has unconditional all-subsystems-success message")
 
     try:
         out = subprocess.run(
@@ -266,15 +260,8 @@ def check_memory_compressor() -> None:
     src = text_of(TOOLS / "memory_compressor.py")
     if "MAX_SUMMARY_BYTES" not in src and "40 * 1024 * 1024" not in src:
         WARN.append("memory_compressor.py has no visible 40 MB rotation guard")
-    has_failure_return = "return 1" in src
-    propagates_main_status = (
-        "raise SystemExit(main())" in src
-        or "sys.exit(main())" in src
-    )
-    if not (has_failure_return and propagates_main_status):
-        CRITICAL.append(
-            "memory_compressor.py may still hide fatal errors with exit code 0"
-        )
+    if "raise SystemExit(1)" not in src:
+        CRITICAL.append("memory_compressor.py may still hide fatal errors with exit code 0")
 
     hb = text_of(HEARTBEAT)
     recent = "\n".join(hb.splitlines()[-250:])
