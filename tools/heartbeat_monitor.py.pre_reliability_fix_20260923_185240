@@ -28,7 +28,7 @@ from send_reminder import send_sms
 # Paths and configuration
 # ----------------------------------------------------
 BASE_DIR = os.path.expanduser("~/consensus-project")
-LOG_DIR = os.path.join(BASE_DIR, "memory", "logs", "system")
+LOG_DIR = os.path.join(BASE_DIR, "logs")
 LOG_FILE = os.path.join(LOG_DIR, "master_control_loop.log")
 SCRIPT_PATH = os.path.join(BASE_DIR, "tools/master_control_loop.py")
 HEARTBEAT_LOG = os.path.join(LOG_DIR, "heartbeat_monitor.log")
@@ -74,7 +74,7 @@ def write_fail_count(count):
 def restart_master_loop():
     log("⚠️ No recent heartbeat detected — restarting master_control_loop.py...")
     try:
-        subprocess.Popen([sys.executable, SCRIPT_PATH], cwd=BASE_DIR, start_new_session=True)
+        subprocess.Popen(["/usr/bin/python3", SCRIPT_PATH])
         log("✅ Restart command issued successfully.")
     except Exception as e:
         log(f"❌ Failed to restart master_control_loop.py: {e}")
@@ -113,9 +113,8 @@ def main():
         # Alert logic: only send if two consecutive failures
         # ------------------------------------------------
         if fails >= 2:
-            inactive_for = "unknown" if mins is None else f"{mins:.1f}"
             alert = (
-                f"⚠️ ALERT: master_control_loop inactive for {inactive_for} minutes.\n"
+                f"⚠️ ALERT: master_control_loop inactive for {mins:.1f if mins else 0} minutes.\n"
                 f"Restart attempted twice — manual inspection recommended."
 # Mutation_54aeeb
 # Mutation_53a1d8
