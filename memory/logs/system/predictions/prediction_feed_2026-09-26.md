@@ -1,0 +1,37 @@
+# Prediction Feed – 2026-09-26
+Generated: 2026-09-26T00:43:11.081355+00:00
+Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
+
+## Health/Fitness
+1. [HIGH] Today's fitness log was found (25 swim laps).
+   - Reason: A genuine current-day measurement or completed workout was found.
+   - Evidence: /home/rafa1215/consensus-project/memory/logs/fitness/fitness_summary_20260926.md
+
+## Errands & Geofences
+1. [LOW] No actionable errands were detected.
+   - Reason: No grounded shopping-list, calendar, delivery, geofence, or task item was found; the old 'pick one small errand' filler was intentionally removed.
+
+## Media & Fun
+1. [HIGH] Media summary: tracked=30, watched=23, suppressed/removed=7, maybe=0, verified candidates=0, pending verification=3, unknown=0; last watched=Mission: Impossible – The Final Reckoning.
+   - Reason: The feed separates verified stream-now candidates from titles that still require streaming verification.
+   - Action: Refresh streaming verification when verified candidates reach zero and pending titles exist.
+   - Evidence: /home/rafa1215/memory/state/streaming_verification_queue.json
+2. [MEDIUM] No verified streaming candidate is currently available; 3 title(s) are waiting for verification.
+   - Reason: Pending titles exist, but the recommendation gate correctly refuses to treat them as stream-now picks until current U.S. availability is proven.
+   - Action: Verify the pending titles against a current U.S. streaming source; then promote only confirmed subscription/included/free titles.
+   - Evidence: /home/rafa1215/memory/state/streaming_verification_queue.json
+
+## Family/Events
+1. [LOW] No current family event requires action.
+   - Reason: No valid current or future family-specific reminder was found.
+
+## System/Project
+1. [HIGH] System health: OK (0 minutes old). Details: | gmail_refresh_guard_v3 | warn | stale (1.6d old): /home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log |; Overall: warn
+   - Reason: The prediction feed now extracts warning details from the health snapshot instead of emitting only WARN/RECENT.
+   - Action: No corrective action required.
+   - Evidence: /home/rafa1215/memory/logs/status/system_health_snapshot.md
+
+## 24–72 Hour Predictions
+1. [HIGH] The next movie recommendation run will likely return no pick.
+   - Reason: There are zero verified candidates and the streaming gate is correctly blocking unsupported choices.
+   - Action: Refresh verified U.S. streaming availability before the next recommendation cycle.
