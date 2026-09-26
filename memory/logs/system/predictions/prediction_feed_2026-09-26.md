@@ -1,5 +1,5 @@
 # Prediction Feed – 2026-09-26
-Generated: 2026-09-26T06:43:11.356962+00:00
+Generated: 2026-09-26T07:43:11.823274+00:00
 Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
 
 ## Health/Fitness
@@ -26,7 +26,7 @@ Agent: prediction_feed_agent.py v2026-07-10-smart-feed-v1.2
    - Reason: No valid current or future family-specific reminder was found.
 
 ## System/Project
-1. [HIGH] System health: OK (0 minutes old). Details: | gmail_refresh_guard_v3 | warn | stale (1.8d old): /home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log |; Overall: warn
+1. [HIGH] System health: OK (0 minutes old). Details: | gmail_refresh_guard_v3 | warn | stale (1.9d old): /home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log |; Overall: warn
    - Reason: The prediction feed now extracts warning details from the health snapshot instead of emitting only WARN/RECENT.
    - Action: No corrective action required.
    - Evidence: /home/rafa1215/memory/logs/status/system_health_snapshot.md
