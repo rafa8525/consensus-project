@@ -51,7 +51,7 @@ STATE = SYSLOG / "continuity_guardian_state.json"
 SECRETS = Path.home() / ".secrets" / "google"
 CREDS = SECRETS / "credentials.json"
 GMAIL_TOKEN = SECRETS / "token_gmail.json"
-KB = MEMORY / "centralized_knowledge_base.txt"
+ABSORB_STATUS = MEMORY / "logs" / "system" / "absorb_runner_status.json"
 COMPRESSED = MEMORY / "logs" / "compressed_memory.md"
 HEARTBEAT = MEMORY / "logs" / "system" / "heartbeat.md"
 NOHUP = BASE / "nohup.out"
@@ -272,11 +272,17 @@ def check_memory_compressor() -> None:
 def check_absorption_and_prediction() -> None:
     if not (TOOLS / "absorb_memory.py").exists():
         CRITICAL.append("Canonical tools/absorb_memory.py is missing")
-    age = file_age_hours(KB)
+    # The legacy centralized_knowledge_base.txt is retired. Current absorption
+    # status is authoritative; do not resurrect the old file as a health requirement.
+    age = file_age_hours(ABSORB_STATUS)
     if age is None:
-        CRITICAL.append("centralized_knowledge_base.txt is missing")
+        WARN.append("Absorption status is missing; knowledge-cycle execution is unverified")
     elif age > MAX_KB_AGE_HOURS:
-        WARN.append(f"Centralized knowledge base is stale: {age:.1f} hours old")
+        WARN.append(f"Absorption status is stale: {age:.1f} hours old")
+    else:
+        data = safe_json(ABSORB_STATUS)
+        if data is not None and str(data.get("status", "")).upper() not in {"OK", "HEALTHY", "PASS", "PASSED"}:
+            WARN.append(f"Latest absorption status is not healthy: {data.get('status')}")
 
     today = now_utc().strftime("%Y-%m-%d")
     pred_candidates = [
