@@ -62,8 +62,8 @@ ACS_DEFINITIONS = {
             Path.home() / "memory" / "logs" / "status" / "system_health_snapshot.md",
         ],
         "max_age": 36 * 60 * 60,
-        "success_markers": ['"status": "healthy"', '"status": "ok"', "- Overall: ok"],
-        "failure_markers": ['"status": "critical"', '"status": "degraded"', "- Overall: warn"],
+        "success_markers": ['"overall_status": "healthy"', '"status": "healthy"', '"status": "ok"', "- Overall: ok"],
+        "failure_markers": ['"overall_status": "critical"', '"overall_status": "execution_failure"', '"status": "critical"', '"status": "degraded"', "- Overall: warn"],
     },
     "ACS-05": {
         "role": "Continuity Cycle",
@@ -74,8 +74,8 @@ ACS_DEFINITIONS = {
             Path.home() / "memory" / "logs" / "system" / "continuity_guardian.log",
         ],
         "max_age": 36 * 60 * 60,
-        "success_markers": ['"status": "ok"', '"critical": []', "CRITICAL=0", "critical=0"],
-        "failure_markers": ['"status": "critical"', "CRITICAL=", "critical="],
+        "success_markers": ['"last_status": "OK"', '"critical": []', "CRITICAL=0", "critical=0"],
+        "failure_markers": ['"last_status": "CRITICAL"', '"last_status": "WARN"', "CRITICAL=", "critical="],
     },
 }
 CRITICAL_PATHS = [
@@ -289,7 +289,7 @@ status_text = git_status.get("stdout", "")
 conflict = any(line[:2] in {"DD","AU","UD","UA","DU","AA","UU"} for line in status_text.splitlines())
 
 snapshot = {
-    "schema_version": 5,
+    "schema_version": 6,
     "generated_at_utc": datetime.now(timezone.utc).isoformat(),
     "source": "pythonanywhere",
     "active_branch": run(["git", "branch", "--show-current"]).get("stdout", ""),
