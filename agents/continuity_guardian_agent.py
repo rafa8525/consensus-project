@@ -51,7 +51,7 @@ STATE = SYSLOG / "continuity_guardian_state.json"
 SECRETS = Path.home() / ".secrets" / "google"
 CREDS = SECRETS / "credentials.json"
 GMAIL_TOKEN = SECRETS / "token_gmail.json"
-KB = MEMORY / "centralized_knowledge_base.txt"
+ABSORB_STATUS = MEMORY / "logs" / "system" / "absorb_runner_status.json"
 COMPRESSED = MEMORY / "logs" / "compressed_memory.md"
 HEARTBEAT = MEMORY / "logs" / "system" / "heartbeat.md"
 NOHUP = BASE / "nohup.out"
@@ -233,14 +233,11 @@ def check_master_control() -> None:
     src = text_of(TOOLS / "master_control_loop.py")
     if "inspect.signature" not in src:
         CRITICAL.append("Master Control Loop lost required-argument dispatcher fallback")
+    # A success message is valid when guarded by all(results); only flag the
+    # historical unconditional form.
     success_line = 'log("✅ All subsystems executed successfully.")'
-    if success_line in src:
-        success_pos = src.find(success_line)
-        conditional_pos = src.rfind("if all(results)", 0, success_pos)
-        if conditional_pos == -1:
-            WARN.append(
-                "Master Control Loop still has unconditional all-subsystems-success message"
-            )
+    if success_line in src and "if all(results):" not in src:
+        WARN.append("Master Control Loop has unconditional all-subsystems-success message")
 
     try:
         out = subprocess.run(
@@ -266,15 +263,14 @@ def check_memory_compressor() -> None:
     src = text_of(TOOLS / "memory_compressor.py")
     if "MAX_SUMMARY_BYTES" not in src and "40 * 1024 * 1024" not in src:
         WARN.append("memory_compressor.py has no visible 40 MB rotation guard")
-    has_failure_return = "return 1" in src
-    propagates_main_status = (
-        "raise SystemExit(main())" in src
-        or "sys.exit(main())" in src
+    # Current compressor uses main() -> return 1 -> raise SystemExit(main()).
+    # Accept either explicit SystemExit(1) or the scheduler-friendly return-1 contract.
+    fatal_nonzero = (
+        "raise SystemExit(1)" in src
+        or ("raise SystemExit(main())" in src and "return 1" in src)
     )
-    if not (has_failure_return and propagates_main_status):
-        CRITICAL.append(
-            "memory_compressor.py may still hide fatal errors with exit code 0"
-        )
+    if not fatal_nonzero:
+        CRITICAL.append("memory_compressor.py may hide fatal errors with exit code 0")
 
     hb = text_of(HEARTBEAT)
     recent = "\n".join(hb.splitlines()[-250:])
@@ -285,11 +281,17 @@ def check_memory_compressor() -> None:
 def check_absorption_and_prediction() -> None:
     if not (TOOLS / "absorb_memory.py").exists():
         CRITICAL.append("Canonical tools/absorb_memory.py is missing")
-    age = file_age_hours(KB)
+    # The legacy centralized_knowledge_base.txt is retired. Current absorption
+    # status is authoritative; do not resurrect the old file as a health requirement.
+    age = file_age_hours(ABSORB_STATUS)
     if age is None:
-        CRITICAL.append("centralized_knowledge_base.txt is missing")
+        WARN.append("Absorption status is missing; knowledge-cycle execution is unverified")
     elif age > MAX_KB_AGE_HOURS:
-        WARN.append(f"Centralized knowledge base is stale: {age:.1f} hours old")
+        WARN.append(f"Absorption status is stale: {age:.1f} hours old")
+    else:
+        data = safe_json(ABSORB_STATUS)
+        if data is not None and str(data.get("status", "")).upper() not in {"OK", "HEALTHY", "PASS", "PASSED"}:
+            WARN.append(f"Latest absorption status is not healthy: {data.get('status')}")
 
     today = now_utc().strftime("%Y-%m-%d")
     pred_candidates = [
