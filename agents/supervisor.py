@@ -73,3 +73,14 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+def main() -> int:
+    """Execute one ACS-01 cycle and return a scheduler-friendly exit code."""
+    result = Supervisor({}).run()
+    print(json.dumps({"agent": "ACS-01", "status": "ok", "results": result}, default=str))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
