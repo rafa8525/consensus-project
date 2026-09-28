@@ -1,67 +1,64 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 1202.3,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
-    "last_execution_utc": "2026-09-27T18:05:20.444776+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
-    "stale_after_seconds": 129600,
-    "status": "current",
-    "verified": true
+    "status": "missing",
+    "verified": false
   },
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 1202.3,
       "agent": "ACS-01",
       "cadence": "daily",
       "evidence_source": "memory/agents/state.json:last_supervisor_ts",
-      "last_execution_utc": "2026-09-27T18:05:20.444776+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
-      "stale_after_seconds": 129600,
-      "status": "current",
-      "verified": true
+      "status": "missing",
+      "verified": false
     },
     "ACS-02": {
-      "age_seconds": 44648.9,
+      "age_seconds": 3656.3,
       "agent": "ACS-02",
       "evidence_source": "/home/rafa1215/consensus-project/memory/public/absorption_last_success.json",
-      "last_execution_utc": "2026-09-27T06:01:13.844492+00:00",
+      "last_execution_utc": "2026-09-28T06:01:24.631406+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 260.0,
+      "age_seconds": 18011967.2,
       "agent": "ACS-03",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/fitness_integration.log",
-      "last_execution_utc": "2026-09-27T18:21:02.801098+00:00",
+      "last_execution_utc": "2026-03-03T19:42:53.778944+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
-      "status": "current",
+      "status": "stale",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 261.3,
+      "age_seconds": 46586.6,
       "agent": "ACS-04",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/infrastructure_guardian_status.json",
-      "last_execution_utc": "2026-09-27T18:21:01.501081+00:00",
+      "last_execution_utc": "2026-09-27T18:05:54.349268+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 1.1,
       "agent": "ACS-05",
-      "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian_state.json",
-      "last_execution_utc": "2026-09-27T18:25:21.692470+00:00",
+      "evidence_candidates": [
+        "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian_state.json",
+        "/home/rafa1215/memory/logs/system/continuity_guardian_state.json",
+        "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian.log",
+        "/home/rafa1215/memory/logs/system/continuity_guardian.log"
+      ],
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
-      "status": "degraded",
-      "verified": true
+      "status": "missing",
+      "verified": false
     }
   },
   "critical_paths": [
@@ -75,7 +72,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-09-27T18:10:29.040845+00:00",
+      "mtime_utc": "2026-09-28T06:01:23.877453+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,25 +91,25 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-09-27T18:25:22.744413+00:00",
+  "generated_at_utc": "2026-09-28T07:02:20.933617+00:00",
   "git": {
     "last_commit": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "8d4bbb9609434b5efc55094c81fc9e8b1cbc8b1c|2026-09-27T18:01:59+00:00|GitHub write assurance sync"
+      "stdout": "ce1d2d8b30ce1cf43963bdf2ff0e7654eba82745|2026-09-28T07:02:01+00:00|GitHub write assurance sync"
     },
     "origin_reachable": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "5121829d1aa35b458b29e424269cf69027742423\tHEAD"
+      "stdout": "1898aa39d4c7df84f254413172043de514137815\tHEAD"
     },
     "status": {
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "M agents/continuity_guardian_agent.py\n M memory/agents/state.json\n M memory/centralized_knowledge_base.txt\n M memory/exports/movie_list_export.txt\n M memory/logs/status/github_write_assurance.json\n M memory/logs/status/github_write_assurance.md\n M memory/logs/system/agent_evolution_cycle.log\n M memory/logs/system/agent_self_repair.log\n M memory/logs/system/fitness_integration.log\n M memory/logs/system/heartbeat.md\n M memory/logs/system/knowledge_sharing_validation.log\n M memory/logs/system/master_control_loop.log\n M memory/logs/system/predictions/prediction_feed_2026-09-27.md\n M memory/logs/system/progress_evaluation.log\n M memory/logs/system/security_audit.log\n M memory/logs/system/vpn_cron.log\n M memory/logs/system/vpn_simulated_active.flag\n M memory/logs/system/vpn_test.log\n M memory/security_audit_schedule.txt"
+      "stdout": "M memory/logs/status/github_write_assurance.json\n M memory/logs/status/github_write_assurance.md"
     },
     "unresolved_merge_conflict": false
   },
@@ -121,7 +118,7 @@
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-09-27T18:10:29.040845+00:00",
+        "mtime_utc": "2026-09-28T06:01:23.877453+00:00",
         "path": "memory",
         "size": 4096
       },
