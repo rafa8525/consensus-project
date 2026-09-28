@@ -2762,5 +2762,3 @@
 [2026-03-03 19:12:43] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
 [2026-03-03 19:27:49] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
 [2026-03-03 19:42:55] MEMORY-COMPRESS: ERROR: Memory compressor crashed — [Errno 27] File too large
-[2026-09-28 09:01:34] HEALTH: Health intelligence analysis complete
-[2026-09-28 09:01:34 UTC] MEMORY-COMPRESS: Skipped; successful compression performed within 20 hours
