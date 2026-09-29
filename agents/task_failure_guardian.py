@@ -224,22 +224,21 @@ def main() -> int:
     active_prev: dict[str, Any] = state.get("active", {})
     active_now: dict[str, Any] = {}
 
-    cooldown_min = int(config.get("repeat_alert_minutes", 360))
     now = utcnow()
-    new_or_repeat: list[Finding] = []
+    new_findings: list[Finding] = []
 
     for f in findings:
         key = finding_key(f)
         prev = active_prev.get(key, {})
         first_seen = prev.get("first_seen_utc", iso(now))
         last_alert = prev.get("last_alert_utc")
-        should_alert = last_alert is None
-        if last_alert:
-            try:
-                age = (now - datetime.fromisoformat(last_alert)).total_seconds() / 60
-                should_alert = age >= cooldown_min
-            except Exception:
-                should_alert = True
+
+        # State-based alerting:
+        # Alert once when a finding first becomes active.
+        # Never repeat an unchanged active finding.
+        # Once it recovers and disappears from state, a future occurrence
+        # becomes new again and is eligible for one alert.
+        should_alert = key not in active_prev
 
         active_now[key] = {
             "task": f.task,
@@ -251,18 +250,18 @@ def main() -> int:
             "last_alert_utc": iso(now) if should_alert else last_alert,
         }
         if should_alert:
-            new_or_repeat.append(f)
+            new_findings.append(f)
 
     # Recovery detection
     recovered_keys = set(active_prev) - set(active_now)
     recoveries = [active_prev[k] for k in recovered_keys]
 
-    if new_or_repeat:
+    if new_findings:
         lines = ["AI Consensus task failure detected:"]
-        for f in new_or_repeat[:6]:
+        for f in new_findings[:6]:
             lines.append(f"- {f.task}: {f.kind} — {f.detail[:180]}")
-        if len(new_or_repeat) > 6:
-            lines.append(f"- plus {len(new_or_repeat)-6} more finding(s)")
+        if len(new_findings) > 6:
+            lines.append(f"- plus {len(new_findings)-6} more finding(s)")
         body = "\n".join(lines)
         ok, status = send_twilio_sms(body)
         append_alert_log(alert_log, f"ALERT send={ok} status={status} body={body!r}")
