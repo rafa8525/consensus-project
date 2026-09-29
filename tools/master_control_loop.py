@@ -219,33 +219,65 @@ def single_cycle():
     return all(results)
 
 
-def main():
-    # OS-level singleton lock.  The lock is automatically released when
-    # this process exits, including crashes, so stale lock files are safe.
-    MASTER_CONTROL_LOCK_FILE = "/tmp/ai_consensus_master_control_loop.lock"
-    lock_fd = open(MASTER_CONTROL_LOCK_FILE, "w")
+MASTER_CONTROL_LOCK_FILE = "/tmp/ai_consensus_master_control_loop.lock"
 
+
+def acquire_master_lock():
+    """Acquire the process-wide MCL lock or return None if another MCL owns it."""
+    lock_fd = open(MASTER_CONTROL_LOCK_FILE, "w")
     try:
         fcntl.flock(lock_fd.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
-        log("Master Control Loop already running; duplicate start rejected.")
-        return 0
+        lock_fd.close()
+        return None
 
     lock_fd.write(str(os.getpid()))
     lock_fd.flush()
+    return lock_fd
 
-    log("==== Master Control Loop v5.1 (continuous + continuity guardian) ====")
-    while True:
+
+def main():
+    once = "--once" in sys.argv[1:]
+
+    unknown = [arg for arg in sys.argv[1:] if arg != "--once"]
+    if unknown:
+        log(f"❌ Unsupported Master Control Loop argument(s): {' '.join(unknown)}")
+        return 2
+
+    lock_fd = acquire_master_lock()
+    if lock_fd is None:
+        log("Master Control Loop already running; duplicate start rejected.")
+        return 0
+
+    if once:
+        log("==== Master Control Loop v5.1 one-cycle mode ====")
         try:
-            single_cycle()
+            return 0 if single_cycle() else 1
         except Exception as e:
             log(f"❌ Unhandled exception: {e}")
             with open(LOG_FILE, "a") as f:
                 traceback.print_exc(file=f)
-        for _ in range(15 * 60):
-            time.sleep(1)
-        log("💓 Heartbeat: restarting next cycle.")
+            return 1
+        finally:
+            lock_fd.close()
+
+    log("==== Master Control Loop v5.1 (continuous + continuity guardian) ====")
+    try:
+        while True:
+            try:
+                single_cycle()
+            except Exception as e:
+                log(f"❌ Unhandled exception: {e}")
+                with open(LOG_FILE, "a") as f:
+                    traceback.print_exc(file=f)
+
+            for _ in range(15 * 60):
+                time.sleep(1)
+
+            log("💓 Heartbeat: restarting next cycle.")
+    finally:
+        lock_fd.close()
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
