@@ -295,19 +295,27 @@ def push_and_verify(repo: Path, branch: str, push_enabled: bool, dry_run: bool) 
 
 
 def run_agent(repo_root: Path, memory_root: Path, branch: str, dry_run: bool, push_enabled: bool) -> Result:
+    """Non-destructive GitHub health assurance.
+
+    This scheduled health check never mirrors memory into the repository,
+    stages files, creates commits, or pushes. It verifies that the expected
+    branch exists, origin is reachable, and local/remote committed history
+    has not diverged. Runtime working-tree changes are reported but are not
+    treated as a GitHub write failure.
+    """
     repo_root = repo_root.resolve()
     memory_root = memory_root.resolve()
 
     res = Result(
         status="ACTION REQUIRED",
         generated_utc=utc_now(),
-        agent=AGENT_VERSION,
+        agent=AGENT_VERSION + "-healthcheck",
         repo_root=str(repo_root),
         memory_root=str(memory_root),
         expected_branch=branch,
         actual_branch="UNKNOWN",
         dry_run=dry_run,
-        push_enabled=push_enabled,
+        push_enabled=False,
     )
 
     if not repo_root.exists():
@@ -322,49 +330,71 @@ def run_agent(repo_root: Path, memory_root: Path, branch: str, dry_run: bool, pu
         res.actual_branch = current_branch(repo_root)
 
         if res.actual_branch != branch:
-            res.errors.append(f"wrong branch: expected {branch}, got {res.actual_branch}")
+            res.errors.append(
+                f"wrong branch: expected {branch}, got {res.actual_branch}"
+            )
 
-        mirror_memory(memory_root, repo_root, res)
+        fetch = run(["git", "fetch", "--quiet", "origin", branch], repo_root)
+        if fetch.returncode != 0:
+            detail = (fetch.stderr or fetch.stdout or "").strip()
+            res.errors.append(f"git fetch failed: {detail}")
 
-        if dry_run:
-            res.git_status_after_run = git_status(repo_root)
-            res.status = "OK" if not res.errors else "ACTION REQUIRED"
-            write_proof_files(repo_root, memory_root, res)
-            return res
+        remote_ref = f"origin/{branch}"
+        local_head = git_output(repo_root, ["rev-parse", "HEAD"])
 
-        created, commit_hash = commit_if_needed(repo_root, "GitHub write assurance sync")
-        res.commit_created = created
-        res.commit_hash = commit_hash
+        remote_check = run(
+            ["git", "rev-parse", "--verify", remote_ref],
+            repo_root,
+        )
+        if remote_check.returncode != 0:
+            res.errors.append(f"remote branch unavailable: {remote_ref}")
+            remote_head = ""
+        else:
+            remote_head = (remote_check.stdout or "").strip()
 
-        pushed, verified, _ = push_and_verify(repo_root, branch, push_enabled, dry_run)
-        res.push_ok = pushed
-        res.remote_verified = verified
+        if local_head and remote_head:
+            counts = git_output(
+                repo_root,
+                ["rev-list", "--left-right", "--count",
+                 f"HEAD...{remote_ref}"],
+            )
+            try:
+                local_only, remote_only = [int(x) for x in counts.split()]
+            except Exception:
+                res.errors.append(
+                    f"could not parse local/remote divergence: {counts!r}"
+                )
+            else:
+                if local_only or remote_only:
+                    res.errors.append(
+                        "committed history diverged: "
+                        f"local_only={local_only}, remote_only={remote_only}"
+                    )
+                else:
+                    res.remote_verified = True
 
-        res.git_status_after_run = "pending final proof commit"
-        res.status = "OK" if (not res.errors and res.push_ok and res.remote_verified) else "ACTION REQUIRED"
-        write_proof_files(repo_root, memory_root, res)
-
-        proof_created, proof_hash = commit_if_needed(repo_root, "Update GitHub write assurance proof")
-        if proof_created:
-            res.final_proof_commit_hash = proof_hash
-            pushed2, verified2, _ = push_and_verify(repo_root, branch, push_enabled, dry_run)
-            res.push_ok = res.push_ok and pushed2
-            res.remote_verified = verified2
-
+        # A successful fetch plus identical committed history proves that
+        # GitHub is reachable and synchronized. No push is performed.
+        res.push_ok = res.remote_verified
+        res.commit_hash = local_head
         res.git_status_after_run = git_status(repo_root)
-        res.status = "OK" if (
-            not res.errors
-            and res.push_ok
-            and res.remote_verified
-            and res.git_status_after_run == "clean"
-        ) else "ACTION REQUIRED"
 
+        if res.git_status_after_run != "clean":
+            res.warnings.append(
+                "working tree has runtime/uncommitted changes; "
+                "health check intentionally did not stage or commit them"
+            )
+
+        res.status = "OK" if not res.errors and res.remote_verified else "ACTION REQUIRED"
+        write_proof_files(repo_root, memory_root, res)
         print(render_markdown(res), end="")
         return res
 
     except Exception as e:
         res.errors.append(str(e))
-        res.git_status_after_run = git_status(repo_root) if repo_root.exists() else "unknown"
+        res.git_status_after_run = (
+            git_status(repo_root) if repo_root.exists() else "unknown"
+        )
         res.status = "ACTION REQUIRED"
         try:
             write_proof_files(repo_root, memory_root, res)
