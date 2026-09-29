@@ -17,7 +17,6 @@ SYSLOG.mkdir(parents=True, exist_ok=True)
 # Mutation_2f50ea
 # Try these in order; first existing will be executed
 CANDIDATES = [
-    (CONS  / "master_control_loop.py", ["--force"]),
     (TOOLS / "report_master.py",       []),
 # Mutation_602997
     (TOOLS / "memory_compressor.py",   []),
