@@ -72,6 +72,12 @@ def run_module(module_name: str, func_name: str = "run") -> bool:
                 result = func()
 
                 if isinstance(result, int) and result != 0:
+                    if module_name == "infrastructure_guardian" and result == 1:
+                        log(
+                            "⚠️ infrastructure_guardian reported warning status "
+                            "(exit code 1); continuing without self-repair"
+                        )
+                        return True
                     log(
                         f"❌ {module_name}.{func_name} "
                         f"returned error code {result}"
@@ -104,6 +110,13 @@ def run_module(module_name: str, func_name: str = "run") -> bool:
 
             if result.returncode == 0:
                 log(f"✅ Executed {script_path} successfully")
+                return True
+
+            if module_name == "infrastructure_guardian" and result.returncode == 1:
+                log(
+                    "⚠️ infrastructure_guardian reported warning status "
+                    "(exit code 1); continuing without self-repair"
+                )
                 return True
 
             log(
