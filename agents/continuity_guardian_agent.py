@@ -52,12 +52,14 @@ SECRETS = Path.home() / ".secrets" / "google"
 CREDS = SECRETS / "credentials.json"
 GMAIL_TOKEN = SECRETS / "token_gmail.json"
 ABSORB_STATUS = MEMORY / "logs" / "system" / "absorb_runner_status.json"
+INFRA_STATUS = MEMORY / "logs" / "system" / "infrastructure_guardian_status.json"
 COMPRESSED = MEMORY / "logs" / "compressed_memory.md"
 HEARTBEAT = MEMORY / "logs" / "system" / "heartbeat.md"
 NOHUP = BASE / "nohup.out"
 MIN_INTERVAL_SECONDS = 3600
 MAX_COMPRESSED_BYTES = 40 * 1024 * 1024
 MAX_KB_AGE_HOURS = 26
+MAX_INFRA_AGE_HOURS = 26
 MAX_PREDICTION_AGE_HOURS = 26
 
 CRITICAL: List[str] = []
@@ -283,6 +285,19 @@ def check_absorption_and_prediction() -> None:
         CRITICAL.append("Canonical tools/absorb_memory.py is missing")
     # The legacy centralized_knowledge_base.txt is retired. Current absorption
     # status is authoritative; do not resurrect the old file as a health requirement.
+    # ACS-04 must produce fresh infrastructure evidence every day.
+    infra_age = file_age_hours(INFRA_STATUS)
+    if infra_age is None:
+        WARN.append("ACS-04 infrastructure status is missing; infrastructure monitoring is unverified")
+    elif infra_age > MAX_INFRA_AGE_HOURS:
+        WARN.append(f"ACS-04 infrastructure status is stale: {infra_age:.1f} hours old")
+    else:
+        infra = safe_json(INFRA_STATUS)
+        if infra is None:
+            WARN.append("ACS-04 infrastructure status is unreadable")
+        elif str(infra.get("overall_status", "")).lower() == "critical":
+            CRITICAL.append("ACS-04 latest infrastructure status is critical")
+
     age = file_age_hours(ABSORB_STATUS)
     if age is None:
         WARN.append("Absorption status is missing; knowledge-cycle execution is unverified")
