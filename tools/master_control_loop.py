@@ -18,6 +18,7 @@ import datetime
 import traceback
 import importlib
 import subprocess
+import fcntl
 
 BASE_DIR = os.path.expanduser("~/consensus-project")
 TOOLS_DIR = os.path.join(BASE_DIR, "tools")
@@ -206,6 +207,20 @@ def single_cycle():
 
 
 def main():
+    # OS-level singleton lock.  The lock is automatically released when
+    # this process exits, including crashes, so stale lock files are safe.
+    MASTER_CONTROL_LOCK_FILE = "/tmp/ai_consensus_master_control_loop.lock"
+    lock_fd = open(MASTER_CONTROL_LOCK_FILE, "w")
+
+    try:
+        fcntl.flock(lock_fd.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        log("Master Control Loop already running; duplicate start rejected.")
+        return 0
+
+    lock_fd.write(str(os.getpid()))
+    lock_fd.flush()
+
     log("==== Master Control Loop v5.1 (continuous + continuity guardian) ====")
     while True:
         try:
