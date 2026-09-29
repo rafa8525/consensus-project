@@ -9,10 +9,10 @@ mkdir -p "$(dirname "$LOG_FILE")"
 echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] 🚀 Launching Master Control Loop..." | tee -a "$LOG_FILE"
 
 # Kill any stale processes
-pkill -f master_control_loop.py 2>/dev/null || true
+# MCL singleton lock safely rejects duplicate starts; do not kill a healthy MCL.
 
 # Start fresh in background, detached from console
 nohup python3 "$PROJECT_DIR/tools/master_control_loop.py" >>"$LOG_FILE" 2>&1 &
 
 PID=$!
-echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] ✅ master_control_loop.py started (pid=$PID)" | tee -a "$LOG_FILE"
+echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] ℹ️ master_control_loop.py launch requested (pid=$PID)" | tee -a "$LOG_FILE"

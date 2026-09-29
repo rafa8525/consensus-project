@@ -10,13 +10,13 @@ mkdir -p "$(dirname "$LOG_FILE")"
 echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] 🚀 Launching all core services..." | tee -a "$LOG_FILE"
 
 # Kill stale processes
-pkill -f master_control_loop.py 2>/dev/null || true
+# MCL singleton lock safely rejects duplicate starts; do not kill a healthy MCL.
 pkill -f voice_guard.py 2>/dev/null || true
 pkill -f github_sync.py 2>/dev/null || true
 
 # Start Master Control Loop
 nohup python3 "$PROJECT_DIR/tools/master_control_loop.py" >>"$LOG_FILE" 2>&1 &
-echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] ✅ master_control_loop.py started (pid=$!)" | tee -a "$LOG_FILE"
+echo "[$(date -u +'%Y-%m-%dT%H:%M:%SZ')] ℹ️ master_control_loop.py launch requested (pid=$!)" | tee -a "$LOG_FILE"
 
 # Start Voice Guard
 nohup python3 "$PROJECT_DIR/voice_guard.py" >>"$LOG_FILE" 2>&1 &
