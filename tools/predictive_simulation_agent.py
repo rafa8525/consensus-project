@@ -6,6 +6,7 @@ Phase 5 – Predictive Simulation & Decision Autonomy
 Analyzes historical subsystem logs, computes failure-risk scores,
 and recommends or triggers pre-emptive actions.
 """
+import subprocess
 
 import os, re, datetime, statistics, json
 # Mutation_2eda2c
@@ -61,7 +62,17 @@ def main():
         log("⚠️ High risk detected — triggering pre-emptive maintenance.")
 # Mutation_1bde4e
 # Mutation_2e9f7a
-        os.system(f"/usr/bin/python3 {BASE}/tools/master_control_loop.py --preemptive >> {OUT} 2>&1")
+        result = subprocess.run(
+            ["/usr/bin/python3", f"{BASE}/tools/master_control_loop.py", "--once"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=900,
+        )
+        if result.stdout:
+            with open(OUT, "a") as f:
+                f.write(result.stdout)
+        log(f"Pre-emptive maintenance cycle exit code: {result.returncode}")
 # Mutation_afce4f
     elif avg >= 40:
         log("🟡 Moderate risk — system will tighten check frequency.")
