@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 13259.4,
+    "age_seconds": 13859.4,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 13259.4,
+      "age_seconds": 13859.4,
       "agent": "ACS-01",
       "cadence": "daily",
       "evidence_source": "memory/agents/state.json:last_supervisor_ts",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 142828.4,
+      "age_seconds": 143428.4,
       "agent": "ACS-02",
       "evidence_source": "/home/rafa1215/consensus-project/memory/public/absorption_last_success.json",
       "last_execution_utc": "2026-09-29T06:01:18.393760+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 102.8,
+      "age_seconds": 702.9,
       "agent": "ACS-03",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/fitness_integration.log",
       "last_execution_utc": "2026-09-30T21:40:03.915952+00:00",
@@ -44,7 +44,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 104.0,
+      "age_seconds": 704.0,
       "agent": "ACS-04",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/infrastructure_guardian_status.json",
       "last_execution_utc": "2026-09-30T21:40:02.783936+00:00",
@@ -54,10 +54,10 @@
       "verified": false
     },
     "ACS-05": {
-      "age_seconds": 0.8,
+      "age_seconds": 0.7,
       "agent": "ACS-05",
       "evidence_source": "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian_state.json",
-      "last_execution_utc": "2026-09-30T21:41:45.937410+00:00",
+      "last_execution_utc": "2026-09-30T21:51:46.049983+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -68,7 +68,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-09-30T21:27:03.748802+00:00",
+      "mtime_utc": "2026-09-30T21:51:18.465589+00:00",
       "path": "agents",
       "size": 4096
     },
@@ -94,7 +94,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-09-30T21:41:46.744969+00:00",
+  "generated_at_utc": "2026-09-30T21:51:46.777947+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -106,7 +106,7 @@
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "f2e32b1e7a3b227809fbd5b08e1554ee355a306b\tHEAD"
+      "stdout": "d4188d175e91bda323b3695d388b0b655e18b8c7\tHEAD"
     },
     "status": {
       "ok": true,
@@ -128,7 +128,7 @@
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-09-30T21:41:46.053412+00:00",
+        "mtime_utc": "2026-09-30T21:51:46.149984+00:00",
         "path": "memory/agents",
         "size": 4096
       }
