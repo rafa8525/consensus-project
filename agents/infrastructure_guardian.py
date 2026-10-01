@@ -326,10 +326,22 @@ class InfrastructureGuardian:
             for path in root.rglob("*"):
                 if not path.is_file():
                     continue
+
+                # Files intentionally moved into an archive are historical
+                # records, not active logs. Do not repeatedly warn/rotate them.
+                try:
+                    relative_parts = path.relative_to(root).parts
+                except ValueError:
+                    relative_parts = path.parts
+
+                if "archive" in relative_parts:
+                    continue
+
                 try:
                     size = path.stat().st_size
                 except OSError:
                     continue
+
                 if size >= self.config.log_rotate_bytes:
                     oversized.append({"path": str(path), "bytes": size})
 
@@ -444,21 +456,64 @@ class InfrastructureGuardian:
             return
 
         lines = [line for line in status_result.stdout.splitlines() if line]
+
+        # Runtime-generated state changes continuously during normal operation.
+        # Do not treat expected runtime churn as a source/configuration failure.
+        runtime_prefixes = (
+            "memory/logs/",
+            "memory/agents/",
+            "memory/exports/",
+        )
+        runtime_files = {
+            "memory/centralized_knowledge_base.txt",
+            "memory/security_audit_schedule.txt",
+        }
+
+        meaningful_changes = []
+        runtime_changes = []
+
+        for line in lines:
+            path = line[3:].strip()
+            if (
+                path in runtime_files
+                or any(path.startswith(prefix) for prefix in runtime_prefixes)
+            ):
+                runtime_changes.append(line)
+            else:
+                meaningful_changes.append(line)
+
         details = {
             "branch": branch,
             "tracked_changes": len(lines),
-            "sample": lines[:25],
+            "meaningful_changes": len(meaningful_changes),
+            "expected_runtime_changes": len(runtime_changes),
+            "meaningful_sample": meaningful_changes[:25],
+            "runtime_sample": runtime_changes[:25],
         }
 
-        if lines:
+        if meaningful_changes:
             self.add(
                 "warning",
                 "WORKTREE_DIRTY",
-                f"Working tree has {len(lines)} tracked changes.",
+                f"Working tree has {len(meaningful_changes)} meaningful tracked change(s) "
+                f"and {len(runtime_changes)} expected runtime change(s).",
+                details,
+            )
+        elif runtime_changes:
+            self.add(
+                "healthy",
+                "WORKTREE_RUNTIME_CHURN",
+                f"Working tree has {len(runtime_changes)} expected runtime-generated "
+                "change(s) and no meaningful source/config changes.",
                 details,
             )
         else:
-            self.add("healthy", "WORKTREE_CLEAN", "Working tree is clean.", details)
+            self.add(
+                "healthy",
+                "WORKTREE_CLEAN",
+                "Working tree is clean.",
+                details,
+            )
 
     def check_git_divergence(self) -> None:
         fetch = self.git("fetch", "--quiet", "origin", timeout=180)

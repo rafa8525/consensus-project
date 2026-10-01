@@ -8,7 +8,7 @@ Purpose:
 
 Expected inputs:
 - Service account JSON key:
-    /home/rafa1215/consensus-project/memory/system/service_account.json
+    /home/rafa1215/.secrets/google/service_account.json
 
 Outputs:
 - Log file (append-only):
@@ -31,7 +31,7 @@ from googleapiclient.discovery import build
 
 
 BASE = Path("/home/rafa1215/consensus-project")
-KEY = BASE / "memory/system/service_account.json"
+KEY = Path("/home/rafa1215/.secrets/google/service_account.json")
 LOG = Path("/home/rafa1215/memory/logs/system/gmail_refresh_guard_v3.log")
 SCOPES = ["https://mail.google.com/"]
 

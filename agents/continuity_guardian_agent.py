@@ -37,6 +37,7 @@ import os
 import re
 import resource
 import subprocess
+import time
 import sys
 from pathlib import Path
 from typing import List, Tuple
@@ -52,6 +53,7 @@ SECRETS = Path.home() / ".secrets" / "google"
 CREDS = SECRETS / "credentials.json"
 GMAIL_TOKEN = SECRETS / "token_gmail.json"
 ABSORB_STATUS = MEMORY / "logs" / "system" / "absorb_runner_status.json"
+ABSORB_PUBLIC_MARKER = Path.home() / "memory" / "public" / "absorption_last_success.json"
 INFRA_STATUS = MEMORY / "logs" / "system" / "infrastructure_guardian_status.json"
 COMPRESSED = MEMORY / "logs" / "compressed_memory.md"
 HEARTBEAT = MEMORY / "logs" / "system" / "heartbeat.md"
@@ -241,17 +243,39 @@ def check_master_control() -> None:
     if success_line in src and "if all(results):" not in src:
         WARN.append("Master Control Loop has unconditional all-subsystems-success message")
 
-    try:
-        out = subprocess.run(
-            ["pgrep", "-af", "master_control_loop.py"], capture_output=True, text=True, timeout=5
-        )
-        lines = [x for x in out.stdout.splitlines() if "pgrep" not in x]
-        if not lines:
-            CRITICAL.append("Master Control Loop process is not running")
-        elif len(lines) > 1:
-            WARN.append(f"Multiple Master Control Loop processes detected: {len(lines)}")
-    except Exception as exc:
-        WARN.append(f"Could not verify Master Control Loop process: {exc}")
+    # PythonAnywhere is more reliable with scheduled completed cycles than
+    # fragile always-on background loops. Treat a recent clean completed cycle
+    # as the source of truth for Master Control Loop health.
+    log_path = MEMORY / "logs/system/master_control_loop.log"
+    if not log_path.exists():
+        CRITICAL.append("Master Control Loop log is missing")
+    else:
+        try:
+            import re
+            from datetime import datetime, timezone
+
+            log_text = log_path.read_text(errors="ignore")
+            success_marker = "✅ All subsystems executed successfully."
+            complete_marker = "==== Master Control Loop Cycle Complete ===="
+
+            matches = list(re.finditer(
+                r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\].*"
+                + re.escape(success_marker)
+                + r"[\s\S]*?"
+                + re.escape(complete_marker),
+                log_text,
+            ))
+
+            if not matches:
+                CRITICAL.append("Master Control Loop has no recent successful completed cycle marker")
+            else:
+                last_ts = matches[-1].group(1)
+                last_dt = datetime.strptime(last_ts, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+                age_seconds = (datetime.now(timezone.utc) - last_dt).total_seconds()
+                if age_seconds > 172800:
+                    CRITICAL.append(f"Master Control Loop successful cycle is stale: {age_seconds/3600:.1f} hours old")
+        except Exception as exc:
+            WARN.append(f"Could not verify Master Control Loop success log: {exc}")
 
 
 def check_memory_compressor() -> None:
@@ -298,15 +322,28 @@ def check_absorption_and_prediction() -> None:
         elif str(infra.get("overall_status", "")).lower() == "critical":
             CRITICAL.append("ACS-04 latest infrastructure status is critical")
 
-    age = file_age_hours(ABSORB_STATUS)
-    if age is None:
-        WARN.append("Absorption status is missing; knowledge-cycle execution is unverified")
-    elif age > MAX_KB_AGE_HOURS:
-        WARN.append(f"Absorption status is stale: {age:.1f} hours old")
+    # Prefer the public absorption marker because it records the last confirmed
+    # successful absorption run. The older absorb_runner_status.json can remain
+    # stale even when the public success marker is current.
+    marker = safe_json(ABSORB_PUBLIC_MARKER)
+    if marker is None:
+        WARN.append("Absorption public marker is missing or unreadable; knowledge-cycle execution is unverified")
     else:
-        data = safe_json(ABSORB_STATUS)
-        if data is not None and str(data.get("status", "")).upper() not in {"OK", "HEALTHY", "PASS", "PASSED"}:
-            WARN.append(f"Latest absorption status is not healthy: {data.get('status')}")
+        status = str(marker.get("status", "")).lower()
+        last_success = marker.get("last_success_utc")
+        if status not in {"ok", "healthy", "pass", "passed"}:
+            WARN.append(f"Latest absorption public marker is not healthy: {marker.get('status')}")
+        elif not last_success:
+            WARN.append("Absorption public marker lacks last_success_utc")
+        else:
+            try:
+                from datetime import datetime, timezone
+                last_dt = datetime.fromisoformat(str(last_success).replace("Z", "+00:00"))
+                age = (now_utc() - last_dt.astimezone(timezone.utc)).total_seconds() / 3600
+                if age > MAX_KB_AGE_HOURS:
+                    WARN.append(f"Absorption public marker is stale: {age:.1f} hours old")
+            except Exception as exc:
+                WARN.append(f"Could not parse absorption public marker timestamp: {exc}")
 
     today = now_utc().strftime("%Y-%m-%d")
     pred_candidates = [
@@ -331,9 +368,23 @@ def check_resource_pressure() -> None:
     except Exception:
         pass
 
-    recent = "\n".join(text_of(NOHUP).splitlines()[-1000:])
-    if "Resource temporarily unavailable" in recent or "BlockingIOError: [Errno 11]" in recent:
-        WARN.append("Historical/recent process-resource exhaustion is present in nohup.out")
+    # nohup.out may contain very old historical failures. Only use it as
+    # evidence of current/recent resource pressure when the file itself was
+    # updated within the last 48 hours. Live process pressure is checked above.
+    try:
+        if NOHUP.exists():
+            nohup_age_hours = (time.time() - NOHUP.stat().st_mtime) / 3600.0
+            if nohup_age_hours <= 48:
+                recent = "\n".join(text_of(NOHUP).splitlines()[-1000:])
+                if (
+                    "Resource temporarily unavailable" in recent
+                    or "BlockingIOError: [Errno 11]" in recent
+                ):
+                    WARN.append(
+                        "Recent process-resource exhaustion is present in nohup.out"
+                    )
+    except OSError as exc:
+        WARN.append(f"Could not inspect nohup.out freshness: {exc}")
 
 
 def check_vpn_simulation() -> None:
