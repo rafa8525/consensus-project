@@ -157,11 +157,58 @@ def _iso_from_value(value):
     return None
 
 def acs_execution_evidence(agent, spec):
-    """Verify ACS-02..05 from the component's own runtime artifact."""
+    """Verify ACS-02..05 from authoritative ACS state, with legacy fallback."""
     base = {
         "agent": agent, "role": spec["role"], "verified": False,
         "status": "missing", "stale_after_seconds": spec["max_age"],
     }
+
+    # The ACS execution harness is the authoritative health contract.
+    # Component artifacts remain fallback evidence only.
+    state_path = ACS_STATE_FILES.get(agent)
+    if state_path is not None and state_path.exists():
+        try:
+            data = json.loads(state_path.read_text(encoding="utf-8"))
+            health = str(data.get("status", "")).lower()
+            finished = _iso_from_value(data.get("finished_at_utc"))
+
+            if finished is None:
+                finished = datetime.fromtimestamp(
+                    state_path.stat().st_mtime,
+                    timezone.utc,
+                )
+
+            age = max(0.0, time.time() - finished.timestamp())
+
+            status_map = {
+                "healthy": "current",
+                "warning": "degraded",
+                "critical": "degraded",
+                "execution_failure": "degraded",
+            }
+
+            bridge_status = status_map.get(health, "unverified")
+
+            if age > spec["max_age"]:
+                bridge_status = "stale"
+
+            base.update({
+                "evidence_source": str(state_path),
+                "last_execution_utc": finished.astimezone(timezone.utc).isoformat(),
+                "age_seconds": round(age, 1),
+                "verified": bool(data.get("verified")) and health in status_map,
+                "status": bridge_status,
+                "health_status": health,
+                "stale_after_seconds": spec["max_age"],
+            })
+            return base
+        except Exception as exc:
+            base.update({
+                "evidence_source": str(state_path),
+                "status": "unreadable",
+                "error_type": type(exc).__name__,
+            })
+            return base
     path = _first_existing(spec["paths"])
     if path is None:
         base["evidence_candidates"] = [str(p) for p in spec["paths"]]
