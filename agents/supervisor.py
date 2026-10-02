@@ -127,11 +127,49 @@ class Supervisor(Agent):
 
 def main() -> int:
     result = Supervisor({}).safe_run()
-    if not result.get("ok"):
-        print(result)
-        return 1
-    print(result)
-    return 0
+
+    # Publish a fresh health snapshot immediately after every scheduled
+    # supervisor cycle. This ensures the bridge reflects the ACS states that
+    # were just produced, rather than waiting for a separate later task.
+    repo = Path(__file__).resolve().parent.parent
+    bridge = {
+        "ok": False,
+        "returncode": None,
+        "stdout": "",
+        "stderr": "",
+    }
+    try:
+        proc = subprocess.run(
+            ["bash", str(repo / "agents" / "run_pythonanywhere_health_bridge.sh")],
+            cwd=repo,
+            text=True,
+            capture_output=True,
+            timeout=300,
+            check=False,
+        )
+        bridge = {
+            "ok": proc.returncode == 0,
+            "returncode": proc.returncode,
+            "stdout": proc.stdout[-2000:],
+            "stderr": proc.stderr[-2000:],
+        }
+    except Exception as exc:
+        bridge = {
+            "ok": False,
+            "returncode": None,
+            "stdout": "",
+            "stderr": "",
+            "error_type": type(exc).__name__,
+            "error": str(exc)[:500],
+        }
+
+    output = {
+        "supervisor": result,
+        "health_bridge": bridge,
+    }
+    print(output)
+
+    return 0 if result.get("ok") and bridge.get("ok") else 1
 
 
 if __name__ == "__main__":
