@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 17.8,
+    "age_seconds": 34840.8,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 17.8,
+      "age_seconds": 34840.8,
       "agent": "ACS-01",
       "cadence": "daily",
       "evidence_source": "memory/agents/state.json:last_supervisor_ts",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 15.5,
+      "age_seconds": 34838.5,
       "agent": "ACS-02",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs02_state.json",
       "health_status": "healthy",
@@ -35,7 +35,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 14.7,
+      "age_seconds": 34837.7,
       "agent": "ACS-03",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs03_state.json",
       "health_status": "healthy",
@@ -46,7 +46,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 2.1,
+      "age_seconds": 34825.1,
       "agent": "ACS-04",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs04_state.json",
       "health_status": "healthy",
@@ -57,7 +57,7 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 0.9,
+      "age_seconds": 34823.9,
       "agent": "ACS-05",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs05_state.json",
       "health_status": "healthy",
@@ -79,7 +79,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-01T21:21:40.209844+00:00",
+      "mtime_utc": "2026-10-02T06:01:18.295038+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -98,7 +98,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-01T21:21:55.797366+00:00",
+  "generated_at_utc": "2026-10-02T07:02:18.804262+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -110,7 +110,7 @@
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "c85c9b36d14bc80b969f31166441a45068a0ddfe\tHEAD"
+      "stdout": "e39113d435582ba8025a3900696054edd05640b2\tHEAD"
     },
     "status": {
       "ok": true,
@@ -125,7 +125,7 @@
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-10-01T21:21:40.209844+00:00",
+        "mtime_utc": "2026-10-02T06:01:18.295038+00:00",
         "path": "memory",
         "size": 4096
       },
