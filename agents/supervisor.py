@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 from typing import Dict, Any
+import json
+import subprocess
+import sys
 import time
+from pathlib import Path
 
 from agents.core.agent_base import Agent
 from agents.core.metrics import record
@@ -14,9 +18,63 @@ class Supervisor(Agent):
     The cycle is deliberately self-contained: missing optional configuration
     cannot disable orchestration, and every attempted cycle writes durable
     execution evidence plus child-agent results to memory/agents/state.json.
+
+    ACS-01 is also the scheduled parent for ACS-02 through ACS-05 so one
+    PythonAnywhere scheduled task can keep the full consensus system current.
     """
 
     name = "supervisor"
+
+    def _run_child_cycle(self, agent: str) -> Dict[str, Any]:
+        repo = Path(__file__).resolve().parent.parent
+        cmd = [sys.executable, str(repo / "agents" / "run_acs_cycle.py"), agent]
+
+        try:
+            proc = subprocess.run(
+                cmd,
+                cwd=repo,
+                text=True,
+                capture_output=True,
+                timeout=1200,
+                check=False,
+            )
+        except Exception as exc:
+            return {
+                "ok": False,
+                "agent": agent,
+                "status": "execution_failure",
+                "error_type": type(exc).__name__,
+                "error": str(exc)[:500],
+            }
+
+        payload = None
+        for line in reversed(proc.stdout.splitlines()):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                candidate = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(candidate, dict) and candidate.get("agent") == agent:
+                payload = candidate
+                break
+
+        status = (
+            str(payload.get("status", "execution_failure"))
+            if payload is not None
+            else "execution_failure"
+        )
+
+        return {
+            "ok": proc.returncode == 0 and status == "healthy",
+            "agent": agent,
+            "status": status,
+            "returncode": proc.returncode,
+            "state": payload,
+            "stdout_tail": proc.stdout[-2000:],
+            "stderr_tail": proc.stderr[-2000:],
+        }
 
     def run(self) -> Dict[str, Any]:
         started = time.time()
@@ -42,6 +100,11 @@ class Supervisor(Agent):
 
         results["self_improve"] = SelfImprover(self.ctx).safe_run()
         results["evaluation"] = Evaluator(self.ctx).safe_run()
+
+        # Run every child cycle even if another child fails. This prevents one
+        # failure from blocking fresh evidence for the remaining agents.
+        for agent in ("ACS-02", "ACS-03", "ACS-04", "ACS-05"):
+            results[agent.lower().replace("-", "_")] = self._run_child_cycle(agent)
 
         finished = time.time()
         ok = all(v.get("ok") is True for v in results.values())
