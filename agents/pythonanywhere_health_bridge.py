@@ -123,12 +123,25 @@ def acs01_execution_evidence():
         ts = raw.get("last_supervisor_ts")
         if not isinstance(ts, (int, float)) or ts <= 0:
             return base
+
         age = max(0.0, time.time() - float(ts))
+        supervisor_health = str(raw.get("last_supervisor_status", "")).lower()
+
+        if age > ACS01_MAX_AGE_SECONDS:
+            bridge_status = "stale"
+        elif supervisor_health == "ok":
+            bridge_status = "current"
+        elif supervisor_health:
+            bridge_status = "degraded"
+        else:
+            bridge_status = "unverified"
+
         base.update({
             "last_execution_utc": datetime.fromtimestamp(float(ts), timezone.utc).isoformat(),
             "age_seconds": round(age, 1),
-            "verified": True,
-            "status": "current" if age <= ACS01_MAX_AGE_SECONDS else "stale",
+            "verified": supervisor_health in {"ok", "degraded"},
+            "status": bridge_status,
+            "health_status": supervisor_health or None,
             "stale_after_seconds": ACS01_MAX_AGE_SECONDS,
         })
         return base
