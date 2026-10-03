@@ -18,8 +18,10 @@ import sys
 import time
 from pathlib import Path
 
-REPO = Path.home() / "consensus-project"
-BRANCH = "v1.1-dev"
+REPO = Path(
+    os.getenv("CONSENSUS_REPO_ROOT", str(Path.home() / "consensus-project"))
+).expanduser().resolve()
+BRANCH = os.getenv("CONSENSUS_BRANCH", "v1.1-dev")
 REMOTE = f"origin/{BRANCH}"
 
 RUNTIME_PREFIXES = (
@@ -207,6 +209,22 @@ def main() -> int:
             })
             print(json.dumps(result))
             return 2
+
+        # If HEAD already matches origin there is nothing to synchronize.
+        # Preserve runtime churn in place instead of creating needless stashes.
+        if behind == 0:
+            head = run("git", "rev-parse", "--short", "HEAD").stdout.strip()
+            result.update({
+                "ok": True,
+                "status": "already_synced",
+                "safe_refresh_paths": [],
+                "ahead_after": 0,
+                "behind_after": 0,
+                "head": head,
+                "remote_head": head,
+            })
+            print(json.dumps(result))
+            return 0
 
         for path in safe_refresh:
             restore = run("git", "restore", "--source=HEAD", "--", path, timeout=60)
