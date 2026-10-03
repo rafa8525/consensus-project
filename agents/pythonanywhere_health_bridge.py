@@ -102,66 +102,92 @@ def run(cmd, cwd=REPO, timeout=30):
 
 def safe_sync_v11_dev():
     """Run the canonical safe-sync engine from origin/v1.1-dev."""
-    fetch = run(["git", "fetch", "--quiet", "origin", "v1.1-dev"], timeout=180)
-    if not fetch.get("ok"):
-        return {"ok": False, "status": "fetch_failed", "details": fetch}
-
-    script = run(
-        ["git", "show", "origin/v1.1-dev:agents/safe_sync_live_branch.py"],
-        timeout=60,
-    )
-    if not script.get("ok"):
-        return {
-            "ok": False,
-            "status": "sync_engine_unavailable",
-            "details": script,
-        }
-
-    temp_path = None
     try:
-        with tempfile.NamedTemporaryFile(
-            mode="w",
-            suffix=".py",
-            prefix="acs-safe-sync-",
-            delete=False,
-            encoding="utf-8",
-        ) as handle:
-            handle.write(script.get("stdout", ""))
-            temp_path = Path(handle.name)
-
-        result = run([sys.executable, str(temp_path)], timeout=600)
-
-        payload = None
-        for line in reversed(result.get("stdout", "").splitlines()):
-            try:
-                candidate = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if isinstance(candidate, dict) and "status" in candidate:
-                payload = candidate
-                break
-
-        if payload is None:
+        fetch = subprocess.run(
+            ["git", "fetch", "--quiet", "origin", "v1.1-dev"],
+            cwd=REPO,
+            text=True,
+            capture_output=True,
+            timeout=180,
+            check=False,
+        )
+        if fetch.returncode != 0:
             return {
                 "ok": False,
-                "status": "sync_engine_unreadable_output",
-                "details": result,
+                "status": "fetch_failed",
+                "stderr": fetch.stderr[-1200:],
             }
 
-        payload["returncode"] = result.get("returncode")
-        return payload
+        script = subprocess.run(
+            ["git", "show", "origin/v1.1-dev:agents/safe_sync_live_branch.py"],
+            cwd=REPO,
+            text=True,
+            capture_output=True,
+            timeout=60,
+            check=False,
+        )
+        if script.returncode != 0:
+            return {
+                "ok": False,
+                "status": "sync_engine_unavailable",
+                "stderr": script.stderr[-1200:],
+            }
+
+        temp_path = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="w",
+                suffix=".py",
+                prefix="acs-safe-sync-",
+                delete=False,
+                encoding="utf-8",
+            ) as handle:
+                handle.write(script.stdout)
+                temp_path = Path(handle.name)
+
+            proc = subprocess.run(
+                [sys.executable, str(temp_path)],
+                cwd=REPO,
+                text=True,
+                capture_output=True,
+                timeout=600,
+                check=False,
+            )
+
+            payload = None
+            for line in reversed(proc.stdout.splitlines()):
+                try:
+                    candidate = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if isinstance(candidate, dict) and "status" in candidate:
+                    payload = candidate
+                    break
+
+            if payload is None:
+                return {
+                    "ok": False,
+                    "status": "sync_engine_unreadable_output",
+                    "returncode": proc.returncode,
+                    "stdout_tail": proc.stdout[-2000:],
+                    "stderr": proc.stderr[-1200:],
+                }
+
+            payload["returncode"] = proc.returncode
+            return payload
+        finally:
+            if temp_path is not None:
+                try:
+                    temp_path.unlink()
+                except OSError:
+                    pass
+
     except Exception as exc:
         return {
             "ok": False,
             "status": "sync_engine_execution_failure",
             "error_type": type(exc).__name__,
         }
-    finally:
-        if temp_path is not None:
-            try:
-                temp_path.unlink()
-            except OSError:
-                pass
 
 
 def heal_infrastructure_after_sync(sync_result):
