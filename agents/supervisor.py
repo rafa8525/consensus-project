@@ -26,112 +26,95 @@ class Supervisor(Agent):
     name = "supervisor"
 
     def _safe_fast_forward_live_branch(self) -> Dict[str, Any]:
-        """Advance the live branch only when no genuine local source edits exist."""
+        """Run the canonical safe-sync engine fetched from origin/v1.1-dev."""
         repo = Path(__file__).resolve().parent.parent
-        remote = "origin/v1.1-dev"
 
-        runtime_prefixes = (
-            "memory/logs/",
-            "memory/agents/",
-            "memory/exports/",
+        fetch = subprocess.run(
+            ["git", "fetch", "--quiet", "origin", "v1.1-dev"],
+            cwd=repo,
+            text=True,
+            capture_output=True,
+            timeout=180,
+            check=False,
         )
-        runtime_files = {
-            "memory/centralized_knowledge_base.txt",
-            "memory/security_audit_schedule.txt",
-        }
-
-        def run(*args: str, timeout: int = 180):
-            return subprocess.run(
-                list(args),
-                cwd=repo,
-                text=True,
-                capture_output=True,
-                timeout=timeout,
-                check=False,
-            )
-
-        fetch = run("git", "fetch", "--quiet", "origin", "v1.1-dev")
         if fetch.returncode != 0:
             return {
                 "ok": False,
                 "status": "fetch_failed",
-                "stderr": fetch.stderr[-1000:],
+                "stderr": fetch.stderr[-1200:],
             }
 
-        status = run("git", "status", "--porcelain=v1", "-uno")
-        if status.returncode != 0:
+        script = subprocess.run(
+            ["git", "show", "origin/v1.1-dev:agents/safe_sync_live_branch.py"],
+            cwd=repo,
+            text=True,
+            capture_output=True,
+            timeout=60,
+            check=False,
+        )
+        if script.returncode != 0:
             return {
                 "ok": False,
-                "status": "status_failed",
-                "stderr": status.stderr[-1000:],
+                "status": "sync_engine_unavailable",
+                "stderr": script.stderr[-1200:],
             }
 
-        meaningful = []
-        for raw in status.stdout.splitlines():
-            if not raw:
-                continue
-            path = raw[3:].strip()
-            if path in runtime_files or any(path.startswith(x) for x in runtime_prefixes):
-                continue
-            meaningful.append(path)
+        import tempfile
+        temp_path = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="w",
+                suffix=".py",
+                prefix="acs-safe-sync-",
+                delete=False,
+                encoding="utf-8",
+            ) as handle:
+                handle.write(script.stdout)
+                temp_path = Path(handle.name)
 
-        safe_refresh = []
-        unsafe = []
+            proc = subprocess.run(
+                [sys.executable, str(temp_path)],
+                cwd=repo,
+                text=True,
+                capture_output=True,
+                timeout=600,
+                check=False,
+            )
 
-        for path in meaningful:
-            remote_blob = run("git", "show", f"{remote}:{path}")
-            if remote_blob.returncode != 0:
-                unsafe.append(path)
-                continue
+            payload = None
+            for line in reversed(proc.stdout.splitlines()):
+                try:
+                    candidate = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if isinstance(candidate, dict) and "status" in candidate:
+                    payload = candidate
+                    break
 
-            local = repo / path
-            if not local.exists():
-                safe_refresh.append(path)
-                continue
-
-            try:
-                local_text = local.read_text(encoding="utf-8")
-            except Exception:
-                unsafe.append(path)
-                continue
-
-            if local_text == remote_blob.stdout:
-                safe_refresh.append(path)
-            else:
-                unsafe.append(path)
-
-        if unsafe:
-            return {
-                "ok": False,
-                "status": "blocked_local_source_changes",
-                "unsafe_paths": unsafe[:20],
-            }
-
-        for path in safe_refresh:
-            restore = run("git", "restore", "--source=HEAD", "--", path)
-            if restore.returncode != 0:
+            if payload is None:
                 return {
                     "ok": False,
-                    "status": "restore_failed",
-                    "path": path,
-                    "stderr": restore.stderr[-1000:],
+                    "status": "sync_engine_unreadable_output",
+                    "returncode": proc.returncode,
+                    "stdout": proc.stdout[-2000:],
+                    "stderr": proc.stderr[-1200:],
                 }
 
-        merge = run("git", "merge", "--ff-only", remote, timeout=300)
-        if merge.returncode != 0:
+            payload["returncode"] = proc.returncode
+            return payload
+        except Exception as exc:
             return {
                 "ok": False,
-                "status": "fast_forward_failed",
-                "stderr": merge.stderr[-1200:],
+                "status": "sync_engine_execution_failure",
+                "error_type": type(exc).__name__,
+                "error": str(exc)[:1200],
             }
-
-        head = run("git", "rev-parse", "--short", "HEAD")
-        return {
-            "ok": True,
-            "status": "synced",
-            "head": head.stdout.strip(),
-            "refreshed_paths": safe_refresh,
-        }
+        finally:
+            if temp_path is not None:
+                try:
+                    temp_path.unlink()
+                except OSError:
+                    pass
 
     def _run_child_cycle(self, agent: str) -> Dict[str, Any]:
         repo = Path(__file__).resolve().parent.parent
