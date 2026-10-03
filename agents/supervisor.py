@@ -25,6 +25,114 @@ class Supervisor(Agent):
 
     name = "supervisor"
 
+    def _safe_fast_forward_live_branch(self) -> Dict[str, Any]:
+        """Advance the live branch only when no genuine local source edits exist."""
+        repo = Path(__file__).resolve().parent.parent
+        remote = "origin/v1.1-dev"
+
+        runtime_prefixes = (
+            "memory/logs/",
+            "memory/agents/",
+            "memory/exports/",
+        )
+        runtime_files = {
+            "memory/centralized_knowledge_base.txt",
+            "memory/security_audit_schedule.txt",
+        }
+
+        def run(*args: str, timeout: int = 180):
+            return subprocess.run(
+                list(args),
+                cwd=repo,
+                text=True,
+                capture_output=True,
+                timeout=timeout,
+                check=False,
+            )
+
+        fetch = run("git", "fetch", "--quiet", "origin", "v1.1-dev")
+        if fetch.returncode != 0:
+            return {
+                "ok": False,
+                "status": "fetch_failed",
+                "stderr": fetch.stderr[-1000:],
+            }
+
+        status = run("git", "status", "--porcelain=v1", "-uno")
+        if status.returncode != 0:
+            return {
+                "ok": False,
+                "status": "status_failed",
+                "stderr": status.stderr[-1000:],
+            }
+
+        meaningful = []
+        for raw in status.stdout.splitlines():
+            if not raw:
+                continue
+            path = raw[3:].strip()
+            if path in runtime_files or any(path.startswith(x) for x in runtime_prefixes):
+                continue
+            meaningful.append(path)
+
+        safe_refresh = []
+        unsafe = []
+
+        for path in meaningful:
+            remote_blob = run("git", "show", f"{remote}:{path}")
+            if remote_blob.returncode != 0:
+                unsafe.append(path)
+                continue
+
+            local = repo / path
+            if not local.exists():
+                safe_refresh.append(path)
+                continue
+
+            try:
+                local_text = local.read_text(encoding="utf-8")
+            except Exception:
+                unsafe.append(path)
+                continue
+
+            if local_text == remote_blob.stdout:
+                safe_refresh.append(path)
+            else:
+                unsafe.append(path)
+
+        if unsafe:
+            return {
+                "ok": False,
+                "status": "blocked_local_source_changes",
+                "unsafe_paths": unsafe[:20],
+            }
+
+        for path in safe_refresh:
+            restore = run("git", "restore", "--source=HEAD", "--", path)
+            if restore.returncode != 0:
+                return {
+                    "ok": False,
+                    "status": "restore_failed",
+                    "path": path,
+                    "stderr": restore.stderr[-1000:],
+                }
+
+        merge = run("git", "merge", "--ff-only", remote, timeout=300)
+        if merge.returncode != 0:
+            return {
+                "ok": False,
+                "status": "fast_forward_failed",
+                "stderr": merge.stderr[-1200:],
+            }
+
+        head = run("git", "rev-parse", "--short", "HEAD")
+        return {
+            "ok": True,
+            "status": "synced",
+            "head": head.stdout.strip(),
+            "refreshed_paths": safe_refresh,
+        }
+
     def _run_child_cycle(self, agent: str) -> Dict[str, Any]:
         repo = Path(__file__).resolve().parent.parent
         cmd = [sys.executable, str(repo / "agents" / "run_acs_cycle.py"), agent]
@@ -115,6 +223,11 @@ class Supervisor(Agent):
     def run(self) -> Dict[str, Any]:
         started = time.time()
         results: Dict[str, Any] = {}
+
+        # Bootstrap branch synchronization from inside the supervisor itself.
+        # The legacy launcher already refreshes this file from origin before
+        # execution, so this works even while the launcher script is still old.
+        results["branch_sync"] = self._safe_fast_forward_live_branch()
 
         from agents.researcher import Researcher
         from agents.self_improver import SelfImprover
