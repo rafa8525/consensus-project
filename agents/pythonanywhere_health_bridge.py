@@ -16,6 +16,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import tempfile
 import time
 from datetime import datetime, timezone
@@ -98,6 +99,113 @@ def run(cmd, cwd=REPO, timeout=30):
                 "stderr": p.stderr.strip()[-2000:]}
     except Exception as exc:
         return {"ok": False, "error": type(exc).__name__}
+
+def safe_sync_v11_dev():
+    """Safely fast-forward the live v1.1-dev checkout without discarding source edits."""
+    runtime_prefixes = (
+        "memory/logs/",
+        "memory/agents/",
+        "memory/exports/",
+    )
+    runtime_files = {
+        "memory/centralized_knowledge_base.txt",
+        "memory/security_audit_schedule.txt",
+    }
+
+    fetch = run(["git", "fetch", "--quiet", "origin", "v1.1-dev"], timeout=180)
+    if not fetch.get("ok"):
+        return {"ok": False, "status": "fetch_failed", "details": fetch}
+
+    status = run(["git", "status", "--porcelain=v1", "--untracked-files=no"], timeout=120)
+    if not status.get("ok"):
+        return {"ok": False, "status": "status_failed", "details": status}
+
+    meaningful = []
+    for raw in status.get("stdout", "").splitlines():
+        if not raw:
+            continue
+        path = raw[3:].strip()
+        if path in runtime_files or any(path.startswith(x) for x in runtime_prefixes):
+            continue
+        meaningful.append(path)
+
+    safe_refresh = []
+    unsafe = []
+
+    for path in meaningful:
+        remote_blob = run(["git", "show", f"origin/v1.1-dev:{path}"], timeout=60)
+        if not remote_blob.get("ok"):
+            unsafe.append(path)
+            continue
+
+        local = REPO / path
+        if not local.exists():
+            safe_refresh.append(path)
+            continue
+
+        try:
+            local_text = local.read_text(encoding="utf-8")
+        except Exception:
+            unsafe.append(path)
+            continue
+
+        if local_text == remote_blob.get("stdout", ""):
+            safe_refresh.append(path)
+        else:
+            unsafe.append(path)
+
+    if unsafe:
+        return {
+            "ok": False,
+            "status": "blocked_local_source_changes",
+            "unsafe_paths": unsafe[:20],
+        }
+
+    for path in safe_refresh:
+        restored = run(["git", "restore", "--source=HEAD", "--", path], timeout=60)
+        if not restored.get("ok"):
+            return {
+                "ok": False,
+                "status": "restore_failed",
+                "path": path,
+                "details": restored,
+            }
+
+    merged = run(["git", "merge", "--ff-only", "origin/v1.1-dev"], timeout=300)
+    if not merged.get("ok"):
+        return {"ok": False, "status": "fast_forward_failed", "details": merged}
+
+    head = run(["git", "rev-parse", "--short", "HEAD"])
+    return {
+        "ok": True,
+        "status": "synced",
+        "head": head.get("stdout", ""),
+        "refreshed_paths": safe_refresh,
+    }
+
+
+def heal_infrastructure_after_sync(sync_result):
+    """Refresh ACS-04/05 immediately after a successful branch self-heal."""
+    if not sync_result.get("ok"):
+        return {"attempted": False, "reason": sync_result.get("status")}
+
+    outcomes = {}
+    for agent in ("ACS-04", "ACS-05"):
+        attempts = []
+        for attempt in (1, 2):
+            result = run(
+                [sys.executable, str(REPO / "agents" / "run_acs_cycle.py"), agent],
+                timeout=1200,
+            )
+            attempts.append(result)
+            if result.get("ok"):
+                break
+            if attempt == 1:
+                time.sleep(5)
+        outcomes[agent] = attempts
+
+    return {"attempted": True, "outcomes": outcomes}
+
 
 def path_meta(path):
     try:
@@ -398,6 +506,9 @@ def pythonanywhere_schedule():
                 "health_task": {"found": False, "enabled": False},
                 "acs01_task": {"found": False, "enabled": False}}
 
+self_heal_sync = safe_sync_v11_dev()
+self_heal_cycles = heal_infrastructure_after_sync(self_heal_sync)
+
 git_status = run(["git", "status", "--porcelain=v1", "--untracked-files=no"])
 status_text = git_status.get("stdout", "")
 conflict = any(line[:2] in {"DD","AU","UD","UA","DU","AA","UU"} for line in status_text.splitlines())
@@ -406,6 +517,10 @@ snapshot = {
     "schema_version": 6,
     "generated_at_utc": datetime.now(timezone.utc).isoformat(),
     "source": "pythonanywhere",
+    "self_heal": {
+        "branch_sync": self_heal_sync,
+        "post_sync_cycles": self_heal_cycles,
+    },
     "active_branch": run(["git", "branch", "--show-current"]).get("stdout", ""),
     "critical_paths": [path_meta(p) for p in CRITICAL_PATHS],
     "acs01_orchestrator": acs01_execution_evidence(),
