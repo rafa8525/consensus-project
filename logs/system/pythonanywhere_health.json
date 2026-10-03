@@ -1,11 +1,11 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46836.7,
+    "age_seconds": 0.8,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
     "health_status": "degraded",
-    "last_execution_utc": "2026-10-02T18:01:42.235608+00:00",
+    "last_execution_utc": "2026-10-03T18:02:03.842464+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
     "status": "degraded",
@@ -14,41 +14,41 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46836.7,
+      "age_seconds": 0.8,
       "agent": "ACS-01",
       "cadence": "daily",
       "evidence_source": "memory/agents/state.json:last_supervisor_ts",
       "health_status": "degraded",
-      "last_execution_utc": "2026-10-02T18:01:42.235608+00:00",
+      "last_execution_utc": "2026-10-03T18:02:03.842464+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46884.2,
+      "age_seconds": 70.0,
       "agent": "ACS-02",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs02_state.json",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-02T18:00:54.783894+00:00",
+      "last_execution_utc": "2026-10-03T18:00:54.667839+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 46881.6,
+      "age_seconds": 67.4,
       "agent": "ACS-03",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs03_state.json",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-02T18:00:57.371269+00:00",
+      "last_execution_utc": "2026-10-03T18:00:57.244408+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 46838.2,
+      "age_seconds": 8.4,
       "agent": "ACS-04",
       "diagnostics": {
         "diagnostics_source": "/home/rafa1215/memory/logs/system/infrastructure_guardian_status.json",
@@ -62,7 +62,7 @@
           },
           {
             "code": "GIT_BEHIND",
-            "message": "Branch is behind origin by 2 commit(s).",
+            "message": "Branch is behind origin by 5 commit(s).",
             "repair_message": null,
             "repaired": false,
             "severity": "critical"
@@ -72,46 +72,26 @@
       },
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs04_state.json",
       "health_status": "critical",
-      "last_execution_utc": "2026-10-02T18:01:40.742613+00:00",
+      "last_execution_utc": "2026-10-03T18:01:56.333167+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 46836.8,
+      "age_seconds": 0.9,
       "agent": "ACS-05",
       "diagnostics": {
         "critical": [
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json",
-          "Gmail OAuth token missing: /home/rafa1215/.secrets/google/token_gmail.json"
+          "ACS-04 latest infrastructure status is critical"
         ],
         "diagnostics_source": "/home/rafa1215/consensus-project/memory/logs/system/continuity_guardian_state.json",
         "last_status": "CRITICAL",
-        "warnings": [
-          "gmail_refresh_guard_v3 still points to obsolete memory/system/service_account.json",
-          "Recent memory-compressor error remains in heartbeat history; verify latest run is clean",
-          "Absorption status is stale: 1348.6 hours old",
-          "Historical/recent process-resource exhaustion is present in nohup.out",
-          "gmail_refresh_guard_v3 still points to obsolete memory/system/service_account.json",
-          "Recent memory-compressor error remains in heartbeat history; verify latest run is clean",
-          "Absorption status is stale: 1349.7 hours old",
-          "Historical/recent process-resource exhaustion is present in nohup.out",
-          "gmail_refresh_guard_v3 still points to obsolete memory/system/service_account.json",
-          "Recent memory-compressor error remains in heartbeat history; verify latest run is clean"
-        ]
+        "warnings": []
       },
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs05_state.json",
       "health_status": "critical",
-      "last_execution_utc": "2026-10-02T18:01:42.213782+00:00",
+      "last_execution_utc": "2026-10-03T18:02:03.822034+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -129,7 +109,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-03T06:01:20.494278+00:00",
+      "mtime_utc": "2026-10-03T18:00:54.295749+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -148,7 +128,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-03T07:02:18.941171+00:00",
+  "generated_at_utc": "2026-10-03T18:02:04.669154+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -160,7 +140,7 @@
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "9568fdf75438dc647f06a1cee12b991ddee354ca\tHEAD"
+      "stdout": "8de2914d1c9be2e73e32b98507d8c2f5834c5c46\tHEAD"
     },
     "status": {
       "ok": true,
@@ -175,14 +155,14 @@
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-10-03T06:01:20.494278+00:00",
+        "mtime_utc": "2026-10-03T18:00:54.295749+00:00",
         "path": "memory",
         "size": 4096
       },
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-10-02T18:01:42.222730+00:00",
+        "mtime_utc": "2026-10-03T18:02:03.824645+00:00",
         "path": "memory/agents",
         "size": 4096
       }
