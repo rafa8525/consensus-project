@@ -101,90 +101,67 @@ def run(cmd, cwd=REPO, timeout=30):
         return {"ok": False, "error": type(exc).__name__}
 
 def safe_sync_v11_dev():
-    """Safely fast-forward the live v1.1-dev checkout without discarding source edits."""
-    runtime_prefixes = (
-        "memory/logs/",
-        "memory/agents/",
-        "memory/exports/",
-    )
-    runtime_files = {
-        "memory/centralized_knowledge_base.txt",
-        "memory/security_audit_schedule.txt",
-    }
-
+    """Run the canonical safe-sync engine from origin/v1.1-dev."""
     fetch = run(["git", "fetch", "--quiet", "origin", "v1.1-dev"], timeout=180)
     if not fetch.get("ok"):
         return {"ok": False, "status": "fetch_failed", "details": fetch}
 
-    status = run(["git", "status", "--porcelain=v1", "--untracked-files=no"], timeout=120)
-    if not status.get("ok"):
-        return {"ok": False, "status": "status_failed", "details": status}
-
-    meaningful = []
-    for raw in status.get("stdout", "").splitlines():
-        if not raw:
-            continue
-        path = raw[3:].strip()
-        if path in runtime_files or any(path.startswith(x) for x in runtime_prefixes):
-            continue
-        meaningful.append(path)
-
-    safe_refresh = []
-    unsafe = []
-
-    for path in meaningful:
-        local = REPO / path
-
-        remote_sha = run(
-            ["git", "rev-parse", "--verify", f"origin/v1.1-dev:{path}"],
-            timeout=60,
-        )
-        if not remote_sha.get("ok"):
-            unsafe.append(path)
-            continue
-
-        if not local.exists():
-            safe_refresh.append(path)
-            continue
-
-        local_sha = run(["git", "hash-object", "--", path], timeout=60)
-        if not local_sha.get("ok"):
-            unsafe.append(path)
-            continue
-
-        if local_sha.get("stdout", "").strip() == remote_sha.get("stdout", "").strip():
-            safe_refresh.append(path)
-        else:
-            unsafe.append(path)
-
-    if unsafe:
+    script = run(
+        ["git", "show", "origin/v1.1-dev:agents/safe_sync_live_branch.py"],
+        timeout=60,
+    )
+    if not script.get("ok"):
         return {
             "ok": False,
-            "status": "blocked_local_source_changes",
-            "unsafe_paths": unsafe[:20],
+            "status": "sync_engine_unavailable",
+            "details": script,
         }
 
-    for path in safe_refresh:
-        restored = run(["git", "restore", "--source=HEAD", "--", path], timeout=60)
-        if not restored.get("ok"):
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            suffix=".py",
+            prefix="acs-safe-sync-",
+            delete=False,
+            encoding="utf-8",
+        ) as handle:
+            handle.write(script.get("stdout", ""))
+            temp_path = Path(handle.name)
+
+        result = run([sys.executable, str(temp_path)], timeout=600)
+
+        payload = None
+        for line in reversed(result.get("stdout", "").splitlines()):
+            try:
+                candidate = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(candidate, dict) and "status" in candidate:
+                payload = candidate
+                break
+
+        if payload is None:
             return {
                 "ok": False,
-                "status": "restore_failed",
-                "path": path,
-                "details": restored,
+                "status": "sync_engine_unreadable_output",
+                "details": result,
             }
 
-    merged = run(["git", "merge", "--ff-only", "origin/v1.1-dev"], timeout=300)
-    if not merged.get("ok"):
-        return {"ok": False, "status": "fast_forward_failed", "details": merged}
-
-    head = run(["git", "rev-parse", "--short", "HEAD"])
-    return {
-        "ok": True,
-        "status": "synced",
-        "head": head.get("stdout", ""),
-        "refreshed_paths": safe_refresh,
-    }
+        payload["returncode"] = result.get("returncode")
+        return payload
+    except Exception as exc:
+        return {
+            "ok": False,
+            "status": "sync_engine_execution_failure",
+            "error_type": type(exc).__name__,
+        }
+    finally:
+        if temp_path is not None:
+            try:
+                temp_path.unlink()
+            except OSError:
+                pass
 
 
 def heal_infrastructure_after_sync(sync_result):
