@@ -28,52 +28,88 @@ class Supervisor(Agent):
     def _run_child_cycle(self, agent: str) -> Dict[str, Any]:
         repo = Path(__file__).resolve().parent.parent
         cmd = [sys.executable, str(repo / "agents" / "run_acs_cycle.py"), agent]
+        attempts = []
 
-        try:
-            proc = subprocess.run(
-                cmd,
-                cwd=repo,
-                text=True,
-                capture_output=True,
-                timeout=1200,
-                check=False,
-            )
-        except Exception as exc:
-            return {
-                "ok": False,
-                "agent": agent,
-                "status": "execution_failure",
-                "error_type": type(exc).__name__,
-                "error": str(exc)[:500],
-            }
-
-        payload = None
-        for line in reversed(proc.stdout.splitlines()):
-            line = line.strip()
-            if not line:
-                continue
+        for attempt in (1, 2):
             try:
-                candidate = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if isinstance(candidate, dict) and candidate.get("agent") == agent:
-                payload = candidate
-                break
+                proc = subprocess.run(
+                    cmd,
+                    cwd=repo,
+                    text=True,
+                    capture_output=True,
+                    timeout=1200,
+                    check=False,
+                )
+            except Exception as exc:
+                attempts.append({
+                    "attempt": attempt,
+                    "ok": False,
+                    "status": "execution_failure",
+                    "error_type": type(exc).__name__,
+                    "error": str(exc)[:500],
+                })
+                if attempt == 1:
+                    time.sleep(5)
+                    continue
+                return {
+                    "ok": False,
+                    "agent": agent,
+                    "status": "execution_failure",
+                    "attempts": attempts,
+                }
 
-        status = (
-            str(payload.get("status", "execution_failure"))
-            if payload is not None
-            else "execution_failure"
-        )
+            payload = None
+            for line in reversed(proc.stdout.splitlines()):
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    candidate = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if isinstance(candidate, dict) and candidate.get("agent") == agent:
+                    payload = candidate
+                    break
 
+            status = (
+                str(payload.get("status", "execution_failure"))
+                if payload is not None
+                else "execution_failure"
+            )
+            ok = proc.returncode == 0 and status == "healthy"
+
+            attempts.append({
+                "attempt": attempt,
+                "ok": ok,
+                "status": status,
+                "returncode": proc.returncode,
+                "state": payload,
+                "stdout_tail": proc.stdout[-2000:],
+                "stderr_tail": proc.stderr[-2000:],
+            })
+
+            if ok:
+                return {
+                    "ok": True,
+                    "agent": agent,
+                    "status": status,
+                    "attempt_count": attempt,
+                    "attempts": attempts,
+                    "state": payload,
+                }
+
+            if attempt == 1:
+                time.sleep(5)
+
+        last = attempts[-1]
         return {
-            "ok": proc.returncode == 0 and status == "healthy",
+            "ok": False,
             "agent": agent,
-            "status": status,
-            "returncode": proc.returncode,
-            "state": payload,
-            "stdout_tail": proc.stdout[-2000:],
-            "stderr_tail": proc.stderr[-2000:],
+            "status": last.get("status", "execution_failure"),
+            "returncode": last.get("returncode"),
+            "attempt_count": 2,
+            "attempts": attempts,
+            "state": last.get("state"),
         }
 
     def run(self) -> Dict[str, Any]:
@@ -138,30 +174,45 @@ def main() -> int:
         "stdout": "",
         "stderr": "",
     }
-    try:
-        proc = subprocess.run(
-            ["bash", str(repo / "agents" / "run_pythonanywhere_health_bridge.sh")],
-            cwd=repo,
-            text=True,
-            capture_output=True,
-            timeout=300,
-            check=False,
-        )
-        bridge = {
-            "ok": proc.returncode == 0,
-            "returncode": proc.returncode,
-            "stdout": proc.stdout[-2000:],
-            "stderr": proc.stderr[-2000:],
-        }
-    except Exception as exc:
-        bridge = {
-            "ok": False,
-            "returncode": None,
-            "stdout": "",
-            "stderr": "",
-            "error_type": type(exc).__name__,
-            "error": str(exc)[:500],
-        }
+    bridge_attempts = []
+    for attempt in (1, 2):
+        try:
+            proc = subprocess.run(
+                ["bash", str(repo / "agents" / "run_pythonanywhere_health_bridge.sh")],
+                cwd=repo,
+                text=True,
+                capture_output=True,
+                timeout=300,
+                check=False,
+            )
+            current = {
+                "attempt": attempt,
+                "ok": proc.returncode == 0,
+                "returncode": proc.returncode,
+                "stdout": proc.stdout[-2000:],
+                "stderr": proc.stderr[-2000:],
+            }
+        except Exception as exc:
+            current = {
+                "attempt": attempt,
+                "ok": False,
+                "returncode": None,
+                "stdout": "",
+                "stderr": "",
+                "error_type": type(exc).__name__,
+                "error": str(exc)[:500],
+            }
+
+        bridge_attempts.append(current)
+        if current["ok"]:
+            bridge = dict(current)
+            bridge["attempts"] = bridge_attempts
+            break
+
+        bridge = dict(current)
+        bridge["attempts"] = bridge_attempts
+        if attempt == 1:
+            time.sleep(10)
 
     output = {
         "supervisor": result,
