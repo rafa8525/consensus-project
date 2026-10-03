@@ -242,7 +242,14 @@ def main() -> int:
     else:
         results = []
         for component, path in CYCLES[args.agent]:
-            extra = ["--force"] if component == "continuity_guardian" else None
+            if component == "continuity_guardian":
+                extra = ["--force"]
+            elif component == "infrastructure_guardian":
+                # Allow only the guardian's explicitly configured safe repairs
+                # (for example stale-lock removal and log rotation).
+                extra = ["--apply"]
+            else:
+                extra = None
             results.append(run_process(component, path, extra))
 
     payload = write_state(args.agent, started, results)
