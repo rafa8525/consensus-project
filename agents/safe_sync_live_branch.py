@@ -77,6 +77,32 @@ def local_blob_sha(path: str) -> str | None:
     return r.stdout.strip() if r.returncode == 0 else None
 
 
+def blob_is_from_remote_history(path: str, candidate_sha: str | None) -> bool:
+    """Return True only when the local bytes are a known historical remote blob.
+
+    This lets the live checkout self-heal files copied from an older
+    origin/v1.1-dev revision while still refusing to discard arbitrary local
+    source edits. It is deliberately path-specific: a blob seen at some other
+    path is not sufficient evidence.
+    """
+    if not candidate_sha:
+        return False
+
+    commits = run(
+        "git", "rev-list", REMOTE, "--", path,
+        timeout=120,
+    )
+    if commits.returncode != 0:
+        return False
+
+    for commit in commits.stdout.splitlines()[:500]:
+        historical_sha = blob_sha(commit, path)
+        if historical_sha == candidate_sha:
+            return True
+
+    return False
+
+
 def divergence():
     p = run("git", "rev-list", "--left-right", "--count", f"HEAD...{REMOTE}")
     if p.returncode != 0:
@@ -159,10 +185,16 @@ def main() -> int:
 
             if remote_sha is None:
                 unsafe.append(path)
-            elif local_sha is None or local_sha == remote_sha:
-                # Missing local tracked source, or file already copied from
-                # remote while HEAD remained behind. Both are safe to clean
-                # back to HEAD before the fast-forward.
+            elif (
+                local_sha is None
+                or local_sha == remote_sha
+                or blob_is_from_remote_history(path, local_sha)
+            ):
+                # Missing local tracked source, a file already copied from the
+                # current remote, or bytes proven to be from an older revision
+                # of this same path on origin/v1.1-dev are safe to normalize
+                # back to HEAD before the fast-forward. Arbitrary local edits
+                # still block synchronization and are never discarded.
                 safe_refresh.append(path)
             else:
                 unsafe.append(path)
