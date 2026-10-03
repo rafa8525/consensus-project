@@ -169,6 +169,58 @@ def _iso_from_value(value):
             return None
     return None
 
+def agent_diagnostics(agent):
+    """Return compact non-secret diagnostics for unhealthy ACS states."""
+    try:
+        if agent == "ACS-04":
+            candidates = [
+                Path.home() / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
+                REPO / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
+            ]
+            path = _first_existing(candidates)
+            if path is None:
+                return {"diagnostics_status": "missing"}
+            data = json.loads(path.read_text(encoding="utf-8"))
+            findings = []
+            for item in data.get("findings", []):
+                if item.get("severity") in {"warning", "critical"}:
+                    findings.append({
+                        "severity": item.get("severity"),
+                        "code": item.get("code"),
+                        "message": item.get("message"),
+                        "repaired": item.get("repaired"),
+                        "repair_message": item.get("repair_message"),
+                    })
+            return {
+                "diagnostics_source": str(path),
+                "overall_status": data.get("overall_status"),
+                "findings": findings[:10],
+            }
+
+        if agent == "ACS-05":
+            candidates = [
+                REPO / "memory" / "logs" / "system" / "continuity_guardian_state.json",
+                Path.home() / "memory" / "logs" / "system" / "continuity_guardian_state.json",
+            ]
+            path = _first_existing(candidates)
+            if path is None:
+                return {"diagnostics_status": "missing"}
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return {
+                "diagnostics_source": str(path),
+                "last_status": data.get("last_status"),
+                "critical": list(data.get("critical") or [])[:10],
+                "warnings": list(data.get("warnings") or [])[:10],
+            }
+    except Exception as exc:
+        return {
+            "diagnostics_status": "unreadable",
+            "diagnostics_error_type": type(exc).__name__,
+        }
+
+    return {}
+
+
 def acs_execution_evidence(agent, spec):
     """Verify ACS-02..05 from authoritative ACS state, with legacy fallback."""
     base = {
@@ -214,6 +266,8 @@ def acs_execution_evidence(agent, spec):
                 "health_status": health,
                 "stale_after_seconds": spec["max_age"],
             })
+            if bridge_status != "current" or health != "healthy":
+                base["diagnostics"] = agent_diagnostics(agent)
             return base
         except Exception as exc:
             base.update({
