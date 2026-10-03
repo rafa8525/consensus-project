@@ -133,23 +133,26 @@ def safe_sync_v11_dev():
     unsafe = []
 
     for path in meaningful:
-        remote_blob = run(["git", "show", f"origin/v1.1-dev:{path}"], timeout=60)
-        if not remote_blob.get("ok"):
+        local = REPO / path
+
+        remote_sha = run(
+            ["git", "rev-parse", "--verify", f"origin/v1.1-dev:{path}"],
+            timeout=60,
+        )
+        if not remote_sha.get("ok"):
             unsafe.append(path)
             continue
 
-        local = REPO / path
         if not local.exists():
             safe_refresh.append(path)
             continue
 
-        try:
-            local_text = local.read_text(encoding="utf-8")
-        except Exception:
+        local_sha = run(["git", "hash-object", "--", path], timeout=60)
+        if not local_sha.get("ok"):
             unsafe.append(path)
             continue
 
-        if local_text == remote_blob.get("stdout", ""):
+        if local_sha.get("stdout", "").strip() == remote_sha.get("stdout", "").strip():
             safe_refresh.append(path)
         else:
             unsafe.append(path)
