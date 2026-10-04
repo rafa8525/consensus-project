@@ -54,7 +54,10 @@ CREDS = SECRETS / "credentials.json"
 GMAIL_TOKEN = SECRETS / "token_gmail.json"
 ABSORB_STATUS = MEMORY / "logs" / "system" / "absorb_runner_status.json"
 ABSORB_PUBLIC_MARKER = Path.home() / "memory" / "public" / "absorption_last_success.json"
-INFRA_STATUS = MEMORY / "logs" / "system" / "infrastructure_guardian_status.json"
+INFRA_STATUS_CANDIDATES = (
+    Path.home() / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
+    MEMORY / "logs" / "system" / "infrastructure_guardian_status.json",
+)
 COMPRESSED = MEMORY / "logs" / "compressed_memory.md"
 HEARTBEAT = MEMORY / "logs" / "system" / "heartbeat.md"
 NOHUP = BASE / "nohup.out"
@@ -309,18 +312,30 @@ def check_absorption_and_prediction() -> None:
         CRITICAL.append("Canonical tools/absorb_memory.py is missing")
     # The legacy centralized_knowledge_base.txt is retired. Current absorption
     # status is authoritative; do not resurrect the old file as a health requirement.
-    # ACS-04 must produce fresh infrastructure evidence every day.
-    infra_age = file_age_hours(INFRA_STATUS)
-    if infra_age is None:
+    # ACS-04 may write to the external runtime memory root while older
+    # repository-local evidence remains tracked. Select the newest valid
+    # evidence instead of allowing a stale shadow copy to override recovery.
+    infra_candidates = [p for p in INFRA_STATUS_CANDIDATES if p.exists()]
+    if not infra_candidates:
         WARN.append("ACS-04 infrastructure status is missing; infrastructure monitoring is unverified")
-    elif infra_age > MAX_INFRA_AGE_HOURS:
-        WARN.append(f"ACS-04 infrastructure status is stale: {infra_age:.1f} hours old")
     else:
-        infra = safe_json(INFRA_STATUS)
-        if infra is None:
+        infra_path = max(
+            infra_candidates,
+            key=lambda p: p.stat().st_mtime,
+        )
+        infra_age = file_age_hours(infra_path)
+        if infra_age is None:
             WARN.append("ACS-04 infrastructure status is unreadable")
-        elif str(infra.get("overall_status", "")).lower() == "critical":
-            CRITICAL.append("ACS-04 latest infrastructure status is critical")
+        elif infra_age > MAX_INFRA_AGE_HOURS:
+            WARN.append(f"ACS-04 infrastructure status is stale: {infra_age:.1f} hours old")
+        else:
+            infra = safe_json(infra_path)
+            if infra is None:
+                WARN.append("ACS-04 infrastructure status is unreadable")
+            elif str(infra.get("overall_status", "")).lower() == "critical":
+                CRITICAL.append(
+                    f"ACS-04 latest infrastructure status is critical ({infra_path})"
+                )
 
     # Prefer the public absorption marker because it records the last confirmed
     # successful absorption run. The older absorb_runner_status.json can remain
