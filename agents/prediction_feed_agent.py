@@ -787,7 +787,12 @@ def add_predictions(ctx: Context) -> None:
     # Conservative predictions derived only from findings already established.
     no_fitness = any(f.section == "Health/Fitness" and f.message.startswith("No current-day") for f in ctx.findings)
     no_candidates = any(f.section == "Media & Fun" and "No verified streaming candidate" in f.message for f in ctx.findings)
-    unhealthy = any(f.section == "System/Project" and re.search(r"health: (WARN|ERROR|FAIL|CRITICAL|DEGRADED)", f.message, re.I) for f in ctx.findings)
+    unhealthy = any(
+        f.section == "System/Project"
+        and re.search(r"health: (WARN|ERROR|FAIL|CRITICAL|DEGRADED)", f.message, re.I)
+        and "Expected warning(s):" not in f.message
+        for f in ctx.findings
+    )
     if no_fitness:
         ctx.findings.append(Finding(
             "24–72 Hour Predictions", "MEDIUM", "Today's activity summary is likely to remain incomplete unless a wearable sync or manual log arrives.",
