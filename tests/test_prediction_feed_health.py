@@ -2,7 +2,10 @@ import os
 import unittest
 from unittest.mock import patch
 
-from agents.prediction_feed_agent import summarize_health
+from datetime import datetime, timezone
+from pathlib import Path
+
+from agents.prediction_feed_agent import Context, Finding, add_predictions, summarize_health
 
 
 BASE = """# System Health Snapshot
@@ -64,6 +67,31 @@ class PredictionFeedHealthTests(unittest.TestCase):
         status, _, _, _, unexpected, _ = summarize_health(text)
         self.assertEqual(status, "WARN")
         self.assertTrue(unexpected)
+
+
+    def test_expected_warn_does_not_emit_degraded_prediction(self):
+        ctx = Context(
+            now=datetime(2026, 10, 6, 16, 24, tzinfo=timezone.utc),
+            repo_root=Path("/tmp/repo"),
+            memory_root=Path("/tmp/memory"),
+        )
+        ctx.findings.append(Finding(
+            "System/Project",
+            "MEDIUM",
+            "System health: WARN (1 minutes old). Details: Expected warning(s): maintenance_guard: warn (expected dormant)",
+            "Expected maintenance window.",
+            "No corrective action required; all warning components are explicitly marked expected/dormant.",
+        ))
+        add_predictions(ctx)
+        messages = [
+            finding.message
+            for finding in ctx.findings
+            if finding.section == "24–72 Hour Predictions"
+        ]
+        self.assertNotIn(
+            "Prediction quality may remain degraded until the upstream health warning is cleared.",
+            messages,
+        )
 
 
 if __name__ == "__main__":
