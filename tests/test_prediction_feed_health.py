@@ -1,11 +1,12 @@
 import os
+import tempfile
 import unittest
 from unittest.mock import patch
 
 from datetime import datetime, timezone
 from pathlib import Path
 
-from agents.prediction_feed_agent import Context, Finding, add_predictions, summarize_health
+from agents.prediction_feed_agent import Context, Finding, add_predictions, detect_fitness, summarize_health
 
 
 BASE = """# System Health Snapshot
@@ -92,6 +93,32 @@ class PredictionFeedHealthTests(unittest.TestCase):
             "Prediction quality may remain degraded until the upstream health warning is cleared.",
             messages,
         )
+
+
+    def test_zero_swim_laps_are_not_treated_as_completed_activity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            memory = root / "memory"
+            fitness = repo / "memory" / "logs" / "fitness"
+            fitness.mkdir(parents=True)
+            (fitness / "fitness_summary_20261006.md").write_text(
+                "# Daily Fitness Summary — 2026-10-06\n- Swim Laps: 0\n",
+                encoding="utf-8",
+            )
+
+            ctx = Context(
+                now=datetime(2026, 10, 6, 16, 24, tzinfo=timezone.utc),
+                repo_root=repo,
+                memory_root=memory,
+            )
+            detect_fitness(ctx)
+
+            self.assertTrue(any(
+                finding.message == "No current-day fitness measurement was found."
+                for finding in ctx.findings
+            ))
+            self.assertFalse(any("0 swim laps" in finding.message for finding in ctx.findings))
 
 
 if __name__ == "__main__":
