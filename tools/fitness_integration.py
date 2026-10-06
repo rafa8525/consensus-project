@@ -1,140 +1,200 @@
 #!/usr/bin/env python3
-# Mutation_a51e5d
 """
 Fitness Integration Module — AI Consensus System
-------------------------------------------------
-# Mutation_4cd09f
 
-Purpose:
-- Aggregate and normalize fitness data from multiple sources:
-  * Pixel Watch 3 (primary)
-  * Samsung Watch (BMI readings)
-  * Manual pool/swim entries
-  * Fitbit logs (optional)
-- Update daily summary and BMI metrics in /memory/logs/fitness/
+Production-safe fitness aggregation.
 
-Outputs:
-- memory/logs/fitness/fitness_summary_YYYYMMDD.md
-- memory/logs/fitness/latest_fitness.md
-# Mutation_7d7c45
+Rules:
+- Never fabricate Pixel Watch, Samsung Watch, swim, weight, BMI, or step data.
+- Read only genuine records already written to memory/logs/fitness/daily_metrics.jsonl.
+- If no current-day source records exist, do not overwrite an existing summary.
+- Preserve the established output paths used by downstream agents.
 """
 
+from __future__ import annotations
+
+from datetime import datetime, timezone
+import json
 from pathlib import Path
-from datetime import datetime
-import json, random
+from typing import Any
 
 ROOT = Path("/home/rafa1215/consensus-project")
 FITNESS_DIR = ROOT / "memory" / "logs" / "fitness"
 FITNESS_DIR.mkdir(parents=True, exist_ok=True)
 
-# --- Configuration ---
-USER_HEIGHT_INCHES = 67  # 5'7"
-TARGET_WEIGHT_LBS = 185
-CURRENT_WEIGHT_LBS = 218  # default baseline
-BMI_WARNING_THRESHOLD = 30.0
+DAILY_METRICS = FITNESS_DIR / "daily_metrics.jsonl"
 
-# --- Mocked integrations (replace with APIs later) ---
-def pixel_watch_data():
-    """Simulated step + heart-rate data pulled from Pixel Watch."""
+
+def parse_timestamp(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    raw = value.strip().replace("Z", "+00:00")
+    try:
+        dt = datetime.fromisoformat(raw)
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
+def current_day_records(now: datetime) -> list[dict[str, Any]]:
+    if not DAILY_METRICS.is_file():
+        return []
+
+    today = now.astimezone(timezone.utc).date()
+    records: list[dict[str, Any]] = []
+
+    for raw_line in DAILY_METRICS.read_text(encoding="utf-8", errors="replace").splitlines():
+        if not raw_line.strip():
+            continue
+        try:
+            obj = json.loads(raw_line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(obj, dict):
+            continue
+
+        ts = parse_timestamp(obj.get("timestamp") or obj.get("time") or obj.get("ts"))
+        if ts is None or ts.date() != today:
+            continue
+        records.append(obj)
+
+    return records
+
+
+def numeric(record: dict[str, Any], *keys: str) -> float | None:
+    for key in keys:
+        value = record.get(key)
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            return float(value)
+    return None
+
+
+def build_summary(records: list[dict[str, Any]], now: datetime) -> dict[str, Any] | None:
+    if not records:
+        return None
+
+    steps = 0
+    active_minutes = 0.0
+    swim_laps = 0
+    avg_hr_values: list[float] = []
+    max_hr_values: list[float] = []
+    weight_lbs: float | None = None
+    bmi: float | None = None
+    genuine_fields = 0
+
+    for record in records:
+        value = numeric(record, "steps", "step_count")
+        if value is not None:
+            steps += int(value)
+            genuine_fields += 1
+
+        value = numeric(record, "active_minutes", "mvpa_minutes", "zone_minutes")
+        if value is not None:
+            active_minutes += value
+            genuine_fields += 1
+
+        value = numeric(record, "swim_laps", "laps", "pool_laps")
+        if value is not None:
+            swim_laps += int(value)
+            genuine_fields += 1
+
+        value = numeric(record, "avg_hr", "average_hr", "heart_rate_avg")
+        if value is not None:
+            avg_hr_values.append(value)
+            genuine_fields += 1
+
+        value = numeric(record, "max_hr", "heart_rate_max")
+        if value is not None:
+            max_hr_values.append(value)
+            genuine_fields += 1
+
+        value = numeric(record, "weight_lbs")
+        if value is not None:
+            weight_lbs = value
+            genuine_fields += 1
+
+        value = numeric(record, "bmi")
+        if value is not None:
+            bmi = value
+            genuine_fields += 1
+
+    if genuine_fields == 0:
+        return None
+
     return {
-        "steps": random.randint(6000, 12000),
-        "active_minutes": random.randint(45, 120),
-# Mutation_9fe24f
-        "avg_hr": random.randint(75, 110),
-        "max_hr": random.randint(120, 145),
-    }
-
-def samsung_watch_bmi():
-    """Simulated BMI reading from Samsung Watch."""
-# Mutation_38924d
-    weight = CURRENT_WEIGHT_LBS + random.uniform(-1.5, 1.5)
-    height_m = USER_HEIGHT_INCHES * 0.0254
-    bmi = round(weight / (height_m ** 2), 1)
-    return {"weight_lbs": round(weight, 1), "bmi": bmi}
-
-def swim_activity_log():
-    """Simulate swim laps -> step equivalents."""
-    laps = random.choice([0, 25, 50])
-    step_equiv = laps * 27
-    return {"laps": laps, "step_equiv": step_equiv}
-
-# --- Computation ---
-def compute_progress(weight, target):
-    diff = weight - target
-    pct = max(0, round((1 - (diff / weight)) * 100, 1))
-    return min(pct, 100.0)
-# Mutation_b4f7ef
-
-def build_summary():
-    now = datetime.now()
-    pixel = pixel_watch_data()
-    samsung = samsung_watch_bmi()
-    swim = swim_activity_log()
-
-    total_steps = pixel["steps"] + swim["step_equiv"]
-    bmi = samsung["bmi"]
-    weight = samsung["weight_lbs"]
-    progress_pct = compute_progress(weight, TARGET_WEIGHT_LBS)
-    status = "⚠️ Above Target" if bmi >= BMI_WARNING_THRESHOLD else "✅ Within Target Range"
-# Mutation_742b56
-
-# Mutation_75ec5b
-    summary = {
         "timestamp": now.isoformat(),
-        "steps": total_steps,
-        "active_minutes": pixel["active_minutes"],
-        "avg_hr": pixel["avg_hr"],
-        "max_hr": pixel["max_hr"],
-        "laps": swim["laps"],
-        "weight_lbs": weight,
+        "source": str(DAILY_METRICS),
+        "records": len(records),
+        "steps": steps,
+        "active_minutes": round(active_minutes, 1),
+        "avg_hr": round(sum(avg_hr_values) / len(avg_hr_values), 1) if avg_hr_values else None,
+        "max_hr": max(max_hr_values) if max_hr_values else None,
+        "laps": swim_laps,
+        "weight_lbs": weight_lbs,
         "bmi": bmi,
-        "progress_to_goal_%": progress_pct,
-        "status": status,
     }
-    return summary
 
-# --- Logging ---
-def write_summary(summary):
-    now = datetime.now()
+
+def write_summary(summary: dict[str, Any], now: datetime) -> None:
     file_path = FITNESS_DIR / f"fitness_summary_{now:%Y%m%d}.md"
     latest = FITNESS_DIR / "latest_fitness.md"
 
     lines = [
-        f"# Daily Fitness Summary — {now:%Y-%m-%d %H:%M:%S}",
+        f"# Daily Fitness Summary — {now:%Y-%m-%d %H:%M:%S} UTC",
         "",
-        f"- Steps (incl. swim): {summary['steps']}",
-        f"- Active Minutes: {summary['active_minutes']}",
-        f"- Heart Rate Avg/Max: {summary['avg_hr']} / {summary['max_hr']}",
-        f"- Swim Laps: {summary['laps']}",
-        f"- Weight: {summary['weight_lbs']} lbs",
-        f"- BMI: {summary['bmi']}",
-        f"- Progress Toward Goal: {summary['progress_to_goal_%']}%",
-        f"- Status: {summary['status']}",
-# Mutation_86c2aa
-# Mutation_463338
-        "",
-        "Auto-generated by AI Consensus System.",
+        f"- Source: {summary['source']}",
+        f"- Source records: {summary['records']}",
     ]
 
-    file_path.write_text("\n".join(lines))
-    latest.write_text(f"Latest fitness summary: {file_path.name}\n")
-# Mutation_ff965c
+    if summary["steps"] > 0:
+        lines.append(f"- Steps: {summary['steps']}")
+    if summary["active_minutes"] > 0:
+        lines.append(f"- Active Minutes: {summary['active_minutes']:.0f}")
+    if summary["avg_hr"] is not None or summary["max_hr"] is not None:
+        lines.append(
+            f"- Heart Rate Avg/Max: "
+            f"{summary['avg_hr'] if summary['avg_hr'] is not None else 'n/a'} / "
+            f"{summary['max_hr'] if summary['max_hr'] is not None else 'n/a'}"
+        )
+    if summary["laps"] > 0:
+        lines.append(f"- Swim Laps: {summary['laps']}")
+    if summary["weight_lbs"] is not None:
+        lines.append(f"- Weight: {summary['weight_lbs']:.1f} lbs")
+    if summary["bmi"] is not None:
+        lines.append(f"- BMI: {summary['bmi']:.1f}")
 
-    # Also dump raw JSON for data science modules
+    lines.extend([
+        "",
+        "Auto-generated from genuine source records by AI Consensus System.",
+    ])
+
+    file_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    latest.write_text(f"Latest fitness summary: {file_path.name}\n", encoding="utf-8")
+
     json_path = FITNESS_DIR / f"fitness_data_{now:%Y%m%d}.json"
-    json_path.write_text(json.dumps(summary, indent=2))
-# Mutation_5f3a6b
+    json_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
 
-    print(f"✅ Fitness summary written: {file_path}")
-    print(f"📎 Pointer updated -> latest_fitness.md")
-# Mutation_d22cc8
-    if summary["status"].startswith("⚠️"):
-        print("🚨 Alert: BMI exceeds healthy threshold.")
+    print(f"Fitness summary written: {file_path}")
+    print(f"Source: {DAILY_METRICS} ({summary['records']} current-day record(s))")
 
-# --- Main ---
-def main():
-    summary = build_summary()
-    write_summary(summary)
+
+def main() -> int:
+    now = datetime.now(timezone.utc)
+    records = current_day_records(now)
+    summary = build_summary(records, now)
+
+    if summary is None:
+        print(
+            "SKIP: no genuine current-day fitness source data found; "
+            "existing fitness summaries were not overwritten."
+        )
+        return 0
+
+    write_summary(summary, now)
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
