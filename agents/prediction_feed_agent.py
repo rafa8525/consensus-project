@@ -29,7 +29,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable, Sequence
 
-VERSION = "v2026-07-10-smart-feed-v1.2"
+VERSION = "v2026-10-06-smart-feed-v1.3"
 STALE_EVENT_DAYS = int(os.getenv("PREDICTION_STALE_EVENT_DAYS", "14"))
 HEALTH_STALE_MINUTES = int(os.getenv("PREDICTION_HEALTH_STALE_MINUTES", "180"))
 
@@ -627,32 +627,95 @@ def health_snapshot_path(ctx: Context) -> Path | None:
     return next((p for p in candidates if p.is_file()), None)
 
 
-def summarize_health(text: str) -> tuple[str, datetime | None, list[str], list[str]]:
+def summarize_health(text: str) -> tuple[str, datetime | None, list[str], list[str], list[str], list[str]]:
+    """Parse aggregate health and component warnings without letting an early OK mask a later WARN."""
     status = "UNKNOWN"
     updated: datetime | None = None
     problems: list[str] = []
     commands: list[str] = []
-    status_match = re.search(r"(?:overall\s+)?status\s*[:=]\s*([A-Z][A-Z_/-]+)", text, re.I)
-    if status_match:
-        status = status_match.group(1).upper()
+    unexpected_components: list[str] = []
+    expected_components: list[str] = []
+
+    overall_match = re.search(
+        r"^\s*[-*]?\s*overall(?:\s+status)?\s*[:=]\s*"
+        r"(OK|WARN(?:ING)?|ERROR|FAIL(?:ED)?|CRITICAL|DEGRADED)\b",
+        text, re.I | re.M,
+    )
+    if overall_match:
+        status = overall_match.group(1).upper()
     else:
-        token = re.search(r"\b(OK|WARN(?:ING)?|ERROR|FAIL(?:ED)?|CRITICAL|DEGRADED)\b", text, re.I)
-        if token:
-            status = token.group(1).upper()
+        status_match = re.search(
+            r"^\s*[-*]?\s*status\s*[:=]\s*"
+            r"(OK|WARN(?:ING)?|ERROR|FAIL(?:ED)?|CRITICAL|DEGRADED)\b",
+            text, re.I | re.M,
+        )
+        if status_match:
+            status = status_match.group(1).upper()
+
     for match in re.finditer(r"20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?", text):
         dt = parse_datetime(match.group(0))
         if dt and (updated is None or dt > updated):
             updated = dt
+
+    expected_env = {
+        item.strip().casefold()
+        for item in os.getenv("PREDICTION_EXPECTED_STALE_COMPONENTS", "").split(",")
+        if item.strip()
+    }
+    bad_statuses = {"warn", "warning", "error", "fail", "failed", "critical", "degraded"}
+
     for raw in text.splitlines():
-        line = re.sub(r"^\s*[-*#>]+\s*", "", raw).strip()
+        line = raw.strip()
+        if line.startswith("|") and line.endswith("|"):
+            cells = [cell.strip() for cell in line.strip("|").split("|")]
+            if len(cells) >= 2:
+                component = cells[0]
+                component_status = cells[1].casefold()
+                notes = cells[2] if len(cells) >= 3 else ""
+                component_key = component.casefold()
+                if component_status in bad_statuses and component_key not in {"subsystem", "---"}:
+                    descriptor = f"{component}: {component_status}"
+                    if notes:
+                        descriptor += f" ({notes})"
+                    expected = (
+                        component_key in expected_env
+                        or "expected stale" in notes.casefold()
+                        or "intentionally dormant" in notes.casefold()
+                        or "expected dormant" in notes.casefold()
+                    )
+                    if expected:
+                        expected_components.append(descriptor)
+                    else:
+                        unexpected_components.append(descriptor)
+                        problems.append(line)
+
         low = line.lower()
         if 4 <= len(line) <= 220 and any(k in low for k in ("warn", "error", "fail", "missing", "stale", "expired", "delayed", "unhealthy", "down")):
-            if not low.startswith(("status:", "overall status:")):
-                problems.append(line)
+            if not line.startswith("|") and not re.match(r"^[-*]?\s*(?:overall(?:\s+status)?|status)\s*:", line, re.I):
+                problems.append(re.sub(r"^\s*[-*#>]+\s*", "", line))
         if re.search(r"\b(?:python3?|bash|systemctl|journalctl|tail|cat)\b", line):
             commands.append(line.strip("` "))
-    return status, updated, list(dict.fromkeys(problems))[:5], list(dict.fromkeys(commands))[:5]
 
+    if status == "UNKNOWN":
+        if unexpected_components or expected_components:
+            statuses = " ".join(unexpected_components + expected_components).casefold()
+            if any(word in statuses for word in ("critical", "error", "failed", "fail")):
+                status = "ERROR"
+            else:
+                status = "WARN"
+        else:
+            token = re.search(r"\b(OK|WARN(?:ING)?|ERROR|FAIL(?:ED)?|CRITICAL|DEGRADED)\b", text, re.I)
+            if token:
+                status = token.group(1).upper()
+
+    return (
+        status,
+        updated,
+        list(dict.fromkeys(problems))[:8],
+        list(dict.fromkeys(commands))[:5],
+        list(dict.fromkeys(unexpected_components))[:8],
+        list(dict.fromkeys(expected_components))[:8],
+    )
 
 def detect_system_health(ctx: Context) -> None:
     path = health_snapshot_path(ctx)
@@ -664,38 +727,53 @@ def detect_system_health(ctx: Context) -> None:
         ))
         return
     text = safe_read(path)
-    status, updated, problems, commands = summarize_health(text)
+    status, updated, problems, commands, unexpected_components, expected_components = summarize_health(text)
     age_minutes = None if updated is None else max(0, int((ctx.now - updated).total_seconds() // 60))
     freshness = "unknown age" if age_minutes is None else f"{age_minutes} minutes old"
-    problem_text = "; ".join(problems) if problems else "The snapshot does not state the component-level cause."
+
+    if unexpected_components:
+        problem_text = "; ".join(unexpected_components)
+    elif expected_components:
+        problem_text = "Expected warning(s): " + "; ".join(expected_components)
+    elif problems:
+        problem_text = "; ".join(problems)
+    else:
+        problem_text = "The snapshot does not state the component-level cause."
 
     normalized_status = status.upper()
-
     if normalized_status == "OK":
         action = "No corrective action required."
         confidence = "HIGH"
     elif normalized_status in ("WARN", "WARNING", "DEGRADED"):
-        action = commands[0] if commands else (
-            "Open the health snapshot and latest monitor log; "
-            "inspect the first warning component, then rerun this feed."
-        )
-        confidence = "MEDIUM"
+        if unexpected_components:
+            component_names = ", ".join(item.split(":", 1)[0] for item in unexpected_components)
+            action = commands[0] if commands else (
+                f"Investigate unexpected warning component(s): {component_names}; "
+                "refresh or repair them, regenerate the health snapshot, then rerun this feed."
+            )
+            confidence = "HIGH"
+        elif expected_components:
+            action = "No corrective action required; all warning components are explicitly marked expected/dormant."
+            confidence = "MEDIUM"
+        else:
+            action = commands[0] if commands else (
+                "Open the health snapshot and latest monitor log; inspect the first warning component, then rerun this feed."
+            )
+            confidence = "MEDIUM"
     elif normalized_status in ("ERROR", "FAILED", "FAIL", "CRITICAL"):
         action = commands[0] if commands else (
-            "Open the health snapshot and latest monitor log; "
-            "repair the first failing upstream component, rerun the health monitor, "
-            "then rerun this feed."
+            "Open the health snapshot and latest monitor log; repair the first failing upstream component, "
+            "rerun the health monitor, then rerun this feed."
         )
         confidence = "HIGH"
     else:
-        action = commands[0] if commands else (
-            "Review the health snapshot because its overall status is unknown."
-        )
+        action = commands[0] if commands else "Review the health snapshot because its overall status is unknown."
         confidence = "MEDIUM"
+
     ctx.findings.append(Finding(
         "System/Project", confidence,
         f"System health: {status} ({freshness}). Details: {problem_text}",
-        "The prediction feed now extracts warning details from the health snapshot instead of emitting only WARN/RECENT.",
+        "Aggregate status is parsed before component rows, and warning components are classified as expected or unexpected.",
         action, (str(path),),
     ))
     if age_minutes is not None and age_minutes > HEALTH_STALE_MINUTES:
@@ -704,7 +782,6 @@ def detect_system_health(ctx: Context) -> None:
             f"Freshness exceeded the configured {HEALTH_STALE_MINUTES}-minute threshold.",
             "Run the system-health monitor before trusting downstream predictions.", (str(path),),
         ))
-
 
 def add_predictions(ctx: Context) -> None:
     # Conservative predictions derived only from findings already established.
