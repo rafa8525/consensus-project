@@ -190,10 +190,14 @@ def detect_fitness(ctx: Context) -> None:
         explicit_workout = any(term in body.lower() for term in workout_terms)
         if found_steps is None and found_laps is None and not explicit_workout:
             continue
-        if found_steps is not None:
+        if found_steps is not None and found_steps > 0:
             steps = max(steps or 0, found_steps)
-        if found_laps is not None:
+        else:
+            found_steps = None
+        if found_laps is not None and found_laps > 0:
             laps = max(laps or 0, found_laps)
+        else:
+            found_laps = None
         workout_found = workout_found or explicit_workout
         evidence.append(str(candidate))
     if evidence:
