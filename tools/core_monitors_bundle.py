@@ -196,11 +196,10 @@ def build_checks(now_ts: float) -> List[CheckResult]:
 
     checks.append(
         ok_if_recent_any(
-            "gmail_refresh_guard_v3",
+            "gmail_refresh_guard",
             candidate_paths(
                 "logs/system/gmail_status.md",
                 "logs/system/gmail_refresh_guard.log",
-                "logs/system/gmail_refresh_guard_v3.log",
                 "logs/system/gmail_monitor.jsonl",
             ),
             max_age_s=MAX_AGE_S,
