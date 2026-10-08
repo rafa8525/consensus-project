@@ -1,0 +1,63 @@
+name: Publish AI Consensus public pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'about.html'
+      - 'oauth/**'
+      - '.github/workflows/acs-public-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public site files only (no submodules)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+          sparse-checkout: |
+            index.html
+            about.html
+            oauth/
+          sparse-checkout-cone-mode: false
+      - name: Prepare isolated public artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _public/oauth
+          cp index.html about.html _public/
+          cp oauth/index.html oauth/privacy.html _public/oauth/
+          touch _public/.nojekyll
+          test -s _public/index.html
+          test -s _public/oauth/index.html
+          test -s _public/oauth/privacy.html
+          test "$(find _public -type f | wc -l)" -eq 5
+      - name: Upload public pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy isolated static pages
+        id: deployment
+        uses: actions/deploy-pages@v4
