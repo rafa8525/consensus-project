@@ -7,6 +7,9 @@ on:
       - 'agents/supervisor.py'
       - 'agents/backup_health.py'
       - 'tests/test_acs_backup_health.py'
+      - 'tools/acs_encrypted_backup_runner.py'
+      - 'tools/run_acs_backup_cycle.py'
+      - 'tests/test_acs_backup_cycle.py'
       - 'tools/secure_backup_transport_candidate.py'
       - 'tests/test_verified_backup_candidate.py'
       - 'tests/test_secure_backup_transport_candidate.py'
@@ -33,3 +36,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*backup*candidate.py' -v
       - name: Run ACS backup health tests
         run: python -m unittest discover -s tests -p 'test_acs_backup_health.py' -v
+      - name: Run backup cycle fail-closed tests
+        run: python -m unittest discover -s tests -p 'test_acs_backup_cycle.py' -v
