@@ -1,0 +1,28 @@
+name: ACS 18:10 scheduler safety tests
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - 'tools/run_1810_with_backup.py'
+      - 'tests/test_acs_1810_scheduler.py'
+      - '.github/workflows/acs-1810-scheduler-tests.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Download only scheduler test files without broken submodule checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tools tests
+          base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}"
+          for file in tools/run_1810_with_backup.py tests/test_acs_1810_scheduler.py; do
+            curl --fail --location --silent --show-error --retry 3 "${base}/${file}" -o "${file}"
+          done
+      - name: Run scheduler unit tests
+        run: python -m unittest discover -s tests -p 'test_acs_1810_scheduler.py' -v
+      - name: Verify opt-in check mode
+        run: python tools/run_1810_with_backup.py --check
