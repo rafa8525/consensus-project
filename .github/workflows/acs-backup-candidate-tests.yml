@@ -1,0 +1,21 @@
+name: ACS candidate backup tests
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - 'tools/verified_backup_candidate.py'
+      - 'tests/test_verified_backup_candidate.py'
+      - '.github/workflows/acs-backup-candidate-tests.yml'
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run isolated tests
+        run: python -m unittest discover -s tests -p 'test_verified_backup_candidate.py' -v
