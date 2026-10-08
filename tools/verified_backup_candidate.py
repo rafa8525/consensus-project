@@ -33,7 +33,7 @@ MAX_TOTAL_BYTES = 100 * 1024 * 1024
 # High-confidence secret patterns; not an exhaustive DLP solution.
 SENSITIVE_PATTERNS = (
     re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"),
-    re.compile(rb'(?i)(?:api[_-]?key|access[_-]?token|refresh[_-]?token|client[_-]?secret|password)\\s*["\\\']?\\s*[:=]\\s*["\\\']?[^\\s"\\\']{12,}'),
+    re.compile(rb"(?i)(?:api[_-]?key|access[_-]?token|refresh[_-]?token|client[_-]?secret|password)\s*[:=]\s*[^\s]{12,}"),
 )
 
 
