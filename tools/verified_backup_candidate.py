@@ -22,9 +22,10 @@ SOURCES = (
     "memory/knowledge",
     "memory/consensus",
     "registry",
-    "memory/centralized_knowledge_base.txt",
 )
 MANIFEST = "__acs_manifest__.json"
+# Temporarily excluded pending credential review and safe knowledge export.
+EXCLUDED_SOURCE_FILES = {"memory/agents/send_digest.py", "memory/centralized_knowledge_base.txt"}
 DENY_NAMES = {".env", "credentials.json", "service_account.json", "vault.key",
               "id_rsa", "id_ed25519", ".netrc"}
 DENY_SUFFIXES = {".pem", ".key", ".p12", ".pfx", ".sqlite", ".db"}
@@ -45,7 +46,8 @@ def reject_obvious_secrets(name: str, content: bytes) -> None:
 
 
 def disallowed(path: Path) -> bool:
-    return (any(part.startswith(".") for part in path.parts)
+    return (path.as_posix() in EXCLUDED_SOURCE_FILES
+            or any(part.startswith(".") for part in path.parts)
             or path.name.lower() in DENY_NAMES
             or path.suffix.lower() in DENY_SUFFIXES)
 
