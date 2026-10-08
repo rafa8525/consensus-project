@@ -6,7 +6,11 @@ merge or schedule until every gate below is verified.
 ## Included data and privacy
 
 - Explicit sources: `memory/agents`, `memory/state`, `memory/knowledge`,
-  `memory/consensus`, `registry`, and `memory/centralized_knowledge_base.txt`.
+  `memory/consensus`, and `registry`.
+- **Quarantined pending private credential review:** `memory/agents/send_digest.py`
+  and `memory/centralized_knowledge_base.txt`. Original files are unchanged.
+  **Disaster recovery is incomplete until the knowledge base is safely included.**
+  Never suppress secret-scanner matches merely to make an upload pass.
 - The allowlist does **not** imply these files contain no credentials or
   personally identifiable information. Automated pattern checks catch only
   common credential forms. Review the intended content and retention policy
