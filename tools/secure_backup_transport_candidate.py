@@ -7,7 +7,6 @@ Requires the optional 'cryptography' dependency. No implicit uploads.
 """
 from __future__ import annotations
 
-import base64
 import hashlib
 import hmac
 import io
@@ -109,7 +108,6 @@ def upload_verified(encrypted_file: Path, drive_service, folder_id: str) -> dict
     if not folder_id:
         raise ValueError("Drive folder ID required")
     blob = encrypted_file.read_bytes()
-    expected_md5 = base64.b64encode(hashlib.md5(blob).digest()).decode("ascii")
     # Drive's md5Checksum is hex, not base64. Keep comparisons exact.
     expected_hex = hashlib.md5(blob).hexdigest()
     metadata = {"name": encrypted_file.name, "parents": [folder_id]}
