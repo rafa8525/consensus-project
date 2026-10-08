@@ -136,3 +136,52 @@ def check_health(status: dict | None, now: datetime | None = None, max_age_hours
         return {"status": "healthy", "age_hours": round(age, 2)}
     except (KeyError, ValueError, TypeError):
         return {"status": "critical", "reason": "invalid backup status metadata"}
+
+def download_and_verify(remote_id: str, drive_service, expected_sha256: str,
+                        key_file: Path, candidate_module) -> dict:
+    """Fetch remote ciphertext into memory, then authenticate and verify ZIP.
+
+    No plaintext files are written. No Drive deletes or mutations.
+    Caller must pin the expected ciphertext SHA-256 obtained from a trusted
+    local backup record; Drive metadata alone is not an authority.
+    """
+    if not remote_id or len(expected_sha256) != 64:
+        raise ValueError("remote ID and trusted SHA-256 are required")
+    from googleapiclient.http import MediaIoBaseDownload
+    buffer = io.BytesIO()
+    request = drive_service.files().get_media(fileId=remote_id)
+    downloader = MediaIoBaseDownload(buffer, request)
+    done = False
+    while not done:
+        _, done = downloader.next_chunk()
+        if buffer.tell() > MAX_ENCRYPT_BYTES + 64:
+            raise ValueError("download exceeds size cap")
+    cipher = buffer.getvalue()
+    actual = hashlib.sha256(cipher).hexdigest()
+    if not hmac.compare_digest(actual, expected_sha256):
+        raise ValueError("remote ciphertext hash does not match local trusted record")
+    plaintext = decrypt(cipher, key_bytes(key_file))
+    with zipfile_open_bytes(plaintext) as archive:
+        names = archive.namelist()
+        if archive.testzip() is not None or len(names) != len(set(names)):
+            raise ValueError("ZIP integrity failure")
+        if candidate_module.MANIFEST not in names:
+            raise ValueError("backup manifest missing")
+        manifest = json.loads(archive.read(candidate_module.MANIFEST))
+        expected = manifest["files"]
+        if not expected or set(names) != set(expected) | {candidate_module.MANIFEST}:
+            raise ValueError("manifest mismatch")
+        for name, sha in expected.items():
+            p = Path(name)
+            if p.is_absolute() or ".." in p.parts or candidate_module.disallowed(p):
+                raise ValueError("unsafe member")
+            if not hmac.compare_digest(hashlib.sha256(archive.read(name)).hexdigest(), sha):
+                raise ValueError("backup member hash mismatch")
+    return {"status": "remote_restore_verified", "file_count": len(expected),
+            "encrypted_sha256": actual}
+
+
+def zipfile_open_bytes(plaintext: bytes):
+    """Return ZipFile with its backing memory buffer owned by ZipFile."""
+    import zipfile
+    return zipfile.ZipFile(io.BytesIO(plaintext), mode="r")
