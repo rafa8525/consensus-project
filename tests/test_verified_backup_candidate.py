@@ -1,5 +1,6 @@
 """Isolated regression tests for verified_backup_candidate (no cloud calls)."""
 import tempfile
+import shutil
 import unittest
 import zipfile
 from pathlib import Path
@@ -23,11 +24,11 @@ class BackupCandidateTests(unittest.TestCase):
         self.archive = Path(self.temp.name) / "backup.zip"
 
     def test_success_and_verification(self):
-        self.assertEqual(backup.create(self.root, self.archive)["file_count"], 6)
-        self.assertEqual(backup.verify(self.archive)["file_count"], 6)
+        self.assertEqual(backup.create(self.root, self.archive)["file_count"], 5)
+        self.assertEqual(backup.verify(self.archive)["file_count"], 5)
 
     def test_missing_required_source(self):
-        (self.root / backup.SOURCES[-1]).unlink()
+        shutil.rmtree(self.root / backup.SOURCES[-1])
         with self.assertRaises(ValueError):
             backup.create(self.root, self.archive)
 
@@ -54,6 +55,14 @@ class BackupCandidateTests(unittest.TestCase):
         backup.create(self.root, self.archive)
         with zipfile.ZipFile(self.archive) as z:
             self.assertFalse(any(".env" in n or "vault.key" in n for n in z.namelist()))
+
+    def test_flagged_file_excluded_without_weakening_scanner(self):
+        flagged = self.root / "memory/agents/send_digest.py"
+        flagged.write_text('password = "ABCDEF123456789SECRET"')
+        backup.create(self.root, self.archive)
+        with zipfile.ZipFile(self.archive) as z:
+            self.assertNotIn("memory/agents/send_digest.py", z.namelist())
+            self.assertNotIn("memory/centralized_knowledge_base.txt", z.namelist())
 
     def test_symlink_excluded(self):
         (self.root / "registry/link").symlink_to("/etc/passwd")
