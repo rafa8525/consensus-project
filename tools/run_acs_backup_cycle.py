@@ -46,11 +46,14 @@ def cycle(home: Path) -> dict:
         moment = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
         plain = local / ("acs_daily_" + moment + ".zip")
         cipher = local / ("acs_daily_" + moment + ".acsenc")
-        result = execute(root, plain, cipher,
-                         secret_dir / "acs_backup_aes256.key",
-                         secret_dir / "drive_backup_token.json", folder_id)
-        record_success(secret_dir / "acs_backup_success.json", result)
-        plain.unlink()
+        try:
+            result = execute(root, plain, cipher,
+                             secret_dir / "acs_backup_aes256.key",
+                             secret_dir / "drive_backup_token.json", folder_id)
+            record_success(secret_dir / "acs_backup_success.json", result)
+        finally:
+            # Never retain an unencrypted archive after success or failure.
+            plain.unlink(missing_ok=True)
         return {"status": "uploaded_verified", "file_count": result["file_count"],
                 "restore_verified": True}
     finally:
