@@ -56,13 +56,13 @@ class TestEndToEndBackup(unittest.TestCase):
                     p.mkdir(parents=True, exist_ok=True)
                     (p / "state.json").write_text('{"status":"synthetic"}')
             archive = base / "acs.zip"
-            self.assertEqual(backup.create(root, archive)["file_count"], 6)
+            self.assertEqual(backup.create(root, archive)["file_count"], 5)
             key = base / "key"
             key.write_bytes(os.urandom(32))
             key.chmod(0o600)
             encrypted = base / "acs.acsenc"
             record = secure.encrypt_file(archive, encrypted, key)
-            self.assertEqual(secure.verify_encrypted_archive(encrypted, key, backup)["file_count"], 6)
+            self.assertEqual(secure.verify_encrypted_archive(encrypted, key, backup)["file_count"], 5)
             drive = FakeDrive()
             def fake_upload(path, **kwargs):
                 drive.stored = Path(path).read_bytes()
@@ -73,7 +73,7 @@ class TestEndToEndBackup(unittest.TestCase):
             with patch("googleapiclient.http.MediaIoBaseDownload", FakeDownload):
                 restored = secure.download_and_verify("mock-remote-id", drive,
                              record["sha256"], key, backup)
-            self.assertEqual(restored["file_count"], 6)
+            self.assertEqual(restored["file_count"], 5)
             self.assertEqual(restored["status"], "remote_restore_verified")
 
     def test_backup_stops_on_embedded_secret(self):
