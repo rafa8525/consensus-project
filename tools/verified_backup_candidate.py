@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import tempfile
 import zipfile
 from datetime import datetime, timezone
@@ -29,6 +30,18 @@ DENY_NAMES = {".env", "credentials.json", "service_account.json", "vault.key",
 DENY_SUFFIXES = {".pem", ".key", ".p12", ".pfx", ".sqlite", ".db"}
 MAX_FILE_BYTES = 25 * 1024 * 1024
 MAX_TOTAL_BYTES = 100 * 1024 * 1024
+# High-confidence secret patterns; not an exhaustive DLP solution.
+SENSITIVE_PATTERNS = (
+    re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"),
+    re.compile(rb'(?i)(?:api[_-]?key|access[_-]?token|refresh[_-]?token|client[_-]?secret|password)\\s*["\\\']?\\s*[:=]\\s*["\\\']?[^\\s"\\\']{12,}'),
+)
+
+
+def reject_obvious_secrets(name: str, content: bytes) -> None:
+    """Fail closed on common credentials prior to staging any archive."""
+    if any(pattern.search(content) for pattern in SENSITIVE_PATTERNS):
+        raise ValueError("potential credential content found: " + name)
+
 
 
 def disallowed(path: Path) -> bool:
@@ -59,6 +72,7 @@ def collect(root: Path) -> dict[str, bytes]:
             if file.stat().st_size > MAX_FILE_BYTES:
                 raise ValueError("oversized file: " + rel.as_posix())
             content = file.read_bytes()
+            reject_obvious_secrets(rel.as_posix(), content)
             total += len(content)
             if total > MAX_TOTAL_BYTES:
                 raise ValueError("backup exceeds maximum permitted size")
