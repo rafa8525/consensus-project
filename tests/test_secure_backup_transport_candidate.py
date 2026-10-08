@@ -114,5 +114,44 @@ class TestSecureTransport(unittest.TestCase):
             self.assertEqual(secure.upload_verified(file, Service(), "folder")["status"], "uploaded_verified")
 
 
+    def test_remote_download_verified_and_tampering_rejected(self):
+        import io
+        import json
+        import zipfile
+        from tools import verified_backup_candidate as backup
+        raw = io.BytesIO()
+        data = b"mock agent state"
+        manifest = {"files": {"registry/state.json": hashlib.sha256(data).hexdigest()}}
+        with zipfile.ZipFile(raw, "w") as z:
+            z.writestr("registry/state.json", data)
+            z.writestr(backup.MANIFEST, json.dumps(manifest))
+        cipher = secure.encrypt(raw.getvalue(), self.key)
+        digest = hashlib.sha256(cipher).hexdigest()
+
+        class FakeFiles:
+            def get_media(self, fileId):
+                if fileId != "remote-1":
+                    raise AssertionError("unexpected remote ID")
+                return object()
+        class FakeDrive:
+            def files(self):
+                return FakeFiles()
+        class FakeDownloader:
+            payload = cipher
+            def __init__(self, buffer, request):
+                self.buffer = buffer
+            def next_chunk(self):
+                self.buffer.write(self.payload)
+                return None, True
+
+        with patch("googleapiclient.http.MediaIoBaseDownload", FakeDownloader):
+            success = secure.download_and_verify("remote-1", FakeDrive(), digest,
+                                                 self.keyfile, backup)
+            self.assertEqual(success["status"], "remote_restore_verified")
+            self.assertEqual(success["file_count"], 1)
+            with self.assertRaisesRegex(ValueError, "ciphertext hash"):
+                secure.download_and_verify("remote-1", FakeDrive(), "0" * 64,
+                                           self.keyfile, backup)
+
 if __name__ == "__main__":
     unittest.main()
