@@ -79,5 +79,20 @@ class BackupCandidateTests(unittest.TestCase):
             backup.verify(self.archive)
 
 
+    def test_embedded_private_key_rejected(self):
+        (self.root / "registry/state.json").write_text(
+            "-----BEGIN PRIVATE KEY-----\\nexample\\n-----END PRIVATE KEY-----"
+        )
+        with self.assertRaisesRegex(ValueError, "potential credential"):
+            backup.create(self.root, self.archive)
+
+    def test_embedded_api_key_rejected(self):
+        (self.root / "registry/state.json").write_text(
+            'api_key = "ABCDEFGHIJKLMNOP1234567890"'
+        )
+        with self.assertRaisesRegex(ValueError, "potential credential"):
+            backup.create(self.root, self.archive)
+
+
 if __name__ == "__main__":
     unittest.main()
