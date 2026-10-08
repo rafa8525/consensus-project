@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — AI Consensus Google Drive Backup</title>
+  <style>body{font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif;max-width:760px;margin:3rem auto;padding:0 1.25rem;color:#182533}h1,h2{line-height:1.25}a{color:#1455a3}footer{border-top:1px solid #ddd;padding-top:1rem;color:#52606d}</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy — AI Consensus Google Drive Backup</h1>
+  <p><strong>Last updated:</strong> October 8, 2026</p>
+  <p>This policy covers the planned Google Drive backup integration for AI Consensus, a personal, noncommercial automation project. The integration is still being tested; descriptions of proposed behavior are not claims that the service is already fully deployed.</p>
+  <h2>Information the integration may process</h2>
+  <p>When the owner authorizes Google Drive access, the integration may process OAuth authorization credentials, Google Drive file identifiers and metadata, and backup files selected by the owner. Selected backup files may contain personal project records. The specific contents depend on the enabled backup configuration.</p>
+  <h2>How the information is used</h2>
+  <p>Google Drive access is requested for the purpose of storing backup archives, checking their upload integrity, retrieving them, and validating restoration. The intended permission is <code>https://www.googleapis.com/auth/drive.file</code>, restricted to application-created or explicitly selected files.</p>
+  <h2>Storage and security</h2>
+  <p>The intended design encrypts backup archives locally before transferring them to Google Drive, and holds OAuth tokens and encryption keys outside the public GitHub repository. Token storage, backup scheduling, remote restore tests, and encryption-key recovery procedures must be verified before production use. This website does not host backup archives, access tokens, or encryption keys.</p>
+  <h2>Sharing and selling</h2>
+  <p>The integration is not designed to sell personal information or to share backup contents with advertisers. Data sent to Google Drive is handled through the owner's Google account and is subject to Google's own service terms and privacy practices. No public access to backup contents is intended.</p>
+  <h2>Retention and deletion</h2>
+  <p>Backups uploaded to Google Drive remain in the owner's account until removed under the owner's chosen retention settings or deleted by the owner. A production retention schedule has not yet been established. The owner can delete backup files in Drive and can revoke application access in their <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. Revoking access prevents future authorized API access but does not automatically delete existing files or local copies.</p>
+  <h2>Scope of this page</h2>
+  <p>This privacy statement applies to the Google Drive backup integration only, not to independent email, text message, wearable, or other project integrations. It will be updated if the integration's actual data collection or handling changes.</p>
+  <p><a href="./">Return to AI Consensus Google Drive Backup</a></p>
+</main>
+<footer><p>AI Consensus — personal project documentation.</p></footer>
+</body>
+</html>
