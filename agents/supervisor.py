@@ -238,6 +238,13 @@ class Supervisor(Agent):
         for agent in ("ACS-02", "ACS-03", "ACS-04", "ACS-05"):
             results[agent.lower().replace("-", "_")] = self._run_child_cycle(agent)
 
+        # Fail closed when the last remote verified restore is missing or overdue.
+        # Backup execution is intentionally separate from the supervisor cycle.
+        from agents.backup_health import evaluate as evaluate_backup_health
+        results["encrypted_backup"] = evaluate_backup_health(
+            Path.home() / ".secrets/google/acs_backup_success.json"
+        )
+
         finished = time.time()
         ok = all(v.get("ok") is True for v in results.values())
 
