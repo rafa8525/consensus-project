@@ -7,6 +7,7 @@ on:
       - 'tools/secure_backup_transport_candidate.py'
       - 'tests/test_verified_backup_candidate.py'
       - 'tests/test_secure_backup_transport_candidate.py'
+      - 'tests/test_backup_end_to_end_candidate.py'
       - '.github/workflows/acs-backup-candidate-tests.yml'
 permissions:
   contents: read
