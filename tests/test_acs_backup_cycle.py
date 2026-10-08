@@ -33,10 +33,15 @@ class BackupCycleGuardTests(unittest.TestCase):
         self.assertEqual(receipt.stat().st_mode & 0o777, 0o600)
 
     def test_failure_does_not_publish_success(self):
-        with patch.object(runner, "execute", side_effect=RuntimeError("injected outage")):
+        def failed_upload(root, plain, cipher, key, token, folder):
+            plain.parent.mkdir(parents=True, exist_ok=True)
+            plain.write_bytes(b"sensitive staging fixture")
+            raise RuntimeError("injected outage")
+        with patch.object(runner, "execute", side_effect=failed_upload):
             with self.assertRaises(RuntimeError):
                 runner.cycle(self.home)
         self.assertFalse((self.private / "acs_backup_success.json").exists())
+        self.assertFalse(list((self.home / "local_backups/acs").glob("*.zip")))
 
     def test_bad_folder_id_fails_closed(self):
         (self.private / "drive_backup_folder_id.txt").write_text("bad folder id")
