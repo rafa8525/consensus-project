@@ -21,27 +21,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout public site files only (no submodules)
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          submodules: false
-          sparse-checkout: |
-            index.html
-            about.html
-            oauth/
-          sparse-checkout-cone-mode: false
-      - name: Prepare isolated public artifact
+      - name: Download only approved public HTML files (no Git checkout)
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p _public/oauth
-          cp index.html about.html _public/
-          cp oauth/index.html oauth/privacy.html _public/oauth/
+          base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}"
+          for file in index.html about.html oauth/index.html oauth/privacy.html; do
+            curl --fail --location --silent --show-error --retry 3 \
+              "${base}/${file}" -o "_public/${file}"
+            test -s "_public/${file}"
+          done
           touch _public/.nojekyll
-          test -s _public/index.html
-          test -s _public/oauth/index.html
-          test -s _public/oauth/privacy.html
           test "$(find _public -type f | wc -l)" -eq 5
       - name: Upload public pages artifact
         uses: actions/upload-pages-artifact@v4
