@@ -1,0 +1,26 @@
+name: ACS 18:10 scheduler safety tests
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - 'tools/run_1810_with_backup.py'
+      - 'tests/test_acs_1810_scheduler.py'
+      - '.github/workflows/acs-1810-scheduler-tests.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+          sparse-checkout: |
+            tools/run_1810_with_backup.py
+            tests/test_acs_1810_scheduler.py
+          sparse-checkout-cone-mode: false
+      - name: Run scheduler unit tests
+        run: python -m unittest discover -s tests -p 'test_acs_1810_scheduler.py' -v
+      - name: Verify opt-in check mode
+        run: python tools/run_1810_with_backup.py --check
