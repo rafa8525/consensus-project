@@ -1,11 +1,11 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46866.9,
+    "age_seconds": 29.3,
     "agent": "ACS-01",
     "cadence": "daily",
     "evidence_source": "memory/agents/state.json:last_supervisor_ts",
     "health_status": "degraded",
-    "last_execution_utc": "2026-10-08T18:01:53.545533+00:00",
+    "last_execution_utc": "2026-10-09T18:01:55.472443+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
     "status": "degraded",
@@ -14,45 +14,45 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46866.9,
+      "age_seconds": 29.3,
       "agent": "ACS-01",
       "cadence": "daily",
       "evidence_source": "memory/agents/state.json:last_supervisor_ts",
       "health_status": "degraded",
-      "last_execution_utc": "2026-10-08T18:01:53.545533+00:00",
+      "last_execution_utc": "2026-10-09T18:01:55.472443+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46918.6,
+      "age_seconds": 80.2,
       "agent": "ACS-02",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs02_state.json",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-08T18:01:01.882310+00:00",
+      "last_execution_utc": "2026-10-09T18:01:04.608199+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 46915.1,
+      "age_seconds": 77.6,
       "agent": "ACS-03",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs03_state.json",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-08T18:01:05.384499+00:00",
+      "last_execution_utc": "2026-10-09T18:01:07.173404+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 7.8,
+      "age_seconds": 9.2,
       "agent": "ACS-04",
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs04_state.json",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-09T07:02:52.684910+00:00",
+      "last_execution_utc": "2026-10-09T18:02:15.626534+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -71,7 +71,7 @@
       },
       "evidence_source": "/home/rafa1215/consensus-project/memory/agents/acs05_state.json",
       "health_status": "critical",
-      "last_execution_utc": "2026-10-09T07:03:00.382976+00:00",
+      "last_execution_utc": "2026-10-09T18:02:24.696741+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -89,7 +89,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-09T06:01:33.015338+00:00",
+      "mtime_utc": "2026-10-09T18:01:03.446273+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -108,7 +108,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-09T07:03:00.456075+00:00",
+  "generated_at_utc": "2026-10-09T18:02:24.764972+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -120,7 +120,7 @@
       "ok": true,
       "returncode": 0,
       "stderr": "",
-      "stdout": "b0876320f1a35d32007e12e67bd6ce3a3a2c9f6f\tHEAD"
+      "stdout": "0241c88f4ba40994f385fc9a2ab36aaf652a55c6\tHEAD"
     },
     "status": {
       "ok": true,
@@ -135,14 +135,14 @@
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-10-09T06:01:33.015338+00:00",
+        "mtime_utc": "2026-10-09T18:01:03.446273+00:00",
         "path": "memory",
         "size": 4096
       },
       {
         "exists": true,
         "is_dir": true,
-        "mtime_utc": "2026-10-09T07:03:00.391050+00:00",
+        "mtime_utc": "2026-10-09T18:02:24.695380+00:00",
         "path": "memory/agents",
         "size": 4096
       }
@@ -337,7 +337,7 @@
       ],
       "safe_refresh_paths": [],
       "status": "already_synced",
-      "timestamp": 1791529340.3040426
+      "timestamp": 1791568916.4277492
     },
     "post_sync_cycles": {
       "attempted": true,
@@ -347,7 +347,7 @@
             "ok": true,
             "returncode": 0,
             "stderr": "",
-            "stdout": "{\"agent\": \"ACS-04\", \"started_at_utc\": \"2026-10-09T07:02:21.042062+00:00\", \"finished_at_utc\": \"2026-10-09T07:02:52.684910+00:00\", \"status\": \"healthy\", \"verified\": true, \"results\": [{\"component\": \"infrastructure_guardian\", \"status\": \"healthy\", \"ok\": true, \"returncode\": 0, \"stdout\": \"\", \"stderr\": \"\"}]}"
+            "stdout": "{\"agent\": \"ACS-04\", \"started_at_utc\": \"2026-10-09T18:01:57.096633+00:00\", \"finished_at_utc\": \"2026-10-09T18:02:15.626534+00:00\", \"status\": \"healthy\", \"verified\": true, \"results\": [{\"component\": \"infrastructure_guardian\", \"status\": \"healthy\", \"ok\": true, \"returncode\": 0, \"stdout\": \"\", \"stderr\": \"\"}]}"
           }
         ],
         "ACS-05": [
@@ -355,13 +355,13 @@
             "ok": false,
             "returncode": 2,
             "stderr": "",
-            "stdout": "{\"agent\": \"ACS-05\", \"started_at_utc\": \"2026-10-09T07:02:52.818626+00:00\", \"finished_at_utc\": \"2026-10-09T07:02:54.271798+00:00\", \"status\": \"critical\", \"verified\": true, \"results\": [{\"component\": \"continuity_guardian\", \"status\": \"critical\", \"ok\": false, \"returncode\": 2, \"stdout\": \"START continuity_guardian\\nCRITICAL Google OAuth grant/token invalid or revoked: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})\\nINFO Twilio environment incomplete; alert recorded to log only\\nEND status=CRITICAL critical=1 warning=0\\n\", \"stderr\": \"\"}]}"
+            "stdout": "{\"agent\": \"ACS-05\", \"started_at_utc\": \"2026-10-09T18:02:15.871740+00:00\", \"finished_at_utc\": \"2026-10-09T18:02:18.232733+00:00\", \"status\": \"critical\", \"verified\": true, \"results\": [{\"component\": \"continuity_guardian\", \"status\": \"critical\", \"ok\": false, \"returncode\": 2, \"stdout\": \"START continuity_guardian\\nCRITICAL Google OAuth grant/token invalid or revoked: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})\\nINFO Twilio environment incomplete; alert recorded to log only\\nEND status=CRITICAL critical=1 warning=0\\n\", \"stderr\": \"\"}]}"
           },
           {
             "ok": false,
             "returncode": 2,
             "stderr": "",
-            "stdout": "{\"agent\": \"ACS-05\", \"started_at_utc\": \"2026-10-09T07:02:59.372685+00:00\", \"finished_at_utc\": \"2026-10-09T07:03:00.382976+00:00\", \"status\": \"critical\", \"verified\": true, \"results\": [{\"component\": \"continuity_guardian\", \"status\": \"critical\", \"ok\": false, \"returncode\": 2, \"stdout\": \"START continuity_guardian\\nCRITICAL Google OAuth grant/token invalid or revoked: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})\\nINFO Twilio environment incomplete; alert recorded to log only\\nEND status=CRITICAL critical=1 warning=0\\n\", \"stderr\": \"\"}]}"
+            "stdout": "{\"agent\": \"ACS-05\", \"started_at_utc\": \"2026-10-09T18:02:23.431325+00:00\", \"finished_at_utc\": \"2026-10-09T18:02:24.696741+00:00\", \"status\": \"critical\", \"verified\": true, \"results\": [{\"component\": \"continuity_guardian\", \"status\": \"critical\", \"ok\": false, \"returncode\": 2, \"stdout\": \"START continuity_guardian\\nCRITICAL Google OAuth grant/token invalid or revoked: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})\\nINFO Twilio environment incomplete; alert recorded to log only\\nEND status=CRITICAL critical=1 warning=0\\n\", \"stderr\": \"\"}]}"
           }
         ]
       }
