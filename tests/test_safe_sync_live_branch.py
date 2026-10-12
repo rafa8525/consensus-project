@@ -143,5 +143,42 @@ class SafeSyncLiveBranchTests(unittest.TestCase):
         self.assertEqual(runtime.read_text(), "changed while synced\n")
 
 
+    def test_broken_stash_lookup_never_deletes_runtime_file(self):
+        from unittest.mock import patch
+        from types import SimpleNamespace
+
+        runtime = self.live / "memory" / "logs" / "runtime.log"
+        runtime.write_text("important runtime state\\n")
+
+        with patch.object(sync, "run", return_value=SimpleNamespace(
+            returncode=128, stdout=b"", stderr=b"simulated unavailable stash"
+        )):
+            with self.assertRaises(RuntimeError):
+                sync.restore_runtime_from_stash("stash@{0}", ["memory/logs/runtime.log"])
+
+        self.assertEqual(runtime.read_text(), "important runtime state\\n")
+
+    def test_restore_failure_keeps_stash_for_recovery(self):
+        from unittest.mock import patch
+
+        self.advance_remote()
+        runtime = self.live / "memory" / "logs" / "runtime.log"
+        runtime.write_text("important runtime state\\n")
+
+        with patch.object(sync, "restore_runtime_from_stash",
+                          side_effect=RuntimeError("simulated restore failure")):
+            rc, payload = self.run_sync()
+
+        self.assertEqual(rc, 3)
+        self.assertEqual(payload["status"], "runtime_restore_failed")
+        self.assertTrue(payload["recovery_stash"])
+        stash_list = self.git(self.live, "stash", "list").stdout
+        self.assertIn("acs-safe-sync", stash_list)
+        # The important data is recoverable from the stash even when no
+        # restoration was possible.
+        recovered = self.git(self.live, "show", "stash@{0}:memory/logs/runtime.log").stdout
+        self.assertEqual(recovered, "important runtime state\\n")
+
+
 if __name__ == "__main__":
     unittest.main()
