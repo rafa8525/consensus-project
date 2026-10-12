@@ -417,21 +417,27 @@ def maybe_send_sms(summary: str, fingerprint: str, state: dict) -> None:
     from_num = os.getenv("TWILIO_FROM_NUMBER", "")
     to_num = os.getenv("TWILIO_TO_NUMBER", "")
     if not all([sid, token, from_num, to_num]):
-        INFO.append("Twilio environment incomplete; alert recorded to log only")
+        WARN.append("Continuity SMS not delivered: Twilio environment incomplete")
         return
     try:
+        # The canonical guard controls sending, opt-in and rate limits.
+        # Do not fall back to a direct Twilio send if it blocks or fails.
         from twilio.rest import Client
-        try:
-            from common import twilio_guard
-            client = Client(sid, token)
-            twilio_guard.send_sms(client, to=to_num, from_=from_num, body=summary[:1500])
-        except Exception:
-            Client(sid, token).messages.create(to=to_num, from_=from_num, body=summary[:1500])
+        from common import twilio_guard
+
+        client = Client(sid, token)
+        delivery = twilio_guard.send_sms(
+            client, to=to_num, from_=from_num, body=summary[:1500]
+        )
+        if not isinstance(delivery, dict) or delivery.get("status") != "sent":
+            reason = delivery.get("reason", "unknown") if isinstance(delivery, dict) else "invalid_response"
+            WARN.append(f"Continuity SMS not delivered: guard status={reason}")
+            return
+
         state["last_alert_fingerprint"] = fingerprint
         INFO.append("Continuity alert sent by SMS")
     except Exception as exc:
         WARN.append(f"Could not send Twilio continuity alert: {type(exc).__name__}: {exc}")
-
 
 def run(force: bool = False) -> int:
     state = load_state()
