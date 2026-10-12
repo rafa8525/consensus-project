@@ -56,10 +56,11 @@ class ReadinessTests(unittest.TestCase):
             "TWILIO_ACCOUNT_SID", "TWILIO_AUTH_TOKEN",
             "TWILIO_FROM_NUMBER", "TWILIO_TO_NUMBER")}
         env["TWILIO_ENABLE_SEND"] = "1"
-        with patch.object(readiness, "git", side_effect=[
-            "v1.1-dev", "a" * 40, "a" * 40
-        ]), patch.object(readiness, "state_health", return_value=healthy), \\
-             patch.object(Path, "is_file", return_value=True):
+        with (
+            patch.object(readiness, "git", side_effect=["v1.1-dev", "a" * 40, "a" * 40]),
+            patch.object(readiness, "state_health", return_value=healthy),
+            patch.object(Path, "is_file", return_value=True),
+        ):
             report = readiness.build_report(
                 repo=readiness.REPO, environ=env, now=self.now
             )
