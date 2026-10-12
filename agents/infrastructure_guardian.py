@@ -796,10 +796,14 @@ class InfrastructureGuardian:
 
         return payload
 
-    def notify(self, payload: dict[str, Any]) -> None:
+    def notify(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Return command execution evidence; never equate rc=0 with SMS delivery."""
         command = self.config.notification_command
-        if not command or payload["overall_status"] == "healthy":
-            return
+        if payload["overall_status"] == "healthy":
+            return {"status": "not_required"}
+        if not command:
+            self.log("WARNING NOTIFICATION_NOT_CONFIGURED")
+            return {"status": "not_configured"}
 
         summary = {
             "status": payload["overall_status"],
@@ -819,7 +823,7 @@ class InfrastructureGuardian:
         env = os.environ.copy()
         env["INFRA_GUARDIAN_EVENT"] = json.dumps(summary)
         try:
-            subprocess.run(
+            result = subprocess.run(
                 command,
                 shell=True,
                 cwd=str(self.config.repo_root),
@@ -827,8 +831,14 @@ class InfrastructureGuardian:
                 timeout=60,
                 check=False,
             )
+            if result.returncode != 0:
+                self.log(f"WARNING NOTIFICATION_FAILED returncode={result.returncode}")
+                return {"status": "command_failed", "returncode": result.returncode}
+            # The command succeeded; actual downstream delivery is not proven.
+            return {"status": "command_succeeded", "returncode": 0}
         except Exception as exc:
-            self.log(f"WARNING NOTIFICATION_FAILED: {exc}")
+            self.log(f"WARNING NOTIFICATION_FAILED type={type(exc).__name__}")
+            return {"status": "command_failed", "error_type": type(exc).__name__}
 
     def execute(self) -> int:
         try:
@@ -841,7 +851,19 @@ class InfrastructureGuardian:
             self.check_logs()
             self.check_repository()
             payload = self.write_reports()
-            self.notify(payload)
+            payload["notification"] = self.notify(payload)
+            # Publish notification outcome in the authoritative status file.
+            # The original diagnostic report remains intact on failed replacement.
+            notification_tmp = self.status_path.with_name(
+                f".{self.status_path.name}.notification-{os.getpid()}"
+            )
+            try:
+                notification_tmp.write_text(
+                    json.dumps(payload, indent=2) + "\\n", encoding="utf-8"
+                )
+                os.replace(notification_tmp, self.status_path)
+            finally:
+                notification_tmp.unlink(missing_ok=True)
             self.log(f"FINISH status={payload['overall_status']}")
             return {"healthy": 0, "warning": 1, "critical": 2}[payload["overall_status"]]
         except Exception as exc:
