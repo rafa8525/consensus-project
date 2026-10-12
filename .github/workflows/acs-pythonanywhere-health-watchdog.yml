@@ -10,6 +10,8 @@ on:
       - ".github/workflows/acs-pythonanywhere-health-watchdog.yml"
       - "tools/health_snapshot_watchdog.py"
       - "tests/test_health_snapshot_watchdog.py"
+      - "agents/pythonanywhere_health_bridge.py"
+      - "tests/test_public_health_snapshot.py"
 
 permissions:
   contents: read
@@ -29,6 +31,6 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: "1"
           PYTHONPATH: "."
-        run: python -m unittest -v tests.test_health_snapshot_watchdog
+        run: python -m unittest -v tests.test_health_snapshot_watchdog tests.test_public_health_snapshot
       - name: Check published PythonAnywhere agent health
         run: python tools/health_snapshot_watchdog.py
