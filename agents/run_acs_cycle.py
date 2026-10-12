@@ -29,6 +29,7 @@ ABSORB_WORKER = REPO / "tools" / "absorb_memory.py"
 ABSORB_MARKER_WRITER = REPO / "tools" / "write_absorption_public_marker.py"
 ABSORB_MARKER = RUNTIME_MEMORY / "public" / "absorption_last_success.json"
 ABSORB_MAX_AGE_HOURS = 36.0
+ABSORB_FUTURE_TOLERANCE_MINUTES = 5
 
 CYCLES = {
     "ACS-03": [
@@ -146,7 +147,7 @@ def verify_absorption_marker() -> dict:
         ).total_seconds() / 3600.0
 
         marker_status = data.get("status")
-        if marker_status != "ok":
+        if marker_status != "ok" or age_hours < -ABSORB_FUTURE_TOLERANCE_MINUTES / 60.0:
             health = "critical"
         elif age_hours > ABSORB_MAX_AGE_HOURS:
             health = "warning"
@@ -204,6 +205,8 @@ def run_acs02() -> list[dict]:
 
 
 def overall_status(results: list[dict]) -> str:
+    if not results:
+        return "execution_failure"
     return max(
         (r.get("status", "execution_failure") for r in results),
         key=lambda s: SEVERITY.get(s, 3),
