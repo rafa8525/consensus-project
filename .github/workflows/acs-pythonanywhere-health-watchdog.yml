@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/acs-pythonanywhere-health-watchdog.yml"
+      - "tools/health_snapshot_watchdog.py"
+      - "tests/test_health_snapshot_watchdog.py"
 
 permissions:
   contents: read
@@ -19,34 +21,14 @@ jobs:
     steps:
       - name: Check out published health evidence
         uses: actions/checkout@v4
-      - name: Verify heartbeat freshness without credentials
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          import json
-          import sys
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          path = Path("logs/system/pythonanywhere_health.json")
-          try:
-              payload = json.loads(path.read_text(encoding="utf-8"))
-              if not isinstance(payload, dict):
-                  raise ValueError("not a JSON object")
-              if payload.get("source") != "pythonanywhere":
-                  raise ValueError("unexpected health evidence source")
-              value = payload.get("generated_at_utc")
-              if not isinstance(value, str):
-                  raise ValueError("missing generated_at_utc")
-              stamp = datetime.fromisoformat(value.replace("Z", "+00:00"))
-              if stamp.tzinfo is None:
-                  raise ValueError("timestamp is missing UTC offset")
-              age_hours = (datetime.now(timezone.utc) - stamp.astimezone(timezone.utc)).total_seconds() / 3600
-              print(f"PythonAnywhere health snapshot age: {age_hours:.2f} hours")
-              if not (-0.083 <= age_hours <= 36):
-                  raise ValueError(f"health snapshot age outside permitted 0–36h range: {age_hours:.2f}h")
-              print("PASS: health snapshot is recent and valid")
-          except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
-              print(f"::error title=PythonAnywhere snapshot stale or invalid::{type(exc).__name__}: {exc}")
-              sys.exit(1)
-          PY
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate watchdog logic
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONPATH: "."
+        run: python -m unittest -v tests.test_health_snapshot_watchdog
+      - name: Check published PythonAnywhere agent health
+        run: python tools/health_snapshot_watchdog.py
