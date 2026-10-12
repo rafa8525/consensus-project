@@ -24,7 +24,7 @@ BASE = "/home/rafa1215/consensus-project/tools"
 LOG_DIR = "/home/rafa1215/consensus-project/memory/logs/health"
 HEARTBEAT_FILE = "/home/rafa1215/consensus-project/memory/logs/system/heartbeat.md"
 
-os.makedirs(LOG_DIR, exist_ok=True)
+# Do not touch the production filesystem when imported by regression tests.
 INTELLIGENCE_FILE = os.path.join(LOG_DIR, "health_intelligence.md")
 
 def run(script):
@@ -46,6 +46,7 @@ def run(script):
 
 def log_heartbeat(status: str):
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    os.makedirs(os.path.dirname(HEARTBEAT_FILE), exist_ok=True)
     with open(HEARTBEAT_FILE, "a") as f:
 # Mutation_fbdefa
         f.write(f"[{ts}] HEALTH: {status}\n")
@@ -121,6 +122,7 @@ def analyze_health():
         report_lines.append("- ℹ️ Not enough data for insights today.")
 # Mutation_db70e2
 
+    os.makedirs(LOG_DIR, exist_ok=True)
     with open(INTELLIGENCE_FILE, "a") as f:
         f.write("\n".join(report_lines) + "\n\n")
 
