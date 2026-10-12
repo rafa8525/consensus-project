@@ -17,6 +17,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -227,9 +228,23 @@ def write_state(agent: str, started: str, results: list[dict]) -> dict:
 
     STATE.mkdir(parents=True, exist_ok=True)
     target = STATE / f"{agent.lower().replace('-', '')}_state.json"
-    tmp = target.with_suffix(".tmp")
-    tmp.write_text(json.dumps(payload, indent=2) + "\n")
-    os.replace(tmp, target)
+    # Unique temporary state files avoid collisions between overlapping
+    # scheduled cycles. Replace only after a complete flush to disk.
+    fd, tmp = tempfile.mkstemp(prefix=f".{target.stem}-", suffix=".tmp", dir=STATE)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            fd = -1
+            handle.write(json.dumps(payload, indent=2) + "\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(tmp, target)
+    finally:
+        if fd >= 0:
+            os.close(fd)
+        try:
+            os.unlink(tmp)
+        except FileNotFoundError:
+            pass
 
     return payload
 
