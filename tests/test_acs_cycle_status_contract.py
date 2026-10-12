@@ -2,7 +2,8 @@
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch, SimpleNamespace
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from agents import run_acs_cycle as harness
 
