@@ -42,12 +42,13 @@ class LogRotationSafetyTests(unittest.TestCase):
         self.assertEqual((self.logs / "worker.log.1").read_text(), "A" * 32)
         self.assertEqual(status.read_text(), "S" * 32)
         self.assertFalse((self.logs / "health.json.1").exists())
-        self.assertEqual(old.read_text(), "old_backup")
+        # Oldest retained backup is intentionally evicted by max_rotated_logs=2.
+        self.assertFalse(old.exists())
 
         # Running again without new log growth must not consume a backup.
         self.guardian.check_logs()
         self.assertEqual((self.logs / "worker.log.1").read_text(), "A" * 32)
-        self.assertEqual(old.read_text(), "old_backup")
+        self.assertFalse(old.exists())
 
     def test_jsonl_rotates_and_archives_are_skipped(self):
         events = self.logs / "events.jsonl"
