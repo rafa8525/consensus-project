@@ -1,5 +1,6 @@
 import unittest
-from unittest.mock import patch, SimpleNamespace
+from types import SimpleNamespace
+from unittest.mock import patch
 from tools import health_master
 
 class HealthMasterPipelineTests(unittest.TestCase):
