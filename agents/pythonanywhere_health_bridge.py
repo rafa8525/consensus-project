@@ -512,6 +512,106 @@ def pythonanywhere_schedule():
                 "health_task": {"found": False, "enabled": False},
                 "acs01_task": {"found": False, "enabled": False}}
 
+def public_diagnostics(agent, diagnostic):
+    """Allowlist fields published to GitHub; never publish raw exception/mail text."""
+    if not isinstance(diagnostic, dict):
+        return {"diagnostics_status": "unavailable"}
+    if agent == "ACS-04":
+        findings = []
+        for item in (diagnostic.get("findings") or [])[:10]:
+            if not isinstance(item, dict):
+                continue
+            code = item.get("code")
+            if not isinstance(code, str) or not code.isascii() or not code.replace("_", "").isalnum() or len(code) > 48:
+                code = "UNCLASSIFIED"
+            findings.append({"severity": item.get("severity") if item.get("severity") in ("warning", "critical") else "unknown",
+                             "code": code, "repaired": item.get("repaired") is True})
+        return {"overall_status": diagnostic.get("overall_status") if diagnostic.get("overall_status") in ("healthy", "warning", "critical", "execution_failure") else "unknown",
+                "findings": findings}
+    if agent == "ACS-05":
+        critical = diagnostic.get("critical") or []
+        warnings = diagnostic.get("warnings") or []
+        codes = []
+        for message in critical:
+            lower = str(message).lower()
+            if "invalid_grant" in lower or "revoked" in lower:
+                code = "GOOGLE_OAUTH_INVALID_GRANT"
+            elif "deleted_client" in lower or "client has been deleted" in lower:
+                code = "GOOGLE_OAUTH_CLIENT_DELETED"
+            elif "invalid_client" in lower:
+                code = "GOOGLE_OAUTH_INVALID_CLIENT"
+            elif "gmail" in lower or "google oauth" in lower:
+                code = "GOOGLE_OAUTH_OR_GMAIL_FAILURE"
+            else:
+                code = "CONTINUITY_CRITICAL"
+            if code not in codes:
+                codes.append(code)
+        return {
+            "last_status": diagnostic.get("last_status") if diagnostic.get("last_status") in ("OK", "WARN", "CRITICAL") else "UNKNOWN",
+            "critical_count": len(critical), "warning_count": len(warnings),
+            "issue_codes": codes[:10],
+        }
+    return {"diagnostics_status": "unavailable"}
+
+
+def sanitize_public_snapshot(snapshot):
+    """Reduce a private runtime report to fixed non-secret fields before publishing."""
+    safe = {
+        "schema_version": snapshot.get("schema_version"),
+        "generated_at_utc": snapshot.get("generated_at_utc"),
+        "source": "pythonanywhere",
+        "active_branch": snapshot.get("active_branch"),
+        "critical_paths": snapshot.get("critical_paths", []),
+    }
+    allowed_agent_keys = ("agent", "role", "cadence", "verified", "status",
+                          "health_status", "last_execution_utc", "age_seconds",
+                          "stale_after_seconds", "runtime_component")
+    def clean_agent(agent, data):
+        if not isinstance(data, dict):
+            return {"verified": False, "status": "unreadable"}
+        out = {k: data[k] for k in allowed_agent_keys if k in data}
+        if "diagnostics" in data:
+            out["diagnostics"] = public_diagnostics(agent, data["diagnostics"])
+        return out
+    safe["agents"] = {name: clean_agent(name, info)
+                      for name, info in (snapshot.get("agents") or {}).items()
+                      if name in ("ACS-01", "ACS-02", "ACS-03", "ACS-04", "ACS-05")}
+    safe["acs01_orchestrator"] = clean_agent("ACS-01", snapshot.get("acs01_orchestrator", {}))
+    knowledge = snapshot.get("knowledge_validation") or {}
+    safe["knowledge_validation"] = {"status": knowledge.get("status")}
+    sync = (snapshot.get("self_heal") or {}).get("branch_sync") or {}
+    allowed_sync_keys = ("ok", "status", "branch", "remote", "head", "remote_head",
+                         "ahead_before", "behind_before", "ahead_after", "behind_after", "returncode")
+    post = (snapshot.get("self_heal") or {}).get("post_sync_cycles") or {}
+    outcomes = {}
+    for name, attempts in (post.get("outcomes") or {}).items():
+        if name in ("ACS-04", "ACS-05"):
+            outcomes[name] = [{"ok": a.get("ok") is True, "returncode": a.get("returncode")}
+                              for a in attempts if isinstance(a, dict)]
+    safe["self_heal"] = {
+        "branch_sync": {k: sync[k] for k in allowed_sync_keys if k in sync},
+        "post_sync_cycles": {"attempted": post.get("attempted") is True, "outcomes": outcomes},
+    }
+    git = snapshot.get("git") or {}
+    status = git.get("status") or {}
+    commit = git.get("last_commit") or {}
+    safe["git"] = {
+        "status": {"ok": status.get("ok"), "returncode": status.get("returncode"),
+                   "tracked_changes_count": len((status.get("stdout") or "").splitlines())},
+        "unresolved_merge_conflict": git.get("unresolved_merge_conflict") is True,
+        "last_commit": {"ok": commit.get("ok"),
+                        "sha": (commit.get("stdout") or "").split("|")[0][:40]},
+        "origin_reachable": {"ok": (git.get("origin_reachable") or {}).get("ok")},
+    }
+    schedule = snapshot.get("pythonanywhere_schedule") or {}
+    safe["pythonanywhere_schedule"] = {
+        "available": schedule.get("available") is True,
+        "acs01_task": schedule.get("acs01_task", {}),
+        "health_task": schedule.get("health_task", {}),
+    }
+    return safe
+
+
 self_heal_sync = safe_sync_v11_dev()
 self_heal_cycles = heal_infrastructure_after_sync(self_heal_sync)
 
@@ -542,7 +642,7 @@ snapshot = {
 }
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
-OUT.write_text(json.dumps(snapshot, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+OUT.write_text(json.dumps(sanitize_public_snapshot(snapshot), indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 fetch = run(["git", "fetch", "origin", "main"], timeout=60)
 if not fetch.get("ok"):
