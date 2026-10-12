@@ -1,12 +1,19 @@
 # Security Audit Schedule
 
-Frequency: Monthly  
+Frequency: Monthly
+Planning rule: Review on the first Monday of each calendar month (Pacific time).
 Purpose: Assess and enhance system security.
 
-Tasks:
-- Perform comprehensive security scan
-- Identify vulnerabilities and patch immediately
-- Validate VPN, credential storage, and permissions
-- Log results to memory/logs/system/security_audit_report.md
+Checklist:
+- Run the existing security scan and inspect its exit status.
+- Identify vulnerabilities; prioritize urgent remediation.
+- Validate VPN configuration, credential storage, and private-key permissions.
+- Inspect tracked changes for secrets before pushing.
+- Record findings, actions, and verification in memory/logs/system/security_audit_report.md.
+- Escalate failed or missed checks; never mark a scan successful without execution evidence.
 
-Next Audit Date: [YYYY-MM-DD]
+Scheduling status: NOT VERIFIED. This document sets the cadence but does not create a scheduler task.
+Next review target: 2026-11-02 (first Monday after 2026-10-11).
+If the October 2026 audit has not occurred, perform a catch-up audit immediately.
+
+Completion criteria: Dated scan result, findings, remediation status, and evidence of follow-up.
