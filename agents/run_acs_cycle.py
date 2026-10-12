@@ -101,20 +101,17 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
         }.get(p.returncode, "execution_failure")
 
     elif component == "continuity_guardian":
-        match = re.search(
-            r"END status=(OK|WARN|CRITICAL)",
+        # Accept exactly one complete guardian END marker. Multiple markers,
+        # partial words (OKAY), or inconsistent process exits fail closed.
+        markers = re.findall(
+            r"^END status=(OK|WARN|CRITICAL)(?=\\s|$)[^\\r\\n]*$",
             p.stdout,
-            re.IGNORECASE,
+            re.IGNORECASE | re.MULTILINE,
         )
-        # A printed status is not proof of successful execution. Treat a
-        # nonzero exit as a failure, except the documented code 2 for a
-        # critical continuity finding. A contradiction must fail closed.
-        if p.returncode not in (0, 2):
-            status = "execution_failure"
-        elif not match:
+        if p.returncode not in (0, 2) or len(markers) != 1:
             status = "execution_failure"
         else:
-            raw = match.group(1).upper()
+            raw = markers[0].upper()
             if p.returncode == 2:
                 status = "critical" if raw == "CRITICAL" else "execution_failure"
             elif raw == "CRITICAL":
@@ -209,8 +206,9 @@ def overall_status(results: list[dict]) -> str:
     if not results:
         return "execution_failure"
     return max(
-        (r.get("status", "execution_failure") for r in results),
-        key=lambda s: SEVERITY.get(s, 3),
+        (r.get("status") if r.get("status") in SEVERITY else "execution_failure"
+         for r in results),
+        key=lambda s: SEVERITY[s],
     )
 
 
