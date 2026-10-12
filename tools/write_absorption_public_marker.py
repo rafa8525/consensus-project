@@ -50,20 +50,26 @@ def choose_export_path() -> Path:
 
 
 def main() -> int:
-    export_path = choose_export_path()
-
-    if not export_path.exists():
-        print(f"ERROR: export file not found: {export_path}", file=sys.stderr)
+    # A successful ACS-02 absorption must be evidenced by a freshly written
+    # knowledge base. Movie exports are unrelated and must not block ACS-02.
+    try:
+        stat = CKB_PATH.stat()
+        if not CKB_PATH.is_file() or stat.st_size <= 0:
+            raise ValueError("knowledge base missing or empty")
+        age = utc_now().timestamp() - stat.st_mtime
+        if age < -300 or age > 900:
+            raise ValueError(f"knowledge base timestamp out of bounds: {age:.0f}s")
+        with CKB_PATH.open("r", encoding="utf-8") as handle:
+            if handle.readline().strip() != "Centralized Knowledge Base":
+                raise ValueError("invalid knowledge base header")
+            handle.readline()
+            if not handle.readline().startswith("Generated (UTC): "):
+                raise ValueError("missing generation metadata")
+    except (OSError, ValueError, UnicodeError) as exc:
+        print(f"ERROR: cannot verify knowledge base: {exc}", file=sys.stderr)
         return 1
 
-    export_stat = export_path.stat()
-
-    ckb_size = None
-    if CKB_PATH.exists():
-        try:
-            ckb_size = CKB_PATH.stat().st_size
-        except Exception:
-            ckb_size = None
+    ckb_size = stat.st_size
 
     now_utc = utc_now()
     now_local = local_now()
@@ -73,9 +79,8 @@ def main() -> int:
         "last_success_utc": now_utc.isoformat(),
         "local_tz": LOCAL_TZ,
         "status": "ok",
-        "export_size_bytes": export_stat.st_size,
-        "export_mtime_utc": export_stat.st_mtime,
-        "export_mtime_iso_utc": iso_utc_z(datetime.fromtimestamp(export_stat.st_mtime, tz=ZoneInfo("UTC"))),
+        "centralized_knowledge_base_size_bytes": ckb_size,
+        "centralized_knowledge_base_mtime_utc": iso_utc_z(datetime.fromtimestamp(stat.st_mtime, tz=ZoneInfo("UTC"))),
         "source": "absorption public marker",
         "git_commit": get_git_commit(),
         "marker_write_iso_utc": iso_utc_z(now_utc),
