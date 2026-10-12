@@ -19,6 +19,20 @@ class CycleStatusTests(unittest.TestCase):
         self.assertEqual(status["status"], expected)
         self.assertEqual(status["ok"], expected == "healthy")
 
+    def test_actual_multiline_guardian_output_is_accepted(self):
+        stdout = "START continuity_guardian\nINFO checks complete\nEND status=OK\n"
+        proc = SimpleNamespace(returncode=0, stdout=stdout, stderr="")
+        with patch.object(harness.subprocess, "run", return_value=proc):
+            result = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
+        self.assertEqual(result["status"], "healthy")
+
+    def test_contradictory_actual_lines_fail_closed(self):
+        stdout = "END status=CRITICAL\nEND status=OK\n"
+        proc = SimpleNamespace(returncode=0, stdout=stdout, stderr="")
+        with patch.object(harness.subprocess, "run", return_value=proc):
+            result = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
+        self.assertEqual(result["status"], "execution_failure")
+
     def test_success_marker_with_success_exit(self):
         self.check_continuity(0, "OK", "healthy")
 
@@ -103,13 +117,13 @@ class CycleStatusTests(unittest.TestCase):
 
 
     def test_duplicate_guardian_end_markers_fail_closed(self):
-        proc = SimpleNamespace(returncode=0, stdout="END status=CRITICAL\\nEND status=OK\\n", stderr="")
+        proc = SimpleNamespace(returncode=0, stdout="END status=CRITICAL\nEND status=OK\n", stderr="")
         with patch.object(harness.subprocess, "run", return_value=proc):
             result = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
         self.assertEqual(result["status"], "execution_failure")
 
     def test_partial_guardian_end_marker_fails_closed(self):
-        proc = SimpleNamespace(returncode=0, stdout="END status=OKAY\\n", stderr="")
+        proc = SimpleNamespace(returncode=0, stdout="END status=OKAY\n", stderr="")
         with patch.object(harness.subprocess, "run", return_value=proc):
             result = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
         self.assertEqual(result["status"], "execution_failure")
