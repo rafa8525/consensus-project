@@ -337,6 +337,12 @@ class InfrastructureGuardian:
                 if "archive" in relative_parts:
                     continue
 
+                # Only active append-only logs are eligible for rotation.
+                # Never rename JSON status snapshots, numbered historical
+                # rotations (example.log.1), or symlinks.
+                if path.is_symlink() or path.suffix.lower() not in {".log", ".jsonl"}:
+                    continue
+
                 try:
                     size = path.stat().st_size
                 except OSError:
