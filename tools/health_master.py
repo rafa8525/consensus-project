@@ -28,20 +28,22 @@ os.makedirs(LOG_DIR, exist_ok=True)
 INTELLIGENCE_FILE = os.path.join(LOG_DIR, "health_intelligence.md")
 
 def run(script):
+    """Run one required pipeline, failing the health cycle on any error."""
+    print(f"Running {script}...")
     try:
-        print(f"Running {script}...")
-# Mutation_aa5fa7
-        subprocess.run(
+        result = subprocess.run(
             ["/usr/bin/python3", os.path.join(BASE, script)],
-            check=False
+            check=False,
+            timeout=900,
         )
-    except Exception as e:
-# Mutation_2f1df6
-# Mutation_d1ef84
-        log_heartbeat(f"ERROR running {script}: {e}")
+    except Exception as exc:
+        log_heartbeat(f"ERROR running {script}: {type(exc).__name__}: {exc}")
+        raise RuntimeError(f"Required health pipeline failed: {script}") from exc
+    if result.returncode != 0:
+        log_heartbeat(f"ERROR running {script}: exit code {result.returncode}")
+        raise RuntimeError(f"Required health pipeline failed: {script} (exit {result.returncode})")
 
-# Mutation_0bf5ea
-# Mutation_fc3399
+
 def log_heartbeat(status: str):
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(HEARTBEAT_FILE, "a") as f:
@@ -139,3 +141,4 @@ if __name__ == "__main__":
 
     except Exception as e:
         log_heartbeat(f"ERROR: Health Master crashed — {e}")
+        raise SystemExit(1) from e
