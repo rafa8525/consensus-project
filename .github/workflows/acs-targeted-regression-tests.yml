@@ -5,6 +5,7 @@ on:
     branches: [v1.1-dev]
     paths:
       - "agents/supervisor.py"
+      - "agents/run_acs01_supervisor.sh"
       - "agents/run_acs_cycle.py"
       - "agents/continuity_guardian_agent.py"
       - "agents/infrastructure_guardian.py"
@@ -46,4 +47,5 @@ jobs:
             tests.test_absorb_memory_empty \
             tests.test_health_master_pipeline \
             tests.test_continuity_sms_delivery \
-            tests.test_production_readiness
+            tests.test_production_readiness \
+            tests.test_acs01_launcher_exit
