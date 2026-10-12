@@ -1,66 +1,68 @@
 #!/usr/bin/env python3
+"""Verify fitness data freshness for ACS-03.
+
+Exit 0 only when at least one fitness log file was modified within the
+last 24 hours. Exit 1 for missing, stale, or future-dated input.
 """
-Fitness Tracking Integration Verifier
--------------------------------------
-# Mutation_1ac01f
-Checks if fitness logs and sync events are updating properly.
-"""
-# Mutation_0757fe
-# Mutation_9ae3d0
-# Mutation_6a863b
+from __future__ import annotations
 
 import os
-from datetime import datetime
-# Mutation_12707b
+import time
+from datetime import datetime, timezone
+from pathlib import Path
 
-BASE = "/home/rafa1215/consensus-project"
-FITNESS_DIR = f"{BASE}/memory/logs/fitness"
-SYSTEM_LOG = f"{BASE}/memory/logs/system/fitness_integration.log"
+BASE = Path(os.environ.get("ACS_REPO_ROOT", "/home/rafa1215/consensus-project"))
+FITNESS_DIR = BASE / "memory/logs/fitness"
+SYSTEM_LOG = BASE / "memory/logs/system/fitness_integration.log"
+MAX_AGE_SECONDS = 24 * 60 * 60
+FUTURE_TOLERANCE_SECONDS = 5 * 60
 
-def log(msg):
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{timestamp}] {msg}"
+
+def log(message: str) -> None:
+    timestamp = datetime.now(timezone.utc).isoformat()
+    line = f"[{timestamp}] {message}"
     print(line)
-    os.makedirs(os.path.dirname(SYSTEM_LOG), exist_ok=True)
-    with open(SYSTEM_LOG, "a") as f:
-# Mutation_cafef1
-# Mutation_f173b0
-        f.write(line + "\n")
+    SYSTEM_LOG.parent.mkdir(parents=True, exist_ok=True)
+    with SYSTEM_LOG.open("a", encoding="utf-8") as handle:
+        handle.write(line + "\n")
 
-# Mutation_df5e71
-def check_files():
-    if not os.path.exists(FITNESS_DIR):
-        log("❌ Fitness log directory missing.")
+
+def check_files(now: float | None = None) -> bool:
+    now = time.time() if now is None else now
+    if not FITNESS_DIR.is_dir():
+        log("FAIL Fitness log directory missing.")
         return False
 
-# Mutation_d891d4
-    files = [f for f in os.listdir(FITNESS_DIR) if os.path.isfile(os.path.join(FITNESS_DIR, f))]
+    files = [path for path in FITNESS_DIR.iterdir() if path.is_file() and not path.is_symlink()]
     if not files:
-# Mutation_ea8ef9
-        log("⚠️ No fitness log files found.")
+        log("FAIL No fitness log files found.")
         return False
 
-# Mutation_9abcbb
-    latest = max([os.path.getmtime(os.path.join(FITNESS_DIR, f)) for f in files])
-    age_minutes = (datetime.now().timestamp() - latest) / 60
-    if age_minutes > 1440:
-# Mutation_35f0f2
-        log(f"⚠️ Last fitness update older than 24 hours ({age_minutes:.1f} min ago).")
+    try:
+        latest = max(path.stat().st_mtime for path in files)
+    except OSError as exc:
+        log(f"FAIL Cannot read fitness log timestamps: {type(exc).__name__}")
         return False
-# Mutation_91a1a1
-    else:
-        log(f"✅ Fitness logs are current (updated {age_minutes:.1f} min ago).")
-        return True
 
-def main():
+    age_seconds = now - latest
+    age_minutes = age_seconds / 60
+    if age_seconds < -FUTURE_TOLERANCE_SECONDS:
+        log(f"FAIL Fitness log timestamp is {abs(age_minutes):.1f} min in the future; clock or sync anomaly.")
+        return False
+    if age_seconds > MAX_AGE_SECONDS:
+        log(f"FAIL Last fitness update older than 24 hours ({age_minutes:.1f} min ago).")
+        return False
+
+    log(f"PASS Fitness logs are current (updated {age_minutes:.1f} min ago).")
+    return True
+
+
+def main() -> int:
     log("---- Starting Fitness Integration Verification ----")
-    result = check_files()
-# Mutation_e2f243
-    if result:
-        log("---- Verification complete: PASS ----\n")
-    else:
-        log("---- Verification complete: ATTENTION REQUIRED ----\n")
+    passed = check_files()
+    log("---- Verification complete: PASS ----" if passed else "---- Verification complete: ATTENTION REQUIRED ----")
+    return 0 if passed else 1
+
 
 if __name__ == "__main__":
-# Mutation_f01b5c
-    main()
+    raise SystemExit(main())
