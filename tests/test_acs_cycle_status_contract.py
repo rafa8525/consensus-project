@@ -1,5 +1,7 @@
 """Isolated subprocess-result tests for ACS-02..ACS-05 status handling."""
 import tempfile
+import json
+from datetime import datetime, timedelta, timezone
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -56,6 +58,29 @@ class CycleStatusTests(unittest.TestCase):
     def test_overall_status_prefers_worst_failure(self):
         statuses = [{"status": s} for s in ("healthy", "warning", "critical", "execution_failure")]
         self.assertEqual(harness.overall_status(statuses), "execution_failure")
+
+    def test_empty_results_fail_closed(self):
+        self.assertEqual(harness.overall_status([]), "execution_failure")
+
+    def test_future_absorption_marker_is_rejected(self):
+        with tempfile.TemporaryDirectory() as d:
+            marker = Path(d) / "marker.json"
+            future = (datetime.now(timezone.utc) + timedelta(hours=2)).isoformat()
+            marker.write_text(json.dumps({"status": "ok", "last_success_utc": future}))
+            with patch.object(harness, "ABSORB_MARKER", marker):
+                result = harness.verify_absorption_marker()
+        self.assertEqual(result["status"], "critical")
+        self.assertFalse(result["ok"])
+
+    def test_current_absorption_marker_is_accepted(self):
+        with tempfile.TemporaryDirectory() as d:
+            marker = Path(d) / "marker.json"
+            current = datetime.now(timezone.utc).isoformat()
+            marker.write_text(json.dumps({"status": "ok", "last_success_utc": current}))
+            with patch.object(harness, "ABSORB_MARKER", marker):
+                result = harness.verify_absorption_marker()
+        self.assertEqual(result["status"], "healthy")
+        self.assertTrue(result["ok"])
 
 
 if __name__ == "__main__":
