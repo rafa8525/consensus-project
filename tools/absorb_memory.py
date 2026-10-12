@@ -173,6 +173,14 @@ def absorb_memory() -> int:
                 failed += 1
                 log(f"⚠️ Failed to index: {file_path} | {e}")
 
+    # Never publish a new success-shaped knowledge base if nothing was indexed.
+    # Preserve the last usable output; ACS-02 will return a failure and skip
+    # its public success marker instead of advertising an empty refresh.
+    if indexed == 0:
+        tmp.unlink(missing_ok=True)
+        log(f"❌ Absorption failed: indexed=0 skipped={skipped} failed={failed}; previous knowledge base preserved.")
+        return 1
+
     os.replace(tmp, out)
 
     log(f"✅ Absorption complete. indexed={indexed} skipped={skipped} failed={failed} bytes={written_bytes}")
