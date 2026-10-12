@@ -12,6 +12,7 @@ on:
       - "tools/fitness_tracking_verifier.py"
       - "tools/health_master.py"
       - "tools/production_readiness.py"
+      - "tools/gmail_auth_setup.py"
       - "tools/absorb_memory.py"
       - "tools/write_absorption_public_marker.py"
       - "tests/test_*.py"
@@ -50,4 +51,5 @@ jobs:
             tests.test_continuity_sms_delivery \
             tests.test_production_readiness \
             tests.test_acs01_launcher_exit \
-            tests.test_gmail_token_persistence
+            tests.test_gmail_token_persistence \
+            tests.test_gmail_auth_recovery
