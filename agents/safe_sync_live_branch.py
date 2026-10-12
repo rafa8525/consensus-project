@@ -125,11 +125,12 @@ def restore_runtime_from_stash(stash_ref: str, paths: list[str]):
             target.write_bytes(show.stdout)
             restored.append(path)
         else:
-            try:
-                target.unlink()
-                deleted.append(path)
-            except FileNotFoundError:
-                deleted.append(path)
+            # A failed git-show is NOT proof the file was deleted. It may be
+            # a corrupt/unavailable stash. Never erase live data on failure.
+            raise RuntimeError(
+                f"Cannot restore runtime file from stash: {path}; "
+                f"{show.stderr.decode(errors='replace')[-300:] if isinstance(show.stderr, bytes) else str(show.stderr)[-300:]}"
+            )
 
     return restored, deleted
 
@@ -274,7 +275,16 @@ def main() -> int:
                     return 3
         finally:
             if stash_ref:
-                restored, deleted = restore_runtime_from_stash(stash_ref, runtime_changes)
+                # Keep stash intact if restoration fails. This makes
+                # recovery possible without reconstructing runtime data.
+                try:
+                    restored, deleted = restore_runtime_from_stash(stash_ref, runtime_changes)
+                except Exception as restore_exc:
+                    result["status"] = "runtime_restore_failed"
+                    result["recovery_stash"] = stash_ref
+                    result["error"] = str(restore_exc)[:500]
+                    print(json.dumps(result))
+                    return 3
                 result["runtime_restored"] = restored
                 result["runtime_deleted"] = deleted
                 drop = run("git", "stash", "drop", stash_ref, timeout=60)
