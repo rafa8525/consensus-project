@@ -84,7 +84,7 @@ def build_report(repo: Path = REPO, environ: dict | None = None,
             "delivery_verified": False,
         },
     }
-    report["ready"] = (
+    report["preflight_passed"] = (
         report["branch"] == "v1.1-dev"
         and bool(report["local_commit"])
         and report["local_commit"] == report["remote_tracking_commit"]
@@ -98,7 +98,15 @@ def build_report(repo: Path = REPO, environ: dict | None = None,
     )
     # Explicitly distinguish static preflight from live authentication / SMS proof.
     report["scope"] = "configuration_and_recent_agent_state_only"
+    # No OAuth request or SMS is made here. Static configuration cannot
+    # establish production readiness, even when every preflight check passes.
     report["production_verified"] = False
+    report["ready"] = False
+    report["unverified_checks"] = [
+        "Gmail OAuth refresh/API request",
+        "Twilio live SMS delivery",
+        "remote branch freshness against GitHub",
+    ]
     return report
 
 
