@@ -104,7 +104,7 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
         # Accept exactly one complete guardian END marker. Multiple markers,
         # partial words (OKAY), or inconsistent process exits fail closed.
         markers = re.findall(
-            r"^END status=(OK|WARN|CRITICAL)(?=\\s|$)[^\\r\\n]*$",
+            r"^END status=(OK|WARN|CRITICAL)(?=\s|$)[^\r\n]*$",
             p.stdout,
             re.IGNORECASE | re.MULTILINE,
         )
