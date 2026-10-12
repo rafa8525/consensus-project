@@ -82,6 +82,25 @@ class CycleStatusTests(unittest.TestCase):
         self.assertEqual(result["status"], "healthy")
         self.assertTrue(result["ok"])
 
+    def test_state_write_is_atomic_and_cleans_temp_files(self):
+        with tempfile.TemporaryDirectory() as d, patch.object(harness, "STATE", Path(d)):
+            payload = harness.write_state("ACS-04", "2026-10-11T00:00:00+00:00", [{"status": "healthy"}])
+            target = Path(d) / "acs04_state.json"
+            self.assertEqual(json.loads(target.read_text())["status"], "healthy")
+            self.assertEqual(payload["status"], "healthy")
+            self.assertEqual(list(Path(d).glob("*.tmp")), [])
+
+    def test_failed_state_replace_preserves_prior_evidence(self):
+        with tempfile.TemporaryDirectory() as d, patch.object(harness, "STATE", Path(d)):
+            target = Path(d) / "acs04_state.json"
+            target.write_text('{"status":"previous"}')
+            with patch.object(harness.os, "replace", side_effect=OSError("simulated disk failure")):
+                with self.assertRaises(OSError):
+                    harness.write_state("ACS-04", "2026-10-11T00:00:00+00:00", [{"status": "healthy"}])
+            self.assertEqual(json.loads(target.read_text())["status"], "previous")
+            self.assertEqual(list(Path(d).glob("*.tmp")), [])
+
+
 
 if __name__ == "__main__":
     unittest.main()
