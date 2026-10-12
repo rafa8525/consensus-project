@@ -859,7 +859,7 @@ class InfrastructureGuardian:
             )
             try:
                 notification_tmp.write_text(
-                    json.dumps(payload, indent=2) + "\\n", encoding="utf-8"
+                    json.dumps(payload, indent=2) + "\n", encoding="utf-8"
                 )
                 os.replace(notification_tmp, self.status_path)
             finally:
