@@ -1,0 +1,46 @@
+# AI Consensus System — Update Schedule and Verification
+
+Last reviewed: 2026-10-11
+Scope: existing v1.1-dev repository. This is an operational checklist, not proof that an external scheduler is enabled.
+
+## Existing execution paths
+
+1. ACS supervisor: agents/run_acs01_supervisor.sh
+   - Intended to be invoked by the existing PythonAnywhere scheduled task.
+   - Supervisor invokes ACS-02, ACS-03, ACS-04, and ACS-05 and refreshes the health bridge.
+   - Do NOT install a second periodic supervisor task unless the original is confirmed disabled.
+2. Legacy scheduler: consensus/scheduler.py
+   - Defines schedule.every().day.at("10:00") and runs legacy main, digest generation, and email sending.
+   - Runs only if start_scheduler() is launched and kept alive.
+   - Local-time scheduling depends on its host timezone.
+   - It is not the authoritative ACS-01 supervisor scheduler and is not SMS delivery.
+3. Security audit: security_audit_schedule.txt
+   - Monthly review on the first Monday; separate scheduler activation is unverified.
+
+## Monthly / weekly operator verification (do not invent completion)
+
+- Confirm PythonAnywhere's existing scheduled-task definition, timezone, last run, exit code and next run.
+- Confirm that exactly one authoritative ACS-01 invocation is configured per desired cycle.
+- Inspect memory/agents/state.json for a newly written supervisor state and individual ACS-02..ACS-05 evidence.
+- Check logs/system/pythonanywhere_health.json freshness and confirm the bridge was published after the cycle.
+- Confirm failures cause a nonzero task exit and visible alert or escalation.
+- Verify that the legacy email digest does not unexpectedly run alongside the SMS routine.
+- Record last verified execution UTC timestamp and failing components; never mark an unobserved task healthy.
+- Review security audit cadence separately and check missed October audit before November 2.
+
+## Open items requiring live access
+
+- External PythonAnywhere scheduler enabled/disabled status: UNVERIFIED
+- Supervisor actual cadence and timezone: UNVERIFIED
+- End-to-end SMS delivery and quiet hours: UNVERIFIED
+- Last successful unattended cycle: UNVERIFIED
+
+## Acceptance test
+
+1. Run the existing supervisor once in a controlled test environment.
+2. Confirm fresh per-agent state and bridge timestamps.
+3. Inject a child-cycle failure in the sandbox; ensure the overall status becomes degraded and the scheduler exit code is nonzero.
+4. Verify one (not two) configured scheduled invocations and correct timezone on the real host.
+5. Verify an alert is generated on stale/missed execution.
+
+No automated task is created by this document.
