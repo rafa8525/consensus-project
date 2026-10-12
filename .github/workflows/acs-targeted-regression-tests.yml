@@ -6,6 +6,7 @@ on:
     paths:
       - "agents/supervisor.py"
       - "agents/run_acs_cycle.py"
+      - "agents/continuity_guardian_agent.py"
       - "agents/infrastructure_guardian.py"
       - "tools/fitness_tracking_verifier.py"
       - "tools/health_master.py"
@@ -42,4 +43,5 @@ jobs:
             tests.test_acs_cycle_status_contract \
             tests.test_absorption_marker \
             tests.test_absorb_memory_empty \
-            tests.test_health_master_pipeline
+            tests.test_health_master_pipeline \
+            tests.test_continuity_sms_delivery
