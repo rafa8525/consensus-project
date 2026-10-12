@@ -266,6 +266,15 @@ class Supervisor(Agent):
 
 def main() -> int:
     result = Supervisor({}).safe_run()
+    # safe_run() only confirms the Python call did not raise. It does NOT
+    # mean the supervisor completed a healthy ACS-01..ACS-05 cycle.
+    cycle = result.get("result") if isinstance(result, dict) else None
+    supervisor_healthy = (
+        isinstance(result, dict)
+        and result.get("ok") is True
+        and isinstance(cycle, dict)
+        and cycle.get("status") == "ok"
+    )
 
     # Publish a fresh health snapshot immediately after every scheduled
     # supervisor cycle. This ensures the bridge reflects the ACS states that
@@ -323,7 +332,7 @@ def main() -> int:
     }
     print(output)
 
-    return 0 if result.get("ok") and bridge.get("ok") else 1
+    return 0 if supervisor_healthy and bridge.get("ok") is True else 1
 
 
 if __name__ == "__main__":
