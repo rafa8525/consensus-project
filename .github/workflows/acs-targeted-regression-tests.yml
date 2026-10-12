@@ -41,6 +41,7 @@ jobs:
           python -m unittest -v \
             tests.test_fitness_tracking_verifier \
             tests.test_guardian_log_rotation \
+            tests.test_infrastructure_notifications \
             tests.test_supervisor_exit_status \
             tests.test_acs_cycle_status_contract \
             tests.test_absorption_marker \
