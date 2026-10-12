@@ -1,0 +1,45 @@
+name: ACS Targeted Regression Tests
+
+on:
+  push:
+    branches: [v1.1-dev]
+    paths:
+      - "agents/supervisor.py"
+      - "agents/run_acs_cycle.py"
+      - "agents/infrastructure_guardian.py"
+      - "tools/fitness_tracking_verifier.py"
+      - "tools/health_master.py"
+      - "tools/absorb_memory.py"
+      - "tools/write_absorption_public_marker.py"
+      - "tests/test_*.py"
+      - ".github/workflows/acs-targeted-regression-tests.yml"
+  pull_request:
+    branches: [v1.1-dev]
+
+permissions:
+  contents: read
+
+jobs:
+  targeted-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run targeted regression suite
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONPATH: "."
+        run: |
+          python -m unittest -v \
+            tests.test_fitness_tracking_verifier \
+            tests.test_guardian_log_rotation \
+            tests.test_supervisor_exit_status \
+            tests.test_acs_cycle_status_contract \
+            tests.test_absorption_marker \
+            tests.test_absorb_memory_empty \
+            tests.test_health_master_pipeline
