@@ -5,7 +5,8 @@ Uses mocks only: no agent, Git, network, or PythonAnywhere process is run.
 import contextlib
 import io
 import unittest
-from unittest.mock import patch, SimpleNamespace
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from agents import supervisor
 
