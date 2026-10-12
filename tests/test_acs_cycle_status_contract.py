@@ -12,7 +12,7 @@ from agents import run_acs_cycle as harness
 
 class CycleStatusTests(unittest.TestCase):
     def check_continuity(self, exit_code, marker, expected):
-        out = f"START continuity_guardian\\nEND status={marker}\\n" if marker else "START continuity_guardian\\n"
+        out = f"START continuity_guardian\nEND status={marker}\n" if marker else "START continuity_guardian\n"
         proc = SimpleNamespace(returncode=exit_code, stdout=out, stderr="")
         with patch.object(harness.subprocess, "run", return_value=proc):
             status = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
@@ -100,6 +100,22 @@ class CycleStatusTests(unittest.TestCase):
             self.assertEqual(json.loads(target.read_text())["status"], "previous")
             self.assertEqual(list(Path(d).glob("*.tmp")), [])
 
+
+
+    def test_duplicate_guardian_end_markers_fail_closed(self):
+        proc = SimpleNamespace(returncode=0, stdout="END status=CRITICAL\\nEND status=OK\\n", stderr="")
+        with patch.object(harness.subprocess, "run", return_value=proc):
+            result = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
+        self.assertEqual(result["status"], "execution_failure")
+
+    def test_partial_guardian_end_marker_fails_closed(self):
+        proc = SimpleNamespace(returncode=0, stdout="END status=OKAY\\n", stderr="")
+        with patch.object(harness.subprocess, "run", return_value=proc):
+            result = harness.run_process("continuity_guardian", Path("/mock/guardian.py"))
+        self.assertEqual(result["status"], "execution_failure")
+
+    def test_unknown_cycle_status_is_execution_failure(self):
+        self.assertEqual(harness.overall_status([{"status": "healthy"}, {"status": "unrecognized"}]), "execution_failure")
 
 
 if __name__ == "__main__":
