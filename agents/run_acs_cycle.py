@@ -104,17 +104,21 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
             p.stdout,
             re.IGNORECASE,
         )
-        if match:
-            raw = match.group(1).upper()
-            status = {
-                "OK": "healthy",
-                "WARN": "warning",
-                "CRITICAL": "critical",
-            }[raw]
-        elif p.returncode != 0:
+        # A printed status is not proof of successful execution. Treat a
+        # nonzero exit as a failure, except the documented code 2 for a
+        # critical continuity finding. A contradiction must fail closed.
+        if p.returncode not in (0, 2):
+            status = "execution_failure"
+        elif not match:
             status = "execution_failure"
         else:
-            status = "execution_failure"
+            raw = match.group(1).upper()
+            if p.returncode == 2:
+                status = "critical" if raw == "CRITICAL" else "execution_failure"
+            elif raw == "CRITICAL":
+                status = "execution_failure"
+            else:
+                status = {"OK": "healthy", "WARN": "warning"}[raw]
 
     else:
         status = "healthy" if p.returncode == 0 else "execution_failure"
