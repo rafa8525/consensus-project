@@ -116,6 +116,28 @@ def safe_json(path: Path) -> dict | None:
         return None
 
 
+def persist_refreshed_token(path: Path, value: str) -> None:
+    """Atomically replace an OAuth token without exposing partial credentials."""
+    import tempfile
+
+    fd, name = tempfile.mkstemp(prefix=".gmail-token-", suffix=".tmp", dir=str(path.parent))
+    try:
+        os.fchmod(fd, 0o600)
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            fd = -1
+            handle.write(value)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(name, path)
+    finally:
+        if fd >= 0:
+            os.close(fd)
+        try:
+            os.unlink(name)
+        except FileNotFoundError:
+            pass
+
+
 def check_google_oauth() -> Tuple[object | None, object | None]:
     creds_data = None
     token_creds = None
@@ -158,8 +180,7 @@ def check_google_oauth() -> Tuple[object | None, object | None]:
         if token_creds.expired and token_creds.refresh_token:
             token_creds.refresh(Request())
             # Persist refreshed token so other agents benefit.
-            GMAIL_TOKEN.write_text(token_creds.to_json(), encoding="utf-8")
-            os.chmod(GMAIL_TOKEN, 0o600)
+            persist_refreshed_token(GMAIL_TOKEN, token_creds.to_json())
             INFO.append("Gmail OAuth token refreshed successfully")
 
         service = build("gmail", "v1", credentials=token_creds, cache_discovery=False)
