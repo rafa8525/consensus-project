@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 27.9,
+    "age_seconds": 46833.5,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 27.9,
+      "age_seconds": 46833.5,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 85.3,
+      "age_seconds": 46890.9,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-12T18:00:59.360555+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 73.5,
+      "age_seconds": 46879.1,
       "agent": "ACS-03",
       "diagnostics": {
         "diagnostics_status": "unavailable"
@@ -47,7 +47,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 9.1,
+      "age_seconds": 46814.7,
       "agent": "ACS-04",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-12T18:02:15.612493+00:00",
@@ -57,15 +57,15 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 0.1,
+      "age_seconds": 46805.7,
       "agent": "ACS-05",
       "diagnostics": {
-        "critical_count": 1,
+        "critical_count": 10,
         "issue_codes": [
-          "GOOGLE_OAUTH_INVALID_GRANT"
+          "GOOGLE_OAUTH_OR_GMAIL_FAILURE"
         ],
         "last_status": "CRITICAL",
-        "warning_count": 1
+        "warning_count": 10
       },
       "health_status": "critical",
       "last_execution_utc": "2026-10-12T18:02:24.613782+00:00",
@@ -86,7 +86,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-12T18:00:59.021079+00:00",
+      "mtime_utc": "2026-10-13T06:01:31.301476+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -105,7 +105,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-12T18:02:24.690448+00:00",
+  "generated_at_utc": "2026-10-13T07:02:30.251660+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -117,7 +117,7 @@
     "status": {
       "ok": true,
       "returncode": 0,
-      "tracked_changes_count": 21
+      "tracked_changes_count": 33
     },
     "unresolved_merge_conflict": false
   },
@@ -144,38 +144,17 @@
   "schema_version": 6,
   "self_heal": {
     "branch_sync": {
-      "ahead_after": 0,
       "ahead_before": 0,
-      "behind_after": 0,
       "behind_before": 0,
       "branch": "v1.1-dev",
-      "head": "e65f76502",
-      "ok": true,
+      "ok": false,
       "remote": "origin/v1.1-dev",
-      "remote_head": "e65f76502",
-      "returncode": 0,
-      "status": "already_synced"
+      "returncode": 2,
+      "status": "blocked_local_source_changes"
     },
     "post_sync_cycles": {
-      "attempted": true,
-      "outcomes": {
-        "ACS-04": [
-          {
-            "ok": true,
-            "returncode": 0
-          }
-        ],
-        "ACS-05": [
-          {
-            "ok": false,
-            "returncode": 2
-          },
-          {
-            "ok": false,
-            "returncode": 2
-          }
-        ]
-      }
+      "attempted": false,
+      "outcomes": {}
     }
   },
   "source": "pythonanywhere"
