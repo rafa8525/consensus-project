@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 4.6,
+    "age_seconds": 46795.3,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 4.6,
+      "age_seconds": 46795.3,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 83.3,
+      "age_seconds": 46874.0,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-13T18:01:24.940926+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 75.5,
+      "age_seconds": 46866.2,
       "agent": "ACS-03",
       "diagnostics": {
         "diagnostics_status": "unavailable"
@@ -47,7 +47,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 11.3,
+      "age_seconds": 46802.1,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -67,15 +67,15 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 4.6,
+      "age_seconds": 46795.3,
       "agent": "ACS-05",
       "diagnostics": {
-        "critical_count": 1,
+        "critical_count": 10,
         "issue_codes": [
-          "GOOGLE_OAUTH_INVALID_GRANT"
+          "GOOGLE_OAUTH_OR_GMAIL_FAILURE"
         ],
         "last_status": "CRITICAL",
-        "warning_count": 1
+        "warning_count": 10
       },
       "health_status": "critical",
       "last_execution_utc": "2026-10-13T18:02:43.593987+00:00",
@@ -89,14 +89,14 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-12T07:02:36.050795+00:00",
+      "mtime_utc": "2026-10-13T21:38:31.335276+00:00",
       "path": "agents",
       "size": 4096
     },
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-13T18:01:24.715014+00:00",
+      "mtime_utc": "2026-10-14T06:01:15.628240+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -115,7 +115,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-13T18:02:48.184440+00:00",
+  "generated_at_utc": "2026-10-14T07:02:38.910874+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -127,7 +127,7 @@
     "status": {
       "ok": true,
       "returncode": 0,
-      "tracked_changes_count": 33
+      "tracked_changes_count": 36
     },
     "unresolved_merge_conflict": false
   },
