@@ -367,11 +367,26 @@ class InfrastructureGuardian:
             failed: list[str] = []
             for row in oversized:
                 path = Path(row["path"])
+                # Never rotate or delete version-controlled evidence. Such
+                # paths must be untracked through a separately reviewed Git
+                # migration before automatic retention can manage them.
+                try:
+                    rel = path.resolve().relative_to(self.config.repo_root.resolve())
+                except ValueError:
+                    rel = None
+                if rel is not None:
+                    probe = self.git("ls-files", "--error-unmatch", "--", str(rel))
+                    if probe.returncode == 0:
+                        failed.append("tracked_log_requires_review")
+                        continue
+                    if probe.returncode not in (1,):
+                        failed.append("git_tracking_check_failed")
+                        continue
                 try:
                     self.rotate_file(path)
                     rotated += 1
-                except OSError as exc:
-                    failed.append(f"{path}: {exc}")
+                except OSError:
+                    failed.append("log_rotation_failed")
             finding.repaired = rotated > 0 and not failed
             finding.repair_message = (
                 f"Rotated {rotated} files."
