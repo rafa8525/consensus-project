@@ -211,16 +211,20 @@ def check_google_oauth() -> Tuple[object | None, object | None]:
                     + headers.get("subject", "(no subject)")[:180]
                 )
     except Exception as exc:
-        text = f"{type(exc).__name__}: {exc}"
-        low = text.lower()
+        # Inspect the error in memory, but never persist raw exception text:
+        # provider exceptions can contain sensitive request/response details.
+        low = str(exc).lower()
         if "deleted_client" in low or "oauth client was deleted" in low:
-            CRITICAL.append("Google OAuth client has been deleted; create/restore Desktop OAuth client")
+            CRITICAL.append("Google OAuth client deleted; private reauthorization required")
         elif "invalid_client" in low:
-            CRITICAL.append(f"Google OAuth client invalid: {text}")
+            CRITICAL.append("Google OAuth client invalid; inspect credentials privately")
         elif "invalid_grant" in low:
-            CRITICAL.append(f"Google OAuth grant/token invalid or revoked: {text}")
+            CRITICAL.append("Google OAuth invalid_grant; private reauthorization required")
         else:
-            CRITICAL.append(f"Gmail OAuth/API health check failed: {text}")
+            CRITICAL.append(
+                f"Gmail OAuth/API health check failed ({type(exc).__name__}); "
+                "inspect private diagnostics"
+            )
 
     return creds_data, token_creds
 
