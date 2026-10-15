@@ -1,0 +1,25 @@
+name: ACS-04 Safe Rotation Regression
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - "agents/infrastructure_guardian.py"
+      - "tests/test_acs04_safe_rotation.py"
+      - ".github/workflows/acs04-safe-rotation-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run ACS-04 safety regression
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONPATH: "."
+        run: python -m unittest -v tests.test_acs04_safe_rotation
