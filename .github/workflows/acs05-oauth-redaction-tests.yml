@@ -1,0 +1,25 @@
+name: ACS-05 OAuth Redaction Regression
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - "agents/continuity_guardian_agent.py"
+      - "tests/test_acs05_oauth_redaction.py"
+      - ".github/workflows/acs05-oauth-redaction-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  redact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate redaction behavior
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONPATH: "."
+        run: python -m unittest -v tests.test_acs05_oauth_redaction
