@@ -1,0 +1,25 @@
+name: Legacy Fitness Ingestion Safety Tests
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - "tools/fitness_ingest.py"
+      - "tests/test_legacy_fitness_ingest.py"
+      - ".github/workflows/acs03-ingestion-safety-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test fabricated data is blocked
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONPATH: "."
+        run: python -m unittest -v tests.test_legacy_fitness_ingest
