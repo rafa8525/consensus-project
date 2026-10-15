@@ -1,0 +1,28 @@
+name: ACS-03 Fitness Source Regression Tests
+
+on:
+  pull_request:
+    branches: [v1.1-dev]
+    paths:
+      - "tools/fitness_tracking_verifier.py"
+      - "tests/test_fitness_tracking_verifier.py"
+      - ".github/workflows/acs03-fitness-source-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fitness-source-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run isolated fitness verifier tests
+        env:
+          PYTHONPATH: "."
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m unittest -v tests.test_fitness_tracking_verifier
