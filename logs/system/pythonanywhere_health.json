@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 7.7,
+    "age_seconds": 46795.7,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 7.7,
+      "age_seconds": 46795.7,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 78.4,
+      "age_seconds": 46866.4,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-14T18:01:32.077949+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 71.6,
+      "age_seconds": 46859.6,
       "agent": "ACS-03",
       "diagnostics": {
         "diagnostics_status": "unavailable"
@@ -47,7 +47,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 14.5,
+      "age_seconds": 46802.5,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -67,16 +67,15 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 7.7,
+      "age_seconds": 46795.7,
       "agent": "ACS-05",
       "diagnostics": {
-        "critical_count": 2,
+        "critical_count": 10,
         "issue_codes": [
-          "GOOGLE_OAUTH_INVALID_GRANT",
-          "CONTINUITY_CRITICAL"
+          "GOOGLE_OAUTH_OR_GMAIL_FAILURE"
         ],
         "last_status": "CRITICAL",
-        "warning_count": 1
+        "warning_count": 10
       },
       "health_status": "critical",
       "last_execution_utc": "2026-10-14T18:02:42.782454+00:00",
@@ -97,7 +96,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-14T18:01:31.964841+00:00",
+      "mtime_utc": "2026-10-15T06:01:17.497660+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -116,7 +115,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-14T18:02:50.491226+00:00",
+  "generated_at_utc": "2026-10-15T07:02:38.473043+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -128,7 +127,7 @@
     "status": {
       "ok": true,
       "returncode": 0,
-      "tracked_changes_count": 36
+      "tracked_changes_count": 37
     },
     "unresolved_merge_conflict": false
   },
