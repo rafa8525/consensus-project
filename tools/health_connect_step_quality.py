@@ -1,5 +1,6 @@
 """Conservative analysis of actual step rows. No daily total until unambiguous."""
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 
 def assess(rows, floor_ms, ceiling_ms):
     previous_end=None
@@ -27,7 +28,8 @@ def assess(rows, floor_ms, ceiling_ms):
 
 def assess_db(db, now=None):
     now=now or datetime.now(timezone.utc)
-    start=datetime(now.year,now.month,now.day,tzinfo=timezone.utc)
+    local_now=now.astimezone(ZoneInfo('America/Los_Angeles'))
+    start=datetime(local_now.year,local_now.month,local_now.day,tzinfo=ZoneInfo('America/Los_Angeles'))
     floor=int(start.timestamp()*1000)
     ceiling=int(now.timestamp()*1000)+300000
     apps=db.execute(
@@ -47,4 +49,7 @@ def assess_db(db, now=None):
     quality=assess(rows,floor,ceiling)
     quality["status"]="SAFE_SOURCE_ONLY" if quality["safe"] else "BLOCKED_QUALITY"
     quality["sources"]=len(apps)
+    quality["local_date"]=local_now.date().isoformat()
+    quality["source_package"]=choices[0]
+    quality["latest_end_ms"]=max((row[3] for row in rows), default=None)
     return quality
