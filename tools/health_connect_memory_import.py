@@ -123,6 +123,13 @@ def import_candidate():
             if len(set(orders))!=1: raise CloudImportError("Mixed timestamp magnitudes")
             from health_connect_step_quality import assess_db
             quality=assess_db(db)
+            from health_connect_rejection_reasons import reasons
+            if quality.get("status")=="BLOCKED_QUALITY":
+                now_utc=datetime.now(timezone.utc)
+                day_start=int(datetime(now_utc.year,now_utc.month,now_utc.day,tzinfo=timezone.utc).timestamp()*1000)
+                day_end=int(now_utc.timestamp()*1000)+300000
+                sample_rows=db.execute("SELECT s.uuid,s.start_time,s.end_time,s.count FROM steps_record_table s JOIN application_info_table a ON a.row_id=s.app_info_id WHERE LOWER(a.package_name) LIKE ? AND s.start_time>=? AND s.end_time<=? ORDER BY s.start_time,s.end_time,s.uuid",("%fitbit%",day_start,day_end)).fetchall()
+                quality["rejections"]=reasons(sample_rows,day_start,day_end)
             result={"records":sum(r[2] for r in metadata),"sources":len(metadata),
                     "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred,"quality":quality}
             return result
@@ -144,6 +151,8 @@ def main():
     print("FITBIT_OVERLAPS_TODAY="+str(q.get("overlap","unknown")))
     print("FITBIT_INVALID_TODAY="+str(q.get("invalid","unknown")))
     print("STEP_QUALITY="+q["status"])
+    for key,value in sorted(q.get("rejections",{}).items()):
+        print("QUALITY_"+key.upper()+"="+str(value))
     print("PRODUCTION_INGEST=DISABLED")
     return 0
 
