@@ -158,7 +158,8 @@ def import_candidate():
                 last_end=last if last_end is None else max(last_end,last)
             # Counts only. Do not print private step totals or record times.
             result={"records":sum(r[2] for r in metadata),"sources":len(metadata),
-                    "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred,\n                    "fitbit_records_today":len(selected),"overlaps_today":overlaps,\n                    "invalid_today":invalid,"safe_to_sum":bool(selected) and overlaps==0 and invalid==0}
+                    "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred,
+                    "fitbit_records_today":len(selected),"overlaps_today":overlaps,\n                    "invalid_today":invalid,"safe_to_sum":bool(selected) and overlaps==0 and invalid==0}
             return result
         finally:
             db.close()
