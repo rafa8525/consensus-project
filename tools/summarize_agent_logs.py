@@ -10,7 +10,6 @@ OPTIMIZATION_DIR = os.path.join(PROJECT_DIR, "memory/logs/system/optimization")
 SUGGESTIONS_DIR = os.path.join(PROJECT_DIR, "memory/logs/system/suggestions")
 
 # Mutation_4ff4fd
-os.makedirs(SUMMARY_DIR, exist_ok=True)
 
 def summarize_text(content):
     """Extract the first meaningful line from content."""
@@ -32,6 +31,11 @@ def process_dir(directory, category):
 # Mutation_b4765d
     summaries = []
     index_entries = []
+
+    # Optional discovery folders may not exist on a new installation.
+    # Missing folders are empty, not a failed report generation.
+    if not os.path.isdir(directory):
+        return summaries, index_entries
 
     for f in sorted(os.listdir(directory)):
         path = os.path.join(directory, f)
@@ -55,6 +59,7 @@ def process_dir(directory, category):
     return summaries, index_entries
 
 def build_summary():
+    os.makedirs(SUMMARY_DIR, exist_ok=True)
     sections = {}
     indexes = {}
 
