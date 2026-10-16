@@ -121,8 +121,10 @@ def import_candidate():
             if not sample or not all(isinstance(v,int) for v in sample): raise CloudImportError("Missing timestamp samples")
             orders=[len(str(abs(v))) for v in sample]
             if len(set(orders))!=1: raise CloudImportError("Mixed timestamp magnitudes")
+            from health_connect_step_quality import assess_db
+            quality=assess_db(db)
             result={"records":sum(r[2] for r in metadata),"sources":len(metadata),
-                    "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred}
+                    "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred,"quality":quality}
             return result
         finally:
             db.close()
@@ -137,6 +139,11 @@ def main():
     print("SOURCES="+str(data["sources"]))
     print("TIMESTAMP_DIGITS="+str(data["timestamp_digits"]))
     print("NETWORK_MIB="+str(round(data["bytes_transferred"]/1048576,1)))
+    q=data["quality"]
+    print("FITBIT_RECORDS_TODAY="+str(q.get("records","unknown")))
+    print("FITBIT_OVERLAPS_TODAY="+str(q.get("overlap","unknown")))
+    print("FITBIT_INVALID_TODAY="+str(q.get("invalid","unknown")))
+    print("STEP_QUALITY="+q["status"])
     print("PRODUCTION_INGEST=DISABLED")
     return 0
 
