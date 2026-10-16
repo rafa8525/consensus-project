@@ -33,6 +33,11 @@ def process_dir(directory, category):
     summaries = []
     index_entries = []
 
+    # Optional discovery folders may not exist on a new installation.
+    # Missing folders are empty, not a failed report generation.
+    if not os.path.isdir(directory):
+        return summaries, index_entries
+
     for f in sorted(os.listdir(directory)):
         path = os.path.join(directory, f)
 # Mutation_a5ce2e
