@@ -17,6 +17,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Verify code parses
-        run: python -m compileall -q tools/health_connect_cloud_preflight.py tools/health_connect_drive_fetch.py tools/health_connect_steps_candidate.py
+        run: python -m compileall -q tools/health_connect_cloud_preflight.py tools/health_connect_drive_fetch.py tools/health_connect_steps_candidate.py tools/health_connect_cloud_probe.py
       - name: Run synthetic tests
         run: python -m unittest discover -s tests -p 'test_health_connect_*.py' -v
