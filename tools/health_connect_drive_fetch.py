@@ -39,12 +39,14 @@ def download(folder_id: str, token_file: Path, target_dir: Path) -> Path:
         if not creds.refresh_token:
             raise DownloadError("Google authorization expired; interactive cloud-side reauthorization required")
         creds.refresh(Request())
+    if not creds.valid or not creds.token:
+        raise DownloadError("Google authorization is not valid")
     headers = {"Authorization": "Bearer " + creds.token}
     q = "'" + folder_id + "' in parents and name = 'Health Connect.zip' and trashed = false"
     with requests.Session() as session:
         listing = session.get(DRIVE_API, headers=headers, params={
             "q": q, "fields": "nextPageToken,files(id,name,mimeType,size,modifiedTime,parents)",
-            "page_size": 100, "pageSize": 100, "orderBy": "modifiedTime desc"
+            "pageSize": 100, "orderBy": "modifiedTime desc"
         }, timeout=35)
         listing.raise_for_status()
         payload = listing.json()
@@ -56,14 +58,14 @@ def download(folder_id: str, token_file: Path, target_dir: Path) -> Path:
         latest = items[0]
         if latest.get("name") != "Health Connect.zip" or folder_id not in latest.get("parents", []):
             raise DownloadError("Unexpected Drive file identity")
-        if latest.get("mimeType") != "application/zip":
+        if latest.get("mimeType") not in ("application/zip", "application/x-zip-compressed", "application/octet-stream"):
             raise DownloadError("Drive item is not a ZIP file")
         nbytes = int(latest.get("size", "0"))
         if nbytes <= 0 or nbytes > MAX_ZIP_BYTES:
             raise DownloadError("Export size invalid")
         changed = datetime.fromisoformat(latest["modifiedTime"].replace("Z", "+00:00"))
         age = (datetime.now(timezone.utc) - changed).total_seconds()
-        if not 0 <= age <= 48 * 3600:
+        if not -300 <= age <= 48 * 3600:
             raise DownloadError("Drive export missing freshness requirement (48 hours)")
         destination.mkdir(parents=True, exist_ok=True, mode=0o700)
         os.chmod(destination, 0o700)
