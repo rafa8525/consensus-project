@@ -10,7 +10,6 @@ OPTIMIZATION_DIR = os.path.join(PROJECT_DIR, "memory/logs/system/optimization")
 SUGGESTIONS_DIR = os.path.join(PROJECT_DIR, "memory/logs/system/suggestions")
 
 # Mutation_4ff4fd
-os.makedirs(SUMMARY_DIR, exist_ok=True)
 
 def summarize_text(content):
     """Extract the first meaningful line from content."""
@@ -60,6 +59,7 @@ def process_dir(directory, category):
     return summaries, index_entries
 
 def build_summary():
+    os.makedirs(SUMMARY_DIR, exist_ok=True)
     sections = {}
     indexes = {}
 
