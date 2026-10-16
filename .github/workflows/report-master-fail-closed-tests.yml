@@ -4,6 +4,8 @@ on:
     branches: [v1.1-dev]
     paths:
       - "tools/report_master.py"
+      - "tools/summarize_agent_logs.py"
+      - "tests/test_summarize_agent_logs_optional_paths.py"
       - "tests/test_report_master_fail_closed.py"
       - ".github/workflows/report-master-fail-closed-tests.yml"
   workflow_dispatch:
@@ -21,4 +23,4 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: "."
-        run: python -m unittest -v tests.test_report_master_fail_closed
+        run: python -m unittest -v tests.test_report_master_fail_closed tests.test_summarize_agent_logs_optional_paths
