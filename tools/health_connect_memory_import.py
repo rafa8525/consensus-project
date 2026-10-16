@@ -121,8 +121,44 @@ def import_candidate():
             if not sample or not all(isinstance(v,int) for v in sample): raise CloudImportError("Missing timestamp samples")
             orders=[len(str(abs(v))) for v in sample]
             if len(set(orders))!=1: raise CloudImportError("Mixed timestamp magnitudes")
+            # Check the authoritative Fitbit candidate before permitting any output.
+            # Database source package is verified; it does not authenticate a physical watch.
+            packages=db.execute(
+                "SELECT a.package_name,COUNT(*) FROM steps_record_table s "
+                "JOIN application_info_table a ON a.row_id=s.app_info_id "
+                "GROUP BY a.package_name ORDER BY COUNT(*) DESC"
+            ).fetchall()
+            fitbit_candidates=[p for p,n in packages if p and "fitbit" in p.lower()]
+            if len(fitbit_candidates)!=1:
+                raise CloudImportError("Ambiguous Fitbit application package")
+            package=fitbit_candidates[0]
+            now=datetime.now(timezone.utc)
+            day=now.date().isoformat()
+            utc_begin=int(datetime(now.year,now.month,now.day,tzinfo=timezone.utc).timestamp()*1000)
+            upper=int(now.timestamp()*1000)+300000
+            selected=db.execute(
+                "SELECT s.uuid,s.start_time,s.end_time,s.count FROM steps_record_table s "
+                "JOIN application_info_table a ON s.app_info_id=a.row_id "
+                "WHERE a.package_name=? AND s.start_time>=? AND s.end_time<=? "
+                "ORDER BY s.start_time,s.end_time,s.uuid",
+                (package,utc_begin,upper)
+            ).fetchall()
+            clean=0; overlaps=0; invalid=0; last_end=None; seen=set()
+            for uuid,first,last,count in selected:
+                if (not isinstance(uuid,str) or not uuid or uuid in seen or
+                    not all(isinstance(x,int) for x in (first,last,count)) or
+                    first>=last or first<utc_begin or last>upper or count<0 or count>100000):
+                    invalid+=1
+                    continue
+                seen.add(uuid)
+                if last_end is not None and first<last_end:
+                    overlaps+=1
+                else:
+                    clean+=1
+                last_end=last if last_end is None else max(last_end,last)
+            # Counts only. Do not print private step totals or record times.
             result={"records":sum(r[2] for r in metadata),"sources":len(metadata),
-                    "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred}
+                    "timestamp_digits":orders[0],"bytes_transferred":rf.bytes_transferred,\n                    "fitbit_records_today":len(selected),"overlaps_today":overlaps,\n                    "invalid_today":invalid,"safe_to_sum":bool(selected) and overlaps==0 and invalid==0}
             return result
         finally:
             db.close()
@@ -136,7 +172,7 @@ def main():
     print("RECORDS="+str(data["records"]))
     print("SOURCES="+str(data["sources"]))
     print("TIMESTAMP_DIGITS="+str(data["timestamp_digits"]))
-    print("NETWORK_MIB="+str(round(data["bytes_transferred"]/1048576,1)))
+    print("NETWORK_MIB="+str(round(data["bytes_transferred"]/1048576,1)))\n    print("FITBIT_RECORDS_TODAY="+str(data["fitbit_records_today"]))\n    print("FITBIT_OVERLAPS_TODAY="+str(data["overlaps_today"]))\n    print("FITBIT_INVALID_TODAY="+str(data["invalid_today"]))\n    print("SAFE_TO_SUM="+str(data["safe_to_sum"]))
     print("PRODUCTION_INGEST=DISABLED")
     return 0
 
