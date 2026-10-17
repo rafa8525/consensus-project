@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 10.9,
+    "age_seconds": 46785.9,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 10.9,
+      "age_seconds": 46785.9,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 86.6,
+      "age_seconds": 46861.7,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-16T18:01:42.806297+00:00",
@@ -34,20 +34,17 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 79.6,
+      "age_seconds": 27676.1,
       "agent": "ACS-03",
-      "diagnostics": {
-        "diagnostics_status": "unavailable"
-      },
-      "health_status": "execution_failure",
-      "last_execution_utc": "2026-10-16T18:01:49.820994+00:00",
+      "health_status": "healthy",
+      "last_execution_utc": "2026-10-16T23:21:28.387017+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
-      "status": "degraded",
+      "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 17.8,
+      "age_seconds": 46792.8,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -67,16 +64,15 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 10.9,
+      "age_seconds": 46786.0,
       "agent": "ACS-05",
       "diagnostics": {
-        "critical_count": 2,
+        "critical_count": 10,
         "issue_codes": [
-          "GOOGLE_OAUTH_INVALID_GRANT",
-          "CONTINUITY_CRITICAL"
+          "GOOGLE_OAUTH_OR_GMAIL_FAILURE"
         ],
         "last_status": "CRITICAL",
-        "warning_count": 1
+        "warning_count": 10
       },
       "health_status": "critical",
       "last_execution_utc": "2026-10-16T18:02:58.499715+00:00",
@@ -97,7 +93,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-16T18:01:42.265162+00:00",
+      "mtime_utc": "2026-10-17T06:01:18.042315+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -116,7 +112,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-16T18:03:09.426867+00:00",
+  "generated_at_utc": "2026-10-17T07:02:44.440025+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -128,7 +124,7 @@
     "status": {
       "ok": true,
       "returncode": 0,
-      "tracked_changes_count": 40
+      "tracked_changes_count": 44
     },
     "unresolved_merge_conflict": false
   },
