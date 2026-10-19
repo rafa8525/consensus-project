@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 11.1,
+    "age_seconds": 46780.6,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 11.1,
+      "age_seconds": 46780.6,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 94.4,
+      "age_seconds": 46864.0,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-18T18:01:41.401350+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 71.8,
+      "age_seconds": 46841.4,
       "agent": "ACS-03",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-18T18:02:04.008580+00:00",
@@ -44,7 +44,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 13.0,
+      "age_seconds": 46782.6,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -64,7 +64,7 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 11.1,
+      "age_seconds": 46780.7,
       "agent": "ACS-05",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-18T18:03:04.704876+00:00",
@@ -85,7 +85,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-18T18:01:40.467649+00:00",
+      "mtime_utc": "2026-10-19T06:01:20.155489+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -104,7 +104,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-18T18:03:15.822505+00:00",
+  "generated_at_utc": "2026-10-19T07:02:45.350913+00:00",
   "git": {
     "last_commit": {
       "ok": true,
