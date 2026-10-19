@@ -286,6 +286,24 @@ def _iso_from_value(value):
 def agent_diagnostics(agent):
     """Return compact non-secret diagnostics for unhealthy ACS states."""
     try:
+        if agent == "ACS-03":
+            state = ACS_STATE_FILES["ACS-03"]
+            if not state.is_file():
+                return {"diagnostics_status": "missing"}
+            payload = json.loads(state.read_text(encoding="utf-8"))
+            return {
+                "diagnostics_status": "available",
+                "components": [
+                    {
+                        "component": str(item.get("component", "unknown"))[:64],
+                        "status": str(item.get("status", "unknown"))[:32],
+                        "returncode": item.get("returncode")
+                        if type(item.get("returncode")) is int else None,
+                    }
+                    for item in payload.get("results", [])[:8]
+                    if isinstance(item, dict)
+                ],
+            }
         if agent == "ACS-04":
             candidates = [
                 Path.home() / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
