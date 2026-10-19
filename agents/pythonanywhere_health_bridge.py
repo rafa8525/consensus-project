@@ -286,6 +286,24 @@ def _iso_from_value(value):
 def agent_diagnostics(agent):
     """Return compact non-secret diagnostics for unhealthy ACS states."""
     try:
+        if agent == "ACS-03":
+            state = ACS_STATE_FILES["ACS-03"]
+            if not state.is_file():
+                return {"diagnostics_status": "missing"}
+            payload = json.loads(state.read_text(encoding="utf-8"))
+            return {
+                "diagnostics_status": "available",
+                "components": [
+                    {
+                        "component": str(item.get("component", "unknown"))[:64],
+                        "status": str(item.get("status", "unknown"))[:32],
+                        "returncode": item.get("returncode")
+                        if type(item.get("returncode")) is int else None,
+                    }
+                    for item in payload.get("results", [])[:8]
+                    if isinstance(item, dict)
+                ],
+            }
         if agent == "ACS-04":
             candidates = [
                 Path.home() / "memory" / "logs" / "system" / "infrastructure_guardian_status.json",
@@ -516,6 +534,29 @@ def public_diagnostics(agent, diagnostic):
     """Allowlist fields published to GitHub; never publish raw exception/mail text."""
     if not isinstance(diagnostic, dict):
         return {"diagnostics_status": "unavailable"}
+    if agent == "ACS-03":
+        components = []
+        valid_statuses = {"healthy", "warning", "critical", "execution_failure"}
+        known_components = {
+            "fitness_tracking_verifier", "health_master", "backup_fitness"
+        }
+        for item in (diagnostic.get("components") or [])[:8]:
+            if not isinstance(item, dict):
+                continue
+            name = item.get("component")
+            status = item.get("status")
+            code = item.get("returncode")
+            components.append({
+                "component": name if name in known_components else "unknown",
+                "status": status if status in valid_statuses else "unknown",
+                "returncode": code if type(code) is int and -1 <= code <= 255 else None,
+            })
+        return {
+            "diagnostics_status": diagnostic.get("diagnostics_status")
+            if diagnostic.get("diagnostics_status") in ("available", "missing", "unreadable")
+            else "unavailable",
+            "components": components,
+        }
     if agent == "ACS-04":
         findings = []
         for item in (diagnostic.get("findings") or [])[:10]:
@@ -612,62 +653,68 @@ def sanitize_public_snapshot(snapshot):
     return safe
 
 
-self_heal_sync = safe_sync_v11_dev()
-self_heal_cycles = heal_infrastructure_after_sync(self_heal_sync)
 
-git_status = run(["git", "status", "--porcelain=v1", "--untracked-files=no"])
-status_text = git_status.get("stdout", "")
-conflict = any(line[:2] in {"DD","AU","UD","UA","DU","AA","UU"} for line in status_text.splitlines())
+def main():
+    self_heal_sync = safe_sync_v11_dev()
+    self_heal_cycles = heal_infrastructure_after_sync(self_heal_sync)
+    
+    git_status = run(["git", "status", "--porcelain=v1", "--untracked-files=no"])
+    status_text = git_status.get("stdout", "")
+    conflict = any(line[:2] in {"DD","AU","UD","UA","DU","AA","UU"} for line in status_text.splitlines())
+    
+    snapshot = {
+        "schema_version": 6,
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "source": "pythonanywhere",
+        "self_heal": {
+            "branch_sync": self_heal_sync,
+            "post_sync_cycles": self_heal_cycles,
+        },
+        "active_branch": run(["git", "branch", "--show-current"]).get("stdout", ""),
+        "critical_paths": [path_meta(p) for p in CRITICAL_PATHS],
+        "acs01_orchestrator": acs01_execution_evidence(),
+        "agents": all_acs_evidence(),
+        "knowledge_validation": knowledge_validation(),
+        "git": {
+            "status": git_status,
+            "unresolved_merge_conflict": conflict,
+            "last_commit": run(["git", "log", "-1", "--format=%H|%cI|%s"]),
+            "origin_reachable": run(["git", "ls-remote", "--exit-code", "origin", "HEAD"]),
+        },
+        "pythonanywhere_schedule": pythonanywhere_schedule(),
+    }
+    
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(sanitize_public_snapshot(snapshot), indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    
+    fetch = run(["git", "fetch", "origin", "main"], timeout=60)
+    if not fetch.get("ok"):
+        raise SystemExit("Health snapshot written locally, but fetching origin/main failed")
+    
+    with tempfile.TemporaryDirectory(prefix="acs-health-") as td:
+        worktree = Path(td) / "main"
+        add = run(["git", "worktree", "add", "--detach", str(worktree), "origin/main"], timeout=60)
+        if not add.get("ok"):
+            raise SystemExit("Could not create isolated main worktree")
+        try:
+            target = worktree / "logs" / "system" / "pythonanywhere_health.json"
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(OUT, target)
+            if not run(["git", "add", "-f", "--", "logs/system/pythonanywhere_health.json"], cwd=worktree).get("ok"):
+                raise SystemExit("Could not stage health snapshot")
+            diff = run(["git", "diff", "--cached", "--quiet"], cwd=worktree)
+            if diff.get("returncode") == 0:
+                print("Health snapshot unchanged")
+            else:
+                if not run(["git", "commit", "-m", "Update PythonAnywhere health snapshot"], cwd=worktree).get("ok"):
+                    raise SystemExit("Could not commit health snapshot")
+                if not run(["git", "push", "origin", "HEAD:main"], cwd=worktree, timeout=60).get("ok"):
+                    raise SystemExit("Health snapshot committed, but GitHub push failed")
+        finally:
+            run(["git", "worktree", "remove", "--force", str(worktree)], timeout=30)
+    
+    print("logs/system/pythonanywhere_health.json")
 
-snapshot = {
-    "schema_version": 6,
-    "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-    "source": "pythonanywhere",
-    "self_heal": {
-        "branch_sync": self_heal_sync,
-        "post_sync_cycles": self_heal_cycles,
-    },
-    "active_branch": run(["git", "branch", "--show-current"]).get("stdout", ""),
-    "critical_paths": [path_meta(p) for p in CRITICAL_PATHS],
-    "acs01_orchestrator": acs01_execution_evidence(),
-    "agents": all_acs_evidence(),
-    "knowledge_validation": knowledge_validation(),
-    "git": {
-        "status": git_status,
-        "unresolved_merge_conflict": conflict,
-        "last_commit": run(["git", "log", "-1", "--format=%H|%cI|%s"]),
-        "origin_reachable": run(["git", "ls-remote", "--exit-code", "origin", "HEAD"]),
-    },
-    "pythonanywhere_schedule": pythonanywhere_schedule(),
-}
 
-OUT.parent.mkdir(parents=True, exist_ok=True)
-OUT.write_text(json.dumps(sanitize_public_snapshot(snapshot), indent=2, sort_keys=True) + "\n", encoding="utf-8")
-
-fetch = run(["git", "fetch", "origin", "main"], timeout=60)
-if not fetch.get("ok"):
-    raise SystemExit("Health snapshot written locally, but fetching origin/main failed")
-
-with tempfile.TemporaryDirectory(prefix="acs-health-") as td:
-    worktree = Path(td) / "main"
-    add = run(["git", "worktree", "add", "--detach", str(worktree), "origin/main"], timeout=60)
-    if not add.get("ok"):
-        raise SystemExit("Could not create isolated main worktree")
-    try:
-        target = worktree / "logs" / "system" / "pythonanywhere_health.json"
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(OUT, target)
-        if not run(["git", "add", "-f", "--", "logs/system/pythonanywhere_health.json"], cwd=worktree).get("ok"):
-            raise SystemExit("Could not stage health snapshot")
-        diff = run(["git", "diff", "--cached", "--quiet"], cwd=worktree)
-        if diff.get("returncode") == 0:
-            print("Health snapshot unchanged")
-        else:
-            if not run(["git", "commit", "-m", "Update PythonAnywhere health snapshot"], cwd=worktree).get("ok"):
-                raise SystemExit("Could not commit health snapshot")
-            if not run(["git", "push", "origin", "HEAD:main"], cwd=worktree, timeout=60).get("ok"):
-                raise SystemExit("Health snapshot committed, but GitHub push failed")
-    finally:
-        run(["git", "worktree", "remove", "--force", str(worktree)], timeout=30)
-
-print("logs/system/pythonanywhere_health.json")
+if __name__ == "__main__":
+    main()
