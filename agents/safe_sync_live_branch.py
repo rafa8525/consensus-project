@@ -179,6 +179,27 @@ def main() -> int:
         runtime_changes, meaningful_changes = classify_changes()
         result["runtime_changes_preserved"] = runtime_changes
 
+        # No remote update is pending. Local source edits still require review,
+        # but they must not be misreported as a blocked fast-forward.
+        # Keep all files untouched and expose local-edit evidence to monitoring.
+        if behind == 0:
+            head = run("git", "rev-parse", "--short", "HEAD").stdout.strip()
+            result.update({
+                "ok": True,
+                "status": "already_synced",
+                "worktree_clean": not bool(runtime_changes or meaningful_changes),
+                "local_source_changes_present": bool(meaningful_changes),
+                "local_source_paths": meaningful_changes[:50],
+                "runtime_changes_preserved": runtime_changes,
+                "safe_refresh_paths": [],
+                "ahead_after": 0,
+                "behind_after": 0,
+                "head": head,
+                "remote_head": head,
+            })
+            print(json.dumps(result))
+            return 0
+
         safe_refresh = []
         unsafe = []
 
@@ -210,22 +231,6 @@ def main() -> int:
             })
             print(json.dumps(result))
             return 2
-
-        # If HEAD already matches origin there is nothing to synchronize.
-        # Preserve runtime churn in place instead of creating needless stashes.
-        if behind == 0:
-            head = run("git", "rev-parse", "--short", "HEAD").stdout.strip()
-            result.update({
-                "ok": True,
-                "status": "already_synced",
-                "safe_refresh_paths": [],
-                "ahead_after": 0,
-                "behind_after": 0,
-                "head": head,
-                "remote_head": head,
-            })
-            print(json.dumps(result))
-            return 0
 
         for path in safe_refresh:
             restore = run("git", "restore", "--source=HEAD", "--", path, timeout=60)
