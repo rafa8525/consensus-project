@@ -60,7 +60,9 @@ def evaluate(data: dict, now: datetime | None = None) -> list[str]:
         except (ValueError, TypeError, OverflowError):
             problems.append(f"{name}: execution timestamp invalid")
     schedule = data.get("pythonanywhere_schedule")
-    if isinstance(schedule, dict) and schedule.get("available") is True:
+    if not isinstance(schedule, dict) or schedule.get("available") is not True:
+        problems.append("PythonAnywhere scheduler evidence unavailable")
+    else:
         for key in ("acs01_task", "health_task"):
             task = schedule.get(key)
             if not isinstance(task, dict) or task.get("enabled") is not True:
