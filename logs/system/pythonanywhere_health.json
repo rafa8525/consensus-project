@@ -1,10 +1,10 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46743.9,
+    "age_seconds": 10.3,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
-    "last_execution_utc": "2026-10-19T18:03:39.960038+00:00",
+    "last_execution_utc": "2026-10-20T18:03:26.038757+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
     "status": "degraded",
@@ -13,63 +13,38 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46743.9,
+      "age_seconds": 10.3,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
-      "last_execution_utc": "2026-10-19T18:03:39.960038+00:00",
+      "last_execution_utc": "2026-10-20T18:03:26.038757+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46852.3,
+      "age_seconds": 109.6,
       "agent": "ACS-02",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-19T18:01:51.540849+00:00",
+      "last_execution_utc": "2026-10-20T18:01:46.727840+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 46793.2,
+      "age_seconds": 81.8,
       "agent": "ACS-03",
-      "diagnostics": {
-        "components": [
-          {
-            "component": "unknown",
-            "returncode": 2,
-            "status": "execution_failure"
-          },
-          {
-            "component": "fitness_tracking_verifier",
-            "returncode": 1,
-            "status": "execution_failure"
-          },
-          {
-            "component": "health_master",
-            "returncode": 0,
-            "status": "healthy"
-          },
-          {
-            "component": "backup_fitness",
-            "returncode": 0,
-            "status": "healthy"
-          }
-        ],
-        "diagnostics_status": "available"
-      },
-      "health_status": "execution_failure",
-      "last_execution_utc": "2026-10-19T18:02:50.659779+00:00",
+      "health_status": "healthy",
+      "last_execution_utc": "2026-10-20T18:02:14.476610+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
-      "status": "degraded",
+      "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 46745.1,
+      "age_seconds": 17.4,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -77,25 +52,38 @@
             "code": "WORKTREE_DIRTY",
             "repaired": false,
             "severity": "warning"
+          },
+          {
+            "code": "GIT_BEHIND",
+            "repaired": false,
+            "severity": "critical"
           }
         ],
-        "overall_status": "warning"
+        "overall_status": "critical"
       },
-      "health_status": "warning",
-      "last_execution_utc": "2026-10-19T18:03:38.766590+00:00",
+      "health_status": "critical",
+      "last_execution_utc": "2026-10-20T18:03:18.919186+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 46743.9,
+      "age_seconds": 10.3,
       "agent": "ACS-05",
-      "health_status": "healthy",
-      "last_execution_utc": "2026-10-19T18:03:39.927919+00:00",
+      "diagnostics": {
+        "critical_count": 1,
+        "issue_codes": [
+          "CONTINUITY_CRITICAL"
+        ],
+        "last_status": "CRITICAL",
+        "warning_count": 1
+      },
+      "health_status": "critical",
+      "last_execution_utc": "2026-10-20T18:03:26.007755+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
-      "status": "current",
+      "status": "degraded",
       "verified": true
     }
   },
@@ -110,7 +98,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-20T06:01:19.415306+00:00",
+      "mtime_utc": "2026-10-20T18:01:46.157985+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -129,7 +117,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-20T07:02:43.818495+00:00",
+  "generated_at_utc": "2026-10-20T18:03:36.294572+00:00",
   "git": {
     "last_commit": {
       "ok": true,
