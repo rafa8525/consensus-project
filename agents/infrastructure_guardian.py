@@ -484,6 +484,7 @@ class InfrastructureGuardian:
             "memory/logs/",
             "memory/agents/",
             "memory/exports/",
+            "memory/state/",
         )
         runtime_files = {
             "memory/centralized_knowledge_base.txt",

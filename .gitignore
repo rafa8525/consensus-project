@@ -71,3 +71,8 @@ memory/config/credential_vault.json
 # Runtime/generated logs
 memory/logs/system/absorb_runner.log
 memory/logs/compressed_memory.md
+
+# ACS-04 active runtime logs
+/memory/logs/system/absorb_memory.log
+/memory/logs/system/continuity_guardian.log
+/memory/logs/alerts/triage.jsonl
