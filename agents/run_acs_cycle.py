@@ -33,7 +33,7 @@ ABSORB_MAX_AGE_HOURS = 36.0
 ABSORB_FUTURE_TOLERANCE_MINUTES = 5
 
 CYCLES = {
-    "ACS-03": [
+    "ACS-03": [("health_connect_cloud_cycle", Path.home() / "acs-runtime/repairs/acs03/cloud/health_connect_cloud_cycle.py"),
         ("fitness_tracking_verifier", REPO / "tools/fitness_tracking_verifier.py"),
         ("health_master", REPO / "tools/health_master.py"),
         ("backup_fitness", REPO / "tools/backup_fitness.py"),

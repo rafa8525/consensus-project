@@ -1,7 +1,3 @@
-# Mutation_6ab346
-# Mutation_f0e313
-# overwrite the file with the minimal script (no shell lines inside)
-cat > /home/rafa1215/consensus-project/tools/simulate_and_prepare.py <<'PY'
 #!/usr/bin/env python3
 """
 simulate_and_prepare.py — minimal “yesterday-style” runner
@@ -87,9 +83,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-PY
-# Mutation_465bfe
-
-chmod +x /home/rafa1215/consensus-project/tools/simulate_and_prepare.py
-# Mutation_bac00d
-python3 /home/rafa1215/consensus-project/tools/simulate_and_prepare.py

@@ -98,7 +98,7 @@ def discover_memory_root(repo_root: Path) -> Path:
     if configured:
         return Path(configured).expanduser().resolve()
 
-    home_memory = Path.home() / "memory"
+    home_memory = Path(__file__).resolve().parents[1] / "memory"
     if home_memory.exists():
         return home_memory.resolve()
 

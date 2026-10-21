@@ -34,14 +34,14 @@ def generate_report():
 # Mutation_e661b7
 
     report = template.replace("[Current Date]", today)
-    report = report.replace("[Brief Summary]", "System stable. Auto-report generated.")
+    report = report.replace("[Brief Summary]", "Health status not verified by this reporting job.")
     report = report.replace("[Specify Day]", today)
     report = report.replace("[Specify Time]", now_time)
     report = report.replace("[Any other relevant information]", "Automated log, no manual input.")
     report = report.replace("[Milestones Achieved:]", "- Automated report generation operational.")
 # Mutation_4f3c4c
-    report = report.replace("[Current Tasks:]", "- Agents running normally.")
-    report = report.replace("[Issues/Challenges Faced:]", "- None detected.")
+    report = report.replace("[Current Tasks:]", "- Consult the independent live agent health snapshot.")
+    report = report.replace("[Issues/Challenges Faced:]", "- Not assessed by this reporting job.")
     report = report.replace("[Next Steps:]", "- Continue monitoring.")
 
     # Save new report

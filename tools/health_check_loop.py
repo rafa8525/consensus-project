@@ -183,9 +183,8 @@ def check_security_audit() -> tuple[str, bool, str]:
     # Ensure monthly audit schedule marker exists (<32 days old)
     marker = SEC_LOG_DIR/"security_audit_last_run.txt"
     if not marker.exists():
-        marker.write_text(now()+" — stub audit created\n")
-        return ("security.audit", False, "created audit stub; run real audit later")
-    m = datetime.fromtimestamp(marker.stat(, timezone.utc).st_mtime)
+        return ("security.audit", False, "missing audit marker; run a real security audit")
+    m = datetime.fromtimestamp(marker.stat().st_mtime, timezone.utc)
     ok = (datetime.now(timezone.utc) - m) < timedelta(days=32)
     return ("security.audit", ok, f"age_days={(datetime.now(timezone.utc)-m).days}")
 

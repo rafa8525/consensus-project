@@ -38,7 +38,41 @@ mkdir -p memory/logs/absorb
 python3 tools/absorb_status_report.py 14 > memory/logs/absorb/status.txt || true
 
 # --- Stage memory only (includes status.txt) ---
-git add -A memory
+# Repair 23C: fail closed until a reviewed publishing allowlist exists.
+ALLOWLIST="$PWD/config/memory_publish_allowlist.txt"
+if [[ ! -s "$ALLOWLIST" ]]; then
+  echo "[absorb_and_sync] Auto-publishing disabled: approved allowlist missing."
+  echo "[absorb_and_sync] Local memory and reports remain intact."
+  echo "[absorb_and_sync] Publishing skipped: configuration required." >&2
+  exit 2
+fi
+
+if ! git diff --cached --quiet; then
+  echo "[error] Git index already contains staged changes; refusing publication." >&2
+  exit 3
+fi
+
+paths=()
+while IFS= read -r path || [[ -n "$path" ]]; do
+  [[ -z "$path" || "$path" == \#* ]] && continue
+  case "$path" in
+    memory/public/*) ;;
+    *) echo "[error] Path outside approved public directory" >&2; exit 4 ;;
+  esac
+  if [[ "$path" == *..* || "$path" == *'*'* || "$path" == *'?'* || "$path" == *'['* || -L "$path" || ! -f "$path" ]]; then
+    echo "[error] Missing or unsafe publishing path" >&2
+    exit 4
+  fi
+  paths+=("$path")
+done < "$ALLOWLIST"
+
+if (( ${#paths[@]} == 0 )); then
+  echo "[error] Allowlist contains no approved files" >&2
+  exit 4
+fi
+for path in "${paths[@]}"; do
+  git add -- "$path"
+done
 
 # --- Commit only if there are changes, then push directly to v1.1-dev ---
 if git diff --cached --quiet; then

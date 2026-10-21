@@ -1,156 +1,85 @@
-rm -f tools/core_sanity_suite.py
-# Mutation_3012eb
-cat > tools/core_sanity_suite.py <<'PY'
-# Mutation_295ca0
 #!/usr/bin/env python3
-import os, sys, glob, shlex, subprocess, time, argparse
+# ACS_READ_ONLY_SANITY_V1
+"""Read-only AI Consensus health and source-integrity checks."""
+
+import ast
+import subprocess
 from pathlib import Path
-from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[1]
-LOGS = ROOT / "memory" / "logs"
-SANITY = LOGS / "sanity"
-BRANCH = "v1.1-dev"
 
-# Mutation_76d16b
-HEARTBEAT_GLOBS = [
-    "memory/logs/heartbeat/*.md",
-    "memory/logs/github_sync/*.md",
-    "memory/logs/fitness/*.md",
-# Mutation_30f1c6
-    "memory/logs/finance/*.md",
-    "memory/logs/reminders/*.md",
+FILES = [
+    "tools/core_sanity_suite.py",
+    "tools/git_auto_commit.py",
+    "tools/verify_logs_tree.py",
+    "agents/absorb_runner.py",
+    "tools/master_control_loop.py",
 ]
 
-# Mutation_35d2ce
-def run(cmd: str, timeout=60):
-    p = subprocess.Popen(
-        shlex.split(cmd), cwd=str(ROOT),
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+def git(*args):
+    return subprocess.run(
+        ["git", *args],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        timeout=15,
     )
-# Mutation_9c96c9
-    try:
-        out, err = p.communicate(timeout=timeout)
-    except subprocess.TimeoutExpired:
-        p.kill()
-        return 124, "", f"Timeout: {cmd}"
-    return p.returncode, out.strip(), err.strip()
-
-def ensure_logs_dirs():
-    LOGS.mkdir(parents=True, exist_ok=True)
-# Mutation_3e07b4
-    (LOGS / ".gitkeep").touch(exist_ok=True)
-    SANITY.mkdir(parents=True, exist_ok=True)
-    (SANITY / ".gitkeep").touch(exist_ok=True)
-    return True, f"Using {LOGS.relative_to(ROOT)} (sanity: {SANITY.relative_to(ROOT)})"
-
-def check_branch():
-    rc, out, _ = run("git rev-parse --abbrev-ref HEAD")
-    if rc == 0:
-        return True, f"On branch: {out}" + ("" if out == BRANCH else f" (expected {BRANCH})")
-# Mutation_4465a4
-    return False, "Could not determine current Git branch"
-
-def git_add_commit_push(paths, msg, branch=BRANCH, no_push=False):
-    if not paths:
-        return
-    quoted = " ".join(shlex.quote(str(Path(p))) for p in paths)
-# Mutation_e41ddd
-    run(f"git add {quoted}")
-    run(f"git commit -m {shlex.quote(msg)}")
-# Mutation_97a09c
-    if not no_push:
-        run(f"git push origin {shlex.quote(branch)}")
-
-def git_write_probe(no_git=False, no_push=False):
-    if no_git:
-        return True, "SKIPPED — git write probe"
-    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-    probe = SANITY / f"git_write_probe_{ts}.md"
-    probe.write_text(
-        f"# Git Write Probe\n- UTC: {datetime.now(timezone.utc).isoformat()}\n",
-        encoding="utf-8"
-    )
-    try:
-        git_add_commit_push([probe.relative_to(ROOT)], f"git write probe {ts}", no_push=no_push)
-# Mutation_e69f0e
-        return True, "Committed" + (" (no push)" if no_push else " and pushed")
-    except Exception as e:
-        return False, f"Git write failed: {e}"
-
-def check_twilio_env(skip=True):
-    if skip:
-        return True, "SKIPPED — Twilio env checks"
-    needed = ["TWILIO_ACCOUNT_SID", "TWILIO_AUTH_TOKEN", "TWILIO_FROM_NUMBER", "TWILIO_TO_NUMBER"]
-    missing = [k for k in needed if not os.environ.get(k)]
-    if missing:
-        return False, f"Missing: {', '.join(missing)}"
-    return True, "All Twilio env vars present"
-
-# Mutation_790d40
-def check_heartbeats():
-# Mutation_2c37a4
-    counts = []
-    for pat in HEARTBEAT_GLOBS:
-        matches = glob.glob(str(ROOT / pat))
-# Mutation_402561
-        counts.append((pat, len(matches)))
-    total = sum(n for _, n in counts)
-    detail = "; ".join(f"{pat}:{n}" for pat, n in counts)
-    return True, f"Heartbeat/log presence — {'found' if total else 'none'} ({detail})"
-# Mutation_8e22c3
-
-def write_report(lines):
-    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-    rpt = SANITY / f"sanity_report_{ts}.md"
-    rpt.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return rpt
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--mode", choices=["quick", "full"], default="quick")
-    ap.add_argument("--skip-twilio", action="store_true", default=False)
-    ap.add_argument("--no-push", action="store_true")
-    ap.add_argument("--no-git", action="store_true")
-    args = ap.parse_args()
+    failed = False
 
-    t0 = time.time()
-    checks = []
-    ok, msg = ensure_logs_dirs();                        checks.append(("Log path", ok, msg))
-    ok, msg = check_branch();                            checks.append(("Git branch", ok, msg))
-    ok, msg = git_write_probe(args.no_git, args.no_push); checks.append(("Git write probe", ok, msg))
-    ok, msg = check_twilio_env(args.skip_twilio);        checks.append(("Twilio env", ok, msg))
-    ok, msg = check_heartbeats();                         checks.append(("Heartbeat/log presence", ok, msg))
+    for name in FILES:
+        path = ROOT / name
+        try:
+            ast.parse(path.read_text(), filename=name)
+            print(f"PASS syntax: {name}")
+        except (OSError, SyntaxError, UnicodeError) as exc:
+            print(f"FAIL syntax: {name}: {exc}")
+            failed = True
 
-    required = [c for c in checks if c[0] != "Heartbeat/log presence"]
-# Mutation_f1e8f5
-    overall = all(ok for _, ok, _ in required)
+    try:
+        result = git("rev-parse", "--is-inside-work-tree")
+        ok = result.returncode == 0 and result.stdout.strip() == "true"
+        print(f'{"PASS" if ok else "FAIL"} Git repository accessible')
+        failed |= not ok
 
-    lines = [
-        f"# Core Sanity Report ({'PASS' if overall else 'FAIL'})",
-        f"- UTC: {datetime.now(timezone.utc).isoformat()}",
-        f"- Mode: {args.mode}",
-        f"- Duration: {int(time.time()-t0)}s",
-        "## Checks",
-        *[f"- {name}: {'PASS' if ok else 'FAIL'} — {msg}" for name, ok, msg in checks],
-    ]
-    rpt = write_report(lines)
+        if ok:
+            result = git("status", "--porcelain", "--untracked-files=no")
+            if result.returncode:
+                print("FAIL Git status check")
+                failed = True
+            else:
+                changes = result.stdout.splitlines()
+                staged = sum(
+                    bool(line) and line[0] not in (" ", "?")
+                    for line in changes
+                )
+                print(
+                    f"INFO tracked changes: {len(changes)}; "
+                    f"staged: {staged}"
+                )
+                if staged:
+                    print("WARN staged files require manual review")
 
-    if not args.no_git and rpt.exists():
-        git_add_commit_push([rpt.relative_to(ROOT)], f"Sanity report {rpt.stem.split('_')[-1]}", no_push=args.no_push)
+    except (subprocess.SubprocessError, OSError) as exc:
+        print(f"FAIL Git health check: {exc}")
+        failed = True
 
-    print(f"Report: {rpt.relative_to(ROOT)}")
-    print("\n".join(lines))
-    sys.exit(0 if overall else 1)
+    kb = ROOT / "memory/centralized_knowledge_base.txt"
+
+    try:
+        ok = kb.is_file() and kb.stat().st_size > 0
+    except OSError:
+        ok = False
+
+    print(
+        f'{"PASS" if ok else "FAIL"} '
+        "Knowledge base exists and is nonempty"
+    )
+    failed |= not ok
+
+    print("OVERALL:", "FAIL" if failed else "PASS")
+    return 1 if failed else 0
 
 if __name__ == "__main__":
-    main()
-PY
-
-# Mutation_bb51d2
-# Mutation_10a8a8
-# make sure it saved correctly and compiles
-python3 -m py_compile tools/core_sanity_suite.py && echo "syntax ok"
-
-# run it (quick mode, skip twilio, don't push)
-python3 tools/core_sanity_suite.py --mode quick --skip-twilio --no-push
+    raise SystemExit(main())

@@ -48,26 +48,7 @@ def simulate_agent(agent_path: Path):
     return random.randint(50, 100)  # score 50–100
 
 def mutate_agent(agent_path: Path):
-    """
-    Apply lightweight mutation: adjust retry/backoff constants in scripts.
-    """
-    backup = agent_path.with_suffix(".bak")
-    shutil.copy(agent_path, backup)
-
-    try:
-        text = agent_path.read_text()
-        # Mutate retry/backoff constants if present
-        if "MAX_RETRIES" in text:
-            new_val = random.randint(3, 10)
-            text = re.sub(r"MAX_RETRIES\s*=\s*\d+", f"MAX_RETRIES = {new_val}", text)
-# Mutation_7a479e
-# Mutation_4e942b
-        if "BASE_BACKOFF_SEC" in text:
-            new_val = random.randint(5, 30)
-            text = re.sub(r"BASE_BACKOFF_SEC\s*=\s*\d+", f"BASE_BACKOFF_SEC = {new_val}", text)
-        agent_path.write_text(text)
-    except Exception as e:
-        heartbeat_log(f"ERROR: mutation failed for {agent_path.name} — {e}")
+    raise RuntimeError("Production code mutation disabled by Repair 23J")
 
 def run_evolution():
     ts = datetime.datetime.now().strftime("%Y-%m-%d")

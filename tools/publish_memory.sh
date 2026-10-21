@@ -16,7 +16,16 @@ if ! flock -n 8; then
 fi
 
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
-URL="$(cat config/GITHUB_MEMORY_REPO_URL.txt)"
+CONFIG="$ROOT/config/GITHUB_MEMORY_REPO_URL.txt"
+if [[ ! -s "$CONFIG" ]]; then
+  echo "[error] Memory publishing destination is missing or empty; no publication attempted" >> "$LOG"
+  exit 2
+fi
+URL="$(cat "$CONFIG")"
+if [[ -z "${URL//[[:space:]]/}" ]]; then
+  echo "[error] Memory publishing destination is blank; no publication attempted" >> "$LOG"
+  exit 2
+fi
 export GIT_TERMINAL_PROMPT=0
 
 git_retry() {
@@ -33,11 +42,17 @@ git_retry "git -c pack.threads=1 clone --quiet --depth=1 \"$URL\" \"$TMP/repo\""
   echo "[error] clone failed" >> "$LOG"; exit 1; }
 
 mkdir -p "$TMP/repo/memory"
-sync_memory_safe "$ROOT/memory" "$TMP/repo/memory" >> "$LOG" 2>&1 || true
+sync_memory_safe "$ROOT/memory" "$TMP/repo/memory" >> "$LOG" 2>&1 || {
+  echo "[error] Memory synchronization failed; publication aborted" >> "$LOG"
+  exit 23
+}
 
 (
   cd "$TMP/repo"
-  git add -A memory
+  # Repair 23E: automatic publication disabled until
+  # a fully validated publishing policy is installed.
+  echo "[error] Publishing disabled: secure staging policy pending" >> "$LOG"
+  exit 2
   if git diff --quiet && git diff --cached --quiet; then
     echo "[skip] no changes to publish" >> "$LOG"
   else

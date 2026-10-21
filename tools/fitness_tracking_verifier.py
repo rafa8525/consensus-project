@@ -1,68 +1,113 @@
 #!/usr/bin/env python3
-"""Verify fitness data freshness for ACS-03.
+"""Verify freshness of genuine ACS-03 fitness source records.
 
-Exit 0 only when at least one fitness log file was modified within the
-last 24 hours. Exit 1 for missing, stale, or future-dated input.
+No fabricated data, timestamp touching or success on missing input.
+Exit 0 = current valid data; exit 1 = unhealthy data.
 """
 from __future__ import annotations
 
+import json
 import os
-import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-BASE = Path(os.environ.get("ACS_REPO_ROOT", "/home/rafa1215/consensus-project"))
-FITNESS_DIR = BASE / "memory/logs/fitness"
-SYSTEM_LOG = BASE / "memory/logs/system/fitness_integration.log"
-MAX_AGE_SECONDS = 24 * 60 * 60
-FUTURE_TOLERANCE_SECONDS = 5 * 60
+REPO = Path(os.environ.get(
+    "ACS_REPO_ROOT",
+    str(Path.home() / "consensus-project")
+)).expanduser().resolve()
 
+MEMORY = Path(os.environ.get(
+    "CONSENSUS_MEMORY_ROOT",
+    str(REPO / "memory")
+)).expanduser().resolve()
 
-def log(message: str) -> None:
-    timestamp = datetime.now(timezone.utc).isoformat()
-    line = f"[{timestamp}] {message}"
-    print(line)
-    SYSTEM_LOG.parent.mkdir(parents=True, exist_ok=True)
-    with SYSTEM_LOG.open("a", encoding="utf-8") as handle:
-        handle.write(line + "\n")
+SOURCE = MEMORY / "logs/fitness/daily_metrics.jsonl"
+MAX_AGE_SECONDS = 86400
+FUTURE_TOLERANCE_SECONDS = 300
 
+METRICS = (
+    "steps", "active_minutes", "swim_laps", "laps",
+    "heart_rate", "avg_hr", "max_hr",
+    "weight_lbs", "bmi", "distance_km",
+    "calories", "sleep_minutes"
+)
 
-def check_files(now: float | None = None) -> bool:
-    now = time.time() if now is None else now
-    if not FITNESS_DIR.is_dir():
-        log("FAIL Fitness log directory missing.")
-        return False
-
-    files = [path for path in FITNESS_DIR.iterdir() if path.is_file() and not path.is_symlink()]
-    if not files:
-        log("FAIL No fitness log files found.")
-        return False
-
+def parse_time(value):
+    if not isinstance(value, str):
+        return None
     try:
-        latest = max(path.stat().st_mtime for path in files)
-    except OSError as exc:
-        log(f"FAIL Cannot read fitness log timestamps: {type(exc).__name__}")
+        dt = datetime.fromisoformat(
+            value.strip().replace("Z", "+00:00")
+        )
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except ValueError:
+        return None
+
+def check_files(now=None):
+    now = datetime.now(timezone.utc) if now is None else now
+    if SOURCE.is_symlink():
+        print("FAIL: fitness input is a symbolic link")
+        return False
+    if not SOURCE.is_file():
+        print("FAIL: genuine fitness input missing")
         return False
 
-    age_seconds = now - latest
-    age_minutes = age_seconds / 60
-    if age_seconds < -FUTURE_TOLERANCE_SECONDS:
-        log(f"FAIL Fitness log timestamp is {abs(age_minutes):.1f} min in the future; clock or sync anomaly.")
-        return False
-    if age_seconds > MAX_AGE_SECONDS:
-        log(f"FAIL Last fitness update older than 24 hours ({age_minutes:.1f} min ago).")
+    newest_valid = None
+    try:
+        with SOURCE.open(encoding="utf-8") as stream:
+            for line in stream:
+                if not line.strip():
+                    continue
+                try:
+                    record = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if not isinstance(record, dict):
+                    continue
+                stamp = parse_time(
+                    record.get("timestamp")
+                    or record.get("time")
+                    or record.get("ts")
+                )
+                if stamp is None:
+                    continue
+
+                # At least one actual numeric fitness measurement.
+                has_metric = any(
+                    isinstance(record.get(key), (int, float))
+                    and not isinstance(record.get(key), bool)
+                    and float("-inf") < float(record[key]) < float("inf")
+                    for key in METRICS
+                )
+                if not has_metric:
+                    continue
+
+                age = (now - stamp).total_seconds()
+                if age < -FUTURE_TOLERANCE_SECONDS:
+                    continue
+
+                if newest_valid is None or stamp > newest_valid:
+                    newest_valid = stamp
+    except (OSError, UnicodeError) as exc:
+        print("FAIL: fitness source unreadable:", type(exc).__name__)
         return False
 
-    log(f"PASS Fitness logs are current (updated {age_minutes:.1f} min ago).")
+    if newest_valid is None:
+        print("FAIL: no valid timestamped fitness measurements")
+        return False
+
+    age = (now - newest_valid).total_seconds()
+    if age > MAX_AGE_SECONDS:
+        print("FAIL: genuine fitness measurements are stale")
+        return False
+
+    print("PASS: recent timestamped fitness measurements found")
     return True
 
-
-def main() -> int:
-    log("---- Starting Fitness Integration Verification ----")
-    passed = check_files()
-    log("---- Verification complete: PASS ----" if passed else "---- Verification complete: ATTENTION REQUIRED ----")
-    return 0 if passed else 1
-
+def main():
+    return 0 if check_files() else 1
 
 if __name__ == "__main__":
     raise SystemExit(main())

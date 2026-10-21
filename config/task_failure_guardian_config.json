@@ -1,9 +1,9 @@
 {
   "repeat_alert_minutes": 360,
   "send_recovery_sms": true,
-  "state_file": "/home/rafa1215/memory/state/task_failure_guardian_state.json",
-  "heartbeat_file": "/home/rafa1215/memory/logs/system/task_failure_guardian_heartbeat.json",
-  "alert_log": "/home/rafa1215/memory/logs/system/task_failure_guardian_alerts.log",
+  "state_file": "/home/rafa1215/consensus-project/memory/state/task_failure_guardian_state.json",
+  "heartbeat_file": "/home/rafa1215/consensus-project/memory/logs/system/task_failure_guardian_heartbeat.json",
+  "alert_log": "/home/rafa1215/consensus-project/memory/logs/system/task_failure_guardian_alerts.log",
   "tasks": [
     {
       "name": "Hourly Core Monitor",
@@ -14,7 +14,7 @@
     },
     {
       "name": "GitHub Write Assurance",
-      "enabled": true,
+      "enabled": false,
       "log": "/home/rafa1215/memory/logs/system/github_write_assurance_task.log",
       "max_age_minutes": 95,
       "tail_lines": 250

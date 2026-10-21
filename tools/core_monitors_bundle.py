@@ -22,7 +22,7 @@ VERSION = "replacement-v2026-07-10-remove-obsolete-absorb-runner"
 MAX_AGE_S = int(os.environ.get("CORE_MONITORS_MAX_AGE_S", str(36 * 3600)))
 
 CANONICAL_MEM_ROOT = Path(
-    os.environ.get("CONSENSUS_MEMORY_ROOT", "/home/rafa1215/memory")
+    os.environ.get("CONSENSUS_MEMORY_ROOT", str(Path(__file__).resolve().parents[1] / "memory"))
 ).expanduser()
 
 REPO_ROOT = Path(

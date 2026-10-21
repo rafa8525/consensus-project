@@ -21,8 +21,6 @@ sync_memory_safe() {
   # Hardened rsync with sensible excludes
   local rc=0
   rsync -a \
-    --delete \
-    --delete-excluded \
     --exclude '.git' \
     --exclude '.cache' \
     --exclude 'logs' \

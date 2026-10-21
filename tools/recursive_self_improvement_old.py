@@ -54,40 +54,11 @@ def benchmark_agent(agent_path: str) -> float:
 
 
 def mutate_agent_logic(agent_path: str) -> str:
-    """Create a small random mutation in the agent code."""
-    with open(agent_path, "r") as f:
-        code = f.read()
-
-    lines = [ln for ln in code.splitlines()]
-    if not lines:
-        log(f"⚠️ Skipping {os.path.basename(agent_path)} — empty or unreadable.")
-        return agent_path
-
-    mutation_tag = f"# Mutation_{hashlib.md5(str(random.random()).encode()).hexdigest()[:6]}"
-    insert_at = random.randint(0, max(0, len(lines) - 1))
-    lines.insert(insert_at, mutation_tag)
-
-    mutated_path = agent_path.replace(".py", f"_mutated_{random.randint(1000,9999)}.py")
-    with open(mutated_path, "w") as f:
-        f.write("\n".join(lines))
-    return mutated_path
+    raise RuntimeError("Production code mutation disabled by Repair 23J")
 
 
 def select_best_variant(original: str, mutant: str, score_orig: float, score_mut: float):
-    """Keep whichever performs better; archive the other."""
-    try:
-        if score_mut > score_orig:
-            backup_name = os.path.basename(original).replace(".py", f"_{timestamp()}_old.py")
-            backup_path = os.path.join(BACKUP_DIR, backup_name)
-            os.rename(original, backup_path)
-            os.rename(mutant, original)
-            log(f"✅ Replaced {os.path.basename(original)} with improved variant (score {score_mut} > {score_orig}).")
-        else:
-            if os.path.exists(mutant):
-                os.remove(mutant)
-            log(f"⚖️ Kept original {os.path.basename(original)} (score {score_orig} ≥ {score_mut}).")
-    except Exception as e:
-        log(f"❌ Error selecting variant for {os.path.basename(original)}: {e}")
+    raise RuntimeError("Production code mutation disabled by Repair 23J")
 
 
 def main():

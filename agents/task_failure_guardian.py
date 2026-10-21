@@ -25,12 +25,23 @@ import urllib.request
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+import importlib.util as _acs_importlib
+_ACS_RESOLVER_FILE = (
+    Path(__file__).resolve().parents[1]
+    / "tools" / "memory_paths.py"
+)
+_acs_spec = _acs_importlib.spec_from_file_location(
+    "acs_memory_paths", _ACS_RESOLVER_FILE
+)
+_acs_module = _acs_importlib.module_from_spec(_acs_spec)
+_acs_spec.loader.exec_module(_acs_module)
+memory_path = _acs_module.memory_path
 from typing import Any
 
 DEFAULT_CONFIG = Path("/home/rafa1215/consensus-project/config/task_failure_guardian_config.json")
-DEFAULT_STATE = Path("/home/rafa1215/memory/state/task_failure_guardian_state.json")
-DEFAULT_HEARTBEAT = Path("/home/rafa1215/memory/logs/system/task_failure_guardian_heartbeat.json")
-DEFAULT_ALERT_LOG = Path("/home/rafa1215/memory/logs/system/task_failure_guardian_alerts.log")
+DEFAULT_STATE = memory_path("state", "task_failure_guardian_state.json")
+DEFAULT_HEARTBEAT = memory_path("logs", "system", "task_failure_guardian_heartbeat.json")
+DEFAULT_ALERT_LOG = memory_path("logs", "system", "task_failure_guardian_alerts.log")
 
 FAILURE_PATTERNS = [
     re.compile(r"\breturn code (?:was|=)\s*([1-9]\d*)\b", re.I),
@@ -238,7 +249,7 @@ def main() -> int:
         # Never repeat an unchanged active finding.
         # Once it recovers and disappears from state, a future occurrence
         # becomes new again and is eligible for one alert.
-        should_alert = key not in active_prev
+        should_alert = key not in active_prev or prev.get('alert_delivered') is False
 
         active_now[key] = {
             "task": f.task,
@@ -248,6 +259,7 @@ def main() -> int:
             "first_seen_utc": first_seen,
             "last_seen_utc": iso(now),
             "last_alert_utc": iso(now) if should_alert else last_alert,
+            "alert_delivered": False if should_alert else prev.get("alert_delivered", True),
         }
         if should_alert:
             new_findings.append(f)
@@ -264,6 +276,8 @@ def main() -> int:
             lines.append(f"- plus {len(new_findings)-6} more finding(s)")
         body = "\n".join(lines)
         ok, status = send_twilio_sms(body)
+        for finding in new_findings:
+            active_now[finding_key(finding)]["alert_delivered"] = bool(ok)
         append_alert_log(alert_log, f"ALERT send={ok} status={status} body={body!r}")
         if not ok:
             print(body)
