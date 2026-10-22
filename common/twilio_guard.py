@@ -70,13 +70,13 @@ def send_sms(
     if SILENCE:
         _log(
             LOG_FILE,
-            f"BLOCKED(silence) to={to} idem={idem} body={body[:160]!r} kwargs={{{', '.join(kwargs)}}}",
+            f"BLOCKED(silence) idem={idem}",
         )
         return {"status": "blocked", "reason": "silence", "to": to, "idem": idem}
     if not ENABLE_SEND:
         _log(
             LOG_FILE,
-            f"BLOCKED(enable_flag_missing) to={to} idem={idem} body={body[:160]!r}",
+            f"BLOCKED(enable_flag_missing) idem={idem}",
         )
         return {
             "status": "blocked",
@@ -85,13 +85,13 @@ def send_sms(
             "idem": idem,
         }
     if not _rate_ok():
-        _log(LOG_FILE, f"BLOCKED(rate_limit) to={to} idem={idem}")
+        _log(LOG_FILE, f"BLOCKED(rate_limit) idem={idem}")
         return {"status": "blocked", "reason": "rate-limit", "to": to, "idem": idem}
     try:
         msg = getattr(client.messages, "create")(to=to, body=body, **kwargs)
         sid = getattr(msg, "sid", None)
-        _log(SEND_LOG, f"SENT to={to} idem={idem} sid={sid} body={body[:160]!r}")
+        _log(SEND_LOG, f"SENT idem={idem} sid={sid}")
         return {"status": "sent", "to": to, "sid": sid, "idem": idem}
     except Exception as e:
-        _log(LOG_FILE, f"ERROR(to={to}, idem={idem}) {type(e).__name__}: {e}")
+        _log(LOG_FILE, f"ERROR idem={idem} type={type(e).__name__}")
         raise
