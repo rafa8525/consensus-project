@@ -668,10 +668,18 @@ def summarize_health(text: str) -> tuple[str, datetime | None, list[str], list[s
         if status_match:
             status = status_match.group(1).upper()
 
-    for match in re.finditer(r"20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?", text):
-        dt = parse_datetime(match.group(0))
-        if dt and (updated is None or dt > updated):
-            updated = dt
+    # Snapshot freshness is based solely on its explicit generation timestamp.
+    # A future appointment or component event must not make an old report fresh.
+    stamp_re = re.compile(
+        r"^\s*[-*]?\s*(?:Generated(?:\s+at)?|Snapshot\s+generated(?:\s+at)?)\s*:\s*"
+        r"(20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))\s*$",
+        re.I | re.M,
+    )
+    stamps = stamp_re.findall(text)
+    if len(stamps) == 1:
+        updated = parse_datetime(stamps[0])
+        if updated is not None and updated > utc_now() + timedelta(minutes=2):
+            updated = None
 
     expected_env = {
         item.strip().casefold()
@@ -757,6 +765,11 @@ def detect_system_health(ctx: Context) -> None:
         problem_text = "The snapshot does not state the component-level cause."
 
     normalized_status = status.upper()
+    if age_minutes is None or age_minutes > HEALTH_STALE_MINUTES:
+        # Stale or unparseable evidence must never produce a healthy verdict.
+        if normalized_status == "OK":
+            status = "WARN"
+            normalized_status = "WARN"
     if normalized_status == "OK":
         action = "No corrective action required."
         confidence = "HIGH"
@@ -792,7 +805,14 @@ def detect_system_health(ctx: Context) -> None:
         "Aggregate status is parsed before component rows, and warning components are classified as expected or unexpected.",
         action, (str(path),),
     ))
-    if age_minutes is not None and age_minutes > HEALTH_STALE_MINUTES:
+    if age_minutes is None:
+        ctx.findings.append(Finding(
+            "System/Project", "HIGH", "Health snapshot freshness is unknown or invalid.",
+            "Missing, ambiguous, or future-dated generation timestamp.",
+            "Regenerate the health snapshot before trusting downstream predictions.",
+            (str(path),),
+        ))
+    elif age_minutes > HEALTH_STALE_MINUTES:
         ctx.findings.append(Finding(
             "System/Project", "MEDIUM", f"Health snapshot is stale ({age_minutes} minutes old).",
             f"Freshness exceeded the configured {HEALTH_STALE_MINUTES}-minute threshold.",

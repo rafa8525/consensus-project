@@ -386,17 +386,43 @@ def check_absorption_and_prediction() -> None:
                 WARN.append(f"Could not parse absorption public marker timestamp: {exc}")
 
     today = now_utc().strftime("%Y-%m-%d")
+    # At midnight, yesterday's valid daily feed can still be within the
+    # 26-hour freshness SLA. Do not raise false missing-feed alarms.
+    yesterday = (now_utc() - dt.timedelta(days=1)).strftime("%Y-%m-%d")
     pred_candidates = [
         MEMORY / "logs" / "system" / "predictions" / f"prediction_feed_{today}.md",
         BASE / "memory" / "logs" / "system" / "predictions" / f"prediction_feed_{today}.md",
+        MEMORY / "logs" / "system" / "predictions" / f"prediction_feed_{yesterday}.md",
+        BASE / "memory" / "logs" / "system" / "predictions" / f"prediction_feed_{yesterday}.md",
     ]
-    pred = next((p for p in pred_candidates if p.exists()), None)
+    # ACS-05 independently verifies Prediction Feed content, not file mtime alone.
+    pred = next((p for p in pred_candidates if p.is_file()), None)
     if pred is None:
-        WARN.append(f"Today's prediction feed is missing: {today}")
+        CRITICAL.append(f"Today's prediction feed is missing: {today}")
     else:
-        age = file_age_hours(pred)
-        if age is not None and age > MAX_PREDICTION_AGE_HOURS:
-            WARN.append(f"Prediction feed appears stale: {age:.1f} hours old")
+        body = text_of(pred)
+        stamps = re.findall(
+            r"^Generated:\s*(20\d{2}-\d{2}-\d{2}T[^\s]+)\s*$",
+            body, re.M,
+        )
+        if len(stamps) != 1:
+            CRITICAL.append("Prediction feed has no unique Generated timestamp")
+        else:
+            try:
+                generated = dt.datetime.fromisoformat(stamps[0].replace("Z", "+00:00"))
+                if generated.tzinfo is None:
+                    raise ValueError("timezone required")
+                age = (now_utc() - generated.astimezone(dt.timezone.utc)).total_seconds() / 3600
+                if age < -0.05 or age > MAX_PREDICTION_AGE_HOURS:
+                    CRITICAL.append(f"Prediction feed is stale or future dated: {age:.1f}h")
+            except ValueError:
+                CRITICAL.append("Prediction feed Generated timestamp is invalid")
+        if "Health snapshot is stale" in body or "Health snapshot freshness is unknown" in body:
+            CRITICAL.append("Prediction Feed has untrusted upstream health evidence")
+        if re.search(r"System health:\s*(?:WARN|ERROR|CRITICAL|FAIL)", body, re.I):
+            WARN.append("Prediction Feed reports degraded upstream system health")
+
+
 
 
 def check_resource_pressure() -> None:
