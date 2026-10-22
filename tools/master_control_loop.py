@@ -160,6 +160,9 @@ def run_guard_cycle():
     return run_group(
         "Guard Cycle",
         [
+            # Refresh upstream evidence before ACS-05 evaluates the system.
+            "gmail_refresh_guard",
+            "core_monitors_bundle",
             "continuity_guardian_agent",
             "infrastructure_guardian",
             "log_repair_guard",
