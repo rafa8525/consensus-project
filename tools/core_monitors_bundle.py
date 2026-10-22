@@ -22,7 +22,7 @@ VERSION = "replacement-v2026-07-10-remove-obsolete-absorb-runner"
 MAX_AGE_S = int(os.environ.get("CORE_MONITORS_MAX_AGE_S", str(36 * 3600)))
 
 CANONICAL_MEM_ROOT = Path(
-    os.environ.get("CONSENSUS_MEMORY_ROOT", str(Path(__file__).resolve().parents[1] / "memory"))
+    os.environ.get("CONSENSUS_MEMORY_ROOT", str(Path.home() / "memory"))
 ).expanduser()
 
 REPO_ROOT = Path(
@@ -159,6 +159,36 @@ def candidate_paths(*relative_paths: str) -> List[Path]:
     return paths
 
 
+def gmail_guard_check(now_ts: float) -> CheckResult:
+    """Require a recent terminal OAuth success, not just a recently touched file."""
+    paths = candidate_paths("logs/system/gmail_refresh_guard.log")
+    best = newest_existing(paths)
+    if best is None:
+        return CheckResult("gmail_refresh_guard", "warn", "missing canonical OAuth guard log")
+    path, mtime = best
+    age = now_ts - mtime
+    if age < -120 or age > MAX_AGE_S:
+        return CheckResult("gmail_refresh_guard", "warn",
+                           f"stale or future-dated ({fmt_age(max(0, age))}): {path}")
+    try:
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return CheckResult("gmail_refresh_guard", "warn", f"unreadable: {path}")
+    # Find the most recent complete attempt. Any start after the last OK
+    # indicates an unfinished attempt, which cannot prove current health.
+    for line in reversed(lines[-100:]):
+        if "start gmail_refresh_guard" in line:
+            return CheckResult("gmail_refresh_guard", "warn",
+                               f"latest guard attempt did not complete successfully: {path}")
+        if "error " in line.lower():
+            return CheckResult("gmail_refresh_guard", "warn",
+                               f"latest guard attempt failed: {path}")
+        if "ok gmail_api_authenticated" in line:
+            return CheckResult("gmail_refresh_guard", "ok", f"OAuth API check passed: {path}")
+    return CheckResult("gmail_refresh_guard", "warn",
+                       f"no verified OAuth API success: {path}")
+
+
 def build_checks(now_ts: float) -> List[CheckResult]:
     today_utc = utc_now().strftime("%Y-%m-%d")
     checks: List[CheckResult] = []
@@ -194,18 +224,9 @@ def build_checks(now_ts: float) -> List[CheckResult]:
         )
     )
 
-    checks.append(
-        ok_if_recent_any(
-            "gmail_refresh_guard",
-            candidate_paths(
-                "logs/system/gmail_status.md",
-                "logs/system/gmail_refresh_guard.log",
-                "logs/system/gmail_monitor.jsonl",
-            ),
-            max_age_s=MAX_AGE_S,
-            now_ts=now_ts,
-        )
-    )
+    # Canonical OAuth guard is authoritative; old v3 service-account logs and
+    # generic Gmail status notes are not proof of a successful API check.
+    checks.append(gmail_guard_check(now_ts))
 
     checks.append(
         ok_if_recent_any(
@@ -314,7 +335,8 @@ def main() -> int:
     snapshot = build_snapshot_text(checks)
     write_snapshot(snapshot)
     print(snapshot, end="")
-    return 0
+    # Missing or failing dependencies must propagate a nonzero process exit.
+    return 0 if overall_status(checks) == "ok" else 1
 
 
 if __name__ == "__main__":
