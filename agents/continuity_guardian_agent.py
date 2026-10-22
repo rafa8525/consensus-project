@@ -386,9 +386,14 @@ def check_absorption_and_prediction() -> None:
                 WARN.append(f"Could not parse absorption public marker timestamp: {exc}")
 
     today = now_utc().strftime("%Y-%m-%d")
+    # At midnight, yesterday's valid daily feed can still be within the
+    # 26-hour freshness SLA. Do not raise false missing-feed alarms.
+    yesterday = (now_utc() - dt.timedelta(days=1)).strftime("%Y-%m-%d")
     pred_candidates = [
         MEMORY / "logs" / "system" / "predictions" / f"prediction_feed_{today}.md",
         BASE / "memory" / "logs" / "system" / "predictions" / f"prediction_feed_{today}.md",
+        MEMORY / "logs" / "system" / "predictions" / f"prediction_feed_{yesterday}.md",
+        BASE / "memory" / "logs" / "system" / "predictions" / f"prediction_feed_{yesterday}.md",
     ]
     # ACS-05 independently verifies Prediction Feed content, not file mtime alone.
     pred = next((p for p in pred_candidates if p.is_file()), None)
