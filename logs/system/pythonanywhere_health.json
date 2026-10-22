@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 12.1,
+    "age_seconds": 44116.1,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 12.1,
+      "age_seconds": 44116.1,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 79.5,
+      "age_seconds": 44183.5,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-21T18:47:16.890394+00:00",
@@ -34,30 +34,40 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 36.2,
+      "age_seconds": 34243.3,
       "agent": "ACS-03",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-21T18:48:00.244264+00:00",
+      "last_execution_utc": "2026-10-21T21:32:57.077857+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 1.0,
+      "age_seconds": 1.5,
       "agent": "ACS-04",
-      "health_status": "healthy",
-      "last_execution_utc": "2026-10-21T18:48:35.383287+00:00",
+      "diagnostics": {
+        "findings": [
+          {
+            "code": "WORKTREE_DIRTY",
+            "repaired": false,
+            "severity": "warning"
+          }
+        ],
+        "overall_status": "warning"
+      },
+      "health_status": "warning",
+      "last_execution_utc": "2026-10-22T07:03:38.908660+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
-      "status": "current",
+      "status": "degraded",
       "verified": true
     },
     "ACS-05": {
       "age_seconds": 0.1,
       "agent": "ACS-05",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-21T18:48:36.342780+00:00",
+      "last_execution_utc": "2026-10-22T07:03:40.292936+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -68,14 +78,14 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-20T22:07:58.529428+00:00",
+      "mtime_utc": "2026-10-21T21:32:34.676037+00:00",
       "path": "agents",
       "size": 4096
     },
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-21T18:47:15.851602+00:00",
+      "mtime_utc": "2026-10-22T06:01:15.341206+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,7 +104,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-21T18:48:36.393714+00:00",
+  "generated_at_utc": "2026-10-22T07:03:40.393578+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -106,7 +116,7 @@
     "status": {
       "ok": true,
       "returncode": 0,
-      "tracked_changes_count": 22
+      "tracked_changes_count": 23
     },
     "unresolved_merge_conflict": false
   },
@@ -150,8 +160,12 @@
       "outcomes": {
         "ACS-04": [
           {
-            "ok": true,
-            "returncode": 0
+            "ok": false,
+            "returncode": 1
+          },
+          {
+            "ok": false,
+            "returncode": 1
           }
         ],
         "ACS-05": [
