@@ -438,10 +438,14 @@ class InfrastructureGuardian:
         except OSError:
             age_seconds = 0
 
+        # Active Git operations legitimately hold index.lock for short periods.
+        # Escalate only a stale, unexplained lock; never remove a recent lock.
+        stale_lock = not processes and age_seconds >= 300
         finding = self.add(
-            "critical",
-            "GIT_INDEX_LOCK",
-            "Git index.lock exists.",
+            "critical" if stale_lock else "healthy",
+            "GIT_INDEX_LOCK" if stale_lock else "GIT_LOCK_ACTIVE",
+            "Stale Git index.lock with no detected Git process." if stale_lock
+            else "Git index.lock appears active or within its startup grace period.",
             {
                 "path": str(lock),
                 "age_seconds": round(age_seconds, 1),
@@ -449,7 +453,7 @@ class InfrastructureGuardian:
             },
         )
 
-        safe_to_remove = not processes and age_seconds >= 300
+        safe_to_remove = stale_lock
         if (
             self.apply_repairs
             and self.config.auto_remove_stale_locks
