@@ -9,6 +9,21 @@ from pathlib import Path
 AGENTS = ("ACS-01", "ACS-02", "ACS-03", "ACS-04", "ACS-05")
 METRIC_CAP = 20000
 
+def _metric_rows(path: Path):
+    try:
+        with path.open(encoding="utf-8") as handle:
+            for index, line in enumerate(handle):
+                if index >= METRIC_CAP:
+                    break
+                try:
+                    item = json.loads(line)
+                    if isinstance(item, dict):
+                        yield item
+                except (ValueError, TypeError):
+                    continue
+    except OSError:
+        return
+
 def evaluate(repo: Path) -> dict:
     state_dir = repo / "memory/agents"
     source = state_dir / "state.json"
@@ -75,6 +90,29 @@ def evaluate(repo: Path) -> dict:
         "success_rate": round(counts["supervisor_success"] / n, 4) if n else None,
         "scope": "supervisor cycles only, up to first 20000 metric rows; not per-agent learning",
     }
+    # Outcome history begins when the per-agent metric was first recorded.
+    # Do not backfill child outcomes from aggregate supervisor metrics.
+    per_agent = {agent: {"observations": 0, "healthy": 0, "degraded": 0, "success_rate": None}
+                 for agent in AGENTS}
+    for event in _metric_rows(metrics):
+        if event.get("metric") != "agent_cycle_outcome":
+            continue
+        agent = event.get("agent")
+        if agent not in per_agent:
+            continue
+        status = event.get("status")
+        if status not in ("healthy", "degraded", "warning", "critical", "execution_failure"):
+            continue
+        row = per_agent[agent]
+        row["observations"] += 1
+        if status == "healthy":
+            row["healthy"] += 1
+        else:
+            row["degraded"] += 1
+    for row in per_agent.values():
+        if row["observations"]:
+            row["success_rate"] = round(row["healthy"] / row["observations"], 4)
+    result["per_agent_metric_history"] = per_agent
     result["learning_effectiveness_verified"] = False
     result["note"] = "A healthy execution or artifact is not evidence of decision learning. Historical agent rates require per-cycle measurements."
     return result
