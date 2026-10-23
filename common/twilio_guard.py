@@ -64,16 +64,17 @@ def get_status() -> Dict[str, Any]:
 
 
 def send_sms(
-    client, *, to: str, body: str, template: str = "",\n    silence: bool | None = None, enable_send: bool | None = None, **kwargs
+    client, *, to: str, body: str, template: str = "",
+    silence: bool | None = None, enable_send: bool | None = None, **kwargs
 ) -> Dict[str, Any]:
     idem = _hash_idempotency(to, body, template)
-    if SILENCE:
+    if SILENCE if silence is None else silence:
         _log(
             LOG_FILE,
             f"BLOCKED(silence) idem={idem}",
         )
         return {"status": "blocked", "reason": "silence", "to": to, "idem": idem}
-    if not ENABLE_SEND:
+    if not (ENABLE_SEND if enable_send is None else enable_send):
         _log(
             LOG_FILE,
             f"BLOCKED(enable_flag_missing) idem={idem}",
