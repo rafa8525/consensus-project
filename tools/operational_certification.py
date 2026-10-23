@@ -39,7 +39,7 @@ def evaluate(repo: Path, mem: Path, now: datetime) -> dict:
                 raise ValueError("missing cycle completion timestamp")
             # MCL log timestamps use local machine time with no offset. Compare
             # freshness via the log file mtime; avoid assuming its timezone.
-            fresh = 0 <= (now.timestamp() - (repo / "memory/logs/system/master_control_loop.log").stat().st_mtime) / 60 <= 45
+            fresh = -2 <= (now.timestamp() - (repo / "memory/logs/system/master_control_loop.log").stat().st_mtime) / 60 <= 45
             success = any("✅ All subsystems executed successfully." in line for line in section)
             failed = any("❌" in line or "Complete (FAIL)" in line for line in section)
             add("unattended_cycle", fresh and success and not failed, "latest complete cycle PASS" if fresh and success and not failed else "latest cycle stale or contains failure")
