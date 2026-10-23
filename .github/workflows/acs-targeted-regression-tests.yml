@@ -54,6 +54,7 @@ jobs:
             tests.test_health_master_pipeline \
             tests.test_continuity_sms_delivery \
             tests.test_scheduled_twilio \
+            tests.test_agent_learning_simulation \
             tests.test_production_readiness \
             tests.test_acs01_launcher_exit \
             tests.test_gmail_token_persistence \
