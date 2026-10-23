@@ -6,7 +6,7 @@ SILENCE = os.getenv("TWILIO_SILENCE", "0").strip() == "1"
 ENABLE_SEND = os.getenv("TWILIO_ENABLE_SEND", "0").strip() == "1"
 RATE_PER_MIN = int(os.getenv("TWILIO_RATE_PER_MIN", "10"))
 
-LOG_DIR = Path("/home/rafa1215/consensus-project/memory/logs/alerts")
+LOG_DIR = Path(os.getenv("CONSENSUS_REPO_ROOT", str(Path.home() / "consensus-project"))) / "memory/logs/alerts"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 LOG_FILE = LOG_DIR / "twilio_blocked.log"
 SEND_LOG = LOG_DIR / "twilio_send.log"
