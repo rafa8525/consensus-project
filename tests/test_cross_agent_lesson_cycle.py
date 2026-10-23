@@ -14,6 +14,7 @@ from unittest.mock import patch
 from agents.evaluator import Evaluator
 from agents.core.agent_base import Agent
 from tools.shared_agent_lessons import produce, consume, lessons_path
+from tools import absorb_memory
 
 class SharedLessonCycleSimulation(unittest.TestCase):
     def setUp(self):
@@ -106,6 +107,18 @@ class SharedLessonCycleSimulation(unittest.TestCase):
         self.assertIn("produce(Path.cwd(), results)",src)
         evaluator=(Path(__file__).resolve().parents[1]/"agents/evaluator.py").read_text()
         self.assertIn("lessons = consume(Path.cwd())",evaluator)
+
+    def test_13_actual_acs02_absorber_indexes_shared_lesson(self):
+        produce(self.repo, self.failure("ACS-02"), now=self.now)
+        with patch.object(absorb_memory, "memory_root", return_value=self.repo / "memory"), \\
+             patch.object(absorb_memory, "output_file", return_value=self.repo / "memory/centralized_knowledge_base.txt"):
+            result = absorb_memory.absorb_memory()
+        self.assertEqual(result, 0)
+        content = (self.repo / "memory/centralized_knowledge_base.txt").read_text()
+        self.assertIn("absorption_not_verified", content)
+        outcome, report = self.evaluator()
+        self.assertEqual(outcome["lessons_used"], 1)
+        self.assertIn("ACS-02", report)
 
     def test_13_evaluation_has_no_automated_repair(self):
         src=(Path(__file__).resolve().parents[1]/"agents/evaluator.py").read_text()
