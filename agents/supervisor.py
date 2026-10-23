@@ -256,6 +256,19 @@ class Supervisor(Agent):
         store.save(st)
 
         record("supervisor_cycle", status=st["last_supervisor_status"])
+        # Minimal, append-only per-agent outcomes permit future longitudinal
+        # analysis without storing health data, OAuth details or SMS content.
+        # Metrics are observational: success rates alone do NOT prove learning.
+        record("agent_cycle_outcome", agent="ACS-01",
+               status="healthy" if ok else "degraded")
+        for agent in ("ACS-02", "ACS-03", "ACS-04", "ACS-05"):
+            outcome = results.get(agent.lower().replace("-", "_"), {})
+            record(
+                "agent_cycle_outcome",
+                agent=agent,
+                status=str(outcome.get("status", "execution_failure")),
+                attempt_count=outcome.get("attempt_count"),
+            )
         return {
             "status": st["last_supervisor_status"],
             "started_ts": started,
