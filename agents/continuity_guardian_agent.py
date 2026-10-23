@@ -465,22 +465,37 @@ def check_vpn_simulation() -> None:
 def maybe_send_sms(summary: str, fingerprint: str, state: dict) -> None:
     if state.get("last_alert_fingerprint") == fingerprint:
         return
-    sid = os.getenv("TWILIO_ACCOUNT_SID", "")
-    token = os.getenv("TWILIO_AUTH_TOKEN", "")
-    from_num = os.getenv("TWILIO_FROM_NUMBER", "")
-    to_num = os.getenv("TWILIO_TO_NUMBER", "")
-    if not all([sid, token, from_num, to_num]):
+
+    # Scheduled PythonAnywhere tasks do not inherit the web-app environment.
+    # Resolve only the existing private config used by the successful manual
+    # Twilio delivery test; do not export credentials or change saved settings.
+    try:
+        from common.twilio_config import load_existing_twilio_settings
+        settings = load_existing_twilio_settings()
+    except Exception as exc:
+        WARN.append(f"Continuity SMS config unavailable: {type(exc).__name__}")
+        return
+
+    required = ("TWILIO_ACCOUNT_SID", "TWILIO_AUTH_TOKEN",
+                "TWILIO_FROM_NUMBER", "TWILIO_TO_NUMBER")
+    if not all(settings.get(key) for key in required):
         WARN.append("Continuity SMS not delivered: Twilio environment incomplete")
         return
+
+    # Missing send authorization is a safe block, NOT a reason to bypass the
+    # guard. Test-mode opt-in never modifies saved configuration.
     try:
-        # The canonical guard controls sending, opt-in and rate limits.
-        # Do not fall back to a direct Twilio send if it blocks or fails.
         from twilio.rest import Client
         from common import twilio_guard
 
-        client = Client(sid, token)
+        client = Client(settings["TWILIO_ACCOUNT_SID"], settings["TWILIO_AUTH_TOKEN"])
         delivery = twilio_guard.send_sms(
-            client, to=to_num, from_=from_num, body=summary[:1500]
+            client,
+            to=settings["TWILIO_TO_NUMBER"],
+            from_=settings["TWILIO_FROM_NUMBER"],
+            body=summary[:1500],
+            silence=settings.get("TWILIO_SILENCE", "0") == "1",
+            enable_send=settings.get("TWILIO_ENABLE_SEND", "0") == "1",
         )
         if not isinstance(delivery, dict) or delivery.get("status") != "sent":
             reason = delivery.get("reason", "unknown") if isinstance(delivery, dict) else "invalid_response"
@@ -488,9 +503,10 @@ def maybe_send_sms(summary: str, fingerprint: str, state: dict) -> None:
             return
 
         state["last_alert_fingerprint"] = fingerprint
-        INFO.append("Continuity alert sent by SMS")
+        INFO.append("Continuity alert accepted by Twilio")
     except Exception as exc:
         WARN.append(f"Could not send Twilio continuity alert: {type(exc).__name__}: {exc}")
+
 
 def _run_unlocked(force: bool = False) -> int:
     state = load_state()
