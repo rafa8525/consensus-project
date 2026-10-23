@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 AGENTS = {"ACS-01", "ACS-02", "ACS-03", "ACS-04", "ACS-05"}
@@ -51,7 +52,7 @@ def verify_evidence(repo: Path, row: dict) -> bool:
         return False
 
 def assess(repo: Path) -> dict:
-    groups = defaultdict(lambda: {"before": [], "after": [], "rejected": 0})
+    groups = defaultdict(lambda: {"before": [], "after": [], "rejected": 0, "seen": set()})
     rows = repo / "memory/logs/agents/learning_evaluations.jsonl"
     for row in read_events(rows):
         agent = row.get("agent")
@@ -64,17 +65,28 @@ def assess(repo: Path) -> dict:
             or phase not in ("before", "after") or type(passed) is not bool):
             continue
         key = (agent, change, scenario)
-        if verify_evidence(repo, row):
-            groups[key][phase].append(int(passed))
+        try:
+            stamp = datetime.fromisoformat(str(row["evaluated_at_utc"]).replace("Z", "+00:00"))
+            if stamp.tzinfo is None:
+                raise ValueError("timezone required")
+            stamp = stamp.astimezone(timezone.utc).timestamp()
+        except (ValueError, KeyError, TypeError, OverflowError):
+            stamp = None
+        fingerprint = row.get("evidence_sha256")
+        if (stamp is not None and verify_evidence(repo, row)
+                and fingerprint not in groups[key]["seen"]):
+            groups[key]["seen"].add(fingerprint)
+            groups[key][phase].append((stamp, int(passed)))
         else:
             groups[key]["rejected"] += 1
     assessments = []
     for (agent, change, scenario), data in sorted(groups.items()):
         before = data["before"]
         after = data["after"]
-        enough = len(before) >= MIN_SAMPLES and len(after) >= MIN_SAMPLES
-        b_rate = sum(before) / len(before) if before else None
-        a_rate = sum(after) / len(after) if after else None
+        correctly_ordered = bool(before and after and max(t for t, _ in before) < min(t for t, _ in after))
+        enough = len(before) >= MIN_SAMPLES and len(after) >= MIN_SAMPLES and correctly_ordered
+        b_rate = sum(v for _, v in before) / len(before) if before else None
+        a_rate = sum(v for _, v in after) / len(after) if after else None
         improved = bool(enough and a_rate > b_rate)
         assessments.append({
             "agent": agent, "change_id": change, "scenario_id": scenario,
@@ -82,6 +94,7 @@ def assess(repo: Path) -> dict:
             "before_pass_rate": round(b_rate, 4) if b_rate is not None else None,
             "after_pass_rate": round(a_rate, 4) if a_rate is not None else None,
             "evidence_rejected": data["rejected"],
+            "phases_chronological": correctly_ordered,
             "observed_improvement_supported": improved,
             "status": "observed_improvement" if improved else ("no_improvement_observed" if enough else "insufficient_evidence"),
         })
