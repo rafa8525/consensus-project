@@ -245,6 +245,20 @@ class Supervisor(Agent):
             Path.home() / ".secrets/google/acs_backup_success.json"
         )
 
+        # Publish bounded lessons from verified child failures for next cycle.
+        # No attempted code repair or sensitive log/health content is persisted.
+        from tools.shared_agent_lessons import produce
+        try:
+            results["lesson_exchange"] = {
+                "ok": True,
+                "result": produce(Path.cwd(), results),
+            }
+        except Exception as exc:
+            results["lesson_exchange"] = {
+                "ok": False,
+                "error_type": type(exc).__name__,
+            }
+
         finished = time.time()
         ok = all(v.get("ok") is True for v in results.values())
 
