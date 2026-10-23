@@ -18,12 +18,12 @@ class ScheduledTwilioTests(unittest.TestCase):
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(body)
     def test_legacy_credentials_but_no_enable_remains_blocked(self):
-        self.write("reminder-api/.env", "TWILIO_ACCOUNT_SID=ACexample\\nTWILIO_AUTH_TOKEN=secret\\nTWILIO_FROM_NUMBER=+1111\\nTWILIO_TO_NUMBER=+1222\\n")
+        self.write("reminder-api/.env", "TWILIO_ACCOUNT_SID=ACexample\nTWILIO_AUTH_TOKEN=secret\nTWILIO_FROM_NUMBER=+1111\nTWILIO_TO_NUMBER=+1222\n")
         settings = load_existing_twilio_settings(self.root, self.env)
         self.assertEqual(settings["TWILIO_FROM_NUMBER"], "+1111")
         self.assertEqual(settings["TWILIO_ENABLE_SEND"], "0")
     def test_explicit_saved_opt_in_with_runtime_override(self):
-        self.write("reminder-api/.env", "TWILIO_ENABLE_SEND=1\\nTWILIO_SILENCE=0\\n")
+        self.write("reminder-api/.env", "TWILIO_ENABLE_SEND=1\nTWILIO_SILENCE=0\n")
         settings = load_existing_twilio_settings(self.root, {"TWILIO_SILENCE": "1"})
         self.assertEqual(settings["TWILIO_ENABLE_SEND"], "1")
         self.assertEqual(settings["TWILIO_SILENCE"], "1")
