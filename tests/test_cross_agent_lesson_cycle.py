@@ -110,8 +110,8 @@ class SharedLessonCycleSimulation(unittest.TestCase):
 
     def test_13_actual_acs02_absorber_indexes_shared_lesson(self):
         produce(self.repo, self.failure("ACS-02"), now=self.now)
-        with patch.object(absorb_memory, "memory_root", return_value=self.repo / "memory"), \\
-             patch.object(absorb_memory, "output_file", return_value=self.repo / "memory/centralized_knowledge_base.txt"):
+        with (patch.object(absorb_memory, "memory_root", return_value=self.repo / "memory"),
+              patch.object(absorb_memory, "output_file", return_value=self.repo / "memory/centralized_knowledge_base.txt")):
             result = absorb_memory.absorb_memory()
         self.assertEqual(result, 0)
         content = (self.repo / "memory/centralized_knowledge_base.txt").read_text()
