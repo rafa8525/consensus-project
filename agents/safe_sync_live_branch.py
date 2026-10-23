@@ -28,6 +28,7 @@ RUNTIME_PREFIXES = (
     "memory/logs/",
     "memory/agents/",
     "memory/exports/",
+    "memory/state/",
 )
 RUNTIME_FILES = {
     "memory/centralized_knowledge_base.txt",
