@@ -79,6 +79,15 @@ def evaluate(repo: Path) -> dict:
     result["note"] = "A healthy execution or artifact is not evidence of decision learning. Historical agent rates require per-cycle measurements."
     return result
 
+def simulated_promotion_gate(snapshot: dict) -> tuple[bool, str]:
+    """Conservative all-five deployment check. Does not deploy or edit files."""
+    agents = snapshot.get("agents", {})
+    if any(not isinstance(agents.get(agent), dict)
+           or agents[agent].get("latest_healthy") is not True
+           for agent in AGENTS):
+        return False, "one or more ACS-01..05 agents unverified or unhealthy"
+    return True, "all five latest statuses healthy; NOT proof of learning improvement"
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=Path, default=Path.home() / "consensus-project")
