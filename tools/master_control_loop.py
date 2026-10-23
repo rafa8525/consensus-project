@@ -100,7 +100,7 @@ def run_module(module_name: str, func_name: str = "run") -> bool:
 
             if module_name == "infrastructure_guardian":
                 env["CONSENSUS_REPO_ROOT"] = BASE_DIR
-                env["CONSENSUS_MEMORY_ROOT"] = os.path.join(BASE_DIR, "memory")
+                env["CONSENSUS_MEMORY_ROOT"] = os.path.join(os.path.expanduser("~"), "memory")
 
             result = subprocess.run(
                 [sys.executable, script_path],
