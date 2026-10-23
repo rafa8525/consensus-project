@@ -1,10 +1,10 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46830.1,
+    "age_seconds": 67.7,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
-    "last_execution_utc": "2026-10-22T18:02:06.361468+00:00",
+    "last_execution_utc": "2026-10-23T18:02:51.709834+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
     "status": "current",
@@ -13,54 +13,72 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46830.1,
+      "age_seconds": 67.7,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
-      "last_execution_utc": "2026-10-22T18:02:06.361468+00:00",
+      "last_execution_utc": "2026-10-23T18:02:51.709834+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46898.1,
+      "age_seconds": 177.1,
       "agent": "ACS-02",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-22T18:00:58.373606+00:00",
+      "last_execution_utc": "2026-10-23T18:01:02.319360+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 46859.8,
+      "age_seconds": 141.3,
       "agent": "ACS-03",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-22T18:01:36.696120+00:00",
+      "last_execution_utc": "2026-10-23T18:01:38.085359+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 46790.9,
+      "age_seconds": 7.3,
       "agent": "ACS-04",
-      "health_status": "healthy",
-      "last_execution_utc": "2026-10-22T18:02:45.634571+00:00",
+      "diagnostics": {
+        "findings": [
+          {
+            "code": "GIT_BEHIND",
+            "repaired": false,
+            "severity": "critical"
+          }
+        ],
+        "overall_status": "critical"
+      },
+      "health_status": "critical",
+      "last_execution_utc": "2026-10-23T18:03:52.138370+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
-      "status": "current",
+      "status": "degraded",
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 46789.3,
+      "age_seconds": 0.1,
       "agent": "ACS-05",
-      "health_status": "healthy",
-      "last_execution_utc": "2026-10-22T18:02:47.170520+00:00",
+      "diagnostics": {
+        "critical_count": 1,
+        "issue_codes": [
+          "CONTINUITY_CRITICAL"
+        ],
+        "last_status": "CRITICAL",
+        "warning_count": 1
+      },
+      "health_status": "critical",
+      "last_execution_utc": "2026-10-23T18:03:59.362635+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
-      "status": "current",
+      "status": "degraded",
       "verified": true
     }
   },
@@ -68,14 +86,14 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-22T22:17:18.512306+00:00",
+      "mtime_utc": "2026-10-23T16:30:09.345803+00:00",
       "path": "agents",
       "size": 4096
     },
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-23T06:01:14.277624+00:00",
+      "mtime_utc": "2026-10-23T18:01:01.486268+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,11 +112,11 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-23T07:02:36.473552+00:00",
+  "generated_at_utc": "2026-10-23T18:03:59.424694+00:00",
   "git": {
     "last_commit": {
       "ok": true,
-      "sha": "2f309b500ded1ef97dacb26d3e5a77585ac89ada"
+      "sha": "ee41164917e5bb7a53d71ea79d19730da117f42e"
     },
     "origin_reachable": {
       "ok": true
@@ -133,17 +151,42 @@
   "schema_version": 6,
   "self_heal": {
     "branch_sync": {
+      "ahead_after": 0,
       "ahead_before": 0,
-      "behind_before": 1,
+      "behind_after": 0,
+      "behind_before": 0,
       "branch": "v1.1-dev",
-      "ok": false,
+      "head": "ee4116491",
+      "ok": true,
       "remote": "origin/v1.1-dev",
-      "returncode": 2,
-      "status": "blocked_local_source_changes"
+      "remote_head": "ee4116491",
+      "returncode": 0,
+      "status": "already_synced"
     },
     "post_sync_cycles": {
-      "attempted": false,
-      "outcomes": {}
+      "attempted": true,
+      "outcomes": {
+        "ACS-04": [
+          {
+            "ok": false,
+            "returncode": 2
+          },
+          {
+            "ok": false,
+            "returncode": 2
+          }
+        ],
+        "ACS-05": [
+          {
+            "ok": false,
+            "returncode": 2
+          },
+          {
+            "ok": false,
+            "returncode": 2
+          }
+        ]
+      }
     }
   },
   "source": "pythonanywhere"
