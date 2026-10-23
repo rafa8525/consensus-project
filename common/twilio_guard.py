@@ -64,7 +64,7 @@ def get_status() -> Dict[str, Any]:
 
 
 def send_sms(
-    client, *, to: str, body: str, template: str = "", **kwargs
+    client, *, to: str, body: str, template: str = "",\n    silence: bool | None = None, enable_send: bool | None = None, **kwargs
 ) -> Dict[str, Any]:
     idem = _hash_idempotency(to, body, template)
     if SILENCE:
