@@ -140,12 +140,12 @@ def run_module(module_name: str, func_name: str = "run") -> bool:
 
 
 def trigger_repair(failed_module: str):
-    repair_script = os.path.join(TOOLS_DIR, "agent_self_repair_loop.py")
-    if os.path.exists(repair_script):
-        log(f"🩺 Invoking self-repair sequence for {failed_module} ...")
-        subprocess.run([sys.executable, repair_script], cwd=BASE_DIR)
-    else:
-        log("⚠️ Repair script missing; cannot auto-recover.")
+    """Preserve evidence and report failure; never overwrite agent logs.
+
+    The historical agent_self_repair_loop.py rewrites log files rather than
+    repairing executable code. Repairs require review and tested patches.
+    """
+    log(f"⚠️ Repair required for {failed_module}; automatic log rewriting disabled.")
 
 
 def run_group(label: str, modules: list[str]) -> bool:
@@ -200,7 +200,7 @@ def run_knowledge_cycle():
 def run_agent_cycle():
     return run_group(
         "Agent Evolution/Repair Cycle",
-        ["agent_evolution_cycle", "agent_self_repair_loop"],
+        ["agent_capability_guard"],
     )
 
 
