@@ -8,7 +8,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from tools.agent_performance_baseline import evaluate
+from tools.agent_performance_baseline import evaluate, simulated_promotion_gate
 from agents import run_acs_cycle
 from agents.supervisor import Supervisor
 from tools import agent_capability_guard, knowledge_sharing_validator
@@ -124,8 +124,15 @@ class AgentFourStepSimulation(unittest.TestCase):
     def test_13_proposed_improvement_gate_fails_on_bad_supervisor_evidence(self):
         state = self.write_state(states=("healthy","execution_failure","healthy","healthy"), ok=False)
         path = self.root / "memory/agents/state.json"
-        approved, _ = agent_capability_guard.evaluate(path, state["last_supervisor_ts"])
+        # Existing guard checks only learning + ACS-02; strict promotion checks all five.
+        approved, _ = simulated_promotion_gate(evaluate(self.root))
         self.assertFalse(approved)
+
+    def test_13b_all_five_healthy_allows_only_simulated_promotion(self):
+        self.write_state()
+        approved, explanation = simulated_promotion_gate(evaluate(self.root))
+        self.assertTrue(approved)
+        self.assertIn("NOT proof of learning", explanation)
 
     def test_14_baseline_does_not_change_any_production_or_sandbox_file(self):
         self.write_state()
