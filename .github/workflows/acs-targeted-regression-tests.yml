@@ -34,6 +34,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install Twilio configuration parser for tests
+        run: python -m pip install python-dotenv
+      - name: Syntax-check Twilio alert modules
+        run: python -m py_compile common/twilio_guard.py common/twilio_config.py agents/continuity_guardian_agent.py
       - name: Run targeted regression suite
         env:
           PYTHONDONTWRITEBYTECODE: "1"
@@ -49,6 +53,7 @@ jobs:
             tests.test_absorb_memory_empty \
             tests.test_health_master_pipeline \
             tests.test_continuity_sms_delivery \
+            tests.test_scheduled_twilio \
             tests.test_production_readiness \
             tests.test_acs01_launcher_exit \
             tests.test_gmail_token_persistence \

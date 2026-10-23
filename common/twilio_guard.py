@@ -6,7 +6,7 @@ SILENCE = os.getenv("TWILIO_SILENCE", "0").strip() == "1"
 ENABLE_SEND = os.getenv("TWILIO_ENABLE_SEND", "0").strip() == "1"
 RATE_PER_MIN = int(os.getenv("TWILIO_RATE_PER_MIN", "10"))
 
-LOG_DIR = Path("/home/rafa1215/consensus-project/memory/logs/alerts")
+LOG_DIR = Path(os.getenv("CONSENSUS_REPO_ROOT", str(Path.home() / "consensus-project"))) / "memory/logs/alerts"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 LOG_FILE = LOG_DIR / "twilio_blocked.log"
 SEND_LOG = LOG_DIR / "twilio_send.log"
@@ -64,16 +64,17 @@ def get_status() -> Dict[str, Any]:
 
 
 def send_sms(
-    client, *, to: str, body: str, template: str = "",\n    silence: bool | None = None, enable_send: bool | None = None, **kwargs
+    client, *, to: str, body: str, template: str = "",
+    silence: bool | None = None, enable_send: bool | None = None, **kwargs
 ) -> Dict[str, Any]:
     idem = _hash_idempotency(to, body, template)
-    if SILENCE:
+    if SILENCE if silence is None else silence:
         _log(
             LOG_FILE,
             f"BLOCKED(silence) idem={idem}",
         )
         return {"status": "blocked", "reason": "silence", "to": to, "idem": idem}
-    if not ENABLE_SEND:
+    if not (ENABLE_SEND if enable_send is None else enable_send):
         _log(
             LOG_FILE,
             f"BLOCKED(enable_flag_missing) idem={idem}",
