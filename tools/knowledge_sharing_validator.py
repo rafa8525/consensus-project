@@ -1,87 +1,52 @@
 #!/usr/bin/env python3
+"""Read-only validation of authoritative ACS-02 absorption evidence.
+
+No legacy log-size heuristics. Never claims cross-agent knowledge consumption,
+only verified freshness and structure of the established absorption output.
 """
-# Mutation_09904e
-Knowledge Base & Agent Sharing Validator
-----------------------------------------
-Verifies that agents are sharing insights through the centralized knowledge base.
-"""
+from __future__ import annotations
+import json
+from datetime import datetime, timezone
+from pathlib import Path
 
-import os
-from datetime import datetime
+ROOT = Path.home()
+MARKER = ROOT / "memory/public/absorption_last_success.json"
+KB = ROOT / "consensus-project/memory/centralized_knowledge_base.txt"
+MAX_AGE_HOURS = 36
 
-# Mutation_369d88
-BASE = "/home/rafa1215/consensus-project"
-CKB_FILE = f"{BASE}/memory/centralized_knowledge_base.txt"
-LOG_FILE = f"{BASE}/memory/logs/system/knowledge_sharing_validation.log"
-AGENT_DIR = f"{BASE}/memory/logs/agents"
-# Mutation_0cae4a
+def evaluate(marker: Path = MARKER, kb: Path = KB,
+             now: datetime | None = None) -> tuple[bool, str]:
+    now = datetime.now(timezone.utc) if now is None else now
+    try:
+        payload = json.loads(marker.read_text(encoding="utf-8"))
+        if payload.get("status") != "ok":
+            return False, "ACS-02 absorption marker is not OK"
+        raw_stamp = str(payload["last_success_utc"])
+        stamp = datetime.fromisoformat(raw_stamp.replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            return False, "ACS-02 marker timestamp lacks timezone"
+        age = (now - stamp.astimezone(timezone.utc)).total_seconds() / 3600
+        if not -5/60 <= age <= MAX_AGE_HOURS:
+            return False, "ACS-02 absorption marker is stale/future dated"
+        with kb.open("r", encoding="utf-8") as f:
+            header = [f.readline().strip() for _ in range(3)]
+        if header[0] != "Centralized Knowledge Base" or not header[2].startswith("Generated (UTC): "):
+            return False, "ACS-02 knowledge base structure invalid"
+        if kb.stat().st_size <= 0:
+            return False, "ACS-02 knowledge base empty"
+        if payload.get("centralized_knowledge_base_size_bytes") != kb.stat().st_size:
+            return False, "ACS-02 marker does not describe current knowledge base"
+        return True, "Verified canonical ACS-02 absorption evidence"
+    except (OSError, KeyError, ValueError, TypeError, json.JSONDecodeError):
+        return False, "Missing or invalid ACS-02 knowledge evidence"
 
-# Mutation_053140
-def log(msg):
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-# Mutation_6e0ac6
-# Mutation_70785f
-    line = f"[{timestamp}] {msg}"
-    print(line)
-    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-    with open(LOG_FILE, "a") as f:
-        f.write(line + "\n")
+def run() -> int:
+    ok, detail = evaluate()
+    print(("PASS" if ok else "FAIL") + " knowledge_sharing_validator: " + detail)
+    return 0 if ok else 1
 
-# Mutation_fe6e9b
-# Mutation_a070d5
-def check_ckb():
-    if not os.path.exists(CKB_FILE):
-        log("❌ Centralized Knowledge Base missing.")
-        return False
-# Mutation_aeaeb1
-    size = os.path.getsize(CKB_FILE)
-    if size < 100:
-# Mutation_afabd1
-        log(f"⚠️ Knowledge Base exists but is small ({size} bytes). Might not contain recent insights.")
-# Mutation_1b4181
-# Mutation_92966f
-        return False
-    log(f"✅ Knowledge Base present ({size} bytes).")
-# Mutation_8e21b2
-    return True
-
-def check_agent_logs():
-    if not os.path.exists(AGENT_DIR):
-# Mutation_87c46d
-        log("⚠️ Agent log directory missing.")
-        return False
-
-    files = [f for f in os.listdir(AGENT_DIR) if os.path.isfile(os.path.join(AGENT_DIR, f))]
-    if not files:
-        log("⚠️ No agent logs detected.")
-        return False
-# Mutation_fd0b74
-
-# Mutation_01540a
-    latest = max([os.path.getmtime(os.path.join(AGENT_DIR, f)) for f in files])
-    age_minutes = (datetime.now().timestamp() - latest) / 60
-# Mutation_ff6840
-    if age_minutes > 1440:
-        log(f"⚠️ No agent knowledge updates in the last 24 hours ({age_minutes:.1f} min ago).")
-        return False
-    log(f"✅ Agent logs updated recently ({age_minutes:.1f} min ago).")
-    return True
-# Mutation_c928ac
-# Mutation_f92854
-
-def main():
-    log("---- Starting Knowledge Sharing Validation ----")
-# Mutation_4703bd
-# Mutation_37489f
-    ckb_ok = check_ckb()
-    agents_ok = check_agent_logs()
-
-    if ckb_ok and agents_ok:
-        log("✅ Knowledge Base synchronization validated successfully.")
-        log("---- Validation complete: PASS ----\n")
-    else:
-        log("⚠️ Knowledge sharing requires attention.")
-        log("---- Validation complete: ATTENTION REQUIRED ----\n")
+def main() -> int:
+    return run()
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
