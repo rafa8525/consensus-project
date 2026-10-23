@@ -5,6 +5,8 @@ on:
     branches: [v1.1-dev]
     paths:
       - "agents/supervisor.py"
+      - "agents/evaluator.py"
+      - "tools/shared_agent_lessons.py"
       - "tools/learning_effectiveness.py"
       - "tools/agent_performance_baseline.py"
       - "agents/run_acs01_supervisor.sh"
@@ -59,6 +61,7 @@ jobs:
             tests.test_canonical_agent_routing \
             tests.test_agent_four_step_simulation \
             tests.test_historical_learning_effectiveness \
+            tests.test_cross_agent_lesson_cycle \
             tests.test_production_readiness \
             tests.test_acs01_launcher_exit \
             tests.test_gmail_token_persistence \
