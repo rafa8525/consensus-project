@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 40.9,
+    "age_seconds": 46830.1,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 40.9,
+      "age_seconds": 46830.1,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 108.9,
+      "age_seconds": 46898.1,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-22T18:00:58.373606+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 70.5,
+      "age_seconds": 46859.8,
       "agent": "ACS-03",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-22T18:01:36.696120+00:00",
@@ -44,7 +44,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 1.6,
+      "age_seconds": 46790.9,
       "agent": "ACS-04",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-22T18:02:45.634571+00:00",
@@ -54,7 +54,7 @@
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 0.1,
+      "age_seconds": 46789.3,
       "agent": "ACS-05",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-22T18:02:47.170520+00:00",
@@ -68,14 +68,14 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-21T21:32:34.676037+00:00",
+      "mtime_utc": "2026-10-22T22:17:18.512306+00:00",
       "path": "agents",
       "size": 4096
     },
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-22T18:00:57.555838+00:00",
+      "mtime_utc": "2026-10-23T06:01:14.277624+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,11 +94,11 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-22T18:02:47.231604+00:00",
+  "generated_at_utc": "2026-10-23T07:02:36.473552+00:00",
   "git": {
     "last_commit": {
       "ok": true,
-      "sha": "8ed24cbf378307e59b6b0de201c449ff7244e412"
+      "sha": "2f309b500ded1ef97dacb26d3e5a77585ac89ada"
     },
     "origin_reachable": {
       "ok": true
@@ -133,34 +133,17 @@
   "schema_version": 6,
   "self_heal": {
     "branch_sync": {
-      "ahead_after": 0,
       "ahead_before": 0,
-      "behind_after": 0,
-      "behind_before": 0,
+      "behind_before": 1,
       "branch": "v1.1-dev",
-      "head": "8ed24cbf3",
-      "ok": true,
+      "ok": false,
       "remote": "origin/v1.1-dev",
-      "remote_head": "8ed24cbf3",
-      "returncode": 0,
-      "status": "already_synced"
+      "returncode": 2,
+      "status": "blocked_local_source_changes"
     },
     "post_sync_cycles": {
-      "attempted": true,
-      "outcomes": {
-        "ACS-04": [
-          {
-            "ok": true,
-            "returncode": 0
-          }
-        ],
-        "ACS-05": [
-          {
-            "ok": true,
-            "returncode": 0
-          }
-        ]
-      }
+      "attempted": false,
+      "outcomes": {}
     }
   },
   "source": "pythonanywhere"
