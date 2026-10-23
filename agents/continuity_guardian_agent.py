@@ -32,6 +32,7 @@ Master Control Loop cannot silently report a clean run.
 from __future__ import annotations
 
 import datetime as dt
+import fcntl
 import json
 import os
 import re
@@ -62,6 +63,7 @@ COMPRESSED = MEMORY / "logs" / "compressed_memory.md"
 HEARTBEAT = MEMORY / "logs" / "system" / "heartbeat.md"
 NOHUP = BASE / "nohup.out"
 MIN_INTERVAL_SECONDS = 3600
+LOCK = Path.home() / '.config' / 'ai-consensus' / 'acs05.lock'
 MAX_COMPRESSED_BYTES = 40 * 1024 * 1024
 MAX_KB_AGE_HOURS = 26
 MAX_INFRA_AGE_HOURS = 26
@@ -490,7 +492,7 @@ def maybe_send_sms(summary: str, fingerprint: str, state: dict) -> None:
     except Exception as exc:
         WARN.append(f"Could not send Twilio continuity alert: {type(exc).__name__}: {exc}")
 
-def run(force: bool = False) -> int:
+def _run_unlocked(force: bool = False) -> int:
     state = load_state()
     now = now_utc()
     last = state.get("last_full_check_utc")
@@ -516,6 +518,11 @@ def run(force: bool = False) -> int:
     check_resource_pressure()
     check_vpn_simulation()
 
+    # Preserve raw logs but store and alert only distinct *current-cycle* findings.
+    # This also contains accidental repeated callbacks within one execution.
+    CRITICAL[:] = list(dict.fromkeys(CRITICAL))
+    WARN[:] = list(dict.fromkeys(WARN))
+    INFO[:] = list(dict.fromkeys(INFO))
     state["last_full_check_utc"] = stamp()
     fingerprint = "|".join(sorted(CRITICAL + WARN))
 
@@ -547,6 +554,19 @@ def run(force: bool = False) -> int:
         return 0
     log("END status=OK")
     return 0
+
+
+def run(force: bool = False) -> int:
+    """Serialize full checks across scheduled and direct invocations."""
+    LOCK.parent.mkdir(parents=True, exist_ok=True)
+    with LOCK.open("a+", encoding="utf-8") as handle:
+        try:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            log("SKIP overlapping_full_check already_running")
+            # An overlap must not be reported as a fresh health success.
+            return 2
+        return _run_unlocked(force=force)
 
 
 def main() -> int:
