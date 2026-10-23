@@ -37,6 +37,16 @@ class AuditTests(unittest.TestCase):
         self.assertTrue(result["core_certified_now"])
         self.assertFalse(result["sms_delivery_verified"])
         self.assertFalse(result["full_operational_certification"])
+    def test_small_future_mtime_skew_is_tolerated(self):
+        import os
+        p = self.repo / "memory/logs/system/master_control_loop.log"
+        os.utime(p, (self.now.timestamp()+15, self.now.timestamp()+15))
+        self.assertTrue(evaluate(self.repo, self.mem, self.now)["checks"]["unattended_cycle"]["pass"])
+    def test_large_future_mtime_skew_fails(self):
+        import os
+        p = self.repo / "memory/logs/system/master_control_loop.log"
+        os.utime(p, (self.now.timestamp()+180, self.now.timestamp()+180))
+        self.assertFalse(evaluate(self.repo, self.mem, self.now)["checks"]["unattended_cycle"]["pass"])
     def test_latest_cycle_failure_overrides_previous_success(self):
         p = self.repo / "memory/logs/system/master_control_loop.log"
         p.write_text(p.read_text() +
