@@ -573,7 +573,7 @@ def public_diagnostics(agent, diagnostic):
         critical = diagnostic.get("critical") or []
         warnings = diagnostic.get("warnings") or []
         codes = []
-        for message in critical:
+        for message in list(critical) + list(warnings):
             lower = str(message).lower()
             if "invalid_grant" in lower or "revoked" in lower:
                 code = "GOOGLE_OAUTH_INVALID_GRANT"
@@ -583,8 +583,24 @@ def public_diagnostics(agent, diagnostic):
                 code = "GOOGLE_OAUTH_INVALID_CLIENT"
             elif "gmail" in lower or "google oauth" in lower:
                 code = "GOOGLE_OAUTH_OR_GMAIL_FAILURE"
+            elif "absorption" in lower or "knowledge" in lower:
+                code = "KNOWLEDGE_FRESHNESS_WARNING"
+            elif "infrastructure" in lower or "acs-04" in lower:
+                code = "INFRASTRUCTURE_EVIDENCE_WARNING"
+            elif "prediction" in lower:
+                code = "PREDICTION_FEED_WARNING"
+            elif "memory" in lower or "compressor" in lower:
+                code = "MEMORY_MAINTENANCE_WARNING"
+            elif "vpn" in lower or "security" in lower:
+                code = "SECURITY_VERIFICATION_WARNING"
+            elif "twilio" in lower or "sms" in lower:
+                code = "ALERT_DELIVERY_WARNING"
+            elif "process" in lower or "resource" in lower or "fork" in lower:
+                code = "RESOURCE_PRESSURE_WARNING"
+            elif "master control" in lower or "guard" in lower:
+                code = "ORCHESTRATION_WIRING_WARNING"
             else:
-                code = "CONTINUITY_CRITICAL"
+                code = "CONTINUITY_OTHER_FINDING"
             if code not in codes:
                 codes.append(code)
         return {
