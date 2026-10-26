@@ -189,6 +189,19 @@ class Supervisor(Agent):
                     "state": payload,
                 }
 
+            # A warning or critical result is a completed diagnostic cycle,
+            # not a transient execution error. Retrying it cannot repair its
+            # findings and can produce duplicate side effects and noise.
+            if status in ("warning", "critical") and payload is not None:
+                return {
+                    "ok": False,
+                    "agent": agent,
+                    "status": status,
+                    "attempt_count": attempt,
+                    "attempts": attempts,
+                    "state": payload,
+                }
+
             if attempt == 1:
                 time.sleep(5)
 
