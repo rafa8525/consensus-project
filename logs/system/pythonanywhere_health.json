@@ -1,88 +1,72 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 1.8,
+    "age_seconds": 16.6,
     "agent": "ACS-01",
     "cadence": "daily",
-    "health_status": "degraded",
-    "last_execution_utc": "2026-10-27T18:07:59.137829+00:00",
+    "health_status": "ok",
+    "last_execution_utc": "2026-10-27T18:11:48.558554+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
-    "status": "degraded",
+    "status": "current",
     "verified": true
   },
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 1.8,
+      "age_seconds": 16.6,
       "agent": "ACS-01",
       "cadence": "daily",
-      "health_status": "degraded",
-      "last_execution_utc": "2026-10-27T18:07:59.137829+00:00",
+      "health_status": "ok",
+      "last_execution_utc": "2026-10-27T18:11:48.558554+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
-      "status": "degraded",
+      "status": "current",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 87.7,
+      "age_seconds": 61.8,
       "agent": "ACS-02",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-27T18:06:33.169835+00:00",
+      "last_execution_utc": "2026-10-27T18:11:03.333789+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 64.2,
+      "age_seconds": 40.9,
       "agent": "ACS-03",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-27T18:06:56.670294+00:00",
+      "last_execution_utc": "2026-10-27T18:11:24.280794+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 9.3,
+      "age_seconds": 8.5,
       "agent": "ACS-04",
-      "diagnostics": {
-        "findings": [
-          {
-            "code": "WORKTREE_DIRTY",
-            "repaired": false,
-            "severity": "warning"
-          },
-          {
-            "code": "GIT_BEHIND",
-            "repaired": false,
-            "severity": "critical"
-          }
-        ],
-        "overall_status": "critical"
-      },
-      "health_status": "critical",
-      "last_execution_utc": "2026-10-27T18:07:51.608785+00:00",
+      "health_status": "healthy",
+      "last_execution_utc": "2026-10-27T18:11:56.633522+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
-      "status": "degraded",
+      "status": "current",
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 1.8,
+      "age_seconds": 0.2,
       "agent": "ACS-05",
       "diagnostics": {
-        "critical_count": 1,
+        "critical_count": 0,
         "issue_codes": [
-          "INFRASTRUCTURE_EVIDENCE_WARNING",
           "PREDICTION_FEED_WARNING",
           "ALERT_DELIVERY_WARNING"
         ],
-        "last_status": "CRITICAL",
+        "last_status": "WARN",
         "warning_count": 2
       },
-      "health_status": "critical",
-      "last_execution_utc": "2026-10-27T18:07:59.101958+00:00",
+      "health_status": "warning",
+      "last_execution_utc": "2026-10-27T18:12:04.940642+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -93,14 +77,14 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-26T02:46:02.911921+00:00",
+      "mtime_utc": "2026-10-27T18:10:56.081387+00:00",
       "path": "agents",
       "size": 4096
     },
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-27T18:06:33.014040+00:00",
+      "mtime_utc": "2026-10-27T18:11:03.181477+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -119,11 +103,11 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-27T18:08:00.893721+00:00",
+  "generated_at_utc": "2026-10-27T18:12:05.151732+00:00",
   "git": {
     "last_commit": {
       "ok": true,
-      "sha": "843e34c4df08d558d82f4e13c48ed213f1e76fc7"
+      "sha": "7f1b51bba8cb1735b2b0cb9ef6999deb551a2518"
     },
     "origin_reachable": {
       "ok": true
@@ -131,7 +115,7 @@
     "status": {
       "ok": true,
       "returncode": 0,
-      "tracked_changes_count": 23
+      "tracked_changes_count": 22
     },
     "unresolved_merge_conflict": false
   },
@@ -158,17 +142,38 @@
   "schema_version": 6,
   "self_heal": {
     "branch_sync": {
+      "ahead_after": 0,
       "ahead_before": 0,
-      "behind_before": 1,
+      "behind_after": 0,
+      "behind_before": 0,
       "branch": "v1.1-dev",
-      "ok": false,
+      "head": "7f1b51bba",
+      "ok": true,
       "remote": "origin/v1.1-dev",
-      "returncode": 2,
-      "status": "blocked_local_source_changes"
+      "remote_head": "7f1b51bba",
+      "returncode": 0,
+      "status": "already_synced"
     },
     "post_sync_cycles": {
-      "attempted": false,
-      "outcomes": {}
+      "attempted": true,
+      "outcomes": {
+        "ACS-04": [
+          {
+            "ok": true,
+            "returncode": 0
+          }
+        ],
+        "ACS-05": [
+          {
+            "ok": false,
+            "returncode": 1
+          },
+          {
+            "ok": false,
+            "returncode": 1
+          }
+        ]
+      }
     }
   },
   "source": "pythonanywhere"
