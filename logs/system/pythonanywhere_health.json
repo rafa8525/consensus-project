@@ -1,10 +1,10 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46866.2,
+    "age_seconds": 1.6,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "degraded",
-    "last_execution_utc": "2026-10-26T18:02:47.112754+00:00",
+    "last_execution_utc": "2026-10-27T18:02:49.612615+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
     "status": "degraded",
@@ -13,38 +13,38 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46866.2,
+      "age_seconds": 1.6,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "degraded",
-      "last_execution_utc": "2026-10-26T18:02:47.112754+00:00",
+      "last_execution_utc": "2026-10-27T18:02:49.612615+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46976.8,
+      "age_seconds": 113.2,
       "agent": "ACS-02",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-26T18:00:56.540786+00:00",
+      "last_execution_utc": "2026-10-27T18:00:57.985385+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 46942.7,
+      "age_seconds": 84.9,
       "agent": "ACS-03",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-26T18:01:30.626527+00:00",
+      "last_execution_utc": "2026-10-27T18:01:26.353814+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 9.2,
+      "age_seconds": 9.1,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -52,31 +52,37 @@
             "code": "WORKTREE_DIRTY",
             "repaired": false,
             "severity": "warning"
+          },
+          {
+            "code": "GIT_BEHIND",
+            "repaired": false,
+            "severity": "critical"
           }
         ],
-        "overall_status": "warning"
+        "overall_status": "critical"
       },
-      "health_status": "warning",
-      "last_execution_utc": "2026-10-27T07:03:44.170551+00:00",
+      "health_status": "critical",
+      "last_execution_utc": "2026-10-27T18:02:42.087384+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
       "verified": true
     },
     "ACS-05": {
-      "age_seconds": 0.1,
+      "age_seconds": 1.6,
       "agent": "ACS-05",
       "diagnostics": {
-        "critical_count": 0,
+        "critical_count": 1,
         "issue_codes": [
+          "INFRASTRUCTURE_EVIDENCE_WARNING",
           "PREDICTION_FEED_WARNING",
           "ALERT_DELIVERY_WARNING"
         ],
-        "last_status": "WARN",
+        "last_status": "CRITICAL",
         "warning_count": 2
       },
-      "health_status": "warning",
-      "last_execution_utc": "2026-10-27T07:03:53.256876+00:00",
+      "health_status": "critical",
+      "last_execution_utc": "2026-10-27T18:02:49.577814+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -94,7 +100,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-27T06:01:14.735544+00:00",
+      "mtime_utc": "2026-10-27T18:00:56.949766+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -113,7 +119,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-27T07:03:53.323923+00:00",
+  "generated_at_utc": "2026-10-27T18:02:51.206295+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -152,42 +158,17 @@
   "schema_version": 6,
   "self_heal": {
     "branch_sync": {
-      "ahead_after": 0,
       "ahead_before": 0,
-      "behind_after": 0,
-      "behind_before": 0,
+      "behind_before": 1,
       "branch": "v1.1-dev",
-      "head": "843e34c4d",
-      "ok": true,
+      "ok": false,
       "remote": "origin/v1.1-dev",
-      "remote_head": "843e34c4d",
-      "returncode": 0,
-      "status": "already_synced"
+      "returncode": 2,
+      "status": "blocked_local_source_changes"
     },
     "post_sync_cycles": {
-      "attempted": true,
-      "outcomes": {
-        "ACS-04": [
-          {
-            "ok": false,
-            "returncode": 1
-          },
-          {
-            "ok": false,
-            "returncode": 1
-          }
-        ],
-        "ACS-05": [
-          {
-            "ok": false,
-            "returncode": 1
-          },
-          {
-            "ok": false,
-            "returncode": 1
-          }
-        ]
-      }
+      "attempted": false,
+      "outcomes": {}
     }
   },
   "source": "pythonanywhere"
