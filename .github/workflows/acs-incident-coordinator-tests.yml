@@ -1,0 +1,26 @@
+name: ACS incident coordinator tests
+
+on:
+  pull_request:
+    paths:
+      - 'agents/acs_incident_coordinator.py'
+      - 'tests/test_acs_incident_coordinator.py'
+      - '.github/workflows/acs-incident-coordinator-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  coordinator-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check
+        run: python -m py_compile agents/acs_incident_coordinator.py tests/test_acs_incident_coordinator.py
+      - name: Isolated safety tests
+        run: python -m unittest discover -s tests -p test_acs_incident_coordinator.py -v
