@@ -4,7 +4,9 @@ on:
   pull_request:
     paths:
       - 'agents/acs_incident_coordinator.py'
+      - 'agents/acs_incident_ingest.py'
       - 'tests/test_acs_incident_coordinator.py'
+      - 'tests/test_acs_incident_ingest.py'
       - '.github/workflows/acs-incident-coordinator-tests.yml'
   workflow_dispatch:
 
@@ -21,6 +23,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Syntax check
-        run: python -m py_compile agents/acs_incident_coordinator.py tests/test_acs_incident_coordinator.py
+        run: python -m py_compile agents/acs_incident_coordinator.py agents/acs_incident_ingest.py tests/test_acs_incident_coordinator.py tests/test_acs_incident_ingest.py
       - name: Isolated safety tests
-        run: python -m unittest discover -s tests -p test_acs_incident_coordinator.py -v
+        run: python -m unittest discover -s tests -p 'test_acs_incident_*.py' -v
