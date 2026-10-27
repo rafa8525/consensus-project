@@ -260,12 +260,35 @@ class Supervisor(Agent):
             }
 
         finished = time.time()
-        ok = all(v.get("ok") is True for v in results.values())
+        # Separate ACS-01 operational health from the health of its dependencies.
+        # A child warning must remain visible without mislabeling its parent.
+        core_keys = ("branch_sync", "log_audit", "self_improve",
+                     "evaluation", "lesson_exchange")
+        core_ok = all(
+            isinstance(results.get(key), dict) and results[key].get("ok") is True
+            for key in core_keys
+        )
+        dependency_keys = ("acs_02", "acs_03", "acs_04", "acs_05", "encrypted_backup")
+        dependencies_ok = all(
+            isinstance(results.get(key), dict) and results[key].get("ok") is True
+            for key in dependency_keys
+        )
+        ok = core_ok
+        results["system_health"] = {
+            "ok": core_ok and dependencies_ok,
+            "status": "healthy" if core_ok and dependencies_ok else "degraded",
+            "dependency_failures": [
+                key for key in dependency_keys
+                if not isinstance(results.get(key), dict)
+                or results[key].get("ok") is not True
+            ],
+        }
 
         st = store.load()
         st["last_supervisor_ts"] = finished
         st["last_supervisor_started_ts"] = started
         st["last_supervisor_status"] = "ok" if ok else "degraded"
+        st["last_system_status"] = results["system_health"]["status"]
         st["last_supervisor_results"] = results
         store.save(st)
 
