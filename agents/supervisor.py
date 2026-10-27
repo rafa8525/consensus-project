@@ -189,8 +189,14 @@ class Supervisor(Agent):
                     "state": payload,
                 }
 
-            if attempt == 1:
+            # Warnings and critical findings are real diagnostic outcomes;
+            # rerunning the entire child cycle cannot repair them and can
+            # repeat external side effects. Retry transient execution errors
+            # only for the read-mostly infrastructure guardian (ACS-04).
+            if attempt == 1 and status == "execution_failure" and agent == "ACS-04":
                 time.sleep(5)
+                continue
+            break
 
         last = attempts[-1]
         return {
@@ -198,7 +204,7 @@ class Supervisor(Agent):
             "agent": agent,
             "status": last.get("status", "execution_failure"),
             "returncode": last.get("returncode"),
-            "attempt_count": 2,
+            "attempt_count": len(attempts),
             "attempts": attempts,
             "state": last.get("state"),
         }
