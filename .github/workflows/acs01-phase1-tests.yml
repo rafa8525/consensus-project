@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - repair/acs01-phase1-architecture-20261028
+  pull_request:
+    branches:
+      - v1.1-dev
   workflow_dispatch:
 
 permissions:
