@@ -1,0 +1,28 @@
+name: ACS-01 Phase 1 regression and failure simulations
+
+on:
+  push:
+    branches:
+      - repair/acs01-phase1-architecture-20261028
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  isolated-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Bash syntax
+        run: bash -n agents/run_acs01_supervisor.sh
+      - name: Python syntax
+        run: python -m py_compile agents/supervisor.py tests/test_acs01_phase1_contract.py tests/test_acs01_phase1_failure_simulations.py
+      - name: Offline phase 1 regression suite and failure simulations
+        run: python -m unittest discover -s tests -p 'test_acs01_phase1*.py' -v
