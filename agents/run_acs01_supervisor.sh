@@ -26,6 +26,8 @@ else
 fi
 
 echo "ACS-01 branch sync rc=$SYNC_RC"
+# Single sync authority: supervisor only reads this outcome.
+export ACS01_BRANCH_SYNC_RC="$SYNC_RC"
 
 set +e
 PYTHONPATH="$REPO" python3 -m agents.supervisor
