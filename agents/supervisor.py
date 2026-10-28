@@ -253,10 +253,12 @@ def main() -> int:
         and cycle.get("status") == "ok"
     )
 
-    system_healthy = (
-        supervisor_healthy
-        and cycle["results"]["system_health"]["ok"] is True
+    system_health = (
+        cycle.get("results", {}).get("system_health", {})
+        if isinstance(cycle, dict) and isinstance(cycle.get("results"), dict)
+        else {}
     )
+    system_healthy = supervisor_healthy and system_health.get("ok") is True
 
     # Publish a fresh health snapshot immediately after every scheduled
     # supervisor cycle. This ensures the bridge reflects the ACS states that
