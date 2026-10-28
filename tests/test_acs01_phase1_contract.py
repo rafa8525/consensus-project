@@ -52,6 +52,16 @@ class PhaseOneContractTests(unittest.TestCase):
                 self.assertEqual(result["ok"], expected_ok)
                 self.assertEqual(result["status"], expected_status)
 
+    def test_child_agent_json_parser_is_imported(self):
+        imported = {
+            alias.name
+            for node in self.tree.body
+            if isinstance(node, ast.Import)
+            for alias in node.names
+        }
+        self.assertIn("json", imported)
+        self.assertIn("json.loads(line)", self.source)
+
     def test_scheduler_requires_aggregate_health(self):
         self.assertIn('system_health.get("ok") is True', self.source)
         self.assertIn('system_healthy and bridge.get("ok") is True', self.source)
