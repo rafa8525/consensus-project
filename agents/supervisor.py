@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from typing import Dict, Any
-import json
+import os
 import subprocess
 import sys
 import time
@@ -25,96 +25,25 @@ class Supervisor(Agent):
 
     name = "supervisor"
 
-    def _safe_fast_forward_live_branch(self) -> Dict[str, Any]:
-        """Run the canonical safe-sync engine fetched from origin/v1.1-dev."""
-        repo = Path(__file__).resolve().parent.parent
+    def _launcher_sync_evidence(self) -> Dict[str, Any]:
+        """Read the one sync outcome supplied by the scheduled launcher.
 
-        fetch = subprocess.run(
-            ["git", "fetch", "--quiet", "origin", "v1.1-dev"],
-            cwd=repo,
-            text=True,
-            capture_output=True,
-            timeout=180,
-            check=False,
-        )
-        if fetch.returncode != 0:
-            return {
-                "ok": False,
-                "status": "fetch_failed",
-                "stderr": fetch.stderr[-1200:],
-            }
-
-        script = subprocess.run(
-            ["git", "show", "origin/v1.1-dev:agents/safe_sync_live_branch.py"],
-            cwd=repo,
-            text=True,
-            capture_output=True,
-            timeout=60,
-            check=False,
-        )
-        if script.returncode != 0:
-            return {
-                "ok": False,
-                "status": "sync_engine_unavailable",
-                "stderr": script.stderr[-1200:],
-            }
-
-        import tempfile
-        temp_path = None
+        Never fetch, merge, or alter Git state inside the supervisor.
+        Direct invocation without launcher evidence fails closed.
+        """
+        raw = os.environ.get("ACS01_BRANCH_SYNC_RC")
+        if raw is None:
+            return {"ok": False, "status": "launcher_evidence_missing"}
         try:
-            with tempfile.NamedTemporaryFile(
-                mode="w",
-                suffix=".py",
-                prefix="acs-safe-sync-",
-                delete=False,
-                encoding="utf-8",
-            ) as handle:
-                handle.write(script.stdout)
-                temp_path = Path(handle.name)
-
-            proc = subprocess.run(
-                [sys.executable, str(temp_path)],
-                cwd=repo,
-                text=True,
-                capture_output=True,
-                timeout=600,
-                check=False,
-            )
-
-            payload = None
-            for line in reversed(proc.stdout.splitlines()):
-                try:
-                    candidate = json.loads(line)
-                except json.JSONDecodeError:
-                    continue
-                if isinstance(candidate, dict) and "status" in candidate:
-                    payload = candidate
-                    break
-
-            if payload is None:
-                return {
-                    "ok": False,
-                    "status": "sync_engine_unreadable_output",
-                    "returncode": proc.returncode,
-                    "stdout": proc.stdout[-2000:],
-                    "stderr": proc.stderr[-1200:],
-                }
-
-            payload["returncode"] = proc.returncode
-            return payload
-        except Exception as exc:
-            return {
-                "ok": False,
-                "status": "sync_engine_execution_failure",
-                "error_type": type(exc).__name__,
-                "error": str(exc)[:1200],
-            }
-        finally:
-            if temp_path is not None:
-                try:
-                    temp_path.unlink()
-                except OSError:
-                    pass
+            rc = int(raw)
+        except ValueError:
+            return {"ok": False, "status": "launcher_evidence_invalid"}
+        return {
+            "ok": rc == 0,
+            "status": "launcher_sync_ok" if rc == 0 else "launcher_sync_failed",
+            "returncode": rc,
+            "owner": "agents/run_acs01_supervisor.sh",
+        }
 
     def _run_child_cycle(self, agent: str) -> Dict[str, Any]:
         repo = Path(__file__).resolve().parent.parent
@@ -207,10 +136,8 @@ class Supervisor(Agent):
         started = time.time()
         results: Dict[str, Any] = {}
 
-        # Bootstrap branch synchronization from inside the supervisor itself.
-        # The legacy launcher already refreshes this file from origin before
-        # execution, so this works even while the launcher script is still old.
-        results["branch_sync"] = self._safe_fast_forward_live_branch()
+        # The scheduled launcher owns synchronization; observe its exit code.
+        results["branch_sync"] = self._launcher_sync_evidence()
 
         from agents.researcher import Researcher
         from agents.self_improver import SelfImprover
@@ -326,6 +253,11 @@ def main() -> int:
         and cycle.get("status") == "ok"
     )
 
+    system_healthy = (
+        supervisor_healthy
+        and cycle["results"]["system_health"]["ok"] is True
+    )
+
     # Publish a fresh health snapshot immediately after every scheduled
     # supervisor cycle. This ensures the bridge reflects the ACS states that
     # were just produced, rather than waiting for a separate later task.
@@ -382,7 +314,9 @@ def main() -> int:
     }
     print(output)
 
-    return 0 if supervisor_healthy and bridge.get("ok") is True else 1
+    # Scheduler failure indicates aggregate degradation even if ACS-01 itself
+    # succeeded. Keep both health dimensions in the published state.
+    return 0 if system_healthy and bridge.get("ok") is True else 1
 
 
 if __name__ == "__main__":
