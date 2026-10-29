@@ -34,11 +34,11 @@ for base in (root/"memory/logs/system/predictions",home/"memory/logs/system/pred
 print("prediction candidates",len(candidates))
 for p in candidates:
     body=p.read_text(encoding="utf-8",errors="replace")
-    stamps=re.findall(r"^Generated:\\s*(20\\d{2}-\\d{2}-\\d{2}T[^\\s]+)\\s*$",body,re.M)
+    stamps=re.findall(r"^Generated:\s*(20\d{2}-\d{2}-\d{2}T[^\s]+)\s*$",body,re.M)
     findings=[]
     if "Health snapshot is stale" in body: findings.append("stale upstream snapshot")
     if "Health snapshot freshness is unknown" in body: findings.append("unknown upstream freshness")
-    if re.search(r"System health:\\s*(WARN|ERROR|CRITICAL|FAIL)",body,re.I): findings.append("degraded upstream health")
+    if re.search(r"System health:\s*(WARN|ERROR|CRITICAL|FAIL)",body,re.I): findings.append("degraded upstream health")
     age=None
     if len(stamps)==1:
         try:
