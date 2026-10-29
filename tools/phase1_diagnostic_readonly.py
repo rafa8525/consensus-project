@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only Phase 1 diagnostic: no secrets, mutations or outbound messages."""
 import datetime as dt
+from collections import Counter
 import json
 import re
 import subprocess
@@ -60,12 +61,25 @@ for p in (root/"memory/logs/system/continuity_guardian_state.json",home/"memory/
         state=json.loads(p.read_text())
     except (OSError,ValueError):
         continue
-    print("continuity state",str(p),"status",state.get("last_status"))
+    print("continuity state",str(p),"status",state.get("last_status"),"last_full_check_utc",state.get("last_full_check_utc"),"file_mtime_utc",dt.datetime.fromtimestamp(p.stat().st_mtime,dt.timezone.utc).isoformat())
     for key in ("critical","warnings"):
         raw=state.get(key,[])
         # Older state schemas can store one string rather than an array.
         findings=raw if isinstance(raw,list) else ([raw] if isinstance(raw,str) and raw else [])
         print(key,"stored_type",type(raw).__name__,"finding_count",len(findings))
+        stringified=[str(f) for f in findings]
+        print(key,"unique_count",len(set(stringified)),
+              "largest_entry_chars",max((len(x) for x in stringified),default=0))
+        counters=Counter()
+        for finding in findings:
+            low=str(finding).lower()
+            category=("prediction" if "prediction" in low else
+                      "alert" if "twilio" in low or "sms" in low else
+                      "oauth" if "oauth" in low or "gmail" in low else
+                      "infrastructure" if "infrastructure" in low else
+                      "other")
+            counters[category]+=1
+        print(key,"categories",dict(counters))
         for finding in findings[:12]:
             # Do not reveal paths, personal data or credentials from raw findings.
             low=str(finding).lower()
