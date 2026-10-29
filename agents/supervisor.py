@@ -133,6 +133,44 @@ class Supervisor(Agent):
             "state": last.get("state"),
         }
 
+    def _prepare_acs05_dependencies(self) -> Dict[str, Any]:
+        """Refresh authoritative upstream evidence before ACS-05 evaluates it.
+
+        Never sends SMS, replaces OAuth clients, or prints raw command output.
+        Every stage runs even when an earlier stage fails, ensuring a degraded
+        snapshot remains visible rather than silently reusing stale evidence.
+        """
+        repo = Path(__file__).resolve().parent.parent
+        steps = (
+            ("gmail_oauth", "tools/gmail_refresh_guard.py"),
+            ("health_snapshot", "tools/core_monitors_bundle.py"),
+            ("prediction_feed", "agents/prediction_feed_agent.py"),
+        )
+        outcomes = {}
+        for name, relative in steps:
+            try:
+                proc = subprocess.run(
+                    [sys.executable, str(repo / relative)],
+                    cwd=repo,
+                    capture_output=True,
+                    text=True,
+                    timeout=180,
+                    check=False,
+                )
+                outcomes[name] = {
+                    "ok": proc.returncode == 0,
+                    "returncode": proc.returncode,
+                }
+            except Exception as exc:
+                outcomes[name] = {
+                    "ok": False,
+                    "error_type": type(exc).__name__,
+                }
+        return {
+            "ok": all(item["ok"] for item in outcomes.values()),
+            "steps": outcomes,
+        }
+
     def run(self) -> Dict[str, Any]:
         started = time.time()
         results: Dict[str, Any] = {}
@@ -161,9 +199,12 @@ class Supervisor(Agent):
         results["self_improve"] = SelfImprover(self.ctx).safe_run()
         results["evaluation"] = Evaluator(self.ctx).safe_run()
 
-        # Run every child cycle even if another child fails. This prevents one
-        # failure from blocking fresh evidence for the remaining agents.
+        # Run every child cycle even if another child fails. Refresh ACS-05's
+        # real upstream dependencies after ACS-02/03/04 and before ACS-05.
+        # This is the same sequence verified in production on October 29.
         for agent in ("ACS-02", "ACS-03", "ACS-04", "ACS-05"):
+            if agent == "ACS-05":
+                results["acs_05_dependencies"] = self._prepare_acs05_dependencies()
             results[agent.lower().replace("-", "_")] = self._run_child_cycle(agent)
 
         # Fail closed when the last remote verified restore is missing or overdue.
@@ -196,7 +237,8 @@ class Supervisor(Agent):
             isinstance(results.get(key), dict) and results[key].get("ok") is True
             for key in core_keys
         )
-        dependency_keys = ("acs_02", "acs_03", "acs_04", "acs_05", "encrypted_backup")
+        dependency_keys = ("acs_02", "acs_03", "acs_04", "acs_05",
+                           "acs_05_dependencies", "encrypted_backup")
         dependencies_ok = all(
             isinstance(results.get(key), dict) and results[key].get("ok") is True
             for key in dependency_keys
