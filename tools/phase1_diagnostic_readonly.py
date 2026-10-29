@@ -62,9 +62,17 @@ for p in (root/"memory/logs/system/continuity_guardian_state.json",home/"memory/
         continue
     print("continuity state",str(p),"status",state.get("last_status"))
     for key in ("critical","warnings"):
-        for finding in state.get(key,[]):
-            # Output category only: private incident descriptions are not published.
+        raw=state.get(key,[])
+        # Older state schemas can store one string rather than an array.
+        findings=raw if isinstance(raw,list) else ([raw] if isinstance(raw,str) and raw else [])
+        print(key,"stored_type",type(raw).__name__,"finding_count",len(findings))
+        for finding in findings[:12]:
+            # Do not reveal paths, personal data or credentials from raw findings.
             low=str(finding).lower()
-            category="prediction" if "prediction" in low else "alert" if "twilio" in low or "sms" in low else "other"
-            print(key,category)
+            category=("prediction" if "prediction" in low else
+                      "alert" if "twilio" in low or "sms" in low else
+                      "oauth" if "oauth" in low or "gmail" in low else
+                      "infrastructure" if "infrastructure" in low else
+                      "other")
+            print(key,"category",category)
 print("COMPLETE: read only")
