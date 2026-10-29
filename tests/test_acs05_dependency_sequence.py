@@ -26,7 +26,7 @@ def load_dependency_method():
                   and node.name == "_prepare_acs05_dependencies")
     isolated = ast.Module(body=[method], type_ignores=[])
     ast.fix_missing_locations(isolated)
-    namespace = {"Path": pathlib.Path, "subprocess": subprocess, "sys": sys, "Dict": Dict, "Any": Any}
+    namespace = {"Path": pathlib.Path, "subprocess": subprocess, "sys": sys, "Dict": Dict, "Any": Any, "__file__": str(SUPERVISOR_PATH)}
     exec(compile(isolated, str(SUPERVISOR_PATH), "exec"), namespace)
     return namespace["_prepare_acs05_dependencies"]
 
