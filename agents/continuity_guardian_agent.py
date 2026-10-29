@@ -398,7 +398,10 @@ def check_absorption_and_prediction() -> None:
         BASE / "memory" / "logs" / "system" / "predictions" / f"prediction_feed_{yesterday}.md",
     ]
     # ACS-05 independently verifies Prediction Feed content, not file mtime alone.
-    pred = next((p for p in pred_candidates if p.is_file()), None)
+    # Prefer the most recently generated candidate, not whichever root is listed first.
+    # A stale repository mirror must not mask a fresh canonical runtime feed.
+    existing_feeds = [p for p in pred_candidates if p.is_file()]
+    pred = max(existing_feeds, key=lambda p: p.stat().st_mtime) if existing_feeds else None
     if pred is None:
         CRITICAL.append(f"Today's prediction feed is missing: {today}")
     else:
