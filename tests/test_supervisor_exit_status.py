@@ -25,7 +25,7 @@ class SupervisorExitStatusTests(unittest.TestCase):
 
     def test_healthy_supervisor_and_bridge_return_success(self):
         self.assert_main_exit(
-            {"ok": True, "result": {"status": "ok"}}, 0, 0
+            {"ok": True, "result": {"status": "ok", "results": {"system_health": {"ok": True}}}}, 0, 0
         )
 
     def test_degraded_supervisor_and_healthy_bridge_return_failure(self):
@@ -44,7 +44,7 @@ class SupervisorExitStatusTests(unittest.TestCase):
     def test_healthy_supervisor_and_failed_bridge_return_failure(self):
         # The bridge is retried once; both attempts fail in this mocked test.
         self.assert_main_exit(
-            {"ok": True, "result": {"status": "ok"}}, 1, 1
+            {"ok": True, "result": {"status": "ok", "results": {"system_health": {"ok": True}}}}, 1, 1
         )
 
 
