@@ -53,6 +53,7 @@ jobs:
             tests.test_guardian_log_rotation \
             tests.test_infrastructure_notifications \
             tests.test_supervisor_exit_status \
+            tests.test_acs05_dependency_sequence \
             tests.test_acs_cycle_status_contract \
             tests.test_absorption_marker \
             tests.test_absorb_memory_empty \
