@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 30.0,
+    "age_seconds": 46818.0,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 30.0,
+      "age_seconds": 46818.0,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 108.4,
+      "age_seconds": 46896.4,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-29T18:01:32.196361+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 83.1,
+      "age_seconds": 46871.1,
       "agent": "ACS-03",
       "health_status": "healthy",
       "last_execution_utc": "2026-10-29T18:01:57.448422+00:00",
@@ -44,10 +44,10 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 1.2,
+      "age_seconds": 2.1,
       "agent": "ACS-04",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-29T18:03:19.407068+00:00",
+      "last_execution_utc": "2026-10-30T07:03:06.507383+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -57,7 +57,7 @@
       "age_seconds": 0.1,
       "agent": "ACS-05",
       "health_status": "healthy",
-      "last_execution_utc": "2026-10-29T18:03:20.520723+00:00",
+      "last_execution_utc": "2026-10-30T07:03:08.453892+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -75,7 +75,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-10-29T18:02:29.351834+00:00",
+      "mtime_utc": "2026-10-30T06:01:13.124627+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,7 +94,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-10-29T18:03:20.573081+00:00",
+  "generated_at_utc": "2026-10-30T07:03:08.543947+00:00",
   "git": {
     "last_commit": {
       "ok": true,
