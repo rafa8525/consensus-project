@@ -639,6 +639,20 @@ def sanitize_public_snapshot(snapshot):
     sync = (snapshot.get("self_heal") or {}).get("branch_sync") or {}
     allowed_sync_keys = ("ok", "status", "branch", "remote", "head", "remote_head",
                          "ahead_before", "behind_before", "ahead_after", "behind_after", "returncode")
+    # Do not claim that a successful no-op sync proved recovery from failure.
+    # Recovery is verified only when a real remote-behind state was corrected.
+    recovery_proof = {
+        "verified": (
+            sync.get("ok") is True
+            and sync.get("status") == "synced"
+            and isinstance(sync.get("behind_before"), int)
+            and sync["behind_before"] > 0
+            and sync.get("ahead_after") == 0
+            and sync.get("behind_after") == 0
+        ),
+        "test_type": "observed_remote_divergence_recovery",
+        "not_tested": "process_crash_and_external_scheduler_outage",
+    }
     post = (snapshot.get("self_heal") or {}).get("post_sync_cycles") or {}
     outcomes = {}
     for name, attempts in (post.get("outcomes") or {}).items():
@@ -646,6 +660,7 @@ def sanitize_public_snapshot(snapshot):
             outcomes[name] = [{"ok": a.get("ok") is True, "returncode": a.get("returncode")}
                               for a in attempts if isinstance(a, dict)]
     safe["self_heal"] = {
+        "recovery_proof": recovery_proof,
         "branch_sync": {k: sync[k] for k in allowed_sync_keys if k in sync},
         "post_sync_cycles": {"attempted": post.get("attempted") is True, "outcomes": outcomes},
     }
