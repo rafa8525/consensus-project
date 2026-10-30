@@ -25,7 +25,7 @@ names=['ACS-01','ACS-02','ACS-03','ACS-04','ACS-05']
 def write(event,**kw):
     log.parent.mkdir(parents=True,exist_ok=True)
     record={'at':datetime.now(timezone.utc).isoformat(),'event':event,**kw}
-    with log.open('a') as f:f.write(json.dumps(record)+'\\n')
+    with log.open('a') as f:f.write(json.dumps(record)+chr(10))
     print(json.dumps(record),flush=True)
 def validate(j):
     bad=[]
