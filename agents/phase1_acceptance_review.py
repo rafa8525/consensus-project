@@ -1,106 +1,168 @@
 #!/usr/bin/env python3
-"""Read-only Phase 1 acceptance review for the actual ACS-01 parent architecture.
-
-Does not restart agents, touch Git state, or write a completion marker.
-Exit 0: observed operational gate passes; exit 1: required evidence fails.
-Recovery simulation and sustained unattended-run proof are reviewed separately.
-"""
+"""Phase 1 fail-closed acceptance; no production changes by default."""
+import argparse
+import base64
 import json
+import os
 import sys
+import tempfile
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
 
-URL = ("https://raw.githubusercontent.com/rafa8525/consensus-project/main/"
-       "logs/system/pythonanywhere_health.json")
-AGENTS = tuple(f"ACS-{i:02d}" for i in range(1, 6))
-MAX_REPORT_AGE = 36 * 60 * 60
+REPO = "rafa8525/consensus-project"
+REPORT = "logs/system/pythonanywhere_health.json"
+ROOT = Path.home() / ".config/ai-consensus"
+AGENTS = tuple("ACS-%02d" % i for i in range(1, 6))
+HORIZON = timedelta(hours=36)
+PROOF_HORIZON = timedelta(days=14)
+NEEDED = 3
 
-def evaluate(report, now=None):
-    now = now or datetime.now(timezone.utc)
-    findings = {}
+def timevalue(value):
+    if not isinstance(value, str):
+        return None
     try:
-        published = datetime.fromisoformat(
-            report["generated_at_utc"].replace("Z", "+00:00")
-        )
-        if published.tzinfo is None:
-            raise ValueError("naive timestamp")
-        age = (now - published).total_seconds()
-        findings["fresh_report"] = 0 <= age <= MAX_REPORT_AGE
-    except (KeyError, TypeError, ValueError, AttributeError):
-        findings["fresh_report"] = False
+        v = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return v.astimezone(timezone.utc) if v.tzinfo else None
+    except (ValueError, OverflowError):
+        return None
 
-    agents = report.get("agents") or {}
+def recent(value, now, horizon=HORIZON):
+    t = timevalue(value)
+    return t is not None and timedelta(0) <= now - t <= horizon
+
+def evaluate(report, evidence, now=None):
+    now = now or datetime.now(timezone.utc)
+    if not isinstance(report, dict):
+        return {"report_schema": False}
+    checks = {"report_fresh": recent(report.get("generated_at_utc"), now)}
+    agents = report.get("agents")
+    agents = agents if isinstance(agents, dict) else {}
     for name in AGENTS:
-        state = agents.get(name) or {}
-        findings[name] = (
-            state.get("verified") is True
-            and state.get("status") == "current"
-            and state.get("health_status") in ("ok", "healthy")
+        a = agents.get(name)
+        a = a if isinstance(a, dict) else {}
+        checks[name + "_healthy"] = (
+            a.get("verified") is True and a.get("status") == "current"
+            and a.get("health_status") in ("ok", "healthy")
         )
-    schedule = report.get("pythonanywhere_schedule") or {}
-    # The ACS-01 parent runs the health bridge after its own cycle.
-    # A second health task is not required by this architecture.
-    findings["supervisor_scheduled"] = (
-        schedule.get("available") is True
-        and (schedule.get("acs01_task") or {}).get("enabled") is True
-    )
-    git = report.get("git") or {}
-    findings["git_reachable"] = (git.get("origin_reachable") or {}).get("ok") is True
-    findings["no_merge_conflicts"] = git.get("unresolved_merge_conflict") is False
-    sync = (report.get("self_heal") or {}).get("branch_sync") or {}
-    findings["branch_synchronized"] = (
-        sync.get("ok") is True
-        and sync.get("ahead_after") == 0
+        checks[name + "_timestamp"] = recent(a.get("last_execution_utc"), now)
+    sched = report.get("pythonanywhere_schedule")
+    sched = sched if isinstance(sched, dict) else {}
+    parent = sched.get("acs01_task")
+    parent = parent if isinstance(parent, dict) else {}
+    # ACS-01 is the scheduled parent and publishes the health bridge itself.
+    checks["parent_schedule"] = sched.get("available") is True and parent.get("enabled") is True
+    git = report.get("git")
+    git = git if isinstance(git, dict) else {}
+    reach = git.get("origin_reachable")
+    checks["git_reachable"] = isinstance(reach, dict) and reach.get("ok") is True
+    checks["no_merge_conflict"] = git.get("unresolved_merge_conflict") is False
+    heal = report.get("self_heal")
+    heal = heal if isinstance(heal, dict) else {}
+    sync = heal.get("branch_sync")
+    sync = sync if isinstance(sync, dict) else {}
+    checks["branch_synced"] = (
+        sync.get("ok") is True and sync.get("ahead_after") == 0
         and sync.get("behind_after") == 0
     )
-    return findings
+    # Review evidence from actual tests; do not substitute bridge's narrow
+    # observed-divergence flag, synthetic fixtures, or a simple success exit.
+    tests = evidence.get("tests") if isinstance(evidence, dict) else None
+    tests = tests if isinstance(tests, dict) else {}
+    for key in ("failure_detection", "automatic_retry", "recovery_verified", "bounded_escalation"):
+        item = tests.get(key)
+        checks["proof_" + key] = (
+            isinstance(item, dict) and item.get("passed") is True
+            and isinstance(item.get("source"), str) and bool(item["source"].strip())
+            and recent(item.get("executed_at_utc"), now, PROOF_HORIZON)
+        )
+    return checks
 
-def main():
-    if "--self-test" in sys.argv:
-        now = datetime.now(timezone.utc)
-        report = {
-            "generated_at_utc": now.isoformat(),
-            "agents": {n: {"verified": True, "status": "current",
-                           "health_status": "healthy"} for n in AGENTS},
-            "pythonanywhere_schedule": {
-                "available": True, "acs01_task": {"enabled": True},
-                "health_task": {"enabled": False}
-            },
-            "git": {"origin_reachable": {"ok": True},
-                    "unresolved_merge_conflict": False,
-                    "status": {"tracked_changes_count": 22}},
-            "self_heal": {"branch_sync": {
-                "ok": True, "ahead_after": 0, "behind_after": 0
-            }}
-        }
-        assert all(evaluate(report, now).values())
-        report["agents"]["ACS-03"]["status"] = "stale"
-        assert evaluate(report, now)["ACS-03"] is False
-        report["agents"]["ACS-03"]["status"] = "current"
-        report["pythonanywhere_schedule"]["acs01_task"]["enabled"] = False
-        assert evaluate(report, now)["supervisor_scheduled"] is False
-        report["pythonanywhere_schedule"]["acs01_task"]["enabled"] = True
-        report["generated_at_utc"] = "2020-01-01T00:00:00+00:00"
-        assert evaluate(report, now)["fresh_report"] is False
-        print("PASS: parent scheduler, stale report and failed-agent cases")
-        return 0
+def fetch_remote():
+    url = "https://api.github.com/repos/%s/contents/%s?ref=main" % (REPO, REPORT)
+    req = urllib.request.Request(url, headers={
+        "Accept": "application/vnd.github.raw+json",
+        "Cache-Control": "no-cache", "User-Agent": "ACS-Phase1-Acceptance"
+    })
+    with urllib.request.urlopen(req, timeout=30) as response:
+        value = json.load(response)
+    if isinstance(value, dict) and value.get("encoding") == "base64":
+        value = json.loads(base64.b64decode(value["content"]))
+    if not isinstance(value, dict):
+        raise ValueError("Invalid remote payload")
+    return value
 
-    req = urllib.request.Request(URL, headers={"User-Agent": "ACS-Phase1-Acceptance"})
+def advance(report, evidence, history, now):
+    checks = evaluate(report, evidence, now)
+    passing = all(checks.values())
+    stamp = report.get("generated_at_utc") if isinstance(report, dict) else None
+    prior = history.get("passing_reports", []) if isinstance(history, dict) else []
+    prior = prior if isinstance(prior, list) else []
+    prior = [s for s in prior if timevalue(s)]
+    if not passing:
+        prior = []
+    elif recent(stamp, now):
+        if prior and timevalue(stamp) <= timevalue(prior[-1]):
+            pass  # repeat or older snapshots cannot earn more credit
+        else:
+            if prior and timevalue(stamp) - timevalue(prior[-1]) > HORIZON:
+                prior = []
+            prior = (prior + [stamp])[-NEEDED:]
+    return checks, prior, passing and len(prior) == NEEDED
+
+def save(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=str(path.parent), prefix=".phase1-")
     try:
-        with urllib.request.urlopen(req, timeout=25) as res:
-            report = json.load(res)
-    except Exception as exc:
-        print("FAIL: cannot retrieve public health report:", type(exc).__name__)
-        return 1
+        with os.fdopen(fd, "w") as fp:
+            json.dump(data, fp, sort_keys=True, indent=2)
+            fp.write("\n")
+            fp.flush()
+            os.fsync(fp.fileno())
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
 
-    findings = evaluate(report)
-    for key, passed in findings.items():
-        print(("PASS" if passed else "FAIL") + ": " + key)
-    print("Report timestamp:", report.get("generated_at_utc"))
-    print("Recovery fault-injection proof: SEPARATE EVIDENCE REQUIRED")
-    print("Unattended consecutive-run proof: SEPARATE EVIDENCE REQUIRED")
-    print("Phase 1 is NOT marked complete by this operational check.")
-    return 0 if all(findings.values()) else 1
+def main(argv=None):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--record", action="store_true")
+    ap.add_argument("--report-file", type=Path, help="Fixture for isolated tests only")
+    ap.add_argument("--proof-file", type=Path, default=ROOT / "phase1_recovery_evidence.json")
+    ap.add_argument("--state-dir", type=Path, default=ROOT)
+    args = ap.parse_args(argv)
+    if args.record and args.report_file:
+        print("FAIL: cannot record a fixture as production evidence")
+        return 2
+    now = datetime.now(timezone.utc)
+    try:
+        report = json.loads(args.report_file.read_text()) if args.report_file else fetch_remote()
+        evidence = json.loads(args.proof_file.read_text())
+    except (OSError, ValueError, TimeoutError, RuntimeError, urllib.error.URLError) as exc:
+        print("FAIL: report/proof unavailable:", type(exc).__name__)
+        return 1
+    statefile = args.state_dir / "phase1_history.json"
+    completefile = args.state_dir / "PHASE_1_COMPLETE.json"
+    try:
+        old = json.loads(statefile.read_text())
+    except (OSError, ValueError):
+        old = {}
+    checks, reports, complete = advance(report, evidence, old, now)
+    for k, ok in checks.items():
+        print(("PASS" if ok else "FAIL") + ": " + k)
+    print("Distinct passing reports:", len(reports), "/", NEEDED)
+    print("Phase 1:", "COMPLETE" if complete else "NOT COMPLETE")
+    if args.record:
+        save(statefile, {"passing_reports": reports, "checked_at_utc": now.isoformat()})
+        if complete:
+            save(completefile, {
+                "phase": 1, "status": "COMPLETE",
+                "verified_at_utc": now.isoformat(),
+                "reports": reports, "recovery_evidence_file": str(args.proof_file)
+            })
+        elif completefile.exists():
+            completefile.unlink()
+    return 0 if complete else 1
 
 if __name__ == "__main__":
     sys.exit(main())
