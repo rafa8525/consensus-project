@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Isolated regression checks; no network, Git changes or production execution."""
 import copy
+import hashlib
+import tempfile
+from pathlib import Path
 import unittest
 from datetime import datetime, timedelta, timezone
 import phase1_acceptance_review as gate
@@ -21,11 +24,35 @@ def fixture():
         "self_heal":{"branch_sync":{"ok":True,"ahead_after":0,"behind_after":0}}
     }
 def proof():
-    return {"tests":{k:{"passed":True, "source":"reviewed-test-log",
-                         "executed_at_utc":iso(NOW)}
-                     for k in ("failure_detection", "automatic_retry",
-                               "recovery_verified", "bounded_escalation")}}
+    tests = {}
+    for key in ("failure_detection", "automatic_retry", "recovery_verified", "bounded_escalation"):
+        payload = ("PASS: " + key + "\\n").encode()
+        filename = key + ".log"
+        (gate.ROOT / "evidence" / filename).write_bytes(payload)
+        tests[key] = {"passed": True, "artifact_path": filename,
+                      "artifact_sha256": hashlib.sha256(payload).hexdigest(),
+                      "executed_at_utc": iso(NOW)}
+    return {"tests": tests}
+
 class Tests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.old_root = gate.ROOT
+        gate.ROOT = Path(self.temp.name)
+        (gate.ROOT / "evidence").mkdir()
+    def tearDown(self):
+        gate.ROOT = self.old_root
+        self.temp.cleanup()
+    def test_tampered_or_fake_artifacts_fail(self):
+        p = proof()
+        p["tests"]["automatic_retry"]["artifact_sha256"] = "0" * 64
+        self.assertFalse(gate.evaluate(fixture(), p, NOW)["proof_automatic_retry"])
+        p = proof()
+        p["tests"]["automatic_retry"]["artifact_path"] = "../other.log"
+        self.assertFalse(gate.evaluate(fixture(), p, NOW)["proof_automatic_retry"])
+        p = proof()
+        (gate.ROOT / "evidence" / "automatic_retry.log").write_text("PASS: something else")
+        self.assertFalse(gate.evaluate(fixture(), p, NOW)["proof_automatic_retry"])
     def test_healthy_parent_architecture(self):
         self.assertTrue(all(gate.evaluate(fixture(), proof(), NOW).values()))
     def test_each_agent_unhealthy(self):
