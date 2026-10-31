@@ -3,6 +3,7 @@
 import argparse
 import base64
 import json
+import hashlib
 import os
 import sys
 import tempfile
@@ -30,6 +31,35 @@ def timevalue(value):
 def recent(value, now, horizon=HORIZON):
     t = timevalue(value)
     return t is not None and timedelta(0) <= now - t <= horizon
+
+def verify_artifact(item, key, now):
+    """Fail closed unless a dated test references an exact matching log artifact."""
+    if not isinstance(item, dict) or item.get("passed") is not True:
+        return False
+    if not recent(item.get("executed_at_utc"), now, PROOF_HORIZON):
+        return False
+    filename = item.get("artifact_path")
+    digest = item.get("artifact_sha256")
+    if not isinstance(filename, str) or not isinstance(digest, str):
+        return False
+    if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
+        return False
+    # Only accept evidence from the controlled local evidence directory.
+    base = (ROOT / "evidence").resolve()
+    try:
+        artifact = (base / filename).resolve()
+        if not artifact.is_relative_to(base) or not artifact.is_file():
+            return False
+        if artifact.stat().st_size > 1024 * 1024:
+            return False
+        raw = artifact.read_bytes()
+        if hashlib.sha256(raw).hexdigest() != digest:
+            return False
+        # A marker ties the asserted test name to the reviewed artifact.
+        # This guards transcription errors, not malicious local modification.
+        return ("PASS: " + key).encode() in raw
+    except (OSError, ValueError):
+        return False
 
 def evaluate(report, evidence, now=None):
     now = now or datetime.now(timezone.utc)
@@ -65,17 +95,13 @@ def evaluate(report, evidence, now=None):
         sync.get("ok") is True and sync.get("ahead_after") == 0
         and sync.get("behind_after") == 0
     )
-    # Review evidence from actual tests; do not substitute bridge's narrow
-    # observed-divergence flag, synthetic fixtures, or a simple success exit.
+    # Require each test to have a real, bounded artifact whose bytes match
+    # the expected digest. A free-form "source" label is not proof.
     tests = evidence.get("tests") if isinstance(evidence, dict) else None
     tests = tests if isinstance(tests, dict) else {}
     for key in ("failure_detection", "automatic_retry", "recovery_verified", "bounded_escalation"):
         item = tests.get(key)
-        checks["proof_" + key] = (
-            isinstance(item, dict) and item.get("passed") is True
-            and isinstance(item.get("source"), str) and bool(item["source"].strip())
-            and recent(item.get("executed_at_utc"), now, PROOF_HORIZON)
-        )
+        checks["proof_" + key] = verify_artifact(item, key, now)
     return checks
 
 def fetch_remote():
