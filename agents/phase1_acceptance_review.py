@@ -105,8 +105,12 @@ def advance(report, evidence, history, now):
         if prior and timevalue(stamp) <= timevalue(prior[-1]):
             pass  # repeat or older snapshots cannot earn more credit
         else:
-            if prior and timevalue(stamp) - timevalue(prior[-1]) > HORIZON:
-                prior = []
+            if prior:
+                delta = timevalue(stamp) - timevalue(prior[-1])
+                if delta < timedelta(hours=18):
+                    return checks, prior, False  # no credit for rapid manual reruns
+                if delta > HORIZON:
+                    prior = []
             prior = (prior + [stamp])[-NEEDED:]
     return checks, prior, passing and len(prior) == NEEDED
 
