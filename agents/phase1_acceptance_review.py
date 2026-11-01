@@ -36,6 +36,9 @@ def verify_artifact(item, key, now):
     """Fail closed unless a dated test references an exact matching log artifact."""
     if not isinstance(item, dict) or item.get("passed") is not True:
         return False
+    # Isolated/simulated tests are useful but cannot certify a production outage.
+    if item.get("execution_scope") != "production":
+        return False
     if not recent(item.get("executed_at_utc"), now, PROOF_HORIZON):
         return False
     filename = item.get("artifact_path")
