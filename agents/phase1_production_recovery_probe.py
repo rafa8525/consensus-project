@@ -1,182 +1,151 @@
 #!/usr/bin/env python3
-"""Controlled transient launcher failure against installed PythonAnywhere watchdog.
+"""Non-disruptive test of real ACS-01 supervisor health-publication retry.
 
-Runs the actual installed watchdog and production health bridge once, with the
-first 'bash launcher' invocation intentionally returning 17 via a private PATH
-wrapper. It does not alter schedules, source files, or stop existing agents.
-REQUIRES: PythonAnywhere shell execution; never run automatically via GitHub CI.
-It proves transient launcher recovery on a production host, NOT recovery from
-an external PythonAnywhere scheduler outage.
+Runs on PythonAnywhere and exercises *the installed supervisor.main()* while
+substituting ONLY the parent agent cycle with a known healthy result. The first
+real launcher subprocess returns exit 17 through a temporary PATH wrapper;
+the next launcher subprocess must invoke the actual bridge and publish a new
+GitHub main health report. Does not kill agents, change schedules or alter
+the supervisor source. Tests production publishing retry, NOT external
+scheduler outage or a production agent crash.
 """
-from __future__ import annotations
-
 import base64
 import hashlib
-import importlib.util
+import importlib
 import json
 import os
 import shlex
 import sys
 import tempfile
-import time
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
 HOME = Path.home()
 REPO = HOME / "consensus-project"
-WATCHDOG = HOME / ".config/ai-consensus/recovery_watchdog.py"
-EVIDENCE = HOME / ".local/state/ai-consensus"
-API_URL = (
-    "https://api.github.com/repos/rafa8525/consensus-project/contents/"
-    "logs/system/pythonanywhere_health.json?ref=main"
-)
+OUT = HOME / ".local/state/ai-consensus/phase1_supervisor_retry_result.json"
+API_URL = ("https://api.github.com/repos/rafa8525/consensus-project/"
+           "contents/logs/system/pythonanywhere_health.json?ref=main")
 AGENTS = tuple("ACS-%02d" % i for i in range(1, 6))
 
 def remote():
-    req = urllib.request.Request(
-        API_URL,
-        headers={"User-Agent": "ACS-Phase1-Production-Probe",
-                 "Accept": "application/vnd.github+json",
-                 "Cache-Control": "no-cache"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as response:
+    request = urllib.request.Request(API_URL, headers={
+        "User-Agent": "ACS-Phase1-Production-Retry-Test",
+        "Accept": "application/vnd.github+json", "Cache-Control": "no-cache"})
+    with urllib.request.urlopen(request, timeout=30) as response:
         payload = json.load(response)
-    report = json.loads(base64.b64decode(payload["content"]))
-    return payload["sha"], report
+    return payload["sha"], json.loads(base64.b64decode(payload["content"]))
 
-def good(report):
-    if not isinstance(report, dict):
-        return False
-    agents = report.get("agents")
-    if not isinstance(agents, dict):
+def healthy(report):
+    states = report.get("agents") if isinstance(report, dict) else None
+    if not isinstance(states, dict):
         return False
     for name in AGENTS:
-        state = agents.get(name)
-        if not isinstance(state, dict):
+        a = states.get(name)
+        if not isinstance(a, dict):
             return False
-        if state.get("verified") is not True or state.get("status") != "current":
-            return False
-        if state.get("health_status") not in ("ok", "healthy"):
+        if (a.get("verified") is not True or a.get("status") != "current"
+                or a.get("health_status") not in ("ok", "healthy")):
             return False
     return True
 
-def load_watchdog():
-    if not WATCHDOG.is_file():
-        raise RuntimeError("Installed recovery watchdog missing; no test performed")
-    spec = importlib.util.spec_from_file_location("acs_production_recovery", WATCHDOG)
-    if spec is None or spec.loader is None:
-        raise RuntimeError("Cannot import installed watchdog")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    if not all(hasattr(module, x) for x in ("main", "read", "validate", "log", "launch")):
-        raise RuntimeError("Installed watchdog API differs; no test performed")
-    if Path(module.launch).resolve() != (REPO / "agents/run_pythonanywhere_health_bridge.sh").resolve():
-        raise RuntimeError("Unexpected launcher path; no test performed")
-    return module
-
-def main():
+def test():
     if "--self-test" in sys.argv:
-        assert good({"agents": {n: {"verified": True, "status": "current",
-                    "health_status": "healthy"} for n in AGENTS}})
-        assert not good({"agents": {"ACS-01": {"verified": True}}})
-        print("PASS: production probe static preflight")
+        assert healthy({"agents": {a: {"status": "current",
+                      "health_status": "healthy", "verified": True}
+                      for a in AGENTS}})
+        assert not healthy({"agents": {"ACS-01": {"verified": True}}})
+        print("PASS: host test preflight")
         return 0
     if "--execute" not in sys.argv:
-        print("Dry run only; pass --execute on PythonAnywhere to run controlled test")
+        print("Safe by default: use --execute only from PythonAnywhere")
         return 2
-    EVIDENCE.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now(timezone.utc)
-    # Based on observed 18:00 UTC daily supervisor task: don't overlap it.
-    if timestamp.hour == 17 and timestamp.minute >= 45:
-        print("BLOCKED: near supervisor's daily UTC schedule")
+    now = datetime.now(timezone.utc)
+    # Observed daily ACS-01 scheduled run near 18:00 UTC; prevent overlap.
+    if (now.hour == 17 and now.minute >= 45) or (now.hour == 18 and now.minute < 20):
+        print("BLOCKED: too close to ACS-01 scheduled run")
         return 2
-    if timestamp.hour == 18 and timestamp.minute < 20:
-        print("BLOCKED: near supervisor's daily UTC schedule")
+    if not (REPO / "agents/run_pythonanywhere_health_bridge.sh").is_file():
+        print("BLOCKED: missing installed bridge launcher")
         return 2
-    module = load_watchdog()
     old_sha, old_report = remote()
-    if not good(old_report):
-        print("BLOCKED: published agents not all healthy")
+    if not healthy(old_report):
+        print("BLOCKED: latest published agents are not all healthy")
         return 2
-    # The installed watchdog expects a report younger than 30 minutes.
-    # A controlled normal refresh is allowed; it does not alter schedules.
-    validation = module.validate(old_report)
-    if validation == ["report_stale"]:
-        normal = __import__("subprocess").run(
-            ["/bin/bash", str(module.launch)], cwd=REPO, timeout=900,
-            capture_output=True, text=True, check=False
-        )
-        if normal.returncode != 0:
-            print("BLOCKED: baseline bridge refresh failed:", normal.returncode)
-            return 2
-        old_sha, old_report = remote()
-        validation = module.validate(old_report)
-    if validation:
-        print("BLOCKED: installed watchdog preflight fails", validation)
+    if str(REPO) not in sys.path:
+        sys.path.insert(0, str(REPO))
+    mod = importlib.import_module("agents.supervisor")
+    source = Path(mod.__file__).resolve()
+    if source != (REPO / "agents/supervisor.py").resolve():
+        print("BLOCKED: unexpected supervisor module")
         return 2
-
-    result = {
-        "scope": "production_host_controlled_launcher_failure",
-        "started_at_utc": timestamp.isoformat(),
-        "watchdog_sha256": hashlib.sha256(WATCHDOG.read_bytes()).hexdigest(),
-        "initial_remote_blob_sha": old_sha,
-        "production_scheduler_outage_tested": False,
-        "production_agent_crash_tested": False,
-    }
-    exit_code = 1
-    with tempfile.TemporaryDirectory(prefix="acs-phase1-probe-") as td:
+    import inspect
+    main_source = inspect.getsource(mod.main)
+    if "run_pythonanywhere_health_bridge.sh" not in main_source or "bridge_attempts" not in main_source:
+        print("BLOCKED: installed supervisor does not match expected retry design")
+        return 2
+    original = mod.Supervisor.safe_run
+    # Simulate only the *successful orchestration result*. The health bridge
+    # and its real GitHub publication/retry remain completely unmocked.
+    def simulated_healthy_cycle(self):
+        return {"ok": True, "result": {"status": "ok",
+                "results": {"system_health": {"ok": True}}}}
+    started = datetime.now(timezone.utc)
+    with tempfile.TemporaryDirectory(prefix="acs-supervisor-retry-") as td:
         folder = Path(td)
-        calls = folder / "calls"
-        shell = folder / "bash"
-        real_bash = "/bin/bash"
-        if not Path(real_bash).is_file():
-            raise RuntimeError("Expected /bin/bash missing")
-        script = (
+        calls = folder / "bash-invocations"
+        wrapper = folder / "bash"
+        wrapper.write_text(
             "#!/bin/sh\n"
-            "echo invocation >> " + shlex.quote(str(calls)) + "\n"
+            "echo attempt >> " + shlex.quote(str(calls)) + "\n"
             "COUNT=$(wc -l < " + shlex.quote(str(calls)) + ")\n"
             "if [ \"$COUNT\" -eq 1 ]; then exit 17; fi\n"
-            "exec " + shlex.quote(real_bash) + " \"$@\"\n"
-        )
-        shell.write_text(script)
-        shell.chmod(0o700)
-        module.log = EVIDENCE / "phase1_production_probe_events.jsonl"
-        previous_path = os.environ.get("PATH", "")
+            "exec /bin/bash \"$@\"\n")
+        wrapper.chmod(0o700)
+        before_path = os.environ.get("PATH", "")
         try:
-            os.environ["PATH"] = td + os.pathsep + previous_path
-            exit_code = module.main()
+            os.environ["PATH"] = td + os.pathsep + before_path
+            mod.Supervisor.safe_run = simulated_healthy_cycle
+            exit_code = mod.main()
         finally:
-            os.environ["PATH"] = previous_path
-        count = len(calls.read_text().splitlines()) if calls.exists() else 0
+            mod.Supervisor.safe_run = original
+            os.environ["PATH"] = before_path
+        attempts = len(calls.read_text().splitlines()) if calls.exists() else 0
 
-    new_sha, new_report = remote()
-    new_time = str(new_report.get("generated_at_utc", ""))
+    new_sha, report = remote()
+    published = report.get("generated_at_utc", "")
     try:
-        posted = datetime.fromisoformat(new_time.replace("Z", "+00:00"))
-        published_new = posted.tzinfo is not None and posted >= timestamp
-    except ValueError:
-        published_new = False
-    passed = (exit_code == 0 and count == 2 and new_sha != old_sha
-              and published_new and good(new_report))
-    result.update({
-        "ended_at_utc": datetime.now(timezone.utc).isoformat(),
+        stamp = datetime.fromisoformat(published.replace("Z", "+00:00"))
+        fresh = stamp.tzinfo is not None and stamp >= started
+    except (TypeError, ValueError, AttributeError):
+        fresh = False
+    passed = (exit_code == 0 and attempts == 2 and old_sha != new_sha
+              and fresh and healthy(report))
+    result = {
+        "scope": "production_host_controlled_transient_bridge_failure",
+        "supervisor_cycle": "simulated_healthy_not_real_agent_cycle",
+        "bridge_execution": "real_production_launcher",
+        "external_scheduler_outage_tested": False,
+        "production_agent_crash_tested": False,
+        "started_at_utc": started.isoformat(),
+        "finished_at_utc": datetime.now(timezone.utc).isoformat(),
         "result": "PASS" if passed else "FAIL",
-        "watchdog_returncode": exit_code,
-        "launcher_invocations": count,
-        "published_new_remote_report": published_new,
-        "final_remote_blob_sha": new_sha,
-        "final_report_generated_at_utc": new_time,
-    })
-    path = EVIDENCE / "phase1_production_probe_result.json"
-    path.write_text(json.dumps(result, sort_keys=True, indent=2) + "\n")
-    print(json.dumps(result, sort_keys=True, indent=2))
-    print("Evidence:", path)
+        "launcher_invocations": attempts,
+        "supervisor_returncode": exit_code,
+        "github_report_updated": old_sha != new_sha,
+        "github_report_fresh": fresh,
+        "github_report_timestamp_utc": published,
+        "supervisor_source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+    }
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    print(json.dumps(result, indent=2, sort_keys=True))
+    print("Evidence saved to:", OUT)
     return 0 if passed else 1
 
 if __name__ == "__main__":
     try:
-        sys.exit(main())
+        sys.exit(test())
     except Exception as exc:
         print("FAIL CLOSED:", type(exc).__name__, str(exc)[:200])
         sys.exit(1)
