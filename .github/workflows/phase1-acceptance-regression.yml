@@ -9,6 +9,7 @@ on:
       - agents/test_phase1_acceptance_review.py
       - .github/workflows/phase1-acceptance-regression.yml
       - agents/verify_phase1_recovery_ci.py
+      - agents/phase1_production_recovery_probe.py
       - agents/install_phase1_recovery.sh
 jobs:
   acceptance:
@@ -27,6 +28,10 @@ jobs:
           python -m unittest -v test_phase1_acceptance_review.py
       - name: Isolated watchdog failure and recovery proof
         run: python agents/verify_phase1_recovery_ci.py
+      - name: Validate production-host probe safely (no live execution)
+        run: |
+          python -m py_compile agents/phase1_production_recovery_probe.py
+          python agents/phase1_production_recovery_probe.py --self-test
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
