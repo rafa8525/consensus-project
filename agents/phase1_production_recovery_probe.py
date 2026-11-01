@@ -99,9 +99,21 @@ def main():
     if not good(old_report):
         print("BLOCKED: published agents not all healthy")
         return 2
-    # The installed watchdog requires a report younger than 30 minutes.
-    if module.validate(old_report):
-        print("BLOCKED: installed watchdog preflight fails", module.validate(old_report))
+    # The installed watchdog expects a report younger than 30 minutes.
+    # A controlled normal refresh is allowed; it does not alter schedules.
+    validation = module.validate(old_report)
+    if validation == ["report_stale"]:
+        normal = __import__("subprocess").run(
+            ["/bin/bash", str(module.launch)], cwd=REPO, timeout=900,
+            capture_output=True, text=True, check=False
+        )
+        if normal.returncode != 0:
+            print("BLOCKED: baseline bridge refresh failed:", normal.returncode)
+            return 2
+        old_sha, old_report = remote()
+        validation = module.validate(old_report)
+    if validation:
+        print("BLOCKED: installed watchdog preflight fails", validation)
         return 2
 
     result = {
