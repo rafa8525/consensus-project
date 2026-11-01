@@ -31,7 +31,7 @@ def proof():
         (gate.ROOT / "evidence" / filename).write_bytes(payload)
         tests[key] = {"passed": True, "artifact_path": filename,
                       "artifact_sha256": hashlib.sha256(payload).hexdigest(),
-                      "executed_at_utc": iso(NOW)}
+                      "executed_at_utc": iso(NOW), "execution_scope": "production"}
     return {"tests": tests}
 
 class Tests(unittest.TestCase):
@@ -43,6 +43,10 @@ class Tests(unittest.TestCase):
     def tearDown(self):
         gate.ROOT = self.old_root
         self.temp.cleanup()
+    def test_simulation_never_counts_as_production(self):
+        p = proof()
+        p["tests"]["recovery_verified"]["execution_scope"] = "isolated_simulation"
+        self.assertFalse(gate.evaluate(fixture(), p, NOW)["proof_recovery_verified"])
     def test_tampered_or_fake_artifacts_fail(self):
         p = proof()
         p["tests"]["automatic_retry"]["artifact_sha256"] = "0" * 64
