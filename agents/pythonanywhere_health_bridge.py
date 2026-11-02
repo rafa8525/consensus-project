@@ -518,10 +518,40 @@ def pythonanywhere_schedule():
 
         enabled_matches = [x for x in matches if x.get("enabled") is True]
         enabled_acs01 = [x for x in acs01_matches if x.get("enabled") is True]
+
+        # The ACS-01 supervisor invokes the bridge after each cycle. When
+        # configured this way, a second standalone scheduled task is unnecessary.
+        # Verify the local entrypoint wiring, rather than assuming any ACS-01
+        # task publishes reports. Publication success is checked separately.
+        supervisor_path = REPO / "agents" / "supervisor.py"
+        launcher_path = REPO / "agents" / "run_acs01_supervisor.sh"
+        try:
+            supervisor_source = supervisor_path.read_text(encoding="utf-8")
+            launcher_source = launcher_path.read_text(encoding="utf-8")
+            integrated_wired = (
+                EXPECTED_HEALTH_MARKER in supervisor_source
+                and "agents.supervisor" in launcher_source
+            )
+        except (OSError, UnicodeError):
+            integrated_wired = False
+        integrated = bool(enabled_acs01) and integrated_wired
+        publisher_mode = (
+            "standalone" if enabled_matches else
+            "acs01_integrated" if integrated else "missing"
+        )
         return {"available": True, "tasks": sanitized,
-                "health_task": {"found": bool(matches),
-                                "enabled": bool(enabled_matches),
-                                "matching_task_ids": [x.get("id") for x in matches]},
+                "health_task": {
+                    "found": bool(matches) or integrated,
+                    "enabled": bool(enabled_matches) or integrated,
+                    "matching_task_ids": (
+                        [x.get("id") for x in matches] if matches
+                        else [x.get("id") for x in enabled_acs01] if integrated
+                        else []
+                    ),
+                    "mode": publisher_mode,
+                    "standalone_found": bool(matches),
+                    "integrated_wiring_verified": integrated_wired,
+                },
                 "acs01_task": {"found": bool(acs01_matches),
                                "enabled": bool(enabled_acs01),
                                "matching_task_ids": [x.get("id") for x in acs01_matches]}}
