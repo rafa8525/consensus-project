@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 7701.2,
+    "age_seconds": 46821.7,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 7701.2,
+      "age_seconds": 46821.7,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 7813.2,
+      "age_seconds": 46933.7,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-02T18:00:56.441010+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 623.9,
+      "age_seconds": 39744.4,
       "agent": "ACS-03",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-02T20:00:45.733241+00:00",
@@ -44,10 +44,10 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 1.4,
+      "age_seconds": 3.3,
       "agent": "ACS-04",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-02T20:11:08.313042+00:00",
+      "last_execution_utc": "2026-11-03T07:03:06.862189+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -57,7 +57,7 @@
       "age_seconds": 0.1,
       "agent": "ACS-05",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-02T20:11:09.602486+00:00",
+      "last_execution_utc": "2026-11-03T07:03:10.031982+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -75,7 +75,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-11-02T18:10:22.864211+00:00",
+      "mtime_utc": "2026-11-03T06:01:14.809331+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,7 +94,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-02T20:11:09.660355+00:00",
+  "generated_at_utc": "2026-11-03T07:03:10.148452+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -123,9 +123,14 @@
     },
     "available": true,
     "health_task": {
-      "enabled": false,
-      "found": false,
-      "matching_task_ids": []
+      "enabled": true,
+      "found": true,
+      "integrated_wiring_verified": true,
+      "matching_task_ids": [
+        1524414
+      ],
+      "mode": "acs01_integrated",
+      "standalone_found": false
     }
   },
   "schema_version": 6,
