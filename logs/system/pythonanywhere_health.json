@@ -1,10 +1,10 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46821.7,
+    "age_seconds": 26.3,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
-    "last_execution_utc": "2026-11-02T18:02:48.508804+00:00",
+    "last_execution_utc": "2026-11-03T18:03:02.773463+00:00",
     "runtime_component": "agents.supervisor.Supervisor",
     "stale_after_seconds": 129600,
     "status": "current",
@@ -13,41 +13,41 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46821.7,
+      "age_seconds": 26.3,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
-      "last_execution_utc": "2026-11-02T18:02:48.508804+00:00",
+      "last_execution_utc": "2026-11-03T18:03:02.773463+00:00",
       "runtime_component": "agents.supervisor.Supervisor",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46933.7,
+      "age_seconds": 143.9,
       "agent": "ACS-02",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-02T18:00:56.441010+00:00",
+      "last_execution_utc": "2026-11-03T18:01:05.115425+00:00",
       "role": "Knowledge Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 39744.4,
+      "age_seconds": 98.6,
       "agent": "ACS-03",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-02T20:00:45.733241+00:00",
+      "last_execution_utc": "2026-11-03T18:01:50.450411+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 3.3,
+      "age_seconds": 1.2,
       "agent": "ACS-04",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-03T07:03:06.862189+00:00",
+      "last_execution_utc": "2026-11-03T18:03:27.853211+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -57,7 +57,7 @@
       "age_seconds": 0.1,
       "agent": "ACS-05",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-03T07:03:10.031982+00:00",
+      "last_execution_utc": "2026-11-03T18:03:28.950200+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -75,7 +75,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-11-03T06:01:14.809331+00:00",
+      "mtime_utc": "2026-11-03T18:01:03.273810+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,7 +94,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-03T07:03:10.148452+00:00",
+  "generated_at_utc": "2026-11-03T18:03:29.020359+00:00",
   "git": {
     "last_commit": {
       "ok": true,
