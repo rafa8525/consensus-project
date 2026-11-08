@@ -62,6 +62,11 @@ jobs:
           python -m py_compile agents/phase1_independent_schedule_guard.py agents/test_phase1_independent_schedule_guard.py
           cd agents
           python -m unittest -v test_phase1_independent_schedule_guard.py
+      - name: Simulate controlled scheduler test with no live changes
+        run: |
+          python -m py_compile agents/phase1_controlled_scheduler_test.py agents/test_phase1_controlled_scheduler_test.py
+          cd agents
+          python -m unittest -v test_phase1_controlled_scheduler_test.py
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
