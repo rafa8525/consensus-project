@@ -8,6 +8,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 
 USER = "rafa1215"
@@ -21,6 +22,29 @@ REPORT_URL = ("https://raw.githubusercontent.com/rafa8525/consensus-project/"
               "main/logs/system/pythonanywhere_health.json")
 API_URL = f"https://www.pythonanywhere.com/api/v0/user/{USER}/schedule/{TASK_ID}/"
 MAX_AGE_SECONDS = 27 * 3600
+# Known API-managed timestamps; allow value changes, never key additions/removals.
+VOLATILE_API_FIELDS = frozenset((
+    "next_run", "next_run_at", "last_run", "last_run_at",
+    "updated_at", "modified_at",
+))
+
+def task_configuration_diff(before, after):
+    """Return field *names* only; never leak schedule commands or private metadata.
+
+    Unknown field changes, changed field sets, and missing core fields fail closed.
+    """
+    if not isinstance(before, dict) or not isinstance(after, dict):
+        return {"safe": False, "configuration": ["invalid_api_shape"],
+                "api_metadata": []}
+    changed = sorted(k for k in set(before) | set(after)
+                     if (k not in before or k not in after or before[k] != after[k])
+                     and k != "enabled")
+    metadata = [k for k in changed if k in VOLATILE_API_FIELDS
+                and k in before and k in after]
+    configuration = [k for k in changed if k not in metadata]
+    return {"safe": not configuration,
+            "configuration": configuration,
+            "api_metadata": metadata}
 
 def fetch_json(url, token=None, method="GET", body=None, opener=None):
     headers = {"User-Agent": "ACS-Schedule-Guard", "Cache-Control": "no-cache"}
@@ -62,7 +86,7 @@ def validate_task(task):
     cmd = task.get("command")
     if not isinstance(cmd, str) or cmd.strip() not in ALLOWED_COMMANDS:
         return "unexpected_command"
-    if task.get("enabled") not in (True,False):
+    if type(task.get("enabled")) is not bool:
         return "invalid_enabled"
     return None
 
@@ -76,7 +100,7 @@ def decide(report_status, task):
         return "ENABLE_DISABLED_TASK"
     return "BLOCKED_" + report_status
 
-def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_json):
+def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_json, maintenance=False):
     now = now or datetime.now(timezone.utc)
     if not token:
         return {"status":"BLOCKED_missing_api_token","changed":False}
@@ -91,8 +115,12 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
     if not allow_enable:
         result["status"]="BLOCKED_apply_requires_allow_enable"
         return result
+    if maintenance:
+        result["status"]="BLOCKED_explicit_maintenance_mode"
+        return result
     latest = fetcher(API_URL,token=token)
-    if latest != before or validate_task(latest) or latest["enabled"] is not False:
+    if (validate_task(latest) or latest["enabled"] is not False or
+            not task_configuration_diff(before, latest)["safe"]):
         result["status"]="BLOCKED_prewrite_schedule_changed"
         return result
     # ONLY change the enabled flag; never change task command or timing.
@@ -102,10 +130,12 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
     if validate_task(after) or after.get("enabled") is not True:
         result["status"]="ESCALATE_postwrite_verification_failed"
         return result
-    for field in ("command","interval","hour","minute"):
-        if field in before and after.get(field) != before.get(field):
-            result["status"]="ESCALATE_configuration_change"
-            return result
+    difference=task_configuration_diff(latest, after)
+    if not difference["safe"]:
+        result["status"]="ESCALATE_configuration_change"
+        result["changed_field_names"]=difference["configuration"]
+        return result
+    result["allowed_api_metadata_changes"]=difference["api_metadata"]
     result["status"]="SCHEDULE_REENABLED_NEXT_RUN_ONLY"
     return result
 
@@ -115,9 +145,13 @@ def main():
     p.add_argument("--allow-enable",action="store_true")
     args=p.parse_args()
     try:
-        result=guard(args.apply,args.allow_enable,os.getenv("PYTHONANYWHERE_API_TOKEN"))
+        result=guard(args.apply,args.allow_enable,os.getenv("PYTHONANYWHERE_API_TOKEN"),
+                     maintenance=os.getenv("ACS_SCHEDULER_MAINTENANCE","").lower()=="true")
     except (urllib.error.URLError,OSError,TimeoutError,ValueError) as exc:
         result={"status":"ESCALATE_api_or_network_error","error_type":type(exc).__name__,"changed":"unknown"}
+        if isinstance(exc, urllib.error.HTTPError):
+            result["http_status"] = exc.code  # HTTP status only: never print token or response body
+            result["request_host"] = urlparse(exc.url).hostname  # host only; no path, query or token
     print(json.dumps(result,sort_keys=True))
     return 0 if result["status"] in ("HEALTHY_NOOP","SCHEDULE_REENABLED_NEXT_RUN_ONLY") else 2
 
