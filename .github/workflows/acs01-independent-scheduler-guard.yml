@@ -44,6 +44,7 @@ jobs:
         env:
           PYTHONANYWHERE_API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
           RECOVERY_ENABLED: ${{ vars.ACS_SCHEDULER_RECOVERY_ENABLED }}
+          ACS_SCHEDULER_MAINTENANCE: ${{ vars.ACS_SCHEDULER_MAINTENANCE }}
           MANUAL_APPLY: ${{ inputs.allow_reenable }}
           EVENT_NAME: ${{ github.event_name }}
         shell: bash
