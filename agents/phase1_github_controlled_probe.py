@@ -121,12 +121,19 @@ def controlled_probe(token,fetcher=g.fetch_json, now=None):
         else:
             info["status"]="GITHUB_INITIATED_SCHEDULE_REENABLE_VERIFIED"
         return info
+    except BaseException as exc:
+        info["status"]="FAILED_probe_exception"
+        info["error_type"]=type(exc).__name__
+        return info
     finally:
         if disable_attempted:
-            info["restoration_verified"]=restore_if_needed(before,token,fetcher)
-            info["restoration_checked_at_utc"]=datetime.now(UTC).isoformat()
-            if not info["restoration_verified"]:
+            try:
+                info["restoration_verified"]=restore_if_needed(before,token,fetcher)
+            except BaseException as exc:
                 info["status"]="CRITICAL_restore_unverified"
+                info["restoration_verified"]=False
+                info["rollback_error_type"]=type(exc).__name__
+            info["restoration_checked_at_utc"]=datetime.now(UTC).isoformat()
 
 def simulated_probe():
     now=datetime(2026,11,8,3,15,tzinfo=UTC)
