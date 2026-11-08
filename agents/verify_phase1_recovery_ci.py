@@ -108,6 +108,7 @@ with tempfile.TemporaryDirectory(prefix="acs-phase1-isolated-") as d:
     real_execute = module.execute
     # Use the source implementation recovered by reloading this isolated module.
     spec.loader.exec_module(module)
+    module.repo = directory  # isolated existing cwd, never a production path
     real_execute = module.execute
     assert real_execute([sys.executable, "-c", "import sys;sys.exit(0)"], 5)
     assert not real_execute([sys.executable, "-c", "import sys;sys.exit(17)"], 5)
