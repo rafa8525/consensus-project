@@ -84,6 +84,25 @@ with tempfile.TemporaryDirectory(prefix="acs-phase1-isolated-") as d:
     assert events[-1][0] == "escalation"
     print("PASS: bounded_escalation")
 
+    # A held recovery lock must prevent any second launcher invocation.
+    import fcntl
+    lock = Path.home() / ".local/state/ai-consensus/recovery.lock"
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    events.clear()
+    calls = {"n": 0}
+    def forbidden_launch(cmd, timeout=1200):
+        calls["n"] += 1
+        raise AssertionError("overlapping invocation executed launcher")
+    module.execute = forbidden_launch
+    with lock.open("a+") as held:
+        fcntl.flock(held.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        with contextlib.redirect_stdout(io.StringIO()):
+            result = module.main()
+        fcntl.flock(held.fileno(), fcntl.LOCK_UN)
+    assert result == 3 and calls["n"] == 0
+    assert events and events[-1][0] == "overlap_blocked"
+    print("PASS: overlapping_recovery_blocked")
+
     # Produce immutable-to-this-CI-run bytes, downloadable from Actions.
     artifact = directory / "recovery_simulation_evidence.json"
     payload = {
