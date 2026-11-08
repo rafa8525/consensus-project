@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 
 USER = "rafa1215"
 TASK_ID = 1524414
-EXPECTED_COMMAND = "run_acs01_supervisor.sh"
+ALLOWED_COMMANDS = {\n    "bash /home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",\n    "/bin/bash /home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",\n    "/home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",\n}
 REPORT_URL = ("https://raw.githubusercontent.com/rafa8525/consensus-project/"
               "main/logs/system/pythonanywhere_health.json")
 API_URL = f"https://www.pythonanywhere.com/api/v0/user/{USER}/schedule/{TASK_ID}/"
@@ -56,7 +56,7 @@ def validate_task(task):
     if not isinstance(task, dict) or str(task.get("id")) != str(TASK_ID):
         return "unexpected_task_id"
     cmd = task.get("command")
-    if not isinstance(cmd, str) or EXPECTED_COMMAND not in cmd:
+    if not isinstance(cmd, str) or cmd.strip() not in ALLOWED_COMMANDS:
         return "unexpected_command"
     if task.get("enabled") not in (True,False):
         return "invalid_enabled"
