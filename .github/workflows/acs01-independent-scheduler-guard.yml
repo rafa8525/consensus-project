@@ -1,0 +1,56 @@
+name: ACS-01 Independent Scheduler Guard
+
+on:
+  schedule:
+    - cron: "33 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      allow_reenable:
+        description: "Permit enabling a verified disabled ACS-01 task (requires repository recovery switch)"
+        type: boolean
+        default: false
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: acs01-independent-scheduler-guard
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout guard
+        uses: actions/checkout@v4
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Self-test before API use
+        run: |
+          python -m py_compile agents/phase1_independent_schedule_guard.py
+          cd agents
+          python -m unittest -q test_phase1_independent_schedule_guard.py
+      - name: Inspect PythonAnywhere scheduler, fail closed by default
+        env:
+          PYTHONANYWHERE_API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
+          RECOVERY_ENABLED: ${{ vars.ACS_SCHEDULER_RECOVERY_ENABLED }}
+          MANUAL_APPLY: ${{ inputs.allow_reenable }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${PYTHONANYWHERE_API_TOKEN}" ]; then
+            echo "SKIPPED: PythonAnywhere API token not configured. No changes made."
+            exit 0
+          fi
+          if [ "${RECOVERY_ENABLED}" = "true" ] && { [ "${EVENT_NAME}" = "schedule" ] || [ "${MANUAL_APPLY}" = "true" ]; }; then
+            echo "Recovery switch enabled; applying only if task is verified disabled."
+            python agents/phase1_independent_schedule_guard.py --apply --allow-enable
+          else
+            echo "Recovery disabled: read-only decision, no schedule modifications."
+            python agents/phase1_independent_schedule_guard.py
+          fi
