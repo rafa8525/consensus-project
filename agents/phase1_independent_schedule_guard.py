@@ -77,7 +77,7 @@ def decide(report_status, task):
         return "ENABLE_DISABLED_TASK"
     return "BLOCKED_" + report_status
 
-def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_json):
+def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_json, maintenance=False):
     now = now or datetime.now(timezone.utc)
     if not token:
         return {"status":"BLOCKED_missing_api_token","changed":False}
@@ -92,6 +92,9 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
     if not allow_enable:
         result["status"]="BLOCKED_apply_requires_allow_enable"
         return result
+    if maintenance:
+        result["status"]="BLOCKED_explicit_maintenance_mode"
+        return result
     latest = fetcher(API_URL,token=token)
     if latest != before or validate_task(latest) or latest["enabled"] is not False:
         result["status"]="BLOCKED_prewrite_schedule_changed"
@@ -103,8 +106,9 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
     if validate_task(after) or after.get("enabled") is not True:
         result["status"]="ESCALATE_postwrite_verification_failed"
         return result
-    for field in ("command","interval","hour","minute"):
-        if field in before and after.get(field) != before.get(field):
+    # Check all returned metadata, not a short allowlist of schedule fields.
+    for field, old_value in before.items():
+        if field != "enabled" and after.get(field) != old_value:
             result["status"]="ESCALATE_configuration_change"
             return result
     result["status"]="SCHEDULE_REENABLED_NEXT_RUN_ONLY"
@@ -116,7 +120,8 @@ def main():
     p.add_argument("--allow-enable",action="store_true")
     args=p.parse_args()
     try:
-        result=guard(args.apply,args.allow_enable,os.getenv("PYTHONANYWHERE_API_TOKEN"))
+        result=guard(args.apply,args.allow_enable,os.getenv("PYTHONANYWHERE_API_TOKEN"),
+                     maintenance=os.getenv("ACS_SCHEDULER_MAINTENANCE","").lower()=="true")
     except (urllib.error.URLError,OSError,TimeoutError,ValueError) as exc:
         result={"status":"ESCALATE_api_or_network_error","error_type":type(exc).__name__,"changed":"unknown"}
         if isinstance(exc, urllib.error.HTTPError):
