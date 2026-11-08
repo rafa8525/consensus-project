@@ -88,6 +88,31 @@ class GuardTests(unittest.TestCase):
     def test_stale_threshold(self):
         self.assertEqual(g.inspect_report(report(28),NOW),"stale_report")
         self.assertEqual(g.inspect_report(report(1),NOW),"healthy")
+    def test_explicit_maintenance_blocks_enable(self):
+        f,c=mock(report(29),task(False))
+        result=g.guard(True,True,"test-token",NOW,f,maintenance=True)
+        self.assertEqual(result["status"],"BLOCKED_explicit_maintenance_mode")
+        self.assertFalse(any(x[0]=="PATCH" for x in c))
+    def test_unexpected_schedule_metadata_change_after_patch_escalates(self):
+        state=task(False)
+        calls=[]
+        def fetch(url,token=None,method="GET",body=None):
+            calls.append(method)
+            if url==g.REPORT_URL: return report()
+            if method=="PATCH":
+                state.update(body)
+                state["description"]="unexpected"
+                return dict(state)
+            return dict(state)
+        result=g.guard(True,True,"test-token",NOW,fetch)
+        self.assertEqual(result["status"],"ESCALATE_configuration_change")
+        self.assertTrue(result["changed"])
+        self.assertEqual(calls.count("PATCH"),1)
+    def test_disabled_schedule_missing_or_invalid_report_blocks(self):
+        f,c=mock({"generated_at_utc":"bad","agents":{}},task(False))
+        result=g.guard(True,True,"test-token",NOW,f)
+        self.assertTrue(result["status"].startswith("BLOCKED_"))
+        self.assertFalse(any(x[0]=="PATCH" for x in c))
     def test_invalid_enabled_rejected(self):
         t=task();t["enabled"]="true"
         self.assertEqual(g.validate_task(t),"invalid_enabled")
