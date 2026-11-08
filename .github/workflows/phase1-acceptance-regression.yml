@@ -32,6 +32,31 @@ jobs:
         run: |
           python -m py_compile agents/phase1_production_recovery_probe.py
           python agents/phase1_production_recovery_probe.py --self-test
+      - name: Validate read-only production preflight fixtures
+        run: |
+          python -m py_compile agents/phase1_deployment_preflight.py
+          python - <<'PY'
+          import sys
+          from datetime import datetime, timezone
+          sys.path.insert(0, "agents")
+          from phase1_deployment_preflight import check_report
+          report = {
+              "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+              "agents": {f"ACS-{n:02d}": {"verified": True, "status": "current", "health_status": "healthy"} for n in range(1,6)},
+              "pythonanywhere_schedule": {
+                  "available": True, "acs01_task": {"enabled": True},
+                  "health_task": {"mode": "acs01_integrated", "integrated_wiring_verified": True,
+                                  "standalone_found": False, "matching_task_ids": [1524414]}
+              }
+          }
+          assert check_report(report) == []
+          report["pythonanywhere_schedule"]["acs01_task"]["enabled"] = False
+          assert "parent_schedule_not_confirmed" in check_report(report)
+          report["pythonanywhere_schedule"]["acs01_task"]["enabled"] = True
+          report["pythonanywhere_schedule"]["health_task"]["matching_task_ids"] = [1521711]
+          assert "unexpected_parent_task_id" in check_report(report)
+          print("PASS: read-only preflight recognizes current layout and rejects schedule mismatch")
+          PY
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
