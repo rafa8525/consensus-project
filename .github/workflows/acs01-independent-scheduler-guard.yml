@@ -3,6 +3,12 @@ name: ACS-01 Independent Scheduler Guard
 on:
   schedule:
     - cron: "33 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "agents/phase1_independent_schedule_guard.py"
+      - "agents/test_phase1_independent_schedule_guard.py"
+      - ".github/workflows/acs01-independent-scheduler-guard.yml"
   workflow_dispatch:
     inputs:
       allow_reenable:
@@ -44,8 +50,8 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "${PYTHONANYWHERE_API_TOKEN}" ]; then
-            echo "SKIPPED: PythonAnywhere API token not configured. No changes made."
-            exit 0
+            echo "ERROR: PythonAnywhere API token unavailable to this workflow. No changes made."
+            exit 1
           fi
           if [ "${RECOVERY_ENABLED}" = "true" ] && { [ "${EVENT_NAME}" = "schedule" ] || [ "${MANUAL_APPLY}" = "true" ]; }; then
             echo "Recovery switch enabled; applying only if task is verified disabled."
