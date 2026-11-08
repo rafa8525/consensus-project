@@ -54,6 +54,19 @@ def test(mod,token,live=False):
             raise RuntimeError('simulation_failed')
         return {'passed':True,'scope':'isolated_with_live_readonly_preflight',
             'production_changed':False,'result':result}
+    # LIVE TEST: durable configuration backup before any API modification.
+    backup=OUT.with_name('phase1_original_acs01_schedule.json')
+    backup.parent.mkdir(parents=True,exist_ok=True)
+    fd=os.open(str(backup),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+    with os.fdopen(fd,'w') as handle:
+        json.dump({'saved_utc':datetime.now(timezone.utc).isoformat(),
+                   'task':before},handle,indent=2)
+        handle.flush()
+        os.fsync(handle.fileno())
+    check=json.loads(backup.read_text())['task']
+    if check!=before:
+        raise RuntimeError('backup_verification_failed')
+    print('BACKUP VERIFIED:',backup,flush=True)
     # LIVE TEST: single scheduled-task flag toggled; restore in finally.
     disable_attempted=False
     restored=False
