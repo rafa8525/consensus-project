@@ -51,7 +51,7 @@ def test(mod,token,live=False,api=None):
             return dict(simulated)
         result=mod.guard(True,True,token,fetcher=fake)
         if result['status']!='SCHEDULE_REENABLED_NEXT_RUN_ONLY' or calls!=[{'enabled':True}]:
-            raise RuntimeError('simulation_failed')
+            raise RuntimeError('simulation_failed: status='+str(result.get('status'))+' calls='+str(len(calls)))
         return {'passed':True,'scope':'isolated_with_live_readonly_preflight',
             'production_changed':False,'result':result}
     if os.getenv('ACS_SCHEDULER_MAINTENANCE','').strip().lower()=='true':
