@@ -22,6 +22,29 @@ REPORT_URL = ("https://raw.githubusercontent.com/rafa8525/consensus-project/"
               "main/logs/system/pythonanywhere_health.json")
 API_URL = f"https://www.pythonanywhere.com/api/v0/user/{USER}/schedule/{TASK_ID}/"
 MAX_AGE_SECONDS = 27 * 3600
+# Known API-managed timestamps; allow value changes, never key additions/removals.
+VOLATILE_API_FIELDS = frozenset((
+    "next_run", "next_run_at", "last_run", "last_run_at",
+    "updated_at", "modified_at",
+))
+
+def task_configuration_diff(before, after):
+    """Return field *names* only; never leak schedule commands or private metadata.
+
+    Unknown field changes, changed field sets, and missing core fields fail closed.
+    """
+    if not isinstance(before, dict) or not isinstance(after, dict):
+        return {"safe": False, "configuration": ["invalid_api_shape"],
+                "api_metadata": []}
+    changed = sorted(k for k in set(before) | set(after)
+                     if (k not in before or k not in after or before[k] != after[k])
+                     and k != "enabled")
+    metadata = [k for k in changed if k in VOLATILE_API_FIELDS
+                and k in before and k in after]
+    configuration = [k for k in changed if k not in metadata]
+    return {"safe": not configuration,
+            "configuration": configuration,
+            "api_metadata": metadata}
 
 def fetch_json(url, token=None, method="GET", body=None, opener=None):
     headers = {"User-Agent": "ACS-Schedule-Guard", "Cache-Control": "no-cache"}
@@ -63,7 +86,7 @@ def validate_task(task):
     cmd = task.get("command")
     if not isinstance(cmd, str) or cmd.strip() not in ALLOWED_COMMANDS:
         return "unexpected_command"
-    if task.get("enabled") not in (True,False):
+    if type(task.get("enabled")) is not bool:
         return "invalid_enabled"
     return None
 
@@ -96,7 +119,8 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
         result["status"]="BLOCKED_explicit_maintenance_mode"
         return result
     latest = fetcher(API_URL,token=token)
-    if latest != before or validate_task(latest) or latest["enabled"] is not False:
+    if (validate_task(latest) or latest["enabled"] is not False or
+            not task_configuration_diff(before, latest)["safe"]):
         result["status"]="BLOCKED_prewrite_schedule_changed"
         return result
     # ONLY change the enabled flag; never change task command or timing.
@@ -106,12 +130,12 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
     if validate_task(after) or after.get("enabled") is not True:
         result["status"]="ESCALATE_postwrite_verification_failed"
         return result
-    # The sole allowed metadata delta is enabled: False -> True.
-    before_metadata={k:v for k,v in before.items() if k!="enabled"}
-    after_metadata={k:v for k,v in after.items() if k!="enabled"}
-    if after_metadata != before_metadata:
+    difference=task_configuration_diff(latest, after)
+    if not difference["safe"]:
         result["status"]="ESCALATE_configuration_change"
+        result["changed_field_names"]=difference["configuration"]
         return result
+    result["allowed_api_metadata_changes"]=difference["api_metadata"]
     result["status"]="SCHEDULE_REENABLED_NEXT_RUN_ONLY"
     return result
 
