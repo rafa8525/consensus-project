@@ -36,6 +36,18 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             target.test(self.g,"token",False,self.api)
         self.assertEqual(self.changes,[])
+    def test_real_guard_simulation_does_not_modify_api(self):
+        from datetime import datetime, timezone
+        import phase1_independent_schedule_guard as actual_guard
+        calls=[]
+        def fake_api(url, token=None, method="GET", body=None):
+            if method!="GET":
+                calls.append((method,body))
+                raise AssertionError("live API mutation attempted in simulation")
+            return dict(self.state)
+        outcome=target.test(actual_guard,"test-token",False,fake_api)
+        self.assertTrue(outcome["passed"])
+        self.assertEqual(calls,[])
     def test_configuration_equality(self):
         before=dict(self.state)
         after={**before,"enabled":False}
