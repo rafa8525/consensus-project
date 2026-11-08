@@ -67,6 +67,11 @@ jobs:
           python -m py_compile agents/phase1_controlled_scheduler_test.py agents/test_phase1_controlled_scheduler_test.py
           cd agents
           python -m unittest -v test_phase1_controlled_scheduler_test.py
+      - name: Verify redacted scheduler backup comparison
+        run: |
+          python -m py_compile agents/phase1_scheduler_diff_readonly.py agents/test_phase1_scheduler_diff_readonly.py
+          cd agents
+          python -m unittest -v test_phase1_scheduler_diff_readonly.py
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
