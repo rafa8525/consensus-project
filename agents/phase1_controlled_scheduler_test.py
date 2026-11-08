@@ -27,8 +27,8 @@ def same_config(before,after):
         k:v for k,v in before.items() if k!='enabled'
     }=={k:v for k,v in after.items() if k!='enabled'}
 
-def test(mod,token,live=False):
-    api=mod.fetch_json
+def test(mod,token,live=False,api=None):
+    api=api or mod.fetch_json
     before=api(mod.API_URL,token=token)
     if mod.validate_task(before) or before['enabled'] is not True:
         raise RuntimeError('preflight_not_enabled_or_unexpected_configuration')
