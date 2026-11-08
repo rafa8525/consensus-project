@@ -118,6 +118,9 @@ def main():
         result=guard(args.apply,args.allow_enable,os.getenv("PYTHONANYWHERE_API_TOKEN"))
     except (urllib.error.URLError,OSError,TimeoutError,ValueError) as exc:
         result={"status":"ESCALATE_api_or_network_error","error_type":type(exc).__name__,"changed":"unknown"}
+        if isinstance(exc, urllib.error.HTTPError):
+            result["http_status"] = exc.code  # HTTP status only: never print token or response body
+            result["stage"] = "pythonanywhere_api_or_public_report"
     print(json.dumps(result,sort_keys=True))
     return 0 if result["status"] in ("HEALTHY_NOOP","SCHEDULE_REENABLED_NEXT_RUN_ONLY") else 2
 
