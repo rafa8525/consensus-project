@@ -45,7 +45,7 @@ jobs:
           python -m unittest -q test_phase1_independent_schedule_guard.py
           python -m unittest -v test_phase1_independent_recovery_e2e.py
           python -m unittest -v test_phase1_github_controlled_probe.py
-          python phase1_github_controlled_probe.py --simulate
+          python phase1_github_controlled_probe.py
       - name: Inspect PythonAnywhere scheduler, fail closed by default
         env:
           PYTHONANYWHERE_API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
