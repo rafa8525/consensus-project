@@ -81,7 +81,8 @@ def test(mod,token,live=False,api=None):
         api(mod.API_URL,token=token,method='PATCH',body={'enabled':False})
         disabled=api(mod.API_URL,token=token)
         if mod.validate_task(disabled) or disabled.get('enabled') is not False or not same_config(before,disabled):
-            raise RuntimeError('disable_or_configuration_verification_failed')
+            changed_keys=sorted(k for k in set(before)|set(disabled) if before.get(k)!=disabled.get(k) and k!='enabled')
+            raise RuntimeError('disable_verification_failed; enabled='+str(disabled.get('enabled'))+'; unexpected_field_names='+repr(changed_keys))
         result=mod.guard(True,True,token,fetcher=api)
         after=api(mod.API_URL,token=token)
         if result['status']!='SCHEDULE_REENABLED_NEXT_RUN_ONLY' or after.get('enabled') is not True or not same_config(before,after):
