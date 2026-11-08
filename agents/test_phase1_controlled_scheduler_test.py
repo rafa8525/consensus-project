@@ -48,6 +48,35 @@ class RecoveryTests(unittest.TestCase):
         outcome=target.test(actual_guard,"test-token",False,fake_api)
         self.assertTrue(outcome["passed"])
         self.assertEqual(calls,[])
+    def test_generated_next_run_timestamp_is_classified(self):
+        before=dict(self.state, next_run='2026-11-08T18:00Z')
+        after=dict(before, enabled=False, next_run='2026-11-09T18:00Z')
+        result=target.classify_schedule_difference(before,after)
+        self.assertTrue(result['safe_to_continue'])
+        self.assertEqual(result['metadata_changed'],['next_run'])
+        self.assertEqual(result['core_changed'],[])
+    def test_changed_command_is_blocked_even_with_volatile_change(self):
+        before=dict(self.state, next_run='one')
+        after=dict(before, enabled=False, next_run='two', command='other.sh')
+        result=target.classify_schedule_difference(before,after)
+        self.assertFalse(result['safe_to_continue'])
+        self.assertIn('command',result['core_changed'])
+    def test_unrecognized_metadata_is_not_silently_whitelisted(self):
+        before=dict(self.state)
+        after=dict(before, enabled=False, mystery_field='new')
+        result=target.classify_schedule_difference(before,after)
+        self.assertFalse(result['safe_to_continue'])
+        self.assertIn('mystery_field',result['unclassified_changed'])
+    def test_removed_schedule_metadata_is_blocked(self):
+        before=dict(self.state, extra='original')
+        after=dict(self.state, enabled=False)
+        result=target.classify_schedule_difference(before,after)
+        self.assertFalse(result['safe_to_continue'])
+        self.assertIn('extra',result['unclassified_changed'])
+    def test_volatile_and_enabled_only_change_is_accepted(self):
+        before=dict(self.state, updated_at='old')
+        after=dict(before, enabled=False, updated_at='new')
+        self.assertTrue(target.same_config(before,after))
     def test_configuration_equality(self):
         before=dict(self.state)
         after={**before,"enabled":False}
