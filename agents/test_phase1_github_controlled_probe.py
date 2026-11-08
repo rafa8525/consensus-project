@@ -48,21 +48,24 @@ class Tests(unittest.TestCase):
         self.assertTrue(api.task["enabled"])
     def test_one_recovery_api_failure_has_emergency_restore(self):
         api=Fake(fail_reenable=True)
-        with self.assertRaises(OSError):
-            p.controlled_probe("fake",api.fetch,NOW)
+        result=p.controlled_probe("fake",api.fetch,NOW)
+        self.assertEqual(result["status"],"FAILED_probe_exception")
+        self.assertTrue(result["restoration_verified"])
         self.assertTrue(api.task["enabled"])
         self.assertEqual(api.task["hour"],10)
         self.assertEqual(api.mutations,[{"enabled":False},{"enabled":True},{"enabled":True}])
     def test_bad_configuration_after_disable_restores_and_fails(self):
         api=Fake(drift=True)
-        with self.assertRaises(RuntimeError):
-            p.controlled_probe("fake",api.fetch,NOW)
+        result=p.controlled_probe("fake",api.fetch,NOW)
+        self.assertEqual(result["status"],"CRITICAL_restore_unverified")
+        self.assertFalse(result["restoration_verified"])
         self.assertTrue(api.task["enabled"])
         self.assertNotEqual(api.task["hour"],10)
     def test_disable_api_failure_does_not_leave_disabled(self):
         api=Fake(fail_disable=True)
-        with self.assertRaises(OSError):
-            p.controlled_probe("fake",api.fetch,NOW)
+        result=p.controlled_probe("fake",api.fetch,NOW)
+        self.assertEqual(result["status"],"FAILED_probe_exception")
+        self.assertTrue(result["restoration_verified"])
         self.assertTrue(api.task["enabled"])
     def test_unexpected_main_dispatch_blocked(self):
         base={"GITHUB_EVENT_NAME":"workflow_dispatch","GITHUB_REF":"refs/heads/main",
