@@ -7,7 +7,7 @@ import importlib.util
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 TASK_ID=1524414
@@ -40,7 +40,7 @@ def test(mod,token,live=False,api=None):
         calls=[]
         def fake(url,token=None,method='GET',body=None):
             if url==mod.REPORT_URL:
-                return {'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+                return {'generated_at_utc':(datetime.now(timezone.utc)-timedelta(seconds=2)).isoformat(),
                     'agents':{f'ACS-{n:02d}':{'verified':True,'status':'current','health_status':'healthy'}
                     for n in range(1,6)}}
             if url!=mod.API_URL:raise RuntimeError('unexpected_test_url')
