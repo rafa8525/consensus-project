@@ -57,6 +57,11 @@ jobs:
           assert "unexpected_parent_task_id" in check_report(report)
           print("PASS: read-only preflight recognizes current layout and rejects schedule mismatch")
           PY
+      - name: Verify independent scheduler recovery remains fail closed
+        run: |
+          python -m py_compile agents/phase1_independent_schedule_guard.py agents/test_phase1_independent_schedule_guard.py
+          cd agents
+          python -m unittest -v test_phase1_independent_schedule_guard.py
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
