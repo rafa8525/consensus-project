@@ -93,6 +93,12 @@ def api(uri,method='GET',payload=None):
     r=urllib.request.Request(uri,headers=h,data=json.dumps(payload).encode() if payload is not None else None,method=method)
     with urllib.request.urlopen(r,timeout=30) as response:return json.load(response)
 tasks=api(base)
+# Fail closed: production integrates health publication into the ACS-01 parent.
+# Never replace that scheduled task with a standalone watchdog installer.
+if any(str(t.get('id')) == '1524414' or
+       'run_acs01_supervisor.sh' in str(t.get('command', ''))
+       for t in tasks):
+    raise SystemExit('ERROR: ACS-01 integrated schedule detected; installer blocked; no schedule changes')
 match=[x for x in tasks if x.get('id')==1521711 or 'run_pythonanywhere_health_bridge.sh' in str(x.get('command',''))]
 if len(match)!=1:raise SystemExit('ERROR: health schedule not uniquely identified; unchanged')
 task=match[0]
