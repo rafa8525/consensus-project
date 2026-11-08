@@ -8,6 +8,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 
 USER = "rafa1215"
@@ -120,7 +121,7 @@ def main():
         result={"status":"ESCALATE_api_or_network_error","error_type":type(exc).__name__,"changed":"unknown"}
         if isinstance(exc, urllib.error.HTTPError):
             result["http_status"] = exc.code  # HTTP status only: never print token or response body
-            result["stage"] = "pythonanywhere_api_or_public_report"
+            result["request_host"] = urlparse(exc.url).hostname  # host only; no path, query or token
     print(json.dumps(result,sort_keys=True))
     return 0 if result["status"] in ("HEALTHY_NOOP","SCHEDULE_REENABLED_NEXT_RUN_ONLY") else 2
 
