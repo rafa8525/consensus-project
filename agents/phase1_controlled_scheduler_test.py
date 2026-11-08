@@ -54,6 +54,8 @@ def test(mod,token,live=False,api=None):
             raise RuntimeError('simulation_failed')
         return {'passed':True,'scope':'isolated_with_live_readonly_preflight',
             'production_changed':False,'result':result}
+    if os.getenv('ACS_SCHEDULER_MAINTENANCE','').strip().lower()=='true':
+        raise RuntimeError('maintenance_mode_active')
     # Prevent collision with the observed daily parent run near 18:00 UTC.
     clock=datetime.now(timezone.utc)
     if (clock.hour==17 and clock.minute>=45) or (clock.hour==18 and clock.minute<20):
