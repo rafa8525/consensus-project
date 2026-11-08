@@ -12,7 +12,11 @@ from datetime import datetime, timezone
 
 USER = "rafa1215"
 TASK_ID = 1524414
-ALLOWED_COMMANDS = {\n    "bash /home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",\n    "/bin/bash /home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",\n    "/home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",\n}
+ALLOWED_COMMANDS = {
+    "bash /home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",
+    "/bin/bash /home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",
+    "/home/rafa1215/consensus-project/agents/run_acs01_supervisor.sh",
+}
 REPORT_URL = ("https://raw.githubusercontent.com/rafa8525/consensus-project/"
               "main/logs/system/pythonanywhere_health.json")
 API_URL = f"https://www.pythonanywhere.com/api/v0/user/{USER}/schedule/{TASK_ID}/"
