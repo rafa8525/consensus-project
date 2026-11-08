@@ -59,8 +59,15 @@ def test(mod,token,live=False,api=None):
     before=api(mod.API_URL,token=token)
     if mod.validate_task(before) or before['enabled'] is not True:
         raise RuntimeError('preflight_not_enabled_or_unexpected_configuration')
-    if api(mod.API_URL,token=token)!=before:
-        raise RuntimeError('task_changed_during_preflight')
+    preflight_again=api(mod.API_URL,token=token)
+    if mod.validate_task(preflight_again) or preflight_again.get('enabled') is not True:
+        raise RuntimeError('preflight_task_no_longer_enabled_or_valid')
+    preflight_diff=classify_schedule_difference(before,preflight_again)
+    if not preflight_diff['safe_to_continue']:
+        raise RuntimeError('preflight_configuration_drift: core='+repr(preflight_diff['core_changed'])+
+                           '; unknown='+repr(preflight_diff['unclassified_changed']))
+    # Any permitted API timestamp drift is not used as the backup baseline.
+    before=preflight_again
     if not live:
         simulated=dict(before)
         simulated['enabled']=False
