@@ -22,10 +22,37 @@ def imported_guard():
     spec.loader.exec_module(mod)
     return mod
 
-def same_config(before,after):
-    return isinstance(before,dict) and isinstance(after,dict) and {
-        k:v for k,v in before.items() if k!='enabled'
-    }=={k:v for k,v in after.items() if k!='enabled'}
+# Preserve the approved task's actual configuration. API-generated timestamps are
+# reported separately, not silently treated as proof of configuration drift.
+CORE_FIELDS = ('id', 'command', 'interval', 'hour', 'minute', 'description')
+CANDIDATE_VOLATILE_FIELDS = frozenset((
+    'next_run', 'next_run_at', 'last_run', 'last_run_at',
+    'updated_at', 'modified_at',
+))
+
+def classify_schedule_difference(before, after):
+    if not isinstance(before, dict) or not isinstance(after, dict):
+        return {'safe_to_continue': False, 'error': 'invalid_api_shape',
+                'core_changed': [], 'metadata_changed': [], 'unclassified_changed': []}
+    keys = set(before) | set(after)
+    altered = sorted(k for k in keys if k != 'enabled'
+                     and (k not in before or k not in after or before[k] != after[k]))
+    core = [k for k in altered if k in CORE_FIELDS]
+    candidate_metadata = [k for k in altered if k in CANDIDATE_VOLATILE_FIELDS]
+    unknown = [k for k in altered if k not in CORE_FIELDS
+               and k not in CANDIDATE_VOLATILE_FIELDS]
+    missing_core = [k for k in CORE_FIELDS
+                    if k in before and k not in after]
+    return {
+        'safe_to_continue': not (core or unknown or missing_core),
+        'core_changed': core,
+        'metadata_changed': candidate_metadata,
+        'unclassified_changed': unknown,
+        'missing_core': missing_core,
+    }
+
+def same_config(before, after):
+    return classify_schedule_difference(before, after)['safe_to_continue']
 
 def test(mod,token,live=False,api=None):
     api=api or mod.fetch_json
@@ -81,8 +108,8 @@ def test(mod,token,live=False,api=None):
         api(mod.API_URL,token=token,method='PATCH',body={'enabled':False})
         disabled=api(mod.API_URL,token=token)
         if mod.validate_task(disabled) or disabled.get('enabled') is not False or not same_config(before,disabled):
-            changed_keys=sorted(k for k in set(before)|set(disabled) if before.get(k)!=disabled.get(k) and k!='enabled')
-            raise RuntimeError('disable_verification_failed; enabled='+str(disabled.get('enabled'))+'; unexpected_field_names='+repr(changed_keys))
+            differences=classify_schedule_difference(before,disabled)
+            raise RuntimeError('disable_verification_failed; enabled='+str(disabled.get('enabled'))+'; core='+repr(differences['core_changed'])+'; metadata='+repr(differences['metadata_changed'])+'; unknown='+repr(differences['unclassified_changed']))
         result=mod.guard(True,True,token,fetcher=api)
         after=api(mod.API_URL,token=token)
         if result['status']!='SCHEDULE_REENABLED_NEXT_RUN_ONLY' or after.get('enabled') is not True or not same_config(before,after):
