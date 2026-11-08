@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 22322.9,
+    "age_seconds": 46872.2,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 22322.9,
+      "age_seconds": 46872.2,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 22392.7,
+      "age_seconds": 46942.0,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-07T18:00:52.083810+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 22359.5,
+      "age_seconds": 46908.8,
       "agent": "ACS-03",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-07T18:01:25.310322+00:00",
@@ -44,10 +44,10 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 1.5,
+      "age_seconds": 6.1,
       "agent": "ACS-04",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-08T00:14:03.229206+00:00",
+      "last_execution_utc": "2026-11-08T07:03:08.004553+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -56,11 +56,22 @@
     "ACS-05": {
       "age_seconds": 0.1,
       "agent": "ACS-05",
-      "health_status": "healthy",
-      "last_execution_utc": "2026-11-08T00:14:04.651157+00:00",
+      "diagnostics": {
+        "critical_count": 10,
+        "issue_codes": [
+          "GOOGLE_OAUTH_OR_GMAIL_FAILURE",
+          "MEMORY_MAINTENANCE_WARNING",
+          "KNOWLEDGE_FRESHNESS_WARNING",
+          "RESOURCE_PRESSURE_WARNING"
+        ],
+        "last_status": "CRITICAL",
+        "warning_count": 10
+      },
+      "health_status": "execution_failure",
+      "last_execution_utc": "2026-11-08T07:03:14.014665+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
-      "status": "current",
+      "status": "degraded",
       "verified": true
     }
   },
@@ -75,7 +86,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-11-07T18:10:23.553285+00:00",
+      "mtime_utc": "2026-11-08T06:01:24.316125+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -94,7 +105,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-08T00:14:04.759900+00:00",
+  "generated_at_utc": "2026-11-08T07:03:14.101598+00:00",
   "git": {
     "last_commit": {
       "ok": true,
@@ -159,8 +170,12 @@
         ],
         "ACS-05": [
           {
-            "ok": true,
-            "returncode": 0
+            "ok": false,
+            "returncode": 3
+          },
+          {
+            "ok": false,
+            "returncode": 3
           }
         ]
       }
