@@ -49,6 +49,8 @@ def test_preflight(environment, now):
         return "automatic_recovery_switch_must_remain_off"
     if not eligible_utc(now):
         return "scheduled_execution_window"
+    if environment.get("GITHUB_REPOSITORY")!="rafa8525/consensus-project":
+        return "unexpected_repository"
     if not environment.get("PYTHONANYWHERE_API_TOKEN"):
         return "missing_pythonanywhere_api_token"
     return None
