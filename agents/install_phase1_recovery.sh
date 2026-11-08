@@ -14,7 +14,7 @@ token=os.getenv('API_TOKEN')
 user=os.getenv('USER')
 if not token or not user or not user.replace('_','').isalnum(): raise SystemExit('ERROR: PythonAnywhere credentials unavailable')
 code=r'''#!/usr/bin/env python3
-import json, subprocess, sys, time, urllib.request
+import json, subprocess, sys, time, urllib.request, fcntl
 from pathlib import Path
 from datetime import datetime,timezone
 repo=Path.home()/'consensus-project'
@@ -53,7 +53,7 @@ def execute(cmd,timeout=1200):
 def read():
     request=urllib.request.Request(url+'?t='+str(int(time.time())),headers={'User-Agent':'ACS-Watchdog'})
     with urllib.request.urlopen(request,timeout=35) as r:return json.load(r)
-def main():
+def run_cycle():
     if '--self-test' in sys.argv:
         j={'generated_at_utc':datetime.now(timezone.utc).isoformat(),
            'agents':{n:{'verified':True,'status':'current','health_status':'healthy'} for n in names},
@@ -77,6 +77,15 @@ def main():
                     write('agent_retry',agent=n,ok=repaired)
             time.sleep(i*10)
     write('escalation',reason='automatic_retries_exhausted');return 2
+def main():
+    lock=Path.home()/'.local/state/ai-consensus/recovery.lock'
+    lock.parent.mkdir(parents=True,exist_ok=True)
+    with lock.open('a+') as handle:
+        try:fcntl.flock(handle.fileno(), fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError:
+            write('overlap_blocked',reason='recovery_already_running');return 3
+        try:return run_cycle()
+        finally:fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
 if __name__=='__main__':sys.exit(main())
 '''
 ast.parse(code)
