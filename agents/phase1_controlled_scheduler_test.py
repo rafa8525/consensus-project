@@ -54,6 +54,10 @@ def test(mod,token,live=False,api=None):
             raise RuntimeError('simulation_failed')
         return {'passed':True,'scope':'isolated_with_live_readonly_preflight',
             'production_changed':False,'result':result}
+    # Prevent collision with the observed daily parent run near 18:00 UTC.
+    clock=datetime.now(timezone.utc)
+    if (clock.hour==17 and clock.minute>=45) or (clock.hour==18 and clock.minute<20):
+        raise RuntimeError('too_close_to_scheduled_acs01_execution')
     # LIVE TEST: durable configuration backup before any API modification.
     backup=OUT.with_name('phase1_original_acs01_schedule.json')
     backup.parent.mkdir(parents=True,exist_ok=True)
