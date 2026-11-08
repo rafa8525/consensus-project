@@ -106,11 +106,12 @@ def guard(apply=False, allow_enable=False, token=None, now=None, fetcher=fetch_j
     if validate_task(after) or after.get("enabled") is not True:
         result["status"]="ESCALATE_postwrite_verification_failed"
         return result
-    # Check all returned metadata, not a short allowlist of schedule fields.
-    for field, old_value in before.items():
-        if field != "enabled" and after.get(field) != old_value:
-            result["status"]="ESCALATE_configuration_change"
-            return result
+    # The sole allowed metadata delta is enabled: False -> True.
+    before_metadata={k:v for k,v in before.items() if k!="enabled"}
+    after_metadata={k:v for k,v in after.items() if k!="enabled"}
+    if after_metadata != before_metadata:
+        result["status"]="ESCALATE_configuration_change"
+        return result
     result["status"]="SCHEDULE_REENABLED_NEXT_RUN_ONLY"
     return result
 
