@@ -1,8 +1,7 @@
 name: ACS-01 Independent Scheduler Guard
 
 on:
-  schedule:
-    - cron: "33 */6 * * *"
+  # Scheduled checks remain disabled until API authentication passes.
   push:
     branches: [main]
     paths:
