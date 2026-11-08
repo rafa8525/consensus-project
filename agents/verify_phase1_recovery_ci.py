@@ -103,6 +103,19 @@ with tempfile.TemporaryDirectory(prefix="acs-phase1-isolated-") as d:
     assert events and events[-1][0] == "overlap_blocked"
     print("PASS: overlapping_recovery_blocked")
 
+    # Verify the real subprocess implementation, not a mocked retry return value.
+    import time
+    real_execute = module.execute
+    # Use the source implementation recovered by reloading this isolated module.
+    spec.loader.exec_module(module)
+    real_execute = module.execute
+    assert real_execute([sys.executable, "-c", "import sys;sys.exit(0)"], 5)
+    assert not real_execute([sys.executable, "-c", "import sys;sys.exit(17)"], 5)
+    started = time.monotonic()
+    assert not real_execute([sys.executable, "-c", "import time;time.sleep(10)"], .2)
+    assert time.monotonic() - started < 5
+    print("PASS: subprocess_crash_and_timeout")
+
     # Produce immutable-to-this-CI-run bytes, downloadable from Actions.
     artifact = directory / "recovery_simulation_evidence.json"
     payload = {
