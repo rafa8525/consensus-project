@@ -14,7 +14,7 @@ token=os.getenv('API_TOKEN')
 user=os.getenv('USER')
 if not token or not user or not user.replace('_','').isalnum(): raise SystemExit('ERROR: PythonAnywhere credentials unavailable')
 code=r'''#!/usr/bin/env python3
-import json, subprocess, sys, time, urllib.request, fcntl
+import json, subprocess, sys, time, urllib.request, fcntl, os, signal
 from pathlib import Path
 from datetime import datetime,timezone
 repo=Path.home()/'consensus-project'
@@ -48,8 +48,19 @@ def validate(j):
         if not any(x.get('ok') for x in ((cycles.get('outcomes') or {}).get(n) or [])):bad.append(n+'_cycle_failure')
     return bad
 def execute(cmd,timeout=1200):
-    try:return subprocess.run(cmd,cwd=repo,timeout=timeout,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0
-    except (OSError,subprocess.TimeoutExpired):return False
+    # Use a process group so a timed-out publisher cannot leave child jobs running.
+    try:
+        proc=subprocess.Popen(cmd,cwd=repo,start_new_session=True,
+                              stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+        try:
+            proc.communicate(timeout=timeout)
+            return proc.returncode==0
+        except subprocess.TimeoutExpired:
+            os.killpg(proc.pid,signal.SIGKILL)
+            proc.communicate()
+            write('publisher_timeout',seconds=timeout)
+            return False
+    except (OSError,ProcessLookupError):return False
 def read():
     request=urllib.request.Request(url+'?t='+str(int(time.time())),headers={'User-Agent':'ACS-Watchdog'})
     with urllib.request.urlopen(request,timeout=35) as r:return json.load(r)
