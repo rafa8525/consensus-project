@@ -27,14 +27,14 @@ class RecoveryTests(unittest.TestCase):
             self.state.update(body)
         return dict(self.state)
     def test_simulation_performs_no_real_write(self):
-        r=target.test(self.g,self.api,"token",False)
+        r=target.test(self.g,"token",False,self.api)
         self.assertTrue(r["passed"])
         self.assertEqual(self.changes,[])
         self.assertTrue(self.state["enabled"])
     def test_mismatched_task_blocks(self):
         self.state["id"]=12
         with self.assertRaises(RuntimeError):
-            target.test(self.g,self.api,"token",False)
+            target.test(self.g,"token",False,self.api)
         self.assertEqual(self.changes,[])
     def test_configuration_equality(self):
         before=dict(self.state)
