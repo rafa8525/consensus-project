@@ -7,6 +7,8 @@ on:
     paths:
       - agents/run_acs_cycle.py
       - tests/test_acs05_status_protocol.py
+      - tests/test_acs05_log_rotation.py
+      - agents/continuity_guardian_agent.py
       - .github/workflows/acs05-status-protocol-regression.yml
 jobs:
   protocol:
@@ -19,6 +21,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile exact revision
-        run: python -m py_compile agents/run_acs_cycle.py tests/test_acs05_status_protocol.py
+        run: python -m py_compile agents/run_acs_cycle.py agents/continuity_guardian_agent.py tests/test_acs05_status_protocol.py tests/test_acs05_log_rotation.py
       - name: Test ACS-05 fail-closed classification
-        run: python -m unittest -v tests.test_acs05_status_protocol
+        run: python -m unittest -v tests.test_acs05_status_protocol tests.test_acs05_log_rotation
