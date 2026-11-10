@@ -1,0 +1,26 @@
+name: ACS-05 status protocol regression
+on:
+  push:
+    branches:
+      - repair/acs05-status-diagnostics-20261110
+  pull_request:
+    paths:
+      - agents/run_acs_cycle.py
+      - tests/test_acs05_status_protocol.py
+      - tests/test_acs05_log_rotation.py
+      - agents/continuity_guardian_agent.py
+      - .github/workflows/acs05-status-protocol-regression.yml
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile exact revision
+        run: python -m py_compile agents/run_acs_cycle.py agents/continuity_guardian_agent.py tests/test_acs05_status_protocol.py tests/test_acs05_log_rotation.py
+      - name: Test ACS-05 fail-closed classification
+        run: python -m unittest -v tests.test_acs05_status_protocol tests.test_acs05_log_rotation

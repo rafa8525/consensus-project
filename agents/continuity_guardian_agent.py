@@ -82,10 +82,37 @@ def stamp() -> str:
     return now_utc().strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+MAX_LOG_BYTES = 8 * 1024 * 1024
+MAX_LOG_BACKUPS = 2
+
+
+def rotate_log_if_needed(incoming_bytes: int) -> None:
+    """Bound guardian-owned log files before reaching the host file-size limit.
+
+    Historical *.archive.* forensic files are deliberately left untouched.
+    The ACS-05 process lock serializes normal guardian writes.
+    """
+    if not LOG.exists() or LOG.stat().st_size + incoming_bytes <= MAX_LOG_BYTES:
+        return
+    oldest = LOG.with_name(LOG.name + f".{MAX_LOG_BACKUPS}")
+    if oldest.exists():
+        oldest.unlink()
+    for index in range(MAX_LOG_BACKUPS - 1, 0, -1):
+        src = LOG.with_name(LOG.name + f".{index}")
+        if src.exists():
+            src.replace(LOG.with_name(LOG.name + f".{index + 1}"))
+    LOG.replace(LOG.with_name(LOG.name + ".1"))
+
+
 def log(line: str) -> None:
     SYSLOG.mkdir(parents=True, exist_ok=True)
+    message = f"{stamp()} {line}\n"
+    # A single unexpectedly long diagnostic must not exceed the guard.
+    if len(message.encode("utf-8")) > MAX_LOG_BYTES:
+        message = message[:4096] + " [diagnostic truncated]\n"
+    rotate_log_if_needed(len(message.encode("utf-8")))
     with LOG.open("a", encoding="utf-8") as f:
-        f.write(f"{stamp()} {line}\n")
+        f.write(message)
     print(line)
 
 
