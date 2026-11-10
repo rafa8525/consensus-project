@@ -105,7 +105,7 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
         # Read the complete child stdout for its terminal marker. Persist only
         # bounded stdout/stderr; long diagnostics must not hide the END marker.
         markers = re.findall(
-            r"^END status=(OK|WARN|CRITICAL)(?=\\s|$)[^\\r\\n]*$",
+            r"^END status=(OK|WARN|CRITICAL)(?=\s|$)[^\r\n]*$",
             p.stdout,
             re.IGNORECASE | re.MULTILINE,
         )
