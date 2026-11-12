@@ -109,7 +109,7 @@ class InMemoryExchange:
                 raise ProtocolError("message ID reused with different content")
             return "duplicate"
         if key in self._keys:
-            if self._keys[key] != (m["task_id"], m["kind"]):
+            if self._keys[key] != {k: v for k, v in m.items() if k != "message_id"}:
                 raise ProtocolError("idempotency key collision")
             return "duplicate"
         prior = self._tasks.get(m["task_id"])
@@ -142,7 +142,7 @@ class InMemoryExchange:
             prior["status"] = m["status"]
             prior["last_time"] = _parse_time(m["created_at_utc"])
         self._messages[msg_id] = m
-        self._keys[key] = (m["task_id"], m["kind"])
+        self._keys[key] = {k: v for k, v in m.items() if k != "message_id"}
         return "accepted"
 
     def status(self, task_id):
