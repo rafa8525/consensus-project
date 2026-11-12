@@ -5,10 +5,12 @@ on:
     paths:
       - 'agents/phase2_protocol.py'
       - 'agents/phase2_adapter.py'
+      - 'agents/phase2_router.py'
       - 'agents/planner.py'
       - 'agents/executor.py'
       - 'tests/test_phase2_protocol.py'
       - 'tests/test_phase2_adapter.py'
+      - 'tests/test_phase2_router.py'
       - '.github/workflows/phase2-protocol-tests.yml'
   workflow_dispatch:
 permissions:
