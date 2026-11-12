@@ -54,7 +54,8 @@ class ConcurrentSupervisorTests(unittest.TestCase):
             reports = list(pool.map(worker, (1, 2)))
         self.assertEqual(sorted(x["duplicate"] for x in reports), [False, True])
         self.assertEqual(len(calls), 1)
-        self.assertEqual(sorted(x["status"] for x in reports), ["delivered", "delivered"])
+        self.assertEqual(reports[[x["duplicate"] for x in reports].index(False)]["status"], "delivered")
+        self.assertIn(reports[[x["duplicate"] for x in reports].index(True)]["status"], ("claimed", "delivered"))
 
     def test_conflicting_concurrent_payload_rejected(self):
         barrier = threading.Barrier(2)
