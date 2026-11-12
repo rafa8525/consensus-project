@@ -1,0 +1,27 @@
+name: Phase 5 mock integration registry verification
+on:
+  push:
+    branches: [phase5-personal-integrations-design]
+    paths:
+      - 'agents/phase2_*.py'
+      - 'agents/phase3_*.py'
+      - 'agents/phase5_*.py'
+      - 'tests/test_phase2_*.py'
+      - 'tests/test_phase3_*.py'
+      - 'tests/test_phase5_*.py'
+      - '.github/workflows/phase5-mock-integrations.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mock-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate inherited Phase 2 and 3 dependencies
+        run: |
+          python -m unittest discover -s tests -p 'test_phase2_*.py' -v
+          python -m unittest discover -s tests -p 'test_phase3_*.py' -v
+      - name: Validate mock integration permissions and replay protection
+        run: python -m unittest discover -s tests -p 'test_phase5_*.py' -v
