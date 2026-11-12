@@ -74,12 +74,15 @@ class WatchdogTests(unittest.TestCase):
         data["generated_at_utc"] = "not-a-date"
         self.assertTrue(evaluate(data, NOW))
 
-    def test_missing_schedule_not_claimed_verified(self):
+    def test_missing_schedule_fails_closed(self):
         data = clean_snapshot()
         data["pythonanywhere_schedule"] = {"available": False}
-        # Scheduler not observed: agent evidence can pass, but no claims
-        # about schedules should be made.
-        self.assertEqual(evaluate(data, NOW), [])
+        self.assertIn("PythonAnywhere scheduler evidence unavailable", evaluate(data, NOW))
+
+    def test_absent_schedule_fails_closed(self):
+        data = clean_snapshot()
+        del data["pythonanywhere_schedule"]
+        self.assertIn("PythonAnywhere scheduler evidence unavailable", evaluate(data, NOW))
 
 
 if __name__ == "__main__":
