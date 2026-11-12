@@ -1,0 +1,23 @@
+name: ACS Repair Gate Regression
+on:
+  push:
+    branches: [repair/acs-safety-gate-20261023]
+    paths:
+      - 'tools/acs_repair_gate_20261023.py'
+      - 'tests/test_acs_repair_gate_20261023.py'
+      - '.github/workflows/acs-repair-gate-regression.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulated-failures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Parse safety gate
+        run: python -m py_compile tools/acs_repair_gate_20261023.py
+      - name: Run isolated safety simulations
+        run: python -m unittest discover -s tests -p 'test_acs_repair_gate_20261023.py' -v
