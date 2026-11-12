@@ -4,7 +4,11 @@ on:
     branches: [phase2-agent-coordination]
     paths:
       - 'agents/phase2_protocol.py'
+      - 'agents/phase2_adapter.py'
+      - 'agents/planner.py'
+      - 'agents/executor.py'
       - 'tests/test_phase2_protocol.py'
+      - 'tests/test_phase2_adapter.py'
       - '.github/workflows/phase2-protocol-tests.yml'
   workflow_dispatch:
 permissions:
@@ -16,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run isolated protocol tests (stdlib only)
-        run: python -m unittest discover -s tests -p 'test_phase2_protocol.py' -v
+        run: python -m unittest discover -s tests -p 'test_phase2_*.py' -v
