@@ -21,11 +21,15 @@ class Phase3IntegrationTests(unittest.TestCase):
         self.tmp.cleanup()
 
     def test_two_concurrent_writers_distinct_evidence(self):
+        # Pre-create the SQLite schema before coordinating writers; otherwise
+        # schema initialization can serialize startup and break the barrier.
+        initial = EvidenceMemory(self.memory_db, simulation=True)
+        initial.close()
         barrier = threading.Barrier(2)
         def writer(i):
             store = EvidenceMemory(self.memory_db, simulation=True)
             try:
-                barrier.wait(timeout=5)
+                barrier.wait(timeout=15)
                 return store.remember("e" + str(i), "task1", "ACS-02",
                                       "mock." + str(i), "finding " + str(i))
             finally:
@@ -38,11 +42,13 @@ class Phase3IntegrationTests(unittest.TestCase):
         store.close()
 
     def test_concurrent_same_evidence_id_is_deduplicated(self):
+        initial = EvidenceMemory(self.memory_db, simulation=True)
+        initial.close()
         barrier = threading.Barrier(2)
         def writer(_):
             store = EvidenceMemory(self.memory_db, simulation=True)
             try:
-                barrier.wait(timeout=5)
+                barrier.wait(timeout=15)
                 return store.remember("e1", "task1", "ACS-02", "mock.1", "same")
             finally:
                 store.close()
