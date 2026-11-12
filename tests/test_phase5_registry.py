@@ -33,7 +33,7 @@ class RegistryTests(unittest.TestCase):
         self.send()
         r = self.send()
         self.assertTrue(r["duplicate"])
-        self.assertFalse(r.get("executed", True) and False)  # explicit event is cached
+        self.assertEqual(r["status"], "delivered")
         self.assertEqual(len(self.calls), 1)
 
     def test_duplicate_workflow_registration_rejected(self):
@@ -71,6 +71,9 @@ class RegistryTests(unittest.TestCase):
                     permission="read_mock", event_id="event-1",
                     payload={"synthetic_value": "dummy"})
         self.assertEqual(self.reg.dispatch(**args)["status"], "uncertain")
+        replay = self.reg.dispatch(**args)
+        self.assertTrue(replay["duplicate"])
+        self.assertEqual(len(attempts), 1)
 
     def test_inventory_does_not_expose_handlers(self):
         listing = self.reg.inventory()
