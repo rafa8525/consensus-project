@@ -8,11 +8,14 @@ on:
       - 'agents/phase4_*.py'
       - 'agents/phase5_*.py'
       - 'agents/system_demo.py'
+      - 'agents/staging_child.py'
+      - 'agents/staging_observer.py'
       - 'tests/test_phase2_*.py'
       - 'tests/test_phase3_*.py'
       - 'tests/test_phase4_*.py'
       - 'tests/test_phase5_*.py'
       - 'tests/test_system_demo.py'
+      - 'tests/test_staging_supervision.py'
       - '.github/workflows/system-demo-acceptance.yml'
   workflow_dispatch:
 permissions:
@@ -31,3 +34,5 @@ jobs:
           python -m unittest discover -s tests -p 'test_phase5_*.py' -v
       - name: Run full system synthetic acceptance tests
         run: python -m unittest discover -s tests -p 'test_system_demo.py' -v
+      - name: Independently observe process crash and recovery in disposable staging
+        run: python -m unittest discover -s tests -p 'test_staging_supervision.py' -v
