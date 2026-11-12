@@ -189,10 +189,14 @@ def run_acs02() -> list[dict]:
         })
         return results
 
-    marker = run_process(
-        "write_absorption_public_marker",
-        ABSORB_MARKER_WRITER,
-    )
+    # Retry only the idempotent marker writer, never repeat a completed
+    # absorption run just because publishing its proof failed transiently.
+    marker = run_process("write_absorption_public_marker", ABSORB_MARKER_WRITER)
+    if marker["status"] == "execution_failure":
+        retry = run_process("write_absorption_public_marker", ABSORB_MARKER_WRITER)
+        retry["retry_attempted"] = True
+        retry["recovered"] = retry["status"] == "healthy"
+        marker = retry
     results.append(marker)
 
     if marker["status"] != "healthy":
