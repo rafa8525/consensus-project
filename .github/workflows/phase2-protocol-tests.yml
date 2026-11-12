@@ -6,11 +6,13 @@ on:
       - 'agents/phase2_protocol.py'
       - 'agents/phase2_adapter.py'
       - 'agents/phase2_router.py'
+      - 'agents/phase2_durable.py'
       - 'agents/planner.py'
       - 'agents/executor.py'
       - 'tests/test_phase2_protocol.py'
       - 'tests/test_phase2_adapter.py'
       - 'tests/test_phase2_router.py'
+      - 'tests/test_phase2_durable.py'
       - '.github/workflows/phase2-protocol-tests.yml'
   workflow_dispatch:
 permissions:
