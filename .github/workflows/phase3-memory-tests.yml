@@ -1,0 +1,23 @@
+name: Phase 3 isolated memory tests
+on:
+  push:
+    branches: [phase3-memory-execution]
+    paths:
+      - 'agents/phase2_*.py'
+      - 'agents/phase3_*.py'
+      - 'tests/test_phase2_*.py'
+      - 'tests/test_phase3_*.py'
+      - '.github/workflows/phase3-memory-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-memory-and-dependency:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Phase 2 dependency and Phase 3 memory regression tests
+        run: |
+          python -m unittest discover -s tests -p 'test_phase2_*.py' -v
+          python -m unittest discover -s tests -p 'test_phase3_*.py' -v
