@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import unittest
 from agents.phase4_observation import evaluate_observed
 from agents.phase4_evaluator import EvaluationError
-from tests.test_phase4_evaluator import case, NOW
+from test_phase4_evaluator import case, NOW
 
 def observations(fixture):
     return {side: {
