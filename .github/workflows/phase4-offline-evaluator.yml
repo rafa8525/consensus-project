@@ -1,0 +1,27 @@
+name: Phase 4 offline evaluator verification
+on:
+  push:
+    branches: [phase4-offline-optimization-design]
+    paths:
+      - 'agents/phase2_*.py'
+      - 'agents/phase3_*.py'
+      - 'agents/phase4_*.py'
+      - 'tests/test_phase2_*.py'
+      - 'tests/test_phase3_*.py'
+      - 'tests/test_phase4_*.py'
+      - '.github/workflows/phase4-offline-evaluator.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-evaluation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run inherited Phase 2 and Phase 3 tests
+        run: |
+          python -m unittest discover -s tests -p 'test_phase2_*.py' -v
+          python -m unittest discover -s tests -p 'test_phase3_*.py' -v
+      - name: Run Phase 4 safety regression tests
+        run: python -m unittest discover -s tests -p 'test_phase4_*.py' -v
