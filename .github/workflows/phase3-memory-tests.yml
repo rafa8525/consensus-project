@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Run Phase 2 dependency and Phase 3 memory regression tests
+      - name: Run Phase 2 dependency and Phase 3 memory/concurrency/replay integration tests
         run: |
           python -m unittest discover -s tests -p 'test_phase2_*.py' -v
           python -m unittest discover -s tests -p 'test_phase3_*.py' -v
