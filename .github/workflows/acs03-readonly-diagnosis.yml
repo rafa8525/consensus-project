@@ -1,0 +1,22 @@
+name: ACS-03 Read-only Diagnostic Regression
+on:
+  push:
+    branches:
+      - repair/acs03-readonly-diagnosis-20261112
+    paths:
+      - 'tools/acs03_readonly_diagnose.py'
+      - 'tests/test_acs03_readonly_diagnose.py'
+      - '.github/workflows/acs03-readonly-diagnosis.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnostic-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify read-only diagnostic
+        run: |
+          python -m unittest discover -s tests -p 'test_acs03_readonly_diagnose.py' -v
+          python -m unittest discover -s tests -p 'test_fitness_tracking_verifier.py' -v
