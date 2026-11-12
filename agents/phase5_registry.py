@@ -61,16 +61,19 @@ class MockIntegrationRegistry:
             if prev_payload != payload:
                 raise ProtocolError("event ID collision")
             return dict(report, duplicate=True)
-        # A handler error does not write an event to the successful-delivery cache.
-        # No automatic retry: callers must assess possible side effects first.
+        # Cache uncertain results: a mock handler may already have had effects.
         try:
             result = adapter["handler"](dict(payload))
         except Exception:
-            return {"adapter_id": adapter_id, "status": "uncertain",
-                    "duplicate": False, "executed": True, "reason": "mock_handler_error"}
+            report = {"adapter_id": adapter_id, "status": "uncertain",
+                      "duplicate": False, "executed": True, "reason": "mock_handler_error"}
+            self._processed[key] = (dict(payload), report)
+            return dict(report)
         if not isinstance(result, str) or not result.strip() or len(result) > 160:
-            return {"adapter_id": adapter_id, "status": "uncertain",
-                    "duplicate": False, "executed": True, "reason": "invalid_mock_result"}
+            report = {"adapter_id": adapter_id, "status": "uncertain",
+                      "duplicate": False, "executed": True, "reason": "invalid_mock_result"}
+            self._processed[key] = (dict(payload), report)
+            return dict(report)
         report = {"adapter_id": adapter_id, "status": "delivered", "duplicate": False,
                   "executed": True, "result": result}
         self._processed[key] = (dict(payload), report)
