@@ -58,6 +58,44 @@ class GuardTests(unittest.TestCase):
         result,c=self.evaluate(t=task(False))
         self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
         self.assertEqual([x[2] for x in c if x[0]=="PATCH"],[{"enabled":True}])
+    def test_live_can_enable_transition_is_metadata(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        diff=g.task_configuration_diff(before,after)
+        self.assertTrue(diff["safe"])
+        self.assertEqual(diff["api_metadata"],["can_enable"])
+    def test_can_enable_type_change_is_not_metadata(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]="false"
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_can_enable_change_without_reenable_is_not_metadata(self):
+        before=task(True);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_can_enable_change_with_command_drift_blocks(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        after["command"]="unexpected"
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_can_enable_field_added_blocks(self):
+        before=task(False)
+        after=task(True);after["can_enable"]=False
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_guard_recovers_with_can_enable_transition(self):
+        state=task(False);state["can_enable"]=True
+        calls=[]
+        def fetch(url,token=None,method="GET",body=None):
+            if url==g.REPORT_URL:return report()
+            if method=="PATCH":
+                self.assertEqual(body,{"enabled":True})
+                calls.append(body)
+                state["enabled"]=True
+                state["can_enable"]=False
+            return copy.deepcopy(state)
+        result=g.guard(True,True,"test-token",NOW,fetch)
+        self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
+        self.assertEqual(result["allowed_api_metadata_changes"],["can_enable"])
+        self.assertEqual(len(calls),1)
     def test_wrong_command_blocks(self):
         t=task(False);t["command"]="malicious changed command"
         result,c=self.evaluate(t=t)
