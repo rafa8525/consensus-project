@@ -1,0 +1,42 @@
+name: ACS-01 External Heartbeat Safety Regression
+on:
+  push:
+    branches: [acs01-external-heartbeat-20261113]
+  pull_request:
+    paths:
+      - 'agents/phase1_scheduler_heartbeat.py'
+      - 'agents/test_phase1_scheduler_heartbeat.py'
+      - '.github/workflows/acs01-independent-scheduler-guard.yml'
+      - '.github/workflows/acs01-external-heartbeat-tests.yml'
+permissions:
+  contents: read
+jobs:
+  read-only-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify heartbeat handles missing secrets without outgoing traffic
+        run: |
+          python -m py_compile agents/phase1_scheduler_heartbeat.py agents/test_phase1_scheduler_heartbeat.py
+          cd agents
+          python -m unittest -v test_phase1_scheduler_heartbeat.py
+      - name: Preserve existing independent recovery regression
+        run: |
+          cd agents
+          python -m unittest -v test_phase1_independent_schedule_guard.py test_phase1_independent_recovery_e2e.py
+      - name: Ensure heartbeat applies to schedule runs, not manual or push
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          flow=Path('.github/workflows/acs01-independent-scheduler-guard.yml').read_text()
+          assert "always() && github.event_name == 'schedule'" in flow
+          assert "secrets.ACS01_GUARD_HEARTBEAT_URL" in flow
+          assert "steps.guard.outcome" in flow
+          assert "steps.self_test.outcome" in flow
+          assert "cron: \"33 */6 * * *\"" in flow
+          print("PASS: schedule-only optional monitoring; original cadence unchanged")
+          PY
