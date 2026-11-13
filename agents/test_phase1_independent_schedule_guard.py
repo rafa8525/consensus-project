@@ -177,6 +177,47 @@ class GuardTests(unittest.TestCase):
     def test_integer_enabled_is_not_boolean(self):
         t=task(False);t["enabled"]=1
         self.assertEqual(g.validate_task(t),"invalid_enabled")
+    def test_provider_can_enable_recalculation_after_enable_is_metadata(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        d=g.task_configuration_diff(before,after)
+        self.assertTrue(d["safe"])
+        self.assertEqual(d["api_metadata"],["can_enable"])
+
+    def test_can_enable_mutation_without_transition_is_blocked(self):
+        before=task(True);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+
+    def test_can_enable_mutation_with_command_drift_is_blocked(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        after["command"]="unexpected"
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+
+    def test_can_enable_field_addition_or_type_change_is_blocked(self):
+        before=task(False)
+        after=task(True);after["can_enable"]=False
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+        before["can_enable"]=True
+        after["can_enable"]="false"
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+
+    def test_guard_recovers_with_provider_capability_recalculation(self):
+        state=task(False);state["can_enable"]=True
+        writes=[]
+        def fetch(url,token=None,method="GET",body=None):
+            if url==g.REPORT_URL:return report()
+            if method=="PATCH":
+                writes.append(body)
+                state["enabled"]=True
+                state["can_enable"]=False
+            return dict(state)
+        result=g.guard(True,True,"token",NOW,fetch)
+        self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
+        self.assertEqual(result["allowed_api_metadata_changes"],["can_enable"])
+        self.assertEqual(writes,[{"enabled":True}])
+
     def test_invalid_enabled_rejected(self):
         t=task();t["enabled"]="true"
         self.assertEqual(g.validate_task(t),"invalid_enabled")
