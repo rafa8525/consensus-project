@@ -21,7 +21,8 @@ def fixture():
                                    "health_task":{"enabled":False}},
         "git":{"origin_reachable":{"ok":True}, "unresolved_merge_conflict":False,
                "status":{"tracked_changes_count":22}},
-        "self_heal":{"branch_sync":{"ok":True,"ahead_after":0,"behind_after":0}}
+        "self_heal":{"branch_sync":{"ok":True,"ahead_after":0,"behind_after":0},
+                     "recovery_proof":{"verified":True}}
     }
 def proof():
     tests = {}
@@ -43,6 +44,25 @@ class Tests(unittest.TestCase):
     def tearDown(self):
         gate.ROOT = self.old_root
         self.temp.cleanup()
+    def test_local_proof_cannot_override_unverified_published_recovery(self):
+        r = fixture()
+        r["self_heal"]["recovery_proof"]["verified"] = False
+        self.assertFalse(
+            gate.evaluate(r, proof(), NOW)["published_recovery_verified"]
+        )
+        checks, reports, completed = gate.advance(r, proof(), {}, NOW)
+        self.assertFalse(completed)
+        self.assertEqual(reports, [])
+
+    def test_missing_or_malformed_published_recovery_fails_closed(self):
+        for value in (None, {}, {"verified": "true"}, {"verified": 1}):
+            with self.subTest(value=value):
+                r = fixture()
+                r["self_heal"]["recovery_proof"] = value
+                self.assertFalse(
+                    gate.evaluate(r, proof(), NOW)["published_recovery_verified"]
+                )
+
     def test_simulation_never_counts_as_production(self):
         p = proof()
         p["tests"]["recovery_verified"]["execution_scope"] = "isolated_simulation"
