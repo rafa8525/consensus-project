@@ -34,6 +34,27 @@ class SystemDemoTests(unittest.TestCase):
         self.assertEqual(result["candidate_decision"], "ELIGIBLE_FOR_REVIEW")
         self.assertFalse(result["candidate_deployed"])
 
+    def test_synthetic_end_to_end_never_contacts_external_services(self):
+        # Block attempted network and child-process calls, not just returned values.
+        # This test exercises the actual combined Phase 2-5 mock workflow.
+        from unittest.mock import patch
+        from socket import socket
+        import subprocess
+        import urllib.request
+
+        def forbidden(*args, **kwargs):
+            self.fail("isolated system demo attempted an external operation")
+
+        with patch.object(socket, "connect", forbidden), \
+             patch.object(socket, "connect_ex", forbidden), \
+             patch.object(urllib.request, "urlopen", forbidden), \
+             patch.object(subprocess, "Popen", forbidden):
+            result = run_mock_workflow(self.tmp.name, now=NOW, simulation=True)
+        self.assertEqual(result["mode"], "synthetic-isolated-demo")
+        self.assertFalse(result["candidate_deployed"])
+        self.assertEqual(result["task_execution_count"], 1)
+        self.assertEqual(result["notification_count"], 1)
+
     def test_actual_interrupted_task_blocks_downstream_notification(self):
         path = os.path.join(self.tmp.name, "task.sqlite")
         journal = DurableTaskJournal(path, simulation=True)
