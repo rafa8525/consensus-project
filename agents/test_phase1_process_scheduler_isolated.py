@@ -135,6 +135,24 @@ class IndependentProcessRecoveryTests(unittest.TestCase):
             self.assertEqual(len(state2["events"]), 4)
             print("PASS: isolated process crash, task outage, independent re-enable, resume")
             print("SCOPE=isolated_simulation_only; PRODUCTION_OUTAGE_PROVEN=false")
+            # Only CI sandbox evidence, not an artifact eligible for production proof.
+            import os
+            evidence = {
+                "execution_scope": "isolated_simulation_only",
+                "production_outage_proven": False,
+                "external_scheduler_outage_proven": False,
+                "tested_at_utc": datetime.now(timezone.utc).isoformat(),
+                "git_sha": os.getenv("GITHUB_SHA", "unbound"),
+                "actual_child_process_exit_code": 71,
+                "disabled_task_blocked_resumption": True,
+                "real_guard_invoked_with_sqlite_only_api": True,
+                "disposable_schedule_reenabled": state["task"]["enabled"],
+                "independent_process_count": len(set(e[1] for e in state["events"])),
+                "task_configuration_unchanged": True,
+                "second_guard_run_no_additional_write": True,
+            }
+            output = Path(__file__).resolve().parent.parent / "phase1_disposable_recovery_evidence.json"
+            output.write_text(json.dumps(evidence, indent=2, sort_keys=True) + "\\n")
 
 
 if __name__ == "__main__":
