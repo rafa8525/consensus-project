@@ -97,7 +97,14 @@ def evaluate(report, evidence, now=None):
     # Fail closed if publication has not independently acknowledged recovery.
     recovery = heal.get("recovery_proof")
     recovery = recovery if isinstance(recovery, dict) else {}
-    checks["published_recovery_verified"] = recovery.get("verified") is True
+    # The current publisher uses verified=True for *Git branch divergence recovery*.
+    # That is NOT proof of recovering a crashed process or failed scheduler.
+    # Require an explicit production recovery scope before counting this field.
+    checks["published_recovery_verified"] = (
+        recovery.get("verified") is True
+        and recovery.get("test_type") == "process_crash_and_external_scheduler_outage"
+        and not recovery.get("not_tested")
+    )
     sync = heal.get("branch_sync")
     sync = sync if isinstance(sync, dict) else {}
     checks["branch_synced"] = (
