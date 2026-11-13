@@ -85,6 +85,11 @@ jobs:
           python -m py_compile agents/phase1_host_evidence_inventory.py agents/test_phase1_host_evidence_inventory.py
           cd agents
           python -m unittest -v test_phase1_host_evidence_inventory.py
+      - name: Independently exercise disposable process and scheduler recovery
+        run: |
+          python -m py_compile agents/test_phase1_process_scheduler_isolated.py
+          cd agents
+          python -m unittest -v test_phase1_process_scheduler_isolated.py
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
