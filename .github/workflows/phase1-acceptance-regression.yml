@@ -96,3 +96,10 @@ jobs:
           name: phase1-recovery-isolated-simulation
           path: phase1_recovery_simulation_evidence.json
           retention-days: 30
+      - name: Retain independently observed disposable recovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-disposable-process-scheduler-recovery
+          path: phase1_disposable_recovery_evidence.json
+          if-no-files-found: error
+          retention-days: 30
