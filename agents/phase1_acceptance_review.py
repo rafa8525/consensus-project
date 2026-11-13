@@ -93,6 +93,11 @@ def evaluate(report, evidence, now=None):
     checks["no_merge_conflict"] = git.get("unresolved_merge_conflict") is False
     heal = report.get("self_heal")
     heal = heal if isinstance(heal, dict) else {}
+    # Local test logs do not override the published production recovery verdict.
+    # Fail closed if publication has not independently acknowledged recovery.
+    recovery = heal.get("recovery_proof")
+    recovery = recovery if isinstance(recovery, dict) else {}
+    checks["published_recovery_verified"] = recovery.get("verified") is True
     sync = heal.get("branch_sync")
     sync = sync if isinstance(sync, dict) else {}
     checks["branch_synced"] = (
