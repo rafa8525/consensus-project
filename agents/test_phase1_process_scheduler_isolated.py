@@ -110,7 +110,7 @@ class IndependentProcessRecoveryTests(unittest.TestCase):
             blocked = child(path, "recover")
             self.assertEqual(blocked.returncode, 9, blocked.stderr)
             watchdog = child(path, "guard")
-            self.assertEqual(watchdog.returncode, 0, watchdog.stderr)
+            self.assertEqual(watchdog.returncode, 0, watchdog.stdout + " | " + watchdog.stderr)
             self.assertEqual(json.loads(watchdog.stdout)["status"],
                              "SCHEDULE_REENABLED_NEXT_RUN_ONLY")
             resumed = child(path, "recover")
