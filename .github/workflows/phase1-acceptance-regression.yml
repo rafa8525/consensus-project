@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - phase1-closure-reconcile-20261031
+      - phase1-integration-review-20261113
   pull_request:
     paths:
       - agents/phase1_acceptance_review.py
