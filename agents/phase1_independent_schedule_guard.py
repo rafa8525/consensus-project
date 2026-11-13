@@ -41,6 +41,14 @@ def task_configuration_diff(before, after):
                      and k != "enabled")
     metadata = [k for k in changed if k in VOLATILE_API_FIELDS
                 and k in before and k in after]
+    # The provider may recompute its existing boolean capability indicator
+    # after a verified False -> True transition. Never permit other drift.
+    if (before.get("enabled") is False and after.get("enabled") is True
+            and "can_enable" in before and "can_enable" in after
+            and type(before["can_enable"]) is bool
+            and type(after["can_enable"]) is bool
+            and "can_enable" in changed):
+        metadata.append("can_enable")
     configuration = [k for k in changed if k not in metadata]
     return {"safe": not configuration,
             "configuration": configuration,
