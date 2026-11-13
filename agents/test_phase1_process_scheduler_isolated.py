@@ -11,7 +11,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import phase1_independent_schedule_guard as guard
@@ -68,9 +68,10 @@ def scenario(path, mode):
             }, sort_keys=True))
             return 0
         if mode == "guard":
+            clock = datetime.now(timezone.utc)
             def fetch(url, token=None, method="GET", body=None):
                 if url == guard.REPORT_URL:
-                    return {"generated_at_utc": datetime.now(timezone.utc).isoformat(),
+                    return {"generated_at_utc": (clock - timedelta(seconds=2)).isoformat(),
                             "agents": {f"ACS-{n:02d}": {
                                 "verified": True, "status": "current",
                                 "health_status": "healthy"} for n in range(1, 6)}}
@@ -86,7 +87,7 @@ def scenario(path, mode):
                     raise AssertionError("unexpected HTTP verb")
                 return task(db)
             result = guard.guard(True, True, "isolated-no-real-credentials",
-                                 datetime.now(timezone.utc), fetcher=fetch)
+                                 clock, fetcher=fetch)
             print(json.dumps({"status": result["status"], "changed": result["changed"]}))
             return 0 if result["status"] == "SCHEDULE_REENABLED_NEXT_RUN_ONLY" else 2
     return 4
