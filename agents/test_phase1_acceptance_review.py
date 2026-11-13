@@ -81,6 +81,23 @@ class Tests(unittest.TestCase):
             r=fixture()
             r["generated_at_utc"]=iso(t)
             self.assertFalse(all(gate.evaluate(r, proof(), NOW).values()))
+    def test_documented_report_freshness_boundary(self):
+        # Production report TTL is 30 hours, not the separate 36-hour agent horizon.
+        for hours, accepted in ((29, True), (30, True), (31, False), (35, False)):
+            with self.subTest(report_age_hours=hours):
+                r = fixture()
+                r["generated_at_utc"] = iso(NOW - timedelta(hours=hours))
+                checks = gate.evaluate(r, proof(), NOW)
+                self.assertIs(checks["report_fresh"], accepted)
+
+    def test_old_report_cannot_advance_passing_streak(self):
+        r = fixture()
+        r["generated_at_utc"] = iso(NOW - timedelta(hours=31))
+        checks, reports, complete = gate.advance(r, proof(), {}, NOW)
+        self.assertFalse(checks["report_fresh"])
+        self.assertEqual(reports, [])
+        self.assertFalse(complete)
+
     def test_scheduler_and_remote_sync(self):
         for field in ("scheduler", "sync", "remote"):
             r=fixture()
