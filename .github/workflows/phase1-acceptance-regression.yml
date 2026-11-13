@@ -80,6 +80,11 @@ jobs:
           python -m py_compile agents/phase1_scheduler_diff_readonly.py agents/test_phase1_scheduler_diff_readonly.py
           cd agents
           python -m unittest -v test_phase1_scheduler_diff_readonly.py
+      - name: Inspect read-only host inventory safely in offline fixtures
+        run: |
+          python -m py_compile agents/phase1_host_evidence_inventory.py agents/test_phase1_host_evidence_inventory.py
+          cd agents
+          python -m unittest -v test_phase1_host_evidence_inventory.py
       - name: Retain simulation evidence
         uses: actions/upload-artifact@v4
         with:
