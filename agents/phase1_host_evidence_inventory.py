@@ -79,7 +79,7 @@ def inspect_worktree(repo=REPO):
         return {"status": "git_unavailable"}
     if result.returncode:
         return {"status": "git_failed", "returncode": result.returncode}
-    entries = [e for e in result.stdout.split(b"\\0") if e]
+    entries = [e for e in result.stdout.split(bytes([0])) if e]
     groups = {}
     for entry in entries:
         # Only category totals, never private filenames or file contents.
