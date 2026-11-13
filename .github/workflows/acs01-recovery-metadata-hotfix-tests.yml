@@ -1,0 +1,26 @@
+name: ACS-01 Recovery Metadata Hotfix Regression
+on:
+  push:
+    branches: [acs01-recovery-metadata-hotfix-20261113]
+  pull_request:
+    paths:
+      - 'agents/phase1_independent_schedule_guard.py'
+      - 'agents/test_phase1_independent_schedule_guard.py'
+      - 'agents/test_phase1_independent_recovery_e2e.py'
+      - '.github/workflows/acs01-recovery-metadata-hotfix-tests.yml'
+permissions:
+  contents: read
+jobs:
+  isolated-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile guard and run strictly isolated fault tests
+        run: |
+          python -m py_compile agents/phase1_independent_schedule_guard.py agents/test_phase1_independent_schedule_guard.py agents/test_phase1_independent_recovery_e2e.py
+          cd agents
+          python -m unittest -v test_phase1_independent_schedule_guard.py test_phase1_independent_recovery_e2e.py
