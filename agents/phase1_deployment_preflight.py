@@ -20,9 +20,12 @@ def check_report(report):
     stamp = report.get("generated_at_utc")
     try:
         when = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
-        age = (datetime.now(timezone.utc) - when).total_seconds()
-        if when.tzinfo is None or not 0 <= age <= 36 * 3600:
-            errors.append("report_not_fresh")
+        if when.tzinfo is None:
+            errors.append("report_bad_timestamp")
+        else:
+            age = (datetime.now(timezone.utc) - when).total_seconds()
+            if not 0 <= age <= 30 * 3600:
+                errors.append("report_not_fresh")
     except (AttributeError, TypeError, ValueError):
         errors.append("report_bad_timestamp")
     agents = report.get("agents")
