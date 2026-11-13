@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 20.9,
+    "age_seconds": 46829.2,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 20.9,
+      "age_seconds": 46829.2,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 133.4,
+      "age_seconds": 46941.7,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-12T18:00:53.059483+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 70.6,
+      "age_seconds": 46878.9,
       "agent": "ACS-03",
       "diagnostics": {
         "components": [
@@ -69,10 +69,10 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 2.5,
+      "age_seconds": 3.6,
       "agent": "ACS-04",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-12T18:03:04.006756+00:00",
+      "last_execution_utc": "2026-11-13T07:03:11.098135+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -82,7 +82,7 @@
       "age_seconds": 0.1,
       "agent": "ACS-05",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-12T18:03:06.365932+00:00",
+      "last_execution_utc": "2026-11-13T07:03:14.607417+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -100,7 +100,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-11-12T18:00:52.338350+00:00",
+      "mtime_utc": "2026-11-13T06:01:31.599211+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -119,7 +119,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-12T18:03:06.445774+00:00",
+  "generated_at_utc": "2026-11-13T07:03:14.697444+00:00",
   "git": {
     "last_commit": {
       "ok": true,
