@@ -22,7 +22,8 @@ def fixture():
         "git":{"origin_reachable":{"ok":True}, "unresolved_merge_conflict":False,
                "status":{"tracked_changes_count":22}},
         "self_heal":{"branch_sync":{"ok":True,"ahead_after":0,"behind_after":0},
-                     "recovery_proof":{"verified":True}}
+                     "recovery_proof":{"verified":True,
+                                       "test_type":"process_crash_and_external_scheduler_outage"}}
     }
 def proof():
     tests = {}
@@ -44,6 +45,23 @@ class Tests(unittest.TestCase):
     def tearDown(self):
         gate.ROOT = self.old_root
         self.temp.cleanup()
+    def test_branch_sync_is_never_process_or_scheduler_recovery(self):
+        r = fixture()
+        r["self_heal"]["recovery_proof"] = {
+            "verified": True,
+            "test_type": "observed_remote_divergence_recovery",
+            "not_tested": "process_crash_and_external_scheduler_outage",
+        }
+        self.assertFalse(gate.evaluate(r, proof(), NOW)["published_recovery_verified"])
+        checks, reports, complete = gate.advance(r, proof(), {}, NOW)
+        self.assertFalse(complete)
+        self.assertEqual(reports, [])
+
+    def test_required_recovery_scenarios_must_not_be_marked_untested(self):
+        r = fixture()
+        r["self_heal"]["recovery_proof"]["not_tested"] = "external_scheduler_outage"
+        self.assertFalse(gate.evaluate(r, proof(), NOW)["published_recovery_verified"])
+
     def test_local_proof_cannot_override_unverified_published_recovery(self):
         r = fixture()
         r["self_heal"]["recovery_proof"]["verified"] = False
