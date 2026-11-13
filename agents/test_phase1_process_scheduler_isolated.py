@@ -152,7 +152,7 @@ class IndependentProcessRecoveryTests(unittest.TestCase):
                 "second_guard_run_no_additional_write": True,
             }
             output = Path(__file__).resolve().parent.parent / "phase1_disposable_recovery_evidence.json"
-            output.write_text(json.dumps(evidence, indent=2, sort_keys=True) + "\\n")
+            output.write_text(json.dumps(evidence, indent=2, sort_keys=True) + chr(10))
 
 
 if __name__ == "__main__":
