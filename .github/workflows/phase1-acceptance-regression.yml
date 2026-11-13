@@ -38,7 +38,7 @@ jobs:
           python -m py_compile agents/phase1_deployment_preflight.py
           python - <<'PY'
           import sys
-          from datetime import datetime, timezone
+          from datetime import datetime, timezone, timedelta
           sys.path.insert(0, "agents")
           from phase1_deployment_preflight import check_report
           report = {
@@ -57,6 +57,13 @@ jobs:
           report["pythonanywhere_schedule"]["health_task"]["matching_task_ids"] = [1521711]
           assert "unexpected_parent_task_id" in check_report(report)
           print("PASS: read-only preflight recognizes current layout and rejects schedule mismatch")
+          report["pythonanywhere_schedule"]["health_task"]["matching_task_ids"] = [1524414]
+          for age, passing in ((29, True), (31, False), (35, False)):
+              report["generated_at_utc"] = (datetime.now(timezone.utc) - timedelta(hours=age)).isoformat()
+              assert (check_report(report) == []) is passing, f"incorrect preflight report TTL: {age}h"
+          report["generated_at_utc"] = "2026-11-13T10:00:00"
+          assert "report_bad_timestamp" in check_report(report)
+          print("PASS: production preflight enforces 30h TTL and rejects naive timestamp")
           PY
       - name: Verify independent scheduler recovery remains fail closed
         run: |
