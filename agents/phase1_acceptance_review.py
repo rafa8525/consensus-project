@@ -16,6 +16,7 @@ REPORT = "logs/system/pythonanywhere_health.json"
 ROOT = Path.home() / ".config/ai-consensus"
 AGENTS = tuple("ACS-%02d" % i for i in range(1, 6))
 HORIZON = timedelta(hours=36)
+REPORT_HORIZON = timedelta(hours=30)  # Production publication freshness limit
 PROOF_HORIZON = timedelta(days=14)
 NEEDED = 3
 
@@ -68,7 +69,7 @@ def evaluate(report, evidence, now=None):
     now = now or datetime.now(timezone.utc)
     if not isinstance(report, dict):
         return {"report_schema": False}
-    checks = {"report_fresh": recent(report.get("generated_at_utc"), now)}
+    checks = {"report_fresh": recent(report.get("generated_at_utc"), now, REPORT_HORIZON)}
     agents = report.get("agents")
     agents = agents if isinstance(agents, dict) else {}
     for name in AGENTS:
@@ -130,7 +131,7 @@ def advance(report, evidence, history, now):
     prior = [s for s in prior if timevalue(s)]
     if not passing:
         prior = []
-    elif recent(stamp, now):
+    elif recent(stamp, now, REPORT_HORIZON):
         if prior and timevalue(stamp) <= timevalue(prior[-1]):
             pass  # repeat or older snapshots cannot earn more credit
         else:
