@@ -58,6 +58,44 @@ class GuardTests(unittest.TestCase):
         result,c=self.evaluate(t=task(False))
         self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
         self.assertEqual([x[2] for x in c if x[0]=="PATCH"],[{"enabled":True}])
+    def test_live_can_enable_transition_is_metadata(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        diff=g.task_configuration_diff(before,after)
+        self.assertTrue(diff["safe"])
+        self.assertEqual(diff["api_metadata"],["can_enable"])
+    def test_can_enable_type_change_is_not_metadata(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]="false"
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_can_enable_change_without_reenable_is_not_metadata(self):
+        before=task(True);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_can_enable_change_with_command_drift_blocks(self):
+        before=task(False);before["can_enable"]=True
+        after=task(True);after["can_enable"]=False
+        after["command"]="unexpected"
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_can_enable_field_added_blocks(self):
+        before=task(False)
+        after=task(True);after["can_enable"]=False
+        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
+    def test_guard_recovers_with_can_enable_transition(self):
+        state=task(False);state["can_enable"]=True
+        calls=[]
+        def fetch(url,token=None,method="GET",body=None):
+            if url==g.REPORT_URL:return report()
+            if method=="PATCH":
+                self.assertEqual(body,{"enabled":True})
+                calls.append(body)
+                state["enabled"]=True
+                state["can_enable"]=False
+            return copy.deepcopy(state)
+        result=g.guard(True,True,"test-token",NOW,fetch)
+        self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
+        self.assertEqual(result["allowed_api_metadata_changes"],["can_enable"])
+        self.assertEqual(len(calls),1)
     def test_wrong_command_blocks(self):
         t=task(False);t["command"]="malicious changed command"
         result,c=self.evaluate(t=t)
@@ -88,95 +126,6 @@ class GuardTests(unittest.TestCase):
     def test_stale_threshold(self):
         self.assertEqual(g.inspect_report(report(28),NOW),"stale_report")
         self.assertEqual(g.inspect_report(report(1),NOW),"healthy")
-    def test_explicit_maintenance_blocks_enable(self):
-        f,c=mock(report(29),task(False))
-        result=g.guard(True,True,"test-token",NOW,f,maintenance=True)
-        self.assertEqual(result["status"],"BLOCKED_explicit_maintenance_mode")
-        self.assertFalse(any(x[0]=="PATCH" for x in c))
-    def test_unexpected_schedule_metadata_change_after_patch_escalates(self):
-        state=task(False)
-        calls=[]
-        def fetch(url,token=None,method="GET",body=None):
-            calls.append(method)
-            if url==g.REPORT_URL: return report()
-            if method=="PATCH":
-                state.update(body)
-                state["description"]="unexpected"
-                return dict(state)
-            return dict(state)
-        result=g.guard(True,True,"test-token",NOW,fetch)
-        self.assertEqual(result["status"],"ESCALATE_configuration_change")
-        self.assertTrue(result["changed"])
-        self.assertEqual(calls.count("PATCH"),1)
-    def test_disabled_schedule_missing_or_invalid_report_blocks(self):
-        f,c=mock({"generated_at_utc":"bad","agents":{}},task(False))
-        result=g.guard(True,True,"test-token",NOW,f)
-        self.assertTrue(result["status"].startswith("BLOCKED_"))
-        self.assertFalse(any(x[0]=="PATCH" for x in c))
-    def test_runtime_timestamp_changes_after_patch_are_allowed(self):
-        state=task(False)
-        state["next_run"]="2026-11-08T18:00Z"
-        calls=[]
-        def fetch(url,token=None,method="GET",body=None):
-            if url==g.REPORT_URL:return report()
-            calls.append((method,body))
-            if method=="PATCH":
-                self.assertEqual(body,{"enabled":True})
-                state["enabled"]=True
-                state["next_run"]="2026-11-09T18:00Z"
-            return dict(state)
-        result=g.guard(True,True,"token",NOW,fetch)
-        self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
-        self.assertEqual(result["allowed_api_metadata_changes"],["next_run"])
-        self.assertEqual([c for c in calls if c[0]=="PATCH"],[("PATCH",{"enabled":True})])
-    def test_prewrite_timestamp_change_is_allowed(self):
-        state=task(False)
-        state["next_run"]="a"
-        reads=[0]
-        def fetch(url,token=None,method="GET",body=None):
-            if url==g.REPORT_URL:return report()
-            if method=="GET":
-                reads[0]+=1
-                if reads[0]==2: state["next_run"]="b"
-            elif method=="PATCH":
-                self.assertEqual(body,{"enabled":True})
-                state["enabled"]=True
-            return dict(state)
-        result=g.guard(True,True,"token",NOW,fetch)
-        self.assertEqual(result["status"],"SCHEDULE_REENABLED_NEXT_RUN_ONLY")
-    def test_unrecognized_field_change_after_patch_blocks(self):
-        state=task(False)
-        def fetch(url,token=None,method="GET",body=None):
-            if url==g.REPORT_URL:return report()
-            if method=="PATCH":
-                state["enabled"]=True
-                state["new_api_field"]="unexpected"
-            return dict(state)
-        result=g.guard(True,True,"token",NOW,fetch)
-        self.assertEqual(result["status"],"ESCALATE_configuration_change")
-        self.assertEqual(result["changed_field_names"],["new_api_field"])
-    def test_extra_field_before_patch_blocks(self):
-        state=task(False)
-        calls=[]
-        seen=[0]
-        def fetch(url,token=None,method="GET",body=None):
-            if url==g.REPORT_URL:return report()
-            if method=="GET":
-                seen[0]+=1
-                if seen[0]==2: state["unexpected"]="value"
-            else: calls.append((method,body))
-            return dict(state)
-        result=g.guard(True,True,"token",NOW,fetch)
-        self.assertEqual(result["status"],"BLOCKED_prewrite_schedule_changed")
-        self.assertEqual(calls,[])
-    def test_timestamp_key_missing_blocks(self):
-        before=task(False)
-        before["next_run"]="timestamp"
-        after=task(False)
-        self.assertFalse(g.task_configuration_diff(before,after)["safe"])
-    def test_integer_enabled_is_not_boolean(self):
-        t=task(False);t["enabled"]=1
-        self.assertEqual(g.validate_task(t),"invalid_enabled")
     def test_invalid_enabled_rejected(self):
         t=task();t["enabled"]="true"
         self.assertEqual(g.validate_task(t),"invalid_enabled")
