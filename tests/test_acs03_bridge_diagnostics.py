@@ -27,6 +27,34 @@ class ACS03DiagnosticsTests(unittest.TestCase):
             self.assertEqual(result["components"][0]["returncode"], 1)
             self.assertNotIn("PRIVATE INFORMATION", json.dumps(result))
 
+    def test_cloud_cycle_failure_is_named_without_exposing_private_fields(self):
+        raw = {
+            "diagnostics_status": "available",
+            "components": [
+                {"component": "health_connect_cloud_cycle",
+                 "status": "execution_failure", "returncode": 2,
+                 "stdout": "PRIVATE HEALTH DATA",
+                 "stderr": "PRIVATE CREDENTIAL"}
+            ],
+        }
+        public = bridge.public_diagnostics("ACS-03", raw)
+        self.assertEqual(public["components"], [{
+            "component": "health_connect_cloud_cycle",
+            "status": "execution_failure",
+            "returncode": 2,
+        }])
+        self.assertNotIn("PRIVATE", json.dumps(public))
+
+    def test_unrecognized_component_remains_redacted(self):
+        raw = {"diagnostics_status": "available", "components": [
+            {"component": "private-component-name", "status": "execution_failure",
+             "returncode": 2, "stderr": "PRIVATE"}
+        ]}
+        public = bridge.public_diagnostics("ACS-03", raw)
+        self.assertEqual(public["components"][0]["component"], "unknown")
+        self.assertNotIn("private-component-name", json.dumps(public))
+        self.assertNotIn("PRIVATE", json.dumps(public))
+
     def test_missing_state_fails_transparently(self):
         with tempfile.TemporaryDirectory() as folder:
             with patch.dict(bridge.ACS_STATE_FILES, {"ACS-03": Path(folder) / "missing.json"}):

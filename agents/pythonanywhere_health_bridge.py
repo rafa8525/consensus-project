@@ -568,7 +568,8 @@ def public_diagnostics(agent, diagnostic):
         components = []
         valid_statuses = {"healthy", "warning", "critical", "execution_failure"}
         known_components = {
-            "fitness_tracking_verifier", "health_master", "backup_fitness"
+            "health_connect_cloud_cycle", "fitness_tracking_verifier",
+            "health_master", "backup_fitness"
         }
         for item in (diagnostic.get("components") or [])[:8]:
             if not isinstance(item, dict):
