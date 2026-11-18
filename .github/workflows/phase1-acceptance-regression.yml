@@ -12,6 +12,8 @@ on:
       - agents/verify_phase1_recovery_ci.py
       - agents/phase1_production_recovery_probe.py
       - agents/install_phase1_recovery.sh
+      - agents/acs03_probe_error_patch.py
+      - tests/test_acs03_probe_error_patch.py
 jobs:
   acceptance:
     runs-on: ubuntu-latest
@@ -27,6 +29,10 @@ jobs:
           python -m py_compile agents/phase1_acceptance_review.py agents/test_phase1_acceptance_review.py
           cd agents
           python -m unittest -v test_phase1_acceptance_review.py
+      - name: Test ACS-03 probe error-classification patch (offline)
+        run: |
+          python -m py_compile agents/acs03_probe_error_patch.py tests/test_acs03_probe_error_patch.py
+          python -m unittest -v tests.test_acs03_probe_error_patch
       - name: Isolated watchdog failure and recovery proof
         run: python agents/verify_phase1_recovery_ci.py
       - name: Validate production-host probe safely (no live execution)
