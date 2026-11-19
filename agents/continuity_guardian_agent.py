@@ -291,48 +291,38 @@ def check_gmail_wiring() -> None:
 
 
 def check_master_control() -> None:
-    src = text_of(TOOLS / "master_control_loop.py")
-    if "inspect.signature" not in src:
-        CRITICAL.append("Master Control Loop lost required-argument dispatcher fallback")
-    # A success message is valid when guarded by all(results); only flag the
-    # historical unconditional form.
-    success_line = 'log("✅ All subsystems executed successfully.")'
-    if success_line in src and "if all(results):" not in src:
-        WARN.append("Master Control Loop has unconditional all-subsystems-success message")
+    """Verify the current ACS-01 scheduled supervisor, not a retired loop log.
 
-    # PythonAnywhere is more reliable with scheduled completed cycles than
-    # fragile always-on background loops. Treat a recent clean completed cycle
-    # as the source of truth for Master Control Loop health.
-    log_path = MEMORY / "logs/system/master_control_loop.log"
-    if not log_path.exists():
-        CRITICAL.append("Master Control Loop log is missing")
-    else:
-        try:
-            import re
-            from datetime import datetime, timezone
+    The supervisor records its own *core* result, separately from dependency
+    failures. This prevents an ACS-03 failure from incorrectly marking the
+    supervisor as offline. Missing, malformed, stale or future-dated evidence
+    always fails closed; never fall back to legacy MCL log success markers.
+    """
+    state_path = BASE / "memory" / "agents" / "state.json"
+    try:
+        # The supervisor's own store currently uses this canonical repo path.
+        # Avoid following symlinks or accidentally loading another host's state.
+        if state_path.is_symlink() or not state_path.is_file():
+            raise ValueError("supervisor state missing or unsafe")
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+        if not isinstance(state, dict):
+            raise ValueError("supervisor state is not a JSON object")
 
-            log_text = log_path.read_text(errors="ignore")
-            success_marker = "✅ All subsystems executed successfully."
-            complete_marker = "==== Master Control Loop Cycle Complete ===="
+        stamp_value = state.get("last_supervisor_ts")
+        if isinstance(stamp_value, bool) or not isinstance(stamp_value, (int, float)):
+            raise ValueError("supervisor timestamp missing or invalid")
+        if not isinstance(state.get("last_supervisor_status"), str):
+            raise ValueError("supervisor status missing")
 
-            matches = list(re.finditer(
-                r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\].*"
-                + re.escape(success_marker)
-                + r"[\s\S]*?"
-                + re.escape(complete_marker),
-                log_text,
-            ))
-
-            if not matches:
-                CRITICAL.append("Master Control Loop has no recent successful completed cycle marker")
-            else:
-                last_ts = matches[-1].group(1)
-                last_dt = datetime.strptime(last_ts, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
-                age_seconds = (datetime.now(timezone.utc) - last_dt).total_seconds()
-                if age_seconds > 172800:
-                    CRITICAL.append(f"Master Control Loop successful cycle is stale: {age_seconds/3600:.1f} hours old")
-        except Exception as exc:
-            WARN.append(f"Could not verify Master Control Loop success log: {exc}")
+        age = now_utc().timestamp() - stamp_value
+        if not (-300 <= age <= 129600):
+            raise ValueError("supervisor execution missing, stale, or future-dated")
+        if state["last_supervisor_status"] != "ok":
+            raise ValueError("supervisor last execution was degraded")
+        INFO.append("ACS-01 scheduled supervisor has fresh verified core completion")
+    except (OSError, ValueError, TypeError, OverflowError, json.JSONDecodeError) as exc:
+        # Error classes, not exception text, are persisted to avoid exposing paths.
+        CRITICAL.append("ACS-01 scheduled supervisor evidence invalid: " + type(exc).__name__)
 
 
 def check_memory_compressor() -> None:
