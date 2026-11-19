@@ -91,6 +91,7 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
 
     stdout = p.stdout[-4000:]
     stderr = p.stderr[-4000:]
+    classification_reason = None
 
     if component == "infrastructure_guardian":
         status = {
@@ -101,23 +102,28 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
         }.get(p.returncode, "execution_failure")
 
     elif component == "continuity_guardian":
-        # Accept exactly one complete guardian END marker. Multiple markers,
-        # partial words (OKAY), or inconsistent process exits fail closed.
+        # Read the complete child stdout for its terminal marker. Persist only
+        # bounded stdout/stderr; long diagnostics must not hide the END marker.
         markers = re.findall(
             r"^END status=(OK|WARN|CRITICAL)(?=\s|$)[^\r\n]*$",
             p.stdout,
             re.IGNORECASE | re.MULTILINE,
         )
-        if p.returncode not in (0, 2) or len(markers) != 1:
+        if len(markers) != 1:
             status = "execution_failure"
+            classification_reason = "missing_or_duplicate_terminal_marker"
+        elif p.returncode not in (0, 2):
+            status = "execution_failure"
+            classification_reason = "unexpected_child_exit_code"
         else:
             raw = markers[0].upper()
-            if p.returncode == 2:
-                status = "critical" if raw == "CRITICAL" else "execution_failure"
-            elif raw == "CRITICAL":
-                status = "execution_failure"
-            else:
+            if p.returncode == 2 and raw == "CRITICAL":
+                status = "critical"
+            elif p.returncode == 0 and raw in ("OK", "WARN"):
                 status = {"OK": "healthy", "WARN": "warning"}[raw]
+            else:
+                status = "execution_failure"
+                classification_reason = "exit_code_marker_disagreement"
 
     else:
         status = "healthy" if p.returncode == 0 else "execution_failure"
@@ -127,6 +133,7 @@ def run_process(component: str, path: Path, extra: list[str] | None = None) -> d
         "status": status,
         "ok": status == "healthy",
         "returncode": p.returncode,
+        "classification_reason": classification_reason,
         "stdout": stdout,
         "stderr": stderr,
     }
