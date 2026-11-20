@@ -1,0 +1,32 @@
+name: AGI isolated research verification
+on:
+  push:
+    branches:
+      - research/agi-iteration-001-20261119
+    paths:
+      - 'research/agi_iteration001/**'
+      - '.github/workflows/agi-research-verification.yml'
+  pull_request:
+    paths:
+      - 'research/agi_iteration001/**'
+      - '.github/workflows/agi-research-verification.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run isolated Python tests (no credentials or production services)
+        working-directory: research/agi_iteration001
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py
+          python validate_registry.py
