@@ -17,20 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check out exact triggering commit without credentials
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          submodules: false
-          fetch-depth: 1
-          sparse-checkout: |
-            research/agi_iteration001
-            .github/workflows
-      - name: Verify exact commit checked out
+      - name: Check out research head without broken submodule traversal
         shell: bash
+        env:
+          EXPECTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          git rev-parse HEAD
+          git -c submodule.recurse=false clone --depth 1 --single-branch --branch research/agi-iteration-001-20261119 https://github.com/rafa8525/consensus-project.git "$RUNNER_TEMP/agi-checkout"
+          test "$(git -C "$RUNNER_TEMP/agi-checkout" rev-parse HEAD)" = "$EXPECTED_SHA"
+          cp -a "$RUNNER_TEMP/agi-checkout/research" "$GITHUB_WORKSPACE/research"
+          echo "Verified research commit: $EXPECTED_SHA"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
