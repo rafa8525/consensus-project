@@ -6,7 +6,8 @@ from local_inference import LABELS
 
 def fixture():
     # Construct synthetic fixtures for validation tests, NOT independent provenance.
-    rows=[{"label":label,"text":f"unseen synthetic source record {i} for {label}"}
+    words=("alpha","bravo","charlie","delta","echo","foxtrot","golf","hotel","india","juliet")
+    rows=[{"label":label,"text":f"unseen synthetic source record {words[i]} for {label}"}
           for label in LABELS for i in range(10)]
     raw=("".join(json.dumps(r)+"\n" for r in rows)).encode()
     manifest={"sha256":hashlib.sha256(raw).hexdigest(),
@@ -59,7 +60,7 @@ class ExternalGateTests(unittest.TestCase):
     def test_class_imbalance(self):
         raw,manifest=fixture()
         rows=[json.loads(x) for x in raw.decode().splitlines()]
-        rows[:5]=[{"label":"design_experiment","text":f"switched record text {i}"} for i in range(5)]
+        rows[10:15]=[{"label":"design_experiment","text":f"switched record text {word}"} for word in ("alpha","bravo","charlie","delta","echo")]
         tampered=("".join(json.dumps(r)+"\n" for r in rows)).encode()
         manifest["sha256"]=hashlib.sha256(tampered).hexdigest()
         with self.assertRaises(ValueError):validate_external(tampered,manifest)
