@@ -31,7 +31,7 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
-          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py test_acs_public_triage.py test_acs_private_triage.py test_model_improvement_experiment.py test_replicated_model_evaluation.py test_external_benchmark_gate.py test_clinc_ood_protocol.py
+          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py test_acs_public_triage.py test_acs_private_triage.py test_model_improvement_experiment.py test_replicated_model_evaluation.py test_external_benchmark_gate.py test_clinc_ood_protocol.py test_ood_threshold_calibration.py
           python model_improvement_experiment.py
           python replicated_model_evaluation.py
           python external_benchmark_gate.py
@@ -50,3 +50,4 @@ jobs:
           echo "$EXPECTED_SHA  $TEMP_DATA" | sha256sum --check --status
           echo "CLINC150 source SHA256 verified: $EXPECTED_SHA"
           python clinc_ood_protocol.py --clinc-json "$TEMP_DATA" --sha256 "$EXPECTED_SHA" --sample 1000
+          python ood_threshold_calibration.py --clinc-json "$TEMP_DATA" --sha256 "$EXPECTED_SHA"
