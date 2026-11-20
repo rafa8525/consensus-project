@@ -11,7 +11,7 @@ def fixtures():
     rows=[]
     for label in LABELS:
         for i in range(10):
-            rows.append({"label":label,"text":f"synthetic independent fixture {label} tokenxy{i} scenario"})
+            rows.append({"label":label,"text":f"synthetic independent fixture {label} tokenxy{chr(97+i)} scenario"})
     data="".join(json.dumps(row)+"\n" for row in rows).encode()
     manifest={"sha256":hashlib.sha256(data).hexdigest(),
         "source_url":"https://example.org/synthetic-fixtures",
