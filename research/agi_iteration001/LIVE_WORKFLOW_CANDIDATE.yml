@@ -1,0 +1,50 @@
+# REVIEW CANDIDATE ONLY — NOT AN ACTIVE GITHUB ACTIONS WORKFLOW.
+# This file lives in research/ and must NOT be copied into .github/workflows/
+# without explicit user approval. GitHub workflow_dispatch requires a workflow
+# registered on the default branch. See LIVE_TRIAL_SECURITY_REVIEW.md.
+name: AGI one-shot research proposal (protected manual)
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type YES-REVIEWED for one bounded model proposal request"
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: agi-one-shot-research
+  cancel-in-progress: false
+jobs:
+  one-shot:
+    if: ${{ github.event_name == 'workflow_dispatch' && github.repository == 'rafa8525/consensus-project' && github.ref == 'refs/heads/research/agi-iteration-001-20261119' && inputs.confirmation == 'YES-REVIEWED' && github.run_attempt == 1 }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    environment: agi-research-live
+    steps:
+      - name: Fetch immutable approved research code and verify identity
+        shell: bash
+        env:
+          PINNED_RESEARCH_SHA: 10d829304ec11f4d036d8c882c2f24047f1922ad
+        run: |
+          set -euo pipefail
+          umask 077
+          git -c submodule.recurse=false clone --no-checkout --filter=blob:none \
+            https://github.com/rafa8525/consensus-project.git "$RUNNER_TEMP/pinned-research"
+          git -C "$RUNNER_TEMP/pinned-research" fetch --no-tags --depth=1 origin "$PINNED_RESEARCH_SHA"
+          git -C "$RUNNER_TEMP/pinned-research" checkout --detach "$PINNED_RESEARCH_SHA"
+          test "$(git -C "$RUNNER_TEMP/pinned-research" rev-parse HEAD)" = "$PINNED_RESEARCH_SHA"
+      - name: Execute exactly one protected Responses request
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_PROJECT_ID: ${{ vars.OPENAI_PROJECT_ID }}
+          AGI_EXPLICIT_ONE_SHOT: YES-REVIEWED
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          set -euo pipefail
+          umask 077
+          cd "$RUNNER_TEMP/pinned-research/research/agi_iteration001"
+          python3 one_shot_proposal_trial.py --live
+# Note: GitHub approval controls each run, not a permanent global one-call
+# quota. Revoke the ephemeral key after successful or uncertain execution.

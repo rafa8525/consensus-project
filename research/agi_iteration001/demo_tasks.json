@@ -1,0 +1,17 @@
+[
+  {
+    "agent_id": "AGI-01",
+    "operation": "design_experiment",
+    "objective": "Define held-out generalization test for Iteration 002"
+  },
+  {
+    "agent_id": "AGI-17",
+    "operation": "review_hypothesis",
+    "objective": "Assess baseline and confounds for modular reasoning"
+  },
+  {
+    "agent_id": "AGI-38",
+    "operation": "evaluate_evidence",
+    "objective": "Review reproducibility requirements"
+  }
+]
