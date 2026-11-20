@@ -17,12 +17,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check out public research branch without submodule traversal
+      - name: Check out exact triggering commit without credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+          fetch-depth: 1
+          sparse-checkout: |
+            research/agi_iteration001
+            .github/workflows
+      - name: Verify exact commit checked out
         shell: bash
         run: |
-          git -c submodule.recurse=false clone --depth 1 --single-branch --branch research/agi-iteration-001-20261119 https://github.com/rafa8525/consensus-project.git "$RUNNER_TEMP/agi-checkout"
-          cp -a "$RUNNER_TEMP/agi-checkout/research" "$GITHUB_WORKSPACE/research"
-          git -C "$RUNNER_TEMP/agi-checkout" rev-parse HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git rev-parse HEAD
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
