@@ -31,5 +31,5 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
-          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py
+          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py test_acs_public_triage.py
           python validate_registry.py
