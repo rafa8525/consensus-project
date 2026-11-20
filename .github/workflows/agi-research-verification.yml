@@ -34,7 +34,7 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
-          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py test_acs_public_triage.py test_acs_private_triage.py test_model_improvement_experiment.py test_replicated_model_evaluation.py test_external_benchmark_gate.py test_clinc_ood_protocol.py test_ood_threshold_calibration.py test_milestone14_holdout_gate.py test_three_role_research_cycle.py test_three_role_provider_v2.py test_openai_proposal_adapter.py test_api_call_admission.py
+          python -m unittest -v test_train.py test_runtime.py test_worker_runtime.py test_local_inference.py test_model_worker_integration.py test_leased_worker.py test_leased_model_worker.py test_acs_public_triage.py test_acs_private_triage.py test_model_improvement_experiment.py test_replicated_model_evaluation.py test_external_benchmark_gate.py test_clinc_ood_protocol.py test_ood_threshold_calibration.py test_milestone14_holdout_gate.py test_three_role_research_cycle.py test_three_role_provider_v2.py test_openai_proposal_adapter.py test_api_call_admission.py test_solo_vs_team_planning.py
           python model_improvement_experiment.py
           python replicated_model_evaluation.py
           python external_benchmark_gate.py
@@ -44,6 +44,7 @@ jobs:
           python three_role_research_cycle.py --db "$TASK_DIR/experiment.db" run
           python three_role_research_cycle.py --db "$TASK_DIR/experiment.db" status
           python three_role_provider_v2.py --db "$TASK_DIR/provider_v2.db"
+          python solo_vs_team_planning.py --output "$TASK_DIR/planning_results.json"
       - name: Run pinned external CLINC150 OOD evaluation (no uploaded dataset)
         working-directory: research/agi_iteration001
         shell: bash
