@@ -17,9 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
+      - name: Check out public research branch without submodule traversal
+        shell: bash
+        run: |
+          git -c submodule.recurse=false clone --depth 1 --single-branch --branch research/agi-iteration-001-20261119 https://github.com/rafa8525/consensus-project.git "$RUNNER_TEMP/agi-checkout"
+          cp -a "$RUNNER_TEMP/agi-checkout/research" "$GITHUB_WORKSPACE/research"
+          git -C "$RUNNER_TEMP/agi-checkout" rev-parse HEAD
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
