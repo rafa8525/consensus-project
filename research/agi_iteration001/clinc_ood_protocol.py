@@ -7,9 +7,10 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from local_inference import LABELS, fit as train_word, predict as predict_word, tokens
-from model_improvement_experiment import _features, train_char, predict_char
-from replicated_model_evaluation import DEVELOPMENT, CONFIRMATION
+from local_inference import LABELS, TRAIN, fit as train_word, predict as predict_word, tokens
+from model_improvement_experiment import VALIDATION, _features, train_char, predict_char
+from replicated_model_evaluation import CONFIRMATION
+DEVELOPMENT = TRAIN + VALIDATION
 
 MAX_FILE_BYTES = 5_000_000
 DEFAULT_SAMPLE_LIMIT = 200
