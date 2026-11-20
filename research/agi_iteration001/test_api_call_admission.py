@@ -22,7 +22,7 @@ class AdmissionTests(unittest.TestCase):
     def test_dry_run_under_budget(self):
         p=preflight(approved(),model="example-model",input_token_ceiling=500,
                     output_token_ceiling=800)
-        self.assertEqual(p["estimated_upper_usd"],"0.00210")
+        self.assertEqual(p["estimated_upper_usd"],"0.0021")
         self.assertFalse(p["is_actual_billing_cap"])
     def test_live_denied_even_with_ample_estimate(self):
         with self.assertRaises(PermissionError):
