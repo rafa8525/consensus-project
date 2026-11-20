@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from acs_private_triage import diagnose, fitness_evidence
+from acs_private_triage import diagnose, fitness_evidence, classify_error
 
 NOW = datetime(2026, 11, 20, 4, 0, tzinfo=timezone.utc)
 class PrivateTriageTests(unittest.TestCase):
@@ -55,6 +55,26 @@ class PrivateTriageTests(unittest.TestCase):
         self.assertEqual(d["guardian_summary"][0]["count"],1)
         self.assertNotIn("private email",json.dumps(d))
         self.assertNotIn("private phone",json.dumps(d))
+    def test_error_categories_never_leak_raw_values(self):
+        self.assertEqual(classify_error("invalid_grant token=SECRET"), "oauth_invalid_grant")
+        self.assertEqual(classify_error("FileNotFoundError /private/path/key"), "file_missing")
+        self.assertEqual(classify_error("ModuleNotFoundError: No module named foo"), "dependency_missing")
+        self.assertEqual(classify_error("Unexpected private string 123"), "unclassified")
+    def test_cloud_component_category(self):
+        self.write("agents/acs03_state.json", {"status":"execution_failure",
+            "results":[{"component":"health_connect_cloud_cycle","status":"execution_failure",
+                         "returncode":2,"stderr":"ModuleNotFoundError: token SECRET"}]})
+        d=diagnose(self.root,now=NOW)
+        self.assertEqual(d["acs03_components"][0]["error_category"],"dependency_missing")
+        self.assertNotIn("SECRET", json.dumps(d))
+    def test_guardian_category(self):
+        self.write("logs/system/continuity_guardian_state.json",
+                   {"critical":["Master Control Loop dispatcher broken SECRET"],
+                    "warnings":["Twilio alert delivery failed SECRET"]})
+        d=diagnose(self.root,now=NOW)
+        self.assertEqual(d["guardian_summary"][0]["error_categories"],["orchestration_wiring"])
+        self.assertEqual(d["guardian_summary"][1]["error_categories"],["alert_transport"])
+        self.assertNotIn("SECRET",json.dumps(d))
     def test_malformed_state_rejected(self):
         (self.root/"memory"/"agents"/"acs05_state.json").write_text("not json")
         self.assertEqual(diagnose(self.root,now=NOW)["acs05_state"],"missing_or_unreadable")
