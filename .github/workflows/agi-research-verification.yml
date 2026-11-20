@@ -36,3 +36,17 @@ jobs:
           python replicated_model_evaluation.py
           python external_benchmark_gate.py
           python validate_registry.py
+      - name: Run pinned external CLINC150 OOD evaluation (no uploaded dataset)
+        working-directory: research/agi_iteration001
+        shell: bash
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          set -euo pipefail
+          TEMP_DATA="$(mktemp)"
+          trap 'rm -f "$TEMP_DATA"' EXIT
+          EXPECTED_SHA="36923c3705a59e08fe9c3883d8bc2dd966ef93e22cb78ac41171782a698d56e0"
+          curl --fail --location --silent --show-error --retry 2 --max-time 25 --output "$TEMP_DATA" "https://raw.githubusercontent.com/clinc/oos-eval/828f8093932c8fe6ca7936c3d2e52903b1c523de/data/data_full.json"
+          echo "$EXPECTED_SHA  $TEMP_DATA" | sha256sum --check --status
+          echo "CLINC150 source SHA256 verified: $EXPECTED_SHA"
+          python clinc_ood_protocol.py --clinc-json "$TEMP_DATA" --sha256 "$EXPECTED_SHA" --sample 200
