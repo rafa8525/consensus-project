@@ -59,6 +59,27 @@ def fitness_evidence(path, now=None, max_bytes=2_000_000):
     if newest is None: return "no_valid_measurements"
     return "current" if (now - newest).total_seconds() <= 86400 else "stale_over_24h"
 
+def classify_error(message):
+    """Convert arbitrary private diagnostics to non-secret diagnostic categories."""
+    if not isinstance(message, str) or not message.strip():
+        return "unknown"
+    value = message.lower()
+    checks = (
+        ("oauth_invalid_grant", ("invalid_grant", "revoked")),
+        ("oauth_client_missing", ("deleted_client", "invalid_client")),
+        ("permission_denied", ("permission denied", "permissionerror", "eacces")),
+        ("file_missing", ("no such file", "filenotfounderror", "not found")),
+        ("network_unreachable", ("connection refused", "name resolution", "network unreachable", "timed out")),
+        ("dependency_missing", ("modulenotfounderror", "no module named", "importerror")),
+        ("alert_transport", ("twilio", "sms", "alert delivery")),
+        ("orchestration_wiring", ("master control", "dispatcher", "guard", "orchestration")),
+        ("stale_data", ("stale", "freshness", "expired data")),
+    )
+    for code, words in checks:
+        if any(word in value for word in words):
+            return code
+    return "unclassified"
+
 def diagnose(repo, memory_root=None, now=None):
     repo = Path(repo)
     mem = Path(memory_root) if memory_root is not None else repo / "memory"
@@ -75,14 +96,16 @@ def diagnose(repo, memory_root=None, now=None):
                                "status": item.get("status") if item.get("status") in
                                 ("healthy", "warning", "critical", "execution_failure") else "unknown",
                                "returncode": code if type(code) is int and -1 <= code <= 255 else None,
-                               "error_type": "present" if item.get("error") else "not_recorded"})
+                               "error_type": "present" if item.get("error") else "not_recorded",
+                               "error_category": classify_error(str(item.get("stderr") or item.get("error") or ""))})
     guardian_findings = []
     if isinstance(guardian, dict):
         # Avoid printing message text or private exception strings.
         for severity in ("critical", "warnings"):
             values = guardian.get(severity, [])
             if isinstance(values, list):
-                guardian_findings.append({"category": severity, "count": len(values)})
+                guardian_findings.append({"category": severity, "count": len(values),
+                                          "error_categories": sorted(set(classify_error(v) for v in values))})
     return {
         "source": "local_private_state_metadata_only",
         "report_utc": now.isoformat(),
