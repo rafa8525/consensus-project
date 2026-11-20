@@ -49,4 +49,4 @@ jobs:
           curl --fail --location --silent --show-error --retry 2 --max-time 25 --output "$TEMP_DATA" "https://raw.githubusercontent.com/clinc/oos-eval/828f8093932c8fe6ca7936c3d2e52903b1c523de/data/data_full.json"
           echo "$EXPECTED_SHA  $TEMP_DATA" | sha256sum --check --status
           echo "CLINC150 source SHA256 verified: $EXPECTED_SHA"
-          python clinc_ood_protocol.py --clinc-json "$TEMP_DATA" --sha256 "$EXPECTED_SHA" --sample 200
+          python clinc_ood_protocol.py --clinc-json "$TEMP_DATA" --sha256 "$EXPECTED_SHA" --sample 1000
