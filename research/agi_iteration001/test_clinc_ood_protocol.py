@@ -11,7 +11,13 @@ class OODProtocolTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.path=Path(self.tmp.name)/"clinc.json"
         # Synthetic OOD test fixtures. Not external CLINC150 and not an accuracy result.
-        self.rows=[[f"synthetic shopping request {i} about air tickets", "oos"] for i in range(45)]
+        def word(i):
+            chars=[]
+            for _ in range(3):
+                chars.append(chr(97+i%26))
+                i//=26
+            return "".join(chars)
+        self.rows=[[f"synthetic shopping request {word(i)} about air tickets", "oos"] for i in range(45)]
         self.data={"oos_test":self.rows}
     def saved(self):
         raw=json.dumps(self.data).encode("utf-8")
