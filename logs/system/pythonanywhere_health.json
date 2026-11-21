@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 30.5,
+    "age_seconds": 46815.0,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 30.5,
+      "age_seconds": 46815.0,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 112.0,
+      "age_seconds": 46896.5,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-20T18:01:52.717490+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 101.8,
+      "age_seconds": 46886.3,
       "agent": "ACS-03",
       "diagnostics": {
         "components": [
@@ -82,7 +82,7 @@
         "overall_status": "warning"
       },
       "health_status": "warning",
-      "last_execution_utc": "2026-11-20T18:03:43.829701+00:00",
+      "last_execution_utc": "2026-11-21T07:03:28.373343+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -92,7 +92,7 @@
       "age_seconds": 0.1,
       "agent": "ACS-05",
       "health_status": "healthy",
-      "last_execution_utc": "2026-11-20T18:03:44.683210+00:00",
+      "last_execution_utc": "2026-11-21T07:03:29.188050+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "current",
@@ -110,7 +110,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-11-20T18:00:57.476240+00:00",
+      "mtime_utc": "2026-11-21T06:01:06.870627+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -129,7 +129,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-20T18:03:44.725741+00:00",
+  "generated_at_utc": "2026-11-21T07:03:29.240676+00:00",
   "git": {
     "last_commit": {
       "ok": true,
