@@ -26,6 +26,10 @@ class SafeTrialDiagnosticsTests(unittest.TestCase):
     def test_incomplete(self):
         self.assertEqual(classify_failure(ValueError("Model response incomplete or refused")),
                          "RESPONSE_INCOMPLETE_OR_REFUSED")
+    def test_output_exhausted(self):
+        self.assertEqual(
+            classify_failure(ValueError("Model output token budget exhausted")),
+            "OUTPUT_TOKEN_BUDGET_EXHAUSTED")
     def test_missing_text(self):
         self.assertEqual(classify_failure(ValueError("No valid structured response")),
                          "RESPONSE_TEXT_MISSING")
