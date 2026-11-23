@@ -93,6 +93,10 @@ class OpenAIProposalProvider:
         )
         self.external_calls+=1
         if getattr(response,"status",None)!="completed":
+            meta=getattr(response,"sanitized_metadata",None)
+            if (getattr(meta,"status",None)=="incomplete" and
+                    getattr(meta,"incomplete_reason",None)=="max_output_tokens"):
+                raise ValueError("Model output token budget exhausted")
             raise ValueError("Model response incomplete or refused")
         if not isinstance(getattr(response,"output_text",None),str):
             raise ValueError("No valid structured response")
