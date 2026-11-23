@@ -27,14 +27,14 @@ def classify_failure(exc):
         if 400<=status<500:return "REQUEST_REJECTED"
         if 500<=status<600:return "SERVER_REJECTED"
         return "HTTP_REJECTION_OTHER"
+    if isinstance(exc,PermissionError):
+        return "LOCAL_CONFIGURATION_BLOCKED"
     if isinstance(exc,(TimeoutError,socket.timeout)):
         return "NETWORK_TIMEOUT"
     if isinstance(exc,(urllib.error.URLError,ConnectionError,OSError)):
         return "NETWORK_FAILURE"
     if isinstance(exc,json.JSONDecodeError):
         return "RESPONSE_JSON_INVALID"
-    if isinstance(exc,PermissionError):
-        return "LOCAL_CONFIGURATION_BLOCKED"
     if isinstance(exc,ValueError):
         # These strings are internal, fixed code paths, not API-controlled text.
         if str(exc)=="Model response incomplete or refused":
