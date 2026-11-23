@@ -51,6 +51,23 @@ class OneShotTrialTests(unittest.TestCase):
         self.assertEqual(result["external_calls"],1)
         self.assertEqual(f.calls,1)
         self.assertFalse(result["production_changes"])
+    def test_incomplete_reason_classified_without_retry(self):
+        from response_envelope_diagnostics import extract_response_metadata
+        from safe_trial_diagnostics import classify_failure
+        class Fake:
+            def __init__(self):self.responses=self;self.calls=0
+            def create(self,**kw):
+                self.calls+=1
+                envelope={"status":"incomplete",
+                    "incomplete_details":{"reason":"max_output_tokens"},
+                    "usage":{"input_tokens":90,"output_tokens":553,
+                        "output_tokens_details":{"reasoning_tokens":553}}}
+                return SimpleNamespace(status="incomplete",output_text=None,
+                    sanitized_metadata=extract_response_metadata(envelope))
+        f=Fake()
+        with self.assertRaises(ValueError) as ctx:live_once(self.example_env(),transport=f)
+        self.assertEqual(classify_failure(ctx.exception),"OUTPUT_TOKEN_BUDGET_EXHAUSTED")
+        self.assertEqual(f.calls,1)
     def test_bad_response_never_retries(self):
         class Fake:
             def __init__(self):self.responses=self;self.calls=0
