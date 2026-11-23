@@ -52,9 +52,9 @@ class SafeTrialDiagnosticsTests(unittest.TestCase):
         for e in (ValueError("anything"),PermissionError("secret"),OSError("secret")):
             self.assertIn(classify_failure(e),CODES)
     def test_main_prints_category_only(self):
-        with patch.object(trial,"live_once",side_effect=ValueError("sk-SECRET: invalid")),
-             patch.object(trial.os,"environ",{}),
-             patch("sys.argv",["trial","--live"]):
+        with (patch.object(trial,"live_once",side_effect=ValueError("sk-SECRET: invalid")),
+              patch.object(trial.os,"environ",{}),
+              patch("sys.argv",["trial","--live"])):
             out=io.StringIO()
             with redirect_stdout(out):
                 with self.assertRaises(SystemExit) as ctx:trial.main()
@@ -62,9 +62,9 @@ class SafeTrialDiagnosticsTests(unittest.TestCase):
             self.assertNotIn("sk-SECRET",out.getvalue())
             self.assertIn("PROPOSAL_VALIDATION_FAILED",out.getvalue())
     def test_main_no_retry(self):
-        with patch.object(trial,"live_once",side_effect=TimeoutError("secret")) as call,
-             patch.object(trial.os,"environ",{}),
-             patch("sys.argv",["trial","--live"]):
+        with (patch.object(trial,"live_once",side_effect=TimeoutError("secret")) as call,
+              patch.object(trial.os,"environ",{}),
+              patch("sys.argv",["trial","--live"])):
             with redirect_stdout(io.StringIO()):
                 with self.assertRaises(SystemExit):trial.main()
             self.assertEqual(call.call_count,1)
