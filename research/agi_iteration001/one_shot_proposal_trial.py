@@ -17,6 +17,7 @@ from types import SimpleNamespace
 from openai_proposal_adapter import OpenAIProposalProvider
 from proposal_provider import OfflineProposalProvider, validate_proposal
 from safe_trial_diagnostics import safe_failure_record
+from response_envelope_diagnostics import extract_response_metadata
 
 MODEL="gpt-6-luna"
 BRANCH="refs/heads/research/agi-iteration-001-20261119"
@@ -64,6 +65,7 @@ class OnceHTTPClient:
             raw=res.read(MAX_RESPONSE+1)
             if len(raw)>MAX_RESPONSE:raise RuntimeError("Response too large")
         obj=json.loads(raw)
+        metadata=extract_response_metadata(obj)
         texts=[]
         for item in obj.get("output",[]):
             if item.get("type")=="message":
@@ -73,7 +75,8 @@ class OnceHTTPClient:
         return SimpleNamespace(status=obj.get("status"),
                                output_text="".join(texts) if texts else None,
                                id=obj.get("id"),
-                               usage=obj.get("usage",{}))
+                               usage=obj.get("usage",{}),
+                               sanitized_metadata=metadata) 
 
 def dry_run():
     proposal=validate_proposal(OfflineProposalProvider().propose())
