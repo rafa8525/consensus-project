@@ -12,7 +12,7 @@ CODES=frozenset({
     "AUTHENTICATION_REJECTED","PERMISSION_OR_MODEL_REJECTED",
     "RATE_LIMITED","REQUEST_REJECTED","SERVER_REJECTED",
     "HTTP_REJECTION_OTHER","NETWORK_TIMEOUT","NETWORK_FAILURE",
-    "RESPONSE_INCOMPLETE_OR_REFUSED","RESPONSE_TEXT_MISSING",
+    "RESPONSE_INCOMPLETE_OR_REFUSED","OUTPUT_TOKEN_BUDGET_EXHAUSTED","RESPONSE_TEXT_MISSING",
     "RESPONSE_JSON_INVALID","PROPOSAL_VALIDATION_FAILED",
     "LOCAL_CONFIGURATION_BLOCKED","UNKNOWN_SAFE_FAILURE",
 })
@@ -37,6 +37,8 @@ def classify_failure(exc):
         return "RESPONSE_JSON_INVALID"
     if isinstance(exc,ValueError):
         # These strings are internal, fixed code paths, not API-controlled text.
+        if str(exc)=="Model output token budget exhausted":
+            return "OUTPUT_TOKEN_BUDGET_EXHAUSTED"
         if str(exc)=="Model response incomplete or refused":
             return "RESPONSE_INCOMPLETE_OR_REFUSED"
         if str(exc)=="No valid structured response":
