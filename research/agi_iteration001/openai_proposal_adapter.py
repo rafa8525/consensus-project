@@ -57,7 +57,7 @@ class OpenAIProposalProvider:
             raise PermissionError("Live API proposal generation is disabled by default")
         if not isinstance(model,str) or not model or len(model)>100:
             raise ValueError("An explicit model ID is required")
-        if type(max_output_tokens) is not int or not 200<=max_output_tokens<=1000:
+        if type(max_output_tokens) is not int or not 200<=max_output_tokens<=2000:
             raise ValueError("Unsupported output token budget")
         if type(max_requests) is not int or max_requests!=1:
             raise ValueError("One request maximum")
