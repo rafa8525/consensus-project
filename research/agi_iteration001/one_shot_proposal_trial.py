@@ -16,6 +16,7 @@ from types import SimpleNamespace
 
 from openai_proposal_adapter import OpenAIProposalProvider
 from proposal_provider import OfflineProposalProvider, validate_proposal
+from safe_trial_diagnostics import safe_failure_record
 
 MODEL="gpt-6-luna"
 BRANCH="refs/heads/research/agi-iteration-001-20261119"
@@ -113,8 +114,9 @@ def main():
         result=dry_run()
     else:
         try: result=live_once(os.environ)
-        except Exception:
-            # Avoid logging API response body, credentials or request payload.
-            raise SystemExit("Live trial stopped; inspect secure account usage and logs")
+        except Exception as exc:
+            # Only print allowlisted categories: no raw exception, API text or key.
+            print(json.dumps(safe_failure_record(exc,attempted_request=True),sort_keys=True))
+            raise SystemExit(1) from None
     print(json.dumps(result,sort_keys=True))
 if __name__=="__main__":main()
