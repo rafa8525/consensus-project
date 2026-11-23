@@ -33,11 +33,14 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 class OnceHTTPClient:
     """Minimal one-request no-retry transport; never logs tokens or responses."""
-    def __init__(self,key,project_id,*,opener=None):
+    def __init__(self,key,project_id,*,opener=None,output_token_cap=MAX_OUTPUT):
         if not isinstance(key,str) or not key.startswith("sk-") or len(key)<20:
             raise ValueError("Invalid secret availability")
         if not isinstance(project_id,str) or not PROJECT_ID_PATTERN.fullmatch(project_id):
             raise ValueError("Invalid project ID")
+        if type(output_token_cap) is not int or output_token_cap not in (800,1600):
+            raise ValueError("Output cap not allowed for bounded trials")
+        self._output_token_cap=output_token_cap
         self._key=key
         self._project=project_id
         self._opener=opener or urllib.request.build_opener(NoRedirect())
@@ -45,7 +48,7 @@ class OnceHTTPClient:
         self.calls=0
     def create(self,**payload):
         if self.calls:raise PermissionError("Second call forbidden")
-        if payload.get("model")!=MODEL or payload.get("max_output_tokens")!=MAX_OUTPUT:
+        if payload.get("model")!=MODEL or payload.get("max_output_tokens")!=self._output_token_cap:
             raise ValueError("Unexpected model or token budget")
         if payload.get("tools")!=[] or payload.get("store") is not False:
             raise ValueError("Tools and storage must be disabled")
@@ -95,11 +98,13 @@ def verify_manual_context(env):
     if not env.get("OPENAI_API_KEY","").startswith("sk-"):
         raise PermissionError("Encrypted environment key unavailable")
 
-def live_once(env,*,transport=None):
+def live_once(env,*,transport=None,output_token_cap=MAX_OUTPUT):
     verify_manual_context(env)
-    t=transport or OnceHTTPClient(env["OPENAI_API_KEY"],env["OPENAI_PROJECT_ID"])
+    if type(output_token_cap) is not int or output_token_cap not in (800,1600):
+        raise ValueError("Output cap not allowed for bounded trials")
+    t=transport or OnceHTTPClient(env["OPENAI_API_KEY"],env["OPENAI_PROJECT_ID"],output_token_cap=output_token_cap)
     p=OpenAIProposalProvider(client=t,model=MODEL,enabled=True,
-                             max_output_tokens=MAX_OUTPUT,max_requests=1)
+                             max_output_tokens=output_token_cap,max_requests=1)
     proposal=validate_proposal(p.propose())
     # Persist only non-secret, non-output digest; never execute proposed code.
     digest=hashlib.sha256(json.dumps(proposal,sort_keys=True).encode()).hexdigest()
