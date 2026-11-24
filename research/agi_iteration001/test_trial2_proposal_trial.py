@@ -57,13 +57,53 @@ class SecondTrialTests(unittest.TestCase):
         with self.assertRaises(TimeoutError):cl.create(**payload)
         with self.assertRaises(PermissionError):cl.create(**payload)
         self.assertEqual(op.calls,1)
-    def test_cli_error_is_sanitized(self):
+    def test_preflight_failure_does_not_claim_possible_charge(self):
         with (patch("sys.argv",["trial2","--live"]),
-              patch.dict(t.os.environ,{"AGI_TRIAL2_EXPLICIT_APPROVAL":"YES-TRIAL-2"}),
+              patch.object(t.os,"environ",
+                           {"AGI_TRIAL2_EXPLICIT_APPROVAL":"YES-TRIAL-2"})):
+            out=io.StringIO()
+            with redirect_stdout(out):
+                with self.assertRaises(SystemExit):t.main()
+            import json
+            receipt=json.loads(out.getvalue())
+            self.assertEqual(receipt["failure_category"],"LOCAL_CONFIGURATION_BLOCKED")
+            self.assertFalse(receipt["request_may_have_been_billed"])
+    def test_cli_error_is_sanitized(self):
+        env={"AGI_TRIAL2_EXPLICIT_APPROVAL":"YES-TRIAL-2",
+             "GITHUB_EVENT_NAME":"workflow_dispatch","GITHUB_REF":old.BRANCH,
+             "GITHUB_REPOSITORY":old.REPO,"GITHUB_RUN_ATTEMPT":"1",
+             "AGI_EXPLICIT_ONE_SHOT":"YES-REVIEWED",
+             "OPENAI_PROJECT_ID":"proj_TEST1234567890",
+             "OPENAI_API_KEY":"sk-"+"x"*48}
+        # A mocked transport records the call attempt and prevents any network use.
+        client=SimpleNamespace(calls=1)
+        with (patch("sys.argv",["trial2","--live"]),
+              patch.object(t.os,"environ",env),
+              patch.object(t,"OnceHTTPClient",return_value=client),
               patch.object(t,"live_once",side_effect=RuntimeError("sk-secret-NEVER"))):
             out=io.StringIO()
             with redirect_stdout(out):
                 with self.assertRaises(SystemExit):t.main()
+            import json
+            receipt=json.loads(out.getvalue())
             self.assertNotIn("sk-secret",out.getvalue())
-            self.assertIn("UNKNOWN_SAFE_FAILURE",out.getvalue())
+            self.assertEqual(receipt["failure_category"],"UNKNOWN_SAFE_FAILURE")
+            self.assertTrue(receipt["request_may_have_been_billed"])
+    def test_failure_without_attempt_reports_no_charge(self):
+        env={"AGI_TRIAL2_EXPLICIT_APPROVAL":"YES-TRIAL-2",
+             "GITHUB_EVENT_NAME":"workflow_dispatch","GITHUB_REF":old.BRANCH,
+             "GITHUB_REPOSITORY":old.REPO,"GITHUB_RUN_ATTEMPT":"1",
+             "AGI_EXPLICIT_ONE_SHOT":"YES-REVIEWED",
+             "OPENAI_PROJECT_ID":"proj_TEST1234567890",
+             "OPENAI_API_KEY":"sk-"+"x"*48}
+        client=SimpleNamespace(calls=0)
+        with (patch("sys.argv",["trial2","--live"]),
+              patch.object(t.os,"environ",env),
+              patch.object(t,"OnceHTTPClient",return_value=client),
+              patch.object(t,"live_once",side_effect=ValueError("bad input"))):
+            out=io.StringIO()
+            with redirect_stdout(out):
+                with self.assertRaises(SystemExit):t.main()
+            import json
+            self.assertFalse(json.loads(out.getvalue())["request_may_have_been_billed"])
 if __name__=="__main__":unittest.main()
