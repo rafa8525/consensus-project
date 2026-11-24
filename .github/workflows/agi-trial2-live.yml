@@ -1,5 +1,8 @@
-# INERT REVIEW DRAFT. Not installed at .github/workflows/ on any branch.
-# Separate approval required to register on main and start a second API call.
+# INERT REPAIRED REVIEW CANDIDATE — stored outside .github/workflows/.
+# The previous trial2 workflow IS installed on main and research branches.
+# This revised pinned workflow has NOT been installed or dispatched.
+# Replacing the live workflow requires separate explicit user authorization.
+# Making another billable API request requires a further separate authorization.
 name: AGI trial 2 (separate approval required)
 on:
   workflow_dispatch:
@@ -23,7 +26,7 @@ jobs:
       - name: Verify pinned research revision
         shell: bash
         env:
-          PINNED_RESEARCH_SHA: 25f362ed74f3227e44df815eb376b70791cb4a85
+          PINNED_RESEARCH_SHA: a4b2bb28cae310a270afcb0716fb09a0fff77ade
         run: |
           set -euo pipefail
           umask 077
