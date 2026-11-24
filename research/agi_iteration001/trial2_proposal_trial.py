@@ -42,7 +42,9 @@ def main():
         receipt["trial"]="TRIAL2"
     except Exception as exc:
         attempted=transport is not None and transport.calls>0
-        print(json.dumps(safe_failure_record(exc,attempted_request=attempted),sort_keys=True))
+        meta=getattr(transport,"last_metadata",None) if transport is not None else None
+        print(json.dumps(safe_failure_record(exc,attempted_request=attempted,
+                                            metadata=meta),sort_keys=True))
         raise SystemExit(1) from None
     print(json.dumps(receipt,sort_keys=True))
 if __name__=="__main__":main()
