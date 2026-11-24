@@ -81,6 +81,39 @@ class OneShotTrialTests(unittest.TestCase):
           "AGI_EXPLICIT_ONE_SHOT":"YES-REVIEWED",
           "OPENAI_PROJECT_ID":"proj_TEST1234567890",
           "OPENAI_API_KEY":"sk-"+"x"*48}
+    def test_malformed_api_envelope_stops_after_one_call(self):
+        import json
+        from safe_trial_diagnostics import classify_failure
+        cases=[
+            {"status":"completed","output":"not-a-list"},
+            {"status":"completed","output":[None]},
+            {"status":"completed","output":[{"type":"message","content":"bad"}]},
+            {"status":"completed","output":[{"type":"message","content":[None]}]},
+        ]
+        for envelope in cases:
+            with self.subTest(envelope=envelope):
+                class Response:
+                    status=200
+                    def __enter__(self):return self
+                    def __exit__(self,*args):return False
+                    def read(self,n):return json.dumps(envelope).encode()
+                class Opener:
+                    def __init__(self):self.calls=0
+                    def open(self,request,timeout):
+                        self.calls+=1
+                        return Response()
+                opener=Opener()
+                client=OnceHTTPClient("sk-"+"x"*48,"proj_TEST1234567890",
+                                      opener=opener)
+                payload={"model":MODEL,"instructions":"short","input":"short",
+                         "max_output_tokens":800,"tools":[],"store":False,
+                         "text":{"format":{"type":"json_schema"}}}
+                with self.assertRaises(ValueError) as ctx:
+                    client.create(**payload)
+                self.assertEqual(classify_failure(ctx.exception),
+                                 "PROPOSAL_VALIDATION_FAILED")
+                with self.assertRaises(PermissionError):client.create(**payload)
+                self.assertEqual(opener.calls,1)
     def test_transport_blocks_duplicate_calls(self):
         class FakeOpener:
             def __init__(self):self.calls=0
