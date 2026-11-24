@@ -52,7 +52,11 @@ class OnceHTTPClient:
             raise ValueError("Unexpected model or token budget")
         if payload.get("tools")!=[] or payload.get("store") is not False:
             raise ValueError("Tools and storage must be disabled")
-        if set(payload)!={"model","instructions","input","max_output_tokens","tools","store","text"}:
+        base={"model","instructions","input","max_output_tokens","tools","store","text"}
+        if set(payload)==base|{"reasoning"}:
+            if payload["reasoning"]!={"effort":"none"}:
+                raise ValueError("Unsupported reasoning budget configuration")
+        elif set(payload)!=base:
             raise ValueError("Unexpected API request fields")
         if len(json.dumps(payload).encode("utf8"))>9000:
             raise ValueError("Request body too large")
@@ -108,13 +112,14 @@ def verify_manual_context(env):
     if not env.get("OPENAI_API_KEY","").startswith("sk-"):
         raise PermissionError("Encrypted environment key unavailable")
 
-def live_once(env,*,transport=None,output_token_cap=MAX_OUTPUT):
+def live_once(env,*,transport=None,output_token_cap=MAX_OUTPUT,reasoning_effort=None):
     verify_manual_context(env)
     if type(output_token_cap) is not int or output_token_cap not in (800,1600):
         raise ValueError("Output cap not allowed for bounded trials")
     t=transport or OnceHTTPClient(env["OPENAI_API_KEY"],env["OPENAI_PROJECT_ID"],output_token_cap=output_token_cap)
     p=OpenAIProposalProvider(client=t,model=MODEL,enabled=True,
-                             max_output_tokens=output_token_cap,max_requests=1)
+                             max_output_tokens=output_token_cap,max_requests=1,
+                             reasoning_effort=reasoning_effort)
     proposal=validate_proposal(p.propose())
     # Persist only non-secret, non-output digest; never execute proposed code.
     digest=hashlib.sha256(json.dumps(proposal,sort_keys=True).encode()).hexdigest()
