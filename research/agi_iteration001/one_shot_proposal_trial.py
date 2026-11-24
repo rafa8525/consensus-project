@@ -70,9 +70,19 @@ class OnceHTTPClient:
         obj=json.loads(raw)
         metadata=extract_response_metadata(obj)
         texts=[]
-        for item in obj.get("output",[]):
+        output=obj.get("output",[])
+        if not isinstance(output,list):
+            raise ValueError("Malformed response output")
+        for item in output:
+            if not isinstance(item,dict):
+                raise ValueError("Malformed response item")
             if item.get("type")=="message":
-                for part in item.get("content",[]):
+                content=item.get("content",[])
+                if not isinstance(content,list):
+                    raise ValueError("Malformed response content")
+                for part in content:
+                    if not isinstance(part,dict):
+                        raise ValueError("Malformed response part")
                     if part.get("type")=="output_text" and isinstance(part.get("text"),str):
                         texts.append(part["text"])
         return SimpleNamespace(status=obj.get("status"),
