@@ -37,7 +37,8 @@ def main():
             os.environ["OPENAI_API_KEY"],os.environ["OPENAI_PROJECT_ID"],
             output_token_cap=TRIAL2_OUTPUT_TOKENS)
         receipt=live_once(os.environ,transport=transport,
-                          output_token_cap=TRIAL2_OUTPUT_TOKENS)
+                          output_token_cap=TRIAL2_OUTPUT_TOKENS,
+                          reasoning_effort="none")
         receipt["trial"]="TRIAL2"
     except Exception as exc:
         attempted=transport is not None and transport.calls>0
