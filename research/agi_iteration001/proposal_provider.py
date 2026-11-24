@@ -21,7 +21,7 @@ TOP_KEYS = frozenset({
 })
 TEXT_RE = re.compile(r"^[A-Za-z0-9 ,.:;()'?!+/%=-]{12,200}$")
 BLOCKED = re.compile(
-    r"(?i)(?:https?://|\\|\\x00|\$\{|\$\(|\b(?:exec|eval|subprocess|"
+    r"(?i)(?:sk-[A-Za-z0-9_-]{6,}|github_pat_|gh[pousr]_[A-Za-z0-9_]{6,}|proj_[A-Za-z0-9_-]{6,}|https?://|\\|\\x00|\$\{|\$\(|\b(?:exec|eval|subprocess|"
     r"import|curl|wget|pip|bash|powershell|sudo|rm|chmod|secret|token|"
     r"password|deploy|production|override|ignore instructions)\b|;\s*\w+)"
 )
