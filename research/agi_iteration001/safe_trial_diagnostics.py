@@ -8,6 +8,7 @@ import json
 import socket
 import urllib.error
 from response_envelope_diagnostics import ResponseMetadata
+from proposal_provider import ProposalValidationError
 
 CODES=frozenset({
     "AUTHENTICATION_REJECTED","PERMISSION_OR_MODEL_REJECTED",
@@ -34,6 +35,8 @@ def classify_failure(exc):
         return "NETWORK_TIMEOUT"
     if isinstance(exc,(urllib.error.URLError,ConnectionError,OSError)):
         return "NETWORK_FAILURE"
+    if isinstance(exc,ProposalValidationError):
+        return "PROPOSAL_VALIDATION_FAILED"
     if isinstance(exc,json.JSONDecodeError):
         return "RESPONSE_JSON_INVALID"
     if isinstance(exc,ValueError):
@@ -55,6 +58,8 @@ def safe_failure_record(exc,*,attempted_request=False,metadata=None):
             "automatic_retry_permitted":False,
             "actual_spend_usd":"UNKNOWN_CHECK_PLATFORM",
             "production_changes":False}
+    if isinstance(exc,ProposalValidationError):
+        record["validation_reason"]=exc.reason
     # Accept only a locally constructed sanitized envelope, never remote dicts
     # or arbitrary exceptions as user-visible metadata.
     if isinstance(metadata,ResponseMetadata):
