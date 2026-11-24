@@ -13,7 +13,7 @@ def proposal_evidence(proposal,*,origin="offline_mock"):
     if origin not in ("offline_mock","live_api"):
         raise ValueError("Unrecognized evidence origin")
     digest=lambda x: hashlib.sha256(x.encode("utf-8")).hexdigest()
-    canonical=json.dumps(obj,sort_keys=True,separators=(",",":"))
+    canonical=json.dumps(obj,sort_keys=True)
     return {
         "evidence_schema":"agi-bounded-proposal-v1",
         "origin":origin,
