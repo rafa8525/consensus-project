@@ -52,7 +52,7 @@ class OpenAIProposalProvider:
     """Explicit, one-shot Responses adapter. Not enabled in CI or V2 workflow."""
     is_live_model=True
     def __init__(self, *, client, model, enabled=False, max_output_tokens=800,
-                 max_requests=1):
+                 max_requests=1,reasoning_effort=None):
         if not isinstance(enabled,bool) or not enabled:
             raise PermissionError("Live API proposal generation is disabled by default")
         if not isinstance(model,str) or not model or len(model)>100:
@@ -63,6 +63,9 @@ class OpenAIProposalProvider:
             raise ValueError("One request maximum")
         if client is None or not hasattr(client,"responses"):
             raise ValueError("An injected configured SDK client is required")
+        if reasoning_effort not in (None,"none"):
+            raise ValueError("Unsupported reasoning effort for bounded research")
+        self.reasoning_effort=reasoning_effort
         self.client=client
         self.model=model
         self.output_limit=max_output_tokens
@@ -74,7 +77,11 @@ class OpenAIProposalProvider:
             raise RuntimeError("One live proposal call per provider instance")
         self.calls+=1
         # Do not echo or persist raw prompts/secrets.
+        extra={}
+        if self.reasoning_effort is not None:
+            extra["reasoning"]={"effort":self.reasoning_effort}
         response=self.client.responses.create(
+            **extra,
             model=self.model,
             instructions=("Produce only a bounded research proposal in JSON. "
                           "No source code, external tools, URLs, credentials, deployments "
