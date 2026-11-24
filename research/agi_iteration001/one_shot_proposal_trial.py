@@ -18,6 +18,7 @@ from openai_proposal_adapter import OpenAIProposalProvider
 from proposal_provider import OfflineProposalProvider, validate_proposal
 from safe_trial_diagnostics import safe_failure_record
 from response_envelope_diagnostics import extract_response_metadata
+from proposal_evidence import proposal_evidence
 
 MODEL="gpt-6-luna"
 BRANCH="refs/heads/research/agi-iteration-001-20261119"
@@ -123,8 +124,11 @@ def live_once(env,*,transport=None,output_token_cap=MAX_OUTPUT,reasoning_effort=
     proposal=validate_proposal(p.propose())
     # Persist only non-secret, non-output digest; never execute proposed code.
     digest=hashlib.sha256(json.dumps(proposal,sort_keys=True).encode()).hexdigest()
+    evidence=proposal_evidence(proposal,origin="live_api")
+    assert evidence["proposal_sha256"]==digest
     return {"status":"ONE_PROPOSAL_RECEIVED","external_calls":1,"model":MODEL,
-            "proposal_sha256":digest,"promotion_approved":False,
+            "proposal_sha256":digest,"research_evidence":evidence,
+            "promotion_approved":False,
             "production_changes":False,"actual_spend_usd":"NOT_VERIFIED"}
 
 def main():
