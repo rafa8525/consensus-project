@@ -70,3 +70,14 @@ For [run 45499920454](https://github.com/rafa8525/consensus-project/actions/runs
 
 ## 7. Resume instructions — minimum prompt
 > Resume `rafa8525/consensus-project` Project AGI from `research/agi_iteration001/AGI_PROJECT_HANDOFF_AND_NO_REPEAT_20261124.md`. The third live API experiment already **succeeded** (run 45499920454, one validated proposal, no training). **Do not rerun** any paid workflow or rework the solved API/schema integration. Continue only with the next offline, measurable model-evaluation milestone using all 55 role definitions in planning, while respecting explicit user approval for any new spend, credentials, workflow/prod changes or agent activation. Confirm fresh evidence before claiming success.
+
+## 8. Follow-up progress — bounded offline model evaluation (Nov 24, 2026)
+- **This phase is no longer merely planned.** Added `bounded_proposal_evaluation.py` and `test_bounded_proposal_evaluation.py` on the isolated research branch; the offline verification workflow now runs both. **No executable live workflow on main was changed.**
+- Verified research CI: https://github.com/rafa8525/consensus-project/actions/runs/45501425963 — **365 of 365 tests passed** at commit `93ac7f5b9514c697c16ec23961d1643a1c51ccb1`; full workflow including independent CI checks completed successfully.
+- The evaluator uses the already approved **fixed offline proposal fixture**, not the unretained prose from the successful third API call. It fits **exactly three classifiers**, using 18 hand-authored training examples and 12 disjoint hand-authored validation examples; no holdout data accessed; no API calls; no production promotion.
+- Measured internal validation `macro-F1`: word NB **0.481818** (6/12 correctly classified); word+3gram alpha=0.5 **0.742857** (9/12); word+4gram alpha=1.0 **0.742857** (9/12). Validation tie-break favors candidate index 1 (3gram, alpha 0.5); gain over baseline is **0.261039**. These are *internal validation results only*, not external or independent generalization.
+- Results are deterministic against dataset SHA256 `4e75caf2d8e098cd64243b9ff1619455afa74670efb180b8f72804ed5a2be7cd` and include fixed fit cap, no holdout, zero external calls, no production changes and no authorization to promote.
+- **Do not repeat this three-fit comparison simply to prove it works.** Next assess external validity, dataset provenance, non-regression and independently reviewed improvement gates. Existing `replicated_model_evaluation.py`, `external_benchmark_gate.py` and associated tests should be reused rather than rewritten.
+- This is **offline model training and evaluation of existing approved candidate configurations**, not training an entirely new AI architecture, not recursive self-improvement and not 55 independent agents collaborating.
+- Continue to require new explicit approval for any live workflow edits, paid API calls, secrets, independent agent activation or production changes.
+
