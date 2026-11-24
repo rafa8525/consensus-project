@@ -1,6 +1,6 @@
-# INERT REPAIRED REVIEW CANDIDATE — stored outside .github/workflows/.
+# INERT FINAL COMPATIBILITY REVIEW CANDIDATE — stored outside .github/workflows/.
 # The previous trial2 workflow IS installed on main and research branches.
-# This revised pinned workflow has NOT been installed or dispatched.
+# This compatibility-and-evidence version has NOT been installed or dispatched.
 # Replacing the live workflow requires separate explicit user authorization.
 # Making another billable API request requires a further separate authorization.
 name: AGI trial 2 (separate approval required)
@@ -26,7 +26,7 @@ jobs:
       - name: Verify pinned research revision
         shell: bash
         env:
-          PINNED_RESEARCH_SHA: a4b2bb28cae310a270afcb0716fb09a0fff77ade
+          PINNED_RESEARCH_SHA: b2ad3746297e003b030889ccdb8970284f8e6a47
         run: |
           set -euo pipefail
           umask 077
