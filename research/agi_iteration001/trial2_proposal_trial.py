@@ -8,7 +8,8 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from one_shot_proposal_trial import dry_run, live_once
+from one_shot_proposal_trial import (
+    OnceHTTPClient, dry_run, live_once, verify_manual_context)
 from safe_trial_diagnostics import safe_failure_record
 
 TRIAL2_OUTPUT_TOKENS=1600
@@ -27,11 +28,20 @@ def main():
     # A dedicated manual GitHub job must set this exact unique trial2 intent.
     if os.environ.get("AGI_TRIAL2_EXPLICIT_APPROVAL")!="YES-TRIAL-2":
         raise SystemExit("BLOCKED: trial2 approval marker missing")
+    transport=None
     try:
-        receipt=live_once(os.environ,output_token_cap=TRIAL2_OUTPUT_TOKENS)
+        # Validate context before constructing an HTTP transport. This ensures
+        # rejected workflow/key settings cannot be reported as billed requests.
+        verify_manual_context(os.environ)
+        transport=OnceHTTPClient(
+            os.environ["OPENAI_API_KEY"],os.environ["OPENAI_PROJECT_ID"],
+            output_token_cap=TRIAL2_OUTPUT_TOKENS)
+        receipt=live_once(os.environ,transport=transport,
+                          output_token_cap=TRIAL2_OUTPUT_TOKENS)
         receipt["trial"]="TRIAL2"
     except Exception as exc:
-        print(json.dumps(safe_failure_record(exc,attempted_request=True),sort_keys=True))
+        attempted=transport is not None and transport.calls>0
+        print(json.dumps(safe_failure_record(exc,attempted_request=attempted),sort_keys=True))
         raise SystemExit(1) from None
     print(json.dumps(receipt,sort_keys=True))
 if __name__=="__main__":main()
