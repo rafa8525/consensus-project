@@ -26,45 +26,62 @@ BLOCKED = re.compile(
     r"password|deploy|production|override|ignore instructions)\b|;\s*\w+)"
 )
 
+# Fixed categories only: never emit generated values, private text, or exception bodies.
+VALIDATION_REASONS=frozenset({
+    "RESPONSE_SHAPE","EXPERIMENT_ID","HYPOTHESIS_TEXT","FALSIFIER_TEXT",
+    "METRIC_MISMATCH","DATASET_MISMATCH","BUDGET_MISMATCH",
+    "STOP_CONDITION_MISMATCH","CANDIDATE_MISMATCH","UNSAFE_TEXT",
+})
+
+class ProposalValidationError(ValueError):
+    def __init__(self, reason):
+        if reason not in VALIDATION_REASONS:
+            reason="RESPONSE_SHAPE"
+        self.reason=reason
+        super().__init__("Proposal rejected: "+reason)
+
 def _safe_text(text):
     if not isinstance(text,str) or not TEXT_RE.fullmatch(text) or BLOCKED.search(text):
-        raise ValueError("Unsafe or invalid proposal text")
+        raise ProposalValidationError("UNSAFE_TEXT")
     return text
 
 def validate_proposal(raw):
     if isinstance(raw,bytes):
-        if len(raw)>6000:raise ValueError("Proposal payload too large")
+        if len(raw)>6000:raise ProposalValidationError("RESPONSE_SHAPE")
         raw=raw.decode("utf-8")
     if isinstance(raw,str):
-        if len(raw.encode("utf8"))>6000:raise ValueError("Proposal payload too large")
+        if len(raw.encode("utf8"))>6000:raise ProposalValidationError("RESPONSE_SHAPE")
         try: obj=json.loads(raw)
-        except json.JSONDecodeError as exc:raise ValueError("Invalid proposal JSON") from exc
+        except json.JSONDecodeError as exc:raise ProposalValidationError("RESPONSE_SHAPE") from exc
     elif isinstance(raw,dict):
         obj=raw
-    else:raise ValueError("Proposal must be JSON object")
+    else:raise ProposalValidationError("RESPONSE_SHAPE")
     if not isinstance(obj,dict) or set(obj)!=TOP_KEYS:
-        raise ValueError("Proposal must have exactly the declared fields")
+        raise ProposalValidationError("RESPONSE_SHAPE")
     if not isinstance(obj["experiment_id"],str) or not re.fullmatch(r"[a-z0-9_-]{8,48}",obj["experiment_id"]):
-        raise ValueError("Invalid experiment identifier")
-    for key in ("hypothesis","expected_falsifier"):
-        _safe_text(obj[key])
+        raise ProposalValidationError("EXPERIMENT_ID")
+    for key,reason in (("hypothesis","HYPOTHESIS_TEXT"),
+                       ("expected_falsifier","FALSIFIER_TEXT")):
+        try:_safe_text(obj[key])
+        except ProposalValidationError as exc:
+            raise ProposalValidationError(reason) from None
     if obj["metric"]!="validation_macro_f1":
-        raise ValueError("Unsupported objective metric")
+        raise ProposalValidationError("METRIC_MISMATCH")
     if obj["dataset_ids"]!=list(DATASET_IDS):
-        raise ValueError("Dataset not approved")
+        raise ProposalValidationError("DATASET_MISMATCH")
     if not isinstance(obj["compute_budget"],dict) or obj["compute_budget"]!=BUDGET:
-        raise ValueError("Compute budget mismatch")
+        raise ProposalValidationError("BUDGET_MISMATCH")
     if obj["stop_conditions"]!=["at_most_three_fits","no_production_promotion"]:
-        raise ValueError("Safety stop condition mismatch")
+        raise ProposalValidationError("STOP_CONDITION_MISMATCH")
     variants=obj["alternatives"]
     if not isinstance(variants,list) or len(variants)!=3 or variants[0]!=MODEL_CATALOG[0]:
-        raise ValueError("Baseline and exactly two variants required")
+        raise ProposalValidationError("CANDIDATE_MISMATCH")
     if any(not isinstance(v,dict) or v not in MODEL_CATALOG for v in variants):
-        raise ValueError("Unapproved model spec")
+        raise ProposalValidationError("CANDIDATE_MISMATCH")
     if len({json.dumps(v,sort_keys=True) for v in variants})!=3:
-        raise ValueError("Duplicate variant")
+        raise ProposalValidationError("CANDIDATE_MISMATCH")
     if variants[1:]!=list(MODEL_CATALOG[1:]):
-        raise ValueError("Variant set differs from engineering allowlist")
+        raise ProposalValidationError("CANDIDATE_MISMATCH")
     return obj
 
 class OfflineProposalProvider:
