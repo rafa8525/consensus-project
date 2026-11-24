@@ -81,3 +81,12 @@ For [run 45499920454](https://github.com/rafa8525/consensus-project/actions/runs
 - This is **offline model training and evaluation of existing approved candidate configurations**, not training an entirely new AI architecture, not recursive self-improvement and not 55 independent agents collaborating.
 - Continue to require new explicit approval for any live workflow edits, paid API calls, secrets, independent agent activation or production changes.
 
+
+## 9. Internal promotion-safety repair and independent-validation boundary (Nov 24, 2026)
+- **Do not repeat completed Milestone 25**: three bounded model fits already produced internal validation results, detailed in section 8.
+- Found and repaired a misleading historical field in `model_improvement_experiment.py`: its old `promotion_approved` could become true on internal handcrafted validation/test scores alone. It now emits `research_candidate_eligible` for this preliminary signal and forces `promotion_approved=false`. Its regression test now enforces that split. Research branch only; no live workflow or production changes.
+- Verified offline CI https://github.com/rafa8525/consensus-project/actions/runs/45502177405: **365/365 tests passing**, commit `b6deb4a3234ad44afa679526a4b63c252df9345b`; report shows `research_candidate_eligible=true`, `promotion_approved=false`.
+- Reused the existing replicated evaluator rather than rebuilding it. Latest report shows internal cross-validation macro-F1 delta **0.090667**, but **`replication_gate_passed=false`** and promotion remains blocked. The confirmation sample is hand-authored, so external generalization remains unproven.
+- The external intake gate exists but only checks **declared** provenance and exact-string leakage. The project's three custom labels need an **independently labeled, licensed** external dataset; unrelated CLINC150/OOD labels cannot be treated as those three classes.
+- Read `research/agi_iteration001/INDEPENDENT_VALIDATION_READINESS_20261124.md` for the frozen model comparison, data provenance and annotation requirements, and the next separate approval boundary before importing new third-party labeled data or promoting a model.
+- **No new paid API calls, no GitHub live-workflow dispatch/re-pin, no production changes or agent activation** in this repair. Original successful API proposal remains certified and never needs replay merely to demonstrate connectivity.
