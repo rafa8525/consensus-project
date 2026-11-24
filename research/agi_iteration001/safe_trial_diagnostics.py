@@ -7,6 +7,7 @@ from __future__ import annotations
 import json
 import socket
 import urllib.error
+from response_envelope_diagnostics import ResponseMetadata
 
 CODES=frozenset({
     "AUTHENTICATION_REJECTED","PERMISSION_OR_MODEL_REJECTED",
@@ -46,11 +47,16 @@ def classify_failure(exc):
         return "PROPOSAL_VALIDATION_FAILED"
     return "UNKNOWN_SAFE_FAILURE"
 
-def safe_failure_record(exc,*,attempted_request=False):
+def safe_failure_record(exc,*,attempted_request=False,metadata=None):
     code=classify_failure(exc)
     assert code in CODES
-    return {"status":"FAILED","failure_category":code,
+    record={"status":"FAILED","failure_category":code,
             "request_may_have_been_billed":bool(attempted_request),
             "automatic_retry_permitted":False,
             "actual_spend_usd":"UNKNOWN_CHECK_PLATFORM",
             "production_changes":False}
+    # Accept only a locally constructed sanitized envelope, never remote dicts
+    # or arbitrary exceptions as user-visible metadata.
+    if isinstance(metadata,ResponseMetadata):
+        record["response_metadata"]=metadata.as_dict()
+    return record
