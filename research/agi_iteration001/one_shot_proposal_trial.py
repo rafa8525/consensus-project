@@ -47,6 +47,7 @@ class OnceHTTPClient:
         self._opener=opener or urllib.request.build_opener(NoRedirect())
         self.responses=self
         self.calls=0
+        self.last_metadata=None
     def create(self,**payload):
         if self.calls:raise PermissionError("Second call forbidden")
         if payload.get("model")!=MODEL or payload.get("max_output_tokens")!=self._output_token_cap:
@@ -74,6 +75,7 @@ class OnceHTTPClient:
             if len(raw)>MAX_RESPONSE:raise RuntimeError("Response too large")
         obj=json.loads(raw)
         metadata=extract_response_metadata(obj)
+        self.last_metadata=metadata
         texts=[]
         output=obj.get("output",[])
         if not isinstance(output,list):
