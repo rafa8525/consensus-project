@@ -99,9 +99,9 @@ def run():
     candidate_valid=score(lambda text:predict_char(selected,text),VALIDATION)
     base_test=score(bp,TEST)
     candidate_test=score(lambda text:predict_char(selected,text),TEST)
-    # No promotion merely because of equal accuracy; require real validation gain
-    # and independent test non-regression. This is a preliminary experiment gate.
-    promote=(candidate_valid["correct"]>base_valid["correct"] and
+    # A validation gain and internal test non-regression establish only preliminary
+    # research eligibility. They NEVER authorize promotion or deployment.
+    research_candidate_eligible=(candidate_valid["correct"]>base_valid["correct"] and
              candidate_test["correct"]>=base_test["correct"])
     corpus={"train":TRAIN,"validation":VALIDATION,"test":TEST}
     digest=hashlib.sha256(json.dumps(corpus,sort_keys=True).encode()).hexdigest()
@@ -110,8 +110,9 @@ def run():
             "dataset_sha256":digest,
             "baseline":{"validation":base_valid,"test":base_test},
             "candidate":{"n":best[1],"alpha":best[2],"validation":candidate_valid,"test":candidate_test},
-            "promotion_approved":promote,
-            "promotion_scope":"research_checkpoint_only",
+            "research_candidate_eligible":research_candidate_eligible,
+            "promotion_approved":False,
+            "promotion_scope":"not_approved_internal_hand_authored_data",
             "production_changes":False,
             "warnings":["Hand-authored small corpus; lexical overlap may bias metrics",
                         "Validation-based hyperparameter selection; test inspected once",
