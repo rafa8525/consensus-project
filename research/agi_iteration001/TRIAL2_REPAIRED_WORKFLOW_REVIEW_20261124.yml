@@ -1,0 +1,50 @@
+# INERT REPAIRED REVIEW CANDIDATE — stored outside .github/workflows/.
+# The previous trial2 workflow IS installed on main and research branches.
+# This revised pinned workflow has NOT been installed or dispatched.
+# Replacing the live workflow requires separate explicit user authorization.
+# Making another billable API request requires a further separate authorization.
+name: AGI trial 2 (separate approval required)
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type YES-TRIAL-2 to authorize proposed second request"
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: agi-trial2-locked
+  cancel-in-progress: false
+jobs:
+  trial2:
+    if: ${{ github.event_name == 'workflow_dispatch' && github.repository == 'rafa8525/consensus-project' && github.ref == 'refs/heads/research/agi-iteration-001-20261119' && github.run_attempt == 1 && inputs.confirmation == 'YES-TRIAL-2' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    environment: agi-research-live
+    steps:
+      - name: Verify pinned research revision
+        shell: bash
+        env:
+          PINNED_RESEARCH_SHA: a4b2bb28cae310a270afcb0716fb09a0fff77ade
+        run: |
+          set -euo pipefail
+          umask 077
+          git -c submodule.recurse=false clone --no-checkout --filter=blob:none \
+            https://github.com/rafa8525/consensus-project.git "$RUNNER_TEMP/research-trial2"
+          git -C "$RUNNER_TEMP/research-trial2" fetch --no-tags --depth=1 origin "$PINNED_RESEARCH_SHA"
+          git -C "$RUNNER_TEMP/research-trial2" checkout --detach "$PINNED_RESEARCH_SHA"
+          test "$(git -C "$RUNNER_TEMP/research-trial2" rev-parse HEAD)" = "$PINNED_RESEARCH_SHA"
+      - name: One bounded API request after manual approval
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_PROJECT_ID: ${{ vars.OPENAI_PROJECT_ID }}
+          AGI_EXPLICIT_ONE_SHOT: YES-REVIEWED
+          AGI_TRIAL2_EXPLICIT_APPROVAL: YES-TRIAL-2
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          set -euo pipefail
+          umask 077
+          cd "$RUNNER_TEMP/research-trial2/research/agi_iteration001"
+          python3 trial2_proposal_trial.py --live
