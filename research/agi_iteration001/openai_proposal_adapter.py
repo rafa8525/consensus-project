@@ -6,7 +6,7 @@ A token ceiling is not a guaranteed dollar cap: configure billing project limits
 externally before any real use.
 """
 import json
-from proposal_provider import OfflineProposalProvider, MODEL_CATALOG, validate_proposal
+from proposal_provider import OfflineProposalProvider, MODEL_CATALOG, validate_proposal, ProposalValidationError, DATASET_IDS, BUDGET
 
 PROPOSAL_SCHEMA = {
  "type":"object","additionalProperties":False,
@@ -15,15 +15,15 @@ PROPOSAL_SCHEMA = {
    "hypothesis":{"type":"string"},
    "expected_falsifier":{"type":"string"},
    "metric":{"type":"string","enum":["validation_macro_f1"]},
-   "dataset_ids":{"type":"array","items":{"type":"string"},"minItems":2,"maxItems":2},
+   "dataset_ids":{"type":"array","items":{"type":"string","enum":list(DATASET_IDS)},"minItems":2,"maxItems":2},
    "compute_budget":{"type":"object","additionalProperties":False,
-       "properties":{"max_model_fits":{"type":"integer"},"max_examples":{"type":"integer"}},
+       "properties":{"max_model_fits":{"type":"integer","enum":[3]},"max_examples":{"type":"integer","enum":[30]}},
        "required":["max_model_fits","max_examples"]},
    "alternatives":{"type":"array","items":{"type":"object","additionalProperties":False,
-       "properties":{"kind":{"type":"string"},"n":{"type":["integer","null"]},
-                     "alpha":{"type":["number","null"]}},
+       "properties":{"kind":{"type":"string","enum":["word_nb","word_char_nb"]},"n":{"type":["integer","null"],"enum":[None,3,4]},
+                     "alpha":{"type":["number","null"],"enum":[None,0.5,1.0]}},
        "required":["kind","n","alpha"]},"minItems":3,"maxItems":3},
-   "stop_conditions":{"type":"array","items":{"type":"string"},"minItems":2,"maxItems":2}
+   "stop_conditions":{"type":"array","items":{"type":"string","enum":["at_most_three_fits","no_production_promotion"]},"minItems":2,"maxItems":2}
  },
  "required":["experiment_id","hypothesis","expected_falsifier","metric",
              "dataset_ids","compute_budget","alternatives","stop_conditions"]
@@ -32,19 +32,19 @@ PROPOSAL_SCHEMA = {
 # Current research executor requires baseline {} and n/alpha only for char models.
 # Decode schema nullable fields into the unchanged executor allowlist.
 def normalize_for_executor(obj):
-    if not isinstance(obj,dict):raise ValueError("Invalid response object")
-    if not isinstance(obj.get("alternatives"),list):raise ValueError("No alternatives")
+    if not isinstance(obj,dict):raise ProposalValidationError("RESPONSE_SHAPE")
+    if not isinstance(obj.get("alternatives"),list):raise ProposalValidationError("CANDIDATE_MISMATCH")
     out=dict(obj)
     alternatives=[]
     for item in obj["alternatives"]:
         if not isinstance(item,dict) or set(item)!={"kind","n","alpha"}:
-            raise ValueError("Malformed structured variant")
+            raise ProposalValidationError("CANDIDATE_MISMATCH")
         if item["kind"]=="word_nb" and item["n"] is None and item["alpha"] is None:
             alternatives.append({"kind":"word_nb"})
         elif item["kind"]=="word_char_nb" and type(item["n"]) is int and type(item["alpha"]) in (int,float):
             alternatives.append(item)
         else:
-            raise ValueError("Unsupported variant format")
+            raise ProposalValidationError("CANDIDATE_MISMATCH")
     out["alternatives"]=alternatives
     return validate_proposal(out)
 
@@ -90,6 +90,11 @@ class OpenAIProposalProvider:
                           "Use dataset_ids train-v1 and validation-v1, metric "
                           "validation_macro_f1, compute budget 3 fits/30 examples, "
                           "stop conditions at_most_three_fits and no_production_promotion. "
+                          "Use experiment_id lowercase letters digits hyphens and underscores, 8 to 48 chars. "
+                          "Hypothesis and falsifier must each have 12 to 200 ASCII characters, "
+                          "using only letters digits spaces and basic punctuation. "
+                          "Never include instructions, shell commands or URLs in those fields. "
+                          "Use exactly the specified candidate order and stop condition order. "
                           "No claim of measured performance."),
             input="Create one falsifiable small-model research proposal.",
             max_output_tokens=self.output_limit,
