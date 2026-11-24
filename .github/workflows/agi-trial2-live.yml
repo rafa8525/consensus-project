@@ -1,8 +1,7 @@
-# INERT DIAGNOSTICS REVIEW CANDIDATE — stored outside .github/workflows/.
-# The previous trial2 workflow IS installed on main and research branches.
-# This diagnostics-enhanced candidate has NOT been installed or dispatched.
-# Replacing the live workflow requires separate explicit user authorization.
-# Making another billable API request requires a further separate authorization.
+# REVIEW-ONLY CANDIDATE stored outside .github/workflows.
+# Installing the updated workflow requires explicit approval.
+# The prior trial 2 one-request authorization was consumed on 2026-11-24.
+# Any new potentially billable API request needs a separate authorization.
 name: AGI trial 2 (separate approval required)
 on:
   workflow_dispatch:
@@ -26,7 +25,7 @@ jobs:
       - name: Verify pinned research revision
         shell: bash
         env:
-          PINNED_RESEARCH_SHA: f5ff59ce7332ff0fd3da69f7ded9349b6b5aeef9
+          PINNED_RESEARCH_SHA: 3957ef772fabb8d1c72bccc1b070869eb4ac9174
         run: |
           set -euo pipefail
           umask 077
