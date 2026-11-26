@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 46828.6,
+    "age_seconds": 46895.2,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 46828.6,
+      "age_seconds": 46895.2,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 46912.5,
+      "age_seconds": 46979.1,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-25T18:01:53.309938+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 46902.3,
+      "age_seconds": 54.6,
       "agent": "ACS-03",
       "diagnostics": {
         "components": [
@@ -62,7 +62,7 @@
         "diagnostics_status": "available"
       },
       "health_status": "execution_failure",
-      "last_execution_utc": "2026-11-25T18:02:03.468177+00:00",
+      "last_execution_utc": "2026-11-26T07:03:57.773517+00:00",
       "role": "Health Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -82,7 +82,7 @@
         "overall_status": "warning"
       },
       "health_status": "warning",
-      "last_execution_utc": "2026-11-26T07:03:40.334514+00:00",
+      "last_execution_utc": "2026-11-26T07:04:46.968735+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -103,7 +103,7 @@
         "warning_count": 10
       },
       "health_status": "execution_failure",
-      "last_execution_utc": "2026-11-26T07:03:45.716421+00:00",
+      "last_execution_utc": "2026-11-26T07:04:52.320301+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -140,7 +140,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-26T07:03:45.771252+00:00",
+  "generated_at_utc": "2026-11-26T07:04:52.374020+00:00",
   "git": {
     "last_commit": {
       "ok": true,
