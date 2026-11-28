@@ -5,10 +5,12 @@ on:
       - research/agi-iteration-001-20261119
     paths:
       - 'research/agi_iteration001/**'
+      - 'research/agi_prototype008/**'
       - '.github/workflows/agi-research-verification.yml'
   pull_request:
     paths:
       - 'research/agi_iteration001/**'
+      - 'research/agi_prototype008/**'
       - '.github/workflows/agi-research-verification.yml'
 permissions:
   contents: read
@@ -55,6 +57,14 @@ jobs:
           python funding_guard.py
           python one_shot_proposal_trial.py --dry-run
           python trial2_proposal_trial.py --dry-run
+      - name: Verify Prototype 008 offline (no credentials or API requests)
+        working-directory: research/agi_prototype008
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          set -euo pipefail
+          sha256sum --check SHA256SUMS
+          python -m unittest discover -v
       - name: Run pinned external CLINC150 OOD evaluation (no uploaded dataset)
         working-directory: research/agi_iteration001
         shell: bash
