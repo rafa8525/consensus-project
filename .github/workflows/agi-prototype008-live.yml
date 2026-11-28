@@ -21,7 +21,7 @@ jobs:
       - name: Verify pinned source and run offline tests
         shell: bash
         env:
-          PIN: 6aca89adc2d437e5dad3d1fbae683c42e75aaa52
+          PIN: d1cbe9a28a5155e2b1507ace40e0fb093da3cec6
         run: |
           set -euo pipefail
           [[ "$PIN" =~ ^[0-9a-f]{40}$ ]]
