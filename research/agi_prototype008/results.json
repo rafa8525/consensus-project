@@ -1,0 +1,133 @@
+{
+  "rows": [
+    {
+      "case": 1,
+      "expected": [
+        "overview"
+      ],
+      "structured_direct": null,
+      "structured_direct_correct": false,
+      "chat_proposal": [
+        "overview"
+      ],
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 2,
+      "expected": [
+        "bill_tracking"
+      ],
+      "structured_direct": null,
+      "structured_direct_correct": false,
+      "chat_proposal": [
+        "bill_tracking"
+      ],
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 3,
+      "expected": [
+        "appointment_tracking"
+      ],
+      "structured_direct": null,
+      "structured_direct_correct": false,
+      "chat_proposal": [
+        "appointment_tracking"
+      ],
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 4,
+      "expected": [
+        "appointment_tracking",
+        "bill_tracking"
+      ],
+      "structured_direct": null,
+      "structured_direct_correct": false,
+      "chat_proposal": [
+        "appointment_tracking",
+        "bill_tracking"
+      ],
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 5,
+      "expected": [
+        "overview",
+        "bill_tracking"
+      ],
+      "structured_direct": null,
+      "structured_direct_correct": false,
+      "chat_proposal": [
+        "bill_tracking",
+        "overview"
+      ],
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 6,
+      "expected": null,
+      "structured_direct": null,
+      "structured_direct_correct": true,
+      "chat_proposal": null,
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 7,
+      "expected": null,
+      "structured_direct": null,
+      "structured_direct_correct": true,
+      "chat_proposal": null,
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 8,
+      "expected": null,
+      "structured_direct": null,
+      "structured_direct_correct": true,
+      "chat_proposal": null,
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 9,
+      "expected": null,
+      "structured_direct": null,
+      "structured_direct_correct": true,
+      "chat_proposal": null,
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 10,
+      "expected": null,
+      "structured_direct": null,
+      "structured_direct_correct": true,
+      "chat_proposal": null,
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 11,
+      "expected": null,
+      "structured_direct": null,
+      "structured_direct_correct": true,
+      "chat_proposal": null,
+      "chat_proposal_correct": true
+    },
+    {
+      "case": 12,
+      "expected": [
+        "appointment_tracking"
+      ],
+      "structured_direct": null,
+      "structured_direct_correct": false,
+      "chat_proposal": [
+        "appointment_tracking"
+      ],
+      "chat_proposal_correct": true
+    }
+  ],
+  "scores": {
+    "structured_direct": 6,
+    "chat_proposal": 12
+  },
+  "n": 12
+}
