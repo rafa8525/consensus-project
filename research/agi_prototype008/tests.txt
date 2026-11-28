@@ -1,0 +1,25 @@
+test_briefing (test_integration.Test.test_briefing) ... ok
+test_conflict (test_integration.Test.test_conflict) ... ok
+test_duplicate (test_integration.Test.test_duplicate) ... ok
+test_false_confirmation (test_integration.Test.test_false_confirmation) ... ok
+test_feedback (test_integration.Test.test_feedback) ... ok
+test_idempotence (test_integration.Test.test_idempotence) ... ok
+test_plan_tamper (test_integration.Test.test_plan_tamper) ... ok
+test_provider_cannot_confirm (test_integration.Test.test_provider_cannot_confirm) ... ok
+test_recurring (test_integration.Test.test_recurring) ... ok
+test_reply_not_complete (test_integration.Test.test_reply_not_complete) ... ok
+test_resume (test_integration.Test.test_resume) ... ok
+test_retry (test_integration.Test.test_retry) ... ok
+test_unsupported (test_integration.Test.test_unsupported) ... ok
+test_compose (test_planner.Test.test_compose) ... ok
+test_failed_not_cached (test_planner.Test.test_failed_not_cached) ... ok
+test_no_forged_confirmation (test_planner.Test.test_no_forged_confirmation) ... ok
+test_permission (test_planner.Test.test_permission) ... ok
+test_reuse (test_planner.Test.test_reuse) ... ok
+test_tamper (test_planner.Test.test_tamper) ... ok
+test_unknown (test_planner.Test.test_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.377s
+
+OK

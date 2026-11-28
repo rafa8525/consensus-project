@@ -1,0 +1,62 @@
+{
+  "preflight": {
+    "credential_present": false,
+    "funding_verified": false,
+    "hard_limit_verified": false,
+    "dispatch_enabled": false,
+    "requests_sent": 0
+  },
+  "request_preview": {
+    "model": "gpt-6-luna",
+    "reasoning": {
+      "effort": "low"
+    },
+    "service_tier": "default",
+    "input": [
+      {
+        "role": "developer",
+        "content": "Return only a JSON object with version 1 and goals array. Allowed goals: overview, appointment_tracking, bill_tracking. No tools or actions."
+      },
+      {
+        "role": "user",
+        "content": "Fictional scenario: Track an outstanding invoice and an upcoming appointment until each is confirmed resolved."
+      }
+    ],
+    "max_output_tokens": 512,
+    "store": false,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "name": "personal_plan",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "integer",
+              "enum": [
+                1
+              ]
+            },
+            "goals": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "overview",
+                  "appointment_tracking",
+                  "bill_tracking"
+                ]
+              }
+            }
+          },
+          "required": [
+            "version",
+            "goals"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}
