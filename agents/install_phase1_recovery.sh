@@ -14,7 +14,7 @@ token=os.getenv('API_TOKEN')
 user=os.getenv('USER')
 if not token or not user or not user.replace('_','').isalnum(): raise SystemExit('ERROR: PythonAnywhere credentials unavailable')
 code=r'''#!/usr/bin/env python3
-import json, subprocess, sys, time, urllib.request
+import json, subprocess, sys, time, urllib.request, fcntl, os, signal
 from pathlib import Path
 from datetime import datetime,timezone
 repo=Path.home()/'consensus-project'
@@ -48,12 +48,23 @@ def validate(j):
         if not any(x.get('ok') for x in ((cycles.get('outcomes') or {}).get(n) or [])):bad.append(n+'_cycle_failure')
     return bad
 def execute(cmd,timeout=1200):
-    try:return subprocess.run(cmd,cwd=repo,timeout=timeout,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0
-    except (OSError,subprocess.TimeoutExpired):return False
+    # Use a process group so a timed-out publisher cannot leave child jobs running.
+    try:
+        proc=subprocess.Popen(cmd,cwd=repo,start_new_session=True,
+                              stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+        try:
+            proc.communicate(timeout=timeout)
+            return proc.returncode==0
+        except subprocess.TimeoutExpired:
+            os.killpg(proc.pid,signal.SIGKILL)
+            proc.communicate()
+            write('publisher_timeout',seconds=timeout)
+            return False
+    except (OSError,ProcessLookupError):return False
 def read():
     request=urllib.request.Request(url+'?t='+str(int(time.time())),headers={'User-Agent':'ACS-Watchdog'})
     with urllib.request.urlopen(request,timeout=35) as r:return json.load(r)
-def main():
+def run_cycle():
     if '--self-test' in sys.argv:
         j={'generated_at_utc':datetime.now(timezone.utc).isoformat(),
            'agents':{n:{'verified':True,'status':'current','health_status':'healthy'} for n in names},
@@ -77,6 +88,15 @@ def main():
                     write('agent_retry',agent=n,ok=repaired)
             time.sleep(i*10)
     write('escalation',reason='automatic_retries_exhausted');return 2
+def main():
+    lock=Path.home()/'.local/state/ai-consensus/recovery.lock'
+    lock.parent.mkdir(parents=True,exist_ok=True)
+    with lock.open('a+') as handle:
+        try:fcntl.flock(handle.fileno(), fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError:
+            write('overlap_blocked',reason='recovery_already_running');return 3
+        try:return run_cycle()
+        finally:fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
 if __name__=='__main__':sys.exit(main())
 '''
 ast.parse(code)
@@ -93,6 +113,12 @@ def api(uri,method='GET',payload=None):
     r=urllib.request.Request(uri,headers=h,data=json.dumps(payload).encode() if payload is not None else None,method=method)
     with urllib.request.urlopen(r,timeout=30) as response:return json.load(response)
 tasks=api(base)
+# Fail closed: production integrates health publication into the ACS-01 parent.
+# Never replace that scheduled task with a standalone watchdog installer.
+if any(str(t.get('id')) == '1524414' or
+       'run_acs01_supervisor.sh' in str(t.get('command', ''))
+       for t in tasks):
+    raise SystemExit('ERROR: ACS-01 integrated schedule detected; installer blocked; no schedule changes')
 match=[x for x in tasks if x.get('id')==1521711 or 'run_pythonanywhere_health_bridge.sh' in str(x.get('command',''))]
 if len(match)!=1:raise SystemExit('ERROR: health schedule not uniquely identified; unchanged')
 task=match[0]
