@@ -1,9 +1,9 @@
 """Review candidate. Real transport is gated; tests inject a fake transport."""
 import os,json,urllib.request, pathlib
-from live_preflight import request_body,validate_response
+from live_preflight import request_body,validate_response,MODEL
 
 def validate_gate(e):
-    checks={'GITHUB_EVENT_NAME':'workflow_dispatch','GITHUB_REPOSITORY':'rafa8525/consensus-project','GITHUB_REF':'refs/heads/research/agi-iteration-001-20261119','GITHUB_RUN_ATTEMPT':'1','AGI_APPROVAL':'YES-PROTOTYPE-008','AGI_FINANCIAL_VERIFICATION':'VERIFIED','AGI_ALLOWED_MODEL':'gpt-5-mini'}
+    checks={'GITHUB_EVENT_NAME':'workflow_dispatch','GITHUB_REPOSITORY':'rafa8525/consensus-project','GITHUB_REF':'refs/heads/research/agi-iteration-001-20261119','GITHUB_RUN_ATTEMPT':'1','AGI_APPROVAL':'YES-PROTOTYPE-008','AGI_FINANCIAL_VERIFICATION':'VERIFIED','AGI_ALLOWED_MODEL':MODEL}
     if any(e.get(k)!=v for k,v in checks.items()): raise PermissionError('gate failed')
     if not e.get('GITHUB_RUN_ID','').isdigit() or e.get('GITHUB_RUN_ID')!=e.get('AGI_AUTHORIZED_RUN_ID'): raise PermissionError('run binding failed')
     if not e.get('OPENAI_API_KEY') or not e.get('OPENAI_PROJECT_ID'): raise PermissionError('credential/project missing')

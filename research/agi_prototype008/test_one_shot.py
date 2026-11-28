@@ -1,6 +1,6 @@
 import unittest,tempfile,pathlib,json
 from one_shot import execute
-E=dict(GITHUB_EVENT_NAME='workflow_dispatch',GITHUB_REPOSITORY='rafa8525/consensus-project',GITHUB_REF='refs/heads/research/agi-iteration-001-20261119',GITHUB_RUN_ATTEMPT='1',AGI_APPROVAL='YES-PROTOTYPE-008',AGI_FINANCIAL_VERIFICATION='VERIFIED',AGI_ALLOWED_MODEL='gpt-5-mini',GITHUB_RUN_ID='123',AGI_AUTHORIZED_RUN_ID='123',OPENAI_API_KEY='fake',OPENAI_PROJECT_ID='fake')
+E=dict(GITHUB_EVENT_NAME='workflow_dispatch',GITHUB_REPOSITORY='rafa8525/consensus-project',GITHUB_REF='refs/heads/research/agi-iteration-001-20261119',GITHUB_RUN_ATTEMPT='1',AGI_APPROVAL='YES-PROTOTYPE-008',AGI_FINANCIAL_VERIFICATION='VERIFIED',AGI_ALLOWED_MODEL='gpt-6-luna',GITHUB_RUN_ID='123',AGI_AUTHORIZED_RUN_ID='123',OPENAI_API_KEY='fake',OPENAI_PROJECT_ID='fake')
 class Tests(unittest.TestCase):
  def setUp(self):
   self.d=tempfile.TemporaryDirectory(); self.addCleanup(self.d.cleanup); self.marker=pathlib.Path(self.d.name)/'used'; self.n=0
