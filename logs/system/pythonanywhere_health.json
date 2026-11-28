@@ -1,6 +1,6 @@
 {
   "acs01_orchestrator": {
-    "age_seconds": 35.9,
+    "age_seconds": 46845.1,
     "agent": "ACS-01",
     "cadence": "daily",
     "health_status": "ok",
@@ -13,7 +13,7 @@
   "active_branch": "v1.1-dev",
   "agents": {
     "ACS-01": {
-      "age_seconds": 35.9,
+      "age_seconds": 46845.1,
       "agent": "ACS-01",
       "cadence": "daily",
       "health_status": "ok",
@@ -24,7 +24,7 @@
       "verified": true
     },
     "ACS-02": {
-      "age_seconds": 149.6,
+      "age_seconds": 46958.8,
       "agent": "ACS-02",
       "health_status": "healthy",
       "last_execution_utc": "2026-11-27T18:00:53.292445+00:00",
@@ -34,7 +34,7 @@
       "verified": true
     },
     "ACS-03": {
-      "age_seconds": 133.1,
+      "age_seconds": 46942.2,
       "agent": "ACS-03",
       "diagnostics": {
         "components": [
@@ -69,7 +69,7 @@
       "verified": true
     },
     "ACS-04": {
-      "age_seconds": 5.4,
+      "age_seconds": 5.6,
       "agent": "ACS-04",
       "diagnostics": {
         "findings": [
@@ -82,7 +82,7 @@
         "overall_status": "warning"
       },
       "health_status": "warning",
-      "last_execution_utc": "2026-11-27T18:03:17.483427+00:00",
+      "last_execution_utc": "2026-11-28T07:03:26.478992+00:00",
       "role": "Infrastructure Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -103,7 +103,7 @@
         "warning_count": 10
       },
       "health_status": "execution_failure",
-      "last_execution_utc": "2026-11-27T18:03:22.830718+00:00",
+      "last_execution_utc": "2026-11-28T07:03:31.952584+00:00",
       "role": "Continuity Cycle",
       "stale_after_seconds": 129600,
       "status": "degraded",
@@ -121,7 +121,7 @@
     {
       "exists": true,
       "is_dir": true,
-      "mtime_utc": "2026-11-27T18:00:52.651335+00:00",
+      "mtime_utc": "2026-11-28T06:01:07.198986+00:00",
       "path": "memory",
       "size": 4096
     },
@@ -140,7 +140,7 @@
       "size": 39
     }
   ],
-  "generated_at_utc": "2026-11-27T18:03:22.915027+00:00",
+  "generated_at_utc": "2026-11-28T07:03:32.084464+00:00",
   "git": {
     "last_commit": {
       "ok": true,
