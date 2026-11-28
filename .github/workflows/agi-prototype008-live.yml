@@ -1,0 +1,46 @@
+# REVIEW ONLY. Do not install until explicitly approved. Replace pin after review.
+name: AGI Prototype 008 one shot
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: agi-prototype-008
+  cancel-in-progress: false
+jobs:
+  one-shot:
+    if: ${{ github.repository == 'rafa8525/consensus-project' && github.ref == 'refs/heads/research/agi-iteration-001-20261119' && github.run_attempt == 1 && inputs.confirmation == 'YES-PROTOTYPE-008' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    environment: agi-research-live
+    steps:
+      - name: Verify pinned source and run offline tests
+        shell: bash
+        env:
+          PIN: 6aca89adc2d437e5dad3d1fbae683c42e75aaa52
+        run: |
+          set -euo pipefail
+          [[ "$PIN" =~ ^[0-9a-f]{40}$ ]]
+          git clone --no-checkout https://github.com/rafa8525/consensus-project.git "$RUNNER_TEMP/agi008"
+          git -C "$RUNNER_TEMP/agi008" fetch --depth=1 origin "$PIN"
+          git -C "$RUNNER_TEMP/agi008" checkout --detach "$PIN"
+          test "$(git -C "$RUNNER_TEMP/agi008" rev-parse HEAD)" = "$PIN"
+          cd "$RUNNER_TEMP/agi008/research/agi_prototype008"
+          python3 -m unittest discover
+      - name: Single bounded reasoning request
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_PROJECT_ID: ${{ vars.OPENAI_PROJECT_ID }}
+          AGI_AUTHORIZED_RUN_ID: ${{ vars.AGI008_AUTHORIZED_RUN_ID }}
+          AGI_FINANCIAL_VERIFICATION: ${{ vars.AGI008_FINANCIAL_VERIFICATION }}
+          AGI_ALLOWED_MODEL: ${{ vars.AGI008_ALLOWED_MODEL }}
+          AGI_APPROVAL: ${{ inputs.confirmation }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/agi008/research/agi_prototype008"
+          python3 one_shot.py
